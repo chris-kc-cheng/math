@@ -2,9 +2,15 @@ import katex from 'katex';
 import 'katex/dist/katex.min.css';
 import './style.css';
 import {solve} from './solver.js';
+import {renderEquation} from './equation-view.js';
 
 // Examples document every supported rule; formulas and captions come from the solver.
 const skills = [
+  ['Equations: add or subtract', 'x + 5 = 12', 'x + b = c or x − b = c, with signed integer constants.', 'Undo the added or subtracted amount by applying the same operation to both sides. Simplify to isolate x.'],
+  ['Equations: multiplication', '3x = 18', 'ax = c with a nonzero signed integer coefficient. Explicit * or LaTeX multiplication also works.', 'Divide both sides by the coefficient of x. Use an exact fraction when the answer is not an integer.'],
+  ['Equations: two steps', '2x + 3 = 11', 'ax + b = c or ax − b = c, with signed integer constants and x only on the left.', 'First undo addition or subtraction on both sides. Then divide both sides by the coefficient of x. Blue highlights the matching operation on each side.'],
+  ['Equations: no solution', '0x + 3 = 5', 'Zero coefficient with unequal constant sides.', 'Zero times x disappears. Unequal constants cannot be made equal by choosing x, so there is no solution.'],
+  ['Equations: any real number', '0x + 3 = 3', 'Zero coefficient with equal constant sides.', 'Zero times x disappears. The constants match, so any real value of x works.'],
   ['Addition', '2 + 3', 'Two signed whole numbers or decimals joined by +.', 'Combine the two exact amounts and reduce the result.'],
   ['Subtraction', '9 - 4', 'Two signed whole numbers or decimals joined by −.', 'Subtract the second amount from the first. Negative answers are allowed.'],
   ['Subtraction: bridge a ten', '23 - 8', 'Positive whole numbers where subtracting a one-digit number crosses the previous ten, and the first number has a nonzero ones digit.', 'Split the amount being subtracted: 8 becomes 3 + 5. Subtract 3 to reach 20, then subtract 5.'],
@@ -17,7 +23,7 @@ const skills = [
 ];
 
 const app = document.querySelector('#app');
-app.innerHTML = `<main class="reference"><nav><a href="./">← Questions</a></nav><h1>Math skills & captions</h1><p>Every rule the current solver supports. The examples below are calculated by the same solver as the lesson. Each caption is the exact text returned for that example.</p><section><h2>How a formula becomes steps</h2><ol><li>Normalize supported symbols: ×, x, and LaTeX multiplication become the same operation. Remove whitespace.</li><li>Match one of the limited patterns below. No input is run as code, and no LLM solves the question.</li><li>Store numbers as exact integer fractions. Use explicit arithmetic rules to create a list of equivalent formulas and caption text.</li><li>Render each formula with KaTeX. Next step or Play appends the next line, adds an equals sign, and replaces the current caption. The browser animates only the new line; reduced-motion preferences turn that animation off.</li></ol><p>Captions are predefined sentences or templates with calculated values inserted. They are not generated freely. Expand “Formula source” to see the LaTeX passed to the renderer.</p></section><div id="catalog"></div><section><h2>Current limits</h2><p>This is a small arithmetic solver for real numbers, not a general algebra or LaTeX engine. Variables, powers, roots, arbitrary parentheses, other mixed-operation patterns, and sums of more than two fractions are unsupported. Division by zero and unsupported input are rejected. Inputs are limited to 120 characters.</p><p>The lesson page intentionally shows only the two sample questions. This page documents the additional rules already available in the solver.</p></section></main>`;
+app.innerHTML = `<main class="reference"><nav><a href="./">← Questions</a> · <a href="./curriculum.html">Grade 5 curriculum</a></nav><h1>Math skills & captions</h1><p>Every rule the current solver supports. The examples below are calculated by the same solver as the lesson. Each caption is the exact text returned for that example.</p><section><h2>How a formula becomes steps</h2><ol><li>Match equations before arithmetic: x is the unknown when an equals sign is present. For arithmetic, ×, x, and LaTeX multiplication mean multiply. Remove whitespace.</li><li>Match one of the limited patterns below. No input is run as code, and no LLM solves the question.</li><li>Store numbers as exact integer fractions. Use explicit arithmetic rules to create a list of equivalent formulas and caption text.</li><li>Render each formula with KaTeX. The demo automatically appends each line and replaces the current caption. Equations keep their own equals sign; arithmetic lines use a leading equals sign. The browser animates only the new line; reduced-motion preferences turn that animation off.</li></ol><p>Captions are predefined sentences or templates with calculated values inserted. They are not generated freely. Expand “Formula source” to see the LaTeX passed to the renderer.</p></section><div id="catalog"></div><section><h2>Current limits</h2><p>This is a small arithmetic solver for real numbers, not a general algebra or LaTeX engine. Only the documented one-variable linear equations are supported. Variables on both sides, other variable names, decimal or fraction coefficients, powers, roots, arbitrary parentheses, other mixed-operation patterns, and sums of more than two fractions are unsupported. Division by zero and unsupported input are rejected. Inputs are limited to 120 characters.</p><p>The demo includes arithmetic, long division, long multiplication, and simple equations. This page documents the additional rules already available in the solver.</p></section></main>`;
 
 for (const [title, input, pattern, transformation] of skills) {
   const section = document.createElement('section');
@@ -42,8 +48,9 @@ for (const [title, input, pattern, transformation] of skills) {
       const row = document.createElement('div');
       row.className = 'reference-step';
       const math = document.createElement('div');
-      math.className = 'step';
-      for (const [className, formula] of [['equals', index ? '=' : '\\phantom{=}'], ['math', step.math]]) {
+      math.className = input.includes('=') ? '' : 'step';
+      if(input.includes('='))renderEquation(math,step.math);
+      else for (const [className, formula] of [['equals', index && !input.includes('=') ? '=' : '\\phantom{=}'], ['math', step.math]]) {
         const cell = document.createElement('div');
         cell.className = className;
         katex.render(formula, cell, {displayMode:true, throwOnError:true, trust:false});

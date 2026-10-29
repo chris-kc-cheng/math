@@ -15,7 +15,7 @@ Use npm run preview to serve the production build. Open the printed local URL.
 
 The lesson page shows only 2 + 3 × 4 and 1/2 + 2/3. Next step or Play/Pause reveals each new line while earlier lines remain visible. Reduced-motion settings suppress entry animations.
 
-The solver supports two signed integers/decimals with +, -, */×, or /÷; three-term addition with two grouping methods; the bounded a + b × c pattern; and a/b + c/d with integer fraction components. Simple LaTeX fractions and multiplication/division commands work. Other mixed operations, general LaTeX parsing, variables, powers, and roots are unsupported. Answers use reduced exact fractions; division by zero is rejected. The skills.html page documents every rule and its captions with calculated examples.
+The solver supports two signed integers/decimals with +, -, */×, or /÷; three-term addition with two grouping methods; the bounded a + b × c pattern; and a/b + c/d with integer fraction components. Simple LaTeX fractions and multiplication/division commands work. Simple equations ax + b = c with integer constants and x only on the left are also supported. Other mixed operations, general LaTeX parsing, more general algebra, powers, and roots are unsupported. Answers use reduced exact fractions; division by zero is rejected. The skills.html page documents every rule and its captions with calculated examples.
 
 ## Trained handwriting recognition
 
@@ -38,3 +38,5 @@ Long division is available directly in the main demo through the 156 ÷ 12, 784 
 The curriculum.html page provides a searchable, selectable Grade 5 hierarchy (58 expectation entries) with strand/topic overviews, skill descriptions, example activities, source links, and shareable selection hashes. Its data lives in src/curriculum-data.js. The curriculum inventory and suggested app learning path are separate; no public YRDSB preferred teaching order is claimed. Practice activities are not linked to these entries yet.
 
 Long multiplication is available in the main demo for 23 × 14, 47 × 36, and 105 × 20. Its separate exact integer rule handles 0–9999 for each operand, showing digit products, carries, shifted partial products, and column addition. Decimal and signed long multiplication are not included. Tests verify partial-product sums, final results, carrying, zero digits, and immutable snapshots.
+
+Equation demos: x + 5 = 12, 3x = 18, and 2x + 3 = 11 automatically show inverse operations applied to both sides. Equation parsing runs before arithmetic normalization so x remains a variable. Constants must be signed integers; exact rational solutions, zero-coefficient identities, and contradictions are handled explicitly. The skills page shows actual generated formulas and captions. Variables on both sides, decimal coefficients, arbitrary parentheses, powers, and fractional input constants are rejected.

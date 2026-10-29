@@ -1,3 +1,4 @@
+import {solveEquation} from './equations.js';
 const gcd = (a,b) => b ? gcd(b,a%b) : a < 0n ? -a : a;
 function rational(n,d=1n){if(!d)throw Error('Division by zero is undefined. Try a nonzero divisor.');if(d<0n){n=-n;d=-d;}const g=gcd(n,d);return {n:n/g,d:d/g};}
 function number(s){const sign=s.startsWith('-')?-1n:1n;const [a,b='']=s.replace(/^[+-]/,'').split('.');return rational(sign*BigInt(a+b),10n**BigInt(b.length));}
@@ -5,6 +6,7 @@ const add=(a,b)=>rational(a.n*b.d+b.n*a.d,a.d*b.d);
 const tex=a=>a.d===1n?String(a.n):`\\frac{${a.n}}{${a.d}}`;
 export function solve(input){
  if(input.length>120)throw Error('Please use a shorter expression.');
+ if(input.includes('='))return solveEquation(input);
  let s=input.trim().replace(/\\(?:times|cdot)/g,'*').replace(/\\div/g,'/').replace(/[×x]/g,'*').replace(/÷/g,'/').replace(/−/g,'-').replace(/\s+/g,'');
  s=s.replace(/^\\frac\{([+-]?\d+(?:\.\d+)?)\}\{([+-]?\d+(?:\.\d+)?)\}$/,'$1/$2');
  const num='([+-]?\\d+(?:\\.\\d+)?)';

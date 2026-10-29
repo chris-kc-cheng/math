@@ -10,6 +10,8 @@ export default defineConfig({
       input: {
         main: fileURLToPath(new URL('./index.html', import.meta.url)),
         skills: fileURLToPath(new URL('./skills.html', import.meta.url)),
+        curriculum: fileURLToPath(new URL('./curriculum.html', import.meta.url)),
+        fractionConversion: fileURLToPath(new URL('./fraction-conversion.html', import.meta.url)),
         write: fileURLToPath(new URL('./write.html', import.meta.url)),
         longDivision: fileURLToPath(new URL('./long-division.html', import.meta.url)),
       },
