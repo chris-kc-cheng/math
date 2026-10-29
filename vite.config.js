@@ -11,6 +11,7 @@ export default defineConfig({
         main: fileURLToPath(new URL('./index.html', import.meta.url)),
         skills: fileURLToPath(new URL('./skills.html', import.meta.url)),
         write: fileURLToPath(new URL('./write.html', import.meta.url)),
+        longDivision: fileURLToPath(new URL('./long-division.html', import.meta.url)),
       },
     },
   },
