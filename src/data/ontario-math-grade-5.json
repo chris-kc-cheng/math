@@ -1,0 +1,607 @@
+{
+  "schemaVersion": 1,
+  "id": "ontario-math-grade-5",
+  "jurisdiction": "Ontario",
+  "grade": 5,
+  "language": "en",
+  "sources": {
+    "number": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/c2dea171-e219-4ec0-b097-24c959fcc924/Number_AODA.pdf",
+    "algebra": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/08f5a14f-576a-4282-af82-096dc302ed10/Algebra_AODA.pdf",
+    "data": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/60e2b2c7-5a7a-4038-bc06-fb88ffd6c861/Data_AODA.pdf",
+    "spatial": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/01b0b598-d5dc-455b-83de-9b7436bcefeb/Spatial_AODA.pdf",
+    "financial": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/8a374255-069f-4539-b020-5737aaf672f9/Financial_AODA.pdf",
+    "learning": "https://www.dcp.edu.gov.on.ca/en/curriculum/elementary-mathematics/grades/g2-math/strands",
+    "board": "https://www2.yrdsb.ca/about-us/director-education/directors-annual-report/board-improvement-plan-math"
+  },
+  "curriculum": {
+    "id": "grade-5",
+    "title": "Grade 5",
+    "description": "Ontario mathematics curriculum for YRDSB learners. Browse a strand, topic, or individual expectation. This is a curriculum inventory; the full practice library will be added separately.",
+    "children": [
+      {
+        "id": "number",
+        "code": "B",
+        "title": "Number",
+        "source": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/c2dea171-e219-4ec0-b097-24c959fcc924/Number_AODA.pdf",
+        "description": "Understand whole numbers, fractions, decimals, and percentages, then use operations to solve and check problems.",
+        "children": [
+          {
+            "id": "number-sense",
+            "title": "B1 · Number sense",
+            "children": [
+              {
+                "id": "b1-1",
+                "code": "B1.1",
+                "title": "Whole numbers to 100,000",
+                "description": "Read, represent, compose, and decompose whole numbers through 100,000 using place value and different tools.",
+                "example": "Represent 48,306 as ten-thousands, thousands, hundreds, tens, and ones."
+              },
+              {
+                "id": "b1-2",
+                "code": "B1.2",
+                "title": "Compare and order whole numbers",
+                "description": "Compare and order whole numbers through 100,000 in different contexts.",
+                "example": "Order 54,090; 54,900; and 45,900."
+              },
+              {
+                "id": "b1-3",
+                "code": "B1.3",
+                "title": "Equivalent fractions and mixed numbers",
+                "description": "Represent equivalent fractions from halves through twelfths, including improper fractions and mixed numbers.",
+                "example": "Show why 3/2 and 1½ represent the same amount."
+              },
+              {
+                "id": "b1-4",
+                "code": "B1.4",
+                "title": "Compare and order fractions",
+                "description": "Compare and order fractions from halves through twelfths, including improper fractions and mixed numbers.",
+                "example": "Which is greater: 3/4 or 5/6? Use a picture or number line."
+              },
+              {
+                "id": "b1-5",
+                "code": "B1.5",
+                "title": "Decimals through hundredths",
+                "description": "Read, represent, compare, and order decimal numbers through hundredths.",
+                "example": "Order 0.7, 0.07, and 0.77."
+              },
+              {
+                "id": "b1-6",
+                "code": "B1.6",
+                "title": "Round decimals",
+                "description": "Round decimal numbers to the nearest tenth.",
+                "example": "Round 3.47 to the nearest tenth."
+              },
+              {
+                "id": "b1-7",
+                "code": "B1.7",
+                "title": "Fractions, decimals, and percentages",
+                "description": "Explain equivalences among fractions, decimals through hundredths, and whole-number percentages using tools and drawings.",
+                "example": "Represent one half as 0.50 and 50%."
+              }
+            ]
+          },
+          {
+            "id": "operations",
+            "title": "B2 · Operations",
+            "children": [
+              {
+                "id": "b2-1",
+                "code": "B2.1",
+                "title": "Operation relationships and multi-step problems",
+                "description": "Use operation properties and inverse relationships to solve whole-number and decimal problems requiring more than one operation, and check calculations.",
+                "example": "Work out 2 + 3 × 4, explaining which operation comes first."
+              },
+              {
+                "id": "b2-2",
+                "code": "B2.2",
+                "title": "Multiplication and division facts",
+                "description": "Recall multiplication facts through 12 × 12 and their related division facts.",
+                "example": "Use 8 × 7 = 56 to explain 56 ÷ 8."
+              },
+              {
+                "id": "b2-3",
+                "code": "B2.3",
+                "title": "Mental math and estimation",
+                "description": "Mentally multiply whole numbers by 0.1 and 0.01, and estimate sums and differences of decimals through hundredths.",
+                "example": "Explain why 460 × 0.01 = 4.6."
+              },
+              {
+                "id": "b2-4",
+                "code": "B2.4",
+                "title": "Add and subtract whole numbers and decimals",
+                "description": "Solve addition and subtraction problems with whole-number sums no greater than 100,000 and decimals through hundredths, using tools, strategies, and algorithms.",
+                "example": "Calculate 24.75 − 8.60 and check by addition."
+              },
+              {
+                "id": "b2-5",
+                "code": "B2.5",
+                "title": "Add and subtract like-denominator fractions",
+                "description": "Add and subtract fractions with matching denominators in different contexts. Unlike-denominator addition is an extension beyond this Grade 5 expectation.",
+                "example": "Add 2/5 + 1/5 using fifths."
+              },
+              {
+                "id": "b2-6",
+                "code": "B2.6",
+                "title": "Two-digit multiplication",
+                "description": "Multiply two-digit whole numbers by two-digit whole numbers using area models and algorithms, and connect the methods.",
+                "example": "Calculate 24 × 13 using an area model."
+              },
+              {
+                "id": "b2-7",
+                "code": "B2.7",
+                "title": "Three-digit by two-digit division",
+                "description": "Divide three-digit whole numbers by two-digit whole numbers using area models and algorithms; interpret any remainder appropriately.",
+                "example": "Divide 156 ÷ 12 and explain the quotient."
+              },
+              {
+                "id": "b2-8",
+                "code": "B2.8",
+                "title": "Whole numbers and unit fractions",
+                "description": "Multiply and divide one-digit whole numbers by unit fractions using tools and drawings.",
+                "example": "Use fraction strips to explain 3 ÷ 1/2."
+              },
+              {
+                "id": "b2-9",
+                "code": "B2.9",
+                "title": "Equivalent ratios and rates",
+                "description": "Represent and create equivalent ratios and rates using tools and models in different contexts.",
+                "example": "If 2 notebooks cost $6, what would 4 notebooks cost at the same rate?"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "algebra",
+        "code": "C",
+        "title": "Algebra",
+        "source": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/08f5a14f-576a-4282-af82-096dc302ed10/Algebra_AODA.pdf",
+        "description": "Explore patterns, express relationships, solve equations and inequalities, and apply coding and mathematical modelling.",
+        "children": [
+          {
+            "id": "patterns",
+            "title": "C1 · Patterns and relationships",
+            "children": [
+              {
+                "id": "c1-1",
+                "code": "C1.1",
+                "title": "Recognize types of patterns",
+                "description": "Identify and describe repeating, growing, and shrinking patterns, including patterns in real life.",
+                "example": "Describe what happens in 30, 25, 20, 15, …"
+              },
+              {
+                "id": "c1-2",
+                "code": "C1.2",
+                "title": "Represent patterns",
+                "description": "Create and translate growing and shrinking patterns using different representations, including tables of values and graphs.",
+                "example": "Show a growing tile pattern as a table and graph."
+              },
+              {
+                "id": "c1-3",
+                "code": "C1.3",
+                "title": "Rules, predictions, and missing elements",
+                "description": "Find pattern rules, extend patterns, justify predictions, and identify missing elements in repeating, growing, and shrinking patterns.",
+                "example": "Find the missing value in 4, 8, __, 16, 20."
+              },
+              {
+                "id": "c1-4",
+                "code": "C1.4",
+                "title": "Whole-number and decimal patterns",
+                "description": "Create and describe patterns illustrating relationships among whole numbers, tenths, and hundredths.",
+                "example": "Describe 0.25, 0.50, 0.75, 1.00, …"
+              }
+            ]
+          },
+          {
+            "id": "equations",
+            "title": "C2 · Expressions, equations, and inequalities",
+            "children": [
+              {
+                "id": "c2-1",
+                "code": "C2.1",
+                "title": "Words, expressions, and pictures",
+                "description": "Translate among words, algebraic expressions, and visual representations describing equivalent relationships.",
+                "example": "Represent “three groups of a number plus two” with a drawing and an expression."
+              },
+              {
+                "id": "c2-2",
+                "code": "C2.2",
+                "title": "Evaluate expressions",
+                "description": "Evaluate algebraic expressions involving whole numbers.",
+                "example": "Find 3n + 2 when n = 4."
+              },
+              {
+                "id": "c2-3",
+                "code": "C2.3",
+                "title": "Solve and verify equations",
+                "description": "Solve equations involving whole numbers through 100 in different contexts, and verify the solutions.",
+                "example": "Solve x + 68 = 95 and substitute your answer to check."
+              },
+              {
+                "id": "c2-4",
+                "code": "C2.4",
+                "title": "Solve and graph inequalities",
+                "description": "Solve inequalities involving one operation and whole numbers through 50, then verify and graph the solutions.",
+                "example": "Find whole-number values satisfying x + 5 < 12."
+              }
+            ]
+          },
+          {
+            "id": "coding",
+            "title": "C3 · Coding",
+            "children": [
+              {
+                "id": "c3-1",
+                "code": "C3.1",
+                "title": "Write mathematical code",
+                "description": "Write and execute code representing mathematical situations, including conditional statements and other control structures.",
+                "example": "Write an if/else rule that tells whether a whole number is even."
+              },
+              {
+                "id": "c3-2",
+                "code": "C3.2",
+                "title": "Read and modify code",
+                "description": "Read and alter code with conditional statements and other control structures, and describe how changes affect outcomes.",
+                "example": "Change a condition in a pattern program and explain the new output."
+              }
+            ]
+          },
+          {
+            "id": "modelling",
+            "title": "C4 · Mathematical modelling",
+            "children": [
+              {
+                "id": "c4",
+                "code": "C4",
+                "title": "Model real-life situations",
+                "description": "Understand a real-life problem, analyse assumptions, create a mathematical model, assess its results, and revise it. This overall expectation has no separate specific expectations.",
+                "example": "Plan a seating arrangement, test the capacity, and revise the plan."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "data",
+        "code": "D",
+        "title": "Data",
+        "source": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/60e2b2c7-5a7a-4038-bc06-fb88ffd6c861/Data_AODA.pdf",
+        "description": "Collect representative data, communicate it clearly, analyse it critically, and investigate probability.",
+        "children": [
+          {
+            "id": "data-literacy",
+            "title": "D1 · Data literacy",
+            "children": [
+              {
+                "id": "d1-1",
+                "code": "D1.1",
+                "title": "Representative sampling",
+                "description": "Explain why different sampling techniques matter when collecting a sample representative of a population.",
+                "example": "Would surveying only a soccer team fairly represent the whole school?"
+              },
+              {
+                "id": "d1-2",
+                "code": "D1.2",
+                "title": "Collect and organize data",
+                "description": "Collect data about a population, using suitable sampling techniques, and organize it in relative-frequency tables.",
+                "example": "Survey favourite activities and record each category as a fraction of the responses."
+              },
+              {
+                "id": "d1-3",
+                "code": "D1.3",
+                "title": "Choose and construct graphs",
+                "description": "Select and justify appropriate graphs, including stacked-bar graphs, with suitable scales, sources, titles, and labels.",
+                "example": "Compare two classes’ activity preferences with a stacked-bar graph."
+              },
+              {
+                "id": "d1-4",
+                "code": "D1.4",
+                "title": "Create infographics",
+                "description": "Communicate a data story with an infographic using appropriate representations and relevant information.",
+                "example": "Create an infographic about how students travel to school."
+              },
+              {
+                "id": "d1-5",
+                "code": "D1.5",
+                "title": "Mean, median, and mode",
+                "description": "Determine the mean and median and identify any modes for whole-number and decimal data; explain what they reveal.",
+                "example": "Find the mean, median, and mode of 2, 3, 3, 4, 8."
+              },
+              {
+                "id": "d1-6",
+                "code": "D1.6",
+                "title": "Interpret data and misleading graphs",
+                "description": "Analyse data, including stacked-bar graphs and misleading graphs, ask questions, challenge assumptions, and justify conclusions.",
+                "example": "Explain how a graph’s scale might exaggerate a difference."
+              }
+            ]
+          },
+          {
+            "id": "probability",
+            "title": "D2 · Probability",
+            "children": [
+              {
+                "id": "d2-1",
+                "code": "D2.1",
+                "title": "Probabilities as fractions",
+                "description": "Express event probabilities as fractions, place them on a probability line, and use them to make predictions.",
+                "example": "What is the probability of rolling an even number on a fair six-sided die?"
+              },
+              {
+                "id": "d2-2",
+                "code": "D2.2",
+                "title": "Theoretical and experimental probability",
+                "description": "Determine and compare theoretical and experimental probabilities of an event.",
+                "example": "Compare the expected chance of heads with results from 30 coin tosses."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "spatial",
+        "code": "E",
+        "title": "Spatial sense",
+        "source": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/01b0b598-d5dc-455b-83de-9b7436bcefeb/Spatial_AODA.pdf",
+        "description": "Reason about shapes, views, position, movement, and measurement.",
+        "children": [
+          {
+            "id": "geometry",
+            "title": "E1 · Geometry, location, and movement",
+            "children": [
+              {
+                "id": "e1-1",
+                "code": "E1.1",
+                "title": "Triangle properties and construction",
+                "description": "Identify triangle properties and construct different types of triangles from given side lengths or angle measurements.",
+                "example": "Construct a triangle with sides 5 cm, 6 cm, and 7 cm."
+              },
+              {
+                "id": "e1-2",
+                "code": "E1.2",
+                "title": "Congruent shapes",
+                "description": "Identify and construct congruent triangles, rectangles, and parallelograms.",
+                "example": "Decide whether two triangles have the same shape and size."
+              },
+              {
+                "id": "e1-3",
+                "code": "E1.3",
+                "title": "Top, front, and side views",
+                "description": "Draw top, front, and side views of objects and match drawings to objects.",
+                "example": "Draw three views of a structure made from cubes."
+              },
+              {
+                "id": "e1-4",
+                "code": "E1.4",
+                "title": "First-quadrant coordinates",
+                "description": "Read and plot first-quadrant coordinates using various scales, and describe translations between points.",
+                "example": "Plot (2, 4), then move it three units right."
+              },
+              {
+                "id": "e1-5",
+                "code": "E1.5",
+                "title": "Translations, reflections, and rotations",
+                "description": "Perform translations, reflections, and rotations through 180° on a grid, and predict the results.",
+                "example": "Rotate a triangle 90° about a marked point."
+              }
+            ]
+          },
+          {
+            "id": "measurement",
+            "title": "E2 · Measurement",
+            "children": [
+              {
+                "id": "e2-1",
+                "code": "E2.1",
+                "title": "Metric estimation and measurement",
+                "description": "Estimate and measure length, area, mass, and capacity using appropriate metric units.",
+                "example": "Choose suitable units for a classroom’s area and a bottle’s capacity."
+              },
+              {
+                "id": "e2-2",
+                "code": "E2.2",
+                "title": "Convert larger metric units to smaller units",
+                "description": "Use base-ten relationships to convert larger metric units into smaller ones.",
+                "example": "Convert 2.5 m into centimetres."
+              },
+              {
+                "id": "e2-3",
+                "code": "E2.3",
+                "title": "Compare angles",
+                "description": "Compare angles by matching them and measuring with appropriate non-standard units.",
+                "example": "Compare two angles using the same paper angle wedge."
+              },
+              {
+                "id": "e2-4",
+                "code": "E2.4",
+                "title": "Measure and construct angles",
+                "description": "Explain how protractors work; measure and construct angles through 180°; estimate using benchmark angles.",
+                "example": "Use a protractor to construct a 65° angle."
+              },
+              {
+                "id": "e2-5",
+                "code": "E2.5",
+                "title": "Triangle and parallelogram areas",
+                "description": "Use relationships among rectangles, parallelograms, and triangles to develop area formulas and solve problems.",
+                "example": "Find the area of a triangle with base 8 cm and perpendicular height 5 cm."
+              },
+              {
+                "id": "e2-6",
+                "code": "E2.6",
+                "title": "Equal areas, different perimeters",
+                "description": "Show that shapes with equal areas can have different perimeters, and solve related problems.",
+                "example": "Compare the perimeters of 3 × 4 and 2 × 6 rectangles."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "financial",
+        "code": "F",
+        "title": "Financial literacy",
+        "source": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/8a374255-069f-4539-b020-5737aaf672f9/Financial_AODA.pdf",
+        "description": "Use money concepts and calculations to make informed financial decisions.",
+        "children": [
+          {
+            "id": "finances",
+            "title": "F1 · Money and financial decisions",
+            "children": [
+              {
+                "id": "f1-1",
+                "code": "F1.1",
+                "title": "Money transfers",
+                "description": "Describe ways money is transferred among individuals, organizations, and businesses.",
+                "example": "Compare a cheque with an electronic transfer."
+              },
+              {
+                "id": "f1-2",
+                "code": "F1.2",
+                "title": "Transactions and sales tax",
+                "description": "Estimate and calculate transaction costs for items priced in dollars and cents, including sales tax.",
+                "example": "Calculate the total for two purchases using a given tax rate."
+              },
+              {
+                "id": "f1-3",
+                "code": "F1.3",
+                "title": "Basic budgets",
+                "description": "Design basic budgets for different earning and spending situations.",
+                "example": "Plan how to allocate $40 between spending and saving."
+              },
+              {
+                "id": "f1-4",
+                "code": "F1.4",
+                "title": "Credit and debt",
+                "description": "Explain credit and debt and describe how they affect financial decisions.",
+                "example": "Explain how borrowing money changes what you can spend later."
+              },
+              {
+                "id": "f1-5",
+                "code": "F1.5",
+                "title": "Unit rates and best value",
+                "description": "Calculate unit rates for goods and services and identify which options offer better value.",
+                "example": "Compare 5 apples for $1 with 3 apples for $0.75."
+              },
+              {
+                "id": "f1-6",
+                "code": "F1.6",
+                "title": "Taxes and public services",
+                "description": "Describe taxes collected by different Canadian government levels and how revenue funds community services.",
+                "example": "Connect examples of taxes to public services."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "learning",
+        "code": "A",
+        "title": "Learning skills and mathematical processes",
+        "source": "https://www.dcp.edu.gov.on.ca/en/curriculum/elementary-mathematics/grades/g2-math/strands",
+        "description": "These skills are integrated across the other strands, rather than taught only as a separate calculation unit.",
+        "children": [
+          {
+            "id": "learning-skills",
+            "title": "A1 · Learning throughout mathematics",
+            "children": [
+              {
+                "id": "a1-1",
+                "code": "A1.1",
+                "title": "Manage emotions",
+                "description": "Identify and manage emotions while engaging in mathematics.",
+                "example": "Explain how you feel when a problem is unfamiliar."
+              },
+              {
+                "id": "a1-2",
+                "code": "A1.2",
+                "title": "Cope with challenges",
+                "description": "Recognize stress and use strategies for coping with mathematical challenges.",
+                "example": "Pause, try a drawing, or ask a useful question when stuck."
+              },
+              {
+                "id": "a1-3",
+                "code": "A1.3",
+                "title": "Persist and stay motivated",
+                "description": "Maintain motivation and perseverance when working through problems.",
+                "example": "Try another strategy after a first attempt does not work."
+              },
+              {
+                "id": "a1-4",
+                "code": "A1.4",
+                "title": "Collaborate and communicate",
+                "description": "Build relationships, listen to different mathematical ideas, and communicate respectfully.",
+                "example": "Compare two solution methods with a partner."
+              },
+              {
+                "id": "a1-5",
+                "code": "A1.5",
+                "title": "Confidence and self-awareness",
+                "description": "Develop awareness of yourself as a capable mathematics learner.",
+                "example": "Describe a strategy you have improved at using."
+              },
+              {
+                "id": "a1-6",
+                "code": "A1.6",
+                "title": "Critical and creative thinking",
+                "description": "Think critically and creatively to support mathematical decisions and problem solving.",
+                "example": "Explain whether an answer is reasonable and find another approach."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "suggestedSequence": [
+    [
+      "Whole-number understanding and facts",
+      "Place value, comparison, multiplication and division facts."
+    ],
+    [
+      "Whole-number calculations",
+      "Operation properties, algorithms, and inverse checks."
+    ],
+    [
+      "Decimals",
+      "Hundredths, rounding, estimation, and calculations."
+    ],
+    [
+      "Fractions",
+      "Equivalent forms, comparisons, and Grade 5 operations."
+    ],
+    [
+      "Connections, ratios, and rates",
+      "Fractions, decimals, percentages, and equivalent ratios."
+    ],
+    [
+      "Patterns and algebra",
+      "Expressions, equations, inequalities, and representations."
+    ],
+    [
+      "Geometry and measurement",
+      "Shapes, coordinates, transformations, units, and area."
+    ],
+    [
+      "Data and financial applications",
+      "Data, probability, budgets, transactions, and value."
+    ]
+  ],
+  "activities": [
+    {
+      "id": "mixed-fraction-conversion",
+      "skillIds": [
+        "b1-3"
+      ],
+      "title": "Mixed number and fraction conversion",
+      "href": "./fraction-conversion.html",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "directions": [
+        "mixed-to-fraction",
+        "fraction-to-mixed"
+      ]
+    }
+  ]
+}

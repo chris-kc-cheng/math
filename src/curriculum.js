@@ -1,6 +1,6 @@
 import './style.css';
 import './curriculum.css';
-import {curriculum,sources,suggestedSequence} from './curriculum-data.js';
+import {curriculum,sources,suggestedSequence,activitiesForSkill} from './curriculum-data.js';
 
 const nodes=new Map();
 function index(node,parents=[]){nodes.set(node.id,{node,parents});for(const child of node.children??[])index(child,[...parents,node]);}
@@ -57,9 +57,10 @@ function renderDetail(){
   const children=el('div',undefined,'curriculum-children');for(const child of node.children)children.append(chooseButton(child,'curriculum-card'));detail.append(children);
  }else{
   const example=el('div',undefined,'curriculum-example');example.append(el('h3','Example activity'),el('p',node.example));detail.append(example);
-  if(node.id==='b1-3'){
-   const activity=el('a','Try mixed number ↔ fraction conversion');activity.href='./fraction-conversion.html';detail.append(activity);
-   detail.append(el('p','Step-by-step conversion is available. Other equivalent-fraction activities for this expectation are not implemented yet.','curriculum-note'));
+  const linkedActivities=activitiesForSkill(node.id);
+  if(linkedActivities.length){
+   for(const item of linkedActivities){const activity=el('a',`Try ${item.title}`);activity.href=item.href;detail.append(activity);}
+   detail.append(el('p',linkedActivities.some(item=>item.coverage==='complete')?'Practice is available for this expectation.':'These activities cover part of this expectation; further activities are still needed.','curriculum-note'));
   }else detail.append(el('p','This is a curriculum skill description. A dedicated practice activity is not linked here yet.','curriculum-note'));
  }
  if(node.id==='learning'){
