@@ -1,1 +1,20 @@
-{"name":"little-math-lab","version":"0.1.0","private":true,"type":"module","scripts":{"dev":"vite --host 0.0.0.0","build":"vite build","preview":"vite preview --host 0.0.0.0","test":"node --test"},"dependencies":{"katex":"0.16.22"},"devDependencies":{"vite":"7.3.1"}}
+{
+  "name": "little-math-lab",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "ink-on": "^0.1.0",
+    "katex": "0.16.22",
+    "onnxruntime-web": "^1.31.1"
+  },
+  "devDependencies": {
+    "vite": "7.3.1"
+  }
+}

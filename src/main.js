@@ -2,15 +2,59 @@ import katex from 'katex';
 import 'katex/dist/katex.min.css';
 import './style.css';
 import {solve} from './solver.js';
-const samples=[['Make a ten','8 + 2 + 5','Addition'],['Take some away','23 - 8','Subtraction'],['Equal groups','6 × 4','Multiplication'],['Share fairly','18 ÷ 3','Division'],['Parts of a whole','3 / 4','Fractions'],['Decimal discovery','0.5 + 0.25','Decimals']];
-document.querySelector('#app').innerHTML=`<header><a class="brand" href="./"><span class="logo">✳</span> Little Math Lab</a><span class="badge">SMALL STEPS. BIG DISCOVERIES.</span></header><main><section class="intro"><div class="eyebrow">LET’S FIGURE IT OUT</div><h1>A little math.<br>A big <em>aha!</em></h1><p>See how numbers work, one simple step at a time.<br>Pick a question or bring one of your own.</p><form id="question"><label for="expression">What shall we solve?</label><div class="inputrow"><input id="expression" value="8 + 2 + 5" maxlength="120" autocomplete="off" aria-describedby="hint"><button class="primary">Let’s solve <span>↗</span></button></div><small id="hint">Two numbers with +, −, ×, ÷ · or three added numbers · simple LaTeX</small><p id="error" role="alert"></p></form></section><section class="lesson" aria-label="Animated solution"><div class="lessonhead"><span class="eyebrow">THE AHA! BOARD</span><span class="live">● LET’S LEARN</span></div><div id="methods"></div><div id="math" aria-live="polite"></div><p id="explanation" aria-live="polite"></p><div class="progress" id="progress"></div><div class="controls"><button id="back" aria-label="Previous step">←</button><button id="play">▶ Play steps</button><button id="next" aria-label="Next step">→</button></div><div class="lessonfoot"><span id="count"></span><span>One step closer to understanding ✨</span></div></section><section class="samples"><div class="sectiontitle"><h2>A good place to start</h2><span>A FEW LITTLE CHALLENGES</span></div><div class="cards">${samples.map(([title,formula,tag],i)=>`<button class="card" data-i="${i}"><span class="cardtop"><span class="icon">${['＋','−','×','÷','½','·'][i]}</span><small>${tag}</small></span><strong>${formula}</strong><span>${title} <b>↗</b></span></button>`).join('')}</div></section><footer>Made for curious minds. <span>No rush. You’ve got this.</span></footer></main>`;
-let solution,method=0,step=0,timer;
-const $=s=>document.querySelector(s);
-function stop(){clearInterval(timer);timer=null;$('#play').textContent='▶ Play steps';}
-function render(){const steps=solution.methods[method].steps;const current=steps[step];katex.render(current.math,$('#math'),{displayMode:true,throwOnError:false,trust:false});$('#math').getAnimations().forEach(a=>a.cancel());if(!matchMedia('(prefers-reduced-motion: reduce)').matches)$('#math').animate([{opacity:0,transform:'translateY(12px)'},{opacity:1,transform:'translateY(0)'}],{duration:400});$('#explanation').textContent=current.text;$('#count').textContent=`STEP ${step+1} OF ${steps.length}`;$('#progress').innerHTML=steps.map((_,i)=>`<span class="${i<=step?'done':''}"></span>`).join('');$('#back').disabled=step===0;$('#next').disabled=step===steps.length-1;}
-function load(){stop();try{const next=solve($('#expression').value);solution=next;method=0;step=0;$('#error').textContent='';$('#methods').innerHTML=solution.methods.map((m,i)=>`<button class="method ${i===0?'selected':''}" data-method="${i}">${m.name}</button>`).join('');render();}catch(e){$('#error').textContent=e.message;}}
-$('#question').addEventListener('submit',e=>{e.preventDefault();load();});
-$('#methods').addEventListener('click',e=>{const b=e.target.closest('[data-method]');if(!b)return;stop();method=Number(b.dataset.method);step=0;document.querySelectorAll('.method').forEach(x=>x.classList.toggle('selected',x===b));render();});
-$('#back').onclick=()=>{stop();if(step>0)step--;render();};$('#next').onclick=()=>{stop();if(step<solution.methods[method].steps.length-1)step++;render();};
-$('#play').onclick=()=>{if(timer){stop();return;}if(step===solution.methods[method].steps.length-1)step=0;render();$('#play').textContent='Ⅱ Pause';timer=setInterval(()=>{step++;render();if(step===solution.methods[method].steps.length-1)stop();},1800);};
-document.querySelectorAll('[data-i]').forEach(b=>b.onclick=()=>{$('#expression').value=samples[Number(b.dataset.i)][1];load();});load();
+
+const questions = ['2 + 3 × 4', '1/2 + 2/3'];
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+const app = document.querySelector('#app');
+app.innerHTML = '<main><nav><a href="./write.html">Write a formula</a> · <a href="./skills.html">Math skills & captions</a></nav><h1>Step by step</h1></main>';
+
+questions.forEach(question => {
+  const steps = solve(question).methods[0].steps;
+  const section = document.createElement('section');
+  section.setAttribute('aria-label', `Question: ${question}`);
+  section.innerHTML = `<div class="steps" role="log" aria-live="polite" aria-relevant="additions"></div><p class="caption" aria-live="polite" aria-atomic="true"></p><div class="controls"><button class="next">Next step</button><button class="play">Play</button></div>`;
+  app.querySelector('main').append(section);
+  const list = section.querySelector('.steps');
+  const next = section.querySelector('.next');
+  const play = section.querySelector('.play');
+  let shown = 0;
+  let timer;
+  function pause() {
+    clearInterval(timer);
+    timer = null;
+    play.textContent = 'Play';
+  }
+  function reveal() {
+    if (shown >= steps.length) return;
+    const current = steps[shown];
+    const row = document.createElement('div');
+    row.className = 'step';
+    const math = document.createElement('div');
+    math.className = 'math';
+    const equals = document.createElement('div');
+    equals.className = 'equals';
+    katex.render(shown ? '=' : '\\phantom{=}', equals, {displayMode:true, throwOnError:true});
+    katex.render(current.math, math, {displayMode:true, throwOnError:true, trust:false});
+    row.append(equals, math);
+    list.append(row);
+    section.querySelector('.caption').textContent = current.text;
+    shown++;
+    if (shown > 1 && !reducedMotion.matches) {
+      row.animate([{opacity:0, transform:'translateY(8px)'}, {opacity:1, transform:'translateY(0)'}], {duration:350});
+    }
+    if (shown === steps.length) {
+      row.classList.add('answer');
+      pause();
+      next.disabled = true;
+      next.textContent = 'Complete';
+      play.hidden = true;
+    }
+  }
+  next.onclick = () => { pause(); reveal(); };
+  play.onclick = () => {
+    if (timer) { pause(); return; }
+    play.textContent = 'Pause';
+    timer = setInterval(reveal, 2200);
+  };
+  reveal();
+});
