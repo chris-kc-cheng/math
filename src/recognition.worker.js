@@ -8,19 +8,25 @@ ort.env.wasm.numThreads = 1;
 ort.env.wasm.wasmPaths = {mjs:wasmModuleUrl,wasm:wasmBinaryUrl};
 let engine;
 let vocab;
+const debug=(event,details={})=>self.postMessage({type:'debug',event,details});
 self.onmessage = async ({data}) => {
  try {
   if(data.type === 'init') {
+   const start=performance.now();debug('model.loading',{runtime:'ONNX WASM',threads:1,encoder:'/models/comer/encoder_int8.onnx',decoder:'/models/comer/decoder_int8.onnx'});
    vocab = await fetch('/models/comer/vocab.json').then(r=>{if(!r.ok)throw Error('Vocabulary unavailable');return r.json();});
    engine = new InferenceEngine({encoderUrl:'/models/comer/encoder_int8.onnx',decoderUrl:'/models/comer/decoder_int8.onnx',beamWidth:3,maxDecodeSteps:40,executionProvider:'wasm'});
    await engine.init();
+   debug('model.ready',{durationMs:Math.round(performance.now()-start),vocabulary:vocab.vocab_size});
    self.postMessage({type:'ready'});
   } else if(data.type === 'recognize') {
+   debug('inference.start',{id:data.id,height:data.input.height,width:data.input.width,mode:'number',beamWidth:3});
    if(!engine) throw Error('Model is not ready');
    const result = await engine.recognize(data.input,vocab,'number');
+   debug('inference.complete',{id:data.id,encoderMs:result.encoderMs,decoderMs:result.decoderMs,totalMs:result.totalMs,tokenIds:result.tokenIds});
    self.postMessage({type:'result',id:data.id,latex:result.latex,totalMs:result.totalMs});
   }
  } catch(error) {
+  debug('worker.error',{message:error.message,stack:error.stack});
   self.postMessage({type:'error',id:data.id,message:error.message || 'Recognition failed'});
  }
 };
