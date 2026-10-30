@@ -8,6 +8,8 @@ Live site: [chris-kc-cheng.github.io/math](https://chris-kc-cheng.github.io/math
 
 ## Screenshots
 
+Screenshots use light theme, normal zoom, and a 1920 × 1080 (16:9) browser viewport.
+
 Practice offers **Whack-a-Math**, a full-window five-choice quiz with green grass, holes, and five cute mole characters. Click an answer mole to confirm: correct choices get a hammer bonk and dizzy stars; wrong choices escape. Every answer reveals its worked explanation. Choose Captain Patty in settings for the original game.
 
 <img src="docs/images/mole-meadow.png" alt="Whack-a-Math quiz with a question above five cute answer moles in grassy holes" width="850">
@@ -18,7 +20,6 @@ The player avatar menu offers 25 choices: the name initial and 24 emojis, includ
 
 <img src="docs/images/avatar-picker.png" alt="Whack-a-Math player menu with 25 avatars including initials, animals, dinosaurs and an alien" width="700">
 
-
 Animated worked examples, including extra room for stacked fractions:
 
 <img src="docs/images/landing.png" alt="Whack-a-Math landing demo with the waving mole logo and order-of-operations example" width="560">
@@ -26,24 +27,6 @@ Animated worked examples, including extra room for stacked fractions:
 <img src="docs/images/fractions.png" alt="Fraction addition demo with clearly spaced stacked fractions" width="560">
 
 <img src="docs/images/landing-long-division.png" alt="Long division demo with the digit-aligned board and Practice navigation" width="560">
-
-Browse Grades 1–10, use the connected grade buttons, and explore visual examples:
-
-<img src="docs/images/curriculum.png" alt="Grade 1 fair sharing with progressively revealed diagrams" width="700">
-
-<img src="docs/images/tallies.png" alt="Grade 1 tallies with a fifth stroke crossing four upright strokes and a grouped grade selector" width="700">
-
-Choose a player from the badge in the top-right corner, then select a grade, topics, and round length:
-
-<img src="docs/images/practice-lobby.png" alt="Practice settings before a player is chosen for guests: blurred settings and a prompt to choose or create a player" width="700">
-
-<img src="docs/images/game-setup.png" alt="Practice settings with grade, question count, and topic choices" width="620">
-
-Every checked answer opens the explanation, with colour, an icon, and text indicating the result:
-
-<img src="docs/images/practice-correct.png" alt="Correct practice answer with a green check and an automatically displayed worked explanation" width="700">
-
-<img src="docs/images/practice-feedback.png" alt="Incorrect practice answer with a red cross and an automatically displayed worked explanation" width="700">
 
 ## GitHub Pages deployment
 
@@ -92,7 +75,6 @@ Long multiplication appears in the main slide show (23 × 14), and typing two-or
 
 The slide show's equation card (2x + 3 = 11), and typed equations such as x + 5 = 12 or 3x = 18, show inverse operations applied to both sides. Equation parsing runs before arithmetic normalization so x remains a variable. Constants must be signed integers; exact rational solutions, zero-coefficient identities, and contradictions are handled explicitly. Variables on both sides, decimal coefficients, arbitrary parentheses, powers, and fractional input constants are rejected.
 
-
 The Grade 5 library provides worked and guided variants across all 58 entries, grouped by domain in src/math/grade5/. Shared tutorial, visual, and hands-on tools live in src/curriculum/. All calculations are deterministic and bounded; personal reflections and open-ended tasks are not automatically graded. Activities illustrate curriculum skills without claiming exhaustive coverage or mastery. See [src/README.md](src/README.md) for the architecture, named question parameters, tutorial contract, and extension workflow.
 
 Grade 8 is available from the curriculum grade selector or `curriculum.html?grade=8`. Its researched hierarchy has 51 entries and rich question variants. The shared renderer, exact core and existing Grade 5 rules are reused. See [Grade 8 research](src/curriculum/data/grade-8-research.md) for official Ontario/YRDSB sources, source mapping and coverage limits.
@@ -107,8 +89,6 @@ A skill is practised in several ways so students are not just memorising one wor
 
 On the curriculum page, the printer icon at the top of the sidebar opens a dialog to build a hard-copy sheet. Choose any mix of strands and topics (or leave all unticked), the number of questions (default 10, up to 50), and whether the answer sheet should also show workings. The sheet lists numbered questions with answer lines, and the answers always come on the last page, either as a compact list or as full worked solutions with the same exact steps shown on screen. It uses the same single-answer questions as Practice (`src/worksheet-model.js`) and never repeats an identical question. **Create PDF** opens the browser print window on a light layout; choose *Save as PDF* as the destination to keep a file. No backend or PDF library is needed.
 
-<img src="docs/images/worksheet-dialog.png" alt="Exercise sheet dialog with topic checklist, number of questions, and a workings option" width="620">
-
 ## Practice
 
 `game.html` has no sign-in form of its own: players are chosen and added in the corner badge menu. A guest sees the settings blurred behind a prompt to choose or create a player first; a signed-in player goes straight to the settings. Then choose a grade, topics, and an editable round length of 1–50 questions (default 5). Returning players restore their last grade, topics, and round length. An unfinished round resumes only when those settings match. The coloured Play/Continue button sits at the right of the settings row; the question count is an editable number field.
@@ -117,31 +97,19 @@ Every valid submitted answer immediately shows the worked explanation. Correct a
 
 Captain Patty fires ketchup at Grumble the zombie after a correct answer. Wrong answers cost one of his five lives; at zero he cries, and the round can continue. At least half the questions must be correct to win. Progress and rounds save in IndexedDB by player name; there is no account or backend. Reduced-motion preferences disable shot and zombie animations. Older saved retry scores remain readable.
 
-<img src="docs/images/game.png" alt="Practice round opened with Play, showing Captain Patty, Grumble, and the current question" width="700">
-
 ## Grades 1–3
 
 Grades 1, 2, and 3 are available in the curriculum selector, Practice, and printable worksheets, with 45/46/53 expectation entries and 90/93/108 activity templates respectively. Every non-SEL expectation has at least two templates and three distinct stems, varying context, diagrams, unknowns, or reasoning—not just numbers. Primary lessons use counters, sharing strips, patterns, graphs, clocks, Canadian money, and grade-bounded arithmetic. Open-ended construction, discussion, and SEL remain unscored; games select supported numerical questions. See the [research and coverage audit](src/curriculum/data/grades-1-2-3-research.md).
 
-<img src="docs/images/primary-variants.png" alt="Grade 3 clock activity in dark mode, with a worked answer and readable clock hands" width="700">
-
 ## Player badge, statistics and grade picker
 
 Every page shows the active player as a badge in the top-right corner (a coloured initial or a chosen emoji avatar). Its menu switches player, adds a player (type a name and press Add: the badge changes to the new player at once, and no game starts) or picks an avatar; the choice is stored only on this device. Next to it, three counters summarise the player's saved Practice rounds: 🏆 perfect games, 🥈 games won (at least 80% right) and 🍐 correct answers, and hovering or focusing them shows total accuracy, questions answered, games played and the last-played date. The curriculum grade header joins the grade display and dropdown arrow on one surface: click the grade for its overview or the arrow to reveal the grade choices. Practice uses the same shared grade picker.
-
-<img src="docs/images/profile-menu.png" alt="Player menu with the Add a player name field and avatar choices" width="700">
-
-<img src="docs/images/profile-badge.png" alt="Curriculum page with the player badge, trophy, medal and pear counters, and the statistics tooltip" width="700">
 
 ## Grades 9–10
 
 Grade 9 follows the Ontario MTH1W (2021) course with all 43 specific expectations plus the process and social-emotional entries; Grade 10 follows MPM2D (2005) with quadratic relations, analytic geometry and trigonometry. They appear in the curriculum selector, Practice and printable worksheets, with 131 and 116 activity templates. Every non-SEL entry has at least two templates and six distinct stems, built from one registry of 68 teaching rules and 448 styles: calculations, word problems, tables, graphs, checks and judgements. Graphs appear in the worked steps so they never give the answer away. Research, modelling and reporting entries are guided discussions, not scored. See [Grades 9–10 research](src/curriculum/data/grades-9-10-research.md).
 
 Calculator use is deliberate: trigonometry, powers, scientific notation, compound interest and the quadratic formula open it; expanding, factoring and simplifying do not. Trigonometry walkthroughs begin with the manufacturer's angle-mode check (MODE, enter on DEG, clear) and use the multi-tap sin, cos and tan keys (press a key twice for its inverse).
-
-<img src="docs/images/grade10-parabola.png" alt="Grade 10 parabola question with its graph shown after the worked steps" width="700">
-
-<img src="docs/images/grade10-trig-calculator.png" alt="Grade 10 right-triangle question with a labelled triangle and the 36X Pro keypad showing sin, cos and tan" width="850">
 
 ## Calculator and visual demos
 
@@ -159,11 +127,7 @@ The landing demo now has ten examples. `?slide=6` reads a clock, `?slide=7` appl
 
 <img src="docs/images/calculator-tutorial.png" alt="Percentage demo with an optional 36X Pro-style calculator" width="850">
 
-<img src="docs/images/calculator-learning.png" alt="Dark-mode Pythagorean explanation with calculator key steps and result five" width="850">
-
 <img src="docs/images/calculator-scientific.png" alt="Scientific-notation demo with the shared calculator" width="850">
-
-<img src="docs/images/calculator-practice.png" alt="Practice automatically shows a suitable calculator and a key walkthrough after the answer" width="850">
 
 The demo and practice question panes stay in the same position when the calculator opens or closes. Desktop space reservation applies only to the curriculum page.
 

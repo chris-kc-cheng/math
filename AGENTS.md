@@ -33,6 +33,15 @@ Applies to every agent working here (ChatGPT, Claude, others). When a change aff
 4. Run `npm test` and `npm run build` before committing. Never commit secrets.
 5. `CLAUDE.md` holds the reviewer role and review log. A reviewer pass should also confirm the docs and screenshots match the app.
 
+## Screenshot standard (agent memory)
+
+- Use **light theme** for all documentation screenshots. Explicitly select light theme before capture rather than inheriting the system or saved preference. Do not use dark-theme screenshots unless the user specifically requests one.
+- Capture documentation screenshots at a wide 16:9 browser viewport: **1920 × 1080 CSS pixels** by default; **1600 × 900** is acceptable. Set and verify the viewport before capturing; do not rely on a narrow app side panel or resize a compressed screenshot afterward.
+- Use normal browser zoom (100%). Ensure the main pane, sidebar, calculator and controls have enough room, with readable text, no unintended wrapping, clipping, overlap or horizontal scrollbars. Inspect the actual image before saving it.
+- Prefer viewport screenshots for README images. Full-page captures are appropriate only when the content needs them; keep the same wide viewport. Capture mobile layouts separately and label them explicitly rather than using them as the desktop example.
+- Wait for fonts, images and formula rendering to finish. Pause playback at a useful completed step, and show the relevant feature clearly. Avoid loading states, empty explanations and accidental menus.
+- Keep only current screenshots referenced by documentation. When branding or layout changes, replace affected images and update accurate alt text; remove outdated screenshots and their references instead of retaining a historical gallery.
+
 ## Calculator teaching memory
 
 The shared calculator is a bounded 36X Pro key-entry subset with a custom seven-segment LED-style display. Verify additional sequences against the manufacturer's official guidebook before extending it. Keep exact arithmetic in the common rational core, label approximations, and reject non-real/unsupported entries. Contextual recommendations and visible function keys belong in `calculator/plans.js`; do not add one calculator per activity or automatically fill a learner's answer. Basic primary skills stay uncluttered; suitable learning/practice explanations have independent, colour-coded key playback. Landing visual demos must reuse real implemented curriculum lessons. Pythagoras is the intended triangle topic, not trigonometry.
