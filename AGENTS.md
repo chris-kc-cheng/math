@@ -38,3 +38,11 @@ Applies to every agent working here (ChatGPT, Claude, others). When a change aff
 The shared calculator is a bounded 36X Pro key-entry subset with a custom seven-segment LED-style display. Verify additional sequences against the manufacturer's official guidebook before extending it. Keep exact arithmetic in the common rational core, label approximations, and reject non-real/unsupported entries. Contextual recommendations and visible function keys belong in `calculator/plans.js`; do not add one calculator per activity or automatically fill a learner's answer. Basic primary skills stay uncluttered; suitable learning/practice explanations have independent, colour-coded key playback. Landing visual demos must reuse real implemented curriculum lessons. Pythagoras is the intended triangle topic, not trigonometry.
 
 Fraction calculator tutorials must use the calculator's n/d fields and cursor sequence. Scientific-notation lessons retain the existing ×10ⁿ teaching and add EE entry plus a SCI display alternative; do not substitute decimal-to-fraction conversion for moving a decimal point. The current landing sequence has ten examples.
+
+Practice defaults to Mole meadow: a full-window grassy five-choice quiz with five mole variants, click confirmation, hit/dizzy or escape feedback, and explanations after every answer. Captain Patty remains selectable.
+
+The curriculum grade overview and selector form one connected header, with grade choices expanding directly below.
+
+Project name: **Whack-a-Math**. Preserve existing browser storage keys when updating branding.
+
+Brand mascot: the fifth waving mole (`public/game-art/moles/mole-5.png`), used for the landing logo, favicon and PWA icons.

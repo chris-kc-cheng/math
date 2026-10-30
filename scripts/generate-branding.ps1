@@ -1,7 +1,21 @@
 # Package the selected artwork at browser/app icon sizes without redrawing it.
+$ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName System.Drawing
 $projectRoot = Split-Path $PSScriptRoot -Parent
-$artwork = [System.Drawing.Image]::FromFile((Join-Path $projectRoot 'public/monkey-logo.png'))
+$artwork = [System.Drawing.Image]::FromFile((Join-Path $projectRoot 'public/game-art/moles/mole-5.png'))
+# Ignore transparent padding and faint glow so the chosen character fills each icon.
+Add-Type -ReferencedAssemblies System.Drawing.Common,System.Drawing.Primitives -TypeDefinition @"
+using System.Drawing;
+public static class BrandBounds {
+ public static Rectangle Find(Bitmap image) {
+  int left=image.Width,top=image.Height,right=0,bottom=0;
+  for(int y=0;y<image.Height;y++) for(int x=0;x<image.Width;x++)
+   if(image.GetPixel(x,y).A>200){left=System.Math.Min(left,x);top=System.Math.Min(top,y);right=System.Math.Max(right,x);bottom=System.Math.Max(bottom,y);}
+  return Rectangle.FromLTRB(left,top,right+1,bottom+1);
+ }
+}
+"@
+$bounds = [BrandBounds]::Find($artwork)
 function Save-BrandIcon([int]$size, [string]$name, [bool]$maskable = $false) {
     $bitmap = [System.Drawing.Bitmap]::new($size, $size)
     $graphics = [System.Drawing.Graphics]::FromImage($bitmap)
@@ -10,17 +24,19 @@ function Save-BrandIcon([int]$size, [string]$name, [bool]$maskable = $false) {
         $graphics.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic
         $graphics.PixelOffsetMode = [System.Drawing.Drawing2D.PixelOffsetMode]::HighQuality
         $available = $size * $(if ($maskable) { 0.70 } else { 0.94 })
-        $scale = [Math]::Min($available / $artwork.Width, $available / $artwork.Height)
-        $width = [int]($artwork.Width * $scale)
-        $height = [int]($artwork.Height * $scale)
-        $graphics.DrawImage($artwork, [int](($size-$width)/2), [int](($size-$height)/2), $width, $height)
+        $scale = [Math]::Min($available / $bounds.Width, $available / $bounds.Height)
+        $width = [int]($bounds.Width * $scale)
+        $height = [int]($bounds.Height * $scale)
+        $target = [System.Drawing.Rectangle]::new([int](($size-$width)/2), [int](($size-$height)/2), $width, $height)
+        $graphics.DrawImage($artwork, $target, $bounds, [System.Drawing.GraphicsUnit]::Pixel)
         $bitmap.Save((Join-Path $projectRoot "public/icons/$name"), [System.Drawing.Imaging.ImageFormat]::Png)
     } finally { $graphics.Dispose(); $bitmap.Dispose() }
 }
 try {
-    foreach ($size in @(16,32,48,180,192,512)) { Save-BrandIcon $size "monkey-$size.png" }
-    Save-BrandIcon 512 'monkey-maskable-512.png' $true
-    $images = @(16,32,48 | ForEach-Object { ,([System.IO.File]::ReadAllBytes((Join-Path $projectRoot "public/icons/monkey-$_.png"))) })
+    foreach ($size in @(16,32,48,180,192,512)) { Save-BrandIcon $size "mole-$size.png" }
+    Save-BrandIcon 512 'mole-maskable-512.png' $true
+    Copy-Item -LiteralPath (Join-Path $projectRoot 'public/icons/mole-512.png') -Destination (Join-Path $projectRoot 'public/mole-logo.png')
+    $images = @(16,32,48 | ForEach-Object { ,([System.IO.File]::ReadAllBytes((Join-Path $projectRoot "public/icons/mole-$_.png"))) })
     $stream = [System.IO.File]::Create((Join-Path $projectRoot 'public/favicon.ico'))
     $writer = [System.IO.BinaryWriter]::new($stream)
     try {

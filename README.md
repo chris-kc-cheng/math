@@ -1,18 +1,29 @@
-# Little Math Lab
+# Whack-a-Math
 
-An elementary math prototype with KaTeX formulas and animated, explained steps. No LLM, API key, or backend is used. Recognition and solving are separate: a trained model transcribes ink; exact arithmetic rules solve supported formulas.
+Learn maths through curriculum activities, animated worked solutions, and a five-choice whack-a-mole game. Whack-a-Math covers Ontario Grades 1–10, with local player profiles and saved progress. No LLM, API key, or backend is used. Recognition and solving are separate: a trained model transcribes ink; exact arithmetic rules solve supported formulas.
 
-[![Try Little Math Lab live](docs/images/try-live.svg)](https://chris-kc-cheng.github.io/math/)
+[![Try Whack-a-Math live](docs/images/try-live.svg)](https://chris-kc-cheng.github.io/math/)
 
 Live site: [chris-kc-cheng.github.io/math](https://chris-kc-cheng.github.io/math/)
 
 ## Screenshots
 
+Practice offers **Whack-a-Math**, a full-window five-choice quiz with green grass, holes, and five cute mole characters. Click an answer mole to confirm: correct choices get a hammer bonk and dizzy stars; wrong choices escape. Every answer reveals its worked explanation. Choose Captain Patty in settings for the original game.
+
+<img src="docs/images/mole-meadow.png" alt="Whack-a-Math quiz with a question above five cute answer moles in grassy holes" width="850">
+
+<img src="docs/images/curriculum-grade-header.png" alt="Curriculum grade display joined to its dropdown arrow, with grade choices expanded below" width="700">
+
+The player avatar menu offers 25 choices: the name initial and 24 emojis, including animals, two dinosaurs, and an alien.
+
+<img src="docs/images/avatar-picker.png" alt="Whack-a-Math player menu with 25 avatars including initials, animals, dinosaurs and an alien" width="700">
+
+
 Animated worked examples, including extra room for stacked fractions:
 
-<img src="docs/images/landing.png" alt="Equation demo with aligned steps and Practice in the shared navigation" width="560">
+<img src="docs/images/landing.png" alt="Whack-a-Math landing demo with the waving mole logo and order-of-operations example" width="560">
 
-<img src="docs/images/fractions.png" alt="Fraction addition with n/d calculator keys and clearly spaced stacked fractions" width="560">
+<img src="docs/images/fractions.png" alt="Fraction addition demo with clearly spaced stacked fractions" width="560">
 
 <img src="docs/images/landing-long-division.png" alt="Long division demo with the digit-aligned board and Practice navigation" width="560">
 
@@ -106,7 +117,7 @@ Every valid submitted answer immediately shows the worked explanation. Correct a
 
 Captain Patty fires ketchup at Grumble the zombie after a correct answer. Wrong answers cost one of his five lives; at zero he cries, and the round can continue. At least half the questions must be correct to win. Progress and rounds save in IndexedDB by player name; there is no account or backend. Reduced-motion preferences disable shot and zombie animations. Older saved retry scores remain readable.
 
-<img src="docs/images/game.png" alt="Practice battle with Captain Patty, Grumble, and correct-answer feedback" width="700">
+<img src="docs/images/game.png" alt="Practice round opened with Play, showing Captain Patty, Grumble, and the current question" width="700">
 
 ## Grades 1–3
 
@@ -116,7 +127,7 @@ Grades 1, 2, and 3 are available in the curriculum selector, Practice, and print
 
 ## Player badge, statistics and grade picker
 
-Every page shows the active player as a badge in the top-right corner (a coloured initial or a chosen emoji avatar). Its menu switches player, adds a player (type a name and press Add: the badge changes to the new player at once, and no game starts) or picks an avatar; the choice is stored only on this device. Next to it, three counters summarise the player's saved Practice rounds: 🏆 perfect games, 🥈 games won (at least 80% right) and 🍐 correct answers, and hovering or focusing them shows total accuracy, questions answered, games played and the last-played date. The grade picker is one segmented control that is also the grade display: every grade is visible and the current one is highlighted, on the curriculum page and in Practice.
+Every page shows the active player as a badge in the top-right corner (a coloured initial or a chosen emoji avatar). Its menu switches player, adds a player (type a name and press Add: the badge changes to the new player at once, and no game starts) or picks an avatar; the choice is stored only on this device. Next to it, three counters summarise the player's saved Practice rounds: 🏆 perfect games, 🥈 games won (at least 80% right) and 🍐 correct answers, and hovering or focusing them shows total accuracy, questions answered, games played and the last-played date. The curriculum grade header joins the grade display and dropdown arrow on one surface: click the grade for its overview or the arrow to reveal the grade choices. Practice uses the same shared grade picker.
 
 <img src="docs/images/profile-menu.png" alt="Player menu with the Add a player name field and avatar choices" width="700">
 
@@ -146,12 +157,14 @@ The landing demo now has ten examples. `?slide=6` reads a clock, `?slide=7` appl
 
 <img src="docs/images/demo-chart.png" alt="Curriculum-backed pictograph question with a key of two learners per picture" width="650">
 
-<img src="docs/images/calculator-tutorial.png" alt="Percentage walkthrough highlighting the 36X Pro-style 2nd key beside an LED-style calculator" width="850">
+<img src="docs/images/calculator-tutorial.png" alt="Percentage demo with an optional 36X Pro-style calculator" width="850">
 
 <img src="docs/images/calculator-learning.png" alt="Dark-mode Pythagorean explanation with calculator key steps and result five" width="850">
 
-<img src="docs/images/calculator-scientific.png" alt="Scientific-notation alternatives and a 36X Pro-style SCI display showing 5.46E6" width="850">
+<img src="docs/images/calculator-scientific.png" alt="Scientific-notation demo with the shared calculator" width="850">
 
 <img src="docs/images/calculator-practice.png" alt="Practice automatically shows a suitable calculator and a key walkthrough after the answer" width="850">
 
-The demo question pane stays centred in the same position when the calculator opens or closes. Desktop space reservation applies only to curriculum and practice pages.
+The demo and practice question panes stay in the same position when the calculator opens or closes. Desktop space reservation applies only to the curriculum page.
+
+The waving fifth mole is the Whack-a-Math mascot, landing logo, favicon and PWA icon. Run `pwsh scripts/generate-branding.ps1` to regenerate icon sizes from `public/game-art/moles/mole-5.png`.

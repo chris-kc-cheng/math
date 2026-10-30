@@ -13,7 +13,7 @@ const looksLikeTex=text=>/[\\^_{}]/.test(text);
 export function renderSheet(sheet){
  const root=el('section',undefined,'print-sheet');root.setAttribute('aria-hidden','true');
  const head=el('header',undefined,'ws-head');
- head.append(el('h1',`Little Math Lab · Grade ${sheet.grade} exercises`),el('p',sheet.topics.length?`Topics: ${sheet.topics.join(', ')}`:'Topics: all topics','ws-topics'),el('p','Name: ______________________    Date: ______________','ws-name'));
+ head.append(el('h1',`Whack-a-Math · Grade ${sheet.grade} exercises`),el('p',sheet.topics.length?`Topics: ${sheet.topics.join(', ')}`:'Topics: all topics','ws-topics'),el('p','Name: ______________________    Date: ______________','ws-name'));
  const list=el('ol',undefined,'ws-questions');
  for(const q of sheet.questions){
   const item=el('li',undefined,'ws-question');item.value=q.number;

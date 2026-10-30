@@ -89,8 +89,9 @@ function chooseButton(node,className='curriculum-node'){
 function matches(node,query){return `${node.code??''} ${node.title} ${node.description??''}`.toLowerCase().includes(query)||(node.children??[]).some(child=>matches(child,query));}
 function renderTree(){
  const gradeRow=el('div',undefined,'grade-row');gradeRow.append(chooseButton(curriculum,'curriculum-node grade-node'));
- // The grade selector lives in the grade row, directly under the grade it displays.
- mountGradePicker(gradeRow,{grades:catalog.map(item=>item.grade),value:active.grade,onChange:value=>setGrade(value),compact:true,collapsible:true,triggerLabel:()=>{const icon=document.createElementNS('http://www.w3.org/2000/svg','svg');icon.setAttribute('viewBox','0 0 24 24');icon.setAttribute('aria-hidden','true');icon.setAttribute('fill','none');icon.setAttribute('stroke','currentColor');icon.setAttribute('stroke-width','1.8');icon.setAttribute('stroke-linecap','round');icon.setAttribute('stroke-linejoin','round');const path=document.createElementNS('http://www.w3.org/2000/svg','path');path.setAttribute('d','M8 9l4-4 4 4M8 15l4 4 4-4');icon.append(path);return icon;}});
+ // One connected control: grade overview on the left, grade menu on the right.
+ const picker=mountGradePicker(gradeRow,{grades:catalog.map(item=>item.grade),value:active.grade,onChange:value=>setGrade(value),compact:true,collapsible:true});
+ picker.trigger.title='Choose grade';
  tree.replaceChildren(gradeRow);
  const query=document.querySelector('#skill-search').value.trim().toLowerCase();
  const current=nodes.get(selected);
@@ -141,7 +142,7 @@ function renderDetail(){
  const {node,parents}=nodes.get(selected),strand=parents.find(n=>n.source)??(node.source?node:null);
  detail.replaceChildren();
  document.querySelector('.curriculum-page').dataset.view=mode;
- document.title=`Grade ${active.grade} Math Curriculum · Little Math Lab`;
+ document.title=`Grade ${active.grade} Math Curriculum · Whack-a-Math`;
  tree.setAttribute('aria-label',`Grade ${active.grade} curriculum hierarchy`);
  document.querySelector('.curriculum-header h1').textContent=mode==='learner'?'Let’s practise':'Math curriculum';
  if(mode==='learner'){renderLearner(node);return;}

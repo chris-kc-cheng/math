@@ -141,7 +141,19 @@ Question templates may declare `generation`, one domain per named parameter: eit
 
 Fraction entry on the landing demo compiles to n/d templates, not ordinary division. Scientific plans preserve the ×10ⁿ path and offer independent EE-entry and NORM/SCI formatting sequences. Each alternative runs through the same key reducer, and tests compare its numeric value with the original method. Scientific demo 10 and calculator demo 9 use the shared tutorial renderer.
 
-The demo question pane stays centred in the same position when the calculator opens or closes. Desktop space reservation applies only to curriculum and practice pages.
+The demo and practice question panes stay in the same position when the calculator opens or closes. Desktop space reservation applies only to the curriculum page.
 
 `math/secondary/` holds the Grades 9–10 rules: `common.js` defines `define(name,params,domains,example,styles)` (each style is a thunk returning a question spec, so a style can reject parameters it cannot use), and the topic files register rules for number, algebra, data, spatial, financial, quadratic, analytic and trigonometry questions. `curriculum/secondary-visuals.js` draws function graphs, box plots and labelled triangles from the lesson's own numbers.
 
+
+`game/controls.js` manages the current action controls, including busy and readiness states. Start, resume, and answer actions restore existing controls before rendering the round; the removed name-step buttons are not referenced.
+
+`game/moles.js` / `moles.css` render Mole meadow. `game/mole-choices.js` creates five unique exact rational choices in a stable shuffled order, reusing the saved-round model and shared explanations. Character PNGs are in `public/game-art/moles/`.
+
+The curriculum sidebar presents `mountGradePicker` as a connected grade header: overview and menu arrow share a bordered surface, and the expanded segmented choices sit directly underneath.
+
+`game/profile.js` exports 24 emoji avatars; `profile-corner.js` adds the initial avatar, making a 5×5 picker with 25 choices.
+
+The project and visible app brand are Whack-a-Math. Existing IndexedDB and local-storage keys are preserved so renaming does not reset learner progress.
+
+Brand assets use `public/mole-logo.png`, `public/icons/mole-*.png`, and `public/favicon.ico`, packaged from the fifth mole by `scripts/generate-branding.ps1`. The maskable icon keeps the character inside the safe zone.

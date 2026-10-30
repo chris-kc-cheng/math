@@ -84,3 +84,16 @@ Reviewed Grades 1–3 against the Grade 5–10 standard. Numeric answers now get
 ### 2026-10-30 — Claude profile and grade-selector follow-up (implementation, awaiting review)
 
 New players are created inside the badge menu (name field, Add), stored in `math-profiles` and made active at once; no game starts and no page change. Signed-in players skip the Practice name step; Guest still sees the waiting room. The grade display and its selector share one row: the grade chip plus a frameless icon button in the same accent colour. The Practice name step was removed; players are chosen only in the badge menu. The fictional player in docs and screenshots is always Chloe (method: seed rounds, drive headless Edge). Not an independent sign-off.
+
+### 2026-10-30 — Codex practice start/resume fix
+
+The shared action cleanup still accessed removed `change-player` and `player-next` buttons after a successful save, throwing before `renderRound`. Replaced that cleanup with `game/controls.js`, which restores existing controls and preserves readiness/count validation. A regression test covers absent old player-step controls. Browser checks confirmed Continue, Next question, and a fresh Play round. Calculator visibility no longer shifts the Practice pane; only curriculum keeps desktop space reservation.
+
+### 2026-10-30 — Mole meadow (implementation, awaiting review)
+Added a selectable five-choice full-window game using all five generated mole sprites, grassy holes, hit/dizzy or escape feedback, exact unique answer choices, and existing scoring and worked explanations. Browser checked correct/wrong confirmation, Next, continuation, and full-screen persistence. Updated docs and added `docs/images/mole-meadow.png`.
+
+Curriculum header follow-up: grade overview, skill count and dropdown arrow share one connected surface, with segmented choices below. Browser checked expansion and Grade 1 to Grade 5 switching; screenshot in `docs/images/curriculum-grade-header.png`.
+
+Branding follow-up: renamed the project, page titles, manifest, worksheet title and game choice to Whack-a-Math; preserved browser storage identifiers. Avatar picker now has 25 choices including the initial, dinosaurs and an alien. Browser verified the brand and avatar count; landing and avatar screenshots refreshed.
+
+Mascot follow-up: selected fifth waving mole for the landing logo, ICO favicon, Apple touch icon and regular/maskable PWA icons. Removed previous mascot artwork and source references; branding packaging trims transparent margins and keeps maskable safe padding. Refreshed landing/demo screenshots.

@@ -50,8 +50,8 @@ export function profileStats(rounds,profileId){
  return stats;
 }
 
-// A small emoji avatar, chosen per profile and stored only on this device.
-export const AVATARS=['🐵','🐼','🦊','🐯','🐸','🦄','🐙','🚀'];
+// 24 emoji choices plus the letter avatar, stored per profile on this device.
+export const AVATARS=['🐶','🐱','🐭','🐹','🐰','🦊','🐻','🐼','🐨','🐯','🦁','🐮','🐷','🦌','🐸','🐧','🦉','🦋','🐢','🐙','🦄','🦕','🦖','👽'];
 const AVATAR_KEY='math-avatars';
 const readAvatars=()=>{try{return JSON.parse(localStorage.getItem(AVATAR_KEY)||'{}')||{};}catch{return {};}};
 export const avatarFor=id=>readAvatars()[id]||null;

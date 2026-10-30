@@ -9,7 +9,7 @@
 :root[data-theme=dark] #calculator-panel .calculator-key.is-tutorial-key[data-category=number]{background:#ffd796!important;color:#3a2605!important}:root[data-theme=dark] #calculator-panel .calculator-key.is-tutorial-key[data-category=operation]{background:#9de2da!important;color:#123c37!important}:root[data-theme=dark] #calculator-panel .calculator-key.is-tutorial-key[data-category=navigation]{background:#d7c4ff!important;color:#322148!important}
 @media print{.calculator-panel,.calculator-toggle,.calculator-tutorial{display:none!important}}@media(max-width:560px){.calculator-panel{right:12px;bottom:70px}.calculator-toggle{right:12px;bottom:12px}}
 
-@media(min-width:1100px){body.calculator-open .curriculum-page{margin-right:334px;margin-left:0;max-width:calc(100% - 334px)}body.calculator-open .curriculum-layout{grid-template-columns:240px minmax(0,1fr);gap:24px}body.calculator-open .game-page{margin-right:334px;margin-left:auto}}
+@media(min-width:1100px){body.calculator-open .curriculum-page{margin-right:334px;margin-left:0;max-width:calc(100% - 334px)}body.calculator-open .curriculum-layout{grid-template-columns:240px minmax(0,1fr);gap:24px}}
 
 .calculator-methods{display:inline-flex;flex-wrap:wrap;gap:0;margin-top:18px;border:1px solid #84909b;border-radius:7px;overflow:hidden}.calculator-methods button{border:0;border-radius:0;border-right:1px solid #cdd4db;font-size:12px}.calculator-methods button:last-child{border-right:0}.calculator-methods button[aria-pressed=true]{background:#2459a6;color:white}.calculator-method-group>.calculator-tutorial{margin-top:8px}
 :root[data-theme=dark] .calculator-methods button[aria-pressed=true]{background:#99c5ff!important;color:#14283f!important}

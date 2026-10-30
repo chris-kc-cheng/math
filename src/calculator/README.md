@@ -39,7 +39,7 @@ Keyboard numbers, `.`, `+`, `-`, `*`, `/`, `=`, Enter, delete/backspace and curs
 
 Scientific notation has separate ×10ⁿ, EE, and SCI-display walkthroughs. The subset's MODE screen implements NORM/SCI number formatting only, preserving the documented down/right/enter/clear sequence. The fraction landing example explicitly enters n/d templates. Landing auto-play includes the key sequence before advancing; manual key controls pause auto-advance. Hiding the calculator pauses a running tutorial.
 
-The demo question pane stays centred in the same position when the calculator opens or closes. Desktop space reservation applies only to curriculum and practice pages.
+The demo and practice question panes stay in the same position when the calculator opens or closes. Desktop space reservation applies only to the curriculum page.
 
 ## Trigonometry (Grades 9–10)
 

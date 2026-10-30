@@ -64,3 +64,6 @@ html[data-theme=dark] .avatar-initial{background:hsl(var(--avatar-hue,212) 50% 3
 .menu-new button{min-height:34px;padding:0 14px;border:0;border-radius:8px;background:#2459a6;color:#fff;font:inherit;font-weight:700;cursor:pointer}
 .menu-error{flex-basis:100%;margin:0;font-size:12px;color:#a02b2b}.menu-error:empty{display:none}
 html[data-theme=dark] .menu-new input{background:#222d37;color:#e1e7ed;border-color:#7b8794}html[data-theme=dark] .menu-error{color:#ff9d9d}
+
+/* Exactly 25 avatars, arranged as five easy-to-scan rows. */
+.avatar-row{display:grid;grid-template-columns:repeat(5,32px);justify-content:space-between;gap:8px 4px}

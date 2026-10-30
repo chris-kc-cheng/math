@@ -53,9 +53,16 @@ html[data-theme=dark] .popover{background:#222d37;color:#e1e7ed;border-color:#52
 .tally-marks{display:flex;flex-wrap:wrap;align-items:center;gap:7px;color:inherit}
 .practice-visual .tally-marks svg{flex:0 0 36px;width:36px;height:30px;margin:0;overflow:visible}
 
-/* Grade display and its selector share one row: the grade chip, then a frameless icon button in the same accent colour. */
-.grade-row{gap:4px;row-gap:6px}.grade-row .grade-node{flex:1 1 0;min-width:0;min-height:40px;margin:0}
-.grade-row .grade-trigger{flex:none;justify-content:center;width:36px;min-height:40px;padding:0;border:0;border-radius:5px;background:transparent;color:#2459a6}
-.grade-row .grade-trigger svg{width:18px;height:18px}.grade-row .grade-caret{display:none}
-.grade-row .grade-trigger:hover,.grade-row .grade-trigger[aria-expanded=true]{background:#e7effa;color:#2459a6}
-html[data-theme=dark] .grade-row .grade-trigger{background:transparent;color:#99c5ff}html[data-theme=dark] .grade-row .grade-trigger:hover,html[data-theme=dark] .grade-row .grade-trigger[aria-expanded=true]{background:#2f4157;color:#99c5ff}
+/* A connected grade header: overview and menu share one surface. */
+.grade-row{gap:0;align-items:stretch;border:1px solid #cdd8e4;border-radius:9px;background:#f0f5fb;overflow:hidden}
+.grade-row .grade-node{flex:1 1 0;min-width:0;min-height:44px;margin:0;border:0;border-radius:0;background:transparent;color:#2459a6;padding:10px 12px;align-items:center;font-size:14px}
+.grade-row .grade-node.selected{background:transparent;border:0}
+.grade-row .grade-trigger{flex:none;justify-content:center;width:38px;min-height:44px;padding:0;border:0;border-left:1px solid #cdd8e4;border-radius:0;background:transparent;color:#2459a6}
+.grade-row .grade-caret{display:inline;font-size:13px;color:inherit}
+.grade-row .grade-node:hover,.grade-row .grade-trigger:hover,.grade-row .grade-trigger[aria-expanded=true]{background:#dce9f8}
+.grade-row .grade-picker{flex-basis:100%;border:0;border-top:1px solid #cdd8e4;border-radius:0;background:#fff}
+.grade-row:has(:focus-visible){outline:2px solid #2459a6;outline-offset:2px}
+html[data-theme=dark] .grade-row{background:#283b50;border-color:#526b85}
+html[data-theme=dark] .grade-row :is(.grade-node,.grade-trigger){background:transparent;color:#b9d9ff;border-color:#526b85}
+html[data-theme=dark] .grade-row :is(.grade-node:hover,.grade-trigger:hover,.grade-trigger[aria-expanded=true]){background:#36516e}
+html[data-theme=dark] .grade-row .grade-picker{background:#222d37;border-color:#526b85}

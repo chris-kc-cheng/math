@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" width="900" height="640" font-family="'Trebuchet MS',system-ui,sans-serif"><title>Mole mascot candidates, soft style</title>
+<rect width="900" height="640" fill="#fdf6ea"/><text x="450" y="46" text-anchor="middle" font-size="30" font-weight="900" fill="#6b3f28">Pick your mole</text><g><rect x="30" y="66" width="270" height="262" rx="22" fill="#fff" stroke="#e5d3b8" stroke-width="3"/>
+ <ellipse cx="165" cy="256" rx="80" ry="10" fill="#6b3f28" opacity=".1"/>
+ <g transform="translate(165 188) rotate(-4) scale(.7)"><defs><radialGradient id="g0" cx=".35" cy=".25" r=".9"><stop offset="0" stop-color="#c28a63"/><stop offset="1" stop-color="#9a6240"/></radialGradient></defs>
+ <g stroke="#6b3f28" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+  <ellipse cx="-44" cy="110" rx="26" ry="13" fill="#f6dcb8"/><ellipse cx="44" cy="110" rx="26" ry="13" fill="#f6dcb8"/>
+  <ellipse cx="0" cy="74" rx="56" ry="46" fill="url(#g0)"/><ellipse cx="0" cy="82" rx="34" ry="34" fill="#f6dcb8" stroke="none"/>
+  <circle cx="-70" cy="-50" r="19" fill="url(#g0)"/><circle cx="70" cy="-50" r="19" fill="url(#g0)"/><circle cx="-70" cy="-50" r="10" fill="#f6dcb8" stroke="none"/><circle cx="70" cy="-50" r="10" fill="#f6dcb8" stroke="none"/>
+  <ellipse cx="0" cy="-8" rx="86" ry="72" fill="url(#g0)"/>
+  <path d="M-62 4q-6 -36 28 -40q14 -2 34 12q20 -14 34 -12q34 4 28 40q8 40 -62 50q-70 -10 -62 -50Z" fill="#f6dcb8" stroke="none"/>
+  
+ </g>
+ <ellipse cx="-31" cy="-4" rx="15" ry="18" fill="#3a2016"/><ellipse cx="-31" cy="-1" rx="10" ry="11" fill="#5a3322" opacity=".55"/><circle cx="-26" cy="-11" r="5.5" fill="#fff"/><circle cx="-36" cy="4" r="2.6" fill="#fff"/><ellipse cx="31" cy="-4" rx="15" ry="18" fill="#3a2016"/><ellipse cx="31" cy="-1" rx="10" ry="11" fill="#5a3322" opacity=".55"/><circle cx="36" cy="-11" r="5.5" fill="#fff"/><circle cx="26" cy="4" r="2.6" fill="#fff"/>
+ <ellipse cx="0" cy="14" rx="12" ry="8.5" fill="#5a3624"/><ellipse cx="-3" cy="11.5" rx="4" ry="2.4" fill="#fff" opacity=".6"/>
+ <path d="M-13 30q13 12 26 0" fill="none" stroke="#3a2016" stroke-width="3.5" stroke-linecap="round"/>
+ <ellipse cx="-56" cy="20" rx="12" ry="7" fill="#ff9bb0" opacity=".55"/><ellipse cx="56" cy="20" rx="12" ry="7" fill="#ff9bb0" opacity=".55"/>
+ <g stroke="#6b3f28" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="-40" cy="84" rx="19" ry="15" fill="#f6dcb8"/><ellipse cx="40" cy="84" rx="19" ry="15" fill="#f6dcb8"/><path d="M-48 78v-4M-40 77v-5M-32 78v-4M32 78v-4M40 77v-5M48 78v-4" fill="none" stroke-width="2.5"/></g>
+ <path d="M-8 -78q-10 -30 14 -40q-4 12 4 18q6 -14 20 -14q-14 12 -10 40Z" fill="#9a6240" stroke="#6b3f28" stroke-width="3.5" stroke-linejoin="round"/></g>
+ <text x="165" y="302" text-anchor="middle" font-size="22" font-weight="900" fill="#6b3f28">1. Choco</text>
+ <text x="165" y="320" text-anchor="middle" font-size="13" fill="#7a6a5a">the sweet brown classic</text></g><g><rect x="315" y="66" width="270" height="262" rx="22" fill="#fff" stroke="#e5d3b8" stroke-width="3"/>
+ <ellipse cx="450" cy="256" rx="80" ry="10" fill="#6b3f28" opacity=".1"/>
+ <g transform="translate(450 188) rotate(3) scale(.7)"><defs><radialGradient id="g1" cx=".35" cy=".25" r=".9"><stop offset="0" stop-color="#a9b6cb"/><stop offset="1" stop-color="#7b8aa3"/></radialGradient></defs>
+ <g stroke="#4c5a72" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+  <ellipse cx="-44" cy="110" rx="26" ry="13" fill="#eef2f8"/><ellipse cx="44" cy="110" rx="26" ry="13" fill="#eef2f8"/>
+  <ellipse cx="0" cy="74" rx="56" ry="46" fill="url(#g1)"/><ellipse cx="0" cy="82" rx="34" ry="34" fill="#eef2f8" stroke="none"/>
+  <circle cx="-70" cy="-50" r="19" fill="url(#g1)"/><circle cx="70" cy="-50" r="19" fill="url(#g1)"/><circle cx="-70" cy="-50" r="10" fill="#eef2f8" stroke="none"/><circle cx="70" cy="-50" r="10" fill="#eef2f8" stroke="none"/>
+  <ellipse cx="0" cy="-8" rx="86" ry="72" fill="url(#g1)"/>
+  <path d="M-62 4q-6 -36 28 -40q14 -2 34 12q20 -14 34 -12q34 4 28 40q8 40 -62 50q-70 -10 -62 -50Z" fill="#eef2f8" stroke="none"/>
+  
+ </g>
+ <ellipse cx="-31" cy="-4" rx="15" ry="18" fill="#3a2016"/><ellipse cx="-31" cy="-1" rx="10" ry="11" fill="#5a3322" opacity=".55"/><circle cx="-26" cy="-11" r="5.5" fill="#fff"/><circle cx="-36" cy="4" r="2.6" fill="#fff"/><ellipse cx="31" cy="-4" rx="15" ry="18" fill="#3a2016"/><ellipse cx="31" cy="-1" rx="10" ry="11" fill="#5a3322" opacity=".55"/><circle cx="36" cy="-11" r="5.5" fill="#fff"/><circle cx="26" cy="4" r="2.6" fill="#fff"/>
+ <ellipse cx="0" cy="14" rx="12" ry="8.5" fill="#5a3624"/><ellipse cx="-3" cy="11.5" rx="4" ry="2.4" fill="#fff" opacity=".6"/>
+ <path d="M-13 30q13 12 26 0" fill="none" stroke="#3a2016" stroke-width="3.5" stroke-linecap="round"/>
+ <ellipse cx="-56" cy="20" rx="12" ry="7" fill="#ff9bb0" opacity=".55"/><ellipse cx="56" cy="20" rx="12" ry="7" fill="#ff9bb0" opacity=".55"/>
+ <g stroke="#4c5a72" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="-40" cy="84" rx="19" ry="15" fill="#eef2f8"/><ellipse cx="40" cy="84" rx="19" ry="15" fill="#eef2f8"/><path d="M-48 78v-4M-40 77v-5M-32 78v-4M32 78v-4M40 77v-5M48 78v-4" fill="none" stroke-width="2.5"/></g>
+ <g fill="#fff" fill-opacity=".35" stroke="#3a3f57" stroke-width="4"><circle cx="-31" cy="-4" r="25"/><circle cx="31" cy="-4" r="25"/></g><path d="M-6 -6h12" stroke="#3a3f57" stroke-width="4"/>
+  <g stroke="#3a3f57" stroke-width="3.5" stroke-linejoin="round"><path d="M0 62l-22 -10v22ZM0 62l22 -10v22Z" fill="#5b7bd5"/><circle cx="0" cy="62" r="6" fill="#4663b8"/></g></g>
+ <text x="450" y="302" text-anchor="middle" font-size="22" font-weight="900" fill="#6b3f28">2. Professor Pebble</text>
+ <text x="450" y="320" text-anchor="middle" font-size="13" fill="#7a6a5a">wears glasses, knows everything</text></g><g><rect x="600" y="66" width="270" height="262" rx="22" fill="#fff" stroke="#e5d3b8" stroke-width="3"/>
+ <ellipse cx="735" cy="256" rx="80" ry="10" fill="#6b3f28" opacity=".1"/>
+ <g transform="translate(735 188) rotate(5) scale(.7)"><defs><radialGradient id="g2" cx=".35" cy=".25" r=".9"><stop offset="0" stop-color="#fffaf0"/><stop offset="1" stop-color="#efe3d0"/></radialGradient></defs>
+ <g stroke="#b89b78" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+  <ellipse cx="-44" cy="110" rx="26" ry="13" fill="#fffaf0"/><ellipse cx="44" cy="110" rx="26" ry="13" fill="#fffaf0"/>
+  <ellipse cx="0" cy="74" rx="56" ry="46" fill="url(#g2)"/><ellipse cx="0" cy="82" rx="34" ry="34" fill="#fffaf0" stroke="none"/>
+  <circle cx="-70" cy="-50" r="19" fill="url(#g2)"/><circle cx="70" cy="-50" r="19" fill="url(#g2)"/><circle cx="-70" cy="-50" r="10" fill="#fffaf0" stroke="none"/><circle cx="70" cy="-50" r="10" fill="#fffaf0" stroke="none"/>
+  <ellipse cx="0" cy="-8" rx="86" ry="72" fill="url(#g2)"/>
+  <path d="M-62 4q-6 -36 28 -40q14 -2 34 12q20 -14 34 -12q34 4 28 40q8 40 -62 50q-70 -10 -62 -50Z" fill="#fffaf0" stroke="none"/>
+  
+ </g>
+ <path d="M-48 0q17 -22 34 0M14 0q17 -22 34 0" fill="none" stroke="#3a2016" stroke-width="5" stroke-linecap="round"/>
+ <ellipse cx="0" cy="14" rx="12" ry="8.5" fill="#5a3624"/><ellipse cx="-3" cy="11.5" rx="4" ry="2.4" fill="#fff" opacity=".6"/>
+ <ellipse cx="0" cy="36" rx="6" ry="8" fill="#6e2f33" stroke="#3a2016" stroke-width="3"/>
+ <ellipse cx="-56" cy="20" rx="12" ry="7" fill="#ff9bb0" opacity=".55"/><ellipse cx="56" cy="20" rx="12" ry="7" fill="#ff9bb0" opacity=".55"/>
+ <g stroke="#b89b78" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="-40" cy="84" rx="19" ry="15" fill="#fffaf0"/><ellipse cx="40" cy="84" rx="19" ry="15" fill="#fffaf0"/><path d="M-48 78v-4M-40 77v-5M-32 78v-4M32 78v-4M40 77v-5M48 78v-4" fill="none" stroke-width="2.5"/></g>
+ <g stroke="#3d8c3a" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"><path d="M0 -80v-20" fill="none"/><path d="M0 -100q-24 -6 -26 -26q22 -2 26 26Z" fill="#7ed957"/><path d="M0 -100q24 -6 26 -26q-22 -2 -26 26Z" fill="#5fc243"/></g></g>
+ <text x="735" y="302" text-anchor="middle" font-size="22" font-weight="900" fill="#6b3f28">3. Mochi</text>
+ <text x="735" y="320" text-anchor="middle" font-size="13" fill="#7a6a5a">soft, sleepy, squishy</text></g><g><rect x="30" y="351" width="270" height="262" rx="22" fill="#fff" stroke="#e5d3b8" stroke-width="3"/>
+ <ellipse cx="165" cy="541" rx="80" ry="10" fill="#6b3f28" opacity=".1"/>
+ <g transform="translate(165 473) rotate(-3) scale(.7)"><defs><radialGradient id="g3" cx=".35" cy=".25" r=".9"><stop offset="0" stop-color="#e3b072"/><stop offset="1" stop-color="#c98a4a"/></radialGradient></defs>
+ <g stroke="#8a5628" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+  <ellipse cx="-44" cy="110" rx="26" ry="13" fill="#fbe6c0"/><ellipse cx="44" cy="110" rx="26" ry="13" fill="#fbe6c0"/>
+  <ellipse cx="0" cy="74" rx="56" ry="46" fill="url(#g3)"/><ellipse cx="0" cy="82" rx="34" ry="34" fill="#fbe6c0" stroke="none"/>
+  <circle cx="-70" cy="-50" r="19" fill="url(#g3)"/><circle cx="70" cy="-50" r="19" fill="url(#g3)"/><circle cx="-70" cy="-50" r="10" fill="#fbe6c0" stroke="none"/><circle cx="70" cy="-50" r="10" fill="#fbe6c0" stroke="none"/>
+  <ellipse cx="0" cy="-8" rx="86" ry="72" fill="url(#g3)"/>
+  <path d="M-62 4q-6 -36 28 -40q14 -2 34 12q20 -14 34 -12q34 4 28 40q8 40 -62 50q-70 -10 -62 -50Z" fill="#fbe6c0" stroke="none"/>
+  
+ </g>
+ <ellipse cx="-31" cy="-4" rx="17.25" ry="20.7" fill="#3a2016"/><ellipse cx="-31" cy="-1" rx="11.5" ry="12.649999999999999" fill="#5a3322" opacity=".55"/><circle cx="-26" cy="-11" r="6.324999999999999" fill="#fff"/><circle cx="-36" cy="4" r="2.9899999999999998" fill="#fff"/><ellipse cx="31" cy="-4" rx="17.25" ry="20.7" fill="#3a2016"/><ellipse cx="31" cy="-1" rx="11.5" ry="12.649999999999999" fill="#5a3322" opacity=".55"/><circle cx="36" cy="-11" r="6.324999999999999" fill="#fff"/><circle cx="26" cy="4" r="2.9899999999999998" fill="#fff"/>
+ <ellipse cx="0" cy="14" rx="12" ry="8.5" fill="#5a3624"/><ellipse cx="-3" cy="11.5" rx="4" ry="2.4" fill="#fff" opacity=".6"/>
+ <path d="M-20 28q20 28 40 0Z" fill="#6e2f33" stroke="#3a2016" stroke-width="3.5" stroke-linejoin="round"/><path d="M-10 40q10 8 20 0q-10 -6 -20 0Z" fill="#ff9aa8"/>
+ <ellipse cx="-56" cy="20" rx="12" ry="7" fill="#ff9bb0" opacity=".55"/><ellipse cx="56" cy="20" rx="12" ry="7" fill="#ff9bb0" opacity=".55"/>
+ <g stroke="#8a5628" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="-40" cy="84" rx="19" ry="15" fill="#fbe6c0"/><ellipse cx="40" cy="84" rx="19" ry="15" fill="#fbe6c0"/><path d="M-48 78v-4M-40 77v-5M-32 78v-4M32 78v-4M40 77v-5M48 78v-4" fill="none" stroke-width="2.5"/></g>
+ <g stroke="#a67c00" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"><path d="M-62 -52q62 -58 124 0Z" fill="#ffd23f"/><rect x="-72" y="-56" width="144" height="14" rx="7" fill="#f2b800"/><rect x="-15" y="-92" width="30" height="22" rx="7" fill="#fff8d6"/></g><path d="M-22 -100l-14 -14M0 -102v-18M22 -100l14 -14" stroke="#ffe36b" stroke-width="5" stroke-linecap="round"/></g>
+ <text x="165" y="587" text-anchor="middle" font-size="22" font-weight="900" fill="#6b3f28">4. Dug</text>
+ <text x="165" y="605" text-anchor="middle" font-size="13" fill="#7a6a5a">tiny hard hat, big dreams</text></g><g><rect x="315" y="351" width="270" height="262" rx="22" fill="#fff" stroke="#e5d3b8" stroke-width="3"/>
+ <ellipse cx="450" cy="541" rx="80" ry="10" fill="#6b3f28" opacity=".1"/>
+ <g transform="translate(450 473) rotate(5) scale(.7)"><defs><radialGradient id="g4" cx=".35" cy=".25" r=".9"><stop offset="0" stop-color="#c3b3ef"/><stop offset="1" stop-color="#9a82d8"/></radialGradient></defs>
+ <g stroke="#6552a8" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+  <ellipse cx="-44" cy="110" rx="26" ry="13" fill="#f4eeff"/><ellipse cx="44" cy="110" rx="26" ry="13" fill="#f4eeff"/>
+  <ellipse cx="0" cy="74" rx="56" ry="46" fill="url(#g4)"/><ellipse cx="0" cy="82" rx="34" ry="34" fill="#f4eeff" stroke="none"/>
+  <circle cx="-70" cy="-50" r="19" fill="url(#g4)"/><circle cx="70" cy="-50" r="19" fill="url(#g4)"/><circle cx="-70" cy="-50" r="10" fill="#f4eeff" stroke="none"/><circle cx="70" cy="-50" r="10" fill="#f4eeff" stroke="none"/>
+  <ellipse cx="0" cy="-8" rx="86" ry="72" fill="url(#g4)"/>
+  <path d="M-62 4q-6 -36 28 -40q14 -2 34 12q20 -14 34 -12q34 4 28 40q8 40 -62 50q-70 -10 -62 -50Z" fill="#f4eeff" stroke="none"/>
+  
+ </g>
+ <ellipse cx="-31" cy="-4" rx="15" ry="18" fill="#3a2016"/><ellipse cx="-31" cy="-1" rx="10" ry="11" fill="#5a3322" opacity=".55"/><circle cx="-26" cy="-11" r="5.5" fill="#fff"/><circle cx="-36" cy="4" r="2.6" fill="#fff"/><path d="M14 0q17 -22 34 0" fill="none" stroke="#3a2016" stroke-width="5" stroke-linecap="round"/>
+ <ellipse cx="0" cy="14" rx="12" ry="8.5" fill="#5a3624"/><ellipse cx="-3" cy="11.5" rx="4" ry="2.4" fill="#fff" opacity=".6"/>
+ <path d="M-13 30q13 12 26 0" fill="none" stroke="#3a2016" stroke-width="3.5" stroke-linecap="round"/><path d="M-6 38q6 20 14 6v-6Z" fill="#ff9aa8" stroke="#3a2016" stroke-width="3" stroke-linejoin="round"/>
+ <ellipse cx="-56" cy="20" rx="12" ry="7" fill="#ff9bb0" opacity=".55"/><ellipse cx="56" cy="20" rx="12" ry="7" fill="#ff9bb0" opacity=".55"/>
+ <g stroke="#6552a8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="-40" cy="84" rx="19" ry="15" fill="#f4eeff"/><ellipse cx="40" cy="84" rx="19" ry="15" fill="#f4eeff"/><path d="M-48 78v-4M-40 77v-5M-32 78v-4M32 78v-4M40 77v-5M48 78v-4" fill="none" stroke-width="2.5"/></g>
+ <g stroke="#a02b5c" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"><path d="M-64 -56q4 -40 64 -44q60 4 64 44q-64 -14 -128 0Z" fill="#ff6fa3"/><circle cx="0" cy="-102" r="7" fill="#ff6fa3"/></g><path d="M64 -108l5 12l12 2l-9 8l3 12l-11 -6l-11 6l3 -12l-9 -8l12 -2Z" fill="#ffd23f" stroke="#a67c00" stroke-width="2.5" stroke-linejoin="round"/></g>
+ <text x="450" y="587" text-anchor="middle" font-size="22" font-weight="900" fill="#6b3f28">5. Berry</text>
+ <text x="450" y="605" text-anchor="middle" font-size="13" fill="#7a6a5a">silly face, purple beret</text></g><g><rect x="600" y="351" width="270" height="262" rx="22" fill="#fff" stroke="#e5d3b8" stroke-width="3"/>
+ <ellipse cx="735" cy="541" rx="80" ry="10" fill="#6b3f28" opacity=".1"/>
+ <g transform="translate(735 473) rotate(-5) scale(.7)"><defs><radialGradient id="g5" cx=".35" cy=".25" r=".9"><stop offset="0" stop-color="#f6d27e"/><stop offset="1" stop-color="#e0b04c"/></radialGradient></defs>
+ <g stroke="#9a7420" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+  <ellipse cx="-44" cy="110" rx="26" ry="13" fill="#fff3cf"/><ellipse cx="44" cy="110" rx="26" ry="13" fill="#fff3cf"/>
+  <ellipse cx="0" cy="74" rx="56" ry="46" fill="url(#g5)"/><ellipse cx="0" cy="82" rx="34" ry="34" fill="#fff3cf" stroke="none"/>
+  <circle cx="-70" cy="-50" r="19" fill="url(#g5)"/><circle cx="70" cy="-50" r="19" fill="url(#g5)"/><circle cx="-70" cy="-50" r="10" fill="#fff3cf" stroke="none"/><circle cx="70" cy="-50" r="10" fill="#fff3cf" stroke="none"/>
+  <ellipse cx="0" cy="-8" rx="86" ry="72" fill="url(#g5)"/>
+  <path d="M-62 4q-6 -36 28 -40q14 -2 34 12q20 -14 34 -12q34 4 28 40q8 40 -62 50q-70 -10 -62 -50Z" fill="#fff3cf" stroke="none"/>
+  
+ </g>
+ <ellipse cx="-31" cy="-4" rx="15" ry="18" fill="#3a2016"/><ellipse cx="31" cy="-4" rx="15" ry="18" fill="#3a2016"/><circle cx="-25" cy="-11" r="5.5" fill="#fff"/><circle cx="25" cy="-11" r="5.5" fill="#fff"/><circle cx="-36" cy="4" r="2.6" fill="#fff"/><circle cx="36" cy="4" r="2.6" fill="#fff"/>
+ <ellipse cx="0" cy="14" rx="12" ry="8.5" fill="#5a3624"/><ellipse cx="-3" cy="11.5" rx="4" ry="2.4" fill="#fff" opacity=".6"/>
+ <path d="M-13 30q13 12 26 0" fill="none" stroke="#3a2016" stroke-width="3.5" stroke-linecap="round"/><rect x="-4" y="34" width="9" height="11" rx="2.5" fill="#fff" stroke="#3a2016" stroke-width="3"/>
+ <ellipse cx="-56" cy="20" rx="12" ry="7" fill="#ff9bb0" opacity=".55"/><ellipse cx="56" cy="20" rx="12" ry="7" fill="#ff9bb0" opacity=".55"/>
+ <g stroke="#9a7420" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="-40" cy="84" rx="19" ry="15" fill="#fff3cf"/><ellipse cx="40" cy="84" rx="19" ry="15" fill="#fff3cf"/><path d="M-48 78v-4M-40 77v-5M-32 78v-4M32 78v-4M40 77v-5M48 78v-4" fill="none" stroke-width="2.5"/></g>
+ <g stroke="#b07f00" stroke-width="3.5" stroke-linejoin="round"><path d="M-44 -72l44 -50l44 50Z" fill="#ffd23f"/><g fill="#f0a900" stroke-width="2"><circle cx="-8" cy="-90" r="6"/><circle cx="14" cy="-80" r="4.5"/><circle cx="2" cy="-104" r="3.5"/></g></g></g>
+ <text x="735" y="587" text-anchor="middle" font-size="22" font-weight="900" fill="#6b3f28">6. Cheddar</text>
+ <text x="735" y="605" text-anchor="middle" font-size="13" fill="#7a6a5a">cheese-hat, cross-eyed, proud</text></g></svg>

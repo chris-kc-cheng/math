@@ -1,3 +1,5 @@
+import {mountMoles} from './game/moles.js';
+import {setActionBusy} from './game/controls.js';
 import {calculatorPlan,setCalculatorContext,clearCalculatorContext} from './calculator/plans.js';
 import 'katex/dist/katex.min.css';
 import {pageNav} from './nav.js';
@@ -16,7 +18,7 @@ import {listRounds,saveRound} from './game/storage.js';
 import {chooseProfile,activeProfile} from './game/profile.js';
 const el=(tag,text,cls)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e;};
 const app=document.querySelector('#app');
-app.innerHTML='<main class="game-page">'+pageNav('game')+'<div class="game-head"><h1>Practice</h1><div class="game-tools"><button id="game-quit" type="button" class="playback-icon" hidden aria-label="Quit game. You can resume later." title="Quit game (resume later)"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4H5v16h5"/><path d="M15 8l4 4-4 4"/><path d="M19 12H9"/></svg></button><span class="info-tip"><span class="info-icon" tabindex="0" role="img" aria-label="About saving">i</span><span id="save-status" role="status" class="info-bubble">Opening local progress…</span></span></div></div><div class="setup-gate"><form id="game-setup"><p class="game-player">Playing as <strong id="player-label"></strong></p><div id="game-grade-host" class="game-grade"></div><select id="game-grade" aria-label="Game grade" hidden></select><label>Questions <input id="game-count" name="count" type="number" min="1" max="50" step="1" value="5" required aria-label="Number of questions" title="1–50 questions"></label><section id="topic-panel" class="topic-panel" aria-label="Topics and progress"><div class="topic-head"><h2>Topics</h2><span id="topic-summary" class="topic-summary">All topics</span></div><p id="topic-legend" class="stat-legend"></p><div id="topic-list" class="topic-list"></div></section><button type="submit" id="game-start" disabled>Play</button></form><div id="player-prompt" class="player-prompt" role="status"><strong>Choose or create a player to begin</strong><span>Use the player button at the top right.</span><button type="button" id="choose-player">Choose a player</button></div></div><p id="game-error" role="alert"></p><div id="game-round"></div></main>';
+app.innerHTML='<main class="game-page">'+pageNav('game')+'<div class="game-head"><h1>Practice</h1><div class="game-tools"><button id="game-quit" type="button" class="playback-icon" hidden aria-label="Quit game. You can resume later." title="Quit game (resume later)"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4H5v16h5"/><path d="M15 8l4 4-4 4"/><path d="M19 12H9"/></svg></button><span class="info-tip"><span class="info-icon" tabindex="0" role="img" aria-label="About saving">i</span><span id="save-status" role="status" class="info-bubble">Opening local progress…</span></span></div></div><div class="setup-gate"><form id="game-setup"><p class="game-player">Playing as <strong id="player-label"></strong></p><div id="game-grade-host" class="game-grade"></div><select id="game-grade" aria-label="Game grade" hidden></select><label>Game <select id="game-mode"><option value="moles">Whack-a-Math</option><option value="classic">Captain Patty</option></select></label><label>Questions <input id="game-count" name="count" type="number" min="1" max="50" step="1" value="5" required aria-label="Number of questions" title="1–50 questions"></label><section id="topic-panel" class="topic-panel" aria-label="Topics and progress"><div class="topic-head"><h2>Topics</h2><span id="topic-summary" class="topic-summary">All topics</span></div><p id="topic-legend" class="stat-legend"></p><div id="topic-list" class="topic-list"></div></section><button type="submit" id="game-start" disabled>Play</button></form><div id="player-prompt" class="player-prompt" role="status"><strong>Choose or create a player to begin</strong><span>Use the player button at the top right.</span><button type="button" id="choose-player">Choose a player</button></div></div><p id="game-error" role="alert"></p><div id="game-round"></div></main>';
 const $=s=>document.querySelector(s),gradeSelect=$('#game-grade'),countInput=$('#game-count');
 let playerName='',round,rounds=[],step='player',ready=false,memoryOnly=false,busy=false,dispose,feedback='',selectedPlayer='',pendingShot='';
 const art=name=>`${import.meta.env.BASE_URL}game-art/${name}.svg`;
@@ -110,17 +112,33 @@ async function persist(next){
  if(!memoryOnly)document.dispatchEvent(new CustomEvent('math-rounds-changed'));
  round=saved;rounds=[saved,...rounds.filter(r=>r.id!==saved.id)];savedLabel();updateStart();renderHistory();
 }
-async function action(work){if(busy)return;busy=true;$('#game-error').textContent='';document.querySelectorAll('#game-setup button,#game-quit,#game-round button,#game-round input').forEach(b=>b.disabled=true);try{await work();}catch(error){$('#game-error').textContent=error.message;}finally{busy=false;$('#game-quit').disabled=false;$('#change-player').disabled=false;$('#game-start').disabled=!ready||!countInput.validity.valid;$('#player-next').disabled=!ready;renderRound();}}
+async function action(work){if(busy)return;busy=true;$('#game-error').textContent='';setActionBusy(document,true,{ready,countValid:countInput.validity.valid});try{await work();}catch(error){$('#game-error').textContent=error.message;}finally{busy=false;setActionBusy(document,false,{ready,countValid:countInput.validity.valid});renderRound();}}
 function renderRound(){
  dispose?.();dispose=undefined;const host=$('#game-round'),shot=pendingShot;pendingShot='';host.replaceChildren();
  document.querySelector('.game-page').classList.toggle('in-game',Boolean(round));$('#game-quit').hidden=!round;if(!round){clearCalculatorContext();return;}
  if(round.status==='complete'){
+  if($('#game-mode').value==='moles'){
+   const field=el('section',undefined,'mole-field'),again=el('button','Play again','mole-next'),leave=el('button','Back to topics','mole-next');
+   field.append(el('h1','Meadow complete!'),el('p',`${round.questions.filter(q=>q.correct).length} / ${round.questions.length} correct · ${score(round)} points`,'mole-caption'),again,leave);
+   again.onclick=()=>$('#game-setup').requestSubmit();leave.onclick=()=>{if(document.fullscreenElement)document.exitFullscreen().catch(()=>{});$('#game-quit').click();};host.append(field);return;
+  }
+
   const state=battleState(round),again=el('button','Play again');again.type='button';again.onclick=()=>$('#game-setup').requestSubmit();host.append(renderStage(state,shot),el('h2',state.won?'You win!':'Nice effort!'),el('p',`${score(round)} / ${state.total*10} points`,'game-score'),el('p',`${state.hits} solved · ${round.questions.filter(q=>q.assisted).length} explored with explanations`),el('p','Play again for new questions, or quit to change the grade or topics.'),again);
   return;
  }
  const grade=curriculumForGrade(round.grade),picked=roundTopics(round),current=round.questions[round.index],template=grade.questions.find(q=>q.id===current.templateId);
  if(!template){host.append(el('p','This saved question is no longer available. Start a new round above.'));return;}
  let lesson;try{lesson=createPractice(template,current.values);}catch{host.append(el('p','This saved question cannot be opened with the current library. Start a new round above.'));return;}
+ if($('#game-mode').value==='moles'){
+  clearCalculatorContext();
+  let disposeLesson;
+  const disposeField=mountMoles(host,{round,template,lesson,
+   onQuit:()=>$('#game-quit').click(),
+   onAnswer:entry=>action(async()=>{await persist(answerAndExplainRound(round,template,entry));}),
+   onNext:()=>action(async()=>{await persist(advanceRound(round));feedback='';}),
+   explain:panel=>{disposeLesson=mountPractice(panel,template,current.values);disposeLesson.showAll();}
+  });dispose=()=>{disposeLesson?.();disposeField();};return;
+ }
  setCalculatorContext(calculatorPlan({template,lesson}));
  const top=el('div',undefined,'game-progress');top.append(el('span',`${round.playerName} · Grade ${round.grade}${picked.length?' · '+topicLabel(grade,picked):''} · Question ${round.index+1} of ${round.questions.length}`),el('span',`${score(round)} points`));const progress=el('progress');progress.max=round.questions.length;progress.value=round.index;progress.setAttribute('aria-label','Questions completed');host.append(top,progress,renderStage(battleState(round),shot),el('h2',template.title));
  if(lesson.prompt)host.append(setMathText(el('p',undefined,'practice-prompt'),lesson.prompt));

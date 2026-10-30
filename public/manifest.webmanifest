@@ -1,7 +1,7 @@
 {
   "id": "./",
-  "name": "Little Math Lab",
-  "short_name": "Math Lab",
+  "name": "Whack-a-Math",
+  "short_name": "Whack-a-Math",
   "description": "Learn math one step at a time.",
   "start_url": "./",
   "scope": "./",
@@ -10,19 +10,19 @@
   "theme_color": "#fff6e7",
   "icons": [
     {
-      "src": "./icons/monkey-192.png",
+      "src": "./icons/mole-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "./icons/monkey-512.png",
+      "src": "./icons/mole-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "./icons/monkey-maskable-512.png",
+      "src": "./icons/mole-maskable-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
