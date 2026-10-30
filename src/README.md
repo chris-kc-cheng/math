@@ -143,3 +143,5 @@ The curriculum sidebar presents `mountGradePicker` as a connected grade header: 
 The project and visible app brand are Whack-a-Math. Existing IndexedDB and local-storage keys are preserved so renaming does not reset learner progress.
 
 Brand assets use `public/mole-logo.png`, `public/icons/mole-*.png`, and `public/favicon.ico`, packaged from the fifth mole by `scripts/generate-branding.ps1`. The maskable icon keeps the character inside the safe zone.
+
+The branding packager draws the meadow and hole behind the fifth mole for favicon, touch and PWA icons; it leaves the transparent landing logo unchanged.

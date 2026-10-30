@@ -20,14 +20,25 @@ function Save-BrandIcon([int]$size, [string]$name, [bool]$maskable = $false) {
     $bitmap = [System.Drawing.Bitmap]::new($size, $size)
     $graphics = [System.Drawing.Graphics]::FromImage($bitmap)
     try {
-        $graphics.Clear($(if ($maskable) { [System.Drawing.ColorTranslator]::FromHtml('#fff6e7') } else { [System.Drawing.Color]::Transparent }))
+        $graphics.Clear([System.Drawing.ColorTranslator]::FromHtml('#9bd951'))
+        $graphics.SmoothingMode = [System.Drawing.Drawing2D.SmoothingMode]::AntiAlias
+        $hill = [System.Drawing.SolidBrush]::new([System.Drawing.ColorTranslator]::FromHtml('#70b838'))
+        $rim = [System.Drawing.SolidBrush]::new([System.Drawing.ColorTranslator]::FromHtml('#edcc89'))
+        $earth = [System.Drawing.SolidBrush]::new([System.Drawing.ColorTranslator]::FromHtml('#452a18'))
+        try {
+            $graphics.FillEllipse($hill, [single](-$size*.3), [single]($size*.48), [single]($size*1.8), [single]($size*.9))
+            $holeWidth = $size * $(if ($maskable) { .68 } else { .88 })
+            $holeLeft = ($size-$holeWidth)/2
+            $graphics.FillEllipse($rim, [single]$holeLeft, [single]($size*.70), [single]$holeWidth, [single]($size*.22))
+            $graphics.FillEllipse($earth, [single]($holeLeft+$size*.025), [single]($size*.725), [single]($holeWidth-$size*.05), [single]($size*.16))
+        } finally { $hill.Dispose(); $rim.Dispose(); $earth.Dispose() }
         $graphics.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic
         $graphics.PixelOffsetMode = [System.Drawing.Drawing2D.PixelOffsetMode]::HighQuality
-        $available = $size * $(if ($maskable) { 0.70 } else { 0.94 })
+        $available = $size * $(if ($maskable) { 0.59 } else { 0.72 })
         $scale = [Math]::Min($available / $bounds.Width, $available / $bounds.Height)
         $width = [int]($bounds.Width * $scale)
         $height = [int]($bounds.Height * $scale)
-        $target = [System.Drawing.Rectangle]::new([int](($size-$width)/2), [int](($size-$height)/2), $width, $height)
+        $target = [System.Drawing.Rectangle]::new([int](($size-$width)/2), [int]($size*.79-$height), $width, $height)
         $graphics.DrawImage($artwork, $target, $bounds, [System.Drawing.GraphicsUnit]::Pixel)
         $bitmap.Save((Join-Path $projectRoot "public/icons/$name"), [System.Drawing.Imaging.ImageFormat]::Png)
     } finally { $graphics.Dispose(); $bitmap.Dispose() }
@@ -35,7 +46,6 @@ function Save-BrandIcon([int]$size, [string]$name, [bool]$maskable = $false) {
 try {
     foreach ($size in @(16,32,48,180,192,512)) { Save-BrandIcon $size "mole-$size.png" }
     Save-BrandIcon 512 'mole-maskable-512.png' $true
-    Copy-Item -LiteralPath (Join-Path $projectRoot 'public/icons/mole-512.png') -Destination (Join-Path $projectRoot 'public/mole-logo.png')
     $images = @(16,32,48 | ForEach-Object { ,([System.IO.File]::ReadAllBytes((Join-Path $projectRoot "public/icons/mole-$_.png"))) })
     $stream = [System.IO.File]::Create((Join-Path $projectRoot 'public/favicon.ico'))
     $writer = [System.IO.BinaryWriter]::new($stream)

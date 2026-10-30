@@ -55,3 +55,5 @@ The curriculum grade overview and selector form one connected header, with grade
 Project name: **Whack-a-Math**. Preserve existing browser storage keys when updating branding.
 
 Brand mascot: the fifth waving mole (`public/game-art/moles/mole-5.png`), used for the landing logo, favicon and PWA icons.
+
+Favicon and PWA branding includes a grassy meadow and a hole behind the fifth waving mole; the landing logo remains transparent.

@@ -132,3 +132,5 @@ The landing demo now has ten examples. `?slide=6` reads a clock, `?slide=7` appl
 The demo and practice question panes stay in the same position when the calculator opens or closes. Desktop space reservation applies only to the curriculum page.
 
 The waving fifth mole is the Whack-a-Math mascot, landing logo, favicon and PWA icon. Run `pwsh scripts/generate-branding.ps1` to regenerate icon sizes from `public/game-art/moles/mole-5.png`.
+
+The favicon and PWA icons show the waving mole emerging from a sandy-rimmed hole on a green meadow. The landing logo keeps its transparent background.
