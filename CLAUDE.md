@@ -13,7 +13,8 @@ This repo was built by ChatGPT (see `AGENTS.md` and `README.md` for the product 
    - The first entry in `lesson.steps` ("Read the question.") is a hidden placeholder: `practice-view.js` starts playback at index 1. Never count it as visible content.
    - Show an answer in the form the question uses (decimals stay decimals; whole-number division shows quotient and remainder). No stray parentheses around positive numbers.
 3. **Explanation quality (textbook standard).** Name the actual digits and numbers ("the digit to the right is 3, which is less than 5, so round down") instead of quoting abstract rules. Use "round up/down", not "away from/toward zero", below Grade 7. Singular/plural and grammar must be right. A lesson must answer exactly what its prompt asks, and its `verification` must check that same answer.
-4. **Tests.** Every fix gets a regression test in `src/curriculum/review.test.js`. `src/math/fixtures/pre-refactor-behavior.json` hashes full lesson output: when wording changes deliberately, regenerate only the entries that changed and confirm the changed IDs are the ones you edited.
+4. **Docs and screenshots.** Follow "Keep docs in sync" in `AGENTS.md`: when a change alters the UI or behavior, update `README.md`, `src/README.md`, `AGENTS.md`, and retake the affected `docs/images/*.png` (see the 2026-10-29 log for the method). Read `AGENTS.md` at the start of every review.
+5. **Tests.** Every fix gets a regression test in `src/curriculum/review.test.js`. `src/math/fixtures/pre-refactor-behavior.json` hashes full lesson output: when wording changes deliberately, regenerate only the entries that changed and confirm the changed IDs are the ones you edited.
 
 ## Review log
 
@@ -36,3 +37,16 @@ Fixed:
 - G6 C1.2/C1.3 show `2+(3)n`; drop the parentheses around positive coefficients.
 - G4/G6/G7 strand A and several "guided-discussion" skills are paraphrases, not official wording; G5/G8 are closer. Compare expectation wording with the ontario.ca source for every grade (this pass checked structure and counts from memory of the 2020 document, not line by line).
 - Long multiplication plays 13 steps for 24 × 13; consider grouping each digit's multiply-and-carry into one step.
+
+### 2026-10-29 — landing slide show, Math quest, docs
+
+- Landing page redesigned (slide-show cards, own-formula box); Math quest finished (battle scene, results, past rounds, previous-player picker). `README.md`, `src/README.md` and `AGENTS.md` updated; screenshots `landing.png`, `landing-long-division.png` and `game.png` added and the stale `equation.png` removed.
+- Screenshot method: start `npm run dev`, drive headless Edge over the DevTools protocol, and use `?slide=N` to select a landing card. Wait about 9 s for the equation card to finish before it auto-advances.
+- Follow-ups: nav is now a grouped fixed switcher (`src/nav.js`), the dark toggle is frameless (it needs an ID selector to beat the dark-theme `:is(#debug-panel…)` override), "Write" became "Draw" with an ink-pen icon, previous players are badges that start the game directly, and all five screenshots were retaken.
+- Open: equation rows on the landing card sit right of centre because the equation grid is asymmetric.
+- Math quest follow-up: hit animation, zombie leaves the screen on a win, in-round view hides setup, quit icon and (i) info tip. Bug found while verifying: a handler parameter named `event` shadowed the shot state so the animation never ran; always exercise animations in a browser, not only in tests.
+- Math quest progress panel added (last-10 correct rate per strand/topic/skill, coloured dots); `game-progress.png` added.
+- Hero lives (5, wrong answers only, cries at zero) and progress dots on the curriculum page with a profile switcher (incl. No profile); `game-cry.png` and `curriculum-progress.png` added.
+- Curriculum toolbar regrouped into one row (grade, progress profile, mode); grade row now rolls up all attempts; non-scorable nodes get a lighter dashed circle; brand title/logo enlarged and recoloured to the theme text colour.
+- Curriculum header simplified: sidebar top bar has the icon view toggle and active-profile chip (menu), grade changes via an icon button on the Grade row. On phones the grade row sits inside the collapsed Browse curriculum panel (open it to change grade).
+- Profile avatars/initials removed everywhere (names only); view toggle icons are a smiley child and a teacher at a board; screenshots retaken.

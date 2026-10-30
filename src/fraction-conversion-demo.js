@@ -1,11 +1,12 @@
 import katex from 'katex';
+import {pageNav} from './nav.js';
 import 'katex/dist/katex.min.css';
 import './style.css';
 import './fraction-conversion.css';
 import {convertMixed,convertFraction} from './math/fractions.js';
 
 document.querySelector('#app').innerHTML=`<main class="fraction-demo">
-<nav><a href="./">← Demo</a> · <a href="./curriculum.html#b1-3">Grade 5 · B1.3</a></nav>
+${pageNav('')}
 <h1>Mixed numbers & fractions</h1>
 <form id="conversion-form">
 <label class="direction">Convert <select id="direction"><option value="mixed">Mixed number → fraction</option><option value="fraction">Fraction → mixed number</option></select></label>

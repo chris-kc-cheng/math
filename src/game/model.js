@@ -53,9 +53,36 @@ export function playerKey(name){
 export function lastPlayed(rounds,key){return rounds.filter(r=>r.profileId===key).sort((a,b)=>b.updatedAt-a.updatedAt)[0];}
 // The battle is derived from saved answers, so a resumed round shows the same scene.
 // Every solved question is a hit; each wrong try or explored question lets the zombie step closer (capped, never a loss).
+export const HERO_LIVES=5;
+// Captain Patty also has lives: each wrong answer costs one. At zero he cries but never dies.
 export function battleState(round){
- let hits=0,misses=0;
- for(const q of round.questions){if(q.correct)hits++;misses+=Math.max(0,q.attempts-(q.correct?1:0))+(q.assisted?1:0);}
+ let hits=0,misses=0,wrong=0;
+ for(const q of round.questions){const bad=Math.max(0,q.attempts-(q.correct?1:0));if(q.correct)hits++;wrong+=bad;misses+=bad+(q.assisted?1:0);}
  const total=round.questions.length;
- return {hits,total,hearts:total-hits,misses:Math.min(misses,4),done:round.status==='complete',won:round.status==='complete'&&hits>=Math.ceil(total/2)};
+ const lives=Math.max(0,HERO_LIVES-wrong);
+ return {hits,total,hearts:total-hits,lives,maxLives:HERO_LIVES,crying:lives===0,misses:Math.min(misses,4),done:round.status==='complete',won:round.status==='complete'&&hits>=Math.ceil(total/2)};
+}
+// Progress per topic: the share of the player's last 10 finished questions that were solved.
+// A question is finished when solved or explored; exploring without solving counts as not solved.
+export const STAT_WINDOW=10;
+export function attemptHistory(grade,rounds,profileId){
+ const skillOf=new Map(grade.questions.map(q=>[q.id,q.skillId])),history=[];
+ for(const round of [...rounds].filter(r=>r.profileId===profileId&&r.grade===grade.grade).sort((a,b)=>a.updatedAt-b.updatedAt))
+  round.questions.forEach(q=>{if((q.correct||q.assisted)&&skillOf.has(q.templateId))history.push({skillId:skillOf.get(q.templateId),correct:Boolean(q.correct)});});
+ return history;
+}
+export function recentRate(attempts,limit=STAT_WINDOW){
+ const recent=attempts.slice(-limit);return recent.length?{rate:recent.filter(a=>a.correct).length/recent.length,attempts:recent.length}:null;
+}
+export const levelOf=stat=>!stat?'none':stat.rate>=0.8?'good':stat.rate>=0.5?'fair':'weak';
+// Strand → topic → skill tree limited to skills the game can score, each node carrying its own recent rate.
+export function progressTree(grade,rounds,profileId){
+ const playable=new Set(eligibleQuestions(grade).map(q=>q.skillId)),history=attemptHistory(grade,rounds,profileId);
+ const build=(node,level)=>{
+  if(!node.children)return playable.has(node.id)?{id:node.id,title:node.title,level,skills:[node.id]}:null;
+  const children=node.children.map(c=>build(c,level+1)).filter(Boolean);
+  return children.length?{id:node.id,title:node.title.replace(/^[A-F]\d+ · /,''),level,children,skills:children.flatMap(c=>c.skills)}:null;
+ };
+ const decorate=node=>{const mine=new Set(node.skills),stat=recentRate(history.filter(a=>mine.has(a.skillId)));node.stat=stat;node.status=levelOf(stat);node.children?.forEach(decorate);return node;};
+ return grade.curriculum.children.map(s=>build(s,0)).filter(Boolean).map(decorate);
 }

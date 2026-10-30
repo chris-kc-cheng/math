@@ -4,7 +4,14 @@ The app has three separate layers: curriculum content, mathematical rules, and t
 
 ```text
 src/
-  main.js                        Landing-page entry point
+  nav.js                         Shared grouped page switcher (current page highlighted)
+  main.js                        Landing page: auto-playing slide-show cards, own-formula box, handwriting modal
+  game.js / game.css             Math quest page: battle scene, setup form, previous-player picker, history
+  game/
+    model.js                     Round creation, answer parsing, scoring, battleState and per-topic progress stats (pure, tested)
+    storage.js                   IndexedDB persistence of rounds by player
+    profile.js                   Active profile (last used or none), shared with the curriculum page
+    model.test.js                Scoring, parsing and battle-state tests
   curriculum.js                  Curriculum page: hierarchy and learner/parent modes
   curriculum.css                 Curriculum and activity presentation
   curriculum/

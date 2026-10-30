@@ -41,3 +41,24 @@
 :root[data-theme=dark] mark { background:#594b26;color:#fff0ba; }
 :root[data-theme=dark] ::selection { background:#40658a;color:#fff; }
 :root[data-theme=dark] .game-page .practice-prompt { color:#e1e7ed!important; }
+/* Theme toggle: icon only, no frame. */
+:root[data-theme] #theme-toggle { border:0!important;background:transparent!important;box-shadow:none; }
+:root[data-theme] #theme-toggle:hover { background:#2459a61a!important; }
+/* Page navigation: one grouped switcher with the current page highlighted. */
+.page-nav { display:flex;width:fit-content;gap:2px;padding:3px;border:1px solid #dbe5f1;border-radius:999px;background:#f3f7fc; }
+.page-nav>a { display:inline-flex;align-items:center;padding:6px 16px;border-radius:999px;color:#596570;font-size:13px;font-weight:600;line-height:1.4;text-decoration:none;transition:background .15s,color .15s; }
+.page-nav>a:hover { color:#2459a6; }
+.page-nav>a[aria-current=page] { background:#fff;color:#2459a6;box-shadow:0 1px 3px #2459a633; }
+.page-nav>a:focus-visible { outline:3px solid #2459a6;outline-offset:1px; }
+.page-nav { position:fixed;top:10px;left:50%;transform:translateX(-50%);z-index:21; }
+body { padding-top:44px; }
+@media (max-width:520px) { .page-nav>a { padding:5px 11px;font-size:12px; } }
+:root[data-theme=dark] .page-nav { background:#222d37;border-color:#52606d; }
+:root[data-theme=dark] .page-nav>a { color:#b5c1cc!important; }
+:root[data-theme=dark] .page-nav>a:hover { color:#99c5ff!important; }
+:root[data-theme=dark] .page-nav>a[aria-current=page] { background:#2c4054;color:#99c5ff!important;box-shadow:none; }
+/* Draw button: pen with an ink drop and spark. */
+.draw-button { display:inline-flex;align-items:center;gap:6px; }
+.draw-button svg .ink { stroke:#2459a6; }.draw-button svg .spark { stroke:#bd662b; }
+:root[data-theme=dark] .draw-button svg .ink { stroke:#99c5ff; }:root[data-theme=dark] .draw-button svg .spark { stroke:#ffc392; }
+.page-nav>a { white-space:nowrap; }

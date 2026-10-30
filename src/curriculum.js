@@ -1,9 +1,13 @@
 import 'katex/dist/katex.min.css';
+import {pageNav} from './nav.js';
 import './style.css';
 import './curriculum.css';
 import {catalog,curriculumForGrade} from './curriculum/catalog.js';
 import {mountPractice} from './curriculum/practice-view.js';
 import {setPlaybackIcon} from './curriculum/playback-controls.js';
+import {listRounds} from './game/storage.js';
+import {progressTree,attemptHistory,recentRate,levelOf} from './game/model.js';
+import {activeProfile,chooseProfile,profilesIn} from './game/profile.js';
 
 let active=curriculumForGrade(new URLSearchParams(location.search).get('grade')||location.hash.match(/^#(?:g|grade-)([4-8])(?:-|$)/)?.[1]||'5');
 let {curriculum,sources,suggestedSequence,questions}=active;
@@ -14,27 +18,78 @@ function index(node,parents=[]){nodes.set(node.id,{node,parents});for(const chil
 index(curriculum);
 const count=node=>node.children?node.children.reduce((n,c)=>n+count(c),0):1;
 const app=document.querySelector('#app');
-app.innerHTML='<main class="curriculum-page"><nav><a href="./">← Demo</a> · <a href="./game.html">Math quest</a></nav><header class="curriculum-header"><div><p class="curriculum-eyebrow">ONTARIO · GRADE 5</p><h1>Math curriculum</h1></div><span class="curriculum-reference">Curriculum reference</span></header><div class="curriculum-layout"><aside class="curriculum-sidebar"><details id="curriculum-browser" open><summary>Browse curriculum</summary><label for="skill-search" class="sr-only">Find a skill</label><input id="skill-search" type="search" placeholder="Find a skill…" autocomplete="off"><nav id="curriculum-tree" aria-label="Grade 5 curriculum hierarchy"></nav><p id="search-status" role="status"></p></details></aside><article id="curriculum-detail" aria-live="polite" aria-atomic="true"></article></div></main>';
+app.innerHTML='<main class="curriculum-page">'+pageNav('curriculum')+'<header class="curriculum-header"><div><p class="curriculum-eyebrow">ONTARIO · GRADE 5</p><h1>Math curriculum</h1></div></header><div class="curriculum-layout"><aside class="curriculum-sidebar"><div class="sidebar-bar"><div id="mode-toggle" class="curriculum-modes" role="group" aria-label="View"></div><div id="profile-menu-wrap" class="menu-wrap" hidden><button id="profile-menu-button" type="button" class="profile-chip" aria-haspopup="true" aria-expanded="false"></button><div id="profile-menu" class="popover" role="menu" aria-label="Progress profile" hidden></div></div></div><details id="curriculum-browser" open><summary>Browse curriculum</summary><label for="skill-search" class="sr-only">Find a skill</label><input id="skill-search" type="search" placeholder="Find a skill…" autocomplete="off"><nav id="curriculum-tree" aria-label="Grade 5 curriculum hierarchy"></nav><p id="search-status" role="status"></p></details></aside><article id="curriculum-detail" aria-live="polite" aria-atomic="true"></article></div></main>';
 const tree=document.querySelector('#curriculum-tree'),detail=document.querySelector('#curriculum-detail');
 let selected=curriculum.id,mode='learner',disposePractice=[];
-const gradeLabel=document.createElement('label');gradeLabel.className='curriculum-grade';gradeLabel.textContent='Grade ';
-const gradeSelect=document.createElement('select');gradeSelect.setAttribute('aria-label','Choose grade');
-for(const item of catalog){const option=document.createElement('option');option.value=item.grade;option.textContent=item.grade;gradeSelect.append(option);}gradeSelect.value=active.grade;
-gradeLabel.append(gradeSelect);document.querySelector('.curriculum-header>div').append(gradeLabel);
-gradeSelect.onchange=()=>{
- active=curriculumForGrade(gradeSelect.value);({curriculum,sources,suggestedSequence,questions}=active);nodes.clear();index(curriculum);
+const icons={
+ learner:['M12 3.5a8.5 8.5 0 100 17 8.5 8.5 0 000-17z','M9.2 10.2h.01','M14.8 10.2h.01','M8.3 13.8c.9 1.7 2.1 2.5 3.7 2.5s2.8-.8 3.7-2.5','M10.5 3.7c.2-1.2 1.4-2 2.8-1.7'],
+ parent:['M8 10a3 3 0 100-6 3 3 0 000 6z','M2.5 20v-2a4.5 4.5 0 014.5-4.5h2a4.5 4.5 0 014.5 4.5v2','M15 5h7v8h-7z','M17 8h3','M17 10.5h2'],
+ swap:['M8 9l4-4 4 4','M8 15l4 4 4-4'],
+ menu:['M5 7h14','M5 12h14','M5 17h14'],
+ person:['M12 12a4 4 0 100-8 4 4 0 000 8z','M4 20c1-4 4-6 8-6s7 2 8 6']
+};
+function icon(name){
+ const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox','0 0 24 24');svg.setAttribute('aria-hidden','true');svg.setAttribute('fill','none');svg.setAttribute('stroke','currentColor');svg.setAttribute('stroke-width','1.7');svg.setAttribute('stroke-linecap','round');svg.setAttribute('stroke-linejoin','round');
+ for(const d of icons[name]){const path=document.createElementNS(svg.namespaceURI,'path');path.setAttribute('d',d);svg.append(path);}return svg;
+}
+function setGrade(value){
+ active=curriculumForGrade(value);({curriculum,sources,suggestedSequence,questions}=active);nodes.clear();index(curriculum);computeStats();
  const url=new URL(location.href);url.searchParams.set('grade',active.grade);url.hash=curriculum.id;history.replaceState(null,'',url);
  document.querySelector('#skill-search').value='';select(curriculum.id);
-};
-const modeToggle=document.createElement('div');modeToggle.className='curriculum-modes';modeToggle.setAttribute('role','group');modeToggle.setAttribute('aria-label','Page mode');
+}
+// Popovers are fixed-position so the scrolling sidebar cannot clip them; one is open at a time.
+let openPopover=null;
+function closePopover(){if(openPopover){openPopover.panel.hidden=true;openPopover.button.setAttribute('aria-expanded','false');openPopover=null;}}
+function togglePopover(button,panel){
+ if(openPopover?.panel===panel){closePopover();return;}
+ closePopover();const box=button.getBoundingClientRect();panel.hidden=false;
+ panel.style.top=`${box.bottom+6}px`;panel.style.left=`${Math.max(8,Math.min(box.left,innerWidth-panel.offsetWidth-8))}px`;
+ button.setAttribute('aria-expanded','true');openPopover={button,panel};
+}
+document.addEventListener('click',event=>{if(openPopover&&!openPopover.panel.contains(event.target)&&!openPopover.button.contains(event.target))closePopover();});
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&openPopover){const {button}=openPopover;closePopover();button.focus();}});
+addEventListener('resize',closePopover);addEventListener('scroll',closePopover,true);
+const modeToggle=document.querySelector('#mode-toggle');
 for(const value of ['learner','parent']){
- const button=document.createElement('button');button.type='button';button.textContent=`${value==='learner'?'Learner':'Parent'} mode`;button.dataset.mode=value;button.setAttribute('aria-pressed',String(value===mode));
+ const button=document.createElement('button');button.type='button';button.className='mode-button';button.append(icon(value));
+ const label=`${value==='learner'?'Learner':'Parent or teacher'} mode`;button.setAttribute('aria-label',label);button.title=label;button.dataset.mode=value;button.setAttribute('aria-pressed',String(value===mode));
  button.onclick=()=>{mode=value;document.querySelectorAll('[data-mode]').forEach(item=>item.setAttribute('aria-pressed',String(item.dataset.mode===mode)));renderTree();renderDetail();};modeToggle.append(button);
 }
-document.querySelector('.curriculum-reference').replaceWith(modeToggle);
 const el=(tag,text,className)=>{const item=document.createElement(tag);if(text!==undefined)item.textContent=text;if(className)item.className=className;return item;};
+// Progress dots come from the active player's saved Math quest rounds; with no profile nothing is shown.
+const statLabel={good:'Strong',fair:'Getting there',weak:'Needs practice',none:'Not tried yet',na:'Not in Math quest'};
+let rounds=[],profile=null,stats=new Map();
+function computeStats(){
+ stats=new Map();if(!profile)return;
+ const walk=n=>{stats.set(n.id,n);n.children?.forEach(walk);};progressTree(active,rounds,profile.id).forEach(walk);
+ // The grade row summarises every scored question, so it matches the topics beneath it.
+ const overall=recentRate(attemptHistory(active,rounds,profile.id));stats.set(curriculum.id,{id:curriculum.id,stat:overall,status:levelOf(overall)});
+}
+// Nodes the game cannot score still get a (lighter) circle so every row lines up.
+const statFor=node=>profile?stats.get(node.id)||{status:'na',stat:null}:undefined;
+const statText=stat=>stat.status==='na'?'Not scored in Math quest yet':stat.stat?`${Math.round(stat.stat.rate*100)}% of last ${stat.stat.attempts} questions`:'Not tried yet';
+function statDot(stat){const dot=el('span',undefined,'stat-dot '+stat.status);dot.setAttribute('role','img');dot.setAttribute('aria-label',`${statLabel[stat.status]}: ${statText(stat)}`);dot.title=`${statLabel[stat.status]} · ${statText(stat)}`;return dot;}
+function renderProfileBar(){
+ const wrap=document.querySelector('#profile-menu-wrap'),button=document.querySelector('#profile-menu-button'),menu=document.querySelector('#profile-menu'),people=profilesIn(rounds);
+ closePopover();menu.replaceChildren();wrap.hidden=!people.length;if(!people.length)return;
+ // The chip always names the active profile, so it is visible with the menu closed.
+ button.replaceChildren(el('span',profile?profile.name:'No profile','profile-chip-name'),icon('menu'));
+ button.setAttribute('aria-label',`Progress profile: ${profile?profile.name:'none'}. Open menu`);button.title='Choose whose progress to show';
+ button.onclick=()=>togglePopover(button,menu);
+ const choose=next=>{profile=next;chooseProfile(next);computeStats();renderProfileBar();renderTree();renderDetail();};
+ menu.append(el('p','Show progress for','popover-title'));
+ const list=el('div',undefined,'popover-list'),entry=(person,label)=>{const item=el('button',undefined,'profile-badge');item.type='button';item.setAttribute('role','menuitemradio');item.setAttribute('aria-checked',String(person?profile?.id===person.id:!profile));item.setAttribute('aria-pressed',String(person?profile?.id===person.id:!profile));item.append(el('span',label));item.onclick=()=>choose(person);return item;};
+ list.append(entry(null,'No profile'));for(const person of people)list.append(entry(person,person.name));menu.append(list);
+ if(profile){
+  const legend=el('div',undefined,'popover-legend');
+  for(const key of ['good','fair','weak','none','na']){const row=el('span',undefined,'legend-row');row.append(el('span',undefined,'stat-dot '+key),statLabel[key]);legend.append(row);}
+  legend.append(el('small','Based on the last 10 Math quest questions in each topic.'));menu.append(legend);
+ }
+}
+function summaryFor(text,node){const summary=el('summary'),stat=statFor(node);if(stat)summary.append(statDot(stat));summary.append(text);return summary;}
 function chooseButton(node,className='curriculum-node'){
  const button=el('button',undefined,className);button.type='button';button.dataset.node=node.id;
+ const stat=statFor(node);if(stat)button.append(statDot(stat));
  if(node.code&&mode==='parent')button.append(el('span',node.code,'curriculum-code'));
  button.append(el('span',node.title));
  if(node.children)button.append(el('small',`${count(node)} skills`));
@@ -44,7 +99,11 @@ function chooseButton(node,className='curriculum-node'){
 }
 function matches(node,query){return `${node.code??''} ${node.title} ${node.description??''}`.toLowerCase().includes(query)||(node.children??[]).some(child=>matches(child,query));}
 function renderTree(){
- tree.replaceChildren(chooseButton(curriculum,'curriculum-node grade-node'));
+ const gradeRow=el('div',undefined,'grade-row'),gradeButton=el('button',undefined,'grade-change');gradeButton.type='button';gradeButton.append(icon('swap'));gradeButton.setAttribute('aria-haspopup','true');gradeButton.setAttribute('aria-expanded','false');gradeButton.setAttribute('aria-label',`Change grade (now Grade ${active.grade})`);gradeButton.title='Change grade';
+ const gradeMenu=el('div',undefined,'popover grade-menu');gradeMenu.hidden=true;gradeMenu.append(el('p','Grade','popover-title'));const gradeList=el('div',undefined,'grade-list');
+ for(const item of catalog){const pick=el('button',String(item.grade),'grade-option');pick.type='button';pick.setAttribute('aria-pressed',String(item.grade===active.grade));pick.onclick=()=>{closePopover();if(item.grade!==active.grade)setGrade(item.grade);};gradeList.append(pick);}
+ gradeMenu.append(gradeList);gradeButton.onclick=()=>togglePopover(gradeButton,gradeMenu);gradeRow.append(chooseButton(curriculum,'curriculum-node grade-node'),gradeButton,gradeMenu);
+ tree.replaceChildren(gradeRow);
  const query=document.querySelector('#skill-search').value.trim().toLowerCase();
  const current=nodes.get(selected);
  let visible=0;
@@ -52,13 +111,13 @@ function renderTree(){
   if(query&&!matches(strand,query))continue;
   const branch=el('details',undefined,'curriculum-branch');branch.dataset.branch=strand.id;
   branch.open=Boolean(query)||current.parents.some(n=>n.id===strand.id)||selected===strand.id||(!query&&selected===curriculum.id&&strand.code==='B');
-  branch.append(el('summary',mode==='parent'?`${strand.code} · ${strand.title}`:strand.title));branch.append(chooseButton(strand,'curriculum-node overview-node'));
+  branch.append(summaryFor(mode==='parent'?`${strand.code} · ${strand.title}`:strand.title,strand));branch.append(chooseButton(strand,'curriculum-node overview-node'));
   for(const topic of strand.children){
    const fullMatch=query&&(`${strand.title} ${topic.title}`.toLowerCase().includes(query));
    if(query&&!fullMatch&&!matches(topic,query))continue;
    const group=el('details',undefined,'curriculum-topic');group.dataset.branch=topic.id;
    group.open=Boolean(query)||current.parents.some(n=>n.id===topic.id)||selected===topic.id;
-   group.append(el('summary',mode==='parent'?topic.title:topic.title.replace(/^[A-F]\d+ · /,'')));group.append(chooseButton(topic,'curriculum-node overview-node'));
+   group.append(summaryFor(mode==='parent'?topic.title:topic.title.replace(/^[A-F]\d+ · /,''),topic));group.append(chooseButton(topic,'curriculum-node overview-node'));
    for(const skill of topic.children){if(query&&!fullMatch&&!matches(skill,query))continue;group.append(chooseButton(skill));visible++;}
    branch.append(group);
   }
@@ -77,6 +136,7 @@ function renderLearner(node){
   heading.append(showAll);
  }
  detail.append(heading);
+ const mine=stats.get(node.id);if(mine){const note=el('p',undefined,'curriculum-stat');note.append(statDot(mine),`${profile.name}: ${mine.stat?statLabel[mine.status]+" ("+statText(mine)+")":statText(mine)}`);detail.append(note);}
  if(node.children)detail.append(el('p','Choose a topic on the left, or try a question below.','learner-intro'));
  const leaves=[];function collect(item){if(item.children)item.children.forEach(collect);else leaves.push(item);}collect(node);
  for(const skill of leaves){
@@ -143,5 +203,7 @@ function select(id){if(!nodes.has(id))id=curriculum.id;selected=id;history.repla
 const search=document.querySelector('#skill-search');search.oninput=renderTree;
 window.addEventListener('hashchange',()=>select(location.hash.slice(1)));
 if(matchMedia('(max-width:760px)').matches)document.querySelector('#curriculum-browser').open=false;
+try{rounds=await listRounds();}catch{rounds=[];}
+profile=activeProfile(rounds);computeStats();renderProfileBar();
 select(location.hash.slice(1)||curriculum.id);
 window.addEventListener('pagehide',()=>disposePractice.forEach(dispose=>dispose()));

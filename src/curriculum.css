@@ -9,3 +9,39 @@
 .verification-stage{border-top:1px dashed #cdd4db;margin-top:22px;padding-top:16px}.verification-stage h4{font:500 13px system-ui,sans-serif;color:#596570;margin:0 0 16px}.verification-failed .math{color:#a33f2b!important}
 .playback-icon{display:inline-grid;place-items:center;width:38px;height:36px;padding:8px;border:0;background:transparent;color:#596570;border-radius:6px}.playback-icon:hover{background:#edf3fb;color:#2459a6}.playback-icon svg{display:block;width:21px;height:21px}.practice-card .controls{gap:5px}
 .curriculum-detail-heading{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:16px}.curriculum-detail-heading h2{margin-bottom:0!important}.curriculum-detail-heading button{flex-shrink:0;align-self:center}
+
+/* Progress profile switcher and dots. */
+.curriculum-profile{display:grid;gap:8px;margin:0 0 24px;padding:14px 16px;border:1px solid #e1e6eb;border-radius:10px}
+.curriculum-profile .profile-label{font-size:12px;color:#596570}
+.profile-legend{display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;margin:2px 0 0;font-size:12px;color:#596570}.profile-legend>span{display:inline-flex;align-items:center;gap:6px}.profile-legend small{font-size:12px;color:#75818c}
+.curriculum-node .stat-dot,.curriculum-card .stat-dot{width:11px;height:11px;align-self:center}.curriculum-node .stat-dot.none,.curriculum-card .stat-dot.none{border-width:1.5px}
+.curriculum-stat{display:flex;align-items:center;gap:8px;font-size:13px!important;margin:-6px 0 14px!important}
+html[data-theme=dark] :is(.profile-legend,.curriculum-profile .profile-label,.profile-legend small){color:#b5c1cc}html[data-theme=dark] .curriculum-profile{border-color:#52606d}
+.curriculum-sidebar summary .stat-dot{width:11px;height:11px;margin-right:8px;vertical-align:-1px}.curriculum-sidebar summary .stat-dot.none{border-width:1.5px}
+
+/* One-line toolbar: title on the left; grade, profile and mode controls grouped on the right. */
+.curriculum-header{align-items:flex-end;flex-wrap:wrap;gap:12px 24px;margin-bottom:18px}
+.curriculum-controls{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:10px 18px;margin-left:auto}
+.curriculum-controls .curriculum-grade{margin:0}
+.curriculum-controls .curriculum-profile{display:flex;align-items:center;gap:8px;margin:0;padding:0;border:0}
+.curriculum-profile .profile-badges{flex-wrap:nowrap;gap:6px}
+.curriculum-profile .info-bubble{width:230px;display:grid;gap:6px}.legend-row{display:flex;align-items:center;gap:8px}.legend-bubble small{color:#75818c}
+.curriculum-header h1{margin:2px 0 0}
+@media(max-width:760px){.curriculum-controls{justify-content:flex-start;margin-left:0}.curriculum-profile .profile-badges{flex-wrap:wrap}}
+
+/* Sidebar bar: view toggle (icons) and the active profile chip; grade is changed beside the Grade row. */
+.sidebar-bar{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px}
+.sidebar-bar .curriculum-modes{padding:3px;gap:2px}
+.mode-button{display:grid;place-items:center;width:34px;height:30px;padding:0;border:0;border-radius:6px;background:transparent;color:#596570}.mode-button svg{width:20px;height:20px}.mode-button:hover{background:#edf3fb;color:#2459a6}
+.curriculum-modes .mode-button[aria-pressed=true]{background:#e7effa;color:#2459a6}
+.menu-wrap{min-width:0}
+.profile-chip{display:inline-flex;align-items:center;gap:6px;max-width:170px;min-height:36px;padding:3px 10px 3px 14px;border-radius:999px;font-size:12px}.profile-chip svg{flex:none;width:18px;height:18px}
+.profile-chip-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.popover{position:fixed;z-index:30;min-width:200px;max-width:min(280px,calc(100vw - 16px));padding:12px;border:1px solid #cdd4db;border-radius:10px;background:#fff;color:#263440;box-shadow:0 8px 24px #17263833}.popover[hidden]{display:none}
+.popover-title{margin:0 0 8px;font-size:12px;color:#596570}
+.popover-list{display:grid;gap:6px}.popover .profile-badge{width:100%;justify-content:flex-start}
+.popover-legend{display:grid;gap:6px;margin-top:12px;padding-top:10px;border-top:1px solid #e1e6eb;font-size:12px;color:#596570}.popover-legend small{color:#75818c}.legend-row{display:flex;align-items:center;gap:8px}
+.grade-row{display:flex;align-items:center;gap:6px}.grade-row .grade-node{flex:1;min-width:0}
+.grade-change{display:grid;place-items:center;flex:none;width:34px;height:34px;padding:0;border-radius:6px;color:#596570}.grade-change svg{width:20px;height:20px}.grade-change:hover{background:#edf3fb;color:#2459a6}
+.grade-list{display:flex;gap:6px}.grade-option{width:38px;height:38px;padding:0;border-radius:50%;font-weight:600}.grade-option[aria-pressed=true]{border-color:#2459a6;background:#edf3fb;color:#2459a6}
+html[data-theme=dark] .popover{background:#222d37;color:#e1e7ed;border-color:#52606d}html[data-theme=dark] :is(.popover-title,.popover-legend,.popover-legend small){color:#b5c1cc}html[data-theme=dark] .popover-legend{border-color:#52606d}

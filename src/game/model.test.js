@@ -41,10 +41,35 @@ import {battleState} from './model.js';
 test('battle state is derived from answers: hits remove hearts, misses move the zombie closer (capped), win needs a majority',()=>{
  const q=(o={})=>({attempts:0,correct:false,assisted:false,...o});
  const round=(questions,status='active')=>({status,questions});
- assert.deepEqual(battleState(round([q(),q(),q(),q(),q()])),{hits:0,total:5,hearts:5,misses:0,done:false,won:false});
+ assert.deepEqual(battleState(round([q(),q(),q(),q(),q()])),{hits:0,total:5,hearts:5,lives:5,maxLives:5,crying:false,misses:0,done:false,won:false});
  const mid=battleState(round([q({attempts:2,correct:true}),q({attempts:1}),q({assisted:true}),q(),q()]));
  assert.equal(mid.hits,1);assert.equal(mid.hearts,4);assert.equal(mid.misses,3);
  assert.equal(battleState(round(Array(5).fill(q({attempts:6,assisted:true})))).misses,4);
  assert.equal(battleState(round([q({attempts:1,correct:true}),q({attempts:1,correct:true}),q({attempts:1,correct:true}),q({assisted:true}),q({assisted:true})],'complete')).won,true);
  assert.equal(battleState(round([q({attempts:1,correct:true}),q({attempts:1,correct:true}),q({assisted:true}),q({assisted:true}),q({assisted:true})],'complete')).won,false);
+});
+import {recentRate,levelOf,progressTree,attemptHistory} from './model.js';
+test('topic rate uses only the last ten finished questions; no attempts means no stat',()=>{
+ assert.equal(recentRate([]),null);assert.equal(levelOf(null),'none');
+ const attempts=[...Array(5).fill({correct:false}),...Array(10).fill({correct:true})];
+ assert.deepEqual(recentRate(attempts),{rate:1,attempts:10});
+ assert.equal(levelOf({rate:0.8}),'good');assert.equal(levelOf({rate:0.79}),'fair');assert.equal(levelOf({rate:0.5}),'fair');assert.equal(levelOf({rate:0.49}),'weak');
+});
+test('progress tree rolls skill attempts up to topics and strands per player and grade',()=>{
+ const g=grade(5),pool=g.questions.filter(q=>{try{numericAnswer(q,q.example);return true;}catch{return false;}}),[a,b]=pool.filter((q,i,all)=>all.findIndex(x=>x.skillId===q.skillId)===i);
+ const mk=(t,correct)=>({templateId:t.id,attempts:1,correct,assisted:!correct,entry:''});
+ const rounds=[{profileId:'sam',grade:5,updatedAt:2,questions:[mk(a,true),mk(a,false),{templateId:a.id,attempts:0,correct:false,assisted:false}]},{profileId:'sam',grade:5,updatedAt:1,questions:[mk(b,true)]},{profileId:'ava',grade:5,updatedAt:3,questions:[mk(a,false)]},{profileId:'sam',grade:4,updatedAt:3,questions:[mk(a,false)]}];
+ assert.equal(attemptHistory(g,rounds,'sam').length,3);
+ const flat=n=>[n,...(n.children||[]).flatMap(flat)],nodes=progressTree(g,rounds,'sam').flatMap(flat);
+ const skillA=nodes.find(n=>n.id===a.skillId),skillB=nodes.find(n=>n.id===b.skillId);
+ assert.deepEqual(skillA.stat,{rate:0.5,attempts:2});assert.equal(skillA.status,'fair');assert.equal(skillB.status,'good');
+ assert.ok(progressTree(g,[],'sam').flatMap(flat).every(n=>n.status==='none'&&n.stat===null));
+ assert.ok(progressTree(g,rounds,'sam').every(s=>s.stat===null||s.stat.attempts>=1));
+});
+test('the hero loses a life per wrong answer (not per explanation), floors at zero and cries instead of dying',()=>{
+ const q=(o={})=>({attempts:0,correct:false,assisted:false,...o}),round=questions=>({status:'active',questions});
+ const two=battleState(round([q({attempts:3,correct:true}),q({attempts:1}),q(),q(),q()]));
+ assert.equal(two.lives,2);assert.equal(two.crying,false);
+ assert.equal(battleState(round([q({assisted:true}),q(),q(),q(),q()])).lives,5);
+ const out=battleState(round([q({attempts:9}),q(),q(),q(),q()]));assert.equal(out.lives,0);assert.equal(out.crying,true);
 });

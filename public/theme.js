@@ -20,6 +20,7 @@
   document.addEventListener('DOMContentLoaded', () => {
     const button = document.createElement('button');
     button.className = 'theme-toggle';
+    button.id = 'theme-toggle';
     button.type = 'button';
     button.onclick = () => {
       preference = root.dataset.theme === 'dark' ? 'light' : 'dark';

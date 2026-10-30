@@ -70,7 +70,7 @@ function startWorker(){
 function recognize(automatic=false){
  if(active||busy||!ready)return;
  clearTimeout(liveTimer);autoWanted=false;
- if(!isStrokeMeaningful(strokes)){if(!automatic)status('Write a formula first.');return;}
+ if(!isStrokeMeaningful(strokes)){if(!automatic)status('Draw a formula first.');return;}
  try{const input=preprocessStrokes(strokes);log('recognition.input',{revision,strokes:strokes.length,height:input.height,width:input.width,tensorBytes:input.tensor.byteLength,maskBytes:input.mask.byteLength});pending={id:++requestId,revision};busy=true;updateButton();status('Reading…');worker.postMessage({type:'recognize',id:pending.id,input},[input.tensor.buffer,input.mask.buffer]);}catch(error){busy=false;pending=null;updateButton();status('Couldn’t read that. Try again.');}
 }
 $('#recognize').onclick=()=>recognize();

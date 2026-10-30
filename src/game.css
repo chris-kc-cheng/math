@@ -20,3 +20,60 @@
 .game-page .game-answer button,.game-page #game-start,.game-page .controls button{min-height:40px}
 @media(max-width:560px){.game-stage{height:170px}.game-hero{height:118px}.game-zombie{height:124px}.game-shot{bottom:78px!important;height:20px}}
 @media(prefers-reduced-motion:reduce){.game-zombie{transition:none}.game-shot,.game-zombie{animation:none!important}}
+
+/* Previous players: tappable badges instead of a dropdown. */
+.profile-picker{flex-basis:100%;display:grid;gap:8px}.profile-label{font-size:14px}
+
+/* In a round: only the scene, question and a quit icon remain. */
+.game-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}.game-head h1{margin:0}
+.game-tools{display:flex;align-items:center;gap:6px;margin-left:auto}
+.game-page.in-game :is(.game-head h1,.game-intro,#game-setup,#game-history){display:none}
+#save-status{color:inherit}
+
+/* Hit effect: a ketchup blob arcs across, splats on Grumble, who recoils. Victory sends him flying off screen. */
+.game-zombie{height:auto!important;width:138px}
+.game-shot{height:34px;bottom:96px!important;left:calc(3% + 110px);opacity:0;z-index:2}
+.game-splat{position:absolute;bottom:82px;left:calc(97% - 190px - var(--misses,0) * 38.6px);width:90px;height:90px;border-radius:50%;opacity:0;pointer-events:none;background:radial-gradient(circle,#e53935 0 35%,#ff8a80 36% 42%,transparent 43%),conic-gradient(from 0deg,transparent 0 8%,#e53935 8% 14%,transparent 14% 33%,#e53935 33% 39%,transparent 39% 58%,#e53935 58% 64%,transparent 64% 83%,#e53935 83% 89%,transparent 89%);-webkit-mask:radial-gradient(circle,#000 0 70%,transparent 71%);mask:radial-gradient(circle,#000 0 70%,transparent 71%)}
+.shot-hit .game-shot{animation:shot-fly .65s linear forwards,shot-arc .65s ease-out forwards,shot-spin .65s linear forwards}
+.shot-hit .game-splat{animation:splat .5s .62s ease-out forwards}
+.shot-hit .game-zombie{animation:zombie-hit .55s .62s}
+.shot-miss .game-shot{animation:shot-fly-short .6s linear forwards,shot-drop .6s ease-in forwards}
+@keyframes shot-fly{0%{left:calc(3% + 110px);opacity:1}92%{opacity:1}100%{left:calc(97% - 205px - var(--misses,0) * 38.6px);opacity:0}}
+@keyframes shot-arc{0%{translate:0 0}50%{translate:0 -46px}100%{translate:0 0}}
+@keyframes shot-spin{to{rotate:360deg}}
+@keyframes shot-fly-short{0%{left:calc(3% + 110px);opacity:1}100%{left:46%;opacity:0}}
+@keyframes shot-drop{to{translate:0 60px}}
+@keyframes splat{0%{opacity:1;scale:.2}60%{opacity:1;scale:1.25}100%{opacity:0;scale:1.5}}
+@keyframes zombie-hit{0%,100%{filter:none;translate:0}20%{filter:brightness(1.5) saturate(.5);translate:18px}60%{translate:-6px}}
+.is-won .game-zombie{animation:zombie-defeat .9s ease-in forwards}
+.is-won .game-hero{animation:hero-cheer .6s ease-in-out 3}
+@keyframes zombie-defeat{0%{transform:translateX(calc(var(--misses,0) * -28%));opacity:1}100%{transform:translate(160%,-160%) rotate(540deg);opacity:0;visibility:hidden}}
+@keyframes hero-cheer{0%,100%{translate:0}50%{translate:0 -16px}}
+.is-lost .game-zombie{transform:translateX(30%);opacity:.7}
+@media(max-width:560px){.game-zombie{width:100px}.game-shot{height:26px;bottom:76px!important}.game-splat{bottom:62px;width:70px;height:70px;left:calc(97% - 150px - var(--misses,0) * 28px)}}
+@media(prefers-reduced-motion:reduce){.is-won .game-zombie{display:none}.game-splat,.game-hero{animation:none!important}}
+
+/* Topic progress: coloured dot from the average of the last 10 questions; hollow dashed dot means no attempts yet. */
+.game-page.in-game .game-stats{display:none}
+.game-stats{margin-top:8px;padding-top:16px;border-top:1px solid #cdd4db}.game-stats h2{font-size:18px;margin:0 0 6px}.stat-help{font-size:13px;color:#596570;margin:0 0 10px}
+.stat-legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12px;color:#596570;margin:0 0 14px}.stat-key{display:inline-flex;align-items:center;gap:6px}
+.stat-row{display:flex;align-items:center;gap:10px;font-size:14px}.stat-title{flex:1}.stat-note{font-size:12px;color:#65717b;white-space:nowrap}
+.stat-group>summary{cursor:pointer;padding:7px 0;list-style:none}.stat-group>summary::-webkit-details-marker{display:none}.stat-group>summary .stat-title::before{content:"▸ ";color:#65717b}.stat-group[open]>summary .stat-title::before{content:"▾ "}
+.stat-group ul{list-style:none;margin:0 0 6px 8px;padding:0 0 0 14px;border-left:1px solid #e1e6eb}.stat-leaf{padding:5px 0}.stat-group[data-level="0"]>summary .stat-title{font-weight:600}
+html[data-theme=dark] .stat-help,html[data-theme=dark] .stat-legend,html[data-theme=dark] .stat-note{color:#b5c1cc}html[data-theme=dark] .stat-dot.none{border-color:#7b8794}
+html[data-theme=dark] .stat-group ul{border-color:#52606d}
+
+/* Hero lives and crying. Wrapper keeps the 210:230 art ratio so the tears sit under the eyes at any size. */
+.game-hero{position:absolute;left:3%;bottom:14px;height:150px;aspect-ratio:210/230;width:auto!important}
+.game-hero img{position:static;display:block;width:100%;height:100%}
+.game-lives{position:absolute;top:8px;left:12px;font-size:20px;line-height:1;letter-spacing:2px;color:#d94b4b;text-shadow:0 1px 0 #fff8}.game-lives .empty{opacity:.45}
+.game-hearts{color:#2e8b57}
+.tear{position:absolute;top:43%;width:7%;height:11%;border-radius:50% 50% 50% 50%/65% 65% 35% 35%;background:#5bb8f5;border:1.5px solid #2b79b8;opacity:0}
+.tear-l{left:48%}.tear-r{left:66%}
+.is-crying .tear{opacity:1;animation:tear 1s ease-in infinite}.is-crying .tear-r{animation-delay:.4s}
+.is-crying .game-hero img{transform:rotate(-5deg) translateY(5px);transform-origin:50% 100%;filter:saturate(.75)}
+.shot-miss .game-hero img{animation:hero-hurt .4s}
+@keyframes tear{0%{translate:0 0;opacity:1}100%{translate:0 70%;opacity:0}}
+@keyframes hero-hurt{0%,100%{translate:0}25%{translate:-8px}60%{translate:6px}}
+@media(max-width:560px){.game-hero{height:118px}}
+@media(prefers-reduced-motion:reduce){.is-crying .tear{animation:none}.shot-miss .game-hero img{animation:none}}
