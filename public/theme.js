@@ -11,7 +11,7 @@
       button.setAttribute('aria-pressed', String(dark));
       button.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
       button.title = dark ? 'Light mode' : 'Dark mode';
-      button.innerHTML = dark ? '&#9788;' : '&#9790;';
+      button.textContent = dark ? '☀️' : '🌙'; // coloured sun / moon, matching the award chips
     }
     document.querySelector('meta[name="theme-color"]')?.setAttribute('content', dark ? '#182027' : '#ffffff');
   };

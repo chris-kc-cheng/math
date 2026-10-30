@@ -1,6 +1,7 @@
 import {pick,decimal,step,lesson,table,line,numeric,choice} from './common.js';
 import {safeInteger,rational} from '../core/exact.js';
 import {tex} from '../core/format.js';
+import {linear} from '../core/terms.js';
 import {divisionFacts,linearSolution,substituteLinear,linearSequence,groupsNeeded} from '../core/relationships.js';
 
 const sequence=(start,increment,count)=>linearSequence(start,increment,count).map(safeInteger);
@@ -65,15 +66,19 @@ export const algebraRules={
   generate:r=>[pick(r,2,6),pick(r,1,10)],
   solve:([a,b])=>lesson(`Write an expression for “${a} equal groups of a number, plus ${b}”.`,[
    step('Use n to stand for the unknown number.',undefined,{type:'groups',groups:a,extra:b,caption:'Each box stands for the same unknown number'}),
-   step(`The ${a} groups give ${a}n; then add ${b}.`,`${a}n+${b}`)
-  ],{answer:`${a}n+${b}`})
+   step(`The ${a} groups give ${a}n; then add ${b}.`,linear(a,b,'n'))
+  ],{answer:linear(a,b,'n')})
  },
  'evaluate-expression':{
-  generate:r=>[pick(r,1,9),pick(r,0,10),pick(r,0,10)],
-  solve:([a,b,n])=>lesson(`Find ${a}n + ${b} when n = ${n}.`,[
-   step('Replace the letter with its given value.',`${a}\\times${n}+${b}`),
-   step('Multiply first, then add.',`${a*n}+${b}=${a*n+b}`)
-  ],{answer:a*n+b,response:numeric(a*n+b)})
+  generate:r=>[pick(r,2,9),pick(r,1,10),pick(r,0,10)],
+  solve:([a,b,n])=>{
+   const spaced=linear(a,b,'n').replace(/(?<=.)([+-])/g,' $1 '),product=a===1?String(n):`${a}\\times${n}`;
+   if(a===1&&!b)throw Error('Use a real expression, not just n.');
+   return lesson(`Find ${spaced} when n = ${n}.`,[
+    step('Replace the letter with its given value.',b?`${product}+${b}`:product),
+    step(b?(a===1?'Add.':'Multiply first, then add.'):'Multiply.',b?`${a*n}+${b}=${a*n+b}`:`${a}\\times${n}=${a*n}`)
+   ],{answer:a*n+b,response:numeric(a*n+b)});
+  }
  },
  'inequality':{
   generate:r=>[pick(r,1,15),pick(r,16,50),pick(r,0,1)],

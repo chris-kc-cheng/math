@@ -1,0 +1,2148 @@
+{
+  "schemaVersion": 1,
+  "id": "ontario-math-grade-10",
+  "jurisdiction": "Ontario",
+  "grade": 10,
+  "language": "en",
+  "researchedAt": "2026-10-30",
+  "sources": {
+    "document": "https://www.edu.gov.on.ca/eng/curriculum/secondary/math910curr.pdf",
+    "course": "https://www.dcp.edu.gov.on.ca/en/curriculum/secondary-mathematics/courses/mpm2d",
+    "board": "https://www2.yrdsb.ca/about-us/director-education/directors-annual-report/board-improvement-plan-math",
+    "boardCurriculum": "https://www2.yrdsb.ca/schools-programs/school-programs-nav/school-programs/mathematics"
+  },
+  "curriculum": {
+    "id": "grade-10",
+    "title": "Grade 10",
+    "description": "Ontario Grade 10 Principles of Mathematics, Academic (MPM2D) for YRDSB learners: practice with varied question styles and guided exploration. Activities support practice, not certification of mastery.",
+    "children": [
+      {
+        "id": "g10-processes",
+        "title": "Mathematical processes",
+        "code": "P",
+        "source": "https://www.edu.gov.on.ca/eng/curriculum/secondary/math910curr.pdf",
+        "children": [
+          {
+            "id": "g10-p-topic",
+            "title": "P · Mathematical process expectations",
+            "children": [
+              {
+                "id": "g10-p1",
+                "code": "P1",
+                "title": "Mathematical processes",
+                "description": "Use problem solving, reasoning, reflecting, tools, connecting, representing and communicating in every strand.",
+                "example": "Explain how you checked a solution."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g10-quadratic",
+        "title": "Quadratic relations of the form y = ax² + bx + c",
+        "code": "QR",
+        "source": "https://www.edu.gov.on.ca/eng/curriculum/secondary/math910curr.pdf",
+        "children": [
+          {
+            "id": "g10-qr1-topic",
+            "title": "QR1 · Basic properties of quadratic relations",
+            "children": [
+              {
+                "id": "g10-qr1-1",
+                "code": "QR1.1",
+                "title": "Collect and model quadratic data",
+                "description": "Collect data that follow a quadratic relation and draw a curve of best fit.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g10-qr1-2",
+                "code": "QR1.2",
+                "title": "Parabolas and second differences",
+                "description": "Show that a quadratic relation graphs as a parabola with constant second differences.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g10-qr1-3",
+                "code": "QR1.3",
+                "title": "Key features of a parabola",
+                "description": "Identify the axis of symmetry, vertex, y-intercept, zeros and maximum or minimum.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g10-qr1-4",
+                "code": "QR1.4",
+                "title": "Quadratic and exponential relations",
+                "description": "Compare y = x² and y = 2ˣ and give meaning to negative and zero exponents.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              }
+            ]
+          },
+          {
+            "id": "g10-qr2-topic",
+            "title": "QR2 · Transformations of y = x²",
+            "children": [
+              {
+                "id": "g10-qr2-1",
+                "code": "QR2.1",
+                "title": "Effects of a, h and k",
+                "description": "Identify how translations, reflections and stretches change y = x².",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g10-qr2-2",
+                "code": "QR2.2",
+                "title": "Roles of a, h and k",
+                "description": "Explain the roles of a, h and k in y = a(x − h)² + k.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g10-qr2-3",
+                "code": "QR2.3",
+                "title": "Sketch by transformations",
+                "description": "Sketch y = a(x − h)² + k by transforming y = x².",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g10-qr2-4",
+                "code": "QR2.4",
+                "title": "Equation from a graph",
+                "description": "Determine the equation y = a(x − h)² + k of a parabola from its graph.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              }
+            ]
+          },
+          {
+            "id": "g10-qr3-topic",
+            "title": "QR3 · Solving quadratic equations",
+            "children": [
+              {
+                "id": "g10-qr3-1",
+                "code": "QR3.1",
+                "title": "Expand and simplify",
+                "description": "Expand and simplify second-degree polynomial expressions.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g10-qr3-2",
+                "code": "QR3.2",
+                "title": "Factor polynomials",
+                "description": "Factor common factors, trinomials and differences of squares.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g10-qr3-3",
+                "code": "QR3.3",
+                "title": "Factors, zeros and intercepts",
+                "description": "Connect factors of a quadratic to the zeros and x-intercepts of its graph.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g10-qr3-4",
+                "code": "QR3.4",
+                "title": "Real and non-real roots",
+                "description": "Interpret real and non-real roots using graphs and the discriminant.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g10-qr3-5",
+                "code": "QR3.5",
+                "title": "Complete the square",
+                "description": "Express y = ax² + bx + c in the form y = a(x − h)² + k.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g10-qr3-6",
+                "code": "QR3.6",
+                "title": "Sketch from y = ax² + bx + c",
+                "description": "Graph a quadratic relation by intercepts, symmetry or completing the square.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g10-qr3-7",
+                "code": "QR3.7",
+                "title": "The quadratic formula",
+                "description": "Explore the development of the quadratic formula and use it.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g10-qr3-8",
+                "code": "QR3.8",
+                "title": "Solve quadratic equations",
+                "description": "Solve quadratic equations with real roots by factoring, the formula or graphing.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              }
+            ]
+          },
+          {
+            "id": "g10-qr4-topic",
+            "title": "QR4 · Applying quadratic models",
+            "children": [
+              {
+                "id": "g10-qr4-1",
+                "code": "QR4.1",
+                "title": "Zeros and extreme values",
+                "description": "Find zeros and maximum or minimum values from a graph or equation.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g10-qr4-2",
+                "code": "QR4.2",
+                "title": "Quadratic models in context",
+                "description": "Solve problems from realistic situations modelled by quadratic relations.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g10-analytic",
+        "title": "Analytic geometry",
+        "code": "AG",
+        "source": "https://www.edu.gov.on.ca/eng/curriculum/secondary/math910curr.pdf",
+        "children": [
+          {
+            "id": "g10-ag1-topic",
+            "title": "AG1 · Using linear systems to solve problems",
+            "children": [
+              {
+                "id": "g10-ag1-1",
+                "code": "AG1.1",
+                "title": "Solve linear systems",
+                "description": "Solve systems of two linear equations by substitution and elimination.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g10-ag1-2",
+                "code": "AG1.2",
+                "title": "Linear systems in context",
+                "description": "Solve problems from realistic situations using linear systems.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              }
+            ]
+          },
+          {
+            "id": "g10-ag2-topic",
+            "title": "AG2 · Properties of lines and line segments",
+            "children": [
+              {
+                "id": "g10-ag2-1",
+                "code": "AG2.1",
+                "title": "Midpoint of a segment",
+                "description": "Develop and use the formula for the midpoint of a segment.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g10-ag2-2",
+                "code": "AG2.2",
+                "title": "Length of a segment",
+                "description": "Develop and use the formula for the length of a segment.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g10-ag2-3",
+                "code": "AG2.3",
+                "title": "The circle x² + y² = r²",
+                "description": "Develop the equation of a circle centred at the origin.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g10-ag2-4",
+                "code": "AG2.4",
+                "title": "Radius and equation of a circle",
+                "description": "Find the radius from an equation, write the equation from a radius, and sketch the circle.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g10-ag2-5",
+                "code": "AG2.5",
+                "title": "Slope, length and midpoint problems",
+                "description": "Solve problems involving the slope, length and midpoint of a segment.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              }
+            ]
+          },
+          {
+            "id": "g10-ag3-topic",
+            "title": "AG3 · Verifying properties of figures",
+            "children": [
+              {
+                "id": "g10-ag3-1",
+                "code": "AG3.1",
+                "title": "Investigate figure properties",
+                "description": "Investigate characteristics of figures such as medians and similar figures on right triangles.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g10-ag3-2",
+                "code": "AG3.2",
+                "title": "Verify properties with coordinates",
+                "description": "Verify perpendicular lines, equal sides and other properties using analytic geometry.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g10-ag3-3",
+                "code": "AG3.3",
+                "title": "Multi-step verification",
+                "description": "Plan and carry out a multi-step strategy to verify a property of a figure.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g10-trig",
+        "title": "Trigonometry",
+        "code": "TR",
+        "source": "https://www.edu.gov.on.ca/eng/curriculum/secondary/math910curr.pdf",
+        "children": [
+          {
+            "id": "g10-tr1-topic",
+            "title": "TR1 · Similar triangles",
+            "children": [
+              {
+                "id": "g10-tr1-1",
+                "code": "TR1.1",
+                "title": "Properties of similar triangles",
+                "description": "Verify the properties of similar triangles.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g10-tr1-2",
+                "code": "TR1.2",
+                "title": "Similarity and congruence",
+                "description": "Describe and compare similarity and congruence.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g10-tr1-3",
+                "code": "TR1.3",
+                "title": "Similar triangles in realistic situations",
+                "description": "Solve problems with similar triangles such as shadows and scale models.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              }
+            ]
+          },
+          {
+            "id": "g10-tr2-topic",
+            "title": "TR2 · Right-triangle trigonometry",
+            "children": [
+              {
+                "id": "g10-tr2-1",
+                "code": "TR2.1",
+                "title": "Sine, cosine and tangent",
+                "description": "Define the primary trigonometric ratios from similar right triangles.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g10-tr2-2",
+                "code": "TR2.2",
+                "title": "Solve right triangles",
+                "description": "Find side lengths and angles using the primary ratios and the Pythagorean theorem.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g10-tr2-3",
+                "code": "TR2.3",
+                "title": "Right-triangle applications",
+                "description": "Solve real-life problems with the primary ratios.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              }
+            ]
+          },
+          {
+            "id": "g10-tr3-topic",
+            "title": "TR3 · Acute triangles",
+            "children": [
+              {
+                "id": "g10-tr3-1",
+                "code": "TR3.1",
+                "title": "The sine law",
+                "description": "Explore the sine law in acute triangles and use it.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g10-tr3-2",
+                "code": "TR3.2",
+                "title": "The cosine law",
+                "description": "Explore the cosine law in acute triangles and use it.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g10-tr3-3",
+                "code": "TR3.3",
+                "title": "Solve acute triangles",
+                "description": "Find sides and angles of acute triangles with the sine and cosine laws.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g10-tr3-4",
+                "code": "TR3.4",
+                "title": "Acute-triangle problems",
+                "description": "Solve problems about acute triangles in realistic situations.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "suggestedSequence": [
+    [
+      "Quadratic relations",
+      "Parabolas, transformations, factoring, completing the square, the quadratic formula and models."
+    ],
+    [
+      "Analytic geometry",
+      "Linear systems, midpoints, distance, circles at the origin and verifying figures with coordinates."
+    ],
+    [
+      "Trigonometry",
+      "Similar triangles, sine, cosine and tangent, and the sine and cosine laws in acute triangles."
+    ]
+  ],
+  "activities": [
+    {
+      "id": "activity-g10-question-p1-1",
+      "title": "Mathematical processes",
+      "skillIds": [
+        "g10-p1"
+      ],
+      "href": "./curriculum.html?grade=10#g10-p1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-p1-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-p1-2",
+      "title": "Mathematical processes — another way",
+      "skillIds": [
+        "g10-p1"
+      ],
+      "href": "./curriculum.html?grade=10#g10-p1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-p1-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr1-1-1",
+      "title": "Collect and model quadratic data",
+      "skillIds": [
+        "g10-qr1-1"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr1-1-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr1-1-2",
+      "title": "Collect and model quadratic data — another way",
+      "skillIds": [
+        "g10-qr1-1"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr1-1-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr1-1-3",
+      "title": "Collect and model quadratic data — mixed practice",
+      "skillIds": [
+        "g10-qr1-1"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr1-1-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr1-2-1",
+      "title": "Parabolas and second differences",
+      "skillIds": [
+        "g10-qr1-2"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr1-2-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr1-2-2",
+      "title": "Parabolas and second differences — another way",
+      "skillIds": [
+        "g10-qr1-2"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr1-2-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr1-2-3",
+      "title": "Parabolas and second differences — mixed practice",
+      "skillIds": [
+        "g10-qr1-2"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr1-2-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr1-3-1",
+      "title": "Key features of a parabola",
+      "skillIds": [
+        "g10-qr1-3"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr1-3-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr1-3-2",
+      "title": "Key features of a parabola — another way",
+      "skillIds": [
+        "g10-qr1-3"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr1-3-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr1-3-3",
+      "title": "Key features of a parabola — mixed practice",
+      "skillIds": [
+        "g10-qr1-3"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr1-3-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr1-4-1",
+      "title": "Quadratic and exponential relations",
+      "skillIds": [
+        "g10-qr1-4"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr1-4-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr1-4-2",
+      "title": "Quadratic and exponential relations — another way",
+      "skillIds": [
+        "g10-qr1-4"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr1-4-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr1-4-3",
+      "title": "Quadratic and exponential relations — mixed practice",
+      "skillIds": [
+        "g10-qr1-4"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr1-4-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr2-1-1",
+      "title": "Effects of a, h and k",
+      "skillIds": [
+        "g10-qr2-1"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr2-1-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr2-1-2",
+      "title": "Effects of a, h and k — another way",
+      "skillIds": [
+        "g10-qr2-1"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr2-1-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr2-1-3",
+      "title": "Effects of a, h and k — mixed practice",
+      "skillIds": [
+        "g10-qr2-1"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr2-1-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr2-2-1",
+      "title": "Roles of a, h and k",
+      "skillIds": [
+        "g10-qr2-2"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr2-2-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr2-2-2",
+      "title": "Roles of a, h and k — another way",
+      "skillIds": [
+        "g10-qr2-2"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr2-2-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr2-2-3",
+      "title": "Roles of a, h and k — mixed practice",
+      "skillIds": [
+        "g10-qr2-2"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr2-2-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr2-3-1",
+      "title": "Sketch by transformations",
+      "skillIds": [
+        "g10-qr2-3"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr2-3-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr2-3-2",
+      "title": "Sketch by transformations — another way",
+      "skillIds": [
+        "g10-qr2-3"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr2-3-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr2-3-3",
+      "title": "Sketch by transformations — mixed practice",
+      "skillIds": [
+        "g10-qr2-3"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr2-3-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr2-4-1",
+      "title": "Equation from a graph",
+      "skillIds": [
+        "g10-qr2-4"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr2-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr2-4-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr2-4-2",
+      "title": "Equation from a graph — another way",
+      "skillIds": [
+        "g10-qr2-4"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr2-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr2-4-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr2-4-3",
+      "title": "Equation from a graph — mixed practice",
+      "skillIds": [
+        "g10-qr2-4"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr2-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr2-4-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr3-1-1",
+      "title": "Expand and simplify",
+      "skillIds": [
+        "g10-qr3-1"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr3-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr3-1-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr3-1-2",
+      "title": "Expand and simplify — another way",
+      "skillIds": [
+        "g10-qr3-1"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr3-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr3-1-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr3-1-3",
+      "title": "Expand and simplify — mixed practice",
+      "skillIds": [
+        "g10-qr3-1"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr3-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr3-1-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr3-2-1",
+      "title": "Factor polynomials",
+      "skillIds": [
+        "g10-qr3-2"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr3-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr3-2-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr3-2-2",
+      "title": "Factor polynomials — another way",
+      "skillIds": [
+        "g10-qr3-2"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr3-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr3-2-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr3-2-3",
+      "title": "Factor polynomials — mixed practice",
+      "skillIds": [
+        "g10-qr3-2"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr3-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr3-2-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr3-3-1",
+      "title": "Factors, zeros and intercepts",
+      "skillIds": [
+        "g10-qr3-3"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr3-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr3-3-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr3-3-2",
+      "title": "Factors, zeros and intercepts — another way",
+      "skillIds": [
+        "g10-qr3-3"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr3-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr3-3-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr3-3-3",
+      "title": "Factors, zeros and intercepts — mixed practice",
+      "skillIds": [
+        "g10-qr3-3"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr3-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr3-3-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr3-4-1",
+      "title": "Real and non-real roots",
+      "skillIds": [
+        "g10-qr3-4"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr3-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr3-4-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr3-4-2",
+      "title": "Real and non-real roots — another way",
+      "skillIds": [
+        "g10-qr3-4"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr3-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr3-4-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr3-4-3",
+      "title": "Real and non-real roots — mixed practice",
+      "skillIds": [
+        "g10-qr3-4"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr3-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr3-4-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr3-5-1",
+      "title": "Complete the square",
+      "skillIds": [
+        "g10-qr3-5"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr3-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr3-5-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr3-5-2",
+      "title": "Complete the square — another way",
+      "skillIds": [
+        "g10-qr3-5"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr3-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr3-5-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr3-5-3",
+      "title": "Complete the square — mixed practice",
+      "skillIds": [
+        "g10-qr3-5"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr3-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr3-5-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr3-6-1",
+      "title": "Sketch from y = ax² + bx + c",
+      "skillIds": [
+        "g10-qr3-6"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr3-6",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr3-6-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr3-6-2",
+      "title": "Sketch from y = ax² + bx + c — another way",
+      "skillIds": [
+        "g10-qr3-6"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr3-6",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr3-6-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr3-6-3",
+      "title": "Sketch from y = ax² + bx + c — mixed practice",
+      "skillIds": [
+        "g10-qr3-6"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr3-6",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr3-6-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr3-7-1",
+      "title": "The quadratic formula",
+      "skillIds": [
+        "g10-qr3-7"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr3-7",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr3-7-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr3-7-2",
+      "title": "The quadratic formula — another way",
+      "skillIds": [
+        "g10-qr3-7"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr3-7",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr3-7-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr3-7-3",
+      "title": "The quadratic formula — mixed practice",
+      "skillIds": [
+        "g10-qr3-7"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr3-7",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr3-7-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr3-8-1",
+      "title": "Solve quadratic equations",
+      "skillIds": [
+        "g10-qr3-8"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr3-8",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr3-8-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr3-8-2",
+      "title": "Solve quadratic equations — another way",
+      "skillIds": [
+        "g10-qr3-8"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr3-8",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr3-8-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr3-8-3",
+      "title": "Solve quadratic equations — mixed practice",
+      "skillIds": [
+        "g10-qr3-8"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr3-8",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr3-8-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr4-1-1",
+      "title": "Zeros and extreme values",
+      "skillIds": [
+        "g10-qr4-1"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr4-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr4-1-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr4-1-2",
+      "title": "Zeros and extreme values — another way",
+      "skillIds": [
+        "g10-qr4-1"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr4-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr4-1-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr4-1-3",
+      "title": "Zeros and extreme values — mixed practice",
+      "skillIds": [
+        "g10-qr4-1"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr4-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr4-1-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr4-2-1",
+      "title": "Quadratic models in context",
+      "skillIds": [
+        "g10-qr4-2"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr4-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr4-2-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr4-2-2",
+      "title": "Quadratic models in context — another way",
+      "skillIds": [
+        "g10-qr4-2"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr4-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr4-2-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-qr4-2-3",
+      "title": "Quadratic models in context — mixed practice",
+      "skillIds": [
+        "g10-qr4-2"
+      ],
+      "href": "./curriculum.html?grade=10#g10-qr4-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-qr4-2-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-ag1-1-1",
+      "title": "Solve linear systems",
+      "skillIds": [
+        "g10-ag1-1"
+      ],
+      "href": "./curriculum.html?grade=10#g10-ag1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-ag1-1-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-ag1-1-2",
+      "title": "Solve linear systems — another way",
+      "skillIds": [
+        "g10-ag1-1"
+      ],
+      "href": "./curriculum.html?grade=10#g10-ag1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-ag1-1-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-ag1-1-3",
+      "title": "Solve linear systems — mixed practice",
+      "skillIds": [
+        "g10-ag1-1"
+      ],
+      "href": "./curriculum.html?grade=10#g10-ag1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-ag1-1-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-ag1-2-1",
+      "title": "Linear systems in context",
+      "skillIds": [
+        "g10-ag1-2"
+      ],
+      "href": "./curriculum.html?grade=10#g10-ag1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-ag1-2-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-ag1-2-2",
+      "title": "Linear systems in context — another way",
+      "skillIds": [
+        "g10-ag1-2"
+      ],
+      "href": "./curriculum.html?grade=10#g10-ag1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-ag1-2-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-ag1-2-3",
+      "title": "Linear systems in context — mixed practice",
+      "skillIds": [
+        "g10-ag1-2"
+      ],
+      "href": "./curriculum.html?grade=10#g10-ag1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-ag1-2-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-ag2-1-1",
+      "title": "Midpoint of a segment",
+      "skillIds": [
+        "g10-ag2-1"
+      ],
+      "href": "./curriculum.html?grade=10#g10-ag2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-ag2-1-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-ag2-1-2",
+      "title": "Midpoint of a segment — another way",
+      "skillIds": [
+        "g10-ag2-1"
+      ],
+      "href": "./curriculum.html?grade=10#g10-ag2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-ag2-1-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-ag2-1-3",
+      "title": "Midpoint of a segment — mixed practice",
+      "skillIds": [
+        "g10-ag2-1"
+      ],
+      "href": "./curriculum.html?grade=10#g10-ag2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-ag2-1-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-ag2-2-1",
+      "title": "Length of a segment",
+      "skillIds": [
+        "g10-ag2-2"
+      ],
+      "href": "./curriculum.html?grade=10#g10-ag2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-ag2-2-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-ag2-2-2",
+      "title": "Length of a segment — another way",
+      "skillIds": [
+        "g10-ag2-2"
+      ],
+      "href": "./curriculum.html?grade=10#g10-ag2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-ag2-2-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-ag2-2-3",
+      "title": "Length of a segment — mixed practice",
+      "skillIds": [
+        "g10-ag2-2"
+      ],
+      "href": "./curriculum.html?grade=10#g10-ag2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-ag2-2-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-ag2-3-1",
+      "title": "The circle x² + y² = r²",
+      "skillIds": [
+        "g10-ag2-3"
+      ],
+      "href": "./curriculum.html?grade=10#g10-ag2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-ag2-3-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-ag2-3-2",
+      "title": "The circle x² + y² = r² — another way",
+      "skillIds": [
+        "g10-ag2-3"
+      ],
+      "href": "./curriculum.html?grade=10#g10-ag2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-ag2-3-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-ag2-3-3",
+      "title": "The circle x² + y² = r² — mixed practice",
+      "skillIds": [
+        "g10-ag2-3"
+      ],
+      "href": "./curriculum.html?grade=10#g10-ag2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-ag2-3-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-ag2-4-1",
+      "title": "Radius and equation of a circle",
+      "skillIds": [
+        "g10-ag2-4"
+      ],
+      "href": "./curriculum.html?grade=10#g10-ag2-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-ag2-4-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-ag2-4-2",
+      "title": "Radius and equation of a circle — another way",
+      "skillIds": [
+        "g10-ag2-4"
+      ],
+      "href": "./curriculum.html?grade=10#g10-ag2-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-ag2-4-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-ag2-4-3",
+      "title": "Radius and equation of a circle — mixed practice",
+      "skillIds": [
+        "g10-ag2-4"
+      ],
+      "href": "./curriculum.html?grade=10#g10-ag2-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-ag2-4-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-ag2-5-1",
+      "title": "Slope, length and midpoint problems",
+      "skillIds": [
+        "g10-ag2-5"
+      ],
+      "href": "./curriculum.html?grade=10#g10-ag2-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-ag2-5-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-ag2-5-2",
+      "title": "Slope, length and midpoint problems — another way",
+      "skillIds": [
+        "g10-ag2-5"
+      ],
+      "href": "./curriculum.html?grade=10#g10-ag2-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-ag2-5-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-ag2-5-3",
+      "title": "Slope, length and midpoint problems — mixed practice",
+      "skillIds": [
+        "g10-ag2-5"
+      ],
+      "href": "./curriculum.html?grade=10#g10-ag2-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-ag2-5-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-ag3-1-1",
+      "title": "Investigate figure properties",
+      "skillIds": [
+        "g10-ag3-1"
+      ],
+      "href": "./curriculum.html?grade=10#g10-ag3-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-ag3-1-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-ag3-1-2",
+      "title": "Investigate figure properties — another way",
+      "skillIds": [
+        "g10-ag3-1"
+      ],
+      "href": "./curriculum.html?grade=10#g10-ag3-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-ag3-1-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-ag3-1-3",
+      "title": "Investigate figure properties — mixed practice",
+      "skillIds": [
+        "g10-ag3-1"
+      ],
+      "href": "./curriculum.html?grade=10#g10-ag3-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-ag3-1-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-ag3-2-1",
+      "title": "Verify properties with coordinates",
+      "skillIds": [
+        "g10-ag3-2"
+      ],
+      "href": "./curriculum.html?grade=10#g10-ag3-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-ag3-2-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-ag3-2-2",
+      "title": "Verify properties with coordinates — another way",
+      "skillIds": [
+        "g10-ag3-2"
+      ],
+      "href": "./curriculum.html?grade=10#g10-ag3-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-ag3-2-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-ag3-2-3",
+      "title": "Verify properties with coordinates — mixed practice",
+      "skillIds": [
+        "g10-ag3-2"
+      ],
+      "href": "./curriculum.html?grade=10#g10-ag3-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-ag3-2-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-ag3-3-1",
+      "title": "Multi-step verification",
+      "skillIds": [
+        "g10-ag3-3"
+      ],
+      "href": "./curriculum.html?grade=10#g10-ag3-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-ag3-3-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-ag3-3-2",
+      "title": "Multi-step verification — another way",
+      "skillIds": [
+        "g10-ag3-3"
+      ],
+      "href": "./curriculum.html?grade=10#g10-ag3-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-ag3-3-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-ag3-3-3",
+      "title": "Multi-step verification — mixed practice",
+      "skillIds": [
+        "g10-ag3-3"
+      ],
+      "href": "./curriculum.html?grade=10#g10-ag3-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-ag3-3-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-tr1-1-1",
+      "title": "Properties of similar triangles",
+      "skillIds": [
+        "g10-tr1-1"
+      ],
+      "href": "./curriculum.html?grade=10#g10-tr1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-tr1-1-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-tr1-1-2",
+      "title": "Properties of similar triangles — another way",
+      "skillIds": [
+        "g10-tr1-1"
+      ],
+      "href": "./curriculum.html?grade=10#g10-tr1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-tr1-1-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-tr1-1-3",
+      "title": "Properties of similar triangles — mixed practice",
+      "skillIds": [
+        "g10-tr1-1"
+      ],
+      "href": "./curriculum.html?grade=10#g10-tr1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-tr1-1-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-tr1-2-1",
+      "title": "Similarity and congruence",
+      "skillIds": [
+        "g10-tr1-2"
+      ],
+      "href": "./curriculum.html?grade=10#g10-tr1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-tr1-2-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-tr1-2-2",
+      "title": "Similarity and congruence — another way",
+      "skillIds": [
+        "g10-tr1-2"
+      ],
+      "href": "./curriculum.html?grade=10#g10-tr1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-tr1-2-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-tr1-2-3",
+      "title": "Similarity and congruence — mixed practice",
+      "skillIds": [
+        "g10-tr1-2"
+      ],
+      "href": "./curriculum.html?grade=10#g10-tr1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-tr1-2-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-tr1-3-1",
+      "title": "Similar triangles in realistic situations",
+      "skillIds": [
+        "g10-tr1-3"
+      ],
+      "href": "./curriculum.html?grade=10#g10-tr1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-tr1-3-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-tr1-3-2",
+      "title": "Similar triangles in realistic situations — another way",
+      "skillIds": [
+        "g10-tr1-3"
+      ],
+      "href": "./curriculum.html?grade=10#g10-tr1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-tr1-3-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-tr1-3-3",
+      "title": "Similar triangles in realistic situations — mixed practice",
+      "skillIds": [
+        "g10-tr1-3"
+      ],
+      "href": "./curriculum.html?grade=10#g10-tr1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-tr1-3-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-tr2-1-1",
+      "title": "Sine, cosine and tangent",
+      "skillIds": [
+        "g10-tr2-1"
+      ],
+      "href": "./curriculum.html?grade=10#g10-tr2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-tr2-1-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-tr2-1-2",
+      "title": "Sine, cosine and tangent — another way",
+      "skillIds": [
+        "g10-tr2-1"
+      ],
+      "href": "./curriculum.html?grade=10#g10-tr2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-tr2-1-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-tr2-1-3",
+      "title": "Sine, cosine and tangent — mixed practice",
+      "skillIds": [
+        "g10-tr2-1"
+      ],
+      "href": "./curriculum.html?grade=10#g10-tr2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-tr2-1-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-tr2-2-1",
+      "title": "Solve right triangles",
+      "skillIds": [
+        "g10-tr2-2"
+      ],
+      "href": "./curriculum.html?grade=10#g10-tr2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-tr2-2-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-tr2-2-2",
+      "title": "Solve right triangles — another way",
+      "skillIds": [
+        "g10-tr2-2"
+      ],
+      "href": "./curriculum.html?grade=10#g10-tr2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-tr2-2-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-tr2-2-3",
+      "title": "Solve right triangles — mixed practice",
+      "skillIds": [
+        "g10-tr2-2"
+      ],
+      "href": "./curriculum.html?grade=10#g10-tr2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-tr2-2-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-tr2-3-1",
+      "title": "Right-triangle applications",
+      "skillIds": [
+        "g10-tr2-3"
+      ],
+      "href": "./curriculum.html?grade=10#g10-tr2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-tr2-3-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-tr2-3-2",
+      "title": "Right-triangle applications — another way",
+      "skillIds": [
+        "g10-tr2-3"
+      ],
+      "href": "./curriculum.html?grade=10#g10-tr2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-tr2-3-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-tr2-3-3",
+      "title": "Right-triangle applications — mixed practice",
+      "skillIds": [
+        "g10-tr2-3"
+      ],
+      "href": "./curriculum.html?grade=10#g10-tr2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-tr2-3-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-tr3-1-1",
+      "title": "The sine law",
+      "skillIds": [
+        "g10-tr3-1"
+      ],
+      "href": "./curriculum.html?grade=10#g10-tr3-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-tr3-1-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-tr3-1-2",
+      "title": "The sine law — another way",
+      "skillIds": [
+        "g10-tr3-1"
+      ],
+      "href": "./curriculum.html?grade=10#g10-tr3-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-tr3-1-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-tr3-1-3",
+      "title": "The sine law — mixed practice",
+      "skillIds": [
+        "g10-tr3-1"
+      ],
+      "href": "./curriculum.html?grade=10#g10-tr3-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-tr3-1-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-tr3-2-1",
+      "title": "The cosine law",
+      "skillIds": [
+        "g10-tr3-2"
+      ],
+      "href": "./curriculum.html?grade=10#g10-tr3-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-tr3-2-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-tr3-2-2",
+      "title": "The cosine law — another way",
+      "skillIds": [
+        "g10-tr3-2"
+      ],
+      "href": "./curriculum.html?grade=10#g10-tr3-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-tr3-2-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-tr3-2-3",
+      "title": "The cosine law — mixed practice",
+      "skillIds": [
+        "g10-tr3-2"
+      ],
+      "href": "./curriculum.html?grade=10#g10-tr3-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-tr3-2-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-tr3-3-1",
+      "title": "Solve acute triangles",
+      "skillIds": [
+        "g10-tr3-3"
+      ],
+      "href": "./curriculum.html?grade=10#g10-tr3-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-tr3-3-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-tr3-3-2",
+      "title": "Solve acute triangles — another way",
+      "skillIds": [
+        "g10-tr3-3"
+      ],
+      "href": "./curriculum.html?grade=10#g10-tr3-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-tr3-3-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-tr3-3-3",
+      "title": "Solve acute triangles — mixed practice",
+      "skillIds": [
+        "g10-tr3-3"
+      ],
+      "href": "./curriculum.html?grade=10#g10-tr3-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-tr3-3-3"
+      ]
+    },
+    {
+      "id": "activity-g10-question-tr3-4-1",
+      "title": "Acute-triangle problems",
+      "skillIds": [
+        "g10-tr3-4"
+      ],
+      "href": "./curriculum.html?grade=10#g10-tr3-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-tr3-4-1"
+      ]
+    },
+    {
+      "id": "activity-g10-question-tr3-4-2",
+      "title": "Acute-triangle problems — another way",
+      "skillIds": [
+        "g10-tr3-4"
+      ],
+      "href": "./curriculum.html?grade=10#g10-tr3-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-tr3-4-2"
+      ]
+    },
+    {
+      "id": "activity-g10-question-tr3-4-3",
+      "title": "Acute-triangle problems — mixed practice",
+      "skillIds": [
+        "g10-tr3-4"
+      ],
+      "href": "./curriculum.html?grade=10#g10-tr3-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g10-question-tr3-4-3"
+      ]
+    }
+  ]
+}

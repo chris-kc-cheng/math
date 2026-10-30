@@ -1,0 +1,2501 @@
+{
+  "schemaVersion": 1,
+  "id": "ontario-math-grade-9",
+  "jurisdiction": "Ontario",
+  "grade": 9,
+  "language": "en",
+  "researchedAt": "2026-10-30",
+  "sources": {
+    "number": "https://www.dcp.edu.gov.on.ca/en/curriculum/secondary-mathematics/courses/mth1w/strands/b-number",
+    "algebra": "https://www.dcp.edu.gov.on.ca/en/curriculum/secondary-mathematics/courses/mth1w/strands/c-algebra",
+    "data": "https://www.dcp.edu.gov.on.ca/en/curriculum/secondary-mathematics/courses/mth1w/strands/d-data",
+    "spatial": "https://www.dcp.edu.gov.on.ca/en/curriculum/secondary-mathematics/courses/mth1w/strands/e-geometry-and-measurement",
+    "financial": "https://www.dcp.edu.gov.on.ca/en/curriculum/secondary-mathematics/courses/mth1w/strands/f-financial-literacy",
+    "learning": "https://www.dcp.edu.gov.on.ca/en/curriculum/secondary-mathematics/courses/mth1w/strands",
+    "board": "https://www2.yrdsb.ca/about-us/director-education/directors-annual-report/board-improvement-plan-math",
+    "boardCurriculum": "https://www2.yrdsb.ca/schools-programs/school-programs-nav/school-programs/mathematics"
+  },
+  "curriculum": {
+    "id": "grade-9",
+    "title": "Grade 9",
+    "description": "Ontario Grade 9 mathematics (MTH1W, de-streamed) for YRDSB learners: practice with varied question styles and guided exploration. Activities support practice, not certification of mastery.",
+    "children": [
+      {
+        "id": "g9-learning",
+        "title": "Social-emotional learning skills",
+        "code": "AA",
+        "source": "https://www.dcp.edu.gov.on.ca/en/curriculum/secondary-mathematics/courses/mth1w/strands/aa-sel",
+        "children": [
+          {
+            "id": "g9-aa1-topic",
+            "title": "AA1 · Social-emotional learning skills",
+            "children": [
+              {
+                "id": "g9-aa1-1",
+                "code": "AA1.1",
+                "title": "Manage emotions",
+                "description": "Identify and manage emotions while engaging in mathematics.",
+                "example": "Explain how you feel when a problem is unfamiliar."
+              },
+              {
+                "id": "g9-aa1-2",
+                "code": "AA1.2",
+                "title": "Cope with challenges",
+                "description": "Recognize stress and use strategies for coping with mathematical challenges.",
+                "example": "Explain how you feel when a problem is unfamiliar."
+              },
+              {
+                "id": "g9-aa1-3",
+                "code": "AA1.3",
+                "title": "Persist and stay motivated",
+                "description": "Maintain motivation and perseverance when working through problems.",
+                "example": "Explain how you feel when a problem is unfamiliar."
+              },
+              {
+                "id": "g9-aa1-4",
+                "code": "AA1.4",
+                "title": "Collaborate and communicate",
+                "description": "Build relationships, listen to different mathematical ideas, and communicate respectfully.",
+                "example": "Explain how you feel when a problem is unfamiliar."
+              },
+              {
+                "id": "g9-aa1-5",
+                "code": "AA1.5",
+                "title": "Confidence and self-awareness",
+                "description": "Develop awareness of yourself as a capable mathematics learner.",
+                "example": "Explain how you feel when a problem is unfamiliar."
+              },
+              {
+                "id": "g9-aa1-6",
+                "code": "AA1.6",
+                "title": "Critical and creative thinking",
+                "description": "Think critically and creatively to support mathematical decisions and problem solving.",
+                "example": "Explain how you feel when a problem is unfamiliar."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g9-processes",
+        "title": "Mathematical thinking and making connections",
+        "code": "A",
+        "source": "https://www.dcp.edu.gov.on.ca/en/curriculum/secondary-mathematics/courses/mth1w/strands/a-mathematical-thinking-and-making-connections",
+        "children": [
+          {
+            "id": "g9-a-topic",
+            "title": "A · Processes and connections",
+            "children": [
+              {
+                "id": "g9-a1",
+                "code": "A1",
+                "title": "Mathematical processes",
+                "description": "Apply the mathematical processes to build understanding and procedural fluency.",
+                "example": "Choose a problem and name the processes you used."
+              },
+              {
+                "id": "g9-a2",
+                "code": "A2",
+                "title": "Making connections",
+                "description": "Connect mathematics to knowledge systems, lived experience, real-life uses and careers.",
+                "example": "Describe where this math appears outside class."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g9-number",
+        "title": "Number",
+        "code": "B",
+        "source": "https://www.dcp.edu.gov.on.ca/en/curriculum/secondary-mathematics/courses/mth1w/strands/b-number",
+        "children": [
+          {
+            "id": "g9-b1-topic",
+            "title": "B1 · Development of numbers and number sets",
+            "children": [
+              {
+                "id": "g9-b1-1",
+                "code": "B1.1",
+                "title": "Development and use of numbers",
+                "description": "Research a number concept and tell a story about its development, use and relevance.",
+                "example": "Tell the story of zero, the Hindu–Arabic numerals, or Indigenous counting systems."
+              },
+              {
+                "id": "g9-b1-2",
+                "code": "B1.2",
+                "title": "Number sets",
+                "description": "Describe how subsets of the real numbers are defined and how they are alike and different.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g9-b1-3",
+                "code": "B1.3",
+                "title": "Density, infinity and limits",
+                "description": "Use patterns to explain density, infinity and limits for number sets.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              }
+            ]
+          },
+          {
+            "id": "g9-b2-topic",
+            "title": "B2 · Powers",
+            "children": [
+              {
+                "id": "g9-b2-1",
+                "code": "B2.1",
+                "title": "Powers and scientific notation",
+                "description": "Relate the sign and size of an exponent to the value of a power; use scientific notation.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g9-b2-2",
+                "code": "B2.2",
+                "title": "Exponent laws",
+                "description": "Use patterns to develop the exponent laws and simplify numeric and algebraic expressions.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              }
+            ]
+          },
+          {
+            "id": "g9-b3-topic",
+            "title": "B3 · Number sense and operations",
+            "children": [
+              {
+                "id": "g9-b3-1",
+                "code": "B3.1",
+                "title": "Integers in context",
+                "description": "Use integers to describe location, direction, amount and changes.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g9-b3-2",
+                "code": "B3.2",
+                "title": "Unit fractions and measuring tools",
+                "description": "Use unit fractions and their relationships to other fractional amounts, including measuring tools.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g9-b3-3",
+                "code": "B3.3",
+                "title": "Signs in ratios, rates, fractions and decimals",
+                "description": "Explain how positive and negative signs affect ratios, rates, fractions and decimals.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g9-b3-4",
+                "code": "B3.4",
+                "title": "Operations with fractions and mixed numbers",
+                "description": "Solve problems with positive and negative fractions and mixed numbers.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g9-b3-5",
+                "code": "B3.5",
+                "title": "Rates, percentages and proportions",
+                "description": "Pose and solve problems with rates, percentages and proportions in real contexts.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g9-algebra",
+        "title": "Algebra",
+        "code": "C",
+        "source": "https://www.dcp.edu.gov.on.ca/en/curriculum/secondary-mathematics/courses/mth1w/strands/c-algebra",
+        "children": [
+          {
+            "id": "g9-c1-topic",
+            "title": "C1 · Algebraic expressions and equations",
+            "children": [
+              {
+                "id": "g9-c1-1",
+                "code": "C1.1",
+                "title": "Development and use of algebra",
+                "description": "Research an algebraic concept and tell a story about its development, use and relevance.",
+                "example": "Tell the story of al-jabr, the equals sign or variables."
+              },
+              {
+                "id": "g9-c1-2",
+                "code": "C1.2",
+                "title": "Write expressions to generalize",
+                "description": "Create algebraic expressions that generalize relationships in words, numbers and diagrams.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g9-c1-3",
+                "code": "C1.3",
+                "title": "Compare expressions",
+                "description": "Decide whether expressions are equivalent using concrete, numerical, graphical and algebraic methods.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g9-c1-4",
+                "code": "C1.4",
+                "title": "Simplify expressions",
+                "description": "Simplify expressions using the properties of operations.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g9-c1-5",
+                "code": "C1.5",
+                "title": "Create and solve equations",
+                "description": "Create and solve equations for various contexts and verify the solutions.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              }
+            ]
+          },
+          {
+            "id": "g9-c2-topic",
+            "title": "C2 · Coding",
+            "children": [
+              {
+                "id": "g9-c2-1",
+                "code": "C2.1",
+                "title": "Use coding for algebraic concepts",
+                "description": "Use code to show variables, parameters, equations and inequalities.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g9-c2-2",
+                "code": "C2.2",
+                "title": "Decompose problems into steps",
+                "description": "Create code by decomposing situations into computational steps.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g9-c2-3",
+                "code": "C2.3",
+                "title": "Read and alter code",
+                "description": "Read code to predict output, and alter its parameters or constraints.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              }
+            ]
+          },
+          {
+            "id": "g9-c3-topic",
+            "title": "C3 · Application of relations",
+            "children": [
+              {
+                "id": "g9-c3-1",
+                "code": "C3.1",
+                "title": "Compare linear and non-linear relations",
+                "description": "Compare the shapes of graphs to describe rates of change, growth and predictions.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g9-c3-2",
+                "code": "C3.2",
+                "title": "Represent linear relations",
+                "description": "Represent linear relations with materials, tables, graphs and equations.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g9-c3-3",
+                "code": "C3.3",
+                "title": "Compare two linear relations",
+                "description": "Compare two lines y = ax + b graphically and algebraically and interpret their intersection.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              }
+            ]
+          },
+          {
+            "id": "g9-c4-topic",
+            "title": "C4 · Characteristics of relations",
+            "children": [
+              {
+                "id": "g9-c4-1",
+                "code": "C4.1",
+                "title": "Compare characteristics of relations",
+                "description": "Compare the tables, graphs and equations of linear and non-linear relations.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g9-c4-2",
+                "code": "C4.2",
+                "title": "Graph linear forms and regions",
+                "description": "Graph x = k, y = k, x + y = k, x − y = k, ax + by = k, xy = k and their inequalities.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g9-c4-3",
+                "code": "C4.3",
+                "title": "Transform lines",
+                "description": "Translate, reflect and rotate lines y = ax and describe the effect on graphs and equations.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g9-c4-4",
+                "code": "C4.4",
+                "title": "Equations of lines",
+                "description": "Find equations of lines from graphs, tables and materials using slope and y-intercept.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g9-data",
+        "title": "Data",
+        "code": "D",
+        "source": "https://www.dcp.edu.gov.on.ca/en/curriculum/secondary-mathematics/courses/mth1w/strands/d-data",
+        "children": [
+          {
+            "id": "g9-d1-topic",
+            "title": "D1 · Collection, representation and analysis of data",
+            "children": [
+              {
+                "id": "g9-d1-1",
+                "code": "D1.1",
+                "title": "Large data and its implications",
+                "description": "Identify a context with a lot of data and describe the implications of collecting, storing and using it.",
+                "example": "Discuss what data an app collects and why privacy matters."
+              },
+              {
+                "id": "g9-d1-2",
+                "code": "D1.2",
+                "title": "Quartiles and box plots",
+                "description": "Represent and analyse one-variable data, including quartiles and box plots.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g9-d1-3",
+                "code": "D1.3",
+                "title": "Scatter plots and models",
+                "description": "Create scatter plots, test regression models with technology and make predictions.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              }
+            ]
+          },
+          {
+            "id": "g9-d2-topic",
+            "title": "D2 · Mathematical modelling",
+            "children": [
+              {
+                "id": "g9-d2-1",
+                "code": "D2.1",
+                "title": "Value of mathematical modelling",
+                "description": "Describe how mathematical modelling informs real-life decisions.",
+                "example": "Name a decision informed by a model."
+              },
+              {
+                "id": "g9-d2-2",
+                "code": "D2.2",
+                "title": "Identify a question and information needed",
+                "description": "Identify a question that needs data and decide what information is required.",
+                "example": "Write a question and list the data you need."
+              },
+              {
+                "id": "g9-d2-3",
+                "code": "D2.3",
+                "title": "Plan and carry out data collection",
+                "description": "Create a plan to collect data, state assumptions and what may vary, and carry it out.",
+                "example": "Plan a survey or experiment and say what might vary."
+              },
+              {
+                "id": "g9-d2-4",
+                "code": "D2.4",
+                "title": "Display and analyse data to build a model",
+                "description": "Choose ways to display and analyse data, considering its nature, context and assumptions, to create a model.",
+                "example": "Choose a graph type and explain why it suits the data."
+              },
+              {
+                "id": "g9-d2-5",
+                "code": "D2.5",
+                "title": "Report on a model",
+                "description": "Report how a model answers the question, how well it fits, its limits and predictions.",
+                "example": "Write a short report on what a model tells us and where it fails."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g9-geometry",
+        "title": "Geometry and measurement",
+        "code": "E",
+        "source": "https://www.dcp.edu.gov.on.ca/en/curriculum/secondary-mathematics/courses/mth1w/strands/e-geometry-and-measurement",
+        "children": [
+          {
+            "id": "g9-e1-topic",
+            "title": "E1 · Geometric and measurement relationships",
+            "children": [
+              {
+                "id": "g9-e1-1",
+                "code": "E1.1",
+                "title": "Development of geometry and measurement",
+                "description": "Research a geometric concept or measurement system and describe its use and relevance to careers.",
+                "example": "Tell the story of the Pythagorean theorem or a traditional measurement system."
+              },
+              {
+                "id": "g9-e1-2",
+                "code": "E1.2",
+                "title": "Circle and triangle properties",
+                "description": "Create and analyse designs using geometric relationships and circle and triangle properties.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g9-e1-3",
+                "code": "E1.3",
+                "title": "Units within and between systems",
+                "description": "Solve problems with units within and between measurement systems, including from various cultures.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g9-e1-4",
+                "code": "E1.4",
+                "title": "Changing dimensions",
+                "description": "Show how changing dimensions affects perimeter, area, surface area and volume.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g9-e1-5",
+                "code": "E1.5",
+                "title": "Pythagorean theorem",
+                "description": "Solve right-triangle side problems, including composite shapes.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g9-e1-6",
+                "code": "E1.6",
+                "title": "Volumes of solids",
+                "description": "Use relationships between prism and pyramid volumes and between cylinder and cone volumes.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g9-financial",
+        "title": "Financial literacy",
+        "code": "F",
+        "source": "https://www.dcp.edu.gov.on.ca/en/curriculum/secondary-mathematics/courses/mth1w/strands/f-financial-literacy",
+        "children": [
+          {
+            "id": "g9-f1-topic",
+            "title": "F1 · Financial decisions",
+            "children": [
+              {
+                "id": "g9-f1-1",
+                "code": "F1.1",
+                "title": "Financial situations and decisions",
+                "description": "Explain how a past or current financial situation can inform financial decisions.",
+                "example": "Describe a financial situation and what it teaches."
+              },
+              {
+                "id": "g9-f1-2",
+                "code": "F1.2",
+                "title": "Appreciation and depreciation",
+                "description": "Recognize situations with appreciation and depreciation and use graphs to answer questions.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g9-f1-3",
+                "code": "F1.3",
+                "title": "Interest, loans and down payments",
+                "description": "Compare interest rates, loan lengths, interest methods and down payments on the overall cost.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g9-f1-4",
+                "code": "F1.4",
+                "title": "Modify budgets",
+                "description": "Modify budgets for changing circumstances and give a rationale.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "suggestedSequence": [
+    [
+      "Numbers and powers",
+      "Number sets, exponent laws, scientific notation, integers, fractions, rates and percentages."
+    ],
+    [
+      "Algebra and relations",
+      "Expressions, equations, code, linear and non-linear relations, lines and transformations."
+    ],
+    [
+      "Data and modelling",
+      "Quartiles, box plots, scatter plots and the modelling process."
+    ],
+    [
+      "Geometry, measurement and money",
+      "Circle and triangle properties, units, scale, Pythagoras, volumes, interest, depreciation and budgets."
+    ]
+  ],
+  "activities": [
+    {
+      "id": "activity-g9-question-aa1-1-1",
+      "title": "Manage emotions",
+      "skillIds": [
+        "g9-aa1-1"
+      ],
+      "href": "./curriculum.html?grade=9#g9-aa1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-aa1-1-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-aa1-2-1",
+      "title": "Cope with challenges",
+      "skillIds": [
+        "g9-aa1-2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-aa1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-aa1-2-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-aa1-3-1",
+      "title": "Persist and stay motivated",
+      "skillIds": [
+        "g9-aa1-3"
+      ],
+      "href": "./curriculum.html?grade=9#g9-aa1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-aa1-3-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-aa1-4-1",
+      "title": "Collaborate and communicate",
+      "skillIds": [
+        "g9-aa1-4"
+      ],
+      "href": "./curriculum.html?grade=9#g9-aa1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-aa1-4-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-aa1-5-1",
+      "title": "Confidence and self-awareness",
+      "skillIds": [
+        "g9-aa1-5"
+      ],
+      "href": "./curriculum.html?grade=9#g9-aa1-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-aa1-5-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-aa1-6-1",
+      "title": "Critical and creative thinking",
+      "skillIds": [
+        "g9-aa1-6"
+      ],
+      "href": "./curriculum.html?grade=9#g9-aa1-6",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-aa1-6-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-a1-1",
+      "title": "Mathematical processes",
+      "skillIds": [
+        "g9-a1"
+      ],
+      "href": "./curriculum.html?grade=9#g9-a1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-a1-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-a1-2",
+      "title": "Mathematical processes — another way",
+      "skillIds": [
+        "g9-a1"
+      ],
+      "href": "./curriculum.html?grade=9#g9-a1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-a1-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-a2-1",
+      "title": "Making connections",
+      "skillIds": [
+        "g9-a2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-a2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-a2-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-a2-2",
+      "title": "Making connections — another way",
+      "skillIds": [
+        "g9-a2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-a2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-a2-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-b1-1-1",
+      "title": "Development and use of numbers",
+      "skillIds": [
+        "g9-b1-1"
+      ],
+      "href": "./curriculum.html?grade=9#g9-b1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-b1-1-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-b1-1-2",
+      "title": "Development and use of numbers — another way",
+      "skillIds": [
+        "g9-b1-1"
+      ],
+      "href": "./curriculum.html?grade=9#g9-b1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-b1-1-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-b1-2-1",
+      "title": "Number sets",
+      "skillIds": [
+        "g9-b1-2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-b1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-b1-2-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-b1-2-2",
+      "title": "Number sets — another way",
+      "skillIds": [
+        "g9-b1-2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-b1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-b1-2-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-b1-2-3",
+      "title": "Number sets — mixed practice",
+      "skillIds": [
+        "g9-b1-2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-b1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-b1-2-3"
+      ]
+    },
+    {
+      "id": "activity-g9-question-b1-3-1",
+      "title": "Density, infinity and limits",
+      "skillIds": [
+        "g9-b1-3"
+      ],
+      "href": "./curriculum.html?grade=9#g9-b1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-b1-3-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-b1-3-2",
+      "title": "Density, infinity and limits — another way",
+      "skillIds": [
+        "g9-b1-3"
+      ],
+      "href": "./curriculum.html?grade=9#g9-b1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-b1-3-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-b1-3-3",
+      "title": "Density, infinity and limits — mixed practice",
+      "skillIds": [
+        "g9-b1-3"
+      ],
+      "href": "./curriculum.html?grade=9#g9-b1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-b1-3-3"
+      ]
+    },
+    {
+      "id": "activity-g9-question-b2-1-1",
+      "title": "Powers and scientific notation",
+      "skillIds": [
+        "g9-b2-1"
+      ],
+      "href": "./curriculum.html?grade=9#g9-b2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-b2-1-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-b2-1-2",
+      "title": "Powers and scientific notation — another way",
+      "skillIds": [
+        "g9-b2-1"
+      ],
+      "href": "./curriculum.html?grade=9#g9-b2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-b2-1-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-b2-1-3",
+      "title": "Powers and scientific notation — mixed practice",
+      "skillIds": [
+        "g9-b2-1"
+      ],
+      "href": "./curriculum.html?grade=9#g9-b2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-b2-1-3"
+      ]
+    },
+    {
+      "id": "activity-g9-question-b2-1-4",
+      "title": "Powers and scientific notation",
+      "skillIds": [
+        "g9-b2-1"
+      ],
+      "href": "./curriculum.html?grade=9#g9-b2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-b2-1-4"
+      ]
+    },
+    {
+      "id": "activity-g9-question-b2-1-5",
+      "title": "Powers and scientific notation — another way",
+      "skillIds": [
+        "g9-b2-1"
+      ],
+      "href": "./curriculum.html?grade=9#g9-b2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-b2-1-5"
+      ]
+    },
+    {
+      "id": "activity-g9-question-b2-2-1",
+      "title": "Exponent laws",
+      "skillIds": [
+        "g9-b2-2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-b2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-b2-2-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-b2-2-2",
+      "title": "Exponent laws — another way",
+      "skillIds": [
+        "g9-b2-2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-b2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-b2-2-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-b2-2-3",
+      "title": "Exponent laws — mixed practice",
+      "skillIds": [
+        "g9-b2-2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-b2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-b2-2-3"
+      ]
+    },
+    {
+      "id": "activity-g9-question-b3-1-1",
+      "title": "Integers in context",
+      "skillIds": [
+        "g9-b3-1"
+      ],
+      "href": "./curriculum.html?grade=9#g9-b3-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-b3-1-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-b3-1-2",
+      "title": "Integers in context — another way",
+      "skillIds": [
+        "g9-b3-1"
+      ],
+      "href": "./curriculum.html?grade=9#g9-b3-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-b3-1-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-b3-1-3",
+      "title": "Integers in context — mixed practice",
+      "skillIds": [
+        "g9-b3-1"
+      ],
+      "href": "./curriculum.html?grade=9#g9-b3-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-b3-1-3"
+      ]
+    },
+    {
+      "id": "activity-g9-question-b3-2-1",
+      "title": "Unit fractions and measuring tools",
+      "skillIds": [
+        "g9-b3-2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-b3-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-b3-2-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-b3-2-2",
+      "title": "Unit fractions and measuring tools — another way",
+      "skillIds": [
+        "g9-b3-2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-b3-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-b3-2-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-b3-2-3",
+      "title": "Unit fractions and measuring tools — mixed practice",
+      "skillIds": [
+        "g9-b3-2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-b3-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-b3-2-3"
+      ]
+    },
+    {
+      "id": "activity-g9-question-b3-3-1",
+      "title": "Signs in ratios, rates, fractions and decimals",
+      "skillIds": [
+        "g9-b3-3"
+      ],
+      "href": "./curriculum.html?grade=9#g9-b3-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-b3-3-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-b3-3-2",
+      "title": "Signs in ratios, rates, fractions and decimals — another way",
+      "skillIds": [
+        "g9-b3-3"
+      ],
+      "href": "./curriculum.html?grade=9#g9-b3-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-b3-3-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-b3-3-3",
+      "title": "Signs in ratios, rates, fractions and decimals — mixed practice",
+      "skillIds": [
+        "g9-b3-3"
+      ],
+      "href": "./curriculum.html?grade=9#g9-b3-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-b3-3-3"
+      ]
+    },
+    {
+      "id": "activity-g9-question-b3-4-1",
+      "title": "Operations with fractions and mixed numbers",
+      "skillIds": [
+        "g9-b3-4"
+      ],
+      "href": "./curriculum.html?grade=9#g9-b3-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-b3-4-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-b3-4-2",
+      "title": "Operations with fractions and mixed numbers — another way",
+      "skillIds": [
+        "g9-b3-4"
+      ],
+      "href": "./curriculum.html?grade=9#g9-b3-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-b3-4-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-b3-4-3",
+      "title": "Operations with fractions and mixed numbers — mixed practice",
+      "skillIds": [
+        "g9-b3-4"
+      ],
+      "href": "./curriculum.html?grade=9#g9-b3-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-b3-4-3"
+      ]
+    },
+    {
+      "id": "activity-g9-question-b3-5-1",
+      "title": "Rates, percentages and proportions",
+      "skillIds": [
+        "g9-b3-5"
+      ],
+      "href": "./curriculum.html?grade=9#g9-b3-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-b3-5-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-b3-5-2",
+      "title": "Rates, percentages and proportions — another way",
+      "skillIds": [
+        "g9-b3-5"
+      ],
+      "href": "./curriculum.html?grade=9#g9-b3-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-b3-5-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-b3-5-3",
+      "title": "Rates, percentages and proportions — mixed practice",
+      "skillIds": [
+        "g9-b3-5"
+      ],
+      "href": "./curriculum.html?grade=9#g9-b3-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-b3-5-3"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c1-1-1",
+      "title": "Development and use of algebra",
+      "skillIds": [
+        "g9-c1-1"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c1-1-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c1-1-2",
+      "title": "Development and use of algebra — another way",
+      "skillIds": [
+        "g9-c1-1"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c1-1-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c1-2-1",
+      "title": "Write expressions to generalize",
+      "skillIds": [
+        "g9-c1-2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c1-2-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c1-2-2",
+      "title": "Write expressions to generalize — another way",
+      "skillIds": [
+        "g9-c1-2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c1-2-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c1-2-3",
+      "title": "Write expressions to generalize — mixed practice",
+      "skillIds": [
+        "g9-c1-2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c1-2-3"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c1-3-1",
+      "title": "Compare expressions",
+      "skillIds": [
+        "g9-c1-3"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c1-3-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c1-3-2",
+      "title": "Compare expressions — another way",
+      "skillIds": [
+        "g9-c1-3"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c1-3-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c1-3-3",
+      "title": "Compare expressions — mixed practice",
+      "skillIds": [
+        "g9-c1-3"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c1-3-3"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c1-4-1",
+      "title": "Simplify expressions",
+      "skillIds": [
+        "g9-c1-4"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c1-4-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c1-4-2",
+      "title": "Simplify expressions — another way",
+      "skillIds": [
+        "g9-c1-4"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c1-4-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c1-4-3",
+      "title": "Simplify expressions — mixed practice",
+      "skillIds": [
+        "g9-c1-4"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c1-4-3"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c1-5-1",
+      "title": "Create and solve equations",
+      "skillIds": [
+        "g9-c1-5"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c1-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c1-5-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c1-5-2",
+      "title": "Create and solve equations — another way",
+      "skillIds": [
+        "g9-c1-5"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c1-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c1-5-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c1-5-3",
+      "title": "Create and solve equations — mixed practice",
+      "skillIds": [
+        "g9-c1-5"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c1-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c1-5-3"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c2-1-1",
+      "title": "Use coding for algebraic concepts",
+      "skillIds": [
+        "g9-c2-1"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c2-1-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c2-1-2",
+      "title": "Use coding for algebraic concepts — another way",
+      "skillIds": [
+        "g9-c2-1"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c2-1-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c2-1-3",
+      "title": "Use coding for algebraic concepts — mixed practice",
+      "skillIds": [
+        "g9-c2-1"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c2-1-3"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c2-2-1",
+      "title": "Decompose problems into steps",
+      "skillIds": [
+        "g9-c2-2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c2-2-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c2-2-2",
+      "title": "Decompose problems into steps — another way",
+      "skillIds": [
+        "g9-c2-2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c2-2-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c2-2-3",
+      "title": "Decompose problems into steps — mixed practice",
+      "skillIds": [
+        "g9-c2-2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c2-2-3"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c2-3-1",
+      "title": "Read and alter code",
+      "skillIds": [
+        "g9-c2-3"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c2-3-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c2-3-2",
+      "title": "Read and alter code — another way",
+      "skillIds": [
+        "g9-c2-3"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c2-3-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c2-3-3",
+      "title": "Read and alter code — mixed practice",
+      "skillIds": [
+        "g9-c2-3"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c2-3-3"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c3-1-1",
+      "title": "Compare linear and non-linear relations",
+      "skillIds": [
+        "g9-c3-1"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c3-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c3-1-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c3-1-2",
+      "title": "Compare linear and non-linear relations — another way",
+      "skillIds": [
+        "g9-c3-1"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c3-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c3-1-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c3-1-3",
+      "title": "Compare linear and non-linear relations — mixed practice",
+      "skillIds": [
+        "g9-c3-1"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c3-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c3-1-3"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c3-2-1",
+      "title": "Represent linear relations",
+      "skillIds": [
+        "g9-c3-2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c3-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c3-2-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c3-2-2",
+      "title": "Represent linear relations — another way",
+      "skillIds": [
+        "g9-c3-2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c3-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c3-2-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c3-2-3",
+      "title": "Represent linear relations — mixed practice",
+      "skillIds": [
+        "g9-c3-2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c3-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c3-2-3"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c3-3-1",
+      "title": "Compare two linear relations",
+      "skillIds": [
+        "g9-c3-3"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c3-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c3-3-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c3-3-2",
+      "title": "Compare two linear relations — another way",
+      "skillIds": [
+        "g9-c3-3"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c3-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c3-3-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c3-3-3",
+      "title": "Compare two linear relations — mixed practice",
+      "skillIds": [
+        "g9-c3-3"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c3-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c3-3-3"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c4-1-1",
+      "title": "Compare characteristics of relations",
+      "skillIds": [
+        "g9-c4-1"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c4-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c4-1-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c4-1-2",
+      "title": "Compare characteristics of relations — another way",
+      "skillIds": [
+        "g9-c4-1"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c4-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c4-1-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c4-1-3",
+      "title": "Compare characteristics of relations — mixed practice",
+      "skillIds": [
+        "g9-c4-1"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c4-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c4-1-3"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c4-2-1",
+      "title": "Graph linear forms and regions",
+      "skillIds": [
+        "g9-c4-2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c4-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c4-2-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c4-2-2",
+      "title": "Graph linear forms and regions — another way",
+      "skillIds": [
+        "g9-c4-2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c4-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c4-2-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c4-2-3",
+      "title": "Graph linear forms and regions — mixed practice",
+      "skillIds": [
+        "g9-c4-2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c4-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c4-2-3"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c4-3-1",
+      "title": "Transform lines",
+      "skillIds": [
+        "g9-c4-3"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c4-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c4-3-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c4-3-2",
+      "title": "Transform lines — another way",
+      "skillIds": [
+        "g9-c4-3"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c4-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c4-3-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c4-3-3",
+      "title": "Transform lines — mixed practice",
+      "skillIds": [
+        "g9-c4-3"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c4-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c4-3-3"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c4-4-1",
+      "title": "Equations of lines",
+      "skillIds": [
+        "g9-c4-4"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c4-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c4-4-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c4-4-2",
+      "title": "Equations of lines — another way",
+      "skillIds": [
+        "g9-c4-4"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c4-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c4-4-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-c4-4-3",
+      "title": "Equations of lines — mixed practice",
+      "skillIds": [
+        "g9-c4-4"
+      ],
+      "href": "./curriculum.html?grade=9#g9-c4-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-c4-4-3"
+      ]
+    },
+    {
+      "id": "activity-g9-question-d1-1-1",
+      "title": "Large data and its implications",
+      "skillIds": [
+        "g9-d1-1"
+      ],
+      "href": "./curriculum.html?grade=9#g9-d1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-d1-1-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-d1-1-2",
+      "title": "Large data and its implications — another way",
+      "skillIds": [
+        "g9-d1-1"
+      ],
+      "href": "./curriculum.html?grade=9#g9-d1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-d1-1-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-d1-2-1",
+      "title": "Quartiles and box plots",
+      "skillIds": [
+        "g9-d1-2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-d1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-d1-2-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-d1-2-2",
+      "title": "Quartiles and box plots — another way",
+      "skillIds": [
+        "g9-d1-2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-d1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-d1-2-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-d1-2-3",
+      "title": "Quartiles and box plots — mixed practice",
+      "skillIds": [
+        "g9-d1-2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-d1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-d1-2-3"
+      ]
+    },
+    {
+      "id": "activity-g9-question-d1-3-1",
+      "title": "Scatter plots and models",
+      "skillIds": [
+        "g9-d1-3"
+      ],
+      "href": "./curriculum.html?grade=9#g9-d1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-d1-3-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-d1-3-2",
+      "title": "Scatter plots and models — another way",
+      "skillIds": [
+        "g9-d1-3"
+      ],
+      "href": "./curriculum.html?grade=9#g9-d1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-d1-3-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-d1-3-3",
+      "title": "Scatter plots and models — mixed practice",
+      "skillIds": [
+        "g9-d1-3"
+      ],
+      "href": "./curriculum.html?grade=9#g9-d1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-d1-3-3"
+      ]
+    },
+    {
+      "id": "activity-g9-question-d2-1-1",
+      "title": "Value of mathematical modelling",
+      "skillIds": [
+        "g9-d2-1"
+      ],
+      "href": "./curriculum.html?grade=9#g9-d2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-d2-1-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-d2-1-2",
+      "title": "Value of mathematical modelling — another way",
+      "skillIds": [
+        "g9-d2-1"
+      ],
+      "href": "./curriculum.html?grade=9#g9-d2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-d2-1-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-d2-2-1",
+      "title": "Identify a question and information needed",
+      "skillIds": [
+        "g9-d2-2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-d2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-d2-2-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-d2-2-2",
+      "title": "Identify a question and information needed — another way",
+      "skillIds": [
+        "g9-d2-2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-d2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-d2-2-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-d2-3-1",
+      "title": "Plan and carry out data collection",
+      "skillIds": [
+        "g9-d2-3"
+      ],
+      "href": "./curriculum.html?grade=9#g9-d2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-d2-3-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-d2-3-2",
+      "title": "Plan and carry out data collection — another way",
+      "skillIds": [
+        "g9-d2-3"
+      ],
+      "href": "./curriculum.html?grade=9#g9-d2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-d2-3-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-d2-4-1",
+      "title": "Display and analyse data to build a model",
+      "skillIds": [
+        "g9-d2-4"
+      ],
+      "href": "./curriculum.html?grade=9#g9-d2-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-d2-4-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-d2-4-2",
+      "title": "Display and analyse data to build a model — another way",
+      "skillIds": [
+        "g9-d2-4"
+      ],
+      "href": "./curriculum.html?grade=9#g9-d2-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-d2-4-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-d2-5-1",
+      "title": "Report on a model",
+      "skillIds": [
+        "g9-d2-5"
+      ],
+      "href": "./curriculum.html?grade=9#g9-d2-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-d2-5-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-d2-5-2",
+      "title": "Report on a model — another way",
+      "skillIds": [
+        "g9-d2-5"
+      ],
+      "href": "./curriculum.html?grade=9#g9-d2-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-d2-5-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-e1-1-1",
+      "title": "Development of geometry and measurement",
+      "skillIds": [
+        "g9-e1-1"
+      ],
+      "href": "./curriculum.html?grade=9#g9-e1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-e1-1-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-e1-1-2",
+      "title": "Development of geometry and measurement — another way",
+      "skillIds": [
+        "g9-e1-1"
+      ],
+      "href": "./curriculum.html?grade=9#g9-e1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-e1-1-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-e1-2-1",
+      "title": "Circle and triangle properties",
+      "skillIds": [
+        "g9-e1-2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-e1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-e1-2-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-e1-2-2",
+      "title": "Circle and triangle properties — another way",
+      "skillIds": [
+        "g9-e1-2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-e1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-e1-2-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-e1-2-3",
+      "title": "Circle and triangle properties — mixed practice",
+      "skillIds": [
+        "g9-e1-2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-e1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-e1-2-3"
+      ]
+    },
+    {
+      "id": "activity-g9-question-e1-3-1",
+      "title": "Units within and between systems",
+      "skillIds": [
+        "g9-e1-3"
+      ],
+      "href": "./curriculum.html?grade=9#g9-e1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-e1-3-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-e1-3-2",
+      "title": "Units within and between systems — another way",
+      "skillIds": [
+        "g9-e1-3"
+      ],
+      "href": "./curriculum.html?grade=9#g9-e1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-e1-3-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-e1-3-3",
+      "title": "Units within and between systems — mixed practice",
+      "skillIds": [
+        "g9-e1-3"
+      ],
+      "href": "./curriculum.html?grade=9#g9-e1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-e1-3-3"
+      ]
+    },
+    {
+      "id": "activity-g9-question-e1-4-1",
+      "title": "Changing dimensions",
+      "skillIds": [
+        "g9-e1-4"
+      ],
+      "href": "./curriculum.html?grade=9#g9-e1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-e1-4-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-e1-4-2",
+      "title": "Changing dimensions — another way",
+      "skillIds": [
+        "g9-e1-4"
+      ],
+      "href": "./curriculum.html?grade=9#g9-e1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-e1-4-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-e1-4-3",
+      "title": "Changing dimensions — mixed practice",
+      "skillIds": [
+        "g9-e1-4"
+      ],
+      "href": "./curriculum.html?grade=9#g9-e1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-e1-4-3"
+      ]
+    },
+    {
+      "id": "activity-g9-question-e1-5-1",
+      "title": "Pythagorean theorem",
+      "skillIds": [
+        "g9-e1-5"
+      ],
+      "href": "./curriculum.html?grade=9#g9-e1-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-e1-5-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-e1-5-2",
+      "title": "Pythagorean theorem — another way",
+      "skillIds": [
+        "g9-e1-5"
+      ],
+      "href": "./curriculum.html?grade=9#g9-e1-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-e1-5-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-e1-5-3",
+      "title": "Pythagorean theorem — mixed practice",
+      "skillIds": [
+        "g9-e1-5"
+      ],
+      "href": "./curriculum.html?grade=9#g9-e1-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-e1-5-3"
+      ]
+    },
+    {
+      "id": "activity-g9-question-e1-6-1",
+      "title": "Volumes of solids",
+      "skillIds": [
+        "g9-e1-6"
+      ],
+      "href": "./curriculum.html?grade=9#g9-e1-6",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-e1-6-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-e1-6-2",
+      "title": "Volumes of solids — another way",
+      "skillIds": [
+        "g9-e1-6"
+      ],
+      "href": "./curriculum.html?grade=9#g9-e1-6",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-e1-6-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-e1-6-3",
+      "title": "Volumes of solids — mixed practice",
+      "skillIds": [
+        "g9-e1-6"
+      ],
+      "href": "./curriculum.html?grade=9#g9-e1-6",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-e1-6-3"
+      ]
+    },
+    {
+      "id": "activity-g9-question-f1-1-1",
+      "title": "Financial situations and decisions",
+      "skillIds": [
+        "g9-f1-1"
+      ],
+      "href": "./curriculum.html?grade=9#g9-f1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-f1-1-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-f1-1-2",
+      "title": "Financial situations and decisions — another way",
+      "skillIds": [
+        "g9-f1-1"
+      ],
+      "href": "./curriculum.html?grade=9#g9-f1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-f1-1-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-f1-2-1",
+      "title": "Appreciation and depreciation",
+      "skillIds": [
+        "g9-f1-2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-f1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-f1-2-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-f1-2-2",
+      "title": "Appreciation and depreciation — another way",
+      "skillIds": [
+        "g9-f1-2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-f1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-f1-2-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-f1-2-3",
+      "title": "Appreciation and depreciation — mixed practice",
+      "skillIds": [
+        "g9-f1-2"
+      ],
+      "href": "./curriculum.html?grade=9#g9-f1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-f1-2-3"
+      ]
+    },
+    {
+      "id": "activity-g9-question-f1-3-1",
+      "title": "Interest, loans and down payments",
+      "skillIds": [
+        "g9-f1-3"
+      ],
+      "href": "./curriculum.html?grade=9#g9-f1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-f1-3-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-f1-3-2",
+      "title": "Interest, loans and down payments — another way",
+      "skillIds": [
+        "g9-f1-3"
+      ],
+      "href": "./curriculum.html?grade=9#g9-f1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-f1-3-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-f1-3-3",
+      "title": "Interest, loans and down payments — mixed practice",
+      "skillIds": [
+        "g9-f1-3"
+      ],
+      "href": "./curriculum.html?grade=9#g9-f1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-f1-3-3"
+      ]
+    },
+    {
+      "id": "activity-g9-question-f1-4-1",
+      "title": "Modify budgets",
+      "skillIds": [
+        "g9-f1-4"
+      ],
+      "href": "./curriculum.html?grade=9#g9-f1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-f1-4-1"
+      ]
+    },
+    {
+      "id": "activity-g9-question-f1-4-2",
+      "title": "Modify budgets — another way",
+      "skillIds": [
+        "g9-f1-4"
+      ],
+      "href": "./curriculum.html?grade=9#g9-f1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-f1-4-2"
+      ]
+    },
+    {
+      "id": "activity-g9-question-f1-4-3",
+      "title": "Modify budgets — mixed practice",
+      "skillIds": [
+        "g9-f1-4"
+      ],
+      "href": "./curriculum.html?grade=9#g9-f1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g9-question-f1-4-3"
+      ]
+    }
+  ]
+}

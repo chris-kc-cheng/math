@@ -53,7 +53,7 @@ export const numberRules8={
   ],{answer:tex(fraction)});}
  },
  'g8-order-operations':{
-  generate:r=>[pick(r,-8,8),pick(r,1,8),pick(r,2,5),pick(r,2,3)],
+  generate:r=>{let a=0;while(!a)a=pick(r,-8,8);return [a,pick(r,1,8),pick(r,2,5),pick(r,2,3)];},
   solve:([a,b,c,e])=>{const left=rational(a,2),right=rational(b,3),inside=add(left,right),raised=power(c,e),result=multiply(inside,raised);return lesson('Evaluate brackets and exponents before multiplication.',[
    step('Evaluate the bracket and the power.',`${tex(inside)}\\times${tex(raised)}`),step('Multiply the resulting values.',tex(result))
   ],{formula:`(${tex(left)}+${tex(right)})\\times${c}^{${e}}`,answer:tex(result)});}

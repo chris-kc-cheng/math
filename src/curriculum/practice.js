@@ -7,9 +7,13 @@ import {grade8Rules,createGrade8} from '../math/grade8/index.js';
 import {scaledDecimal} from '../math/core/format.js';
 import {pick as sampleInteger} from '../math/grade5/common.js';
 import {verificationFor} from '../math/verification.js';
+import {tidyDeep} from '../math/core/tidy.js';
+import {meaningfulVerification} from '../math/check-policy.js';
 import {elementaryRules,createElementary} from '../math/elementary/index.js';
 import {answerNumber} from '../math/verification.js';
 import {compare} from '../math/core/exact.js';
+import {primaryRules,createPrimary} from '../math/primary/index.js';
+import {secondaryRules,createSecondary} from '../math/secondary/index.js';
 
 export function generateValues(rule,rng=Math.random){
  if(grade8Rules[rule])return grade8Rules[rule].generate(rng);
@@ -56,6 +60,8 @@ export function exampleValues(template,values=template.example){
 function createPracticeBase(template,values=template.example){
  values=exampleValues(template,values);
  const [a,b,c]=values,rule=template.rule;
+ if(primaryRules[rule])return createPrimary(rule,values);
+ if(secondaryRules[rule])return createSecondary(rule,values);
  if(elementaryRules[rule]||rule==='guided-discussion')return createElementary(rule,values,template);
  if(grade8Rules[rule])return createGrade8(rule,values);
  if(grade5Rules[rule])return createGrade5(rule,values);
@@ -78,10 +84,14 @@ function createPracticeBase(template,values=template.example){
  }
  return {kind:result.kind==='equation'?'equation':'expression',formula:steps[0].math,steps};
 }
+function numericText(text){try{answerNumber(text);return true;}catch{return false;}}
 export function createPractice(template,values=template.example){
  const resolved=exampleValues(template,values);
  if(template.generation&&(resolved.length!==template.generation.length||resolved.some((value,i)=>{const domain=template.generation[i];return Array.isArray(domain)?!domain.includes(value):value<domain.min||value>domain.max||(value-domain.min)%(domain.step||1)!==0;})))throw Error('Values are outside this grade’s practice domain.');
- const lesson=createPracticeBase(template,resolved),verification=verificationFor(template.rule,resolved,lesson);
- if(template.answerMinimum!==undefined&&compare(answerNumber(lesson.answer),template.answerMinimum)<0)throw Error('The answer is below this grade’s practice domain.');
- return verification?{...lesson,verification}:lesson;
+ const base=createPracticeBase(template,resolved),{verification:ownCheck,...lesson}=base,verification=meaningfulVerification(template.rule,verificationFor(template.rule,resolved,base)||ownCheck);
+ if(template.answerMinimum!==undefined&&numericText(lesson.answer)&&compare(answerNumber(lesson.answer),template.answerMinimum)<0)throw Error('The answer is below this grade’s practice domain.');
+ if(template.answerMaximum!==undefined&&numericText(lesson.answer)&&compare(answerNumber(lesson.answer),template.answerMaximum)>0)throw Error('The answer is above this grade’s practice domain.');
+ // Any single exact numeric answer can be tried by the learner, even when the rule did not declare an answer box.
+ const response=lesson.response||(!lesson.reflection&&typeof lesson.answer==='string'&&numericText(lesson.answer)?{kind:'number',answer:lesson.answer}:undefined);
+ return tidyDeep({...(verification?{...lesson,verification}:lesson),...(response?{response}:{})});
 }

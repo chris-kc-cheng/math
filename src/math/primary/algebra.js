@@ -1,0 +1,37 @@
+import {lesson,step,checked,table,requireThat,style,choiceLesson} from './common.js';
+const units=[['circle','square'],['circle','circle','square'],['triangle','square','square'],['circle','triangle','square']];
+export const primaryAlgebraRules={
+ 'primary-pattern':([unit,repeats,index,mode])=>{
+  requireThat(units[unit]&&repeats>=2&&repeats<=4,'Choose a repeating unit and 2–4 repeats.');const base=units[unit],seq=Array.from({length:base.length*repeats},(_,i)=>base[i%base.length]);const at=mode===0?seq.length:Math.min(index,seq.length-1),answer=base[at%base.length],visible=[...seq];if(mode!==0)visible[at]='?';
+  return choiceLesson(style([`Look at the repeating pattern. What shape comes next?`,`Which shape belongs in the empty space?`,`Clap for a circle, tap for a square, and stamp for a triangle. Which shape belongs in the empty space before you translate it into actions?`],mode),[step(`The repeating unit is ${base.join(', ')}.`,undefined,{type:'primary-pattern',values:base,caption:'One repeating unit'}),step(`Repeat the same unit in the same order. The needed shape is ${answer}.`)],answer,['circle','square','triangle'],{type:'primary-pattern',values:visible,caption:'Read the pattern from left to right'});
+ },
+ 'primary-operation-pattern':([start,up,down,length,mode])=>{
+  requireThat(start>=down&&up>0&&down>0&&length>=3&&length<=8,'Use a nonnegative alternating pattern.');const seq=[start];for(let i=1;i<=length;i++)seq.push(seq.at(-1)+(i%2?up:-down));const answer=seq.at(-1);
+  return checked(lesson(style([`Continue this pattern: ${seq.slice(0,-1).join(', ')}, __.`,`A pattern repeats these moves: add ${up}, then subtract ${down}. Start at ${start}. What is the number after ${length} moves?`,`Use a table to find the missing last term: ${seq.slice(0,-1).join(', ')}, __.`],mode),[step(`The repeating operations are +${up}, then −${down}.`,undefined,table(['Step','Number'],seq.map((n,i)=>[i,n]),'Alternating operations')),step(`The final operation is ${length%2?`add ${up}`:`subtract ${down}`}.`,`${seq.at(-2)}${length%2?'+':'-'}${length%2?up:down}=${answer}`)],{answer:String(answer)}),'Undo just the final operation.',`${answer}${length%2?'-':'+'}${length%2?up:down}=${seq.at(-2)}`,answer+(length%2?-up:down),seq.at(-2));
+ },
+ 'primary-balance':([a,b,c,mode])=>{
+  const total=a+b,missing=total-c;requireThat(a>=0&&b>=0&&c>=0&&missing>=0,'Use nonnegative equal parts.');requireThat(mode!==0||missing<=3,'Compare sums that are close, so the answer needs thought.');requireThat(mode<2||c>=1&&missing<=Math.max(a,b),'Keep the balance realistic.');
+  if(mode===0){const same=total===c,answer=same?'equal':'not equal';return choiceLesson(`Are ${a} + ${b} and ${c} equal?`,[step(`Count the left side: ${a}+${b} is ${total}.`,`${a}+${b}=${total}`),step(same?`Both sides are ${total}, so they are equal.`:`${total} and ${c} are different, so they are not equal.`)],answer,['equal','not equal']);}
+  const prompt=style(['',`Find the number in the box: ${a} + ${b} = ${c} + □.`,`A balance has ${a} counters and ${b} more on one side. The other side has ${c} counters. How many more are needed to balance it?`,`Complete an equal relationship: ${total} = ${c} + □.`],mode);
+  return checked(lesson(prompt,[step(`The first side has ${total}. Find how many more ${c} needs.`,`${total}-${c}=${missing}`),step('Put the missing amount back to make both sides match.',`${a}+${b}=${c}+${missing}`)],{answer:String(missing)}),'Count both sides independently.',`${total}=${c+missing}`,total,c+missing);
+ },
+ 'primary-code':([right,up,repeats,mode,styleIndex])=>{
+  requireThat(right>=1&&up>=1&&repeats>=1&&repeats<=5&&[0,1,2].includes(mode),'Use a small supported route.');
+  const total=mode===1?Math.max(right,up):(right+up)*(mode===2?repeats:1),lines=mode===1?[`At the same time:`,`  Cat: move right ${right} steps`,`  Dog: move up ${up} steps`,`Each character moves one step per beat.`]:mode===2?[`Repeat ${repeats} times:`,`  Move right ${right} steps`,`  Move up ${up} steps`]:[`Move right ${right} steps`,`Move up ${up} steps`];
+  const prompt=mode===1?style([`The cat and dog start together. How many beats until both finish?`,`Two characters move at the same time. Which step count tells how many beats are needed for both to finish?`,`Read the concurrent program. How many beats does the slower character need?`],styleIndex):style([`Read the program. How many moves run altogether?`,`A robot follows these instructions. Count its total moves.`,`Trace this program, counting every move once. What is the total?`],styleIndex);
+  return lesson(prompt,[step(mode===1?'Concurrent means at the same time. Follow each character separately.':'Sequential means one instruction follows the previous one.',undefined,{type:'code',lines,caption:'A bounded program to trace; no user code is executed'}),step(mode===1?`The slower path takes ${total} beats. Do not add simultaneous times.`:mode===2?`One repeat has ${right+up} moves. Count it ${repeats} times.`:`There are ${right} right moves, then ${up} up moves.`,mode===1?`${total}`:mode===2?`${Array(repeats).fill(right+up).join('+')}=${total}`:`${right}+${up}=${total}`)],{answer:String(total)});
+ }
+};
+Object.assign(primaryAlgebraRules,{
+ 'primary-code-change':([right,up,extra,mode])=>{
+  requireThat(right>=1&&up>=1&&extra>=1&&extra<=5,'Use small positive move counts.');const before=right+up,after=before+extra;
+  return checked(lesson(style([`A program says move right ${right}, then up ${up}. Change the first instruction to move right ${right+extra}. How many moves now?`,`A robot takes ${right} right steps and ${up} up steps. Add ${extra} right steps to its program. What is the new total?`,`Rewrite the route so its right movement grows by ${extra}. The old route was right ${right}, up ${up}. Count the new moves.`],mode),[step(`Only the right instruction changes: ${right} becomes ${right+extra}.`,undefined,table(['Instruction','Before','After'],[['Right',right,right+extra],['Up',up,up]],'Trace the edited program')),step('Follow the new instructions in order.',`${right+extra}+${up}=${after}`)],{answer:String(after)}),'Compare the new and original move totals.',`${after}-${before}=${extra}`,after-before,extra);
+ }
+});
+Object.assign(primaryAlgebraRules,{
+ 'primary-expressions':([a,b,operation,split,offset,mode])=>{
+  requireThat(a>=1&&b>=1&&split>=1&&[0,1,2,3].includes(operation),'Use supported positive expression parts.');const value=[a+b,a-b,a*b,a][operation];requireThat(value>split,'Use a positive second part.');const symbols=['+','-','\\times','\\div'],left=operation===3?`${a*b}\\div${b}`:`${a}${symbols[operation]}${b}`,right=`${split}+${value-split+offset}`,same=offset===0;
+  const prompt=style([`Are ${left.replace('\\times','×').replace('\\div','÷')} and ${right} equivalent?`,`Compare the values of these two expressions. Do they name the same amount?`,`How much must be added to the left expression to equal the right expression?`],mode),answer=mode===2?String(offset):same?'yes':'no';
+  const result=lesson(prompt,[step('Find the value of each expression separately.',`${left}=${value},\\quad${right}=${value+offset}`),step(mode===2?`The right expression is ${offset} greater.`:same?'The two values match. Different expressions can name the same amount.':'The values differ, so these expressions are not equivalent.',mode===2?`${value}+${offset}=${value+offset}`:undefined)],{formula:`${left}\\quad\\text{and}\\quad${right}`,answer,...(mode===2?{}:{response:{kind:'choice',options:['yes','no'],answer}})});return result;
+ }
+});

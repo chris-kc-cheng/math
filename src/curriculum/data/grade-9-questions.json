@@ -1,0 +1,5352 @@
+[
+  {
+    "title": "Manage emotions",
+    "rule": "manage-emotions",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 0
+    },
+    "id": "g9-question-aa1-1-1",
+    "skillId": "g9-aa1-1"
+  },
+  {
+    "title": "Cope with challenges",
+    "rule": "cope-challenge",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 1
+    },
+    "id": "g9-question-aa1-2-1",
+    "skillId": "g9-aa1-2"
+  },
+  {
+    "title": "Persist and stay motivated",
+    "rule": "persist",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 2
+    },
+    "id": "g9-question-aa1-3-1",
+    "skillId": "g9-aa1-3"
+  },
+  {
+    "title": "Collaborate and communicate",
+    "rule": "communicate",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 3
+    },
+    "id": "g9-question-aa1-4-1",
+    "skillId": "g9-aa1-4"
+  },
+  {
+    "title": "Confidence and self-awareness",
+    "rule": "confidence",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 0
+    },
+    "id": "g9-question-aa1-5-1",
+    "skillId": "g9-aa1-5"
+  },
+  {
+    "title": "Critical and creative thinking",
+    "rule": "critical-thinking",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 1
+    },
+    "id": "g9-question-aa1-6-1",
+    "skillId": "g9-aa1-6"
+  },
+  {
+    "title": "Mathematical processes",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Think about a problem you solved this week. Which of the seven mathematical processes did you use: problem solving, reasoning and proving, reflecting, selecting tools and strategies, connecting, representing, communicating?",
+        "steps": [
+          "Name two processes and the moment in your work where each one helped.",
+          "A process is a way of working, not a topic: describe what you did, not what the problem was about."
+        ]
+      },
+      {
+        "prompt": "A classmate says a line of reasoning “proves” a pattern because it worked for 3 examples. How could you test it further?",
+        "steps": [
+          "Try an example that might break the pattern, then try to explain why it must always hold.",
+          "Examples can suggest a conjecture; a general argument or a counter-example settles it."
+        ]
+      }
+    ],
+    "id": "g9-question-a1-1",
+    "skillId": "g9-a1"
+  },
+  {
+    "title": "Mathematical processes — another way",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Choose a tool for a problem: a table, a graph, algebra tiles or a calculator. Explain why it fits better than another tool.",
+        "steps": [
+          "Say what each tool shows well and what it hides.",
+          "Tools are chosen to match the task, then the result is checked for reasonableness."
+        ]
+      },
+      {
+        "prompt": "Write one sentence that communicates a solution to a classmate who missed the lesson. Use a correct mathematical term.",
+        "steps": [
+          "Include what you did, why it works and what the answer means in context.",
+          "Good communication uses vocabulary and a representation that the reader can follow."
+        ]
+      }
+    ],
+    "id": "g9-question-a1-2",
+    "skillId": "g9-a1"
+  },
+  {
+    "title": "Making connections",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Find a place in your community where percentages, rates or ratios affect decisions. Describe one real example.",
+        "steps": [
+          "Name the quantities and say which mathematical idea compares them.",
+          "Ask who uses this idea in their job and why accuracy matters."
+        ]
+      },
+      {
+        "prompt": "Many cultures developed ways of counting, measuring and recording. Pick one measurement system you know and describe how it is used.",
+        "steps": [
+          "Say what unit it uses and how it compares with metric units.",
+          "Connections include respecting the knowledge of the communities that created these systems."
+        ]
+      }
+    ],
+    "id": "g9-question-a2-1",
+    "skillId": "g9-a2"
+  },
+  {
+    "title": "Making connections — another way",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Choose a career that uses geometry or algebra. Describe one task and the mathematics behind it.",
+        "steps": [
+          "Write the task in words, then name the relationship or formula.",
+          "Careers combine several strands: a surveyor uses trigonometry, measurement and data."
+        ]
+      },
+      {
+        "prompt": "Describe a time you used math at home, in sports or in a hobby. Which strand of mathematics was it?",
+        "steps": [
+          "Explain the quantities involved and how you decided what to do.",
+          "Real situations are usually modelled: some details are simplified so mathematics can help."
+        ]
+      }
+    ],
+    "id": "g9-question-a2-2",
+    "skillId": "g9-a2"
+  },
+  {
+    "title": "Development and use of numbers",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Research how a number idea such as zero, negative numbers or place value developed in one culture. Tell its story in three sentences.",
+        "steps": [
+          "Say who used it, what problem it solved and where we use it today.",
+          "Check your sources: more than one source should agree on the main facts."
+        ]
+      },
+      {
+        "prompt": "Compare two number systems, for example Roman numerals and our place-value system. What can each do easily and what is hard?",
+        "steps": [
+          "Write the same number in both systems and compare how you add it to another number.",
+          "Place value and a symbol for zero make calculation much easier than adding symbols."
+        ]
+      }
+    ],
+    "id": "g9-question-b1-1-1",
+    "skillId": "g9-b1-1"
+  },
+  {
+    "title": "Development and use of numbers — another way",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Pick a current use of large or tiny numbers (data storage, populations, distances). Which number idea helps us handle them?",
+        "steps": [
+          "Describe the numbers in scientific notation and say what the exponent tells you.",
+          "Explain why a story about numbers can make them more meaningful."
+        ]
+      },
+      {
+        "prompt": "Interview someone about how they use numbers in their work. What number ideas do they rely on?",
+        "steps": [
+          "List three numbers they use and the unit or meaning attached to each.",
+          "Relevance means the idea matters today, not only in history."
+        ]
+      }
+    ],
+    "id": "g9-question-b1-1-2",
+    "skillId": "g9-b1-1"
+  },
+  {
+    "title": "Number sets",
+    "rule": "sec-number-sets",
+    "parameters": [
+      "a",
+      "b",
+      "style"
+    ],
+    "example": {
+      "a": 3,
+      "b": 1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 7,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g9-question-b1-2-1",
+    "skillId": "g9-b1-2"
+  },
+  {
+    "title": "Number sets — another way",
+    "rule": "sec-number-sets",
+    "parameters": [
+      "a",
+      "b",
+      "style"
+    ],
+    "example": {
+      "a": 3,
+      "b": 1,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 7,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-b1-2-2",
+    "skillId": "g9-b1-2"
+  },
+  {
+    "title": "Number sets — mixed practice",
+    "rule": "sec-number-sets",
+    "parameters": [
+      "a",
+      "b",
+      "style"
+    ],
+    "example": {
+      "a": 3,
+      "b": 1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 7,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-b1-2-3",
+    "skillId": "g9-b1-2"
+  },
+  {
+    "title": "Density, infinity and limits",
+    "rule": "sec-density",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 1,
+      "b": 4,
+      "c": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g9-question-b1-3-1",
+    "skillId": "g9-b1-3"
+  },
+  {
+    "title": "Density, infinity and limits — another way",
+    "rule": "sec-density",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 1,
+      "b": 4,
+      "c": 2,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-b1-3-2",
+    "skillId": "g9-b1-3"
+  },
+  {
+    "title": "Density, infinity and limits — mixed practice",
+    "rule": "sec-density",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 1,
+      "b": 4,
+      "c": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-b1-3-3",
+    "skillId": "g9-b1-3"
+  },
+  {
+    "title": "Powers and scientific notation",
+    "rule": "sec-power-value",
+    "parameters": [
+      "base",
+      "n",
+      "style"
+    ],
+    "example": {
+      "base": 3,
+      "n": 4,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g9-question-b2-1-1",
+    "skillId": "g9-b2-1"
+  },
+  {
+    "title": "Powers and scientific notation — another way",
+    "rule": "sec-power-value",
+    "parameters": [
+      "base",
+      "n",
+      "style"
+    ],
+    "example": {
+      "base": 3,
+      "n": 4,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-b2-1-2",
+    "skillId": "g9-b2-1"
+  },
+  {
+    "title": "Powers and scientific notation — mixed practice",
+    "rule": "sec-power-value",
+    "parameters": [
+      "base",
+      "n",
+      "style"
+    ],
+    "example": {
+      "base": 3,
+      "n": 4,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-b2-1-3",
+    "skillId": "g9-b2-1"
+  },
+  {
+    "title": "Powers and scientific notation",
+    "rule": "sec-scientific",
+    "parameters": [
+      "m",
+      "e",
+      "k",
+      "f",
+      "style"
+    ],
+    "example": {
+      "m": 35,
+      "e": 5,
+      "k": 3,
+      "f": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 11,
+        "max": 99,
+        "step": 1
+      },
+      {
+        "min": -6,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": -4,
+        "max": 6,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g9-question-b2-1-4",
+    "skillId": "g9-b2-1"
+  },
+  {
+    "title": "Powers and scientific notation — another way",
+    "rule": "sec-scientific",
+    "parameters": [
+      "m",
+      "e",
+      "k",
+      "f",
+      "style"
+    ],
+    "example": {
+      "m": 35,
+      "e": 5,
+      "k": 3,
+      "f": 2,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 11,
+        "max": 99,
+        "step": 1
+      },
+      {
+        "min": -6,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": -4,
+        "max": 6,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-b2-1-5",
+    "skillId": "g9-b2-1"
+  },
+  {
+    "title": "Exponent laws",
+    "rule": "sec-exponent-laws",
+    "parameters": [
+      "b",
+      "m",
+      "n",
+      "k",
+      "style"
+    ],
+    "example": {
+      "b": 2,
+      "m": 3,
+      "n": 4,
+      "k": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 4,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g9-question-b2-2-1",
+    "skillId": "g9-b2-2"
+  },
+  {
+    "title": "Exponent laws — another way",
+    "rule": "sec-exponent-laws",
+    "parameters": [
+      "b",
+      "m",
+      "n",
+      "k",
+      "style"
+    ],
+    "example": {
+      "b": 2,
+      "m": 3,
+      "n": 4,
+      "k": 2,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 4,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5,
+        6
+      ]
+    ],
+    "id": "g9-question-b2-2-2",
+    "skillId": "g9-b2-2"
+  },
+  {
+    "title": "Exponent laws — mixed practice",
+    "rule": "sec-exponent-laws",
+    "parameters": [
+      "b",
+      "m",
+      "n",
+      "k",
+      "style"
+    ],
+    "example": {
+      "b": 2,
+      "m": 3,
+      "n": 4,
+      "k": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 4,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    ],
+    "id": "g9-question-b2-2-3",
+    "skillId": "g9-b2-2"
+  },
+  {
+    "title": "Integers in context",
+    "rule": "sec-integer-context",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 8,
+      "b": 12,
+      "c": 5,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 30,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 30,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 30,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g9-question-b3-1-1",
+    "skillId": "g9-b3-1"
+  },
+  {
+    "title": "Integers in context — another way",
+    "rule": "sec-integer-context",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 8,
+      "b": 12,
+      "c": 5,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 30,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 30,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 30,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-b3-1-2",
+    "skillId": "g9-b3-1"
+  },
+  {
+    "title": "Integers in context — mixed practice",
+    "rule": "sec-integer-context",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 8,
+      "b": 12,
+      "c": 5,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 30,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 30,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 30,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-b3-1-3",
+    "skillId": "g9-b3-1"
+  },
+  {
+    "title": "Unit fractions and measuring tools",
+    "rule": "sec-unit-fraction",
+    "parameters": [
+      "n",
+      "d",
+      "k",
+      "style"
+    ],
+    "example": {
+      "n": 3,
+      "d": 8,
+      "k": 3,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 16,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 6,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g9-question-b3-2-1",
+    "skillId": "g9-b3-2"
+  },
+  {
+    "title": "Unit fractions and measuring tools — another way",
+    "rule": "sec-unit-fraction",
+    "parameters": [
+      "n",
+      "d",
+      "k",
+      "style"
+    ],
+    "example": {
+      "n": 3,
+      "d": 8,
+      "k": 3,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 16,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 6,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-b3-2-2",
+    "skillId": "g9-b3-2"
+  },
+  {
+    "title": "Unit fractions and measuring tools — mixed practice",
+    "rule": "sec-unit-fraction",
+    "parameters": [
+      "n",
+      "d",
+      "k",
+      "style"
+    ],
+    "example": {
+      "n": 3,
+      "d": 8,
+      "k": 3,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 16,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 6,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-b3-2-3",
+    "skillId": "g9-b3-2"
+  },
+  {
+    "title": "Signs in ratios, rates, fractions and decimals",
+    "rule": "sec-signed-rational",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "style"
+    ],
+    "example": {
+      "a": 3,
+      "b": 4,
+      "c": 2,
+      "d": 5,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g9-question-b3-3-1",
+    "skillId": "g9-b3-3"
+  },
+  {
+    "title": "Signs in ratios, rates, fractions and decimals — another way",
+    "rule": "sec-signed-rational",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "style"
+    ],
+    "example": {
+      "a": 3,
+      "b": 4,
+      "c": 2,
+      "d": 5,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-b3-3-2",
+    "skillId": "g9-b3-3"
+  },
+  {
+    "title": "Signs in ratios, rates, fractions and decimals — mixed practice",
+    "rule": "sec-signed-rational",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "style"
+    ],
+    "example": {
+      "a": 3,
+      "b": 4,
+      "c": 2,
+      "d": 5,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-b3-3-3",
+    "skillId": "g9-b3-3"
+  },
+  {
+    "title": "Operations with fractions and mixed numbers",
+    "rule": "sec-fraction-ops",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "style"
+    ],
+    "example": {
+      "a": 3,
+      "b": 4,
+      "c": -1,
+      "d": 6,
+      "e": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 4,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    "id": "g9-question-b3-4-1",
+    "skillId": "g9-b3-4"
+  },
+  {
+    "title": "Operations with fractions and mixed numbers — another way",
+    "rule": "sec-fraction-ops",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "style"
+    ],
+    "example": {
+      "a": 1,
+      "b": 6,
+      "c": 1,
+      "d": 7,
+      "e": 4,
+      "style": 4
+    },
+    "generation": [
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 4,
+        "step": 1
+      },
+      [
+        4,
+        5,
+        6
+      ]
+    ],
+    "id": "g9-question-b3-4-2",
+    "skillId": "g9-b3-4"
+  },
+  {
+    "title": "Operations with fractions and mixed numbers — mixed practice",
+    "rule": "sec-fraction-ops",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "style"
+    ],
+    "example": {
+      "a": 3,
+      "b": 4,
+      "c": -1,
+      "d": 6,
+      "e": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 4,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    ],
+    "id": "g9-question-b3-4-3",
+    "skillId": "g9-b3-4"
+  },
+  {
+    "title": "Rates, percentages and proportions",
+    "rule": "sec-rates-percent",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 24,
+      "b": 6,
+      "c": 15,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 60,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 60,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 60,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    "id": "g9-question-b3-5-1",
+    "skillId": "g9-b3-5"
+  },
+  {
+    "title": "Rates, percentages and proportions — another way",
+    "rule": "sec-rates-percent",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 24,
+      "b": 6,
+      "c": 15,
+      "style": 4
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 60,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 60,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 60,
+        "step": 1
+      },
+      [
+        4,
+        5,
+        6
+      ]
+    ],
+    "id": "g9-question-b3-5-2",
+    "skillId": "g9-b3-5"
+  },
+  {
+    "title": "Rates, percentages and proportions — mixed practice",
+    "rule": "sec-rates-percent",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 24,
+      "b": 6,
+      "c": 15,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 60,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 60,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 60,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    ],
+    "id": "g9-question-b3-5-3",
+    "skillId": "g9-b3-5"
+  },
+  {
+    "title": "Development and use of algebra",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Research the origin of the word “algebra” (al-jabr). What did the technique do?",
+        "steps": [
+          "Describe in your own words what “restoring” or “balancing” an equation means.",
+          "Connect the idea to solving x + 5 = 12 by doing the same thing to both sides."
+        ]
+      },
+      {
+        "prompt": "Before symbols, problems were written in words. Rewrite “a number plus seven is nineteen” with a variable and compare the two forms.",
+        "steps": [
+          "Say which one is easier to work with and why.",
+          "Symbols let us manipulate a relationship without re-reading the story each time."
+        ]
+      }
+    ],
+    "id": "g9-question-c1-1-1",
+    "skillId": "g9-c1-1"
+  },
+  {
+    "title": "Development and use of algebra — another way",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Find one real use of algebra in a job, game or app. Describe the unknown it finds.",
+        "steps": [
+          "Write the situation as an equation or formula.",
+          "Relevance: explain what decision the algebra supports."
+        ]
+      },
+      {
+        "prompt": "Compare two ways cultures solved linear problems (for example guess-and-check, balancing, or symbolic steps).",
+        "steps": [
+          "Solve 2x + 3 = 11 with both a balance picture and symbols.",
+          "Different methods can give the same answer; check by substituting."
+        ]
+      }
+    ],
+    "id": "g9-question-c1-1-2",
+    "skillId": "g9-c1-1"
+  },
+  {
+    "title": "Write expressions to generalize",
+    "rule": "sec-write-expression",
+    "parameters": [
+      "a",
+      "b",
+      "n",
+      "style"
+    ],
+    "example": {
+      "a": 3,
+      "b": 2,
+      "n": 20,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 25,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g9-question-c1-2-1",
+    "skillId": "g9-c1-2"
+  },
+  {
+    "title": "Write expressions to generalize — another way",
+    "rule": "sec-write-expression",
+    "parameters": [
+      "a",
+      "b",
+      "n",
+      "style"
+    ],
+    "example": {
+      "a": 3,
+      "b": 2,
+      "n": 5,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 25,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-c1-2-2",
+    "skillId": "g9-c1-2"
+  },
+  {
+    "title": "Write expressions to generalize — mixed practice",
+    "rule": "sec-write-expression",
+    "parameters": [
+      "a",
+      "b",
+      "n",
+      "style"
+    ],
+    "example": {
+      "a": 3,
+      "b": 2,
+      "n": 20,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 25,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-c1-2-3",
+    "skillId": "g9-c1-2"
+  },
+  {
+    "title": "Compare expressions",
+    "rule": "sec-equivalent-expressions",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 3,
+      "b": 4,
+      "c": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g9-question-c1-3-1",
+    "skillId": "g9-c1-3"
+  },
+  {
+    "title": "Compare expressions — another way",
+    "rule": "sec-equivalent-expressions",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 3,
+      "b": 4,
+      "c": 2,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-c1-3-2",
+    "skillId": "g9-c1-3"
+  },
+  {
+    "title": "Compare expressions — mixed practice",
+    "rule": "sec-equivalent-expressions",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 3,
+      "b": 4,
+      "c": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-c1-3-3",
+    "skillId": "g9-c1-3"
+  },
+  {
+    "title": "Simplify expressions",
+    "rule": "sec-simplify",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "style"
+    ],
+    "example": {
+      "a": 3,
+      "b": 2,
+      "c": 4,
+      "d": -5,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g9-question-c1-4-1",
+    "skillId": "g9-c1-4"
+  },
+  {
+    "title": "Simplify expressions — another way",
+    "rule": "sec-simplify",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "style"
+    ],
+    "example": {
+      "a": 3,
+      "b": 2,
+      "c": 4,
+      "d": -5,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-c1-4-2",
+    "skillId": "g9-c1-4"
+  },
+  {
+    "title": "Simplify expressions — mixed practice",
+    "rule": "sec-simplify",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "style"
+    ],
+    "example": {
+      "a": 3,
+      "b": 2,
+      "c": 4,
+      "d": -5,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-c1-4-3",
+    "skillId": "g9-c1-4"
+  },
+  {
+    "title": "Create and solve equations",
+    "rule": "sec-solve-linear",
+    "parameters": [
+      "x",
+      "m",
+      "b",
+      "n",
+      "style"
+    ],
+    "example": {
+      "x": 4,
+      "m": 3,
+      "b": 5,
+      "n": 1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -12,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": -15,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 8,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    "id": "g9-question-c1-5-1",
+    "skillId": "g9-c1-5"
+  },
+  {
+    "title": "Create and solve equations — another way",
+    "rule": "sec-solve-linear",
+    "parameters": [
+      "x",
+      "m",
+      "b",
+      "n",
+      "style"
+    ],
+    "example": {
+      "x": 4,
+      "m": 3,
+      "b": 5,
+      "n": 1,
+      "style": 4
+    },
+    "generation": [
+      {
+        "min": -12,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": -15,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 8,
+        "step": 1
+      },
+      [
+        4,
+        5,
+        6
+      ]
+    ],
+    "id": "g9-question-c1-5-2",
+    "skillId": "g9-c1-5"
+  },
+  {
+    "title": "Create and solve equations — mixed practice",
+    "rule": "sec-solve-linear",
+    "parameters": [
+      "x",
+      "m",
+      "b",
+      "n",
+      "style"
+    ],
+    "example": {
+      "x": 4,
+      "m": 3,
+      "b": 5,
+      "n": 1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -12,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": -15,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 8,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    ],
+    "id": "g9-question-c1-5-3",
+    "skillId": "g9-c1-5"
+  },
+  {
+    "title": "Use coding for algebraic concepts",
+    "rule": "sec-code-trace",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "b": 4,
+      "c": 3,
+      "d": 6,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 10,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g9-question-c2-1-1",
+    "skillId": "g9-c2-1"
+  },
+  {
+    "title": "Use coding for algebraic concepts — another way",
+    "rule": "sec-code-trace",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "b": 4,
+      "c": 3,
+      "d": 6,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 10,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-c2-1-2",
+    "skillId": "g9-c2-1"
+  },
+  {
+    "title": "Use coding for algebraic concepts — mixed practice",
+    "rule": "sec-code-trace",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "b": 4,
+      "c": 3,
+      "d": 6,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 10,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-c2-1-3",
+    "skillId": "g9-c2-1"
+  },
+  {
+    "title": "Decompose problems into steps",
+    "rule": "sec-code-trace",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "b": 4,
+      "c": 3,
+      "d": 6,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 10,
+        "step": 1
+      },
+      [
+        0,
+        3,
+        4
+      ]
+    ],
+    "id": "g9-question-c2-2-1",
+    "skillId": "g9-c2-2"
+  },
+  {
+    "title": "Decompose problems into steps — another way",
+    "rule": "sec-code-trace",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "b": 4,
+      "c": 3,
+      "d": 6,
+      "style": 1
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 10,
+        "step": 1
+      },
+      [
+        1,
+        2,
+        5
+      ]
+    ],
+    "id": "g9-question-c2-2-2",
+    "skillId": "g9-c2-2"
+  },
+  {
+    "title": "Decompose problems into steps — mixed practice",
+    "rule": "sec-code-trace",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "b": 4,
+      "c": 3,
+      "d": 6,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 10,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-c2-2-3",
+    "skillId": "g9-c2-2"
+  },
+  {
+    "title": "Read and alter code",
+    "rule": "sec-code-trace",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "b": 4,
+      "c": 3,
+      "d": 6,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 10,
+        "step": 1
+      },
+      [
+        3,
+        2,
+        5
+      ]
+    ],
+    "id": "g9-question-c2-3-1",
+    "skillId": "g9-c2-3"
+  },
+  {
+    "title": "Read and alter code — another way",
+    "rule": "sec-code-trace",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "b": 4,
+      "c": 3,
+      "d": 6,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 10,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        4
+      ]
+    ],
+    "id": "g9-question-c2-3-2",
+    "skillId": "g9-c2-3"
+  },
+  {
+    "title": "Read and alter code — mixed practice",
+    "rule": "sec-code-trace",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "b": 4,
+      "c": 3,
+      "d": 6,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 10,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-c2-3-3",
+    "skillId": "g9-c2-3"
+  },
+  {
+    "title": "Compare linear and non-linear relations",
+    "rule": "sec-relation-compare",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 3,
+      "b": 2,
+      "c": 4,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 6,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g9-question-c3-1-1",
+    "skillId": "g9-c3-1"
+  },
+  {
+    "title": "Compare linear and non-linear relations — another way",
+    "rule": "sec-relation-compare",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 3,
+      "b": 2,
+      "c": 4,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 6,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-c3-1-2",
+    "skillId": "g9-c3-1"
+  },
+  {
+    "title": "Compare linear and non-linear relations — mixed practice",
+    "rule": "sec-relation-compare",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 3,
+      "b": 2,
+      "c": 4,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 6,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-c3-1-3",
+    "skillId": "g9-c3-1"
+  },
+  {
+    "title": "Represent linear relations",
+    "rule": "sec-linear-represent",
+    "parameters": [
+      "m",
+      "b",
+      "x",
+      "style"
+    ],
+    "example": {
+      "m": 3,
+      "b": 5,
+      "x": 6,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g9-question-c3-2-1",
+    "skillId": "g9-c3-2"
+  },
+  {
+    "title": "Represent linear relations — another way",
+    "rule": "sec-linear-represent",
+    "parameters": [
+      "m",
+      "b",
+      "x",
+      "style"
+    ],
+    "example": {
+      "m": 3,
+      "b": 5,
+      "x": 6,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-c3-2-2",
+    "skillId": "g9-c3-2"
+  },
+  {
+    "title": "Represent linear relations — mixed practice",
+    "rule": "sec-linear-represent",
+    "parameters": [
+      "m",
+      "b",
+      "x",
+      "style"
+    ],
+    "example": {
+      "m": 3,
+      "b": 5,
+      "x": 6,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-c3-2-3",
+    "skillId": "g9-c3-2"
+  },
+  {
+    "title": "Compare two linear relations",
+    "rule": "sec-two-lines",
+    "parameters": [
+      "x",
+      "a",
+      "c",
+      "b",
+      "style"
+    ],
+    "example": {
+      "x": 4,
+      "a": 5,
+      "c": 2,
+      "b": 3,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g9-question-c3-3-1",
+    "skillId": "g9-c3-3"
+  },
+  {
+    "title": "Compare two linear relations — another way",
+    "rule": "sec-two-lines",
+    "parameters": [
+      "x",
+      "a",
+      "c",
+      "b",
+      "style"
+    ],
+    "example": {
+      "x": 4,
+      "a": 5,
+      "c": 2,
+      "b": 3,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-c3-3-2",
+    "skillId": "g9-c3-3"
+  },
+  {
+    "title": "Compare two linear relations — mixed practice",
+    "rule": "sec-two-lines",
+    "parameters": [
+      "x",
+      "a",
+      "c",
+      "b",
+      "style"
+    ],
+    "example": {
+      "x": 4,
+      "a": 5,
+      "c": 2,
+      "b": 3,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-c3-3-3",
+    "skillId": "g9-c3-3"
+  },
+  {
+    "title": "Compare characteristics of relations",
+    "rule": "sec-characteristics",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "b": 1,
+      "c": 0,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 8,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g9-question-c4-1-1",
+    "skillId": "g9-c4-1"
+  },
+  {
+    "title": "Compare characteristics of relations — another way",
+    "rule": "sec-characteristics",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "b": 1,
+      "c": 0,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 8,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-c4-1-2",
+    "skillId": "g9-c4-1"
+  },
+  {
+    "title": "Compare characteristics of relations — mixed practice",
+    "rule": "sec-characteristics",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "b": 1,
+      "c": 0,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 8,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-c4-1-3",
+    "skillId": "g9-c4-1"
+  },
+  {
+    "title": "Graph linear forms and regions",
+    "rule": "sec-graph-forms",
+    "parameters": [
+      "a",
+      "b",
+      "k",
+      "style"
+    ],
+    "example": {
+      "a": 3,
+      "b": 2,
+      "k": 6,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    "id": "g9-question-c4-2-1",
+    "skillId": "g9-c4-2"
+  },
+  {
+    "title": "Graph linear forms and regions — another way",
+    "rule": "sec-graph-forms",
+    "parameters": [
+      "a",
+      "b",
+      "k",
+      "style"
+    ],
+    "example": {
+      "a": 3,
+      "b": 2,
+      "k": 6,
+      "style": 4
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "id": "g9-question-c4-2-2",
+    "skillId": "g9-c4-2"
+  },
+  {
+    "title": "Graph linear forms and regions — mixed practice",
+    "rule": "sec-graph-forms",
+    "parameters": [
+      "a",
+      "b",
+      "k",
+      "style"
+    ],
+    "example": {
+      "a": 3,
+      "b": 2,
+      "k": 6,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "id": "g9-question-c4-2-3",
+    "skillId": "g9-c4-2"
+  },
+  {
+    "title": "Transform lines",
+    "rule": "sec-line-transform",
+    "parameters": [
+      "a",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 3,
+      "c": 4,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g9-question-c4-3-1",
+    "skillId": "g9-c4-3"
+  },
+  {
+    "title": "Transform lines — another way",
+    "rule": "sec-line-transform",
+    "parameters": [
+      "a",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 3,
+      "c": 4,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-c4-3-2",
+    "skillId": "g9-c4-3"
+  },
+  {
+    "title": "Transform lines — mixed practice",
+    "rule": "sec-line-transform",
+    "parameters": [
+      "a",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 3,
+      "c": 4,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-c4-3-3",
+    "skillId": "g9-c4-3"
+  },
+  {
+    "title": "Equations of lines",
+    "rule": "sec-line-equation",
+    "parameters": [
+      "x1",
+      "y1",
+      "m",
+      "dx",
+      "style"
+    ],
+    "example": {
+      "x1": 2,
+      "y1": 5,
+      "m": 3,
+      "dx": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": -10,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": -5,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g9-question-c4-4-1",
+    "skillId": "g9-c4-4"
+  },
+  {
+    "title": "Equations of lines — another way",
+    "rule": "sec-line-equation",
+    "parameters": [
+      "x1",
+      "y1",
+      "m",
+      "dx",
+      "style"
+    ],
+    "example": {
+      "x1": 1,
+      "y1": 5,
+      "m": 1,
+      "dx": 2,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": -10,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": -5,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-c4-4-2",
+    "skillId": "g9-c4-4"
+  },
+  {
+    "title": "Equations of lines — mixed practice",
+    "rule": "sec-line-equation",
+    "parameters": [
+      "x1",
+      "y1",
+      "m",
+      "dx",
+      "style"
+    ],
+    "example": {
+      "x1": 2,
+      "y1": 5,
+      "m": 3,
+      "dx": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": -10,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": -5,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-c4-4-3",
+    "skillId": "g9-c4-4"
+  },
+  {
+    "title": "Large data and its implications",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Pick an app you use. What data does it collect about you and why might it want it?",
+        "steps": [
+          "List three types of data and one benefit and one risk of each.",
+          "Decide who should control the data and how long it should be kept."
+        ]
+      },
+      {
+        "prompt": "A store records every purchase. How could that data be useful, and how could it be misused?",
+        "steps": [
+          "Name a decision the store could make with the data.",
+          "Think about whether customers know and agreed to this use."
+        ]
+      }
+    ],
+    "id": "g9-question-d1-1-1",
+    "skillId": "g9-d1-1"
+  },
+  {
+    "title": "Large data and its implications — another way",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Data can be biased if it leaves some people out. Describe one way a data set might miss a group.",
+        "steps": [
+          "Explain how the missing group could be treated unfairly by decisions based on the data.",
+          "Suggest a change in how the data is collected."
+        ]
+      },
+      {
+        "prompt": "Explain the difference between data being stored and data being represented in a graph. Which choices does a graph hide?",
+        "steps": [
+          "Describe how a different scale or interval could change what a viewer concludes.",
+          "Good representations are honest about scale, source and limits."
+        ]
+      }
+    ],
+    "id": "g9-question-d1-1-2",
+    "skillId": "g9-d1-1"
+  },
+  {
+    "title": "Quartiles and box plots",
+    "rule": "sec-quartiles",
+    "parameters": [
+      "start",
+      "g1",
+      "g2",
+      "g3",
+      "g4",
+      "g5",
+      "g6",
+      "g7",
+      "style"
+    ],
+    "example": {
+      "start": 12,
+      "g1": 3,
+      "g2": 2,
+      "g3": 4,
+      "g4": 1,
+      "g5": 5,
+      "g6": 2,
+      "g7": 0,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 9,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    "id": "g9-question-d1-2-1",
+    "skillId": "g9-d1-2"
+  },
+  {
+    "title": "Quartiles and box plots — another way",
+    "rule": "sec-quartiles",
+    "parameters": [
+      "start",
+      "g1",
+      "g2",
+      "g3",
+      "g4",
+      "g5",
+      "g6",
+      "g7",
+      "style"
+    ],
+    "example": {
+      "start": 12,
+      "g1": 3,
+      "g2": 2,
+      "g3": 4,
+      "g4": 1,
+      "g5": 5,
+      "g6": 2,
+      "g7": 0,
+      "style": 4
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 9,
+        "step": 1
+      },
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "id": "g9-question-d1-2-2",
+    "skillId": "g9-d1-2"
+  },
+  {
+    "title": "Quartiles and box plots — mixed practice",
+    "rule": "sec-quartiles",
+    "parameters": [
+      "start",
+      "g1",
+      "g2",
+      "g3",
+      "g4",
+      "g5",
+      "g6",
+      "g7",
+      "style"
+    ],
+    "example": {
+      "start": 12,
+      "g1": 3,
+      "g2": 2,
+      "g3": 4,
+      "g4": 1,
+      "g5": 5,
+      "g6": 2,
+      "g7": 0,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 9,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "id": "g9-question-d1-2-3",
+    "skillId": "g9-d1-2"
+  },
+  {
+    "title": "Scatter plots and models",
+    "rule": "sec-correlation",
+    "parameters": [
+      "m",
+      "b",
+      "x",
+      "style"
+    ],
+    "example": {
+      "m": 3,
+      "b": 10,
+      "x": 12,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -5,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 10,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 14,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g9-question-d1-3-1",
+    "skillId": "g9-d1-3"
+  },
+  {
+    "title": "Scatter plots and models — another way",
+    "rule": "sec-correlation",
+    "parameters": [
+      "m",
+      "b",
+      "x",
+      "style"
+    ],
+    "example": {
+      "m": 3,
+      "b": 10,
+      "x": 12,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": -5,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 10,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 14,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-d1-3-2",
+    "skillId": "g9-d1-3"
+  },
+  {
+    "title": "Scatter plots and models — mixed practice",
+    "rule": "sec-correlation",
+    "parameters": [
+      "m",
+      "b",
+      "x",
+      "style"
+    ],
+    "example": {
+      "m": 3,
+      "b": 10,
+      "x": 12,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -5,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 10,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 14,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-d1-3-3",
+    "skillId": "g9-d1-3"
+  },
+  {
+    "title": "Value of mathematical modelling",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Weather forecasts, ride-share prices and epidemic projections all use models. Pick one and say what question it answers.",
+        "steps": [
+          "List two inputs the model needs and one thing it ignores.",
+          "Explain how a decision-maker could use the model and why they should know its limits."
+        ]
+      },
+      {
+        "prompt": "A model says a pool will fill in 4 hours. What assumption is hidden behind that statement?",
+        "steps": [
+          "State the rate and what would change if the rate changed.",
+          "A model is useful when its assumptions are clear and reasonable."
+        ]
+      }
+    ],
+    "id": "g9-question-d2-1-1",
+    "skillId": "g9-d2-1"
+  },
+  {
+    "title": "Value of mathematical modelling — another way",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Compare a map with a model. What does each simplify on purpose?",
+        "steps": [
+          "Say what a map leaves out and why that helps.",
+          "All models are simplified: the question is whether the simplification matters for the decision."
+        ]
+      },
+      {
+        "prompt": "Why do engineers build a scale model before the real bridge?",
+        "steps": [
+          "Describe what they can test and what the model cannot show.",
+          "Models support decisions without the cost or risk of the real thing."
+        ]
+      }
+    ],
+    "id": "g9-question-d2-1-2",
+    "skillId": "g9-d2-1"
+  },
+  {
+    "title": "Identify a question and information needed",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Write a question about your school that needs data to answer, such as “How do students travel to school?”. What information do you need?",
+        "steps": [
+          "Decide the variable, the group and the time period.",
+          "Check that the question can be answered with numbers or categories."
+        ]
+      },
+      {
+        "prompt": "“Is the new bike lane working?” is a broad question. Make it more specific and measurable.",
+        "steps": [
+          "Choose what to measure: counts, speeds, or safety reports.",
+          "Say what “working” means in numbers."
+        ]
+      }
+    ],
+    "id": "g9-question-d2-2-1",
+    "skillId": "g9-d2-2"
+  },
+  {
+    "title": "Identify a question and information needed — another way",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "What is the difference between a population and a sample? Give an example for a question about favourite music.",
+        "steps": [
+          "Describe who would be in each group.",
+          "A sample should represent the population to give a fair answer."
+        ]
+      },
+      {
+        "prompt": "A friend asks, “Which phone is best?”. List the factors you would collect data on and how you would weight them.",
+        "steps": [
+          "Say which factors are numbers and which are opinions.",
+          "Plan how to compare the data fairly."
+        ]
+      }
+    ],
+    "id": "g9-question-d2-2-2",
+    "skillId": "g9-d2-2"
+  },
+  {
+    "title": "Plan and carry out data collection",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Plan a survey of 30 students about daily screen time. Describe the question wording and how you choose who to ask.",
+        "steps": [
+          "Name one possible source of bias and how you reduce it.",
+          "Decide how you will record the answers."
+        ]
+      },
+      {
+        "prompt": "You want to know how bounce height depends on drop height. List what you will keep the same and what you will change.",
+        "steps": [
+          "Describe how many trials you will do for each height and why.",
+          "Explain how you will record and average the results."
+        ]
+      }
+    ],
+    "id": "g9-question-d2-3-1",
+    "skillId": "g9-d2-3"
+  },
+  {
+    "title": "Plan and carry out data collection — another way",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "State two assumptions you make when you model the time to fill a pool from a hose.",
+        "steps": [
+          "Say what could vary during the day and how that affects the model.",
+          "Plan a check that tests whether the assumptions hold."
+        ]
+      },
+      {
+        "prompt": "Choose a secondary source such as Statistics Canada. What makes it reliable and what should you check before using its data?",
+        "steps": [
+          "Note the date, the method and any definitions.",
+          "Decide which columns answer your question."
+        ]
+      }
+    ],
+    "id": "g9-question-d2-3-2",
+    "skillId": "g9-d2-3"
+  },
+  {
+    "title": "Display and analyse data to build a model",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Data show the height of a plant each week. Which graph helps you build a model, and why?",
+        "steps": [
+          "Describe the pattern you look for and whether a line or a curve fits.",
+          "Choose a model equation and explain what each number means."
+        ]
+      },
+      {
+        "prompt": "You have a table of temperature and ice-cream sales. How would you display and analyse it?",
+        "steps": [
+          "Say what a scatter plot, a line of best fit and the correlation tell you.",
+          "Mention one reason the relationship might not be causal."
+        ]
+      }
+    ],
+    "id": "g9-question-d2-4-1",
+    "skillId": "g9-d2-4"
+  },
+  {
+    "title": "Display and analyse data to build a model — another way",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "One data point is far from the others. Should you remove it? Explain what you would check first.",
+        "steps": [
+          "Describe how the model changes with and without the point.",
+          "Report your decision and the reason."
+        ]
+      },
+      {
+        "prompt": "Compare two models for the same data: a line and a curve. How do you decide which fits better?",
+        "steps": [
+          "Look at the pattern of residuals and the context.",
+          "The better model is the one that fits and makes sense for the situation."
+        ]
+      }
+    ],
+    "id": "g9-question-d2-4-2",
+    "skillId": "g9-d2-4"
+  },
+  {
+    "title": "Report on a model",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Write a two-sentence conclusion for a model that predicts bus ridership. Include a prediction and a limit.",
+        "steps": [
+          "State the prediction with its units and the range where it should be reliable.",
+          "Mention one reason to be careful outside that range."
+        ]
+      },
+      {
+        "prompt": "How would you tell a classmate whether your model fits the data well?",
+        "steps": [
+          "Mention a graph, a measure such as r, and the size of typical errors.",
+          "Explain what “good enough” means for the decision."
+        ]
+      }
+    ],
+    "id": "g9-question-d2-5-1",
+    "skillId": "g9-d2-5"
+  },
+  {
+    "title": "Report on a model — another way",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "List two limitations of a linear model for a population that grows quickly.",
+        "steps": [
+          "Explain what the model gets wrong as time passes.",
+          "Suggest how you would improve the model."
+        ]
+      },
+      {
+        "prompt": "A model predicts you will save $400 in 8 months. Under what circumstances would that prediction fail?",
+        "steps": [
+          "List the assumptions behind it.",
+          "Describe how you would update the model after a change."
+        ]
+      }
+    ],
+    "id": "g9-question-d2-5-2",
+    "skillId": "g9-d2-5"
+  },
+  {
+    "title": "Development of geometry and measurement",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "The Pythagorean relationship was known in Mesopotamia, China, India and Greece. Choose one culture and describe how it used the idea.",
+        "steps": [
+          "Say what problem it solved, such as building or surveying.",
+          "Explain why the same discovery could occur in several places."
+        ]
+      },
+      {
+        "prompt": "Compare the imperial and metric systems. How did each develop and where is each still used?",
+        "steps": [
+          "Convert one measurement in each direction.",
+          "Explain why a consistent system matters for trade and engineering."
+        ]
+      }
+    ],
+    "id": "g9-question-e1-1-1",
+    "skillId": "g9-e1-1"
+  },
+  {
+    "title": "Development of geometry and measurement — another way",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Many cultures used the human body for measures such as the cubit, foot or hand. What are the benefits and problems?",
+        "steps": [
+          "Explain how a standard unit fixes the problems.",
+          "Say which careers still rely on precise units."
+        ]
+      },
+      {
+        "prompt": "Find a career that uses geometry, like architecture, surveying or animation. Describe one task and its mathematics.",
+        "steps": [
+          "Name the shape or relationship and the quantity measured.",
+          "Explain what could go wrong if the measurement were inaccurate."
+        ]
+      }
+    ],
+    "id": "g9-question-e1-1-2",
+    "skillId": "g9-e1-1"
+  },
+  {
+    "title": "Circle and triangle properties",
+    "rule": "sec-circle-triangle",
+    "parameters": [
+      "a",
+      "b",
+      "t",
+      "style"
+    ],
+    "example": {
+      "a": 50,
+      "b": 60,
+      "t": 0,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 20,
+        "max": 80,
+        "step": 1
+      },
+      {
+        "min": 20,
+        "max": 80,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 9,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    "id": "g9-question-e1-2-1",
+    "skillId": "g9-e1-2"
+  },
+  {
+    "title": "Circle and triangle properties — another way",
+    "rule": "sec-circle-triangle",
+    "parameters": [
+      "a",
+      "b",
+      "t",
+      "style"
+    ],
+    "example": {
+      "a": 50,
+      "b": 60,
+      "t": 0,
+      "style": 4
+    },
+    "generation": [
+      {
+        "min": 20,
+        "max": 80,
+        "step": 1
+      },
+      {
+        "min": 20,
+        "max": 80,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 9,
+        "step": 1
+      },
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "id": "g9-question-e1-2-2",
+    "skillId": "g9-e1-2"
+  },
+  {
+    "title": "Circle and triangle properties — mixed practice",
+    "rule": "sec-circle-triangle",
+    "parameters": [
+      "a",
+      "b",
+      "t",
+      "style"
+    ],
+    "example": {
+      "a": 50,
+      "b": 60,
+      "t": 0,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 20,
+        "max": 80,
+        "step": 1
+      },
+      {
+        "min": 20,
+        "max": 80,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 9,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "id": "g9-question-e1-2-3",
+    "skillId": "g9-e1-2"
+  },
+  {
+    "title": "Units within and between systems",
+    "rule": "sec-unit-convert",
+    "parameters": [
+      "v",
+      "k",
+      "style"
+    ],
+    "example": {
+      "v": 12,
+      "k": 1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 5,
+        "max": 60,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    "id": "g9-question-e1-3-1",
+    "skillId": "g9-e1-3"
+  },
+  {
+    "title": "Units within and between systems — another way",
+    "rule": "sec-unit-convert",
+    "parameters": [
+      "v",
+      "k",
+      "style"
+    ],
+    "example": {
+      "v": 12,
+      "k": 1,
+      "style": 4
+    },
+    "generation": [
+      {
+        "min": 5,
+        "max": 60,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "id": "g9-question-e1-3-2",
+    "skillId": "g9-e1-3"
+  },
+  {
+    "title": "Units within and between systems — mixed practice",
+    "rule": "sec-unit-convert",
+    "parameters": [
+      "v",
+      "k",
+      "style"
+    ],
+    "example": {
+      "v": 12,
+      "k": 1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 5,
+        "max": 60,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "id": "g9-question-e1-3-3",
+    "skillId": "g9-e1-3"
+  },
+  {
+    "title": "Changing dimensions",
+    "rule": "sec-scale-effect",
+    "parameters": [
+      "s",
+      "k",
+      "style"
+    ],
+    "example": {
+      "s": 5,
+      "k": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 5,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    "id": "g9-question-e1-4-1",
+    "skillId": "g9-e1-4"
+  },
+  {
+    "title": "Changing dimensions — another way",
+    "rule": "sec-scale-effect",
+    "parameters": [
+      "s",
+      "k",
+      "style"
+    ],
+    "example": {
+      "s": 5,
+      "k": 2,
+      "style": 4
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 5,
+        "step": 1
+      },
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "id": "g9-question-e1-4-2",
+    "skillId": "g9-e1-4"
+  },
+  {
+    "title": "Changing dimensions — mixed practice",
+    "rule": "sec-scale-effect",
+    "parameters": [
+      "s",
+      "k",
+      "style"
+    ],
+    "example": {
+      "s": 5,
+      "k": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 5,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "id": "g9-question-e1-4-3",
+    "skillId": "g9-e1-4"
+  },
+  {
+    "title": "Pythagorean theorem",
+    "rule": "sec-pythagoras",
+    "parameters": [
+      "t",
+      "k",
+      "a",
+      "b",
+      "style"
+    ],
+    "example": {
+      "t": 0,
+      "k": 1,
+      "a": 5,
+      "b": 7,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 3,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    "id": "g9-question-e1-5-1",
+    "skillId": "g9-e1-5"
+  },
+  {
+    "title": "Pythagorean theorem — another way",
+    "rule": "sec-pythagoras",
+    "parameters": [
+      "t",
+      "k",
+      "a",
+      "b",
+      "style"
+    ],
+    "example": {
+      "t": 0,
+      "k": 1,
+      "a": 5,
+      "b": 7,
+      "style": 4
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 3,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "id": "g9-question-e1-5-2",
+    "skillId": "g9-e1-5"
+  },
+  {
+    "title": "Pythagorean theorem — mixed practice",
+    "rule": "sec-pythagoras",
+    "parameters": [
+      "t",
+      "k",
+      "a",
+      "b",
+      "style"
+    ],
+    "example": {
+      "t": 0,
+      "k": 1,
+      "a": 5,
+      "b": 7,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 3,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "id": "g9-question-e1-5-3",
+    "skillId": "g9-e1-5"
+  },
+  {
+    "title": "Volumes of solids",
+    "rule": "sec-volume",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 4,
+      "b": 6,
+      "c": 3,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    "id": "g9-question-e1-6-1",
+    "skillId": "g9-e1-6"
+  },
+  {
+    "title": "Volumes of solids — another way",
+    "rule": "sec-volume",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 4,
+      "b": 6,
+      "c": 3,
+      "style": 4
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "id": "g9-question-e1-6-2",
+    "skillId": "g9-e1-6"
+  },
+  {
+    "title": "Volumes of solids — mixed practice",
+    "rule": "sec-volume",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 4,
+      "b": 6,
+      "c": 3,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "id": "g9-question-e1-6-3",
+    "skillId": "g9-e1-6"
+  },
+  {
+    "title": "Financial situations and decisions",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "A family’s housing costs rose 20% in two years. Describe how this could affect other spending decisions.",
+        "steps": [
+          "List the budget lines that might change.",
+          "Say what information you need to make a plan."
+        ]
+      },
+      {
+        "prompt": "Explain why inflation means $100 buys less over time.",
+        "steps": [
+          "Give an example with a price that rises by 3% each year.",
+          "Say how a saver could respond."
+        ]
+      }
+    ],
+    "id": "g9-question-f1-1-1",
+    "skillId": "g9-f1-1"
+  },
+  {
+    "title": "Financial situations and decisions — another way",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "A friend is offered a store credit card with a discount today and high interest later. What questions should they ask?",
+        "steps": [
+          "Say how you would compare the discount with the interest cost.",
+          "Describe a decision rule the friend could use."
+        ]
+      },
+      {
+        "prompt": "Describe a situation from the news that shows how interest rates affect borrowers and savers.",
+        "steps": [
+          "Say who gains and who loses when rates rise.",
+          "Explain how a household could adapt."
+        ]
+      }
+    ],
+    "id": "g9-question-f1-1-2",
+    "skillId": "g9-f1-1"
+  },
+  {
+    "title": "Appreciation and depreciation",
+    "rule": "sec-appreciation",
+    "parameters": [
+      "p",
+      "r",
+      "n",
+      "style"
+    ],
+    "example": {
+      "p": 39,
+      "r": 2,
+      "n": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g9-question-f1-2-1",
+    "skillId": "g9-f1-2"
+  },
+  {
+    "title": "Appreciation and depreciation — another way",
+    "rule": "sec-appreciation",
+    "parameters": [
+      "p",
+      "r",
+      "n",
+      "style"
+    ],
+    "example": {
+      "p": 10,
+      "r": 5,
+      "n": 3,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-f1-2-2",
+    "skillId": "g9-f1-2"
+  },
+  {
+    "title": "Appreciation and depreciation — mixed practice",
+    "rule": "sec-appreciation",
+    "parameters": [
+      "p",
+      "r",
+      "n",
+      "style"
+    ],
+    "example": {
+      "p": 14,
+      "r": 11,
+      "n": 7,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-f1-2-3",
+    "skillId": "g9-f1-2"
+  },
+  {
+    "title": "Interest, loans and down payments",
+    "rule": "sec-borrowing",
+    "parameters": [
+      "p",
+      "r",
+      "t",
+      "style"
+    ],
+    "example": {
+      "p": 10,
+      "r": 6,
+      "t": 3,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 50,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 8,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g9-question-f1-3-1",
+    "skillId": "g9-f1-3"
+  },
+  {
+    "title": "Interest, loans and down payments — another way",
+    "rule": "sec-borrowing",
+    "parameters": [
+      "p",
+      "r",
+      "t",
+      "style"
+    ],
+    "example": {
+      "p": 10,
+      "r": 6,
+      "t": 3,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 50,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 8,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-f1-3-2",
+    "skillId": "g9-f1-3"
+  },
+  {
+    "title": "Interest, loans and down payments — mixed practice",
+    "rule": "sec-borrowing",
+    "parameters": [
+      "p",
+      "r",
+      "t",
+      "style"
+    ],
+    "example": {
+      "p": 10,
+      "r": 6,
+      "t": 3,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 50,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 8,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-f1-3-3",
+    "skillId": "g9-f1-3"
+  },
+  {
+    "title": "Modify budgets",
+    "rule": "sec-budget-modify",
+    "parameters": [
+      "i",
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "i": 40,
+      "a": 12,
+      "b": 8,
+      "c": 5,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 20,
+        "max": 60,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": 3,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g9-question-f1-4-1",
+    "skillId": "g9-f1-4"
+  },
+  {
+    "title": "Modify budgets — another way",
+    "rule": "sec-budget-modify",
+    "parameters": [
+      "i",
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "i": 40,
+      "a": 12,
+      "b": 8,
+      "c": 5,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 20,
+        "max": 60,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": 3,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-f1-4-2",
+    "skillId": "g9-f1-4"
+  },
+  {
+    "title": "Modify budgets — mixed practice",
+    "rule": "sec-budget-modify",
+    "parameters": [
+      "i",
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "i": 40,
+      "a": 12,
+      "b": 8,
+      "c": 5,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 20,
+        "max": 60,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": 3,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g9-question-f1-4-3",
+    "skillId": "g9-f1-4"
+  }
+]

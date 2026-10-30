@@ -26,7 +26,7 @@ export function numberWords(n){
 
 export const numberRules={
  'fraction-add':{
-  generate:r=>{const d=pick(r,2,12);return [pick(r,0,d),pick(r,0,d),d];},
+  generate:r=>{const d=pick(r,2,12);return [pick(r,1,d-1),pick(r,1,d-1),d];},
   solve:values=>fractionAdditionLesson(values)
  },
  'decimal-addition':{
@@ -126,7 +126,7 @@ export const numberRules={
   ],{answer:result,response:numeric(result)});}
  },
  'fraction-subtract':{
-  generate:r=>{const d=pick(r,2,12),a=pick(r,1,d*2);return [a,pick(r,0,a),d];},
+  generate:r=>{const d=pick(r,2,12),a=pick(r,2,d*2);return [a,pick(r,1,a-1),d];},
   solve:values=>fractionAdditionLesson(values,true)
  },
  'multiplication-area':{

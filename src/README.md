@@ -8,7 +8,7 @@ src/
   worksheet-model.js             Pure worksheet builder (topics, count, answers, workings), tested
   nav.js                         Shared grouped page switcher (current page highlighted)
   main.js                        Landing page: auto-playing slide-show cards, own-formula box, handwriting modal
-  game.js / game.css             Math quest page: battle scene, setup form, previous-player picker, history
+  game.js / game.css             Practice page: battle scene, setup form, previous-player picker, history
   game/
     model.js                     Round creation, answer parsing, scoring, battleState and per-topic progress stats (pure, tested)
     storage.js                   IndexedDB persistence of rounds by player
@@ -17,7 +17,7 @@ src/
   curriculum.js                  Curriculum page: hierarchy and learner/parent modes
   curriculum.css                 Curriculum and activity presentation
   curriculum/
-    catalog.js                   Grade 5/8 datasets and reusable grade selection
+    catalog.js                   Grades 1–10 datasets and reusable grade selection
     data/
       ontario-math-grade-5.json   Grade → strand → topic → expectation hierarchy
       practice-questions.json    Question types, named parameters, default examples
@@ -111,10 +111,37 @@ The fixed `math/fixtures/pre-refactor-behavior.json` records hashes of 240 compl
 
 ## Grades 4, 6, and 7
 
-The catalog now includes Grades 4–8 (default remains Grade 5). Each additional grade has a separate `ontario-math-grade-{grade}.json` hierarchy and `grade-{grade}-questions.json` template list. The same renderer and learner/parent controls consume every grade.
+The catalog now includes Grades 1–8 (default remains Grade 5). Each additional grade has a separate `ontario-math-grade-{grade}.json` hierarchy and `grade-{grade}-questions.json` template list. The same renderer and learner/parent controls consume every grade.
 
 `math/elementary/` groups shared number, algebra, data, spatial, and financial rules used across Grades 4, 6, and 7. Existing Grade 5/8 rules are reused directly where appropriate. There is no rule module per expectation. Research, audited code counts, and coverage limits are recorded in `curriculum/data/grades-4-6-7-research.md`.
 
 Question templates may declare `generation`, one domain per named parameter: either a list of allowed integers, or `{min,max,step}`. `generateQuestionValues(template,rng)` respects these grade-specific domains; `createPractice` checks the same bounds. `nextValues` generates a different valid question. Use the template-aware generator for curriculum activities; `generateValues(rule,rng)` remains available for the original rule defaults. `answerMinimum` can exclude negative subtraction answers in Grade 4. A solver can reject cross-parameter conditions, such as a cash payment below the purchase total.
 
 `guided-discussion` uses bounded, explicit JSON prompt variants with no correctness score. It does not evaluate user code or invoke a model. A fixed conceptual question hides refresh if its entire domain has only one possible value.
+
+## Primary teaching families
+
+`math/primary/` groups number, algebra, data, spatial, and financial rules behind a common adapter and registry. `curriculum/primary-visuals.js` renders their diagram descriptions through the shared dispatcher. Grades 1–3 reuse the content schema, named parameters, playback, refresh, parent view, worksheets, and game model. No activity has its own JavaScript file. `answerMaximum` optionally bounds generated scalar answers alongside `answerMinimum`.
+
+`curriculum/primary-grades.test.js` audits official expectation codes, all declared styles, rich variety, sample/refresh domains, rendering contracts, and game/worksheet reuse. `math/primary/primary.test.js` independently checks exact answers and invalid domains. Research is in `curriculum/data/grades-1-2-3-research.md`; the lasting variety standard is in root `AGENTS.md`.
+
+## Practice feedback and compact controls
+
+`game.js` provides the blurred guest gate (players are chosen in the corner badge menu), grade/topics/count settings, battle view, and immediate worked explanations. `game/model.js` accepts a bounded optional question count in `makeRound` (1–50, default 5), and `answerAndExplainRound` finalizes wrong answers as explored examples so a revealed answer cannot earn retry points. Correct answers remain scored normally. Saved rounds determine their own length; continuation also matches that length.
+
+`curriculum/tallies.js` draws actual crossing fifth strokes rather than a literal slash after four bars. The shared primary table renderer accepts these accessible SVG groups. Curriculum grades use a connected, labelled toggle group with `aria-pressed` selection. The landing card's `fraction-example` class adds row spacing only when that lesson contains stacked fractions; it is cleared for other examples. `nav.js` labels the game route Practice without changing saved URLs.
+
+## Contextual calculator and visual landing examples
+
+`math-text.js` typesets plain `a/b` text as fractions. `math/core/tidy.js` is the last-line tidy of generated text (no `1x`, `+-`, `1 counters`, fractions over 1), `math/core/terms.js` builds clean algebraic terms, and `math/check-policy.js` decides which "Check the answer" steps are shown: only independent checks (inverse operations, substitution, remainders, boundaries), never ones that repeat the method or restate the question.
+
+`calculator/` groups the pure key-entry engine, lesson-to-key plans, shared calculator view, seven-segment display, styling, and independent correctness tests. Its [README](calculator/README.md) describes the supported 36X Pro-style sequences, recommendation policy, bounds, and sources. `nav.js` mounts one shared icon; the curriculum, practice, and landing views publish their active calculation context. The calculator is independent of the narrower free-form lesson parser and never copies a result into an answer field.
+
+`demo/examples.js` selects canonical question templates for clock reading, Pythagoras, chart reading, and percentage calculator practice. Main slide playback mounts the same `mountPractice` renderer as curriculum learning; its reusable `next`/`remaining` interface drives the existing slideshow. A demo-only right-triangle presentation adds labels without changing the mathematical lesson or its curriculum data. Calculator-key controls are separate from mathematical playback, and interacting with them pauses landing auto-advance.
+
+Fraction entry on the landing demo compiles to n/d templates, not ordinary division. Scientific plans preserve the ×10ⁿ path and offer independent EE-entry and NORM/SCI formatting sequences. Each alternative runs through the same key reducer, and tests compare its numeric value with the original method. Scientific demo 10 and calculator demo 9 use the shared tutorial renderer.
+
+The demo question pane stays centred in the same position when the calculator opens or closes. Desktop space reservation applies only to curriculum and practice pages.
+
+`math/secondary/` holds the Grades 9–10 rules: `common.js` defines `define(name,params,domains,example,styles)` (each style is a thunk returning a question spec, so a style can reject parameters it cannot use), and the topic files register rules for number, algebra, data, spatial, financial, quadratic, analytic and trigonometry questions. `curriculum/secondary-visuals.js` draws function graphs, box plots and labelled triangles from the lesson's own numbers.
+

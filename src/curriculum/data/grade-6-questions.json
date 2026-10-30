@@ -791,12 +791,12 @@
     },
     "generation": [
       {
-        "min": 0,
+        "min": 2,
         "max": 12,
         "step": 1
       },
       {
-        "min": 0,
+        "min": 2,
         "max": 12,
         "step": 1
       },

@@ -1,3 +1,8 @@
+import './curriculum.css';
+import {mountCalculatorTutorial} from './calculator/view.js';
+import {visualExamples} from './demo/examples.js';
+import {mountPractice} from './curriculum/practice-view.js';
+import {calculatorPlan,setCalculatorContext,clearCalculatorContext} from './calculator/plans.js';
 import katex from 'katex';
 import {pageNav} from './nav.js';
 import 'katex/dist/katex.min.css';
@@ -12,9 +17,9 @@ import {log} from './debug.js';
 import {setPlaybackIcon} from './curriculum/playback-controls.js';
 
 const app=document.querySelector('#app');
-app.innerHTML=`<main class="landing">${pageNav('demo')}<div class="app-brand"><img src="${import.meta.env.BASE_URL}monkey-logo.png" width="64" height="64" alt="Baby monkey with number blocks"><span>Little Math Lab</span></div><section class="slide-card" aria-roledescription="carousel" aria-label="Worked examples"><header class="slide-head"><span id="slide-topic" class="slide-topic"></span><span id="slide-count" class="slide-count"></span></header><div class="solution-stage"><div id="formula-preview" aria-label="Selected formula"></div><p id="lesson-error" role="alert"></p><section id="lesson" aria-label="Solution"><div class="steps" role="log" aria-live="polite" aria-relevant="additions"></div><p class="caption" aria-live="polite"></p></section></div><div class="slide-progress" aria-hidden="true"><span id="slide-progress"></span></div><div class="slide-controls" role="group" aria-label="Slide show controls"><button id="slide-prev" type="button"></button><button id="slide-play" type="button"></button><button id="slide-step" type="button"></button><button id="slide-next" type="button"></button></div><div id="slide-dots" class="slide-dots" role="tablist" aria-label="Choose an example"></div></section><form id="own-formula" class="own-formula"><label for="formula-input">Try your own formula</label><div><input id="formula-input" autocomplete="off" spellcheck="false" placeholder="e.g. 3 × 7 + 2 or x + 4 = 9"><button type="submit">Solve</button><button id="write-formula" type="button" class="draw-button"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4.5l4.5 4.5L9.5 19H5v-4.5z"/><path d="M12.5 7l4.5 4.5"/><path d="M5 19c-1.3 0-2-.7-2-1.6 0-.9 2-2.4 2-2.4" class="ink" /><path d="M4.5 3v3.5M2.75 4.75h3.5" class="ink spark"/></svg> Draw</button></div></form></main><dialog id="write-modal" aria-labelledby="write-title"><div class="modal-header"><h2 id="write-title">Draw a formula</h2><button id="close-write" aria-label="Close handwriting">×</button></div><div id="write-content"></div></dialog>`;
+app.innerHTML=`<main class="landing">${pageNav('demo')}<div class="app-brand"><img src="${import.meta.env.BASE_URL}monkey-logo.png" width="64" height="64" alt="Baby monkey with number blocks"><span>Little Math Lab</span></div><section class="slide-card" aria-roledescription="carousel" aria-label="Worked examples"><header class="slide-head"><span id="slide-topic" class="slide-topic"></span><span id="slide-count" class="slide-count"></span></header><div class="solution-stage"><div id="activity-demo" hidden></div><div id="formula-preview" aria-label="Selected formula"></div><p id="lesson-error" role="alert"></p><section id="lesson" aria-label="Solution"><div class="steps" role="log" aria-live="polite" aria-relevant="additions"></div><p class="caption" aria-live="polite"></p></section></div><div class="slide-progress" aria-hidden="true"><span id="slide-progress"></span></div><div class="slide-controls" role="group" aria-label="Slide show controls"><button id="slide-prev" type="button"></button><button id="slide-play" type="button"></button><button id="slide-step" type="button"></button><button id="slide-next" type="button"></button></div><div id="slide-dots" class="slide-dots" role="tablist" aria-label="Choose an example"></div></section><form id="own-formula" class="own-formula"><label for="formula-input">Try your own formula</label><div><input id="formula-input" autocomplete="off" spellcheck="false" placeholder="e.g. 3 × 7 + 2 or x + 4 = 9"><button type="submit">Solve</button><button id="write-formula" type="button" class="draw-button"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4.5l4.5 4.5L9.5 19H5v-4.5z"/><path d="M12.5 7l4.5 4.5"/><path d="M5 19c-1.3 0-2-.7-2-1.6 0-.9 2-2.4 2-2.4" class="ink" /><path d="M4.5 3v3.5M2.75 4.75h3.5" class="ink spark"/></svg> Draw</button></div></form></main><dialog id="write-modal" aria-labelledby="write-title"><div class="modal-header"><h2 id="write-title">Draw a formula</h2><button id="close-write" aria-label="Close handwriting">×</button></div><div id="write-content"></div></dialog>`;
 const $=s=>document.querySelector(s);
-let formula='',steps=[],shown=0,timer,disposeWriting,modalGeneration=0,divisionLesson=null,multiplicationLesson=null,equationLesson=false;
+let formula='',steps=[],shown=0,timer,disposeWriting,modalGeneration=0,divisionLesson=null,multiplicationLesson=null,equationLesson=false,activityView,formulaCalculatorPlan,formulaTutorialDispose;
 const render=(tex,el)=>katex.render(tex,el,{displayMode:true,throwOnError:true,trust:false});
 // One example per kind of math; the slide show cycles through them and the learner can pause to type or draw their own.
 const slides=[
@@ -22,7 +27,8 @@ const slides=[
  {topic:'Fractions',input:'1/2 + 2/3'},
  {topic:'Long division',input:'156 ÷ 12',division:true},
  {topic:'Long multiplication',input:'23 × 14',multiplication:true},
- {topic:'Equations',input:'2x + 3 = 11'}
+ {topic:'Equations',input:'2x + 3 = 11'},
+ ...visualExamples
 ];
 const STEP_MS=1700,HOLD_MS=2600,reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
 let slideIndex=0,playing=!reduceMotion,advance;
@@ -30,15 +36,22 @@ function stop(){clearInterval(timer);timer=null;clearTimeout(advance);advance=nu
 function autoplay(){
  if(!playing)return;
  if(shown<steps.length){if(!timer){log('playback.start');timer=setInterval(reveal,STEP_MS);}return;}
- holdThenAdvance();
+ if(activityView?.playCalculatorKeys?.(true))return;if(formulaTutorialDispose?.play&&!formulaTutorialDispose.complete?.()){formulaTutorialDispose.play(true);return;}holdThenAdvance();
 }
 function holdThenAdvance(){
  if(!playing||advance)return;
  const bar=$('#slide-progress');bar.style.transition='none';bar.style.width='0';void bar.offsetWidth;bar.style.transition=`width ${HOLD_MS}ms linear`;bar.style.width='100%';
  advance=setTimeout(()=>{advance=null;goTo(slideIndex+1);},HOLD_MS);
 }
-function finish(){clearInterval(timer);timer=null;holdThenAdvance();}
-function pause(){playing=false;stop();syncControls();}
+function finish(){
+ clearInterval(timer);timer=null;
+ if(!activityView&&formulaCalculatorPlan?.recommended){if(!formulaTutorialDispose)formulaTutorialDispose=mountCalculatorTutorial($('#lesson .steps'),formulaCalculatorPlan);if(playing&&!formulaTutorialDispose.complete?.())formulaTutorialDispose.play?.(true);else if(playing)holdThenAdvance();return;}
+ if(playing&&activityView?.playCalculatorKeys?.(true)){return;}holdThenAdvance();
+}
+function pause(){playing=false;stop();formulaTutorialDispose?.pause?.();activityView?.pauseCalculatorKeys?.();syncControls();}
+document.addEventListener('calculator-interaction',()=>pause());
+app.addEventListener('calculator-tutorial-start',()=>pause());
+app.addEventListener('calculator-tutorial-complete',()=>holdThenAdvance());
 function play(){playing=true;syncControls();autoplay();}
 function syncControls(){
  setPlaybackIcon($('#slide-play'),playing?'pause':'play',playing?'Pause slide show':'Play slide show');
@@ -47,7 +60,7 @@ function syncControls(){
 }
 function goTo(index){
  const n=slides.length;slideIndex=((index%n)+n)%n;const slide=slides[slideIndex];
- selectFormula(slide.input,Boolean(slide.division),Boolean(slide.multiplication));showSlide();
+ if(slide.template)selectActivity(slide.template);else selectFormula(slide.input,Boolean(slide.division),Boolean(slide.multiplication));showSlide();
 }
 function showSlide(){
  const slide=slides[slideIndex];
@@ -57,6 +70,7 @@ function showSlide(){
 }
 function reveal(){
  if(shown>=steps.length)return;
+ if(activityView){activityView.next();shown++;if(!activityView.remaining)finish();return;}
  const current=steps[shown];
  if(multiplicationLesson){
   renderLongMultiplication($('#lesson .steps'),multiplicationLesson,current);
@@ -80,7 +94,14 @@ function reveal(){
  if(shown>1&&!matchMedia('(prefers-reduced-motion: reduce)').matches)row.animate([{opacity:0,transform:'translateY(8px)'},{opacity:1,transform:'translateY(0)'}],{duration:350});
  if(shown===steps.length){row.classList.add('answer');finish();log('playback.complete');}
 }
+function selectActivity(template){
+ stop();activityView?.();formulaTutorialDispose?.();formulaTutorialDispose=null;formulaCalculatorPlan=null;clearCalculatorContext();divisionLesson=multiplicationLesson=null;equationLesson=false;formula='';
+ const host=$('#activity-demo');host.replaceChildren();host.hidden=false;$('#formula-preview').hidden=true;$('#lesson').hidden=true;$('#lesson-error').textContent='';document.querySelector('.slide-card').classList.remove('fraction-example');document.querySelector('.slide-card').classList.add('visual-example');
+ activityView=mountPractice(host,template);steps=Array(activityView.remaining).fill(null);shown=0;autoplay();
+}
 function selectFormula(input, useLongDivision=false, useLongMultiplication=false){
+ activityView?.();activityView=null;formulaTutorialDispose?.();formulaTutorialDispose=null;$('#activity-demo').hidden=true;$('#activity-demo').replaceChildren();$('#formula-preview').hidden=false;document.querySelector('.slide-card').classList.remove('visual-example');formulaCalculatorPlan=calculatorPlan({template:{title:slides[slideIndex]?.topic||'Your formula'},input,force:/\d\s*\/\s*\d|\\frac/.test(input)});setCalculatorContext(formulaCalculatorPlan);
+ document.querySelector('.slide-card').classList.remove('fraction-example');
  stop();$('#formula-preview').classList.remove('equation-line');log('solver.start',{input});
  try{
   if(useLongMultiplication){
@@ -100,6 +121,7 @@ function selectFormula(input, useLongDivision=false, useLongMultiplication=false
       log('long-division.result',lesson);reveal();autoplay();return true;
   }
   const solution=solve(input);equationLesson=solution.kind==='equation';
+  document.querySelector('.slide-card').classList.toggle('fraction-example',solution.methods[0].steps.some(step=>step.math?.includes('\\frac')));
   (equationLesson?renderEquation:(el,tex)=>render(tex,el))($('#formula-preview'),solution.methods[0].steps[0].math);
   divisionLesson=null;multiplicationLesson=null;$('#lesson .steps').classList.remove('division-steps');
     formula=input;steps=solution.methods[0].steps;shown=1;
@@ -134,4 +156,4 @@ $('#write-formula').onclick=async()=>{
 };
 goTo((Number(new URLSearchParams(location.search).get('slide'))||1)-1);
 if(new URLSearchParams(location.search).has('write'))$('#write-formula').click();
-window.addEventListener('pagehide',()=>{stop();disposeWriting?.();});
+window.addEventListener('pagehide',()=>{stop();activityView?.();formulaTutorialDispose?.();disposeWriting?.();});

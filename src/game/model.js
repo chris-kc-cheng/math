@@ -1,10 +1,17 @@
 import {createPractice,generateQuestionValues} from '../curriculum/practice.js';
 import {answerNumber} from '../math/verification.js';
+import {playerKey} from './profile.js';
 import {rational,parseDecimal,compare} from '../math/core/exact.js';
+import {primaryScorableRules} from '../math/primary/index.js';
+import {secondaryRules} from '../math/secondary/index.js';
 // Only single-answer tasks are scored. Multi-part and open-ended activities remain in practice.
 const scoredRules=new Set(['whole-add-subtract','decimal-addition','decimal-subtraction','fraction-add','fraction-subtract','round-tenth','evaluate-expression','equation-subtract','equation-divide','shape-area','metric-conversion','budget','sales-tax','round-number','decimal-calculate','percent-quantity','whole-power','rectangle-measure','decomposed-area','surface-area','prism-volume','dimensional-units','capacity-volume','cash-purchase','simple-interest','savings-plan','g8-integer-add-sub','g8-integer-multiply-divide','g8-fraction-add-sub','g8-fraction-multiply-divide','g8-evaluate','g8-equation','g8-powers-ten','g8-scientific','g8-pythagorean','g8-pythagorean-leg','g8-financial-goal','data-measure','probability-single','story-add','story-subtract','story-multiply','story-divide','missing-number','compare-values','digit-value','fraction-of-quantity','fraction-story','fraction-story-like','decimal-story','percent-story','unit-rate','linear-story','pattern-term','rectangle-measure-variants','area-formula','unit-convert','integer-story','power-value','angle-relation','probability-word','mean-missing','round-story','convert-forms','simplify-fraction','equivalent-missing','compare-fractions-story','gcf-lcm','divisibility-count','prime-factor-question','decimal-operation','order-of-operations','decimal-sequence','pattern-table-values','inequality-count','combine-terms','money-change','unit-price-best','currency-exchange','simple-interest','budget-balance','elapsed-time-story','chart-read','experimental-probability-story','sample-space','circle-story','solid-measure','composite-area','pythagoras-story','transform-point','scale-length','polygon-angle','ratio-share','mean-change','unit-fraction-story','rational-pick','fraction-divide-story','interval-count','savings-goal','midpoint-decimal','scientific-story','sqrt-estimate','powers-of-ten','integer-product','evaluate-signed','sale-total','debt-story','turn-angle','survey-percent','simple-interest-story','g8-venn','g8-dependent-probability']);
 export function numericAnswer(template,values){
- if(!scoredRules.has(template.rule))throw Error('This activity needs a different answer format.');
+ if(!scoredRules.has(template.rule)&&!primaryScorableRules.has(template.rule)&&!secondaryRules[template.rule])throw Error('This activity needs a different answer format.');
+ if(template.rule==='primary-groups'){
+  const params=Array.isArray(values)?values:template.parameters.map(name=>values[name]);
+  if(params[5]<3&&params[2]!==1)throw Error('Early fractional groups use drawings rather than typed fraction scoring.');
+ }
  const result=createPractice(template,values);if(result.reflection)throw Error('Discussion is unscored.');
  return answerNumber(result.answer);
 }
@@ -29,11 +36,12 @@ export function parseAnswer(input){
  if(!/^[+-]?\d{1,30}(?:\.\d{1,30})?$/.test(text))throw Error('Enter a whole number, decimal, or fraction such as 3/4.');
  return parseDecimal(text);
 }
-export function makeRound(grade,topics='all',rng=Math.random,id=crypto.randomUUID()){
+export function makeRound(grade,topics='all',rng=Math.random,id=crypto.randomUUID(),count=5){
+ if(!Number.isSafeInteger(count)||count<1||count>50)throw Error('Choose between 1 and 50 questions.');
  const pool=eligibleQuestions(grade,topics);if(!pool.length)throw Error('No automatically checked questions are available here yet.');
  const shuffled=[...pool];for(let i=shuffled.length-1;i>0;i--){const j=Math.floor(rng()*(i+1));[shuffled[i],shuffled[j]]=[shuffled[j],shuffled[i]];}
  const questions=[];
- for(let i=0;i<5;i++){
+ for(let i=0;i<count;i++){
   const template=shuffled[i%shuffled.length];let values;
   for(let attempt=0;attempt<100;attempt++){try{const candidate=generateQuestionValues(template,rng);numericAnswer(template,candidate);values=candidate;break;}catch{}}
   if(!values)throw Error('Could not prepare a valid question. Try another topic.');
@@ -48,17 +56,15 @@ export function answerRound(round,template,input){
  const candidate=parseAnswer(input),expected=numericAnswer(template,current.values),correct=compare(candidate,expected)===0;
  const next=structuredClone(round);Object.assign(next.questions[next.index],{attempts:current.attempts+1,correct,entry:String(input)});return next;
 }
+// An answer is followed by its worked solution, so a wrong answer becomes an explored example.
+export function answerAndExplainRound(round,template,input){return revealRound(answerRound(round,template,input));}
 export function revealRound(round){const next=structuredClone(round),q=next.questions[next.index];if(q&&!q.correct)q.assisted=true;return next;}
 export function advanceRound(round){
  const current=round.questions[round.index];if(!current||!current.correct&&!current.assisted)throw Error('Finish this question first.');
  const next=structuredClone(round);if(next.index===next.questions.length-1)next.status='complete';else next.index++;return next;
 }
 
-export function playerKey(name){
- const key=String(name).normalize('NFKC').trim().replace(/\s+/g,' ').toLocaleLowerCase('en-CA');
- if(!key||key.length>40||/[\u0000-\u001f\u007f]/.test(key))throw Error('Enter a name from 1 to 40 characters.');
- return key;
-}
+export {playerKey};
 export function lastPlayed(rounds,key){return rounds.filter(r=>r.profileId===key).sort((a,b)=>b.updatedAt-a.updatedAt)[0];}
 // The battle is derived from saved answers, so a resumed round shows the same scene.
 // Every solved question is a hit; each wrong try or explored question lets the zombie step closer (capped, never a loss).
@@ -66,7 +72,7 @@ export const HERO_LIVES=5;
 // Captain Patty also has lives: each wrong answer costs one. At zero he cries but never dies.
 export function battleState(round){
  let hits=0,misses=0,wrong=0;
- for(const q of round.questions){const bad=Math.max(0,q.attempts-(q.correct?1:0));if(q.correct)hits++;wrong+=bad;misses+=bad+(q.assisted?1:0);}
+ for(const q of round.questions){const bad=Math.max(0,q.attempts-(q.correct?1:0));if(q.correct)hits++;wrong+=bad;misses+=bad+(q.assisted&&!bad?1:0);}
  const total=round.questions.length;
  const lives=Math.max(0,HERO_LIVES-wrong);
  return {hits,total,hearts:total-hits,lives,maxLives:HERO_LIVES,crying:lives===0,misses:Math.min(misses,4),done:round.status==='complete',won:round.status==='complete'&&hits>=Math.ceil(total/2)};

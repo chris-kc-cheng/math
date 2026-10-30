@@ -1,0 +1,5191 @@
+[
+  {
+    "title": "Mathematical processes",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Choose a quadratic problem you solved. How did you check that the answer makes sense in context?",
+        "steps": [
+          "Describe one check by substituting, one by graphing and one by estimating.",
+          "Explain which check would catch a sign error."
+        ]
+      },
+      {
+        "prompt": "You solved a system and found (3, 4). How could you verify it using two different representations?",
+        "steps": [
+          "Substitute into both equations and show the lines on a graph.",
+          "Explain what a failed check would tell you."
+        ]
+      }
+    ],
+    "id": "g10-question-p1-1",
+    "skillId": "g10-p1"
+  },
+  {
+    "title": "Mathematical processes — another way",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "A classmate’s trigonometry answer is 125 m for the height of a flagpole. Without recalculating, how do you judge whether it is reasonable?",
+        "steps": [
+          "Use a sketch and compare the sides of the triangle.",
+          "Say how the angle and the horizontal distance limit the possible height."
+        ]
+      },
+      {
+        "prompt": "Describe how you would communicate a multi-step solution so that another student can follow it.",
+        "steps": [
+          "Label a diagram, state the formula, show the substitution and give a final sentence with units.",
+          "Check that each line follows from the one before it."
+        ]
+      }
+    ],
+    "id": "g10-question-p1-2",
+    "skillId": "g10-p1"
+  },
+  {
+    "title": "Collect and model quadratic data",
+    "rule": "sec-quadratic-data",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "b": -3,
+      "c": 1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -5,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g10-question-qr1-1-1",
+    "skillId": "g10-qr1-1"
+  },
+  {
+    "title": "Collect and model quadratic data — another way",
+    "rule": "sec-quadratic-data",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "b": -3,
+      "c": 1,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": -5,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-qr1-1-2",
+    "skillId": "g10-qr1-1"
+  },
+  {
+    "title": "Collect and model quadratic data — mixed practice",
+    "rule": "sec-quadratic-data",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "b": -3,
+      "c": 1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -5,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-qr1-1-3",
+    "skillId": "g10-qr1-1"
+  },
+  {
+    "title": "Parabolas and second differences",
+    "rule": "sec-second-differences",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "h",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "b": 1,
+      "c": 0,
+      "h": 1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 3,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g10-question-qr1-2-1",
+    "skillId": "g10-qr1-2"
+  },
+  {
+    "title": "Parabolas and second differences — another way",
+    "rule": "sec-second-differences",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "h",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "b": 1,
+      "c": 0,
+      "h": 1,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 3,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-qr1-2-2",
+    "skillId": "g10-qr1-2"
+  },
+  {
+    "title": "Parabolas and second differences — mixed practice",
+    "rule": "sec-second-differences",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "h",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "b": 1,
+      "c": 0,
+      "h": 1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 3,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-qr1-2-3",
+    "skillId": "g10-qr1-2"
+  },
+  {
+    "title": "Key features of a parabola",
+    "rule": "sec-parabola-features",
+    "parameters": [
+      "a",
+      "h",
+      "k",
+      "x",
+      "style"
+    ],
+    "example": {
+      "a": 1,
+      "h": 2,
+      "k": -3,
+      "x": 1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -4,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": -12,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    "id": "g10-question-qr1-3-1",
+    "skillId": "g10-qr1-3"
+  },
+  {
+    "title": "Key features of a parabola — another way",
+    "rule": "sec-parabola-features",
+    "parameters": [
+      "a",
+      "h",
+      "k",
+      "x",
+      "style"
+    ],
+    "example": {
+      "a": 1,
+      "h": 2,
+      "k": -3,
+      "x": 1,
+      "style": 4
+    },
+    "generation": [
+      {
+        "min": -4,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": -12,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "id": "g10-question-qr1-3-2",
+    "skillId": "g10-qr1-3"
+  },
+  {
+    "title": "Key features of a parabola — mixed practice",
+    "rule": "sec-parabola-features",
+    "parameters": [
+      "a",
+      "h",
+      "k",
+      "x",
+      "style"
+    ],
+    "example": {
+      "a": 1,
+      "h": 2,
+      "k": -3,
+      "x": 1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -4,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": -12,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "id": "g10-question-qr1-3-3",
+    "skillId": "g10-qr1-3"
+  },
+  {
+    "title": "Quadratic and exponential relations",
+    "rule": "sec-exponential-vs-quadratic",
+    "parameters": [
+      "x",
+      "b",
+      "style"
+    ],
+    "example": {
+      "x": 3,
+      "b": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g10-question-qr1-4-1",
+    "skillId": "g10-qr1-4"
+  },
+  {
+    "title": "Quadratic and exponential relations — another way",
+    "rule": "sec-exponential-vs-quadratic",
+    "parameters": [
+      "x",
+      "b",
+      "style"
+    ],
+    "example": {
+      "x": 5,
+      "b": 3,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-qr1-4-2",
+    "skillId": "g10-qr1-4"
+  },
+  {
+    "title": "Quadratic and exponential relations — mixed practice",
+    "rule": "sec-exponential-vs-quadratic",
+    "parameters": [
+      "x",
+      "b",
+      "style"
+    ],
+    "example": {
+      "x": 3,
+      "b": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-qr1-4-3",
+    "skillId": "g10-qr1-4"
+  },
+  {
+    "title": "Effects of a, h and k",
+    "rule": "sec-transformations",
+    "parameters": [
+      "a",
+      "h",
+      "k",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "h": 3,
+      "k": -1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -4,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    "id": "g10-question-qr2-1-1",
+    "skillId": "g10-qr2-1"
+  },
+  {
+    "title": "Effects of a, h and k — another way",
+    "rule": "sec-transformations",
+    "parameters": [
+      "a",
+      "h",
+      "k",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "h": 3,
+      "k": -1,
+      "style": 4
+    },
+    "generation": [
+      {
+        "min": -4,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "id": "g10-question-qr2-1-2",
+    "skillId": "g10-qr2-1"
+  },
+  {
+    "title": "Effects of a, h and k — mixed practice",
+    "rule": "sec-transformations",
+    "parameters": [
+      "a",
+      "h",
+      "k",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "h": 3,
+      "k": -1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -4,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "id": "g10-question-qr2-1-3",
+    "skillId": "g10-qr2-1"
+  },
+  {
+    "title": "Roles of a, h and k",
+    "rule": "sec-transformations",
+    "parameters": [
+      "a",
+      "h",
+      "k",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "h": 3,
+      "k": -1,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": -4,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      [
+        3,
+        2,
+        5
+      ]
+    ],
+    "id": "g10-question-qr2-2-1",
+    "skillId": "g10-qr2-2"
+  },
+  {
+    "title": "Roles of a, h and k — another way",
+    "rule": "sec-transformations",
+    "parameters": [
+      "a",
+      "h",
+      "k",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "h": 3,
+      "k": -1,
+      "style": 1
+    },
+    "generation": [
+      {
+        "min": -4,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      [
+        1,
+        4,
+        6,
+        7
+      ]
+    ],
+    "id": "g10-question-qr2-2-2",
+    "skillId": "g10-qr2-2"
+  },
+  {
+    "title": "Roles of a, h and k — mixed practice",
+    "rule": "sec-transformations",
+    "parameters": [
+      "a",
+      "h",
+      "k",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "h": 3,
+      "k": -1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -4,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "id": "g10-question-qr2-2-3",
+    "skillId": "g10-qr2-2"
+  },
+  {
+    "title": "Sketch by transformations",
+    "rule": "sec-sketch-parabola",
+    "parameters": [
+      "a",
+      "h",
+      "k",
+      "x",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "h": 1,
+      "k": -3,
+      "x": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -4,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 4,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g10-question-qr2-3-1",
+    "skillId": "g10-qr2-3"
+  },
+  {
+    "title": "Sketch by transformations — another way",
+    "rule": "sec-sketch-parabola",
+    "parameters": [
+      "a",
+      "h",
+      "k",
+      "x",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "h": 1,
+      "k": -3,
+      "x": 2,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": -4,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 4,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-qr2-3-2",
+    "skillId": "g10-qr2-3"
+  },
+  {
+    "title": "Sketch by transformations — mixed practice",
+    "rule": "sec-sketch-parabola",
+    "parameters": [
+      "a",
+      "h",
+      "k",
+      "x",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "h": 1,
+      "k": -3,
+      "x": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -4,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 4,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-qr2-3-3",
+    "skillId": "g10-qr2-3"
+  },
+  {
+    "title": "Equation from a graph",
+    "rule": "sec-parabola-equation",
+    "parameters": [
+      "a",
+      "h",
+      "k",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "h": 3,
+      "k": -1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -4,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g10-question-qr2-4-1",
+    "skillId": "g10-qr2-4"
+  },
+  {
+    "title": "Equation from a graph — another way",
+    "rule": "sec-parabola-equation",
+    "parameters": [
+      "a",
+      "h",
+      "k",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "h": 3,
+      "k": -1,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": -4,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-qr2-4-2",
+    "skillId": "g10-qr2-4"
+  },
+  {
+    "title": "Equation from a graph — mixed practice",
+    "rule": "sec-parabola-equation",
+    "parameters": [
+      "a",
+      "h",
+      "k",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "h": 3,
+      "k": -1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -4,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-qr2-4-3",
+    "skillId": "g10-qr2-4"
+  },
+  {
+    "title": "Expand and simplify",
+    "rule": "sec-expand",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "b": 3,
+      "c": 1,
+      "d": -4,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": -5,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": -5,
+        "max": 5,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    "id": "g10-question-qr3-1-1",
+    "skillId": "g10-qr3-1"
+  },
+  {
+    "title": "Expand and simplify — another way",
+    "rule": "sec-expand",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "b": 3,
+      "c": 1,
+      "d": -4,
+      "style": 4
+    },
+    "generation": [
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": -5,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": -5,
+        "max": 5,
+        "step": 1
+      },
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "id": "g10-question-qr3-1-2",
+    "skillId": "g10-qr3-1"
+  },
+  {
+    "title": "Expand and simplify — mixed practice",
+    "rule": "sec-expand",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "b": 3,
+      "c": 1,
+      "d": -4,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": -5,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": -5,
+        "max": 5,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "id": "g10-question-qr3-1-3",
+    "skillId": "g10-qr3-1"
+  },
+  {
+    "title": "Factor polynomials",
+    "rule": "sec-factor",
+    "parameters": [
+      "r",
+      "s",
+      "k",
+      "m",
+      "style"
+    ],
+    "example": {
+      "r": 2,
+      "s": 3,
+      "k": 2,
+      "m": 3,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    "id": "g10-question-qr3-2-1",
+    "skillId": "g10-qr3-2"
+  },
+  {
+    "title": "Factor polynomials — another way",
+    "rule": "sec-factor",
+    "parameters": [
+      "r",
+      "s",
+      "k",
+      "m",
+      "style"
+    ],
+    "example": {
+      "r": 2,
+      "s": 3,
+      "k": 2,
+      "m": 3,
+      "style": 4
+    },
+    "generation": [
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "id": "g10-question-qr3-2-2",
+    "skillId": "g10-qr3-2"
+  },
+  {
+    "title": "Factor polynomials — mixed practice",
+    "rule": "sec-factor",
+    "parameters": [
+      "r",
+      "s",
+      "k",
+      "m",
+      "style"
+    ],
+    "example": {
+      "r": 2,
+      "s": 3,
+      "k": 2,
+      "m": 3,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "id": "g10-question-qr3-2-3",
+    "skillId": "g10-qr3-2"
+  },
+  {
+    "title": "Factors, zeros and intercepts",
+    "rule": "sec-zeros-from-factors",
+    "parameters": [
+      "a",
+      "r",
+      "s",
+      "x",
+      "style"
+    ],
+    "example": {
+      "a": 1,
+      "r": 2,
+      "s": 6,
+      "x": 3,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -3,
+        "max": 3,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    "id": "g10-question-qr3-3-1",
+    "skillId": "g10-qr3-3"
+  },
+  {
+    "title": "Factors, zeros and intercepts — another way",
+    "rule": "sec-zeros-from-factors",
+    "parameters": [
+      "a",
+      "r",
+      "s",
+      "x",
+      "style"
+    ],
+    "example": {
+      "a": 1,
+      "r": 2,
+      "s": 6,
+      "x": 3,
+      "style": 4
+    },
+    "generation": [
+      {
+        "min": -3,
+        "max": 3,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "id": "g10-question-qr3-3-2",
+    "skillId": "g10-qr3-3"
+  },
+  {
+    "title": "Factors, zeros and intercepts — mixed practice",
+    "rule": "sec-zeros-from-factors",
+    "parameters": [
+      "a",
+      "r",
+      "s",
+      "x",
+      "style"
+    ],
+    "example": {
+      "a": 1,
+      "r": 2,
+      "s": 6,
+      "x": 3,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -3,
+        "max": 3,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "id": "g10-question-qr3-3-3",
+    "skillId": "g10-qr3-3"
+  },
+  {
+    "title": "Real and non-real roots",
+    "rule": "sec-discriminant",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 1,
+      "b": 2,
+      "c": 3,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -4,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g10-question-qr3-4-1",
+    "skillId": "g10-qr3-4"
+  },
+  {
+    "title": "Real and non-real roots — another way",
+    "rule": "sec-discriminant",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 1,
+      "b": 2,
+      "c": 3,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": -4,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-qr3-4-2",
+    "skillId": "g10-qr3-4"
+  },
+  {
+    "title": "Real and non-real roots — mixed practice",
+    "rule": "sec-discriminant",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 1,
+      "b": 2,
+      "c": 3,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -4,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-qr3-4-3",
+    "skillId": "g10-qr3-4"
+  },
+  {
+    "title": "Complete the square",
+    "rule": "sec-complete-square",
+    "parameters": [
+      "b",
+      "c",
+      "a",
+      "style"
+    ],
+    "example": {
+      "b": 6,
+      "c": 2,
+      "a": 1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -12,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": -20,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 3,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g10-question-qr3-5-1",
+    "skillId": "g10-qr3-5"
+  },
+  {
+    "title": "Complete the square — another way",
+    "rule": "sec-complete-square",
+    "parameters": [
+      "b",
+      "c",
+      "a",
+      "style"
+    ],
+    "example": {
+      "b": -12,
+      "c": -2,
+      "a": 2,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": -12,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": -20,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 3,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-qr3-5-2",
+    "skillId": "g10-qr3-5"
+  },
+  {
+    "title": "Complete the square — mixed practice",
+    "rule": "sec-complete-square",
+    "parameters": [
+      "b",
+      "c",
+      "a",
+      "style"
+    ],
+    "example": {
+      "b": 6,
+      "c": 2,
+      "a": 1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -12,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": -20,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 3,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-qr3-5-3",
+    "skillId": "g10-qr3-5"
+  },
+  {
+    "title": "Sketch from y = ax² + bx + c",
+    "rule": "sec-graph-quadratic",
+    "parameters": [
+      "a",
+      "h",
+      "k",
+      "x",
+      "style"
+    ],
+    "example": {
+      "a": 1,
+      "h": 2,
+      "k": -4,
+      "x": 1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -3,
+        "max": 3,
+        "step": 1
+      },
+      {
+        "min": -5,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 4,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g10-question-qr3-6-1",
+    "skillId": "g10-qr3-6"
+  },
+  {
+    "title": "Sketch from y = ax² + bx + c — another way",
+    "rule": "sec-graph-quadratic",
+    "parameters": [
+      "a",
+      "h",
+      "k",
+      "x",
+      "style"
+    ],
+    "example": {
+      "a": 1,
+      "h": 2,
+      "k": -4,
+      "x": 1,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": -3,
+        "max": 3,
+        "step": 1
+      },
+      {
+        "min": -5,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 4,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-qr3-6-2",
+    "skillId": "g10-qr3-6"
+  },
+  {
+    "title": "Sketch from y = ax² + bx + c — mixed practice",
+    "rule": "sec-graph-quadratic",
+    "parameters": [
+      "a",
+      "h",
+      "k",
+      "x",
+      "style"
+    ],
+    "example": {
+      "a": 1,
+      "h": 2,
+      "k": -4,
+      "x": 1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -3,
+        "max": 3,
+        "step": 1
+      },
+      {
+        "min": -5,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 4,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-qr3-6-3",
+    "skillId": "g10-qr3-6"
+  },
+  {
+    "title": "The quadratic formula",
+    "rule": "sec-quadratic-formula",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 1,
+      "b": -5,
+      "c": 6,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": -12,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": -10,
+        "max": 10,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g10-question-qr3-7-1",
+    "skillId": "g10-qr3-7"
+  },
+  {
+    "title": "The quadratic formula — another way",
+    "rule": "sec-quadratic-formula",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 1,
+      "b": -5,
+      "c": 6,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": -12,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": -10,
+        "max": 10,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5,
+        6
+      ]
+    ],
+    "id": "g10-question-qr3-7-2",
+    "skillId": "g10-qr3-7"
+  },
+  {
+    "title": "The quadratic formula — mixed practice",
+    "rule": "sec-quadratic-formula",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 1,
+      "b": -5,
+      "c": 6,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": -12,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": -10,
+        "max": 10,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    ],
+    "id": "g10-question-qr3-7-3",
+    "skillId": "g10-qr3-7"
+  },
+  {
+    "title": "Solve quadratic equations",
+    "rule": "sec-solve-quadratic",
+    "parameters": [
+      "a",
+      "r",
+      "s",
+      "m",
+      "style"
+    ],
+    "example": {
+      "a": 1,
+      "r": 2,
+      "s": 5,
+      "m": 3,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 3,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    "id": "g10-question-qr3-8-1",
+    "skillId": "g10-qr3-8"
+  },
+  {
+    "title": "Solve quadratic equations — another way",
+    "rule": "sec-solve-quadratic",
+    "parameters": [
+      "a",
+      "r",
+      "s",
+      "m",
+      "style"
+    ],
+    "example": {
+      "a": 1,
+      "r": 2,
+      "s": 5,
+      "m": 3,
+      "style": 4
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 3,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "id": "g10-question-qr3-8-2",
+    "skillId": "g10-qr3-8"
+  },
+  {
+    "title": "Solve quadratic equations — mixed practice",
+    "rule": "sec-solve-quadratic",
+    "parameters": [
+      "a",
+      "r",
+      "s",
+      "m",
+      "style"
+    ],
+    "example": {
+      "a": 1,
+      "r": 2,
+      "s": 5,
+      "m": 3,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 3,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "id": "g10-question-qr3-8-3",
+    "skillId": "g10-qr3-8"
+  },
+  {
+    "title": "Zeros and extreme values",
+    "rule": "sec-quadratic-max-min",
+    "parameters": [
+      "k",
+      "h0",
+      "style"
+    ],
+    "example": {
+      "k": 2,
+      "h0": 1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 30,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g10-question-qr4-1-1",
+    "skillId": "g10-qr4-1"
+  },
+  {
+    "title": "Zeros and extreme values — another way",
+    "rule": "sec-quadratic-max-min",
+    "parameters": [
+      "k",
+      "h0",
+      "style"
+    ],
+    "example": {
+      "k": 2,
+      "h0": 1,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 30,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-qr4-1-2",
+    "skillId": "g10-qr4-1"
+  },
+  {
+    "title": "Zeros and extreme values — mixed practice",
+    "rule": "sec-quadratic-max-min",
+    "parameters": [
+      "k",
+      "h0",
+      "style"
+    ],
+    "example": {
+      "k": 2,
+      "h0": 1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 30,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-qr4-1-3",
+    "skillId": "g10-qr4-1"
+  },
+  {
+    "title": "Quadratic models in context",
+    "rule": "sec-quadratic-application",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 8,
+      "b": 4,
+      "c": 3,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g10-question-qr4-2-1",
+    "skillId": "g10-qr4-2"
+  },
+  {
+    "title": "Quadratic models in context — another way",
+    "rule": "sec-quadratic-application",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 8,
+      "b": 4,
+      "c": 3,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5,
+        6
+      ]
+    ],
+    "id": "g10-question-qr4-2-2",
+    "skillId": "g10-qr4-2"
+  },
+  {
+    "title": "Quadratic models in context — mixed practice",
+    "rule": "sec-quadratic-application",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 8,
+      "b": 4,
+      "c": 3,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    ],
+    "id": "g10-question-qr4-2-3",
+    "skillId": "g10-qr4-2"
+  },
+  {
+    "title": "Solve linear systems",
+    "rule": "sec-linear-system",
+    "parameters": [
+      "x",
+      "y",
+      "a",
+      "b",
+      "d",
+      "style"
+    ],
+    "example": {
+      "x": 3,
+      "y": 2,
+      "a": 2,
+      "b": 1,
+      "d": 1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    "id": "g10-question-ag1-1-1",
+    "skillId": "g10-ag1-1"
+  },
+  {
+    "title": "Solve linear systems — another way",
+    "rule": "sec-linear-system",
+    "parameters": [
+      "x",
+      "y",
+      "a",
+      "b",
+      "d",
+      "style"
+    ],
+    "example": {
+      "x": 3,
+      "y": 2,
+      "a": 2,
+      "b": 1,
+      "d": 1,
+      "style": 4
+    },
+    "generation": [
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "id": "g10-question-ag1-1-2",
+    "skillId": "g10-ag1-1"
+  },
+  {
+    "title": "Solve linear systems — mixed practice",
+    "rule": "sec-linear-system",
+    "parameters": [
+      "x",
+      "y",
+      "a",
+      "b",
+      "d",
+      "style"
+    ],
+    "example": {
+      "x": 3,
+      "y": 2,
+      "a": 2,
+      "b": 1,
+      "d": 1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "id": "g10-question-ag1-1-3",
+    "skillId": "g10-ag1-1"
+  },
+  {
+    "title": "Linear systems in context",
+    "rule": "sec-system-problem",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "style"
+    ],
+    "example": {
+      "a": 12,
+      "b": 5,
+      "c": 20,
+      "d": 10,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 5,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 10,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 25,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g10-question-ag1-2-1",
+    "skillId": "g10-ag1-2"
+  },
+  {
+    "title": "Linear systems in context — another way",
+    "rule": "sec-system-problem",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "style"
+    ],
+    "example": {
+      "a": 6,
+      "b": 10,
+      "c": 16,
+      "d": 9,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 5,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 10,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 25,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-ag1-2-2",
+    "skillId": "g10-ag1-2"
+  },
+  {
+    "title": "Linear systems in context — mixed practice",
+    "rule": "sec-system-problem",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "style"
+    ],
+    "example": {
+      "a": 12,
+      "b": 5,
+      "c": 20,
+      "d": 10,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 5,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 10,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 25,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-ag1-2-3",
+    "skillId": "g10-ag1-2"
+  },
+  {
+    "title": "Midpoint of a segment",
+    "rule": "sec-midpoint",
+    "parameters": [
+      "x1",
+      "y1",
+      "x2",
+      "y2",
+      "style"
+    ],
+    "example": {
+      "x1": 2,
+      "y1": 4,
+      "x2": 8,
+      "y2": -2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -10,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": -10,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": -10,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": -10,
+        "max": 10,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g10-question-ag2-1-1",
+    "skillId": "g10-ag2-1"
+  },
+  {
+    "title": "Midpoint of a segment — another way",
+    "rule": "sec-midpoint",
+    "parameters": [
+      "x1",
+      "y1",
+      "x2",
+      "y2",
+      "style"
+    ],
+    "example": {
+      "x1": 2,
+      "y1": 4,
+      "x2": 8,
+      "y2": -2,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": -10,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": -10,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": -10,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": -10,
+        "max": 10,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-ag2-1-2",
+    "skillId": "g10-ag2-1"
+  },
+  {
+    "title": "Midpoint of a segment — mixed practice",
+    "rule": "sec-midpoint",
+    "parameters": [
+      "x1",
+      "y1",
+      "x2",
+      "y2",
+      "style"
+    ],
+    "example": {
+      "x1": 2,
+      "y1": 4,
+      "x2": 8,
+      "y2": -2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -10,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": -10,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": -10,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": -10,
+        "max": 10,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-ag2-1-3",
+    "skillId": "g10-ag2-1"
+  },
+  {
+    "title": "Length of a segment",
+    "rule": "sec-length",
+    "parameters": [
+      "x1",
+      "y1",
+      "x2",
+      "y2",
+      "style"
+    ],
+    "example": {
+      "x1": 1,
+      "y1": 2,
+      "x2": 4,
+      "y2": 6,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g10-question-ag2-2-1",
+    "skillId": "g10-ag2-2"
+  },
+  {
+    "title": "Length of a segment — another way",
+    "rule": "sec-length",
+    "parameters": [
+      "x1",
+      "y1",
+      "x2",
+      "y2",
+      "style"
+    ],
+    "example": {
+      "x1": 4,
+      "y1": -6,
+      "x2": 2,
+      "y2": 2,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-ag2-2-2",
+    "skillId": "g10-ag2-2"
+  },
+  {
+    "title": "Length of a segment — mixed practice",
+    "rule": "sec-length",
+    "parameters": [
+      "x1",
+      "y1",
+      "x2",
+      "y2",
+      "style"
+    ],
+    "example": {
+      "x1": 1,
+      "y1": 2,
+      "x2": 4,
+      "y2": 6,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-ag2-2-3",
+    "skillId": "g10-ag2-2"
+  },
+  {
+    "title": "The circle x² + y² = r²",
+    "rule": "sec-circle-equation",
+    "parameters": [
+      "r",
+      "x",
+      "y",
+      "style"
+    ],
+    "example": {
+      "r": 5,
+      "x": 3,
+      "y": 4,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": -12,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": -12,
+        "max": 12,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    "id": "g10-question-ag2-3-1",
+    "skillId": "g10-ag2-3"
+  },
+  {
+    "title": "The circle x² + y² = r² — another way",
+    "rule": "sec-circle-equation",
+    "parameters": [
+      "r",
+      "x",
+      "y",
+      "style"
+    ],
+    "example": {
+      "r": 5,
+      "x": 3,
+      "y": 4,
+      "style": 4
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": -12,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": -12,
+        "max": 12,
+        "step": 1
+      },
+      [
+        4,
+        5,
+        6
+      ]
+    ],
+    "id": "g10-question-ag2-3-2",
+    "skillId": "g10-ag2-3"
+  },
+  {
+    "title": "The circle x² + y² = r² — mixed practice",
+    "rule": "sec-circle-equation",
+    "parameters": [
+      "r",
+      "x",
+      "y",
+      "style"
+    ],
+    "example": {
+      "r": 5,
+      "x": 3,
+      "y": 4,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": -12,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": -12,
+        "max": 12,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    ],
+    "id": "g10-question-ag2-3-3",
+    "skillId": "g10-ag2-3"
+  },
+  {
+    "title": "Radius and equation of a circle",
+    "rule": "sec-circle-equation",
+    "parameters": [
+      "r",
+      "x",
+      "y",
+      "style"
+    ],
+    "example": {
+      "r": 5,
+      "x": 3,
+      "y": 4,
+      "style": 1
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": -12,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": -12,
+        "max": 12,
+        "step": 1
+      },
+      [
+        1,
+        0,
+        5
+      ]
+    ],
+    "id": "g10-question-ag2-4-1",
+    "skillId": "g10-ag2-4"
+  },
+  {
+    "title": "Radius and equation of a circle — another way",
+    "rule": "sec-circle-equation",
+    "parameters": [
+      "r",
+      "x",
+      "y",
+      "style"
+    ],
+    "example": {
+      "r": 5,
+      "x": 3,
+      "y": 4,
+      "style": 2
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": -12,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": -12,
+        "max": 12,
+        "step": 1
+      },
+      [
+        2,
+        3,
+        6
+      ]
+    ],
+    "id": "g10-question-ag2-4-2",
+    "skillId": "g10-ag2-4"
+  },
+  {
+    "title": "Radius and equation of a circle — mixed practice",
+    "rule": "sec-circle-equation",
+    "parameters": [
+      "r",
+      "x",
+      "y",
+      "style"
+    ],
+    "example": {
+      "r": 5,
+      "x": 3,
+      "y": 4,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": -12,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": -12,
+        "max": 12,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    ],
+    "id": "g10-question-ag2-4-3",
+    "skillId": "g10-ag2-4"
+  },
+  {
+    "title": "Slope, length and midpoint problems",
+    "rule": "sec-segment-problems",
+    "parameters": [
+      "x1",
+      "y1",
+      "x2",
+      "y2",
+      "style"
+    ],
+    "example": {
+      "x1": 1,
+      "y1": 2,
+      "x2": 5,
+      "y2": 8,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g10-question-ag2-5-1",
+    "skillId": "g10-ag2-5"
+  },
+  {
+    "title": "Slope, length and midpoint problems — another way",
+    "rule": "sec-segment-problems",
+    "parameters": [
+      "x1",
+      "y1",
+      "x2",
+      "y2",
+      "style"
+    ],
+    "example": {
+      "x1": 1,
+      "y1": 2,
+      "x2": 5,
+      "y2": 8,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-ag2-5-2",
+    "skillId": "g10-ag2-5"
+  },
+  {
+    "title": "Slope, length and midpoint problems — mixed practice",
+    "rule": "sec-segment-problems",
+    "parameters": [
+      "x1",
+      "y1",
+      "x2",
+      "y2",
+      "style"
+    ],
+    "example": {
+      "x1": 1,
+      "y1": 2,
+      "x2": 5,
+      "y2": 8,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-ag2-5-3",
+    "skillId": "g10-ag2-5"
+  },
+  {
+    "title": "Investigate figure properties",
+    "rule": "sec-geometry-properties",
+    "parameters": [
+      "x1",
+      "y1",
+      "w",
+      "h",
+      "style"
+    ],
+    "example": {
+      "x1": 0,
+      "y1": 0,
+      "w": 4,
+      "h": 6,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g10-question-ag3-1-1",
+    "skillId": "g10-ag3-1"
+  },
+  {
+    "title": "Investigate figure properties — another way",
+    "rule": "sec-geometry-properties",
+    "parameters": [
+      "x1",
+      "y1",
+      "w",
+      "h",
+      "style"
+    ],
+    "example": {
+      "x1": 0,
+      "y1": 0,
+      "w": 4,
+      "h": 6,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-ag3-1-2",
+    "skillId": "g10-ag3-1"
+  },
+  {
+    "title": "Investigate figure properties — mixed practice",
+    "rule": "sec-geometry-properties",
+    "parameters": [
+      "x1",
+      "y1",
+      "w",
+      "h",
+      "style"
+    ],
+    "example": {
+      "x1": 0,
+      "y1": 0,
+      "w": 4,
+      "h": 6,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-ag3-1-3",
+    "skillId": "g10-ag3-1"
+  },
+  {
+    "title": "Verify properties with coordinates",
+    "rule": "sec-verify-shapes",
+    "parameters": [
+      "x1",
+      "y1",
+      "a",
+      "b",
+      "style"
+    ],
+    "example": {
+      "x1": 0,
+      "y1": 0,
+      "a": 3,
+      "b": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g10-question-ag3-2-1",
+    "skillId": "g10-ag3-2"
+  },
+  {
+    "title": "Verify properties with coordinates — another way",
+    "rule": "sec-verify-shapes",
+    "parameters": [
+      "x1",
+      "y1",
+      "a",
+      "b",
+      "style"
+    ],
+    "example": {
+      "x1": 0,
+      "y1": 0,
+      "a": 3,
+      "b": 2,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-ag3-2-2",
+    "skillId": "g10-ag3-2"
+  },
+  {
+    "title": "Verify properties with coordinates — mixed practice",
+    "rule": "sec-verify-shapes",
+    "parameters": [
+      "x1",
+      "y1",
+      "a",
+      "b",
+      "style"
+    ],
+    "example": {
+      "x1": 0,
+      "y1": 0,
+      "a": 3,
+      "b": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-ag3-2-3",
+    "skillId": "g10-ag3-2"
+  },
+  {
+    "title": "Multi-step verification",
+    "rule": "sec-verify-property",
+    "parameters": [
+      "x1",
+      "y1",
+      "a",
+      "b",
+      "style"
+    ],
+    "example": {
+      "x1": 0,
+      "y1": 0,
+      "a": 6,
+      "b": 4,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g10-question-ag3-3-1",
+    "skillId": "g10-ag3-3"
+  },
+  {
+    "title": "Multi-step verification — another way",
+    "rule": "sec-verify-property",
+    "parameters": [
+      "x1",
+      "y1",
+      "a",
+      "b",
+      "style"
+    ],
+    "example": {
+      "x1": 0,
+      "y1": 0,
+      "a": 6,
+      "b": 4,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-ag3-3-2",
+    "skillId": "g10-ag3-3"
+  },
+  {
+    "title": "Multi-step verification — mixed practice",
+    "rule": "sec-verify-property",
+    "parameters": [
+      "x1",
+      "y1",
+      "a",
+      "b",
+      "style"
+    ],
+    "example": {
+      "x1": 0,
+      "y1": 0,
+      "a": 6,
+      "b": 4,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": -6,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-ag3-3-3",
+    "skillId": "g10-ag3-3"
+  },
+  {
+    "title": "Properties of similar triangles",
+    "rule": "sec-similar-triangles",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "k",
+      "style"
+    ],
+    "example": {
+      "a": 3,
+      "b": 4,
+      "c": 5,
+      "k": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 3,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 3,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 3,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 5,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g10-question-tr1-1-1",
+    "skillId": "g10-tr1-1"
+  },
+  {
+    "title": "Properties of similar triangles — another way",
+    "rule": "sec-similar-triangles",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "k",
+      "style"
+    ],
+    "example": {
+      "a": 3,
+      "b": 4,
+      "c": 5,
+      "k": 2,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 3,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 3,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 3,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 5,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-tr1-1-2",
+    "skillId": "g10-tr1-1"
+  },
+  {
+    "title": "Properties of similar triangles — mixed practice",
+    "rule": "sec-similar-triangles",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "k",
+      "style"
+    ],
+    "example": {
+      "a": 3,
+      "b": 4,
+      "c": 5,
+      "k": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 3,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 3,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 3,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 5,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-tr1-1-3",
+    "skillId": "g10-tr1-1"
+  },
+  {
+    "title": "Similarity and congruence",
+    "rule": "sec-similar-congruent",
+    "parameters": [
+      "a",
+      "b",
+      "k",
+      "style"
+    ],
+    "example": {
+      "a": 3,
+      "b": 4,
+      "k": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 3,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 3,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g10-question-tr1-2-1",
+    "skillId": "g10-tr1-2"
+  },
+  {
+    "title": "Similarity and congruence — another way",
+    "rule": "sec-similar-congruent",
+    "parameters": [
+      "a",
+      "b",
+      "k",
+      "style"
+    ],
+    "example": {
+      "a": 3,
+      "b": 4,
+      "k": 2,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 3,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 3,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-tr1-2-2",
+    "skillId": "g10-tr1-2"
+  },
+  {
+    "title": "Similarity and congruence — mixed practice",
+    "rule": "sec-similar-congruent",
+    "parameters": [
+      "a",
+      "b",
+      "k",
+      "style"
+    ],
+    "example": {
+      "a": 3,
+      "b": 4,
+      "k": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 3,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 3,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-tr1-2-3",
+    "skillId": "g10-tr1-2"
+  },
+  {
+    "title": "Similar triangles in realistic situations",
+    "rule": "sec-similar-application",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "b": 6,
+      "c": 5,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 6,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g10-question-tr1-3-1",
+    "skillId": "g10-tr1-3"
+  },
+  {
+    "title": "Similar triangles in realistic situations — another way",
+    "rule": "sec-similar-application",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "b": 6,
+      "c": 5,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 6,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-tr1-3-2",
+    "skillId": "g10-tr1-3"
+  },
+  {
+    "title": "Similar triangles in realistic situations — mixed practice",
+    "rule": "sec-similar-application",
+    "parameters": [
+      "a",
+      "b",
+      "c",
+      "style"
+    ],
+    "example": {
+      "a": 2,
+      "b": 6,
+      "c": 5,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 6,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-tr1-3-3",
+    "skillId": "g10-tr1-3"
+  },
+  {
+    "title": "Sine, cosine and tangent",
+    "rule": "sec-trig-ratios",
+    "parameters": [
+      "t",
+      "k",
+      "style"
+    ],
+    "example": {
+      "t": 0,
+      "k": 1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 2,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    "id": "g10-question-tr2-1-1",
+    "skillId": "g10-tr2-1"
+  },
+  {
+    "title": "Sine, cosine and tangent — another way",
+    "rule": "sec-trig-ratios",
+    "parameters": [
+      "t",
+      "k",
+      "style"
+    ],
+    "example": {
+      "t": 0,
+      "k": 1,
+      "style": 4
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 2,
+        "step": 1
+      },
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "id": "g10-question-tr2-1-2",
+    "skillId": "g10-tr2-1"
+  },
+  {
+    "title": "Sine, cosine and tangent — mixed practice",
+    "rule": "sec-trig-ratios",
+    "parameters": [
+      "t",
+      "k",
+      "style"
+    ],
+    "example": {
+      "t": 0,
+      "k": 1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 2,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "id": "g10-question-tr2-1-3",
+    "skillId": "g10-tr2-1"
+  },
+  {
+    "title": "Solve right triangles",
+    "rule": "sec-right-triangle",
+    "parameters": [
+      "A",
+      "len",
+      "p",
+      "q",
+      "style"
+    ],
+    "example": {
+      "A": 35,
+      "len": 12,
+      "p": 3,
+      "q": 4,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 20,
+        "max": 70,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 15,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    "id": "g10-question-tr2-2-1",
+    "skillId": "g10-tr2-2"
+  },
+  {
+    "title": "Solve right triangles — another way",
+    "rule": "sec-right-triangle",
+    "parameters": [
+      "A",
+      "len",
+      "p",
+      "q",
+      "style"
+    ],
+    "example": {
+      "A": 35,
+      "len": 12,
+      "p": 3,
+      "q": 4,
+      "style": 4
+    },
+    "generation": [
+      {
+        "min": 20,
+        "max": 70,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 15,
+        "step": 1
+      },
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "id": "g10-question-tr2-2-2",
+    "skillId": "g10-tr2-2"
+  },
+  {
+    "title": "Solve right triangles — mixed practice",
+    "rule": "sec-right-triangle",
+    "parameters": [
+      "A",
+      "len",
+      "p",
+      "q",
+      "style"
+    ],
+    "example": {
+      "A": 35,
+      "len": 12,
+      "p": 3,
+      "q": 4,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 20,
+        "max": 70,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 15,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "id": "g10-question-tr2-2-3",
+    "skillId": "g10-tr2-2"
+  },
+  {
+    "title": "Right-triangle applications",
+    "rule": "sec-trig-application",
+    "parameters": [
+      "A",
+      "len",
+      "p",
+      "q",
+      "style"
+    ],
+    "example": {
+      "A": 35,
+      "len": 50,
+      "p": 8,
+      "q": 40,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 20,
+        "max": 70,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 60,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 30,
+        "step": 1
+      },
+      {
+        "min": 3,
+        "max": 40,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g10-question-tr2-3-1",
+    "skillId": "g10-tr2-3"
+  },
+  {
+    "title": "Right-triangle applications — another way",
+    "rule": "sec-trig-application",
+    "parameters": [
+      "A",
+      "len",
+      "p",
+      "q",
+      "style"
+    ],
+    "example": {
+      "A": 35,
+      "len": 50,
+      "p": 8,
+      "q": 40,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 20,
+        "max": 70,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 60,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 30,
+        "step": 1
+      },
+      {
+        "min": 3,
+        "max": 40,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5,
+        6
+      ]
+    ],
+    "id": "g10-question-tr2-3-2",
+    "skillId": "g10-tr2-3"
+  },
+  {
+    "title": "Right-triangle applications — mixed practice",
+    "rule": "sec-trig-application",
+    "parameters": [
+      "A",
+      "len",
+      "p",
+      "q",
+      "style"
+    ],
+    "example": {
+      "A": 35,
+      "len": 50,
+      "p": 8,
+      "q": 40,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 20,
+        "max": 70,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 60,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 30,
+        "step": 1
+      },
+      {
+        "min": 3,
+        "max": 40,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    ],
+    "id": "g10-question-tr2-3-3",
+    "skillId": "g10-tr2-3"
+  },
+  {
+    "title": "The sine law",
+    "rule": "sec-sine-law",
+    "parameters": [
+      "A",
+      "B",
+      "a",
+      "style"
+    ],
+    "example": {
+      "A": 40,
+      "B": 70,
+      "a": 12,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 30,
+        "max": 80,
+        "step": 1
+      },
+      {
+        "min": 30,
+        "max": 80,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 30,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g10-question-tr3-1-1",
+    "skillId": "g10-tr3-1"
+  },
+  {
+    "title": "The sine law — another way",
+    "rule": "sec-sine-law",
+    "parameters": [
+      "A",
+      "B",
+      "a",
+      "style"
+    ],
+    "example": {
+      "A": 40,
+      "B": 70,
+      "a": 12,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 30,
+        "max": 80,
+        "step": 1
+      },
+      {
+        "min": 30,
+        "max": 80,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 30,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-tr3-1-2",
+    "skillId": "g10-tr3-1"
+  },
+  {
+    "title": "The sine law — mixed practice",
+    "rule": "sec-sine-law",
+    "parameters": [
+      "A",
+      "B",
+      "a",
+      "style"
+    ],
+    "example": {
+      "A": 40,
+      "B": 70,
+      "a": 12,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 30,
+        "max": 80,
+        "step": 1
+      },
+      {
+        "min": 30,
+        "max": 80,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 30,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-tr3-1-3",
+    "skillId": "g10-tr3-1"
+  },
+  {
+    "title": "The cosine law",
+    "rule": "sec-cosine-law",
+    "parameters": [
+      "a",
+      "b",
+      "C",
+      "style"
+    ],
+    "example": {
+      "a": 10,
+      "b": 12,
+      "C": 50,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 5,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 30,
+        "max": 80,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g10-question-tr3-2-1",
+    "skillId": "g10-tr3-2"
+  },
+  {
+    "title": "The cosine law — another way",
+    "rule": "sec-cosine-law",
+    "parameters": [
+      "a",
+      "b",
+      "C",
+      "style"
+    ],
+    "example": {
+      "a": 10,
+      "b": 12,
+      "C": 50,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 5,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 30,
+        "max": 80,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-tr3-2-2",
+    "skillId": "g10-tr3-2"
+  },
+  {
+    "title": "The cosine law — mixed practice",
+    "rule": "sec-cosine-law",
+    "parameters": [
+      "a",
+      "b",
+      "C",
+      "style"
+    ],
+    "example": {
+      "a": 10,
+      "b": 12,
+      "C": 50,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 5,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 30,
+        "max": 80,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-tr3-2-3",
+    "skillId": "g10-tr3-2"
+  },
+  {
+    "title": "Solve acute triangles",
+    "rule": "sec-oblique-triangles",
+    "parameters": [
+      "A",
+      "B",
+      "a",
+      "b",
+      "style"
+    ],
+    "example": {
+      "A": 50,
+      "B": 60,
+      "a": 15,
+      "b": 14,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 35,
+        "max": 75,
+        "step": 1
+      },
+      {
+        "min": 35,
+        "max": 75,
+        "step": 1
+      },
+      {
+        "min": 8,
+        "max": 30,
+        "step": 1
+      },
+      {
+        "min": 8,
+        "max": 30,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g10-question-tr3-3-1",
+    "skillId": "g10-tr3-3"
+  },
+  {
+    "title": "Solve acute triangles — another way",
+    "rule": "sec-oblique-triangles",
+    "parameters": [
+      "A",
+      "B",
+      "a",
+      "b",
+      "style"
+    ],
+    "example": {
+      "A": 50,
+      "B": 60,
+      "a": 15,
+      "b": 14,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 35,
+        "max": 75,
+        "step": 1
+      },
+      {
+        "min": 35,
+        "max": 75,
+        "step": 1
+      },
+      {
+        "min": 8,
+        "max": 30,
+        "step": 1
+      },
+      {
+        "min": 8,
+        "max": 30,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-tr3-3-2",
+    "skillId": "g10-tr3-3"
+  },
+  {
+    "title": "Solve acute triangles — mixed practice",
+    "rule": "sec-oblique-triangles",
+    "parameters": [
+      "A",
+      "B",
+      "a",
+      "b",
+      "style"
+    ],
+    "example": {
+      "A": 50,
+      "B": 60,
+      "a": 15,
+      "b": 14,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 35,
+        "max": 75,
+        "step": 1
+      },
+      {
+        "min": 35,
+        "max": 75,
+        "step": 1
+      },
+      {
+        "min": 8,
+        "max": 30,
+        "step": 1
+      },
+      {
+        "min": 8,
+        "max": 30,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-tr3-3-3",
+    "skillId": "g10-tr3-3"
+  },
+  {
+    "title": "Acute-triangle problems",
+    "rule": "sec-oblique-application",
+    "parameters": [
+      "A",
+      "B",
+      "d",
+      "e",
+      "style"
+    ],
+    "example": {
+      "A": 50,
+      "B": 60,
+      "d": 100,
+      "e": 80,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 30,
+        "max": 75,
+        "step": 1
+      },
+      {
+        "min": 30,
+        "max": 75,
+        "step": 1
+      },
+      {
+        "min": 40,
+        "max": 200,
+        "step": 1
+      },
+      {
+        "min": 30,
+        "max": 120,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "id": "g10-question-tr3-4-1",
+    "skillId": "g10-tr3-4"
+  },
+  {
+    "title": "Acute-triangle problems — another way",
+    "rule": "sec-oblique-application",
+    "parameters": [
+      "A",
+      "B",
+      "d",
+      "e",
+      "style"
+    ],
+    "example": {
+      "A": 50,
+      "B": 60,
+      "d": 100,
+      "e": 80,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 30,
+        "max": 75,
+        "step": 1
+      },
+      {
+        "min": 30,
+        "max": 75,
+        "step": 1
+      },
+      {
+        "min": 40,
+        "max": 200,
+        "step": 1
+      },
+      {
+        "min": 30,
+        "max": 120,
+        "step": 1
+      },
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-tr3-4-2",
+    "skillId": "g10-tr3-4"
+  },
+  {
+    "title": "Acute-triangle problems — mixed practice",
+    "rule": "sec-oblique-application",
+    "parameters": [
+      "A",
+      "B",
+      "d",
+      "e",
+      "style"
+    ],
+    "example": {
+      "A": 50,
+      "B": 60,
+      "d": 100,
+      "e": 80,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 30,
+        "max": 75,
+        "step": 1
+      },
+      {
+        "min": 30,
+        "max": 75,
+        "step": 1
+      },
+      {
+        "min": 40,
+        "max": 200,
+        "step": 1
+      },
+      {
+        "min": 30,
+        "max": 120,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "id": "g10-question-tr3-4-3",
+    "skillId": "g10-tr3-4"
+  }
+]

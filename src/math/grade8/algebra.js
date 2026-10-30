@@ -2,14 +2,18 @@ import {rational,add,subtract,multiply,divide,compare,safeInteger,calculate} fro
 import {linearSequence,linearSolution,substituteLinear} from '../core/relationships.js';
 import {tex,plain,scaledDecimal,decimalOrFraction} from '../core/format.js';
 import {pick,step,lesson,table,numeric} from '../lesson.js';
+import {linear,sumOfTerms,term} from '../core/terms.js';
+import {requireThat} from '../elementary/common.js';
+const plainTerm=n=>Math.abs(n)>=2;
+const plainCoefficient=r=>{const n=pick(r,2,9);return pick(r,0,1)?-n:n;};
 const signed=v=>v<0?`(${v})`:String(v);
-const affine=(a,b)=>`${scaledDecimal(a,1)}x${b<0?'':'+'}${scaledDecimal(b,1)}`;
+const affine=(a,b)=>linear(decimalOrFraction(rational(a,10)),decimalOrFraction(rational(b,10)));
 export function rationalPattern(start,increment,denominator,count=5){return linearSequence(rational(start,denominator),rational(increment,denominator),count);}
 export function analyzeReadings(readings,threshold){const selected=readings.filter(n=>compare(n,threshold)>0);return {selected,count:selected.length,total:readings.length};}
 export const algebraRules8={
  'g8-monomials':{
-  generate:r=>[pick(r,-9,9),pick(r,-9,9),pick(r,0,1)],
-  solve:([a,b,subtractTerms])=>{const op=subtractTerms?'-':'+',coefficient=calculate(op,a,b);return lesson('Combine linear monomials by adding or subtracting their coefficients.',[step('Both terms have the same variable part, x.',`(${a}${op}${signed(b)})x`),step('Keep the variable and calculate its coefficient.',`${tex(coefficient)}x`)],{formula:`${a}x${op}(${b}x)`,answer:tex(coefficient)});}
+  generate:r=>{let a,b,sub;do{a=plainCoefficient(r);b=plainCoefficient(r);sub=pick(r,0,1);}while(a+(sub?-b:b)===0);return [a,b,sub];},
+  solve:([a,b,subtractTerms])=>{requireThat(plainTerm(a)&&plainTerm(b),'Use coefficients other than 0, 1 and -1.');const op=subtractTerms?'-':'+',coefficient=calculate(op,a,b);requireThat(compare(coefficient,0)!==0,'Use terms that do not cancel completely.');return lesson('Combine linear monomials by adding or subtracting their coefficients.',[step('Both terms have the same variable part, x.',`(${a}${op}${signed(b)})x`),step('Keep the variable and calculate its coefficient.',linear(safeInteger(coefficient),0))],{formula:sumOfTerms([[a,'x'],[subtractTerms?-b:b,'x']]),answer:tex(coefficient)});}
  },
  'g8-pattern-compare':{
   generate:r=>[pick(r,-8,8),pick(r,1,5),pick(r,-8,8),pick(r,-5,-1)],
@@ -29,16 +33,16 @@ export const algebraRules8={
   ],{answer:tex(target)});}
  },
  'g8-like-terms':{
-  generate:r=>[pick(r,-9,9),pick(r,-9,9),pick(r,-9,9),pick(r,-9,9)],
-  solve:([a,b,c,d])=>{const coefficient=safeInteger(add(a,c)),constant=safeInteger(add(b,d));return lesson('Add the two linear binomials. Combine only like terms.',[
+  generate:r=>{let a,b,c,d;do{a=plainCoefficient(r);c=plainCoefficient(r);b=pick(r,-9,9);d=pick(r,-9,9);}while(!b||!d||a+c===0||b+d===0);return [a,b,c,d];},
+  solve:([a,b,c,d])=>{requireThat([a,b,c,d].every(n=>n!==0)&&plainTerm(a)&&plainTerm(c),'Use nonzero terms and coefficients other than 1 and -1.');const coefficient=safeInteger(add(a,c)),constant=safeInteger(add(b,d));requireThat(coefficient!==0&&constant!==0,'Use a sum with both an x term and a constant.');return lesson('Add the two linear binomials. Combine only like terms.',[
    step('Group x terms together and constants together.',`(${a}+${signed(c)})x+(${b}+${signed(d)})`),
-   step('The variable part stays x. Add its coefficients.',`${coefficient}x${constant<0?'':'+'}${constant}`)
-  ],{formula:`(${a}x${b<0?'':'+'}${b})+(${c}x${d<0?'':'+'}${d})`,answer:{coefficient,constant}});}
+   step('The variable part stays x. Add its coefficients.',linear(coefficient,constant))
+  ],{formula:`(${linear(a,b)})+(${linear(c,d)})`,answer:{coefficient,constant}});}
  },
  'g8-evaluate':{
-  generate:r=>[pick(r,-8,8),pick(r,1,5),pick(r,-8,8),pick(r,-9,9),pick(r,1,5)],
-  solve:([a,d,b,n,e])=>{const x=rational(n,e),result=substituteLinear(rational(a,d),b,x);return lesson(`Evaluate (${a}/${d})x + ${b} when x = ${n}/${e}.`,[
-   step('Replace the variable with the given rational value.',`(${tex(rational(a,d))})(${tex(x)})+(${b})`),
+  generate:r=>{let a=0,b=0;while(!a)a=pick(r,-8,8);while(!b)b=pick(r,-8,8);return [a,pick(r,2,5),b,pick(r,-9,9),pick(r,2,5)];},
+  solve:([a,d,b,n,e])=>{const x=rational(n,e),result=substituteLinear(rational(a,d),b,x);return lesson(`Evaluate ${d===1?term(a,'x'):`(${a}/${d})x`}${b?` ${b<0?'−':'+'} ${Math.abs(b)}`:''} when x = ${n}/${e}.`,[
+   step('Replace the variable with the given rational value.',`(${tex(rational(a,d))})(${tex(x)})${b?`+(${b})`:''}`),
    step('Multiply first, then add using exact fractions.',tex(result))
   ],{answer:tex(result)});}
  },
@@ -50,12 +54,12 @@ export const algebraRules8={
    return lesson('Solve the equation, keeping both sides balanced.',steps,{formula:`${affine(a,b)}=${affine(c,d)}`,answer:solution.type==='unique'?tex(solution.result):solution.type});}
  },
  'g8-inequality':{
-  generate:r=>{let a=0;while(!a)a=pick(r,-6,6);return [a,pick(r,-12,12),pick(r,-12,12),pick(r,0,3)];},
-  solve:([a,b,c,comparison])=>{const greater=comparison%2===1,closed=comparison>=2,boundary=divide(subtract(c,b),a),direction=greater!==(a<0),symbol=closed?(direction?'\\ge':'\\le'):(direction?'>':'<'),inputSymbol=closed?(greater?'\\ge':'\\le'):(greater?'>':'<'),check=direction?add(boundary,1):subtract(boundary,1);return lesson(`Solve and graph the ${closed?'inclusive':'strict'} inequality over the real numbers.`,[
+  generate:r=>{let a=0,b=0;while(!a)a=pick(r,-6,6);while(!b)b=pick(r,-12,12);return [a,b,pick(r,-12,12),pick(r,0,3)];},
+  solve:([a,b,c,comparison])=>{requireThat(b!==0,'Use a nonzero constant so there is something to subtract.');const greater=comparison%2===1,closed=comparison>=2,boundary=divide(subtract(c,b),a),direction=greater!==(a<0),symbol=closed?(direction?'\\ge':'\\le'):(direction?'>':'<'),inputSymbol=closed?(greater?'\\ge':'\\le'):(greater?'>':'<'),check=direction?add(boundary,1):subtract(boundary,1);return lesson(`Solve and graph the ${closed?'inclusive':'strict'} inequality over the real numbers.`,[
    step(`Subtract ${b} on both sides.`,` ${a}x${inputSymbol}${c-b}`),
    step(a<0?'Divide by a negative number and reverse the inequality sign.':'Divide by a positive number; keep the inequality direction.',`x${symbol}${tex(boundary)}`,{type:'real-inequality',boundary:Number(boundary.n)/Number(boundary.d),label:tex(boundary),greater:direction,closed,caption:`${closed?'Filled boundary: the endpoint is included':'Open boundary: the endpoint is excluded'}; the ray continues in the arrow direction`}),
    step('Check an allowed value in the original inequality.',`${a}(${tex(check)})+(${b})=${tex(substituteLinear(a,b,check))}${inputSymbol}${c}`)
-  ],{formula:`${a}x${b<0?'':'+'}${b}${inputSymbol}${c}`,answer:`x${symbol}${tex(boundary)}`});}
+  ],{formula:`${linear(a,b)}${inputSymbol}${c}`,answer:`x${symbol}${tex(boundary)}`});}
  },
  'g8-code-data':{
   generate:r=>[pick(r,10,30),pick(r,10,30),pick(r,10,30),pick(r,10,30),pick(r,10,30)],

@@ -22,7 +22,7 @@
 @media(prefers-reduced-motion:reduce){.game-zombie{transition:none}.game-shot,.game-zombie{animation:none!important}}
 
 /* Previous players: tappable badges instead of a dropdown. */
-.profile-picker{flex-basis:100%;display:grid;gap:8px}.profile-label{font-size:14px}
+
 
 /* In a round: only the scene, question and a quit icon remain. */
 .game-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}.game-head h1{margin:0}
@@ -79,14 +79,14 @@ html[data-theme=dark] .stat-group ul{border-color:#52606d}
 @media(prefers-reduced-motion:reduce){.is-crying .tear{animation:none}.shot-miss .game-hero img{animation:none}}
 
 /* Two-step setup: choose the player first, then grade and topics. */
-.game-page.step-player :is(#game-setup,#game-stats){display:none}
-.game-page.step-topics #player-form{display:none}
-.player-form{display:flex;gap:16px;align-items:end;flex-wrap:wrap;margin:24px 0}.player-form label{display:grid;gap:7px;font-size:14px}.player-form input{font:inherit;padding:9px;border:1px solid #84909b;border-radius:6px;background:white;color:#202b35;width:min(240px,65vw)}
+.setup-gate{position:relative}.game-page.step-player #game-setup{filter:blur(6px);opacity:.55;user-select:none}.game-page.step-player .game-player,.game-page:not(.step-player) .player-prompt,.game-page.in-game .setup-gate{display:none}
+
+
 .game-player{flex-basis:100%;margin:0;font-size:14px}.link-button{border:0;background:transparent;padding:0 4px;color:#2459a6;text-decoration:underline;cursor:pointer;font-size:13px}
 .topic-picker{flex:1 1 260px;min-width:220px;border:1px solid #84909b;border-radius:6px;padding:0 10px;background:white;color:#202b35}.topic-picker>summary{cursor:pointer;padding:9px 0;display:flex;gap:10px;align-items:baseline;font-size:14px}.topic-label{font-size:12px;color:#596570}
 .topic-list{display:grid;gap:4px;padding:6px 0 10px;max-height:320px;overflow:auto}.topic-row{display:flex;align-items:center;gap:8px;font-size:14px;padding:3px 0}.topic-row input{width:16px;height:16px}
 .topic-group{display:grid;gap:2px;padding-top:4px}.topic-strand{font-weight:600}
-html[data-theme=dark] .topic-picker,html[data-theme=dark] .player-form input{background:#222d37;color:#e1e7ed;border-color:#52606d}html[data-theme=dark] .link-button{color:#99c5ff}html[data-theme=dark] .topic-label{color:#b5c1cc}
+html[data-theme=dark] .topic-picker,html[data-theme=dark] html[data-theme=dark] .link-button{color:#99c5ff}html[data-theme=dark] .topic-label{color:#b5c1cc}
 #game-setup .topic-row{display:flex;flex-direction:row;align-items:center;gap:8px}
 #game-setup .topic-picker{align-self:end}
 #game-setup input[type=checkbox]{flex:none;width:16px;height:16px;padding:0;border:0;background:none}
@@ -110,3 +110,29 @@ html[data-theme=dark] .topic-panel{border-color:#52606d}html[data-theme=dark] :i
 .game-page.step-topics .game-head{margin-bottom:0}
 /* Grade and Play share one row above the topic panel, so the whole setup fits on one screen. */
 #game-setup .game-player{order:0}#game-setup>label{order:1}#game-setup #game-start{order:2;align-self:end}#game-setup .topic-panel{order:3}
+
+/* A small waiting room shared by new and returning players. */
+.game-feedback.is-correct{color:#185b38;background:#eaf7ee;border:1px solid #7eb590}
+.game-feedback.is-incorrect{color:#8a3028;background:#fff0eb;border:1px solid #d4988c}
+.game-feedback:is(.is-correct,.is-incorrect){padding:12px 16px;border-radius:9px;display:flex;align-items:baseline;gap:10px;font-weight:600}
+.feedback-symbol{font-size:19px;font-weight:700;flex:none}
+html[data-theme=dark] .game-feedback.is-correct{color:#b3efc8;background:#203d30;border-color:#618c72}
+html[data-theme=dark] .game-feedback.is-incorrect{color:#ffd0c4;background:#462e2b;border-color:#b77d72}
+
+.game-explanation .practice-question-visual{display:none}
+
+/* The main action anchors the settings row at the right. */
+#game-setup #game-count{width:88px}
+#game-setup #game-start{margin-left:auto;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-width:132px;padding:11px 22px;background:#2459a6;color:#fff;border-color:#2459a6;font-weight:700}
+#game-start::before{content:'▶';font-size:12px}
+#game-setup #game-start:hover{background:#19477f;border-color:#19477f}
+#game-setup #game-start:disabled{background:#e5eaf0;color:#596570;border-color:#cdd4db}
+:root[data-theme=dark] #game-setup #game-start{background:#99c5ff!important;color:#14283f!important;border-color:#99c5ff!important}
+:root[data-theme=dark] #game-setup #game-start:hover{background:#bedaff!important;border-color:#bedaff!important}
+:root[data-theme=dark] #game-setup #game-start:disabled{background:#354353!important;color:#b5c1cc!important;border-color:#52606d!important}
+#game-setup .game-grade{order:1;align-self:end}
+
+
+.player-prompt{position:absolute;inset:0 0 auto;top:60px;margin:0 auto;max-width:380px;display:grid;gap:8px;justify-items:center;text-align:center;padding:22px 24px;border:1px solid #cdd4db;border-radius:14px;background:#fff;box-shadow:0 10px 28px #26344026}
+.player-prompt span{font-size:14px;color:#596570}.player-prompt button{min-height:40px;padding:0 20px;border:0;border-radius:8px;background:#2459a6;color:#fff;font:inherit;font-weight:700;cursor:pointer}
+html[data-theme=dark] .player-prompt{background:#222d37;border-color:#52606d}html[data-theme=dark] .player-prompt span{color:#b5c1cc}

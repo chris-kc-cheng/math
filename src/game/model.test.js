@@ -96,3 +96,19 @@ test('single-answer data questions are scored and verified',()=>{
  const g=grade(5);for(const rule of ['data-measure','probability-single']){const t=g.questions.find(q=>q.rule===rule);assert.ok(t,rule);assert.doesNotThrow(()=>numericAnswer(t,t.example));}
  const mean=g.questions.find(q=>q.rule==='data-measure');assert.equal(numericAnswer(mean,mean.example).n,4n);
 });
+
+import {answerAndExplainRound} from './model.js';
+test('every submitted practice answer finishes with an explanation and preserves honest scoring',()=>{
+ const g=grade(1),round=makeRound(g,'all',rng,'automatic-explanation'),template=find(g,round),answer=numericAnswer(template,round.questions[0].values);
+ const correct=answerAndExplainRound(round,template,`${answer.n}/${answer.d}`);
+ assert.equal(correct.questions[0].correct,true);assert.equal(correct.questions[0].assisted,false);assert.equal(score(correct),10);assert.equal(advanceRound(correct).index,1);
+ const wrong=answerAndExplainRound(round,template,`${answer.n+answer.d}/${answer.d}`);
+ assert.equal(wrong.questions[0].correct,false);assert.equal(wrong.questions[0].assisted,true);assert.equal(score(wrong),0);assert.equal(advanceRound(wrong).index,1);
+ assert.equal(battleState(wrong).lives,4);assert.equal(battleState(wrong).misses,1);assert.throws(()=>answerAndExplainRound(wrong,template,`${answer.n}/${answer.d}`),/finished/);
+ assert.throws(()=>answerAndExplainRound(round,template,'2+3'));assert.equal(round.questions[0].attempts,0);
+});
+test('practice rounds honour the selected length and complete at its last question',()=>{
+ const g=grade(2);
+ for(const count of [1,5,10,20,37,50]){let round=makeRound(g,'all',rng,'length-'+count,count);assert.equal(round.questions.length,count);for(let i=0;i<count;i++)round=advanceRound(revealRound(round));assert.equal(round.status,'complete');assert.equal(round.index,count-1);}
+ for(const count of [0,51,2.5,NaN])assert.throws(()=>makeRound(g,'all',rng,'invalid',count),/1 and 50/);
+});

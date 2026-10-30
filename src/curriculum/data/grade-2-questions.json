@@ -1,0 +1,3500 @@
+[
+  {
+    "id": "g2-question-a1-1",
+    "skillId": "g2-a1-1",
+    "title": "Manage emotions",
+    "rule": "manage-emotions",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 0
+    }
+  },
+  {
+    "id": "g2-question-a1-2",
+    "skillId": "g2-a1-2",
+    "title": "Cope with challenges",
+    "rule": "cope-challenge",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 1
+    }
+  },
+  {
+    "id": "g2-question-a1-3",
+    "skillId": "g2-a1-3",
+    "title": "Persist and stay motivated",
+    "rule": "persist",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 2
+    }
+  },
+  {
+    "id": "g2-question-a1-4",
+    "skillId": "g2-a1-4",
+    "title": "Collaborate and communicate",
+    "rule": "communicate",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 0
+    }
+  },
+  {
+    "id": "g2-question-a1-5",
+    "skillId": "g2-a1-5",
+    "title": "Confidence and self-awareness",
+    "rule": "confidence",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 3
+    }
+  },
+  {
+    "id": "g2-question-a1-6",
+    "skillId": "g2-a1-6",
+    "title": "Critical and creative thinking",
+    "rule": "critical-thinking",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 1
+    }
+  },
+  {
+    "id": "g2-question-b1-1-1",
+    "skillId": "g2-b1-1",
+    "title": "Whole numbers to 200",
+    "rule": "primary-read",
+    "parameters": [
+      "number",
+      "style"
+    ],
+    "example": {
+      "number": 127,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 200,
+        "step": 1
+      },
+      [
+        0,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-b1-1-2",
+    "skillId": "g2-b1-1",
+    "title": "Whole numbers to 200 · another way",
+    "rule": "primary-read",
+    "parameters": [
+      "number",
+      "style"
+    ],
+    "example": {
+      "number": 146,
+      "style": 1
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 200,
+        "step": 1
+      },
+      [
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-b1-1-3",
+    "skillId": "g2-b1-1",
+    "title": "Whole numbers to 200 · explore",
+    "rule": "primary-compose",
+    "parameters": [
+      "hundreds",
+      "tens",
+      "ones",
+      "style"
+    ],
+    "example": {
+      "hundreds": 0,
+      "tens": 6,
+      "ones": 7,
+      "style": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ],
+      {
+        "min": 0,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 9,
+        "step": 1
+      },
+      [
+        0,
+        3
+      ]
+    ],
+    "answerMaximum": 200
+  },
+  {
+    "id": "g2-question-b1-1-4",
+    "skillId": "g2-b1-1",
+    "title": "Whole numbers to 200 · another way",
+    "rule": "primary-compose",
+    "parameters": [
+      "hundreds",
+      "tens",
+      "ones",
+      "style"
+    ],
+    "example": {
+      "hundreds": 0,
+      "tens": 3,
+      "ones": 6,
+      "style": 1
+    },
+    "generation": [
+      [
+        0,
+        1
+      ],
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 9,
+        "step": 1
+      },
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-b1-2-1",
+    "skillId": "g2-b1-2",
+    "title": "Compare and order to 200",
+    "rule": "primary-order",
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "style"
+    ],
+    "example": {
+      "first": 108,
+      "second": 117,
+      "third": 112,
+      "style": 1
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 200,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 200,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 200,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-b1-2-2",
+    "skillId": "g2-b1-2",
+    "title": "Compare and order to 200 · explore",
+    "rule": "compare-values",
+    "parameters": [
+      "first",
+      "second",
+      "ask"
+    ],
+    "example": {
+      "first": 118,
+      "second": 112,
+      "ask": 2
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 200,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 200,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-b1-3-1",
+    "skillId": "g2-b1-3",
+    "title": "Estimate and count",
+    "rule": "primary-estimate",
+    "parameters": [
+      "count",
+      "groupSize",
+      "style"
+    ],
+    "example": {
+      "count": 78,
+      "groupSize": 10,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 10,
+        "max": 200,
+        "step": 1
+      },
+      [
+        10,
+        20
+      ],
+      [
+        0,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-b1-3-2",
+    "skillId": "g2-b1-3",
+    "title": "Estimate and count · another way",
+    "rule": "primary-estimate",
+    "parameters": [
+      "count",
+      "groupSize",
+      "style"
+    ],
+    "example": {
+      "count": 123,
+      "groupSize": 10,
+      "style": 1
+    },
+    "generation": [
+      {
+        "min": 10,
+        "max": 200,
+        "step": 1
+      },
+      [
+        10,
+        20
+      ],
+      [
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-b1-4-1",
+    "skillId": "g2-b1-4",
+    "title": "Count by 20s, 25s, and 50s",
+    "rule": "primary-count",
+    "parameters": [
+      "start",
+      "step",
+      "jumps",
+      "style"
+    ],
+    "example": {
+      "start": 0,
+      "step": 25,
+      "jumps": 3,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      },
+      [
+        20,
+        25,
+        50
+      ],
+      {
+        "min": 2,
+        "max": 5,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ]
+    ],
+    "answerMaximum": 200
+  },
+  {
+    "id": "g2-question-b1-4-2",
+    "skillId": "g2-b1-4",
+    "title": "Count by 20s, 25s, and 50s · another way",
+    "rule": "primary-count",
+    "parameters": [
+      "start",
+      "step",
+      "jumps",
+      "style"
+    ],
+    "example": {
+      "start": 0,
+      "step": 20,
+      "jumps": 3,
+      "style": 2
+    },
+    "generation": [
+      [
+        0
+      ],
+      [
+        20,
+        25,
+        50
+      ],
+      {
+        "min": 2,
+        "max": 5,
+        "step": 1
+      },
+      [
+        2,
+        3
+      ]
+    ],
+    "answerMaximum": 200
+  },
+  {
+    "id": "g2-question-b1-5-1",
+    "skillId": "g2-b1-5",
+    "title": "Even and odd",
+    "rule": "primary-parity",
+    "parameters": [
+      "count",
+      "style"
+    ],
+    "example": {
+      "count": 17,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 200,
+        "step": 1
+      },
+      [
+        0
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-b1-5-2",
+    "skillId": "g2-b1-5",
+    "title": "Even and odd · another way",
+    "rule": "primary-parity",
+    "parameters": [
+      "count",
+      "style"
+    ],
+    "example": {
+      "count": 24,
+      "style": 2
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 200,
+        "step": 1
+      },
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-b1-6-1",
+    "skillId": "g2-b1-6",
+    "title": "Fair sharing through ten items",
+    "rule": "primary-fair-share",
+    "parameters": [
+      "items",
+      "sharers",
+      "style",
+      "grade"
+    ],
+    "example": {
+      "items": 5,
+      "sharers": 3,
+      "style": 0,
+      "grade": 2
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 10,
+        "step": 1
+      },
+      [
+        2,
+        3,
+        4,
+        6
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-b1-6-2",
+    "skillId": "g2-b1-6",
+    "title": "Fair sharing through ten items · another way",
+    "rule": "primary-fair-share",
+    "parameters": [
+      "items",
+      "sharers",
+      "style",
+      "grade"
+    ],
+    "example": {
+      "items": 7,
+      "sharers": 4,
+      "style": 2,
+      "grade": 2
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 10,
+        "step": 1
+      },
+      [
+        2,
+        3,
+        4,
+        6
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-b1-7-1",
+    "skillId": "g2-b1-7",
+    "title": "Thirds and sixths",
+    "rule": "primary-equivalent-parts",
+    "parameters": [
+      "partsPerWhole",
+      "splitFactor",
+      "coveredParts",
+      "style"
+    ],
+    "example": {
+      "partsPerWhole": 3,
+      "splitFactor": 2,
+      "coveredParts": 1,
+      "style": 0
+    },
+    "generation": [
+      [
+        3
+      ],
+      [
+        2
+      ],
+      [
+        1
+      ],
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-b1-7-2",
+    "skillId": "g2-b1-7",
+    "title": "Thirds and sixths · another way",
+    "rule": "primary-equivalent-parts",
+    "parameters": [
+      "partsPerWhole",
+      "splitFactor",
+      "coveredParts",
+      "style"
+    ],
+    "example": {
+      "partsPerWhole": 3,
+      "splitFactor": 2,
+      "coveredParts": 1,
+      "style": 3
+    },
+    "generation": [
+      [
+        3
+      ],
+      [
+        2
+      ],
+      [
+        1
+      ],
+      [
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-b2-1-1",
+    "skillId": "g2-b2-1",
+    "title": "Operation relationships",
+    "rule": "primary-groups",
+    "parameters": [
+      "groups",
+      "itemsPerGroup",
+      "denominator",
+      "unknown",
+      "style",
+      "grade"
+    ],
+    "example": {
+      "groups": 3,
+      "itemsPerGroup": 2,
+      "denominator": 1,
+      "unknown": 0,
+      "style": 0,
+      "grade": 2
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 4,
+        "step": 1
+      },
+      [
+        1
+      ],
+      [
+        0
+      ],
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        2
+      ]
+    ],
+    "answerMaximum": 40
+  },
+  {
+    "id": "g2-question-b2-1-2",
+    "skillId": "g2-b2-1",
+    "title": "Operation relationships · explore",
+    "rule": "primary-groups",
+    "parameters": [
+      "groups",
+      "itemsPerGroup",
+      "denominator",
+      "unknown",
+      "style",
+      "grade"
+    ],
+    "example": {
+      "groups": 3,
+      "itemsPerGroup": 2,
+      "denominator": 1,
+      "unknown": 2,
+      "style": 0,
+      "grade": 2
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 2,
+        "step": 1
+      },
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        2
+      ]
+    ],
+    "answerMaximum": 12
+  },
+  {
+    "id": "g2-question-b2-1-3",
+    "skillId": "g2-b2-1",
+    "title": "Operation relationships · explore",
+    "rule": "primary-add-subtract",
+    "parameters": [
+      "first",
+      "second",
+      "subtract",
+      "method"
+    ],
+    "example": {
+      "first": 28,
+      "second": 7,
+      "subtract": 0,
+      "method": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 50,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ],
+      [
+        0
+      ]
+    ],
+    "answerMaximum": 100
+  },
+  {
+    "id": "g2-question-b2-2-1",
+    "skillId": "g2-b2-2",
+    "title": "Facts through 20",
+    "rule": "story-add",
+    "parameters": [
+      "first",
+      "second",
+      "style"
+    ],
+    "example": {
+      "first": 9,
+      "second": 6,
+      "style": 2
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 19,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 19,
+        "step": 1
+      },
+      [
+        0,
+        2,
+        3,
+        5
+      ]
+    ],
+    "answerMaximum": 20
+  },
+  {
+    "id": "g2-question-b2-2-2",
+    "skillId": "g2-b2-2",
+    "title": "Facts through 20 · explore",
+    "rule": "missing-number",
+    "parameters": [
+      "known",
+      "result",
+      "form"
+    ],
+    "example": {
+      "known": 3,
+      "result": 17,
+      "form": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 19,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 20,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        3
+      ]
+    ],
+    "answerMaximum": 20
+  },
+  {
+    "id": "g2-question-b2-3-1",
+    "skillId": "g2-b2-3",
+    "title": "Mental calculation through 50",
+    "rule": "primary-add-subtract",
+    "parameters": [
+      "first",
+      "second",
+      "subtract",
+      "method"
+    ],
+    "example": {
+      "first": 28,
+      "second": 5,
+      "subtract": 0,
+      "method": 1
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 45,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ],
+      [
+        1
+      ]
+    ],
+    "answerMaximum": 50
+  },
+  {
+    "id": "g2-question-b2-3-2",
+    "skillId": "g2-b2-3",
+    "title": "Mental calculation through 50 · explore",
+    "rule": "primary-add-subtract",
+    "parameters": [
+      "first",
+      "second",
+      "subtract",
+      "method"
+    ],
+    "example": {
+      "first": 28,
+      "second": 5,
+      "subtract": 0,
+      "method": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 45,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 8,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ],
+      [
+        0
+      ]
+    ],
+    "answerMaximum": 50
+  },
+  {
+    "id": "g2-question-b2-4-1",
+    "skillId": "g2-b2-4",
+    "title": "Addition and subtraction through 100",
+    "rule": "story-add",
+    "parameters": [
+      "first",
+      "second",
+      "style"
+    ],
+    "example": {
+      "first": 27,
+      "second": 18,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 50,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 50,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "answerMaximum": 100
+  },
+  {
+    "id": "g2-question-b2-4-2",
+    "skillId": "g2-b2-4",
+    "title": "Addition and subtraction through 100 · another way",
+    "rule": "story-subtract",
+    "parameters": [
+      "first",
+      "second",
+      "style"
+    ],
+    "example": {
+      "first": 45,
+      "second": 18,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 100,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 99,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-b2-4-3",
+    "skillId": "g2-b2-4",
+    "title": "Addition and subtraction through 100 · explore",
+    "rule": "primary-add-subtract",
+    "parameters": [
+      "first",
+      "second",
+      "subtract",
+      "method"
+    ],
+    "example": {
+      "first": 28,
+      "second": 7,
+      "subtract": 0,
+      "method": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 50,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ],
+      [
+        0
+      ]
+    ],
+    "answerMaximum": 100
+  },
+  {
+    "id": "g2-question-b2-5-1",
+    "skillId": "g2-b2-5",
+    "title": "Repeated equal groups",
+    "rule": "primary-groups",
+    "parameters": [
+      "groups",
+      "itemsPerGroup",
+      "denominator",
+      "unknown",
+      "style",
+      "grade"
+    ],
+    "example": {
+      "groups": 3,
+      "itemsPerGroup": 2,
+      "denominator": 1,
+      "unknown": 0,
+      "style": 0,
+      "grade": 2
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 4,
+        "step": 1
+      },
+      [
+        1
+      ],
+      [
+        0
+      ],
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        2
+      ]
+    ],
+    "answerMaximum": 40
+  },
+  {
+    "id": "g2-question-b2-5-2",
+    "skillId": "g2-b2-5",
+    "title": "Repeated equal groups · another way",
+    "rule": "primary-groups",
+    "parameters": [
+      "groups",
+      "itemsPerGroup",
+      "denominator",
+      "unknown",
+      "style",
+      "grade"
+    ],
+    "example": {
+      "groups": 3,
+      "itemsPerGroup": 1,
+      "denominator": 4,
+      "unknown": 0,
+      "style": 1,
+      "grade": 2
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 6,
+        "step": 1
+      },
+      [
+        1
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        0
+      ],
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        2
+      ]
+    ],
+    "answerMaximum": 10
+  },
+  {
+    "id": "g2-question-b2-6-1",
+    "skillId": "g2-b2-6",
+    "title": "Equal sharing through twelve items",
+    "rule": "primary-groups",
+    "parameters": [
+      "groups",
+      "itemsPerGroup",
+      "denominator",
+      "unknown",
+      "style",
+      "grade"
+    ],
+    "example": {
+      "groups": 3,
+      "itemsPerGroup": 2,
+      "denominator": 1,
+      "unknown": 2,
+      "style": 0,
+      "grade": 2
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 2,
+        "step": 1
+      },
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        2
+      ]
+    ],
+    "answerMaximum": 12
+  },
+  {
+    "id": "g2-question-b2-6-2",
+    "skillId": "g2-b2-6",
+    "title": "Equal sharing through twelve items · explore",
+    "rule": "primary-groups",
+    "parameters": [
+      "groups",
+      "itemsPerGroup",
+      "denominator",
+      "unknown",
+      "style",
+      "grade"
+    ],
+    "example": {
+      "groups": 3,
+      "itemsPerGroup": 2,
+      "denominator": 1,
+      "unknown": 1,
+      "style": 0,
+      "grade": 2
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 2,
+        "step": 1
+      },
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        2
+      ]
+    ],
+    "answerMaximum": 12
+  },
+  {
+    "id": "g2-question-c1-1-1",
+    "skillId": "g2-c1-1",
+    "title": "Geometric patterns",
+    "rule": "primary-pattern",
+    "parameters": [
+      "unit",
+      "repeats",
+      "missingIndex",
+      "style"
+    ],
+    "example": {
+      "unit": 0,
+      "repeats": 3,
+      "missingIndex": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 3,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 4,
+        "step": 1
+      },
+      [
+        0
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-c1-1-2",
+    "skillId": "g2-c1-1",
+    "title": "Geometric patterns · another way",
+    "rule": "primary-pattern",
+    "parameters": [
+      "unit",
+      "repeats",
+      "missingIndex",
+      "style"
+    ],
+    "example": {
+      "unit": 1,
+      "repeats": 3,
+      "missingIndex": 2,
+      "style": 1
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 3,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 4,
+        "step": 1
+      },
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-c1-2-1",
+    "skillId": "g2-c1-2",
+    "title": "Translate patterns",
+    "rule": "primary-pattern",
+    "parameters": [
+      "unit",
+      "repeats",
+      "missingIndex",
+      "style"
+    ],
+    "example": {
+      "unit": 0,
+      "repeats": 3,
+      "missingIndex": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 3,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 4,
+        "step": 1
+      },
+      [
+        0
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-c1-2-2",
+    "skillId": "g2-c1-2",
+    "title": "Translate patterns · explore",
+    "rule": "primary-count",
+    "parameters": [
+      "start",
+      "step",
+      "jumps",
+      "style"
+    ],
+    "example": {
+      "start": 0,
+      "step": 25,
+      "jumps": 3,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      },
+      [
+        20,
+        25,
+        50
+      ],
+      {
+        "min": 2,
+        "max": 5,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ]
+    ],
+    "answerMaximum": 200
+  },
+  {
+    "id": "g2-question-c1-3-1",
+    "skillId": "g2-c1-3",
+    "title": "Rules and missing elements",
+    "rule": "primary-pattern",
+    "parameters": [
+      "unit",
+      "repeats",
+      "missingIndex",
+      "style"
+    ],
+    "example": {
+      "unit": 1,
+      "repeats": 3,
+      "missingIndex": 2,
+      "style": 1
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 3,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 4,
+        "step": 1
+      },
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-c1-3-2",
+    "skillId": "g2-c1-3",
+    "title": "Rules and missing elements · another way",
+    "rule": "primary-count",
+    "parameters": [
+      "start",
+      "step",
+      "jumps",
+      "style"
+    ],
+    "example": {
+      "start": 0,
+      "step": 20,
+      "jumps": 3,
+      "style": 2
+    },
+    "generation": [
+      [
+        0
+      ],
+      [
+        20,
+        25,
+        50
+      ],
+      {
+        "min": 2,
+        "max": 5,
+        "step": 1
+      },
+      [
+        2,
+        3
+      ]
+    ],
+    "answerMaximum": 200
+  },
+  {
+    "id": "g2-question-c1-4-1",
+    "skillId": "g2-c1-4",
+    "title": "Number relationships through 100",
+    "rule": "primary-count",
+    "parameters": [
+      "start",
+      "step",
+      "jumps",
+      "style"
+    ],
+    "example": {
+      "start": 0,
+      "step": 25,
+      "jumps": 3,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      },
+      [
+        20,
+        25,
+        50
+      ],
+      {
+        "min": 2,
+        "max": 5,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ]
+    ],
+    "answerMaximum": 100
+  },
+  {
+    "id": "g2-question-c1-4-2",
+    "skillId": "g2-c1-4",
+    "title": "Number relationships through 100 · another way",
+    "rule": "primary-count",
+    "parameters": [
+      "start",
+      "step",
+      "jumps",
+      "style"
+    ],
+    "example": {
+      "start": 0,
+      "step": 20,
+      "jumps": 3,
+      "style": 2
+    },
+    "generation": [
+      [
+        0
+      ],
+      [
+        20,
+        25,
+        50
+      ],
+      {
+        "min": 2,
+        "max": 5,
+        "step": 1
+      },
+      [
+        2,
+        3
+      ]
+    ],
+    "answerMaximum": 100
+  },
+  {
+    "id": "g2-question-c2-1-1",
+    "skillId": "g2-c2-1",
+    "title": "Symbols as variables",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "A box stands for the number of marbles in a bag. What does the box represent?",
+        "steps": [
+          "It represents a quantity, not the bag’s name or colour.",
+          "If marbles are added, the quantity represented by the box changes. Draw your own symbol."
+        ]
+      },
+      {
+        "prompt": "In “□ + 3 = 8”, explain what □ means without guessing randomly.",
+        "steps": [
+          "The box is the unknown part. Count up from 3 to 8 to find it.",
+          "Five is the amount that makes both sides equal; putting it back checks the meaning."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "g2-question-c2-1-2",
+    "skillId": "g2-c2-1",
+    "title": "Symbols as variables · another way",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "A menu writes n for the number of apples chosen. Explain n for zero apples and for four apples.",
+        "steps": [
+          "The same symbol can stand for different chosen quantities in different situations.",
+          "Here n is 0 or 4; it is not a multiplication sign or a unit of money."
+        ]
+      },
+      {
+        "prompt": "Write a number story in which a symbol stands for how many counters are hidden.",
+        "steps": [
+          "Choose the total and show the visible counters.",
+          "Use the symbol for the hidden part, and explain how uncovering the counters checks the story."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "g2-question-c2-2-1",
+    "skillId": "g2-c2-2",
+    "title": "Make expressions equivalent",
+    "rule": "primary-balance",
+    "parameters": [
+      "leftFirst",
+      "leftSecond",
+      "rightKnown",
+      "style"
+    ],
+    "example": {
+      "leftFirst": 28,
+      "leftSecond": 5,
+      "rightKnown": 30,
+      "style": 1
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 50,
+        "step": 1
+      },
+      [
+        1,
+        2,
+        3
+      ]
+    ],
+    "answerMaximum": 100
+  },
+  {
+    "id": "g2-question-c2-2-2",
+    "skillId": "g2-c2-2",
+    "title": "Make expressions equivalent · another way",
+    "rule": "primary-expressions",
+    "parameters": [
+      "first",
+      "second",
+      "operation",
+      "split",
+      "offset",
+      "style"
+    ],
+    "example": {
+      "first": 9,
+      "second": 4,
+      "operation": 0,
+      "split": 3,
+      "offset": 2,
+      "style": 2
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 40,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ],
+      {
+        "min": 1,
+        "max": 8,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-c2-3-1",
+    "skillId": "g2-c2-3",
+    "title": "Equivalent relationships through 100",
+    "rule": "primary-balance",
+    "parameters": [
+      "leftFirst",
+      "leftSecond",
+      "rightKnown",
+      "style"
+    ],
+    "example": {
+      "leftFirst": 28,
+      "leftSecond": 5,
+      "rightKnown": 30,
+      "style": 1
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 50,
+        "step": 1
+      },
+      [
+        1,
+        2,
+        3
+      ]
+    ],
+    "answerMaximum": 100
+  },
+  {
+    "id": "g2-question-c2-3-2",
+    "skillId": "g2-c2-3",
+    "title": "Equivalent relationships through 100 · another way",
+    "rule": "primary-balance",
+    "parameters": [
+      "leftFirst",
+      "leftSecond",
+      "rightKnown",
+      "style"
+    ],
+    "example": {
+      "leftFirst": 8,
+      "leftSecond": 5,
+      "rightKnown": 12,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 80,
+        "step": 1
+      },
+      [
+        0
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-c3-1-1",
+    "skillId": "g2-c3-1",
+    "title": "Sequential and concurrent code",
+    "rule": "primary-code",
+    "parameters": [
+      "right",
+      "up",
+      "repeats",
+      "eventMode",
+      "style"
+    ],
+    "example": {
+      "right": 3,
+      "up": 2,
+      "repeats": 1,
+      "eventMode": 1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 4,
+        "step": 1
+      },
+      [
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-c3-1-2",
+    "skillId": "g2-c3-1",
+    "title": "Sequential and concurrent code · another way",
+    "rule": "primary-code-change",
+    "parameters": [
+      "right",
+      "up",
+      "extraRight",
+      "style"
+    ],
+    "example": {
+      "right": 3,
+      "up": 2,
+      "extraRight": 1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 3,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-c3-2-1",
+    "skillId": "g2-c3-2",
+    "title": "Read and alter events",
+    "rule": "primary-code-change",
+    "parameters": [
+      "right",
+      "up",
+      "extraRight",
+      "style"
+    ],
+    "example": {
+      "right": 3,
+      "up": 2,
+      "extraRight": 1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 3,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-c3-2-2",
+    "skillId": "g2-c3-2",
+    "title": "Read and alter events · explore",
+    "rule": "primary-code",
+    "parameters": [
+      "right",
+      "up",
+      "repeats",
+      "eventMode",
+      "style"
+    ],
+    "example": {
+      "right": 3,
+      "up": 2,
+      "repeats": 1,
+      "eventMode": 1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 4,
+        "step": 1
+      },
+      [
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-c4-1",
+    "skillId": "g2-c4",
+    "title": "Mathematical modelling",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Plan fair places for 9 children at tables that each seat 4. Draw a plan.",
+        "steps": [
+          "Name what is known and what you need to find. Try tables with counters for children.",
+          "Two tables seat 8, so one child still needs a place. A third table works; discuss the empty seats.",
+          "Check your plan with a partner, then revise it if two more children arrive."
+        ]
+      },
+      {
+        "prompt": "Plan a snack for 12 children when each plate holds 5 pieces of fruit.",
+        "steps": [
+          "Decide whether each child needs one piece, and state that assumption.",
+          "Draw two full plates and the extra pieces; a third plate is needed if nobody shares a piece.",
+          "Test and revise the plan if some children do not want fruit."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "g2-question-c4-2",
+    "skillId": "g2-c4",
+    "title": "Mathematical modelling · another way",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Design a quiet reading corner for 6 children. What information do you need?",
+        "steps": [
+          "Choose assumptions about space, seating, and safe walking paths.",
+          "Make a drawing and use counters to test whether everyone fits.",
+          "Explain a change that makes the model work better. There can be more than one sensible plan."
+        ]
+      },
+      {
+        "prompt": "Plan how to share 10 crayons between two tables with different numbers of learners.",
+        "steps": [
+          "Decide whether fairness means equal crayons per table or enough colours for each learner.",
+          "Draw a first plan and check it against your chosen rule.",
+          "Discuss the assumptions and revise the plan when the group sizes change."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "g2-question-d1-1-1",
+    "skillId": "g2-d1-1",
+    "title": "Sort by two attributes",
+    "rule": "primary-sort",
+    "parameters": [
+      "seed",
+      "count",
+      "attributeCount",
+      "style"
+    ],
+    "example": {
+      "seed": 2,
+      "count": 8,
+      "attributeCount": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 7,
+        "step": 1
+      },
+      {
+        "min": 6,
+        "max": 10,
+        "step": 1
+      },
+      [
+        2
+      ],
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-d1-1-2",
+    "skillId": "g2-d1-1",
+    "title": "Sort by two attributes · another way",
+    "rule": "primary-sort",
+    "parameters": [
+      "seed",
+      "count",
+      "attributeCount",
+      "style"
+    ],
+    "example": {
+      "seed": 3,
+      "count": 9,
+      "attributeCount": 2,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 7,
+        "step": 1
+      },
+      {
+        "min": 6,
+        "max": 10,
+        "step": 1
+      },
+      [
+        2
+      ],
+      [
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-d1-2-1",
+    "skillId": "g2-d1-2",
+    "title": "Two-way tally tables",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Survey both favourite fruit and how learners travel to school. How can a two-way table help?",
+        "steps": [
+          "Use fruit as rows and travel as columns; put each response in exactly one matching cell.",
+          "Check the row and column totals against the number of learners interviewed."
+        ]
+      },
+      {
+        "prompt": "Choose a question involving categories and another involving counts. Explain how to record both.",
+        "steps": [
+          "A favourite colour is a category; a number of books is a count.",
+          "Use consistent questions and organize the observations in a labelled frequency table."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "g2-question-d1-2-2",
+    "skillId": "g2-d1-2",
+    "title": "Two-way tally tables · explore",
+    "rule": "primary-sort",
+    "parameters": [
+      "seed",
+      "count",
+      "attributeCount",
+      "style"
+    ],
+    "example": {
+      "seed": 2,
+      "count": 8,
+      "attributeCount": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 7,
+        "step": 1
+      },
+      {
+        "min": 6,
+        "max": 10,
+        "step": 1
+      },
+      [
+        2
+      ],
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-d1-3-1",
+    "skillId": "g2-d1-3",
+    "title": "Graphs and line plots",
+    "rule": "primary-chart",
+    "parameters": [
+      "firstPictures",
+      "secondPictures",
+      "thirdPictures",
+      "key",
+      "question",
+      "display",
+      "grade"
+    ],
+    "example": {
+      "firstPictures": 4,
+      "secondPictures": 3,
+      "thirdPictures": 2,
+      "key": 1,
+      "question": 0,
+      "display": 1,
+      "grade": 2
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      },
+      [
+        1
+      ],
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-d1-3-2",
+    "skillId": "g2-d1-3",
+    "title": "Graphs and line plots · explore",
+    "rule": "primary-chart",
+    "parameters": [
+      "firstPictures",
+      "secondPictures",
+      "thirdPictures",
+      "key",
+      "question",
+      "display",
+      "grade"
+    ],
+    "example": {
+      "firstPictures": 4,
+      "secondPictures": 3,
+      "thirdPictures": 2,
+      "key": 1,
+      "question": 2,
+      "display": 3,
+      "grade": 2
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      },
+      [
+        1
+      ],
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-d1-4-1",
+    "skillId": "g2-d1-4",
+    "title": "Modes",
+    "rule": "primary-chart",
+    "parameters": [
+      "firstPictures",
+      "secondPictures",
+      "thirdPictures",
+      "key",
+      "question",
+      "display",
+      "grade"
+    ],
+    "example": {
+      "firstPictures": 5,
+      "secondPictures": 3,
+      "thirdPictures": 2,
+      "key": 1,
+      "question": 3,
+      "display": 3,
+      "grade": 2
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      },
+      [
+        1
+      ],
+      [
+        3
+      ],
+      [
+        0,
+        2,
+        3
+      ],
+      [
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-d1-4-2",
+    "skillId": "g2-d1-4",
+    "title": "Modes · explore",
+    "rule": "primary-populations",
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "shift",
+      "style",
+      "grade"
+    ],
+    "example": {
+      "first": 3,
+      "second": 6,
+      "third": 9,
+      "shift": 2,
+      "style": 0,
+      "grade": 2
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 4,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ],
+      [
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-d1-5-1",
+    "skillId": "g2-d1-5",
+    "title": "Interpret data",
+    "rule": "primary-chart",
+    "parameters": [
+      "firstPictures",
+      "secondPictures",
+      "thirdPictures",
+      "key",
+      "question",
+      "display",
+      "grade"
+    ],
+    "example": {
+      "firstPictures": 4,
+      "secondPictures": 3,
+      "thirdPictures": 2,
+      "key": 1,
+      "question": 0,
+      "display": 1,
+      "grade": 2
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      },
+      [
+        1
+      ],
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-d1-5-2",
+    "skillId": "g2-d1-5",
+    "title": "Interpret data · explore",
+    "rule": "primary-chart",
+    "parameters": [
+      "firstPictures",
+      "secondPictures",
+      "thirdPictures",
+      "key",
+      "question",
+      "display",
+      "grade"
+    ],
+    "example": {
+      "firstPictures": 4,
+      "secondPictures": 3,
+      "thirdPictures": 2,
+      "key": 1,
+      "question": 2,
+      "display": 3,
+      "grade": 2
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      },
+      [
+        1
+      ],
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-d2-1-1",
+    "skillId": "g2-d2-1",
+    "title": "Complementary likelihood",
+    "rule": "primary-likelihood",
+    "parameters": [
+      "red",
+      "blue",
+      "notRed",
+      "style",
+      "grade"
+    ],
+    "example": {
+      "red": 3,
+      "blue": 2,
+      "notRed": 0,
+      "style": 0,
+      "grade": 2
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 8,
+        "step": 1
+      },
+      [
+        0
+      ],
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-d2-1-2",
+    "skillId": "g2-d2-1",
+    "title": "Complementary likelihood · another way",
+    "rule": "primary-likelihood",
+    "parameters": [
+      "red",
+      "blue",
+      "notRed",
+      "style",
+      "grade"
+    ],
+    "example": {
+      "red": 4,
+      "blue": 0,
+      "notRed": 1,
+      "style": 2,
+      "grade": 2
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 8,
+        "step": 1
+      },
+      [
+        1
+      ],
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-d2-2-1",
+    "skillId": "g2-d2-2",
+    "title": "Compare population modes",
+    "rule": "primary-populations",
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "shift",
+      "style",
+      "grade"
+    ],
+    "example": {
+      "first": 3,
+      "second": 6,
+      "third": 9,
+      "shift": 2,
+      "style": 0,
+      "grade": 2
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 4,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ],
+      [
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-d2-2-2",
+    "skillId": "g2-d2-2",
+    "title": "Compare population modes · another way",
+    "rule": "primary-populations",
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "shift",
+      "style",
+      "grade"
+    ],
+    "example": {
+      "first": 6,
+      "second": 3,
+      "third": 9,
+      "shift": 3,
+      "style": 2,
+      "grade": 2
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 4,
+        "step": 1
+      },
+      [
+        2
+      ],
+      [
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-e1-1-1",
+    "skillId": "g2-e1-1",
+    "title": "Classify two-dimensional shapes",
+    "rule": "primary-shape",
+    "parameters": [
+      "shape",
+      "attribute",
+      "style",
+      "solid"
+    ],
+    "example": {
+      "shape": 1,
+      "attribute": 0,
+      "style": 0,
+      "solid": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 5,
+        "step": 1
+      },
+      [
+        0
+      ],
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-e1-1-2",
+    "skillId": "g2-e1-1",
+    "title": "Classify two-dimensional shapes · explore",
+    "rule": "primary-symmetry",
+    "parameters": [
+      "shape",
+      "fold",
+      "style"
+    ],
+    "example": {
+      "shape": 0,
+      "fold": 0,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 2,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-e1-2-1",
+    "skillId": "g2-e1-2",
+    "title": "Rearrange shapes and area",
+    "rule": "primary-tiles",
+    "parameters": [
+      "rows",
+      "columns",
+      "style",
+      "squareCentimetres"
+    ],
+    "example": {
+      "rows": 3,
+      "columns": 4,
+      "style": 0,
+      "squareCentimetres": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 5,
+        "step": 1
+      },
+      [
+        0,
+        2
+      ],
+      [
+        0
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-e1-2-2",
+    "skillId": "g2-e1-2",
+    "title": "Rearrange shapes and area · another way",
+    "rule": "primary-tiles",
+    "parameters": [
+      "rows",
+      "columns",
+      "style",
+      "squareCentimetres"
+    ],
+    "example": {
+      "rows": 2,
+      "columns": 5,
+      "style": 1,
+      "squareCentimetres": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 5,
+        "step": 1
+      },
+      [
+        1
+      ],
+      [
+        0
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-e1-2-3",
+    "skillId": "g2-e1-2",
+    "title": "Rearrange shapes and area · explore",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Cut a paper rectangle into two triangles. Rearrange the pieces. Did the amount of paper change?",
+        "steps": [
+          "Keep both pieces, with no gaps or overlaps.",
+          "The outline can change while the covered area stays the same. Trace before and after."
+        ]
+      },
+      {
+        "prompt": "Join two matching triangles to make a larger shape. Find a second arrangement.",
+        "steps": [
+          "Use exactly the same two pieces each time.",
+          "Compare the covered area by matching the pieces rather than guessing from the outline."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "g2-question-e1-3-1",
+    "skillId": "g2-e1-3",
+    "title": "Congruent shapes",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Trace a shape twice, then turn one copy. Do they still match exactly?",
+        "steps": [
+          "Move or turn a copy without stretching it.",
+          "If every side and corner matches, the copies are congruent; position does not change size."
+        ]
+      },
+      {
+        "prompt": "Compare two rectangles of equal height but different lengths. Are they congruent?",
+        "steps": [
+          "Try to match their outlines. Matching one length is not enough.",
+          "The unmatched lengths prevent an exact fit."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "g2-question-e1-3-2",
+    "skillId": "g2-e1-3",
+    "title": "Congruent shapes · another way",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Compare two solid models built from the same arrangement of identical cubes. Turn one model.",
+        "steps": [
+          "Compare corresponding faces, edges, and corners.",
+          "A turn can make congruent objects look different without changing their size or shape."
+        ]
+      },
+      {
+        "prompt": "A cube is replaced by a larger cube. Are the two objects congruent?",
+        "steps": [
+          "They have the same type of shape, but their corresponding edge lengths do not match.",
+          "Congruent means equal size as well as matching shape. Check with models."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "g2-question-e1-4-1",
+    "skillId": "g2-e1-4",
+    "title": "Maps of familiar places",
+    "rule": "primary-route",
+    "parameters": [
+      "right",
+      "up",
+      "left",
+      "style",
+      "grade"
+    ],
+    "example": {
+      "right": 3,
+      "up": 2,
+      "left": 1,
+      "style": 0,
+      "grade": 2
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 4,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ],
+      [
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-e1-4-2",
+    "skillId": "g2-e1-4",
+    "title": "Maps of familiar places · explore",
+    "rule": "primary-code",
+    "parameters": [
+      "right",
+      "up",
+      "repeats",
+      "eventMode",
+      "style"
+    ],
+    "example": {
+      "right": 3,
+      "up": 2,
+      "repeats": 1,
+      "eventMode": 1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 4,
+        "step": 1
+      },
+      [
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-e1-5-1",
+    "skillId": "g2-e1-5",
+    "title": "Relative positions and movement",
+    "rule": "primary-position",
+    "parameters": [
+      "layout",
+      "target",
+      "style"
+    ],
+    "example": {
+      "layout": 0,
+      "target": 0,
+      "style": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-e1-5-2",
+    "skillId": "g2-e1-5",
+    "title": "Relative positions and movement · another way",
+    "rule": "primary-position",
+    "parameters": [
+      "layout",
+      "target",
+      "style"
+    ],
+    "example": {
+      "layout": 1,
+      "target": 2,
+      "style": 2
+    },
+    "generation": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-e1-5-3",
+    "skillId": "g2-e1-5",
+    "title": "Relative positions and movement · explore",
+    "rule": "primary-route",
+    "parameters": [
+      "right",
+      "up",
+      "left",
+      "style",
+      "grade"
+    ],
+    "example": {
+      "right": 3,
+      "up": 2,
+      "left": 1,
+      "style": 0,
+      "grade": 2
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 4,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ],
+      [
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-e2-1-1",
+    "skillId": "g2-e2-1",
+    "title": "Non-standard length units",
+    "rule": "primary-measure",
+    "parameters": [
+      "length",
+      "unitSize",
+      "start",
+      "style"
+    ],
+    "example": {
+      "length": 12,
+      "unitSize": 3,
+      "start": 0,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 4,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      [
+        0
+      ],
+      [
+        0,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-e2-1-2",
+    "skillId": "g2-e2-1",
+    "title": "Non-standard length units · another way",
+    "rule": "primary-measure",
+    "parameters": [
+      "length",
+      "unitSize",
+      "start",
+      "style"
+    ],
+    "example": {
+      "length": 8,
+      "unitSize": 2,
+      "start": 3,
+      "style": 1
+    },
+    "generation": [
+      {
+        "min": 4,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      [
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-e2-2-1",
+    "skillId": "g2-e2-2",
+    "title": "Centimetres and metres",
+    "rule": "primary-metric",
+    "parameters": [
+      "amount",
+      "unitPair",
+      "style"
+    ],
+    "example": {
+      "amount": 2,
+      "unitPair": 0,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 2,
+        "step": 1
+      },
+      [
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-e2-2-2",
+    "skillId": "g2-e2-2",
+    "title": "Centimetres and metres · another way",
+    "rule": "primary-metric",
+    "parameters": [
+      "amount",
+      "unitPair",
+      "style"
+    ],
+    "example": {
+      "amount": 1,
+      "unitPair": 0,
+      "style": 2
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 2,
+        "step": 1
+      },
+      [
+        0
+      ],
+      [
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-e2-3-1",
+    "skillId": "g2-e2-3",
+    "title": "Measure from different starts",
+    "rule": "primary-measure",
+    "parameters": [
+      "length",
+      "unitSize",
+      "start",
+      "style"
+    ],
+    "example": {
+      "length": 8,
+      "unitSize": 2,
+      "start": 3,
+      "style": 1
+    },
+    "generation": [
+      {
+        "min": 4,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      [
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-e2-3-2",
+    "skillId": "g2-e2-3",
+    "title": "Measure from different starts · explore",
+    "rule": "primary-measure",
+    "parameters": [
+      "length",
+      "unitSize",
+      "start",
+      "style"
+    ],
+    "example": {
+      "length": 12,
+      "unitSize": 3,
+      "start": 0,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 4,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      [
+        0
+      ],
+      [
+        0,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-e2-4-1",
+    "skillId": "g2-e2-4",
+    "title": "Duration units",
+    "rule": "primary-duration",
+    "parameters": [
+      "amount",
+      "unit",
+      "style"
+    ],
+    "example": {
+      "amount": 2,
+      "unit": 0,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 3,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "answerMaximum": 200
+  },
+  {
+    "id": "g2-question-e2-4-2",
+    "skillId": "g2-e2-4",
+    "title": "Duration units · another way",
+    "rule": "primary-duration",
+    "parameters": [
+      "amount",
+      "unit",
+      "style"
+    ],
+    "example": {
+      "amount": 3,
+      "unit": 0,
+      "style": 2
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 3,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ],
+      [
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g2-question-e2-4-3",
+    "skillId": "g2-e2-4",
+    "title": "Duration units · explore",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Choose seconds, minutes, or hours for the time it takes to blink, eat lunch, and sleep.",
+        "steps": [
+          "A blink is very short, lunch takes longer, and sleep lasts many hours.",
+          "Explain why the same unit is not convenient for every event."
+        ]
+      },
+      {
+        "prompt": "Measure a short activity using equal claps as your time units. How can you make the comparison fair?",
+        "steps": [
+          "Keep the clap pace steady and start and stop at agreed events.",
+          "Compare with a timer; unequal claps do not make equal time units."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "g2-question-f1-1-1",
+    "skillId": "g2-f1-1",
+    "title": "Equivalent money combinations",
+    "rule": "primary-money",
+    "parameters": [
+      "firstValueCents",
+      "count",
+      "secondValueCents",
+      "secondCount",
+      "style",
+      "dollars"
+    ],
+    "example": {
+      "firstValueCents": 25,
+      "count": 4,
+      "secondValueCents": 10,
+      "secondCount": 3,
+      "style": 1,
+      "dollars": 0
+    },
+    "generation": [
+      [
+        1,
+        5,
+        10,
+        25,
+        50
+      ],
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      [
+        1,
+        5,
+        10,
+        25,
+        50
+      ],
+      {
+        "min": 0,
+        "max": 5,
+        "step": 1
+      },
+      [
+        1,
+        2,
+        4
+      ],
+      [
+        0
+      ]
+    ],
+    "answerMaximum": 200
+  },
+  {
+    "id": "g2-question-f1-1-2",
+    "skillId": "g2-f1-1",
+    "title": "Equivalent money combinations · another way",
+    "rule": "primary-money",
+    "parameters": [
+      "firstValueCents",
+      "count",
+      "secondValueCents",
+      "secondCount",
+      "style",
+      "dollars"
+    ],
+    "example": {
+      "firstValueCents": 2000,
+      "count": 3,
+      "secondValueCents": 1000,
+      "secondCount": 2,
+      "style": 1,
+      "dollars": 1
+    },
+    "generation": [
+      [
+        100,
+        200,
+        500,
+        1000,
+        2000,
+        5000,
+        10000
+      ],
+      {
+        "min": 1,
+        "max": 3,
+        "step": 1
+      },
+      [
+        100,
+        200,
+        500,
+        1000,
+        2000,
+        5000,
+        10000
+      ],
+      {
+        "min": 0,
+        "max": 2,
+        "step": 1
+      },
+      [
+        1,
+        4
+      ],
+      [
+        1
+      ]
+    ],
+    "answerMaximum": 200
+  }
+]

@@ -102,7 +102,7 @@ function unitRate([quantity,total,quantity2,style]){
 
 // Solve or evaluate m·n + b; for the "solve" styles the answer is n, for the "evaluate" styles it is the value.
 function linearStory([m,b,x,style]){
- whole(m,b,x);requireThat(m>=1&&b>=0&&x>=0,'Use whole numbers for a multiply-then-add rule.');const value=m*x+b;
+ whole(m,b,x);requireThat(m>=2&&b>=1&&x>=0,'Use a real multiply-then-add rule: multiply by at least 2 and add at least 1.');const value=m*x+b;
  const [text,kind]=pick([
   [`I think of a number, multiply it by ${m}, then add ${b}. The result is ${value}. What is my number?`,'solve'],
   [`A taxi charges $${b} to start and $${m} for each kilometre. A ride cost $${value}. How many kilometres was the ride?`,'solve'],

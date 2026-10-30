@@ -41,8 +41,21 @@ html[data-theme=dark] :is(.profile-legend,.curriculum-profile .profile-label,.pr
 .popover-title{margin:0 0 8px;font-size:12px;color:#596570}
 .popover-list{display:grid;gap:6px}.popover .profile-badge{width:100%;justify-content:flex-start}
 .popover-legend{display:grid;gap:6px;margin-top:12px;padding-top:10px;border-top:1px solid #e1e6eb;font-size:12px;color:#596570}.popover-legend small{color:#75818c}.legend-row{display:flex;align-items:center;gap:8px}
-.grade-row{display:flex;align-items:center;gap:6px}.grade-row .grade-node{flex:1;min-width:0}
-.grade-change{display:grid;place-items:center;flex:none;width:34px;height:34px;padding:0;border-radius:6px;color:#596570}.grade-change svg{width:20px;height:20px}.grade-change:hover{background:#edf3fb;color:#2459a6}
-.grade-list{display:flex;gap:6px}.grade-option{width:38px;height:38px;padding:0;border-radius:50%;font-weight:600}.grade-option[aria-pressed=true]{border-color:#2459a6;background:#edf3fb;color:#2459a6}
+.grade-row{display:flex;flex-wrap:wrap;align-items:center;gap:6px}.grade-row .grade-picker{flex-basis:100%}.grade-row .grade-node{flex:1;min-width:0}
 html[data-theme=dark] .popover{background:#222d37;color:#e1e7ed;border-color:#52606d}html[data-theme=dark] :is(.popover-title,.popover-legend,.popover-legend small){color:#b5c1cc}html[data-theme=dark] .popover-legend{border-color:#52606d}
 .sheet-button{display:grid;place-items:center;flex:none;width:36px;height:36px;padding:0;border-radius:8px;color:#596570}.sheet-button svg{width:20px;height:20px}.sheet-button:hover{background:#edf3fb;color:#2459a6}
+
+/* Primary sharing models keep every learner row visible. */
+.practice-visual svg.primary-model { max-height: none; }
+.practice-visual svg.secondary-model{max-height:none;color:#202b35}html[data-theme=dark] .practice-visual svg.secondary-model{color:#e1e7ed}
+
+/* Connected grade toggles, with a persistent selected state. */
+.tally-marks{display:flex;flex-wrap:wrap;align-items:center;gap:7px;color:inherit}
+.practice-visual .tally-marks svg{flex:0 0 36px;width:36px;height:30px;margin:0;overflow:visible}
+
+/* Grade display and its selector share one row: the grade chip, then a frameless icon button in the same accent colour. */
+.grade-row{gap:4px;row-gap:6px}.grade-row .grade-node{flex:1 1 0;min-width:0;min-height:40px;margin:0}
+.grade-row .grade-trigger{flex:none;justify-content:center;width:36px;min-height:40px;padding:0;border:0;border-radius:5px;background:transparent;color:#2459a6}
+.grade-row .grade-trigger svg{width:18px;height:18px}.grade-row .grade-caret{display:none}
+.grade-row .grade-trigger:hover,.grade-row .grade-trigger[aria-expanded=true]{background:#e7effa;color:#2459a6}
+html[data-theme=dark] .grade-row .grade-trigger{background:transparent;color:#99c5ff}html[data-theme=dark] .grade-row .grade-trigger:hover,html[data-theme=dark] .grade-row .grade-trigger[aria-expanded=true]{background:#2f4157;color:#99c5ff}

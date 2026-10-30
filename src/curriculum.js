@@ -1,3 +1,4 @@
+import {clearCalculatorContext} from './calculator/plans.js';
 import 'katex/dist/katex.min.css';
 import {pageNav} from './nav.js';
 import './style.css';
@@ -7,9 +8,10 @@ import {mountPractice} from './curriculum/practice-view.js';
 import {setPlaybackIcon} from './curriculum/playback-controls.js';
 import {listRounds} from './game/storage.js';
 import {progressTree,attemptHistory,recentRate,levelOf} from './game/model.js';
-import {activeProfile,chooseProfile,profilesIn} from './game/profile.js';
+import {activeProfile} from './game/profile.js';
+import {mountGradePicker} from './grade-picker.js';
 
-let active=curriculumForGrade(new URLSearchParams(location.search).get('grade')||location.hash.match(/^#(?:g|grade-)([4-8])(?:-|$)/)?.[1]||'5');
+let active=curriculumForGrade(new URLSearchParams(location.search).get('grade')||location.hash.match(/^#(?:g|grade-)(10|[1-9])(?:-|$)/)?.[1]||'5');
 let {curriculum,sources,suggestedSequence,questions}=active;
 const activitiesForSkill=id=>active.activities.filter(item=>item.skillIds.includes(id));
 
@@ -18,7 +20,7 @@ function index(node,parents=[]){nodes.set(node.id,{node,parents});for(const chil
 index(curriculum);
 const count=node=>node.children?node.children.reduce((n,c)=>n+count(c),0):1;
 const app=document.querySelector('#app');
-app.innerHTML='<main class="curriculum-page">'+pageNav('curriculum')+'<header class="curriculum-header"><div><p class="curriculum-eyebrow">ONTARIO · GRADE 5</p><h1>Math curriculum</h1></div></header><div class="curriculum-layout"><aside class="curriculum-sidebar"><div class="sidebar-bar"><div id="mode-toggle" class="curriculum-modes" role="group" aria-label="View"></div><button id="worksheet-button" type="button" class="sheet-button" aria-haspopup="dialog" aria-label="Create exercise sheet (PDF)" title="Create exercise sheet (PDF)"></button><div id="profile-menu-wrap" class="menu-wrap" hidden><button id="profile-menu-button" type="button" class="profile-chip" aria-haspopup="true" aria-expanded="false"></button><div id="profile-menu" class="popover" role="menu" aria-label="Progress profile" hidden></div></div></div><details id="curriculum-browser" open><summary>Browse curriculum</summary><label for="skill-search" class="sr-only">Find a skill</label><input id="skill-search" type="search" placeholder="Find a skill…" autocomplete="off"><nav id="curriculum-tree" aria-label="Grade 5 curriculum hierarchy"></nav><p id="search-status" role="status"></p></details></aside><article id="curriculum-detail" aria-live="polite" aria-atomic="true"></article></div></main>';
+app.innerHTML='<main class="curriculum-page">'+pageNav('curriculum')+'<header class="curriculum-header"><div><p class="curriculum-eyebrow">ONTARIO</p><h1>Math curriculum</h1></div></header><div class="curriculum-layout"><aside class="curriculum-sidebar"><div class="sidebar-bar"><div id="mode-toggle" class="curriculum-modes" role="group" aria-label="View"></div><button id="worksheet-button" type="button" class="sheet-button" aria-haspopup="dialog" aria-label="Create exercise sheet (PDF)" title="Create exercise sheet (PDF)"></button></div><details id="curriculum-browser" open><summary>Browse curriculum</summary><label for="skill-search" class="sr-only">Find a skill</label><input id="skill-search" type="search" placeholder="Find a skill…" autocomplete="off"><nav id="curriculum-tree" aria-label="Grade 5 curriculum hierarchy"></nav><p id="search-status" role="status"></p></details></aside><article id="curriculum-detail" aria-live="polite" aria-atomic="true"></article></div></main>';
 const tree=document.querySelector('#curriculum-tree'),detail=document.querySelector('#curriculum-detail');
 let selected=curriculum.id,mode='learner',disposePractice=[];
 const icons={
@@ -61,7 +63,7 @@ for(const value of ['learner','parent']){
 }
 const el=(tag,text,className)=>{const item=document.createElement(tag);if(text!==undefined)item.textContent=text;if(className)item.className=className;return item;};
 // Progress dots come from the active player's saved Math quest rounds; with no profile nothing is shown.
-const statLabel={good:'Strong',fair:'Getting there',weak:'Needs practice',none:'Not tried yet',na:'Not in Math quest'};
+const statLabel={good:'Strong',fair:'Getting there',weak:'Needs practice',none:'Not tried yet',na:'Not in Practice'};
 let rounds=[],profile=null,stats=new Map();
 function computeStats(){
  stats=new Map();if(!profile)return;
@@ -71,25 +73,8 @@ function computeStats(){
 }
 // Nodes the game cannot score still get a (lighter) circle so every row lines up.
 const statFor=node=>profile?stats.get(node.id)||{status:'na',stat:null}:undefined;
-const statText=stat=>stat.status==='na'?'Not scored in Math quest yet':stat.stat?`${Math.round(stat.stat.rate*100)}% of last ${stat.stat.attempts} questions`:'Not tried yet';
+const statText=stat=>stat.status==='na'?'Not scored in Practice yet':stat.stat?`${Math.round(stat.stat.rate*100)}% of last ${stat.stat.attempts} questions`:'Not tried yet';
 function statDot(stat){const dot=el('span',undefined,'stat-dot '+stat.status);dot.setAttribute('role','img');dot.setAttribute('aria-label',`${statLabel[stat.status]}: ${statText(stat)}`);dot.title=`${statLabel[stat.status]} · ${statText(stat)}`;return dot;}
-function renderProfileBar(){
- const wrap=document.querySelector('#profile-menu-wrap'),button=document.querySelector('#profile-menu-button'),menu=document.querySelector('#profile-menu'),people=profilesIn(rounds);
- closePopover();menu.replaceChildren();wrap.hidden=!people.length;if(!people.length)return;
- // The chip always names the active profile, so it is visible with the menu closed.
- button.replaceChildren(el('span',profile?profile.name:'No profile','profile-chip-name'),icon('menu'));
- button.setAttribute('aria-label',`Progress profile: ${profile?profile.name:'none'}. Open menu`);button.title='Choose whose progress to show';
- button.onclick=()=>togglePopover(button,menu);
- const choose=next=>{profile=next;chooseProfile(next);computeStats();renderProfileBar();renderTree();renderDetail();};
- menu.append(el('p','Show progress for','popover-title'));
- const list=el('div',undefined,'popover-list'),entry=(person,label)=>{const item=el('button',undefined,'profile-badge');item.type='button';item.setAttribute('role','menuitemradio');item.setAttribute('aria-checked',String(person?profile?.id===person.id:!profile));item.setAttribute('aria-pressed',String(person?profile?.id===person.id:!profile));item.append(el('span',label));item.onclick=()=>choose(person);return item;};
- list.append(entry(null,'No profile'));for(const person of people)list.append(entry(person,person.name));menu.append(list);
- if(profile){
-  const legend=el('div',undefined,'popover-legend');
-  for(const key of ['good','fair','weak','none','na']){const row=el('span',undefined,'legend-row');row.append(el('span',undefined,'stat-dot '+key),statLabel[key]);legend.append(row);}
-  legend.append(el('small','Based on the last 10 Math quest questions in each topic.'));menu.append(legend);
- }
-}
 function summaryFor(text,node){const summary=el('summary'),stat=statFor(node);if(stat)summary.append(statDot(stat));summary.append(text);return summary;}
 function chooseButton(node,className='curriculum-node'){
  const button=el('button',undefined,className);button.type='button';button.dataset.node=node.id;
@@ -103,10 +88,9 @@ function chooseButton(node,className='curriculum-node'){
 }
 function matches(node,query){return `${node.code??''} ${node.title} ${node.description??''}`.toLowerCase().includes(query)||(node.children??[]).some(child=>matches(child,query));}
 function renderTree(){
- const gradeRow=el('div',undefined,'grade-row'),gradeButton=el('button',undefined,'grade-change');gradeButton.type='button';gradeButton.append(icon('swap'));gradeButton.setAttribute('aria-haspopup','true');gradeButton.setAttribute('aria-expanded','false');gradeButton.setAttribute('aria-label',`Change grade (now Grade ${active.grade})`);gradeButton.title='Change grade';
- const gradeMenu=el('div',undefined,'popover grade-menu');gradeMenu.hidden=true;gradeMenu.append(el('p','Grade','popover-title'));const gradeList=el('div',undefined,'grade-list');
- for(const item of catalog){const pick=el('button',String(item.grade),'grade-option');pick.type='button';pick.setAttribute('aria-pressed',String(item.grade===active.grade));pick.onclick=()=>{closePopover();if(item.grade!==active.grade)setGrade(item.grade);};gradeList.append(pick);}
- gradeMenu.append(gradeList);gradeButton.onclick=()=>togglePopover(gradeButton,gradeMenu);gradeRow.append(chooseButton(curriculum,'curriculum-node grade-node'),gradeButton,gradeMenu);
+ const gradeRow=el('div',undefined,'grade-row');gradeRow.append(chooseButton(curriculum,'curriculum-node grade-node'));
+ // The grade selector lives in the grade row, directly under the grade it displays.
+ mountGradePicker(gradeRow,{grades:catalog.map(item=>item.grade),value:active.grade,onChange:value=>setGrade(value),compact:true,collapsible:true,triggerLabel:()=>{const icon=document.createElementNS('http://www.w3.org/2000/svg','svg');icon.setAttribute('viewBox','0 0 24 24');icon.setAttribute('aria-hidden','true');icon.setAttribute('fill','none');icon.setAttribute('stroke','currentColor');icon.setAttribute('stroke-width','1.8');icon.setAttribute('stroke-linecap','round');icon.setAttribute('stroke-linejoin','round');const path=document.createElementNS('http://www.w3.org/2000/svg','path');path.setAttribute('d','M8 9l4-4 4 4M8 15l4 4 4-4');icon.append(path);return icon;}});
  tree.replaceChildren(gradeRow);
  const query=document.querySelector('#skill-search').value.trim().toLowerCase();
  const current=nodes.get(selected);
@@ -133,12 +117,11 @@ function sourceLink(url,label){const a=el('a',label);a.href=url;a.target='_blank
 function renderLearner(node){
  const heading=el('div',undefined,'curriculum-detail-heading');
  heading.append(el('h2',node.title.replace(/^[A-F]\d+ · /,'')));
- if(node.children){
-  const showAll=el('button');showAll.type='button';
-  setPlaybackIcon(showAll,'all','Show all explanations');
-  showAll.onclick=()=>disposePractice.forEach(practice=>practice.showAll());
-  heading.append(showAll);
- }
+ // Every level, including a single skill, can show all its explanations at once.
+ const showAll=el('button');showAll.type='button';
+ setPlaybackIcon(showAll,'all','Show all explanations');
+ showAll.onclick=()=>disposePractice.forEach(practice=>practice.showAll());
+ heading.append(showAll);
  detail.append(heading);
  const mine=stats.get(node.id);if(mine){const note=el('p',undefined,'curriculum-stat');note.append(statDot(mine),`${profile.name}: ${mine.stat?statLabel[mine.status]+" ("+statText(mine)+")":statText(mine)}`);detail.append(note);}
  if(node.children)detail.append(el('p','Choose a topic on the left, or try a question below.','learner-intro'));
@@ -153,12 +136,12 @@ function renderLearner(node){
  }
 }
 function renderDetail(){
+ clearCalculatorContext();
  disposePractice.forEach(dispose=>dispose());disposePractice=[];
  const {node,parents}=nodes.get(selected),strand=parents.find(n=>n.source)??(node.source?node:null);
  detail.replaceChildren();
  document.querySelector('.curriculum-page').dataset.view=mode;
  document.title=`Grade ${active.grade} Math Curriculum · Little Math Lab`;
- document.querySelector('.curriculum-eyebrow').textContent=`ONTARIO · GRADE ${active.grade}`;
  tree.setAttribute('aria-label',`Grade ${active.grade} curriculum hierarchy`);
  document.querySelector('.curriculum-header h1').textContent=mode==='learner'?'Let’s practise':'Math curriculum';
  if(mode==='learner'){renderLearner(node);return;}
@@ -208,6 +191,9 @@ const search=document.querySelector('#skill-search');search.oninput=renderTree;
 window.addEventListener('hashchange',()=>select(location.hash.slice(1)));
 if(matchMedia('(max-width:760px)').matches)document.querySelector('#curriculum-browser').open=false;
 try{rounds=await listRounds();}catch{rounds=[];}
-profile=activeProfile(rounds);computeStats();renderProfileBar();
+profile=activeProfile(rounds);computeStats();
+// The player badge in the corner chooses whose progress is shown; its stats refresh when a Practice round is saved.
+document.addEventListener('math-profile-change',event=>{profile=event.detail;computeStats();renderTree();renderDetail();});
+document.addEventListener('math-rounds-changed',async()=>{try{rounds=await listRounds();}catch{}profile=activeProfile(rounds);computeStats();renderTree();renderDetail();});
 select(location.hash.slice(1)||curriculum.id);
 window.addEventListener('pagehide',()=>disposePractice.forEach(dispose=>dispose()));

@@ -1,0 +1,66 @@
+/* Shared page chrome: the player badge with statistics (top right) and the grade picker. */
+.profile-corner{position:fixed;top:8px;right:12px;z-index:23;display:flex;align-items:center;gap:10px}
+.profile-corner #theme-toggle{position:static!important}
+.profile-wrap{position:relative}
+.profile-button{display:flex;align-items:center;gap:8px;min-height:36px;padding:3px 10px 3px 4px;border:1px solid #cdd4db;border-radius:999px;background:#fff;color:#202b35;font:inherit;font-size:13px;font-weight:600;cursor:pointer;box-shadow:0 1px 2px #0001}
+.profile-button:hover{border-color:#2459a6}.profile-button:focus-visible,.stat-cluster:focus-visible,.menu-item:focus-visible,.avatar-choice:focus-visible{outline:3px solid #2459a6;outline-offset:2px}
+.profile-name{max-width:110px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.profile-caret{font-size:10px;color:#65717b}
+.avatar{display:inline-grid;place-items:center;flex:none;width:28px;height:28px;border-radius:50%;font-size:16px;line-height:1;background:#eef3f9}
+.avatar-initial{background:hsl(var(--avatar-hue,212) 55% 42%);color:#fff;font-size:14px;font-weight:700}.avatar-guest{background:#dfe5eb;font-size:15px}.avatar-add{background:#e7effa;color:#2459a6;font-size:18px;font-weight:700}
+.stat-cluster{position:relative;display:flex;align-items:center;gap:4px;padding:3px 6px;border-radius:999px;cursor:default}
+.stat{display:inline-flex;align-items:center;gap:3px;padding:2px 8px;border-radius:999px;background:#f3f7fc;font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;color:#263440}
+.stat-trophy{background:#fff4cf}.stat-medal{background:#eceff3}.stat-pear{background:#e4f3d4}.stat-icon{font-size:15px;line-height:1}
+.stat-tip{position:absolute;top:calc(100% + 8px);right:0;z-index:5;display:none;min-width:270px;padding:12px 14px;border:1px solid #cdd4db;border-radius:10px;background:#fff;color:#202b35;box-shadow:0 8px 24px #0002;font-size:13px}
+.stat-cluster:hover .stat-tip,.stat-cluster:focus .stat-tip,.stat-cluster:focus-within .stat-tip{display:block}
+.stat-tip dl{display:grid;grid-template-columns:1fr auto;gap:5px 16px;margin:8px 0 0}.stat-tip dt{color:#596570}.stat-tip dd{margin:0;font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
+.profile-menu{position:absolute;top:calc(100% + 8px);right:0;z-index:6;width:240px;padding:8px;border:1px solid #cdd4db;border-radius:12px;background:#fff;color:#202b35;box-shadow:0 8px 24px #0002}
+.menu-title{margin:4px 8px 6px;font-size:11px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:#596570}
+.menu-item{display:flex;align-items:center;gap:10px;width:100%;padding:6px 8px;border:0;border-radius:8px;background:transparent;color:inherit;font:inherit;font-size:14px;text-align:left;cursor:pointer}
+.menu-item:hover,.menu-item[aria-checked=true]{background:#eaf1fb}.menu-add{margin-top:2px;color:#2459a6}
+.avatar-picker{margin-top:6px;padding-top:6px;border-top:1px solid #e1e6eb}.avatar-row{display:flex;flex-wrap:wrap;gap:4px;padding:0 6px 4px}
+.avatar-choice{display:grid;place-items:center;width:32px;height:32px;padding:0;border:1px solid #cdd4db;border-radius:50%;background:#fff;font-size:17px;cursor:pointer}.avatar-choice[aria-pressed=true]{border-color:#2459a6;box-shadow:0 0 0 2px #2459a640}
+html[data-theme=dark] :is(.profile-button,.stat-tip,.profile-menu,.avatar-choice){background:#222d37;color:#e1e7ed;border-color:#52606d}
+html[data-theme=dark] .stat{background:#2c3946;color:#e1e7ed}html[data-theme=dark] :is(.stat-trophy,.stat-pear){background:#3d4a24}html[data-theme=dark] .stat-medal{background:#39434f}
+html[data-theme=dark] :is(.menu-title,.stat-tip dt,.profile-caret){color:#b5c1cc}html[data-theme=dark] .menu-item:hover,html[data-theme=dark] .menu-item[aria-checked=true]{background:#2f4157}
+html[data-theme=dark] .avatar{background:#33404d}html[data-theme=dark] .avatar-add{color:#99c5ff}html[data-theme=dark] .menu-add{color:#99c5ff}
+@media(max-width:760px){.profile-name{display:none}.profile-button{padding-right:6px}.profile-caret{display:none}.stat{padding:2px 6px}}
+@media(max-width:620px){.profile-corner{position:absolute;top:52px;right:8px;gap:6px}body:has(.profile-corner) main{padding-top:36px}.stat-icon{font-size:13px}.stat{font-size:12px}.stat-tip{right:-60px}}
+/* Grade picker: a segmented control that doubles as the grade display. */
+.grade-picker.compact{display:flex;width:100%;border-radius:8px}.grade-picker.compact .grade-option{flex:1 1 0;width:auto;height:32px}
+.grade-picker{display:inline-flex;align-items:center;gap:0;border:1px solid #84909b;border-radius:999px;background:#fff;overflow:hidden;flex-wrap:nowrap;max-width:100%}
+.grade-picker-label{padding:0 12px 0 14px;font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:#596570;background:#f3f7fc;align-self:stretch;display:inline-flex;align-items:center;border-right:1px solid #cdd4db}
+.grade-picker .grade-option{width:34px;height:34px;min-width:0;margin:0;padding:0;border:0;border-right:1px solid #e1e6eb;border-radius:0;background:transparent;color:#263440;font:inherit;font-size:14px;font-weight:600;cursor:pointer}
+.grade-picker .grade-option:last-child{border-right:0}.grade-picker .grade-option:hover{background:#eaf1fb}.grade-picker .grade-option:focus-visible{outline:3px solid #2459a6;outline-offset:-3px}
+.grade-picker .grade-option[aria-pressed=true]{background:#2459a6;color:#fff}
+html[data-theme=dark] .grade-picker{background:#222d37;border-color:#7b8794}html[data-theme=dark] .grade-picker-label{background:#2c3946;color:#b5c1cc;border-color:#52606d}
+html[data-theme=dark] .grade-picker .grade-option{color:#e1e7ed;border-right-color:#52606d}html[data-theme=dark] .grade-picker .grade-option:hover{background:#2f4157}html[data-theme=dark] .grade-picker .grade-option[aria-pressed=true]{background:#99c5ff;color:#14283f}
+@media(max-width:520px){.grade-picker .grade-option{width:28px;height:32px;font-size:13px}.grade-picker-label{padding:0 8px}}
+
+.grade-trigger{display:inline-flex;align-items:center;gap:6px;min-height:34px;padding:0 10px;border:1px solid #84909b;border-radius:8px;background:#fff;color:#263440;font:inherit;font-size:14px;font-weight:600;cursor:pointer}
+.grade-trigger:hover,.grade-trigger[aria-expanded=true]{border-color:#2459a6;background:#eaf1fb}.grade-trigger:focus-visible{outline:3px solid #2459a6;outline-offset:2px}.grade-caret{font-size:11px;color:#596570}
+.grade-picker[hidden]{display:none}
+html[data-theme=dark] .grade-trigger{background:#222d37;color:#e1e7ed;border-color:#7b8794}html[data-theme=dark] .grade-trigger:hover,html[data-theme=dark] .grade-trigger[aria-expanded=true]{background:#2f4157;border-color:#99c5ff}html[data-theme=dark] .grade-caret{color:#b5c1cc}
+
+/* The light/dark switch is a coloured chip like the award counters: a moon in light mode, a sun in dark mode. */
+.profile-corner #theme-toggle{width:32px!important;height:32px!important;border:0!important;border-radius:999px!important;font-size:17px!important;line-height:1;background:#d9def7!important;box-shadow:none}
+.profile-corner #theme-toggle:hover{background:#c8d0f3!important}
+html[data-theme=dark] .profile-corner #theme-toggle{background:#4a4222!important}html[data-theme=dark] .profile-corner #theme-toggle:hover{background:#5d5329!important}
+.profile-corner #theme-toggle:focus-visible{outline:3px solid #2459a6;outline-offset:2px}
+/* One "island": the theme switch, awards and player badge share a single pill and one control height. */
+.profile-corner{gap:4px;padding:3px;border:1px solid #cdd4db;border-radius:999px;background:#fff;box-shadow:0 2px 8px #0002}
+.profile-corner #theme-toggle{width:34px!important;height:34px!important}
+.profile-corner .stat-cluster{padding:0;gap:4px}.profile-corner .stat{height:34px;padding:0 11px;border-radius:999px}
+.profile-corner .profile-button{height:34px;min-height:0;padding:0 10px 0 3px;border:0;box-shadow:none;background:transparent}
+.profile-corner .profile-button:hover{background:#eaf1fb}
+.profile-corner .avatar{width:28px;height:28px}
+html[data-theme=dark] .profile-corner{background:#222d37;border-color:#52606d}
+html[data-theme=dark] .profile-corner .profile-button{background:transparent}html[data-theme=dark] .profile-corner .profile-button:hover{background:#2f4157}
+@media(max-width:620px){.profile-corner .stat{padding:0 8px}}
+html[data-theme] .profile-corner #theme-toggle{background:#d9def7!important}html[data-theme] .profile-corner #theme-toggle:hover{background:#c8d0f3!important}
+html[data-theme=dark] .profile-corner #theme-toggle{background:#4a4222!important}html[data-theme=dark] .profile-corner #theme-toggle:hover{background:#5d5329!important}
+html[data-theme=dark] .avatar-initial{background:hsl(var(--avatar-hue,212) 50% 38%)}
+.menu-new{display:flex;flex-wrap:wrap;gap:6px;padding:6px 8px 4px}.menu-new[hidden]{display:none}
+.menu-new input{flex:1 1 110px;min-width:0;min-height:34px;padding:0 8px;border:1px solid #84909b;border-radius:8px;background:#fff;color:#263440;font:inherit}
+.menu-new button{min-height:34px;padding:0 14px;border:0;border-radius:8px;background:#2459a6;color:#fff;font:inherit;font-weight:700;cursor:pointer}
+.menu-error{flex-basis:100%;margin:0;font-size:12px;color:#a02b2b}.menu-error:empty{display:none}
+html[data-theme=dark] .menu-new input{background:#222d37;color:#e1e7ed;border-color:#7b8794}html[data-theme=dark] .menu-error{color:#ff9d9d}

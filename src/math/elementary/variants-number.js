@@ -199,7 +199,7 @@ function inequalityCount([a,b,style]){
 }
 
 function combineTerms([a,b,c,style]){
- whole(a,b,c);requireThat(a>=1&&b!==0&&Math.abs(b)<=99&&c>=1,'Use small coefficients.');
+ whole(a,b,c);requireThat(a>=1&&b!==0&&Math.abs(b)<=99&&c>=1,'Use small coefficients.');requireThat(a+b!==0,'Use terms that do not cancel to zero.');
  const term=n=>Math.abs(n)===1?'x':`${Math.abs(n)}x`,lead=a===1?'x':`${a}x`,sb=`${b<0?'−':'+'} ${term(b)}`;const text=pick([
   `What is the coefficient of x when ${lead} ${sb} is simplified?`,
   `Simplify ${lead} + ${c} ${sb}. What is the coefficient of x?`,
@@ -274,7 +274,7 @@ function budgetBalance([income,rent,food,other,style]){
 // Times are given as hours (1-12) and minutes; the end is later the same day. Answers are in minutes or in hours as a decimal.
 function elapsedTime([h1,m1,h2,m2,style]){
  whole(h1,m1,h2,m2);requireThat(h1>=1&&h1<=11&&h2>=1&&h2<=11&&m1>=0&&m1<60&&m2>=0&&m2<60,'Use clock times from 1:00 to 11:59.');
- const start=h1*60+m1,end=(h2<h1||(h2===h1&&m2<m1)?h2+12:h2)*60+m2,minutes=end-start;requireThat(minutes>0&&minutes<=600,'Use a duration under ten hours.');
+ const start=h1*60+m1,end=(h2<h1||(h2===h1&&m2<m1)?h2+12:h2)*60+m2,minutes=end-start;requireThat(minutes>=60&&minutes<=600,'Use a duration from one to ten hours, so the hours-and-minutes steps make sense.');
  const wraps=h2<h1||(h2===h1&&m2<m1),clock=(h,m,second)=>`${h}:${String(m).padStart(2,'0')} ${wraps&&!second?'a.m.':'p.m.'}`,end12=(h,m)=>clock(h,m,true);
  const [text,answer,steps]=pick([
   [`A movie starts at ${clock(h1,m1)} and ends at ${end12(h2,m2)}. How many minutes long is the movie?`,String(minutes),[step('Count from the start time to the end time: hours first, then minutes.',`${Math.floor(minutes/60)}\\ \\text{h}\\ ${minutes%60}\\ \\text{min}`),step('Change the hours to minutes and add.',`${Math.floor(minutes/60)}\\times60+${minutes%60}=${minutes}`)]],

@@ -1,0 +1,1890 @@
+{
+  "schemaVersion": 1,
+  "id": "ontario-math-grade-2",
+  "jurisdiction": "Ontario",
+  "grade": 2,
+  "language": "en",
+  "researchedAt": "2026-10-30",
+  "sources": {
+    "number": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/c2dea171-e219-4ec0-b097-24c959fcc924/Number_AODA.pdf",
+    "algebra": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/08f5a14f-576a-4282-af82-096dc302ed10/Algebra_AODA.pdf",
+    "data": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/60e2b2c7-5a7a-4038-bc06-fb88ffd6c861/Data_AODA.pdf",
+    "spatial": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/01b0b598-d5dc-455b-83de-9b7436bcefeb/Spatial_AODA.pdf",
+    "financial": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/8a374255-069f-4539-b020-5737aaf672f9/Financial_AODA.pdf",
+    "learning": "https://www.dcp.edu.gov.on.ca/en/curriculum/elementary-mathematics/grades/g2-math/strands",
+    "board": "https://www2.yrdsb.ca/about-us/director-education/directors-annual-report/board-improvement-plan-math",
+    "boardCurriculum": "https://www2.yrdsb.ca/schools-programs/school-programs-nav/school-programs/mathematics"
+  },
+  "curriculum": {
+    "id": "grade-2",
+    "title": "Grade 2",
+    "description": "Ontario Grade 2 mathematics for YRDSB learners, with concrete models, varied questions, and guided exploration. Activities support practice, not certification of mastery.",
+    "children": [
+      {
+        "id": "g2-learning",
+        "code": "A",
+        "title": "Social-emotional learning skills and the mathematical processes",
+        "source": "https://www.dcp.edu.gov.on.ca/en/curriculum/elementary-mathematics/grades/g2-math/strands",
+        "children": [
+          {
+            "id": "g2-a1-topic",
+            "title": "Social-emotional learning skills and the mathematical processes",
+            "children": [
+              {
+                "id": "g2-a1-1",
+                "code": "A1.1",
+                "title": "Manage emotions",
+                "description": "Recognize emotions and choose helpful actions.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g2-a1-2",
+                "code": "A1.2",
+                "title": "Cope with challenges",
+                "description": "Choose tools and support when stuck.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g2-a1-3",
+                "code": "A1.3",
+                "title": "Persist and stay motivated",
+                "description": "Try new representations and reflect on progress.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g2-a1-4",
+                "code": "A1.4",
+                "title": "Collaborate and communicate",
+                "description": "Explain reasoning and listen respectfully.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g2-a1-5",
+                "code": "A1.5",
+                "title": "Confidence and self-awareness",
+                "description": "Notice strengths and set next goals.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g2-a1-6",
+                "code": "A1.6",
+                "title": "Critical and creative thinking",
+                "description": "Estimate, reason, check, and consider alternatives.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g2-number",
+        "code": "B",
+        "title": "Number",
+        "source": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/c2dea171-e219-4ec0-b097-24c959fcc924/Number_AODA.pdf",
+        "children": [
+          {
+            "id": "g2-b1-topic",
+            "title": "B1 · Number sense",
+            "children": [
+              {
+                "id": "g2-b1-1",
+                "code": "B1.1",
+                "title": "Whole numbers to 200",
+                "description": "Read, represent, compose, and decompose whole numbers through two hundred.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g2-b1-2",
+                "code": "B1.2",
+                "title": "Compare and order to 200",
+                "description": "Compare whole-number amounts through two hundred.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g2-b1-3",
+                "code": "B1.3",
+                "title": "Estimate and count",
+                "description": "Estimate collections through two hundred and verify by counting.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g2-b1-4",
+                "code": "B1.4",
+                "title": "Count by 20s, 25s, and 50s",
+                "description": "Count through two hundred with varied tools and strategies.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g2-b1-5",
+                "code": "B1.5",
+                "title": "Even and odd",
+                "description": "Explain even and odd through pairing and sharing.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g2-b1-6",
+                "code": "B1.6",
+                "title": "Fair sharing through ten items",
+                "description": "Share among 2, 3, 4, or 6 people with whole, mixed, and fractional results.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g2-b1-7",
+                "code": "B1.7",
+                "title": "Thirds and sixths",
+                "description": "Recognize one third and two sixths of the same whole as equal shares.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              }
+            ]
+          },
+          {
+            "id": "g2-b2-topic",
+            "title": "B2 · Operations",
+            "children": [
+              {
+                "id": "g2-b2-1",
+                "code": "B2.1",
+                "title": "Operation relationships",
+                "description": "Connect addition with multiplication and subtraction with division to solve/check.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g2-b2-2",
+                "code": "B2.2",
+                "title": "Facts through 20",
+                "description": "Recall addition facts through twenty and related subtraction facts.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g2-b2-3",
+                "code": "B2.3",
+                "title": "Mental calculation through 50",
+                "description": "Use and explain mental addition/subtraction strategies through fifty.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g2-b2-4",
+                "code": "B2.4",
+                "title": "Addition and subtraction through 100",
+                "description": "Use objects, drawings, and equations for whole-number totals through one hundred.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g2-b2-5",
+                "code": "B2.5",
+                "title": "Repeated equal groups",
+                "description": "Represent multiplication with groups, including halves and fourths.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g2-b2-6",
+                "code": "B2.6",
+                "title": "Equal sharing through twelve items",
+                "description": "Represent division of at most twelve items using tools and drawings.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g2-algebra",
+        "code": "C",
+        "title": "Algebra",
+        "source": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/08f5a14f-576a-4282-af82-096dc302ed10/Algebra_AODA.pdf",
+        "children": [
+          {
+            "id": "g2-c1-topic",
+            "title": "C1 · Patterns and relationships",
+            "children": [
+              {
+                "id": "g2-c1-1",
+                "code": "C1.1",
+                "title": "Geometric patterns",
+                "description": "Recognize patterns in geometric designs and everyday contexts.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g2-c1-2",
+                "code": "C1.2",
+                "title": "Translate patterns",
+                "description": "Represent patterns with shapes and numbers.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g2-c1-3",
+                "code": "C1.3",
+                "title": "Rules and missing elements",
+                "description": "Extend and explain patterns in shapes and numbers.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g2-c1-4",
+                "code": "C1.4",
+                "title": "Number relationships through 100",
+                "description": "Create and describe whole-number patterns through one hundred.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              }
+            ]
+          },
+          {
+            "id": "g2-c2-topic",
+            "title": "C2 · Variables and equal relationships",
+            "children": [
+              {
+                "id": "g2-c2-1",
+                "code": "C2.1",
+                "title": "Symbols as variables",
+                "description": "Identify symbols used as variables and explain their meaning.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g2-c2-2",
+                "code": "C2.2",
+                "title": "Make expressions equivalent",
+                "description": "Find what to add or subtract to balance addition/subtraction expressions.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g2-c2-3",
+                "code": "C2.3",
+                "title": "Equivalent relationships through 100",
+                "description": "Use whole-number equivalence through one hundred.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              }
+            ]
+          },
+          {
+            "id": "g2-c3-topic",
+            "title": "C3 · Coding",
+            "children": [
+              {
+                "id": "g2-c3-1",
+                "code": "C3.1",
+                "title": "Sequential and concurrent code",
+                "description": "Write and execute code with ordered and simultaneous events.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g2-c3-2",
+                "code": "C3.2",
+                "title": "Read and alter events",
+                "description": "Change sequential/concurrent code and explain outputs.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              }
+            ]
+          },
+          {
+            "id": "g2-c4-topic",
+            "title": "C4 · Mathematical modelling",
+            "children": [
+              {
+                "id": "g2-c4",
+                "code": "C4",
+                "title": "Mathematical modelling",
+                "description": "Create, test, and revise models for real situations.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g2-data",
+        "code": "D",
+        "title": "Data",
+        "source": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/60e2b2c7-5a7a-4038-bc06-fb88ffd6c861/Data_AODA.pdf",
+        "children": [
+          {
+            "id": "g2-d1-topic",
+            "title": "D1 · Data literacy",
+            "children": [
+              {
+                "id": "g2-d1-1",
+                "code": "D1.1",
+                "title": "Sort by two attributes",
+                "description": "Use tables and logic diagrams, including Venn and Carroll diagrams.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g2-d1-2",
+                "code": "D1.2",
+                "title": "Two-way tally tables",
+                "description": "Collect two pieces of information and organize observations in two-way tallies.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g2-d1-3",
+                "code": "D1.3",
+                "title": "Graphs and line plots",
+                "description": "Use one-to-one concrete graphs, pictographs, line plots, and bar graphs.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g2-d1-4",
+                "code": "D1.4",
+                "title": "Modes",
+                "description": "Identify the most frequent value or category and explain it.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g2-d1-5",
+                "code": "D1.5",
+                "title": "Interpret data",
+                "description": "Use logic diagrams, plots, and graphs to support conclusions.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              }
+            ]
+          },
+          {
+            "id": "g2-d2-topic",
+            "title": "D2 · Probability",
+            "children": [
+              {
+                "id": "g2-d2-1",
+                "code": "D2.1",
+                "title": "Complementary likelihood",
+                "description": "Use impossible, possible, and certain for an event and its complement.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g2-d2-2",
+                "code": "D2.2",
+                "title": "Compare population modes",
+                "description": "Predict and test whether different populations have matching modes.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g2-spatial",
+        "code": "E",
+        "title": "Spatial sense",
+        "source": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/01b0b598-d5dc-455b-83de-9b7436bcefeb/Spatial_AODA.pdf",
+        "children": [
+          {
+            "id": "g2-e1-topic",
+            "title": "E1 · Geometric and spatial reasoning",
+            "children": [
+              {
+                "id": "g2-e1-1",
+                "code": "E1.1",
+                "title": "Classify two-dimensional shapes",
+                "description": "Compare sides, lengths, corners, and lines of symmetry.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g2-e1-2",
+                "code": "E1.2",
+                "title": "Rearrange shapes and area",
+                "description": "Compose/decompose shapes while preserving area.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g2-e1-3",
+                "code": "E1.3",
+                "title": "Congruent shapes",
+                "description": "Match corresponding lengths and angles to decide whether shapes are congruent.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g2-e1-4",
+                "code": "E1.4",
+                "title": "Maps of familiar places",
+                "description": "Create and interpret simple maps.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g2-e1-5",
+                "code": "E1.5",
+                "title": "Relative positions and movement",
+                "description": "Describe positions and routes between several objects.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              }
+            ]
+          },
+          {
+            "id": "g2-e2-topic",
+            "title": "E2 · Measurement",
+            "children": [
+              {
+                "id": "g2-e2-1",
+                "code": "E2.1",
+                "title": "Non-standard length units",
+                "description": "Use equal non-standard units and explain how unit size changes the count.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g2-e2-2",
+                "code": "E2.2",
+                "title": "Centimetres and metres",
+                "description": "Connect centimetres/metres and use length benchmarks.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g2-e2-3",
+                "code": "E2.3",
+                "title": "Measure from different starts",
+                "description": "Measure/draw lengths and account for a ruler starting away from zero.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              },
+              {
+                "id": "g2-e2-4",
+                "code": "E2.4",
+                "title": "Duration units",
+                "description": "Use seconds, minutes, hours, and non-standard time units.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g2-financial",
+        "code": "F",
+        "title": "Financial literacy",
+        "source": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/8a374255-069f-4539-b020-5737aaf672f9/Financial_AODA.pdf",
+        "children": [
+          {
+            "id": "g2-f1-topic",
+            "title": "F1 · Money concepts",
+            "children": [
+              {
+                "id": "g2-f1-1",
+                "code": "F1.1",
+                "title": "Equivalent money combinations",
+                "description": "Represent amounts through 200¢ and $200 with Canadian coins and bills.",
+                "example": "Try the pictured or story question. Explain your method, then refresh to explore another style."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "suggestedSequence": [
+    [
+      "Count and represent",
+      "Build whole-number quantities, comparison, and part-whole reasoning."
+    ],
+    [
+      "Operate and find patterns",
+      "Connect concrete models, stories, equal relationships, and patterns."
+    ],
+    [
+      "Explore shapes and measurement",
+      "Apply counting to spatial reasoning, units, and daily routines."
+    ],
+    [
+      "Ask and answer data questions",
+      "Collect, sort, display, and compare observations and likelihood."
+    ],
+    [
+      "Use money in familiar contexts",
+      "Read or combine Canadian values and make grade-appropriate choices."
+    ],
+    [
+      "Across every strand",
+      "Revisit coding, modelling, communication, and learning habits. This is an app suggestion, not a published YRDSB timetable."
+    ]
+  ],
+  "activities": [
+    {
+      "id": "activity-g2-question-a1-1",
+      "title": "Manage emotions",
+      "skillIds": [
+        "g2-a1-1"
+      ],
+      "href": "./curriculum.html?grade=2#g2-a1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-a1-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-a1-2",
+      "title": "Cope with challenges",
+      "skillIds": [
+        "g2-a1-2"
+      ],
+      "href": "./curriculum.html?grade=2#g2-a1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-a1-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-a1-3",
+      "title": "Persist and stay motivated",
+      "skillIds": [
+        "g2-a1-3"
+      ],
+      "href": "./curriculum.html?grade=2#g2-a1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-a1-3"
+      ]
+    },
+    {
+      "id": "activity-g2-question-a1-4",
+      "title": "Collaborate and communicate",
+      "skillIds": [
+        "g2-a1-4"
+      ],
+      "href": "./curriculum.html?grade=2#g2-a1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-a1-4"
+      ]
+    },
+    {
+      "id": "activity-g2-question-a1-5",
+      "title": "Confidence and self-awareness",
+      "skillIds": [
+        "g2-a1-5"
+      ],
+      "href": "./curriculum.html?grade=2#g2-a1-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-a1-5"
+      ]
+    },
+    {
+      "id": "activity-g2-question-a1-6",
+      "title": "Critical and creative thinking",
+      "skillIds": [
+        "g2-a1-6"
+      ],
+      "href": "./curriculum.html?grade=2#g2-a1-6",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-a1-6"
+      ]
+    },
+    {
+      "id": "activity-g2-question-b1-1-1",
+      "title": "Whole numbers to 200",
+      "skillIds": [
+        "g2-b1-1"
+      ],
+      "href": "./curriculum.html?grade=2#g2-b1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-b1-1-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-b1-1-2",
+      "title": "Whole numbers to 200 · another way",
+      "skillIds": [
+        "g2-b1-1"
+      ],
+      "href": "./curriculum.html?grade=2#g2-b1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-b1-1-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-b1-1-3",
+      "title": "Whole numbers to 200 · explore",
+      "skillIds": [
+        "g2-b1-1"
+      ],
+      "href": "./curriculum.html?grade=2#g2-b1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-b1-1-3"
+      ]
+    },
+    {
+      "id": "activity-g2-question-b1-1-4",
+      "title": "Whole numbers to 200 · another way",
+      "skillIds": [
+        "g2-b1-1"
+      ],
+      "href": "./curriculum.html?grade=2#g2-b1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-b1-1-4"
+      ]
+    },
+    {
+      "id": "activity-g2-question-b1-2-1",
+      "title": "Compare and order to 200",
+      "skillIds": [
+        "g2-b1-2"
+      ],
+      "href": "./curriculum.html?grade=2#g2-b1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-b1-2-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-b1-2-2",
+      "title": "Compare and order to 200 · explore",
+      "skillIds": [
+        "g2-b1-2"
+      ],
+      "href": "./curriculum.html?grade=2#g2-b1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-b1-2-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-b1-3-1",
+      "title": "Estimate and count",
+      "skillIds": [
+        "g2-b1-3"
+      ],
+      "href": "./curriculum.html?grade=2#g2-b1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-b1-3-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-b1-3-2",
+      "title": "Estimate and count · another way",
+      "skillIds": [
+        "g2-b1-3"
+      ],
+      "href": "./curriculum.html?grade=2#g2-b1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-b1-3-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-b1-4-1",
+      "title": "Count by 20s, 25s, and 50s",
+      "skillIds": [
+        "g2-b1-4"
+      ],
+      "href": "./curriculum.html?grade=2#g2-b1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-b1-4-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-b1-4-2",
+      "title": "Count by 20s, 25s, and 50s · another way",
+      "skillIds": [
+        "g2-b1-4"
+      ],
+      "href": "./curriculum.html?grade=2#g2-b1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-b1-4-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-b1-5-1",
+      "title": "Even and odd",
+      "skillIds": [
+        "g2-b1-5"
+      ],
+      "href": "./curriculum.html?grade=2#g2-b1-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-b1-5-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-b1-5-2",
+      "title": "Even and odd · another way",
+      "skillIds": [
+        "g2-b1-5"
+      ],
+      "href": "./curriculum.html?grade=2#g2-b1-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-b1-5-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-b1-6-1",
+      "title": "Fair sharing through ten items",
+      "skillIds": [
+        "g2-b1-6"
+      ],
+      "href": "./curriculum.html?grade=2#g2-b1-6",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-b1-6-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-b1-6-2",
+      "title": "Fair sharing through ten items · another way",
+      "skillIds": [
+        "g2-b1-6"
+      ],
+      "href": "./curriculum.html?grade=2#g2-b1-6",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-b1-6-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-b1-7-1",
+      "title": "Thirds and sixths",
+      "skillIds": [
+        "g2-b1-7"
+      ],
+      "href": "./curriculum.html?grade=2#g2-b1-7",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-b1-7-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-b1-7-2",
+      "title": "Thirds and sixths · another way",
+      "skillIds": [
+        "g2-b1-7"
+      ],
+      "href": "./curriculum.html?grade=2#g2-b1-7",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-b1-7-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-b2-1-1",
+      "title": "Operation relationships",
+      "skillIds": [
+        "g2-b2-1"
+      ],
+      "href": "./curriculum.html?grade=2#g2-b2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-b2-1-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-b2-1-2",
+      "title": "Operation relationships · explore",
+      "skillIds": [
+        "g2-b2-1"
+      ],
+      "href": "./curriculum.html?grade=2#g2-b2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-b2-1-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-b2-1-3",
+      "title": "Operation relationships · explore",
+      "skillIds": [
+        "g2-b2-1"
+      ],
+      "href": "./curriculum.html?grade=2#g2-b2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-b2-1-3"
+      ]
+    },
+    {
+      "id": "activity-g2-question-b2-2-1",
+      "title": "Facts through 20",
+      "skillIds": [
+        "g2-b2-2"
+      ],
+      "href": "./curriculum.html?grade=2#g2-b2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-b2-2-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-b2-2-2",
+      "title": "Facts through 20 · explore",
+      "skillIds": [
+        "g2-b2-2"
+      ],
+      "href": "./curriculum.html?grade=2#g2-b2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-b2-2-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-b2-3-1",
+      "title": "Mental calculation through 50",
+      "skillIds": [
+        "g2-b2-3"
+      ],
+      "href": "./curriculum.html?grade=2#g2-b2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-b2-3-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-b2-3-2",
+      "title": "Mental calculation through 50 · explore",
+      "skillIds": [
+        "g2-b2-3"
+      ],
+      "href": "./curriculum.html?grade=2#g2-b2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-b2-3-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-b2-4-1",
+      "title": "Addition and subtraction through 100",
+      "skillIds": [
+        "g2-b2-4"
+      ],
+      "href": "./curriculum.html?grade=2#g2-b2-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-b2-4-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-b2-4-2",
+      "title": "Addition and subtraction through 100 · another way",
+      "skillIds": [
+        "g2-b2-4"
+      ],
+      "href": "./curriculum.html?grade=2#g2-b2-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-b2-4-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-b2-4-3",
+      "title": "Addition and subtraction through 100 · explore",
+      "skillIds": [
+        "g2-b2-4"
+      ],
+      "href": "./curriculum.html?grade=2#g2-b2-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-b2-4-3"
+      ]
+    },
+    {
+      "id": "activity-g2-question-b2-5-1",
+      "title": "Repeated equal groups",
+      "skillIds": [
+        "g2-b2-5"
+      ],
+      "href": "./curriculum.html?grade=2#g2-b2-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-b2-5-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-b2-5-2",
+      "title": "Repeated equal groups · another way",
+      "skillIds": [
+        "g2-b2-5"
+      ],
+      "href": "./curriculum.html?grade=2#g2-b2-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-b2-5-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-b2-6-1",
+      "title": "Equal sharing through twelve items",
+      "skillIds": [
+        "g2-b2-6"
+      ],
+      "href": "./curriculum.html?grade=2#g2-b2-6",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-b2-6-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-b2-6-2",
+      "title": "Equal sharing through twelve items · explore",
+      "skillIds": [
+        "g2-b2-6"
+      ],
+      "href": "./curriculum.html?grade=2#g2-b2-6",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-b2-6-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-c1-1-1",
+      "title": "Geometric patterns",
+      "skillIds": [
+        "g2-c1-1"
+      ],
+      "href": "./curriculum.html?grade=2#g2-c1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-c1-1-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-c1-1-2",
+      "title": "Geometric patterns · another way",
+      "skillIds": [
+        "g2-c1-1"
+      ],
+      "href": "./curriculum.html?grade=2#g2-c1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-c1-1-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-c1-2-1",
+      "title": "Translate patterns",
+      "skillIds": [
+        "g2-c1-2"
+      ],
+      "href": "./curriculum.html?grade=2#g2-c1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-c1-2-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-c1-2-2",
+      "title": "Translate patterns · explore",
+      "skillIds": [
+        "g2-c1-2"
+      ],
+      "href": "./curriculum.html?grade=2#g2-c1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-c1-2-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-c1-3-1",
+      "title": "Rules and missing elements",
+      "skillIds": [
+        "g2-c1-3"
+      ],
+      "href": "./curriculum.html?grade=2#g2-c1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-c1-3-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-c1-3-2",
+      "title": "Rules and missing elements · another way",
+      "skillIds": [
+        "g2-c1-3"
+      ],
+      "href": "./curriculum.html?grade=2#g2-c1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-c1-3-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-c1-4-1",
+      "title": "Number relationships through 100",
+      "skillIds": [
+        "g2-c1-4"
+      ],
+      "href": "./curriculum.html?grade=2#g2-c1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-c1-4-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-c1-4-2",
+      "title": "Number relationships through 100 · another way",
+      "skillIds": [
+        "g2-c1-4"
+      ],
+      "href": "./curriculum.html?grade=2#g2-c1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-c1-4-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-c2-1-1",
+      "title": "Symbols as variables",
+      "skillIds": [
+        "g2-c2-1"
+      ],
+      "href": "./curriculum.html?grade=2#g2-c2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-c2-1-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-c2-1-2",
+      "title": "Symbols as variables · another way",
+      "skillIds": [
+        "g2-c2-1"
+      ],
+      "href": "./curriculum.html?grade=2#g2-c2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-c2-1-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-c2-2-1",
+      "title": "Make expressions equivalent",
+      "skillIds": [
+        "g2-c2-2"
+      ],
+      "href": "./curriculum.html?grade=2#g2-c2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-c2-2-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-c2-2-2",
+      "title": "Make expressions equivalent · another way",
+      "skillIds": [
+        "g2-c2-2"
+      ],
+      "href": "./curriculum.html?grade=2#g2-c2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-c2-2-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-c2-3-1",
+      "title": "Equivalent relationships through 100",
+      "skillIds": [
+        "g2-c2-3"
+      ],
+      "href": "./curriculum.html?grade=2#g2-c2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-c2-3-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-c2-3-2",
+      "title": "Equivalent relationships through 100 · another way",
+      "skillIds": [
+        "g2-c2-3"
+      ],
+      "href": "./curriculum.html?grade=2#g2-c2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-c2-3-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-c3-1-1",
+      "title": "Sequential and concurrent code",
+      "skillIds": [
+        "g2-c3-1"
+      ],
+      "href": "./curriculum.html?grade=2#g2-c3-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-c3-1-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-c3-1-2",
+      "title": "Sequential and concurrent code · another way",
+      "skillIds": [
+        "g2-c3-1"
+      ],
+      "href": "./curriculum.html?grade=2#g2-c3-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-c3-1-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-c3-2-1",
+      "title": "Read and alter events",
+      "skillIds": [
+        "g2-c3-2"
+      ],
+      "href": "./curriculum.html?grade=2#g2-c3-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-c3-2-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-c3-2-2",
+      "title": "Read and alter events · explore",
+      "skillIds": [
+        "g2-c3-2"
+      ],
+      "href": "./curriculum.html?grade=2#g2-c3-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-c3-2-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-c4-1",
+      "title": "Mathematical modelling",
+      "skillIds": [
+        "g2-c4"
+      ],
+      "href": "./curriculum.html?grade=2#g2-c4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-c4-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-c4-2",
+      "title": "Mathematical modelling · another way",
+      "skillIds": [
+        "g2-c4"
+      ],
+      "href": "./curriculum.html?grade=2#g2-c4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-c4-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-d1-1-1",
+      "title": "Sort by two attributes",
+      "skillIds": [
+        "g2-d1-1"
+      ],
+      "href": "./curriculum.html?grade=2#g2-d1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-d1-1-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-d1-1-2",
+      "title": "Sort by two attributes · another way",
+      "skillIds": [
+        "g2-d1-1"
+      ],
+      "href": "./curriculum.html?grade=2#g2-d1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-d1-1-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-d1-2-1",
+      "title": "Two-way tally tables",
+      "skillIds": [
+        "g2-d1-2"
+      ],
+      "href": "./curriculum.html?grade=2#g2-d1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-d1-2-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-d1-2-2",
+      "title": "Two-way tally tables · explore",
+      "skillIds": [
+        "g2-d1-2"
+      ],
+      "href": "./curriculum.html?grade=2#g2-d1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-d1-2-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-d1-3-1",
+      "title": "Graphs and line plots",
+      "skillIds": [
+        "g2-d1-3"
+      ],
+      "href": "./curriculum.html?grade=2#g2-d1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-d1-3-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-d1-3-2",
+      "title": "Graphs and line plots · explore",
+      "skillIds": [
+        "g2-d1-3"
+      ],
+      "href": "./curriculum.html?grade=2#g2-d1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-d1-3-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-d1-4-1",
+      "title": "Modes",
+      "skillIds": [
+        "g2-d1-4"
+      ],
+      "href": "./curriculum.html?grade=2#g2-d1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-d1-4-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-d1-4-2",
+      "title": "Modes · explore",
+      "skillIds": [
+        "g2-d1-4"
+      ],
+      "href": "./curriculum.html?grade=2#g2-d1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-d1-4-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-d1-5-1",
+      "title": "Interpret data",
+      "skillIds": [
+        "g2-d1-5"
+      ],
+      "href": "./curriculum.html?grade=2#g2-d1-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-d1-5-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-d1-5-2",
+      "title": "Interpret data · explore",
+      "skillIds": [
+        "g2-d1-5"
+      ],
+      "href": "./curriculum.html?grade=2#g2-d1-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-d1-5-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-d2-1-1",
+      "title": "Complementary likelihood",
+      "skillIds": [
+        "g2-d2-1"
+      ],
+      "href": "./curriculum.html?grade=2#g2-d2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-d2-1-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-d2-1-2",
+      "title": "Complementary likelihood · another way",
+      "skillIds": [
+        "g2-d2-1"
+      ],
+      "href": "./curriculum.html?grade=2#g2-d2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-d2-1-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-d2-2-1",
+      "title": "Compare population modes",
+      "skillIds": [
+        "g2-d2-2"
+      ],
+      "href": "./curriculum.html?grade=2#g2-d2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-d2-2-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-d2-2-2",
+      "title": "Compare population modes · another way",
+      "skillIds": [
+        "g2-d2-2"
+      ],
+      "href": "./curriculum.html?grade=2#g2-d2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-d2-2-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-e1-1-1",
+      "title": "Classify two-dimensional shapes",
+      "skillIds": [
+        "g2-e1-1"
+      ],
+      "href": "./curriculum.html?grade=2#g2-e1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-e1-1-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-e1-1-2",
+      "title": "Classify two-dimensional shapes · explore",
+      "skillIds": [
+        "g2-e1-1"
+      ],
+      "href": "./curriculum.html?grade=2#g2-e1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-e1-1-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-e1-2-1",
+      "title": "Rearrange shapes and area",
+      "skillIds": [
+        "g2-e1-2"
+      ],
+      "href": "./curriculum.html?grade=2#g2-e1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-e1-2-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-e1-2-2",
+      "title": "Rearrange shapes and area · another way",
+      "skillIds": [
+        "g2-e1-2"
+      ],
+      "href": "./curriculum.html?grade=2#g2-e1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-e1-2-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-e1-2-3",
+      "title": "Rearrange shapes and area · explore",
+      "skillIds": [
+        "g2-e1-2"
+      ],
+      "href": "./curriculum.html?grade=2#g2-e1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-e1-2-3"
+      ]
+    },
+    {
+      "id": "activity-g2-question-e1-3-1",
+      "title": "Congruent shapes",
+      "skillIds": [
+        "g2-e1-3"
+      ],
+      "href": "./curriculum.html?grade=2#g2-e1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-e1-3-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-e1-3-2",
+      "title": "Congruent shapes · another way",
+      "skillIds": [
+        "g2-e1-3"
+      ],
+      "href": "./curriculum.html?grade=2#g2-e1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-e1-3-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-e1-4-1",
+      "title": "Maps of familiar places",
+      "skillIds": [
+        "g2-e1-4"
+      ],
+      "href": "./curriculum.html?grade=2#g2-e1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-e1-4-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-e1-4-2",
+      "title": "Maps of familiar places · explore",
+      "skillIds": [
+        "g2-e1-4"
+      ],
+      "href": "./curriculum.html?grade=2#g2-e1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-e1-4-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-e1-5-1",
+      "title": "Relative positions and movement",
+      "skillIds": [
+        "g2-e1-5"
+      ],
+      "href": "./curriculum.html?grade=2#g2-e1-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-e1-5-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-e1-5-2",
+      "title": "Relative positions and movement · another way",
+      "skillIds": [
+        "g2-e1-5"
+      ],
+      "href": "./curriculum.html?grade=2#g2-e1-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-e1-5-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-e1-5-3",
+      "title": "Relative positions and movement · explore",
+      "skillIds": [
+        "g2-e1-5"
+      ],
+      "href": "./curriculum.html?grade=2#g2-e1-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-e1-5-3"
+      ]
+    },
+    {
+      "id": "activity-g2-question-e2-1-1",
+      "title": "Non-standard length units",
+      "skillIds": [
+        "g2-e2-1"
+      ],
+      "href": "./curriculum.html?grade=2#g2-e2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-e2-1-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-e2-1-2",
+      "title": "Non-standard length units · another way",
+      "skillIds": [
+        "g2-e2-1"
+      ],
+      "href": "./curriculum.html?grade=2#g2-e2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-e2-1-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-e2-2-1",
+      "title": "Centimetres and metres",
+      "skillIds": [
+        "g2-e2-2"
+      ],
+      "href": "./curriculum.html?grade=2#g2-e2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-e2-2-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-e2-2-2",
+      "title": "Centimetres and metres · another way",
+      "skillIds": [
+        "g2-e2-2"
+      ],
+      "href": "./curriculum.html?grade=2#g2-e2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-e2-2-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-e2-3-1",
+      "title": "Measure from different starts",
+      "skillIds": [
+        "g2-e2-3"
+      ],
+      "href": "./curriculum.html?grade=2#g2-e2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-e2-3-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-e2-3-2",
+      "title": "Measure from different starts · explore",
+      "skillIds": [
+        "g2-e2-3"
+      ],
+      "href": "./curriculum.html?grade=2#g2-e2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-e2-3-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-e2-4-1",
+      "title": "Duration units",
+      "skillIds": [
+        "g2-e2-4"
+      ],
+      "href": "./curriculum.html?grade=2#g2-e2-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-e2-4-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-e2-4-2",
+      "title": "Duration units · another way",
+      "skillIds": [
+        "g2-e2-4"
+      ],
+      "href": "./curriculum.html?grade=2#g2-e2-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-e2-4-2"
+      ]
+    },
+    {
+      "id": "activity-g2-question-e2-4-3",
+      "title": "Duration units · explore",
+      "skillIds": [
+        "g2-e2-4"
+      ],
+      "href": "./curriculum.html?grade=2#g2-e2-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-e2-4-3"
+      ]
+    },
+    {
+      "id": "activity-g2-question-f1-1-1",
+      "title": "Equivalent money combinations",
+      "skillIds": [
+        "g2-f1-1"
+      ],
+      "href": "./curriculum.html?grade=2#g2-f1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-f1-1-1"
+      ]
+    },
+    {
+      "id": "activity-g2-question-f1-1-2",
+      "title": "Equivalent money combinations · another way",
+      "skillIds": [
+        "g2-f1-1"
+      ],
+      "href": "./curriculum.html?grade=2#g2-f1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g2-question-f1-1-2"
+      ]
+    }
+  ]
+}

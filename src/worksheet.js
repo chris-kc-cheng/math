@@ -4,6 +4,7 @@ import {topicOptions} from './game/model.js';
 import {buildWorksheet,DEFAULT_COUNT,MAX_COUNT} from './worksheet-model.js';
 import {renderVisual} from './curriculum/visuals.js';
 
+import {setMathText} from './math-text.js';
 const el=(tag,text,cls)=>{const node=document.createElement(tag);if(text!==undefined)node.textContent=text;if(cls)node.className=cls;return node;};
 const math=(host,tex,display=true)=>{try{katex.render(tex,host,{displayMode:display,throwOnError:false,trust:false});}catch{host.textContent=tex;}return host;};
 const looksLikeTex=text=>/[\\^_{}]/.test(text);
@@ -16,7 +17,7 @@ export function renderSheet(sheet){
  const list=el('ol',undefined,'ws-questions');
  for(const q of sheet.questions){
   const item=el('li',undefined,'ws-question');item.value=q.number;
-  if(q.prompt)item.append(el('p',q.prompt,'ws-prompt'));
+  if(q.prompt)item.append(setMathText(el('p',undefined,'ws-prompt'),q.prompt));
   if(q.formula)item.append(math(el('div',undefined,'ws-formula'),q.formula));
   if(q.visual){const figure=el('div',undefined,'ws-visual');renderVisual(figure,q.visual);item.append(figure);}
   item.append(el('p','Answer: ______________________','ws-answer-line'));list.append(item);
@@ -29,9 +30,9 @@ export function renderSheet(sheet){
  }else{
   for(const q of sheet.questions){
    const block=el('div',undefined,'ws-solution');block.append(el('h2',`${q.number}. ${q.title}`));
-   if(q.prompt)block.append(el('p',q.prompt,'ws-prompt'));if(q.formula)block.append(math(el('div',undefined,'ws-formula'),q.formula));
+   if(q.prompt)block.append(setMathText(el('p',undefined,'ws-prompt'),q.prompt));if(q.formula)block.append(math(el('div',undefined,'ws-formula'),q.formula));
    for(const step of q.steps){
-    const row=el('div',undefined,'ws-step');if(step.text)row.append(el('p',step.text));if(step.math)row.append(math(el('div',undefined,'ws-step-math'),step.math));
+    const row=el('div',undefined,'ws-step');if(step.text)row.append(setMathText(el('p'),step.text));if(step.math)row.append(math(el('div',undefined,'ws-step-math'),step.math));
     if(step.visual){const figure=el('div',undefined,'ws-visual');renderVisual(figure,step.visual);row.append(figure);}block.append(row);
    }
    const final=el('p',undefined,'ws-final');final.append('Answer: ');const value=el('span',undefined,'ws-answer-value');if(looksLikeTex(q.answer))math(value,q.answer,false);else value.textContent=q.answer;final.append(value);block.append(final);answers.append(block);

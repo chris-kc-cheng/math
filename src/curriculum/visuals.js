@@ -1,11 +1,18 @@
+import {renderPrimaryVisual} from './primary-visuals.js';
+import {renderSecondaryVisual} from './secondary-visuals.js';
 const colours=['#2459a6','#bd662b','#287858','#8b58a1'];
+import {setMathText} from '../math-text.js';
 const element=(tag,text)=>{const node=document.createElement(tag);if(text!==undefined)node.textContent=String(text);return node;};
 const svgElement=(tag,attributes={},text)=>{const node=document.createElementNS('http://www.w3.org/2000/svg',tag);for(const [key,value] of Object.entries(attributes))node.setAttribute(key,String(value));if(text!==undefined)node.textContent=String(text);return node;};
 const add=(svg,tag,attrs,text)=>{const node=svgElement(tag,attrs,text);svg.append(node);return node;};
 function canvas(caption,width=480,height=240){const svg=svgElement('svg',{viewBox:`0 0 ${width} ${height}`,role:'img','aria-label':caption});svg.append(svgElement('title',{},caption));return svg;}
 export function renderVisual(host,visual){
  const figure=element('figure');figure.className='practice-visual';const caption=visual.caption||'Math model';
- if(['histogram','multiple-bars','broken-line','circle-graph'].includes(visual.type)){
+ if(visual.type==='right-triangle'){
+  const svg=canvas(caption,400,240),scale=Math.min(260/visual.b,150/visual.a),right=70+visual.b*scale,top=185-visual.a*scale;add(svg,'polygon',{points:`70,185 ${right},185 70,${top}`,fill:'#d5e5f7',stroke:colours[0],'stroke-width':3});add(svg,'path',{d:'M70 163H92V185',fill:'none',stroke:colours[0],'stroke-width':2});add(svg,'text',{x:30,y:(top+185)/2,'font-size':19},visual.a);add(svg,'text',{x:(70+right)/2,y:217,'font-size':19},visual.b);add(svg,'text',{x:(70+right)/2+15,y:(top+185)/2-15,'font-size':20},'c = ?');figure.append(svg);
+ }else if(visual.type.startsWith('primary-'))renderPrimaryVisual(figure,visual);
+ else if(visual.type.startsWith('secondary-'))renderSecondaryVisual(figure,visual);
+ else if(['histogram','multiple-bars','broken-line','circle-graph'].includes(visual.type)){
   const svg=canvas(caption,480,280);
   if(visual.type==='circle-graph'){
    const total=visual.values.reduce((a,b)=>a+b,0);let angle=-Math.PI/2;
@@ -33,7 +40,7 @@ export function renderVisual(host,visual){
  }else if(visual.type==='table'){
   const table=element('table'),head=element('thead'),row=element('tr'),body=element('tbody');
   for(const title of visual.columns){const th=element('th',title);th.scope='col';row.append(th);}head.append(row);
-  for(const values of visual.rows){const tr=element('tr');values.forEach(value=>tr.append(element('td',value)));body.append(tr);}table.append(head,body);figure.append(table);
+  for(const values of visual.rows){const tr=element('tr');values.forEach(value=>{const td=element('td');setMathText(td,value);tr.append(td);});body.append(tr);}table.append(head,body);figure.append(table);
  }else if(visual.type==='code'){
   figure.append(element('pre',visual.lines.join('\n')));
  }else if(visual.type==='infographic'){
