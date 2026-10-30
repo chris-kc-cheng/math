@@ -1,0 +1,22 @@
+.game-page{max-width:850px}.game-page h1{margin-bottom:12px}.game-intro,.game-format,#save-status,.game-history-row{color:#596570;font-size:14px;line-height:1.6}#game-setup{display:flex;gap:16px;align-items:end;flex-wrap:wrap;margin:24px 0}#game-setup label,.game-answer label{display:grid;gap:7px;font-size:14px}#game-setup select,.game-answer input{font:inherit;padding:9px;border:1px solid #84909b;border-radius:6px;background:white;color:#202b35}.game-answer{display:flex;align-items:end;gap:12px;flex-wrap:wrap;margin-top:24px}.game-answer input{width:min(290px,70vw)}#game-round{margin-top:30px}#game-round h2{font-size:20px;margin:24px 0}.game-progress{display:flex;justify-content:space-between;gap:16px;font-size:13px}.game-page progress{width:100%;height:8px;accent-color:#23734a;margin-top:10px}.game-page .practice-prompt{font:25px/1.55 KaTeX_Main,'Times New Roman',serif}.game-feedback{min-height:1.7em;line-height:1.6}.game-explanation{margin-top:24px}.game-explanation :is(.practice-toolbar,.practice-question,.practice-prompt,.practice-attempt,.controls){display:none!important}.game-score{font-size:28px}#game-history{margin-top:38px;border-top:1px solid #84909b;padding-top:18px}#game-history summary{cursor:pointer}.game-history-row{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:12px}#game-error{color:#a33f2b}html[data-theme=dark] :is(.game-progress,.game-feedback,.game-score){color:#e1e7ed}html[data-theme=dark] #game-error{color:#ffb39f}
+#game-setup input{font:inherit;padding:9px;border:1px solid #84909b;border-radius:6px;background:white;color:#202b35;width:min(240px,65vw)}
+
+/* Battle scene: Captain Patty (left) vs Grumble (right). State comes from battleState(). */
+.game-stage{position:relative;height:210px;margin:18px 0 6px;border:1px solid #cdd4db;border-radius:12px;overflow:hidden;background:linear-gradient(#cfe6fb 0 68%,#8fc46a 68% 100%)}
+.game-stage img{position:absolute;bottom:14px;user-select:none}
+.game-hero{left:3%;height:150px;width:auto}
+.game-zombie{right:3%;height:158px;width:auto;transform:translateX(calc(var(--misses,0) * -28%));transition:transform .6s ease-out}
+.game-shot{left:24%;bottom:98px!important;height:26px;width:auto;opacity:0}
+.game-hearts{position:absolute;top:8px;right:12px;font-size:20px;line-height:1;letter-spacing:2px;color:#d94b4b;text-shadow:0 1px 0 #fff8}.game-hearts .empty{opacity:.45}
+.shot-hit .game-shot{animation:ketchup-hit .55s ease-in forwards}.shot-hit .game-zombie{animation:zombie-hit .5s .5s}
+.shot-miss .game-shot{animation:ketchup-miss .6s ease-in forwards}
+.is-won .game-zombie{transform:translateX(calc(var(--misses,0) * -28%)) rotate(82deg) translateY(10px);transform-origin:50% 100%;opacity:.85}
+.is-lost .game-zombie{transform:translateX(30%);opacity:.7}
+@keyframes ketchup-hit{0%{left:24%;opacity:1}85%{left:calc(70% - var(--misses,0) * 8%);opacity:1}100%{left:calc(72% - var(--misses,0) * 8%);opacity:0;transform:scale(1.6)}}
+@keyframes ketchup-miss{0%{left:24%;opacity:1}100%{left:46%;bottom:30px;opacity:0}}
+@keyframes zombie-hit{0%,100%{filter:none;translate:0}25%{filter:brightness(1.6) saturate(.4);translate:6px}60%{translate:-6px}}
+.game-page .practice-prompt{margin-top:16px}
+.game-history{margin-top:32px;border-top:1px solid #cdd4db;padding-top:16px}.game-history summary{cursor:pointer;font-size:14px}.game-history-row{display:flex;justify-content:space-between;gap:12px}
+.game-page .game-answer button,.game-page #game-start,.game-page .controls button{min-height:40px}
+@media(max-width:560px){.game-stage{height:170px}.game-hero{height:118px}.game-zombie{height:124px}.game-shot{bottom:78px!important;height:20px}}
+@media(prefers-reduced-motion:reduce){.game-zombie{transition:none}.game-shot,.game-zombie{animation:none!important}}

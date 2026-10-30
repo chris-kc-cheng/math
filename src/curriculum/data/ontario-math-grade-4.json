@@ -21,6 +21,62 @@
     "description": "Ontario Grade 4 mathematics for YRDSB learners. Representative worked and guided activities support practice; they do not certify mastery.",
     "children": [
       {
+        "id": "g4-learning",
+        "code": "A",
+        "title": "Social-emotional learning skills and the mathematical processes",
+        "source": "https://www.dcp.edu.gov.on.ca/en/curriculum/elementary-mathematics/grades/g4-math/strands",
+        "children": [
+          {
+            "id": "g4-a1-topic",
+            "title": "Social-emotional learning skills and the mathematical processes",
+            "children": [
+              {
+                "id": "g4-a1-1",
+                "code": "A1.1",
+                "title": "Manage emotions",
+                "description": "Recognize emotions and choose helpful actions.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-a1-2",
+                "code": "A1.2",
+                "title": "Cope with challenges",
+                "description": "Choose tools and support when stuck.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-a1-3",
+                "code": "A1.3",
+                "title": "Persist and stay motivated",
+                "description": "Try new representations and reflect on progress.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-a1-4",
+                "code": "A1.4",
+                "title": "Collaborate and communicate",
+                "description": "Explain reasoning and listen respectfully.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-a1-5",
+                "code": "A1.5",
+                "title": "Confidence and self-awareness",
+                "description": "Notice strengths and set next goals.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-a1-6",
+                "code": "A1.6",
+                "title": "Critical and creative thinking",
+                "description": "Estimate, reason, check, and consider alternatives.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "g4-number",
         "code": "B",
         "title": "Number",
@@ -463,62 +519,6 @@
                 "code": "F1.5",
                 "title": "Reasonable prices",
                 "description": "Use comparisons to judge value for money.",
-                "example": "Try the worked example, explain the method, then refresh for another question."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "g4-learning",
-        "code": "A",
-        "title": "Learning skills and mathematical processes",
-        "source": "https://www.dcp.edu.gov.on.ca/en/curriculum/elementary-mathematics/grades/g4-math/strands",
-        "children": [
-          {
-            "id": "g4-a1-topic",
-            "title": "A1 · Learning skills and mathematical processes",
-            "children": [
-              {
-                "id": "g4-a1-1",
-                "code": "A1.1",
-                "title": "Manage emotions",
-                "description": "Recognize emotions and choose helpful actions.",
-                "example": "Try the worked example, explain the method, then refresh for another question."
-              },
-              {
-                "id": "g4-a1-2",
-                "code": "A1.2",
-                "title": "Cope with challenges",
-                "description": "Choose tools and support when stuck.",
-                "example": "Try the worked example, explain the method, then refresh for another question."
-              },
-              {
-                "id": "g4-a1-3",
-                "code": "A1.3",
-                "title": "Persist and stay motivated",
-                "description": "Try new representations and reflect on progress.",
-                "example": "Try the worked example, explain the method, then refresh for another question."
-              },
-              {
-                "id": "g4-a1-4",
-                "code": "A1.4",
-                "title": "Collaborate and communicate",
-                "description": "Explain reasoning and listen respectfully.",
-                "example": "Try the worked example, explain the method, then refresh for another question."
-              },
-              {
-                "id": "g4-a1-5",
-                "code": "A1.5",
-                "title": "Confidence and self-awareness",
-                "description": "Notice strengths and set next goals.",
-                "example": "Try the worked example, explain the method, then refresh for another question."
-              },
-              {
-                "id": "g4-a1-6",
-                "code": "A1.6",
-                "title": "Critical and creative thinking",
-                "description": "Estimate, reason, check, and consider alternatives.",
                 "example": "Try the worked example, explain the method, then refresh for another question."
               }
             ]

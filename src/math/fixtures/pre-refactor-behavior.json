@@ -34,7 +34,7 @@
         7,
         3
       ],
-      "sha256": "1b3abf883244c31ba7daf6a0c1faa4a7797dea66c7ebb5498abcfcdfff1bdb99"
+      "sha256": "eb9c4791a94811a2f31fb4996ee3fcb9059975058f8d5b225c31cab540e9a78c"
     },
     {
       "id": "fraction-to-mixed",
@@ -42,7 +42,7 @@
         22,
         7
       ],
-      "sha256": "150a4b129de7bc88c8353e75363d2ae635c982eb5ae6dfa5e654982b2ece9633"
+      "sha256": "bbcfe1528511e768740b9883e519b9a9f768b95ed9167d2d8c6826edfde4ee28"
     },
     {
       "id": "fraction-to-mixed",
@@ -50,7 +50,7 @@
         25,
         6
       ],
-      "sha256": "aded264a88533dc64883c11f99744802017c628df38e66b71d285785b614e418"
+      "sha256": "c569c32c397762f837adfb1c43c5ce07a939ec8517a6732a8282fb7e60606585"
     },
     {
       "id": "multiply-then-add",
@@ -109,7 +109,7 @@
         56,
         8
       ],
-      "sha256": "43d6a7295305524dfbd1e7ec33f7322dbc94cbeec5b077e9c1f52f5ce83f56a5"
+      "sha256": "615125103897e7f76c738c33fd3cfcbc410af0bae42c10d331190f87ffd988f6"
     },
     {
       "id": "division-facts",
@@ -117,7 +117,7 @@
         56,
         8
       ],
-      "sha256": "43d6a7295305524dfbd1e7ec33f7322dbc94cbeec5b077e9c1f52f5ce83f56a5"
+      "sha256": "615125103897e7f76c738c33fd3cfcbc410af0bae42c10d331190f87ffd988f6"
     },
     {
       "id": "division-facts",
@@ -125,7 +125,7 @@
         44,
         4
       ],
-      "sha256": "addc874e9f41b3f77ab0a6309ebf6dd7e4f14e59b131c6680cb331b01967d220"
+      "sha256": "692fea013f67d5126a8390d9361dfc9bfe3599089ec7e23872d77f7e0b326d3f"
     },
     {
       "id": "decimal-addition",
@@ -2090,7 +2090,7 @@
     },
     {
       "input": "6 / 8",
-      "sha256": "226688416d96693a71d61f869c9d66583f03f8b6244280b52ebef784f5a6ae3a"
+      "sha256": "6a34f71eeedfea2bf7171186d8e66ceea45bffd16b106bff4fbbe4c62b8ddd40"
     },
     {
       "input": "x + 5 = 12",

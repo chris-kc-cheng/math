@@ -1,5 +1,5 @@
 import {rational,add,subtract,multiply,divide,compare,power,integerSquareRoot,safeInteger,commonParts,calculate} from '../core/exact.js';
-import {tex,scaledDecimal,fixed,rawFraction} from '../core/format.js';
+import {tex,scaledDecimal,fixed,rawFraction,decimalOrFraction} from '../core/format.js';
 import {scale,divisionFacts} from '../core/relationships.js';
 import {mixed} from '../core/format.js';
 import {pick,step,lesson,table,numeric} from '../lesson.js';
@@ -78,9 +78,9 @@ export const numberRules8={
  'g8-fraction-multiply-divide':{generate:r=>fractionGenerator(r,true),solve:rationalArithmetic},
  'g8-proportion':{
   generate:r=>[pick(r,2,8),pick(r,2,12),pick(r,2,8),pick(r,5,30)],
-  solve:([items,cost,newItems,percent])=>{const unit=divide(cost,items),newCost=multiply(unit,newItems),increased=scale(cost,100+percent,100);return lesson(`${items} items cost $${cost}. Find the cost of ${newItems} items at the same rate, then a ${percent}% increase on the original cost.`,[
-   step('Find the cost per item.',`${cost}\\div${items}=${tex(unit)}`),step('Scale by the new count.',`${tex(unit)}\\times${newItems}=${tex(newCost)}`),step('For an increase, use 100% plus the increase percentage.',`${cost}\\times\\frac{${100+percent}}{100}=${tex(increased)}`)
-  ],{answer:tex(newCost)});}
+  solve:([items,cost,newItems,percent])=>{const unit=divide(cost,items),newCost=multiply(unit,newItems),increased=scale(newCost,100+percent,100);return lesson(`${items} items cost $${cost}. Find the cost of ${newItems} items at the same rate. Then the price goes up by ${percent}%. Find the new cost.`,[
+   step('Find the cost per item.',`${cost}\\div${items}=${tex(unit)}`),step('Scale by the new count.',`${tex(unit)}\\times${newItems}=${tex(newCost)}`),step(`A ${percent}% increase means the new price is ${100+percent}% of the old price.`,`${tex(newCost)}\\times\\frac{${100+percent}}{100}=${decimalOrFraction(increased)}`)
+  ],{answer:decimalOrFraction(increased)});}
  }
 };
 function integerLesson(a,b,operation){const op=['+','-','*','/'][operation],symbol=['+','-','\\times','\\div'][operation],result=calculate(op,a,b);return lesson('Calculate with signed integers.',[

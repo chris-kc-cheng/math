@@ -21,6 +21,63 @@
     "description": "Ontario Grade 8 mathematics for YRDSB learners. Worked and guided activities illustrate each expectation; availability does not certify mastery.",
     "children": [
       {
+        "id": "g8-learning",
+        "code": "A",
+        "title": "Social-emotional learning skills and the mathematical processes",
+        "source": "https://www.dcp.edu.gov.on.ca/en/curriculum/elementary-mathematics/grades/g8-math/strand-a/a1",
+        "description": "These skills are integrated across the other strands, rather than taught only as a separate calculation unit.",
+        "children": [
+          {
+            "id": "g8-learning-skills",
+            "title": "Social-emotional learning skills and the mathematical processes",
+            "children": [
+              {
+                "id": "g8-a1-1",
+                "code": "A1.1",
+                "title": "Manage emotions",
+                "description": "Identify and manage emotions while engaging in mathematics.",
+                "example": "Explain how you feel when a problem is unfamiliar."
+              },
+              {
+                "id": "g8-a1-2",
+                "code": "A1.2",
+                "title": "Cope with challenges",
+                "description": "Recognize stress and use strategies for coping with mathematical challenges.",
+                "example": "Pause, try a drawing, or ask a useful question when stuck."
+              },
+              {
+                "id": "g8-a1-3",
+                "code": "A1.3",
+                "title": "Persist and stay motivated",
+                "description": "Maintain motivation and perseverance when working through problems.",
+                "example": "Try another strategy after a first attempt does not work."
+              },
+              {
+                "id": "g8-a1-4",
+                "code": "A1.4",
+                "title": "Collaborate and communicate",
+                "description": "Build relationships, listen to different mathematical ideas, and communicate respectfully.",
+                "example": "Compare two solution methods with a partner."
+              },
+              {
+                "id": "g8-a1-5",
+                "code": "A1.5",
+                "title": "Confidence and self-awareness",
+                "description": "Develop awareness of yourself as a capable mathematics learner.",
+                "example": "Describe a strategy you have improved at using."
+              },
+              {
+                "id": "g8-a1-6",
+                "code": "A1.6",
+                "title": "Critical and creative thinking",
+                "description": "Think critically and creatively to support mathematical decisions and problem solving.",
+                "example": "Explain whether an answer is reasonable and find another approach."
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "g8-number",
         "code": "B",
         "title": "Number",
@@ -436,63 +493,6 @@
                 "title": "Credit and consumer contracts",
                 "description": "Compare interest, fees, rewards and terms.",
                 "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "g8-learning",
-        "code": "A",
-        "title": "Learning skills and mathematical processes",
-        "source": "https://www.dcp.edu.gov.on.ca/en/curriculum/elementary-mathematics/grades/g8-math/strand-a/a1",
-        "description": "These skills are integrated across the other strands, rather than taught only as a separate calculation unit.",
-        "children": [
-          {
-            "id": "g8-learning-skills",
-            "title": "A1 · Learning throughout mathematics",
-            "children": [
-              {
-                "id": "g8-a1-1",
-                "code": "A1.1",
-                "title": "Manage emotions",
-                "description": "Identify and manage emotions while engaging in mathematics.",
-                "example": "Explain how you feel when a problem is unfamiliar."
-              },
-              {
-                "id": "g8-a1-2",
-                "code": "A1.2",
-                "title": "Cope with challenges",
-                "description": "Recognize stress and use strategies for coping with mathematical challenges.",
-                "example": "Pause, try a drawing, or ask a useful question when stuck."
-              },
-              {
-                "id": "g8-a1-3",
-                "code": "A1.3",
-                "title": "Persist and stay motivated",
-                "description": "Maintain motivation and perseverance when working through problems.",
-                "example": "Try another strategy after a first attempt does not work."
-              },
-              {
-                "id": "g8-a1-4",
-                "code": "A1.4",
-                "title": "Collaborate and communicate",
-                "description": "Build relationships, listen to different mathematical ideas, and communicate respectfully.",
-                "example": "Compare two solution methods with a partner."
-              },
-              {
-                "id": "g8-a1-5",
-                "code": "A1.5",
-                "title": "Confidence and self-awareness",
-                "description": "Develop awareness of yourself as a capable mathematics learner.",
-                "example": "Describe a strategy you have improved at using."
-              },
-              {
-                "id": "g8-a1-6",
-                "code": "A1.6",
-                "title": "Critical and creative thinking",
-                "description": "Think critically and creatively to support mathematical decisions and problem solving.",
-                "example": "Explain whether an answer is reasonable and find another approach."
               }
             ]
           }

@@ -41,7 +41,7 @@ export function solve(input){
  const a=number(m[1]),b=number(m[3]),op=m[2];
  const result=calculate(op,a,b);
  const symbol={'+':'+','-':'-','*':'\\times','/':'\\div'}[op];
- const explanation={'+':'Combine the two amounts.','-':'Take away the second amount.','*':'Multiply the two numbers.','/':'Divide into equal parts. Reduce any fraction to its simplest form.'}[op];
+ const explanation={'+':'Combine the two amounts.','-':'Take away the second amount.','*':'Multiply the two numbers.','/':'Divide into equal groups. If it does not divide evenly, write the answer as a fraction in simplest form.'}[op];
  if(op==='-' && a.d===1n && b.d===1n && a.n>b.n && b.n>0n && a.n%10n>0n && b.n>a.n%10n && b.n<10n){
  const first=a.n%10n,rest=b.n-first;
  return {answer:tex(result),methods:[{name:'Bridge a ten',steps:[{math:`${tex(a)}-${tex(b)}`,text:'Start with the question.'},{math:`${tex(a)}-${first}-${rest}`,text:`Split ${b.n} into ${first} and ${rest} to reach a friendly ten.`},{math:`${a.n-first}-${rest}`,text:`Subtract ${first} first.`},{math:tex(result),text:`Subtract the remaining ${rest}.`}]}]};

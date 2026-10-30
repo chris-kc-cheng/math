@@ -115,7 +115,7 @@ export function verificationFor(rule,v,lesson,proposed){
  }
  if(rule==='equivalent-fraction')return bundle('Equivalent-size parts',[equality('Multiplying top and bottom by the same factor preserves the amount.',`${a}\\times${b*c}`,`${a*c}\\times${b}`,multiply(a,b*c),multiply(a*c,b))]);
  if(rule==='g8-proportion'){
-  const cost=read();return bundle('Cross-product check',[equality('For equal unit rates, cross-products must match.',`${tex(cost)}\\times${a}`,`${b}\\times${c}`,multiply(cost,a),multiply(b,c))]);
+  const final=read();return bundle('Work backwards',[equality('Undo the scaling and the increase: the final cost times the old item count times 100 must equal the old cost times the new item count times the increase factor.',`${decimalOrFraction(final)}\\times${a}\\times100`,`${b}\\times${c}\\times${100+d}`,multiply(final,a*100),b*c*(100+d))]);
  }
  if(rule==='evaluate-expression')return bundle('Substitution check',[equality('Substitute the given variable value and compare it with the proposed answer.',substitutionMath(a,b,c),tex(read()),substituteLinear(a,b,c),read())]);
  if(rule==='g8-evaluate')return bundle('Substitution check',[equality('Use the original rational coefficient and variable value.',substitutionMath(rational(a,b),c,rational(d,e)),tex(read()),substituteLinear(rational(a,b),c,rational(d,e)),read())]);

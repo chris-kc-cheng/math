@@ -39,7 +39,7 @@ npm run build
 
 Use npm run preview to serve the production build. Open the printed local URL.
 
-The lesson page shows only 2 + 3 × 4 and 1/2 + 2/3. Next step or Play/Pause reveals each new line while earlier lines remain visible. Reduced-motion settings suppress entry animations.
+The landing page is a card slide show with one worked example per kind of math: order of operations, fractions, long division, long multiplication, and a one-variable equation. It plays automatically (one step about every 1.7 s, then a short hold before the next card). Pause stops it so the learner can step manually (Step, previous/next card, or the dots) or type or draw a formula under Try your own formula; focusing the formula box or opening the handwriting pad pauses automatically. With reduced-motion enabled the show starts paused and entry animations are suppressed.
 
 The solver supports two signed integers/decimals with +, -, */×, or /÷; three-term addition with two grouping methods; the bounded a + b × c pattern; and a/b + c/d with integer fraction components. Simple LaTeX fractions and multiplication/division commands work. Simple equations ax + b = c with integer constants and x only on the left are also supported. Other mixed operations, general LaTeX parsing, more general algebra, powers, and roots are unsupported. Answers use reduced exact fractions; division by zero is rejected.
 
@@ -73,3 +73,7 @@ The Grade 5 library provides 80 activity variants across all 58 entries, grouped
 Grade 8 is available from the curriculum grade selector or `curriculum.html?grade=8`. Its researched hierarchy has 51 entries and 60 question variants. The shared renderer, exact core and existing Grade 5 rules are reused. See [Grade 8 research](src/curriculum/data/grade-8-research.md) for official Ontario/YRDSB sources, source mapping and coverage limits.
 
 Grades **4, 6, and 7** are also available in the same selector: `curriculum.html?grade=4`, `?grade=6`, and `?grade=7`. Their audited hierarchies contain 55, 58, and 59 expectation entries, with representative worked or guided activities for every entry. All grades use the shared learner/parent views, playback, page-wide fast-forward, dark mode, and exact arithmetic. New mathematical methods are grouped by domain in `src/math/elementary/`; grade-specific content and generation bounds remain in JSON. See [research and coverage audit](src/curriculum/data/grades-4-6-7-research.md). The activities remain partial coverage rather than a claim to assess every context, construction, or learner discussion.
+
+## Math quest
+
+`game.html` is a five-question round with the curriculum's single-answer questions (Grades 4–8). Captain Patty fires ketchup at Grumble the zombie: each solved question is a hit and removes a heart; each wrong try or explored question lets Grumble step closer (never a loss). Hit at least three of five to win. Scoring is 10 points for a first-try answer and 5 for a retry, and exploring the explanation earns none. The scene is derived from the saved answers (`battleState` in `src/game/model.js`), so resuming a round restores it. Rounds save locally in IndexedDB by player name, with a past-rounds list and Play again; there is no account or backend. Reduced-motion disables the shot and zombie animations. Art is in `public/game-art/`.

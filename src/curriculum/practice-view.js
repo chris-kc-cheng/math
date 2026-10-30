@@ -12,7 +12,7 @@ import {setPlaybackIcon} from './playback-controls.js';
 const el=(tag,text,className)=>{const node=document.createElement(tag);if(text)node.textContent=text;if(className)node.className=className;return node;};
 const render=(formula,node)=>katex.render(formula,node,{displayMode:true,throwOnError:true,trust:false});
 
-export function mountPractice(container,template){
+export function mountPractice(container,template,initialValues=template.example){
  const card=el('section',null,'practice-card'),heading=el('h3',template.title),question=el('div',null,'practice-question math'),prompt=el('p',null,'practice-prompt'),questionVisual=el('div'),tools=el('div'),toolbar=el('div',null,'practice-toolbar');
  card.dataset.questionId=template.id;
  const refresh=el('button','↻','practice-refresh');refresh.type='button';refresh.setAttribute('aria-label',`New question: ${template.title}`);refresh.title='New question';
@@ -21,7 +21,7 @@ export function mountPractice(container,template){
  const output=el('div',null,'practice-work'),caption=el('p',null,'practice-caption'),controls=el('div',null,'controls');
  output.setAttribute('role','log');output.setAttribute('aria-label',`Steps: ${template.title}`);caption.setAttribute('aria-live','polite');
  const next=el('button'),play=el('button'),all=el('button');next.type=play.type=all.type='button';controls.append(next,play,all);controls.setAttribute('role','group');controls.setAttribute('aria-label','Solution playback');setPlaybackIcon(next,'next','Next step');setPlaybackIcon(play,'play','Play');setPlaybackIcon(all,'all','Show all steps');card.append(toolbar,prompt,question,questionVisual,tools,output,caption,controls);container.append(card);
- let values=exampleValues(template),lesson,timeline,index=1,timer;
+ let values=exampleValues(template,initialValues),lesson,timeline,index=1,timer;
  function stop(){clearInterval(timer);timer=undefined;setPlaybackIcon(play,'play','Play');}
  function reset(){
   stop();lesson=createPractice(template,values);timeline=playbackSteps(lesson);index=1;output.replaceChildren();question.replaceChildren();questionVisual.replaceChildren();tools.replaceChildren();

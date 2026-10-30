@@ -29,7 +29,7 @@ export function convertFraction(numerator,denominator) {
   if(r===0n) steps.push({math:String(w),text:`${n} divided by ${d} is ${w}, with no parts left over.`});
   else {
     if(w>0n) {
-      steps.push({math:fraction(`${blue(w)}\\times ${d}+${orange(r)}`,d),text:`${n} divided by ${d} gives ${w} whole groups, with ${r} parts left over.`});
+      steps.push({math:fraction(`${blue(w)}\\times ${d}+${orange(r)}`,d),text:`${n} divided by ${d} gives ${w} whole groups, with ${r} ${r===1n?'part':'parts'} left over.`});
       steps.push({math:`${blue(w)}+${orange(fraction(r,d))}`,text:`The whole groups make ${w}. The leftover parts make ${r}/${d}.`});
     }
     steps.push({math:mixed(w,r/divisor,d/divisor),text:divisor>1n?`Simplify the fraction part by dividing its top and bottom by ${divisor}.`:(w?`Write ${w} and ${r}/${d} together as a mixed number.`:'This fraction is less than one whole, so there is no whole-number part.')});

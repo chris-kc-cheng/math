@@ -40,3 +40,4 @@
 :root[data-theme=dark] .katex :is([style*='#23734a'],[style*='35, 115, 74']) { color:#8ed8ad!important; }
 :root[data-theme=dark] mark { background:#594b26;color:#fff0ba; }
 :root[data-theme=dark] ::selection { background:#40658a;color:#fff; }
+:root[data-theme=dark] .game-page .practice-prompt { color:#e1e7ed!important; }

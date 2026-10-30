@@ -52,3 +52,22 @@ nav{margin-bottom:24px;font-size:14px}a{color:#2459a6;text-underline-offset:3px}
 .solution-stage{width:min(100%,440px);margin-inline:auto}
 
 .ld-grid,.lm-grid{line-height:1.25;row-gap:2px}.ld-grid>span,.lm-grid>span{min-height:1.3em}.ld-grid>.ld-rule,.lm-grid>.lm-top-rule,.lm-grid>.lm-bottom-rule{min-height:0}.lm-grid>.lm-carry{min-height:1em!important;line-height:1}.division-steps{margin:12px 0 18px;min-height:0}.long-division-demo #division-board{margin:24px 0;min-height:0}
+
+/* Landing slide show: one worked example per card, auto-advancing until paused. Palette and controls follow the curriculum pages. */
+.landing{text-align:center}.landing nav{text-align:center}
+.landing .app-brand{justify-content:center}
+.slide-card{width:min(100%,520px);margin:0 auto 24px;padding:16px 20px 18px;border:1px solid #e1e6eb;border-radius:12px;background:transparent;text-align:center}
+.slide-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:10px}
+.slide-topic{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;color:#2459a6}.slide-count{font-size:12px;color:#65717b;font-variant-numeric:tabular-nums}
+.slide-card .solution-stage{min-height:340px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start}
+.slide-card #formula-preview{text-align:center}
+.slide-card .steps{display:flex;flex-direction:column;align-items:center;width:100%}.slide-card .step{justify-content:center}
+.slide-card .caption{margin:14px auto 0;text-align:center;color:#596570}
+.slide-progress{height:3px;border-radius:2px;background:#e7effa;overflow:hidden;margin:12px 0}.slide-progress span{display:block;height:100%;width:0;background:#2459a6}
+.slide-controls{display:flex;justify-content:center;gap:5px}.slide-controls .playback-icon:disabled{opacity:.4;background:transparent;color:#596570}
+.slide-dots{display:flex;justify-content:center;gap:8px;margin-top:10px}.slide-dots button{width:10px;height:10px;min-width:10px;min-height:10px;padding:0;border-radius:50%;border:1px solid #cdd4db;background:white}.slide-dots button[aria-selected=true]{background:#2459a6;border-color:#2459a6}
+.own-formula{width:min(100%,520px);margin:0 auto}.own-formula label{display:block;font-size:13px;color:#596570;margin-bottom:6px}.own-formula div{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}.own-formula input{flex:1 1 200px;min-height:40px;padding:0 12px;font:inherit;border:1px solid #cdd4db;border-radius:6px;color:#202b35;background:white;text-align:left}.own-formula input:focus-visible{outline:3px solid #2459a6;outline-offset:3px}.own-formula button{min-height:40px}
+:root[data-theme=dark] .slide-card{border-color:#52606d}:root[data-theme=dark] .slide-topic{color:#99c5ff}:root[data-theme=dark] .slide-progress{background:#354e69}:root[data-theme=dark] .slide-progress span{background:#99c5ff}
+:root[data-theme=dark] .slide-dots button[aria-selected=true]{background:#99c5ff!important;border-color:#99c5ff!important}
+@media(max-width:480px){.slide-card{padding:12px 12px 16px}.slide-card .solution-stage{min-height:300px}}
+.playback-icon{display:inline-grid;place-items:center;width:38px;height:36px;padding:8px;border:0;background:transparent;color:#596570;border-radius:6px}.playback-icon:hover{background:#edf3fb;color:#2459a6}.playback-icon svg{display:block;width:21px;height:21px}

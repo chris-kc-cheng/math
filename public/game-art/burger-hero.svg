@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 230" width="210" height="230">
+  <title>Captain Patty – cute burger hero, facing right</title>
+  <g stroke="#3b1f0e" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+    <!-- cape flowing behind (left) -->
+    <path d="M62 100 Q20 96 6 128 Q22 126 18 148 Q34 138 36 162 Q66 150 74 124 Z" fill="#e53935"/>
+    <!-- back arm + glove -->
+    <path d="M48 134 q-8 6 -12 2" fill="none" stroke-width="9"/>
+    <circle cx="32" cy="136" r="11" fill="#ef5350"/>
+    <!-- legs mid-stride + shoes -->
+    <path d="M80 180 l-8 14" fill="none" stroke-width="9"/>
+    <path d="M124 180 l10 12" fill="none" stroke-width="9"/>
+    <path d="M56 204 q0-12 14-12 q14 0 18 8 v8 h-32z" fill="#fff"/>
+    <path d="M122 200 q4-10 18-8 q14 2 18 12 v4 h-36z" fill="#fff"/>
+    <path d="M58 212 h28 M124 208 h32" stroke="#e53935" stroke-width="5" fill="none"/>
+    <!-- bottom bun -->
+    <path d="M40 160 h118 q6 0 6 8 q0 20-24 20 h-80 q-26 0-26-20 q0-8 6-8z" fill="#e8a24a"/>
+    <!-- patty -->
+    <rect x="34" y="134" width="132" height="28" rx="14" fill="#6d3b1c"/>
+    <path d="M52 148 h8 M96 152 h8 M140 147 h8" stroke="#9a5a30" stroke-width="4" fill="none"/>
+    <!-- cheese -->
+    <path d="M38 128 h126 l-6 12 -14 14 -14-14 h-34 l-14 14 -14-14 -12 -12z" fill="#ffca28"/>
+    <!-- tomato -->
+    <rect x="38" y="118" width="126" height="16" rx="8" fill="#ef5350"/>
+    <!-- lettuce -->
+    <path d="M34 106 q10 14 20 0 q10 14 20 0 q10 14 20 0 q10 14 20 0 q10 14 20 0 q10 14 20 0 q8 10 14 0 v12 h-134z" fill="#7cc443"/>
+    <!-- top bun (big round head) -->
+    <path d="M34 108 q-6-78 70-78 q76 0 70 78z" fill="#f0b25a"/>
+  </g>
+  <path d="M52 86 q4-26 28-36" stroke="#fff6dc" stroke-width="6" fill="none" stroke-linecap="round" opacity=".85"/>
+  <g fill="#fff6dc" stroke="#3b1f0e" stroke-width="2">
+    <ellipse cx="86" cy="46" rx="6" ry="3.5" transform="rotate(-25 86 46)"/>
+    <ellipse cx="116" cy="42" rx="6" ry="3.5" transform="rotate(10 116 42)"/>
+    <ellipse cx="146" cy="54" rx="6" ry="3.5" transform="rotate(35 146 54)"/>
+  </g>
+  <g transform="translate(0,-5)"><!-- headband, tails fly backwards -->
+  <path d="M38 62 q66 14 132 0 v11 q-66 14-132 0z" fill="#e53935" stroke="#3b1f0e" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M40 66 l-24 -10 4 14 -14 8 28 2z" fill="#e53935" stroke="#3b1f0e" stroke-width="4" stroke-linejoin="round"/>
+  </g><g transform="translate(0,-5)"><!-- cute face, looking right -->
+  <g stroke="#3b1f0e" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="108" cy="88" rx="14" ry="16" fill="#fff" stroke-width="4"/>
+    <ellipse cx="146" cy="88" rx="14" ry="16" fill="#fff" stroke-width="4"/>
+    <ellipse cx="114" cy="90" rx="9" ry="11" fill="#3b1f0e" stroke="none"/>
+    <ellipse cx="152" cy="90" rx="9" ry="11" fill="#3b1f0e" stroke="none"/>
+    <circle cx="117" cy="85" r="3.6" fill="#fff" stroke="none"/><circle cx="155" cy="85" r="3.6" fill="#fff" stroke="none"/>
+    <circle cx="111" cy="95" r="1.8" fill="#fff" stroke="none"/><circle cx="149" cy="95" r="1.8" fill="#fff" stroke="none"/>
+    <path d="M125 99 q6 9 14 0 q-7-2-14 0z" fill="#8b1a1a" stroke-width="3.5"/>
+  </g>
+  <ellipse cx="98" cy="106" rx="8" ry="5" fill="#ff8a80" opacity=".75"/><ellipse cx="160" cy="106" rx="8" ry="5" fill="#ff8a80" opacity=".75"/>
+  </g><!-- front arm punching forward -->
+  <g stroke="#3b1f0e" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M160 140 q14-2 22-6" fill="none" stroke-width="9"/>
+    <circle cx="190" cy="130" r="16" fill="#e53935"/>
+    <path d="M182 123 q8-5 15 0" stroke="#fff" stroke-width="4" fill="none"/>
+  </g>
+</svg>
