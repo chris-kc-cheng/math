@@ -531,7 +531,8 @@
         "practice"
       ],
       "questionIds": [
-        "g8-question-b1-1"
+        "g8-question-b1-1",
+        "g8-more5-scientific-story-b1-1"
       ]
     },
     {
@@ -546,7 +547,8 @@
         "practice"
       ],
       "questionIds": [
-        "g8-question-b1-2"
+        "g8-question-b1-2",
+        "g8-more5-sqrt-estimate-b1-2"
       ]
     },
     {
@@ -561,7 +563,8 @@
         "practice"
       ],
       "questionIds": [
-        "g8-question-b1-3"
+        "g8-question-b1-3",
+        "g8-more-square-roots-b1-3"
       ]
     },
     {
@@ -576,7 +579,9 @@
         "practice"
       ],
       "questionIds": [
-        "g8-question-b1-4"
+        "g8-question-b1-4",
+        "g8-more3-convert-forms-b1-4",
+        "g8-more6-percent-story-b1-4"
       ]
     },
     {
@@ -591,7 +596,8 @@
         "practice"
       ],
       "questionIds": [
-        "g8-question-b2-1"
+        "g8-question-b2-1",
+        "g8-more3-order-of-operations-b2-1"
       ]
     },
     {
@@ -606,7 +612,8 @@
         "practice"
       ],
       "questionIds": [
-        "g8-question-b2-2"
+        "g8-question-b2-2",
+        "g8-more-square-facts-b2-2"
       ]
     },
     {
@@ -621,7 +628,8 @@
         "practice"
       ],
       "questionIds": [
-        "g8-question-b2-3"
+        "g8-question-b2-3",
+        "g8-more5-powers-of-ten-b2-3"
       ]
     },
     {
@@ -636,7 +644,9 @@
         "practice"
       ],
       "questionIds": [
-        "g8-question-b2-4"
+        "g8-question-b2-4",
+        "g8-more-integer-story-b2-4",
+        "g8-more6-integer-product-b2-4"
       ]
     },
     {
@@ -651,7 +661,9 @@
         "practice"
       ],
       "questionIds": [
-        "g8-question-b2-5"
+        "g8-question-b2-5",
+        "g8-more-fraction-story-b2-5",
+        "g8-more6-compare-fractions-b2-5"
       ]
     },
     {
@@ -667,7 +679,9 @@
       ],
       "questionIds": [
         "g8-question-b2-6",
-        "g8-extra-mixed"
+        "g8-extra-mixed",
+        "g8-more6-fraction-of-quantity-b2-6",
+        "g8-more6-fraction-divide-b2-6"
       ]
     },
     {
@@ -682,7 +696,8 @@
         "practice"
       ],
       "questionIds": [
-        "g8-question-b2-7"
+        "g8-question-b2-7",
+        "g8-more5-integer-product-b2-7"
       ]
     },
     {
@@ -697,7 +712,10 @@
         "practice"
       ],
       "questionIds": [
-        "g8-question-b2-8"
+        "g8-question-b2-8",
+        "g8-more-unit-rate-b2-8",
+        "g8-more4-ratio-share-b2-8",
+        "g8-more6-percent-story-b2-8"
       ]
     },
     {
@@ -728,7 +746,8 @@
         "practice"
       ],
       "questionIds": [
-        "g8-question-c1-2"
+        "g8-question-c1-2",
+        "g8-more3-pattern-table-c1-2"
       ]
     },
     {
@@ -743,7 +762,9 @@
         "practice"
       ],
       "questionIds": [
-        "g8-question-c1-3"
+        "g8-question-c1-3",
+        "g8-more-pattern-term-c1-3",
+        "g8-more6-pattern-table-c1-3"
       ]
     },
     {
@@ -774,7 +795,8 @@
       ],
       "questionIds": [
         "g8-question-c2-1",
-        "g8-extra-monomials"
+        "g8-extra-monomials",
+        "g8-more3-combine-terms-c2-1"
       ]
     },
     {
@@ -789,7 +811,8 @@
         "practice"
       ],
       "questionIds": [
-        "g8-question-c2-2"
+        "g8-question-c2-2",
+        "g8-more5-evaluate-signed-c2-2"
       ]
     },
     {
@@ -804,7 +827,9 @@
         "practice"
       ],
       "questionIds": [
-        "g8-question-c2-3"
+        "g8-question-c2-3",
+        "g8-more-solve-words-c2-3",
+        "g8-more6-missing-number-c2-3"
       ]
     },
     {
@@ -971,7 +996,8 @@
         "practice"
       ],
       "questionIds": [
-        "g8-question-d2-1"
+        "g8-question-d2-1",
+        "g8-more4-sample-space-d2-1"
       ]
     },
     {
@@ -1002,7 +1028,8 @@
         "practice"
       ],
       "questionIds": [
-        "g8-question-e1-1"
+        "g8-question-e1-1",
+        "g8-more4-polygon-angle-e1-1"
       ]
     },
     {
@@ -1017,7 +1044,8 @@
         "practice"
       ],
       "questionIds": [
-        "g8-question-e1-2"
+        "g8-question-e1-2",
+        "g8-more4-scale-length-e1-2"
       ]
     },
     {
@@ -1032,7 +1060,8 @@
         "practice"
       ],
       "questionIds": [
-        "g8-question-e1-3"
+        "g8-question-e1-3",
+        "g8-more4-scale-length-e1-3"
       ]
     },
     {
@@ -1047,7 +1076,8 @@
         "practice"
       ],
       "questionIds": [
-        "g8-question-e1-4"
+        "g8-question-e1-4",
+        "g8-more4-transform-point-e1-4"
       ]
     },
     {
@@ -1077,7 +1107,10 @@
         "practice"
       ],
       "questionIds": [
-        "g8-question-e2-2"
+        "g8-question-e2-2",
+        "g8-more-angle-relation-e2-2",
+        "g8-more4-polygon-angle-e2-2",
+        "g8-more6-polygon-angle-e2-2"
       ]
     },
     {
@@ -1094,7 +1127,9 @@
       "questionIds": [
         "g8-question-e2-3",
         "g8-extra-solid",
-        "g8-extra-circle"
+        "g8-extra-circle",
+        "g8-more4-composite-area-e2-3",
+        "g8-more4-solid-measure-e2-3"
       ]
     },
     {
@@ -1110,7 +1145,8 @@
       ],
       "questionIds": [
         "g8-question-e2-4",
-        "g8-extra-missing-leg"
+        "g8-extra-missing-leg",
+        "g8-more4-pythagoras-story-e2-4"
       ]
     },
     {
@@ -1125,7 +1161,8 @@
         "practice"
       ],
       "questionIds": [
-        "g8-question-f1-1"
+        "g8-question-f1-1",
+        "g8-more3-currency-exchange-f1-1"
       ]
     },
     {
@@ -1140,7 +1177,8 @@
         "practice"
       ],
       "questionIds": [
-        "g8-question-f1-2"
+        "g8-question-f1-2",
+        "g8-more3-budget-balance-f1-2"
       ]
     },
     {
@@ -1155,7 +1193,8 @@
         "practice"
       ],
       "questionIds": [
-        "g8-question-f1-3"
+        "g8-question-f1-3",
+        "g8-more5-budget-balance-f1-3"
       ]
     },
     {
@@ -1170,7 +1209,8 @@
         "practice"
       ],
       "questionIds": [
-        "g8-question-f1-4"
+        "g8-question-f1-4",
+        "g8-more3-simple-interest-f1-4"
       ]
     },
     {
@@ -1185,7 +1225,8 @@
         "practice"
       ],
       "questionIds": [
-        "g8-question-f1-5"
+        "g8-question-f1-5",
+        "g8-more5-sale-total-f1-5"
       ]
     },
     {

@@ -598,7 +598,8 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-b1-3"
+        "g4-question-b1-3",
+        "g4-more3-round-story-b1-3"
       ]
     },
     {
@@ -613,7 +614,9 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-b1-4"
+        "g4-question-b1-4",
+        "g4-more-fraction-of-set-b1-4",
+        "g4-more6-unit-fraction-b1-4"
       ]
     },
     {
@@ -628,7 +631,8 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-b1-5"
+        "g4-question-b1-5",
+        "g4-more3-compare-fractions-b1-5"
       ]
     },
     {
@@ -643,7 +647,8 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-b1-6"
+        "g4-question-b1-6",
+        "g4-more5-unit-fraction-b1-6"
       ]
     },
     {
@@ -658,7 +663,8 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-b1-7"
+        "g4-question-b1-7",
+        "g4-more5-rational-pick-b1-7"
       ]
     },
     {
@@ -673,7 +679,8 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-b1-8"
+        "g4-question-b1-8",
+        "g4-more3-round-story-b1-8"
       ]
     },
     {
@@ -688,7 +695,8 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-b1-9"
+        "g4-question-b1-9",
+        "g4-more3-convert-forms-b1-9"
       ]
     },
     {
@@ -704,7 +712,8 @@
       ],
       "questionIds": [
         "g4-question-b2-1",
-        "g4-variant-missing-b2-1"
+        "g4-variant-missing-b2-1",
+        "g4-more3-order-of-operations-b2-1"
       ]
     },
     {
@@ -753,7 +762,8 @@
       "questionIds": [
         "g4-question-b2-4",
         "g4-variant-add-b2-4",
-        "g4-variant-subtract-b2-4"
+        "g4-variant-subtract-b2-4",
+        "g4-more-decimal-story-b2-4"
       ]
     },
     {
@@ -769,7 +779,8 @@
       ],
       "questionIds": [
         "g4-question-b2-5",
-        "g4-variant-multiply-b2-5"
+        "g4-variant-multiply-b2-5",
+        "g4-more6-missing-number-b2-5"
       ]
     },
     {
@@ -785,7 +796,8 @@
       ],
       "questionIds": [
         "g4-question-b2-6",
-        "g4-variant-divide-b2-6"
+        "g4-variant-divide-b2-6",
+        "g4-more6-missing-number-b2-6"
       ]
     },
     {
@@ -800,7 +812,8 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-b2-7"
+        "g4-question-b2-7",
+        "g4-more5-unit-fraction-b2-7"
       ]
     },
     {
@@ -815,7 +828,8 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-b2-8"
+        "g4-question-b2-8",
+        "g4-more-unit-rate-b2-8"
       ]
     },
     {
@@ -845,7 +859,8 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-c1-2"
+        "g4-question-c1-2",
+        "g4-more3-pattern-table-c1-2"
       ]
     },
     {
@@ -860,7 +875,8 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-c1-3"
+        "g4-question-c1-3",
+        "g4-more-pattern-term-c1-3"
       ]
     },
     {
@@ -875,7 +891,8 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-c1-4"
+        "g4-question-c1-4",
+        "g4-more3-decimal-sequence-c1-4"
       ]
     },
     {
@@ -905,7 +922,8 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-c2-2"
+        "g4-question-c2-2",
+        "g4-more5-missing-number-c2-2"
       ]
     },
     {
@@ -920,7 +938,8 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-c2-3"
+        "g4-question-c2-3",
+        "g4-more3-inequality-count-c2-3"
       ]
     },
     {
@@ -995,7 +1014,8 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-d1-2"
+        "g4-question-d1-2",
+        "g4-more6-chart-read-d1-2"
       ]
     },
     {
@@ -1010,7 +1030,8 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-d1-3"
+        "g4-question-d1-3",
+        "g4-more4-chart-read-d1-3"
       ]
     },
     {
@@ -1041,7 +1062,9 @@
       ],
       "questionIds": [
         "g4-question-d1-5",
-        "g4-question-d1-5-score"
+        "g4-question-d1-5-score",
+        "g4-more-mode-d1-5",
+        "g4-more6-mean-missing-d1-5"
       ]
     },
     {
@@ -1056,7 +1079,8 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-d1-6"
+        "g4-question-d1-6",
+        "g4-more4-chart-read-d1-6"
       ]
     },
     {
@@ -1101,7 +1125,8 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-e1-1"
+        "g4-question-e1-1",
+        "g4-more6-rectangle-measure-e1-1"
       ]
     },
     {
@@ -1116,7 +1141,8 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-e1-2"
+        "g4-question-e1-2",
+        "g4-more4-transform-point-e1-2"
       ]
     },
     {
@@ -1146,7 +1172,8 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-e2-1"
+        "g4-question-e2-1",
+        "g4-more-unit-convert-e2-1"
       ]
     },
     {
@@ -1176,7 +1203,9 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-e2-3"
+        "g4-question-e2-3",
+        "g4-more-time-units-e2-3",
+        "g4-more3-elapsed-time-e2-3"
       ]
     },
     {
@@ -1191,7 +1220,8 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-e2-4"
+        "g4-question-e2-4",
+        "g4-more5-turn-angle-e2-4"
       ]
     },
     {
@@ -1206,7 +1236,8 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-e2-5"
+        "g4-question-e2-5",
+        "g4-more-rectangle-measure-e2-5"
       ]
     },
     {
@@ -1221,7 +1252,8 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-e2-6"
+        "g4-question-e2-6",
+        "g4-more-missing-side-e2-6"
       ]
     },
     {
@@ -1251,7 +1283,8 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-f1-2"
+        "g4-question-f1-2",
+        "g4-more3-money-change-f1-2"
       ]
     },
     {
@@ -1296,7 +1329,8 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-f1-5"
+        "g4-question-f1-5",
+        "g4-more3-unit-price-best-f1-5"
       ]
     },
     {

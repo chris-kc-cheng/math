@@ -2,7 +2,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import katex from 'katex';
-import {createPractice,generateValues,nextValues,exampleValues} from '../../curriculum/practice.js';
+import {createPractice,generateQuestionValues,nextValues,exampleValues} from '../../curriculum/practice.js';
 import {grade8Rules,createGrade8,argumentCounts} from './index.js';
 import {rootForm} from './number.js';
 import {makePairs,describeRelationship,drawProbability,simulateDraws} from './data.js';
@@ -24,7 +24,7 @@ test('Grade 8 covers the 51 researched expectations with valid reusable question
 test('all Grade 8 sample and randomized steps render without invalid numerical values',()=>{
  let seed=721;const rng=()=>((seed=(seed*1664525+1013904223)>>>0)/2**32);
  for(const template of questions)for(let i=0;i<25;i++){
-  const values=i?generateValues(template.rule,rng):exampleValues(template),result=createPractice(template,values);
+  const values=i?generateQuestionValues(template,rng):exampleValues(template),result=createPractice(template,values);
   assert.ok(result.prompt||result.formula);assert.ok(!JSON.stringify(result).includes('NaN'),template.id);assert.ok(!JSON.stringify(result).includes('Infinity'),template.id);
   for(const part of [result,...result.steps]){if(part.formula||part.math)assert.doesNotThrow(()=>katex.renderToString(part.formula||part.math,{throwOnError:true,trust:false}),template.id);if(part.visual)assert.ok(part.visual.caption,template.id);}
   assert.notDeepEqual(nextValues(template,values,rng),values,template.id);

@@ -601,6 +601,9 @@
       "directions": [
         "mixed-to-fraction",
         "fraction-to-mixed"
+      ],
+      "questionIds": [
+        "grade5-more3-equivalent-missing-b1-3"
       ]
     },
     {
@@ -633,7 +636,8 @@
       ],
       "questionIds": [
         "multiply-then-add",
-        "grade5-variant-missing-b2-1"
+        "grade5-variant-missing-b2-1",
+        "grade5-more3-order-of-operations-b2-1"
       ]
     },
     {
@@ -670,7 +674,8 @@
         "decimal-subtraction",
         "grade5-whole-add-subtract",
         "grade5-variant-add-b2-4",
-        "grade5-variant-subtract-b2-4"
+        "grade5-variant-subtract-b2-4",
+        "grade5-more-decimal-story-b2-4"
       ]
     },
     {
@@ -686,7 +691,8 @@
       ],
       "questionIds": [
         "like-fraction-addition",
-        "grade5-fraction-subtract"
+        "grade5-fraction-subtract",
+        "grade5-more-fraction-story-b2-5"
       ]
     },
     {
@@ -739,7 +745,8 @@
         "equation-multiplication",
         "equation-two-steps",
         "grade5-equation-subtract",
-        "grade5-equation-divide"
+        "grade5-equation-divide",
+        "grade5-more-solve-words-c2-3"
       ]
     },
     {
@@ -787,7 +794,8 @@
       ],
       "questionIds": [
         "grade5-compare-fractions",
-        "grade5-order-fractions"
+        "grade5-order-fractions",
+        "grade5-more3-compare-fractions-b1-4"
       ]
     },
     {
@@ -817,7 +825,8 @@
         "practice"
       ],
       "questionIds": [
-        "grade5-round-tenth"
+        "grade5-round-tenth",
+        "grade5-more3-round-story-b1-6"
       ]
     },
     {
@@ -833,7 +842,8 @@
       ],
       "questionIds": [
         "grade5-fraction-percent",
-        "grade5-percent-fraction"
+        "grade5-percent-fraction",
+        "grade5-more3-convert-forms-b1-7"
       ]
     },
     {
@@ -849,7 +859,8 @@
       ],
       "questionIds": [
         "grade5-mental-scale",
-        "grade5-estimate-decimals"
+        "grade5-estimate-decimals",
+        "grade5-more3-round-story-b2-3"
       ]
     },
     {
@@ -864,7 +875,9 @@
         "practice"
       ],
       "questionIds": [
-        "grade5-unit-fraction"
+        "grade5-unit-fraction",
+        "grade5-more-fraction-of-set-b2-8",
+        "grade5-more6-unit-fraction-b2-8"
       ]
     },
     {
@@ -879,7 +892,8 @@
         "practice"
       ],
       "questionIds": [
-        "grade5-equivalent-ratio"
+        "grade5-equivalent-ratio",
+        "grade5-more-unit-rate-b2-9"
       ]
     },
     {
@@ -909,7 +923,8 @@
         "practice"
       ],
       "questionIds": [
-        "grade5-pattern-table"
+        "grade5-pattern-table",
+        "grade5-more3-pattern-table-c1-2"
       ]
     },
     {
@@ -924,7 +939,9 @@
         "practice"
       ],
       "questionIds": [
-        "grade5-pattern-missing"
+        "grade5-pattern-missing",
+        "grade5-more-pattern-term-c1-3",
+        "grade5-more6-pattern-table-c1-3"
       ]
     },
     {
@@ -939,7 +956,8 @@
         "practice"
       ],
       "questionIds": [
-        "grade5-decimal-pattern"
+        "grade5-decimal-pattern",
+        "grade5-more3-decimal-sequence-c1-4"
       ]
     },
     {
@@ -969,7 +987,9 @@
         "practice"
       ],
       "questionIds": [
-        "grade5-evaluate-expression"
+        "grade5-evaluate-expression",
+        "grade5-more-evaluate-words-c2-2",
+        "grade5-more6-order-of-operations-c2-2"
       ]
     },
     {
@@ -985,7 +1005,8 @@
       ],
       "questionIds": [
         "grade5-inequality",
-        "grade5-inequality-operation"
+        "grade5-inequality-operation",
+        "grade5-more3-inequality-count-c2-4"
       ]
     },
     {
@@ -1060,7 +1081,8 @@
         "practice"
       ],
       "questionIds": [
-        "grade5-frequency-table"
+        "grade5-frequency-table",
+        "grade5-more4-chart-read-d1-2"
       ]
     },
     {
@@ -1075,7 +1097,8 @@
         "practice"
       ],
       "questionIds": [
-        "grade5-stacked-graph"
+        "grade5-stacked-graph",
+        "grade5-more4-chart-read-d1-3"
       ]
     },
     {
@@ -1107,7 +1130,9 @@
       "questionIds": [
         "grade5-statistics",
         "grade5-statistics-even",
-        "grade5-score-statistics"
+        "grade5-score-statistics",
+        "grade5-more-mode-d1-5",
+        "grade5-more-mean-missing-d1-5"
       ]
     },
     {
@@ -1122,7 +1147,8 @@
         "practice"
       ],
       "questionIds": [
-        "grade5-misleading-graph"
+        "grade5-misleading-graph",
+        "grade5-more4-chart-read-d1-6"
       ]
     },
     {
@@ -1138,7 +1164,8 @@
       ],
       "questionIds": [
         "grade5-probability",
-        "grade5-score-probability"
+        "grade5-score-probability",
+        "grade5-more-probability-word-d2-1"
       ]
     },
     {
@@ -1153,7 +1180,8 @@
         "practice"
       ],
       "questionIds": [
-        "grade5-experimental-probability"
+        "grade5-experimental-probability",
+        "grade5-more4-experimental-probability-d2-2"
       ]
     },
     {
@@ -1169,7 +1197,8 @@
       ],
       "questionIds": [
         "grade5-triangle-sides",
-        "grade5-triangle-angles"
+        "grade5-triangle-angles",
+        "grade5-more6-angle-relation-e1-1"
       ]
     },
     {
@@ -1217,7 +1246,8 @@
       ],
       "questionIds": [
         "grade5-coordinates",
-        "grade5-coordinate-scale"
+        "grade5-coordinate-scale",
+        "grade5-more4-transform-point-e1-4"
       ]
     },
     {
@@ -1262,7 +1292,8 @@
         "practice"
       ],
       "questionIds": [
-        "grade5-metric-conversion"
+        "grade5-metric-conversion",
+        "grade5-more-unit-convert-e2-2"
       ]
     },
     {
@@ -1293,7 +1324,8 @@
       ],
       "questionIds": [
         "grade5-construct-angle",
-        "grade5-measure-angle"
+        "grade5-measure-angle",
+        "grade5-more6-angle-relation-e2-4"
       ]
     },
     {
@@ -1308,7 +1340,8 @@
         "practice"
       ],
       "questionIds": [
-        "grade5-shape-area"
+        "grade5-shape-area",
+        "grade5-more-area-formula-e2-5"
       ]
     },
     {
@@ -1323,7 +1356,8 @@
         "practice"
       ],
       "questionIds": [
-        "grade5-area-perimeter"
+        "grade5-area-perimeter",
+        "grade5-more-rectangle-measure-e2-6"
       ]
     },
     {
@@ -1353,7 +1387,8 @@
         "practice"
       ],
       "questionIds": [
-        "grade5-sales-tax"
+        "grade5-sales-tax",
+        "grade5-more3-money-change-f1-2"
       ]
     },
     {
@@ -1368,7 +1403,8 @@
         "practice"
       ],
       "questionIds": [
-        "grade5-budget"
+        "grade5-budget",
+        "grade5-more3-budget-balance-f1-3"
       ]
     },
     {
@@ -1398,7 +1434,8 @@
         "practice"
       ],
       "questionIds": [
-        "grade5-unit-price"
+        "grade5-unit-price",
+        "grade5-more3-unit-price-best-f1-5"
       ]
     },
     {

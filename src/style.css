@@ -61,7 +61,7 @@ nav{margin-bottom:24px;font-size:14px}a{color:#2459a6;text-underline-offset:3px}
 .slide-topic{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;color:#2459a6}.slide-count{font-size:12px;color:#65717b;font-variant-numeric:tabular-nums}
 .slide-card .solution-stage{min-height:340px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start}
 .slide-card #formula-preview{text-align:center}
-.slide-card .steps{display:flex;flex-direction:column;align-items:center;width:100%}.slide-card .step{justify-content:center}
+.slide-card .steps{display:flex;flex-direction:column;align-items:center;width:100%}.slide-card .step{justify-content:center;padding:2px 0 4px}
 .slide-card .caption{margin:14px auto 0;text-align:center;color:#596570}
 .slide-progress{height:3px;border-radius:2px;background:#e7effa;overflow:hidden;margin:12px 0}.slide-progress span{display:block;height:100%;width:0;background:#2459a6}
 .slide-controls{display:flex;justify-content:center;gap:5px}.slide-controls .playback-icon:disabled{opacity:.4;background:transparent;color:#596570}
@@ -86,3 +86,7 @@ html[data-theme=dark] .stat-dot.na{border-color:#7b8794}
 .info-bubble{position:absolute;right:0;top:30px;width:240px;padding:10px 12px;border:1px solid #cdd4db;border-radius:8px;background:#fff;color:#263440;font-size:13px;line-height:1.5;box-shadow:0 6px 18px #17263826;opacity:0;visibility:hidden;transition:opacity .15s;z-index:5}
 .info-tip:hover .info-bubble,.info-tip:focus-within .info-bubble,.info-tip.is-warning .info-bubble{opacity:1;visibility:visible}
 html[data-theme=dark] .info-bubble{background:#222d37;color:#e1e7ed;border-color:#52606d}html[data-theme=dark] .info-icon{border-color:#b5c1cc;color:#b5c1cc}
+/* Slide card: keep the formula, steps and caption close together. */
+.slide-card #lesson-error:empty{display:none}.slide-card #lesson{margin:0;padding:0;border-bottom:0}.slide-card #formula-preview{padding:0}.slide-card .solution-stage{min-height:310px}.slide-card .caption{min-height:0;margin-top:8px}
+/* Equation slides: every line shares the same columns, so all "=" signs line up. */
+.slide-card .equation-line{width:100%;grid-template-columns:minmax(0,1fr) 34px minmax(0,1fr)}

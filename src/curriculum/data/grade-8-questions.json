@@ -960,5 +960,1605 @@
       "hypotenuse": 13,
       "knownLeg": 5
     }
+  },
+  {
+    "id": "g8-more-square-roots-b1-3",
+    "skillId": "g8-b1-3",
+    "title": "Squares and square roots",
+    "rule": "power-value",
+    "parameters": [
+      "base",
+      "exponent",
+      "style"
+    ],
+    "example": {
+      "base": 12,
+      "exponent": 2,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 25,
+        "step": 1
+      },
+      [
+        2
+      ],
+      [
+        2,
+        3,
+        4
+      ]
+    ]
+  },
+  {
+    "id": "g8-more-square-facts-b2-2",
+    "skillId": "g8-b2-2",
+    "title": "Square facts",
+    "rule": "power-value",
+    "parameters": [
+      "base",
+      "exponent",
+      "style"
+    ],
+    "example": {
+      "base": 12,
+      "exponent": 2,
+      "style": 2
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g8-more-integer-story-b2-4",
+    "skillId": "g8-b2-4",
+    "title": "Integers in context",
+    "rule": "integer-story",
+    "parameters": [
+      "first",
+      "second",
+      "style"
+    ],
+    "example": {
+      "first": -45,
+      "second": 32,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": -99,
+        "max": 99,
+        "step": 1
+      },
+      {
+        "min": -99,
+        "max": 99,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "g8-more-fraction-story-b2-5",
+    "skillId": "g8-b2-5",
+    "title": "Add and subtract fractions in words",
+    "rule": "fraction-story",
+    "parameters": [
+      "firstNumerator",
+      "firstDenominator",
+      "secondNumerator",
+      "secondDenominator",
+      "style"
+    ],
+    "example": {
+      "firstNumerator": 5,
+      "firstDenominator": 6,
+      "secondNumerator": 3,
+      "secondDenominator": 8,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 11,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 11,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "g8-more-unit-rate-b2-8",
+    "skillId": "g8-b2-8",
+    "title": "Rates and proportional reasoning",
+    "rule": "unit-rate",
+    "parameters": [
+      "quantity",
+      "total",
+      "quantity2",
+      "style"
+    ],
+    "example": {
+      "quantity": 4,
+      "total": 10,
+      "quantity2": 6,
+      "style": 1
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 10,
+        "max": 400,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 20,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "g8-more-pattern-term-c1-3",
+    "skillId": "g8-c1-3",
+    "title": "Pattern rules and terms",
+    "rule": "pattern-term",
+    "parameters": [
+      "firstTerm",
+      "difference",
+      "position",
+      "style"
+    ],
+    "example": {
+      "firstTerm": 5,
+      "difference": 3,
+      "position": 20,
+      "style": 1
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 100,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 30,
+        "step": 1
+      },
+      {
+        "min": 10,
+        "max": 60,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    ]
+  },
+  {
+    "id": "g8-more-solve-words-c2-3",
+    "skillId": "g8-c2-3",
+    "title": "Solve equations from words",
+    "rule": "linear-story",
+    "parameters": [
+      "multiplier",
+      "added",
+      "input",
+      "style"
+    ],
+    "example": {
+      "multiplier": 9,
+      "added": 14,
+      "input": 11,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 60,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 30,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        4
+      ]
+    ]
+  },
+  {
+    "id": "g8-more-angle-relation-e2-2",
+    "skillId": "g8-e2-2",
+    "title": "Angle relationships",
+    "rule": "angle-relation",
+    "parameters": [
+      "first",
+      "second",
+      "style"
+    ],
+    "example": {
+      "first": 50,
+      "second": 60,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 10,
+        "max": 170,
+        "step": 1
+      },
+      {
+        "min": 10,
+        "max": 170,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "g8-more3-convert-forms-b1-4",
+    "skillId": "g8-b1-4",
+    "title": "Fractions, decimals and percents",
+    "rule": "convert-forms",
+    "parameters": [
+      "numerator",
+      "denominator",
+      "style"
+    ],
+    "example": {
+      "numerator": 3,
+      "denominator": 4,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 99,
+        "step": 1
+      },
+      [
+        2,
+        4,
+        5,
+        10,
+        20,
+        25,
+        50,
+        100
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    ]
+  },
+  {
+    "id": "g8-more3-order-of-operations-b2-1",
+    "skillId": "g8-b2-1",
+    "title": "Order of operations",
+    "rule": "order-of-operations",
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "fourth",
+      "style"
+    ],
+    "example": {
+      "first": 2,
+      "second": 3,
+      "third": 4,
+      "fourth": 5,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 25,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 25,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 25,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 25,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "g8-more3-pattern-table-c1-2",
+    "skillId": "g8-c1-2",
+    "title": "Patterns in tables",
+    "rule": "pattern-table-values",
+    "parameters": [
+      "rate",
+      "start",
+      "input",
+      "style"
+    ],
+    "example": {
+      "rate": 3,
+      "start": 2,
+      "input": 10,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 30,
+        "step": 1
+      },
+      {
+        "min": 6,
+        "max": 50,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g8-more3-combine-terms-c2-1",
+    "skillId": "g8-c2-1",
+    "title": "Combine like terms",
+    "rule": "combine-terms",
+    "parameters": [
+      "first",
+      "second",
+      "constant",
+      "style"
+    ],
+    "example": {
+      "first": 3,
+      "second": 5,
+      "constant": 4,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": -12,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 15,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g8-more3-currency-exchange-f1-1",
+    "skillId": "g8-f1-1",
+    "title": "Payments and currency exchange",
+    "rule": "currency-exchange",
+    "parameters": [
+      "amount",
+      "rate",
+      "style"
+    ],
+    "example": {
+      "amount": 200,
+      "rate": 74,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 10,
+        "max": 800,
+        "step": 1
+      },
+      {
+        "min": 40,
+        "max": 250,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g8-more3-budget-balance-f1-2",
+    "skillId": "g8-f1-2",
+    "title": "Long-term plans",
+    "rule": "budget-balance",
+    "parameters": [
+      "income",
+      "rent",
+      "food",
+      "other",
+      "style"
+    ],
+    "example": {
+      "income": 3200,
+      "rent": 1200,
+      "food": 600,
+      "other": 500,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2000,
+        "max": 9000,
+        "step": 100
+      },
+      {
+        "min": 600,
+        "max": 3500,
+        "step": 50
+      },
+      {
+        "min": 300,
+        "max": 1500,
+        "step": 50
+      },
+      {
+        "min": 100,
+        "max": 1500,
+        "step": 50
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g8-more3-simple-interest-f1-4",
+    "skillId": "g8-f1-4",
+    "title": "Simple and compound interest",
+    "rule": "simple-interest-story",
+    "parameters": [
+      "principal",
+      "percent",
+      "years",
+      "style"
+    ],
+    "example": {
+      "principal": 1000,
+      "percent": 5,
+      "years": 2,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 100,
+        "max": 5000,
+        "step": 100
+      },
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 10,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g8-more4-sample-space-d2-1",
+    "skillId": "g8-d2-1",
+    "title": "Outcomes and probability",
+    "rule": "sample-space",
+    "parameters": [
+      "firstChoices",
+      "secondChoices",
+      "style"
+    ],
+    "example": {
+      "firstChoices": 3,
+      "secondChoices": 4,
+      "style": 1
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    ]
+  },
+  {
+    "id": "g8-more4-polygon-angle-e1-1",
+    "skillId": "g8-e1-1",
+    "title": "Angles in a tessellation",
+    "rule": "polygon-angle",
+    "parameters": [
+      "sides",
+      "style"
+    ],
+    "example": {
+      "sides": 6,
+      "style": 1
+    },
+    "generation": [
+      [
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        12
+      ],
+      [
+        1,
+        2,
+        4
+      ]
+    ]
+  },
+  {
+    "id": "g8-more4-scale-length-e1-2",
+    "skillId": "g8-e1-2",
+    "title": "Scaled models",
+    "rule": "scale-length",
+    "parameters": [
+      "factor",
+      "length",
+      "style"
+    ],
+    "example": {
+      "factor": 50,
+      "length": 4,
+      "style": 0
+    },
+    "generation": [
+      [
+        2,
+        4,
+        5,
+        10,
+        20,
+        25,
+        50,
+        100
+      ],
+      {
+        "min": 1,
+        "max": 30,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g8-more4-scale-length-e1-3",
+    "skillId": "g8-e1-3",
+    "title": "Scale drawings",
+    "rule": "scale-length",
+    "parameters": [
+      "factor",
+      "length",
+      "style"
+    ],
+    "example": {
+      "factor": 50,
+      "length": 4,
+      "style": 0
+    },
+    "generation": [
+      [
+        2,
+        4,
+        5,
+        10,
+        20,
+        25,
+        50,
+        100
+      ],
+      {
+        "min": 1,
+        "max": 30,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g8-more4-transform-point-e1-4",
+    "skillId": "g8-e1-4",
+    "title": "Transformations on the plane",
+    "rule": "transform-point",
+    "parameters": [
+      "x",
+      "y",
+      "shiftX",
+      "shiftY",
+      "style"
+    ],
+    "example": {
+      "x": 3,
+      "y": 4,
+      "shiftX": 5,
+      "shiftY": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -10,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": -10,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 5,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    ]
+  },
+  {
+    "id": "g8-more4-polygon-angle-e2-2",
+    "skillId": "g8-e2-2",
+    "title": "Angles in polygons",
+    "rule": "polygon-angle",
+    "parameters": [
+      "sides",
+      "style"
+    ],
+    "example": {
+      "sides": 6,
+      "style": 0
+    },
+    "generation": [
+      [
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        12
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    ]
+  },
+  {
+    "id": "g8-more4-composite-area-e2-3",
+    "skillId": "g8-e2-3",
+    "title": "Composite measurement",
+    "rule": "composite-area",
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "fourth",
+      "style"
+    ],
+    "example": {
+      "first": 10,
+      "second": 8,
+      "third": 3,
+      "fourth": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 5,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 10,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "g8-more4-solid-measure-e2-3",
+    "skillId": "g8-e2-3",
+    "title": "Volume and surface area",
+    "rule": "solid-measure",
+    "parameters": [
+      "length",
+      "width",
+      "height",
+      "style"
+    ],
+    "example": {
+      "length": 4,
+      "width": 3,
+      "height": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        7
+      ]
+    ]
+  },
+  {
+    "id": "g8-more4-pythagoras-story-e2-4",
+    "skillId": "g8-e2-4",
+    "title": "Pythagorean theorem in context",
+    "rule": "pythagoras-story",
+    "parameters": [
+      "multiplier",
+      "triple",
+      "style"
+    ],
+    "example": {
+      "multiplier": 1,
+      "triple": 0,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g8-more4-ratio-share-b2-8",
+    "skillId": "g8-b2-8",
+    "title": "Share in a ratio",
+    "rule": "ratio-share",
+    "parameters": [
+      "firstPart",
+      "secondPart",
+      "multiplier",
+      "style"
+    ],
+    "example": {
+      "firstPart": 3,
+      "secondPart": 2,
+      "multiplier": 4,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    ]
+  },
+  {
+    "id": "g8-more5-scientific-story-b1-1",
+    "skillId": "g8-b1-1",
+    "title": "Scientific notation",
+    "rule": "scientific-story",
+    "parameters": [
+      "coefficientTenths",
+      "exponent",
+      "style"
+    ],
+    "example": {
+      "coefficientTenths": 45,
+      "exponent": 3,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 10,
+        "max": 99,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g8-more5-sqrt-estimate-b1-2",
+    "skillId": "g8-b1-2",
+    "title": "Estimate square roots",
+    "rule": "sqrt-estimate",
+    "parameters": [
+      "number",
+      "style"
+    ],
+    "example": {
+      "number": 20,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 200,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g8-more5-powers-of-ten-b2-3",
+    "skillId": "g8-b2-3",
+    "title": "Powers of ten",
+    "rule": "powers-of-ten",
+    "parameters": [
+      "hundredths",
+      "exponent",
+      "style"
+    ],
+    "example": {
+      "hundredths": 345,
+      "exponent": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 101,
+        "max": 9999,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 4,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g8-more5-integer-product-b2-7",
+    "skillId": "g8-b2-7",
+    "title": "Multiply and divide integers",
+    "rule": "integer-product",
+    "parameters": [
+      "first",
+      "second",
+      "style"
+    ],
+    "example": {
+      "first": -6,
+      "second": 4,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -20,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": -20,
+        "max": 20,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g8-more5-evaluate-signed-c2-2",
+    "skillId": "g8-c2-2",
+    "title": "Evaluate with signed numbers",
+    "rule": "evaluate-signed",
+    "parameters": [
+      "multiplier",
+      "added",
+      "input",
+      "style"
+    ],
+    "example": {
+      "multiplier": 3,
+      "added": -4,
+      "input": -2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": -20,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g8-more5-budget-balance-f1-3",
+    "skillId": "g8-f1-3",
+    "title": "Track a balanced budget",
+    "rule": "budget-balance",
+    "parameters": [
+      "income",
+      "rent",
+      "food",
+      "other",
+      "style"
+    ],
+    "example": {
+      "income": 3200,
+      "rent": 1200,
+      "food": 600,
+      "other": 500,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2000,
+        "max": 9000,
+        "step": 100
+      },
+      {
+        "min": 600,
+        "max": 3500,
+        "step": 50
+      },
+      {
+        "min": 300,
+        "max": 1500,
+        "step": 50
+      },
+      {
+        "min": 100,
+        "max": 1500,
+        "step": 50
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g8-more5-sale-total-f1-5",
+    "skillId": "g8-f1-5",
+    "title": "Sales, loyalty and value",
+    "rule": "sale-total",
+    "parameters": [
+      "price",
+      "discount",
+      "tax",
+      "style"
+    ],
+    "example": {
+      "price": 80,
+      "discount": 25,
+      "tax": 13,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 20,
+        "max": 200,
+        "step": 5
+      },
+      {
+        "min": 5,
+        "max": 50,
+        "step": 5
+      },
+      [
+        5,
+        7,
+        8,
+        10,
+        13,
+        15
+      ],
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g8-more6-integer-product-b2-4",
+    "skillId": "g8-b2-4",
+    "title": "Integer products and quotients",
+    "rule": "integer-product",
+    "parameters": [
+      "first",
+      "second",
+      "style"
+    ],
+    "example": {
+      "first": -6,
+      "second": 4,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -20,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": -20,
+        "max": 20,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g8-more6-compare-fractions-b2-5",
+    "skillId": "g8-b2-5",
+    "title": "Compare fractions in words",
+    "rule": "compare-fractions-story",
+    "parameters": [
+      "firstNumerator",
+      "firstDenominator",
+      "secondNumerator",
+      "secondDenominator",
+      "style"
+    ],
+    "example": {
+      "firstNumerator": 3,
+      "firstDenominator": 4,
+      "secondNumerator": 5,
+      "secondDenominator": 6,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 11,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 11,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g8-more6-fraction-of-quantity-b2-6",
+    "skillId": "g8-b2-6",
+    "title": "A fraction of a quantity",
+    "rule": "fraction-of-quantity",
+    "parameters": [
+      "numerator",
+      "denominator",
+      "whole",
+      "style",
+      "exact"
+    ],
+    "example": {
+      "numerator": 2,
+      "denominator": 3,
+      "whole": 12,
+      "style": 1,
+      "exact": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 60,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        0
+      ]
+    ]
+  },
+  {
+    "id": "g8-more6-fraction-divide-b2-6",
+    "skillId": "g8-b2-6",
+    "title": "Divide by a fraction in context",
+    "rule": "fraction-divide-story",
+    "parameters": [
+      "whole",
+      "numerator",
+      "denominator",
+      "style"
+    ],
+    "example": {
+      "whole": 3,
+      "numerator": 1,
+      "denominator": 4,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 7,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g8-more6-percent-story-b2-8",
+    "skillId": "g8-b2-8",
+    "title": "Percent of a quantity",
+    "rule": "percent-story",
+    "parameters": [
+      "percent",
+      "amount",
+      "style"
+    ],
+    "example": {
+      "percent": 25,
+      "amount": 80,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 5,
+        "max": 95,
+        "step": 5
+      },
+      {
+        "min": 20,
+        "max": 400,
+        "step": 10
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "g8-more6-percent-story-b1-4",
+    "skillId": "g8-b1-4",
+    "title": "Percent of a quantity",
+    "rule": "percent-story",
+    "parameters": [
+      "percent",
+      "amount",
+      "style"
+    ],
+    "example": {
+      "percent": 25,
+      "amount": 80,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 5,
+        "max": 95,
+        "step": 5
+      },
+      {
+        "min": 20,
+        "max": 400,
+        "step": 10
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "g8-more6-pattern-table-c1-3",
+    "skillId": "g8-c1-3",
+    "title": "Patterns in tables",
+    "rule": "pattern-table-values",
+    "parameters": [
+      "rate",
+      "start",
+      "input",
+      "style"
+    ],
+    "example": {
+      "rate": 3,
+      "start": 2,
+      "input": 10,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 30,
+        "step": 1
+      },
+      {
+        "min": 6,
+        "max": 50,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g8-more6-missing-number-c2-3",
+    "skillId": "g8-c2-3",
+    "title": "Find the missing number",
+    "rule": "missing-number",
+    "parameters": [
+      "known",
+      "result",
+      "form"
+    ],
+    "example": {
+      "known": 8,
+      "result": 25,
+      "form": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 80,
+        "step": 1
+      },
+      {
+        "min": 10,
+        "max": 300,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g8-more6-polygon-angle-e2-2",
+    "skillId": "g8-e2-2",
+    "title": "Angles in polygons",
+    "rule": "polygon-angle",
+    "parameters": [
+      "sides",
+      "style"
+    ],
+    "example": {
+      "sides": 6,
+      "style": 0
+    },
+    "generation": [
+      [
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        12
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    ]
   }
 ]

@@ -603,7 +603,8 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-b1-2"
+        "g6-question-b1-2",
+        "g6-more-integer-story-b1-2"
       ]
     },
     {
@@ -618,7 +619,8 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-b1-3"
+        "g6-question-b1-3",
+        "g6-more5-rational-pick-b1-3"
       ]
     },
     {
@@ -633,7 +635,8 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-b1-4"
+        "g6-question-b1-4",
+        "g6-more5-rational-pick-b1-4"
       ]
     },
     {
@@ -648,7 +651,8 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-b1-5"
+        "g6-question-b1-5",
+        "g6-more3-round-story-b1-5"
       ]
     },
     {
@@ -663,7 +667,8 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-b1-6"
+        "g6-question-b1-6",
+        "g6-more3-convert-forms-b1-6"
       ]
     },
     {
@@ -679,7 +684,8 @@
       ],
       "questionIds": [
         "g6-question-b2-1",
-        "g6-variant-missing-b2-1"
+        "g6-variant-missing-b2-1",
+        "g6-more3-order-of-operations-b2-1"
       ]
     },
     {
@@ -694,7 +700,8 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-b2-2"
+        "g6-question-b2-2",
+        "g6-more3-divisibility-count-b2-2"
       ]
     },
     {
@@ -709,7 +716,9 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-b2-3"
+        "g6-question-b2-3",
+        "g6-more-percent-story-b2-3",
+        "g6-more6-convert-forms-b2-3"
       ]
     },
     {
@@ -724,7 +733,10 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-b2-4"
+        "g6-question-b2-4",
+        "g6-more-decimal-story-b2-4",
+        "g6-more6-story-add-b2-4",
+        "g6-more6-story-subtract-b2-4"
       ]
     },
     {
@@ -739,7 +751,9 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-b2-5"
+        "g6-question-b2-5",
+        "g6-more-fraction-story-b2-5",
+        "g6-more6-equivalent-missing-b2-5"
       ]
     },
     {
@@ -754,7 +768,8 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-b2-6"
+        "g6-question-b2-6",
+        "g6-more3-prime-factor-question-b2-6"
       ]
     },
     {
@@ -769,7 +784,8 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-b2-7"
+        "g6-question-b2-7",
+        "g6-more3-decimal-operation-b2-7"
       ]
     },
     {
@@ -784,7 +800,8 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-b2-8"
+        "g6-question-b2-8",
+        "g6-more3-decimal-operation-b2-8"
       ]
     },
     {
@@ -799,7 +816,8 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-b2-9"
+        "g6-question-b2-9",
+        "g6-more-fraction-of-quantity-b2-9"
       ]
     },
     {
@@ -814,7 +832,8 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-b2-10"
+        "g6-question-b2-10",
+        "g6-more5-fraction-divide-b2-10"
       ]
     },
     {
@@ -829,7 +848,9 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-b2-11"
+        "g6-question-b2-11",
+        "g6-more3-decimal-operation-b2-11",
+        "g6-more6-unit-rate-b2-11"
       ]
     },
     {
@@ -844,7 +865,9 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-b2-12"
+        "g6-question-b2-12",
+        "g6-more-unit-rate-b2-12",
+        "g6-more4-ratio-share-b2-12"
       ]
     },
     {
@@ -874,7 +897,8 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-c1-2"
+        "g6-question-c1-2",
+        "g6-more3-pattern-table-c1-2"
       ]
     },
     {
@@ -889,7 +913,9 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-c1-3"
+        "g6-question-c1-3",
+        "g6-more-pattern-term-c1-3",
+        "g6-more6-pattern-table-c1-3"
       ]
     },
     {
@@ -904,7 +930,8 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-c1-4"
+        "g6-question-c1-4",
+        "g6-more3-decimal-sequence-c1-4"
       ]
     },
     {
@@ -919,7 +946,8 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-c2-1"
+        "g6-question-c2-1",
+        "g6-more3-combine-terms-c2-1"
       ]
     },
     {
@@ -934,7 +962,9 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-c2-2"
+        "g6-question-c2-2",
+        "g6-more-evaluate-words-c2-2",
+        "g6-more6-order-of-operations-c2-2"
       ]
     },
     {
@@ -949,7 +979,9 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-c2-3"
+        "g6-question-c2-3",
+        "g6-more-solve-words-c2-3",
+        "g6-more6-missing-number-c2-3"
       ]
     },
     {
@@ -964,7 +996,8 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-c2-4"
+        "g6-question-c2-4",
+        "g6-more3-inequality-count-c2-4"
       ]
     },
     {
@@ -1039,7 +1072,8 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-d1-2"
+        "g6-question-d1-2",
+        "g6-more5-interval-count-d1-2"
       ]
     },
     {
@@ -1054,7 +1088,8 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-d1-3"
+        "g6-question-d1-3",
+        "g6-more6-chart-read-d1-3"
       ]
     },
     {
@@ -1069,7 +1104,8 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-d1-4"
+        "g6-question-d1-4",
+        "g6-more4-chart-read-d1-4"
       ]
     },
     {
@@ -1085,7 +1121,9 @@
       ],
       "questionIds": [
         "g6-question-d1-5",
-        "g6-question-d1-5-score"
+        "g6-question-d1-5-score",
+        "g6-more-mode-d1-5",
+        "g6-more-mean-missing-d1-5"
       ]
     },
     {
@@ -1100,7 +1138,8 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-d1-6"
+        "g6-question-d1-6",
+        "g6-more4-chart-read-d1-6"
       ]
     },
     {
@@ -1116,7 +1155,8 @@
       ],
       "questionIds": [
         "g6-question-d2-1",
-        "g6-question-d2-1-score"
+        "g6-question-d2-1-score",
+        "g6-more-probability-word-d2-1"
       ]
     },
     {
@@ -1131,7 +1171,9 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-d2-2"
+        "g6-question-d2-2",
+        "g6-more4-experimental-probability-d2-2",
+        "g6-more4-sample-space-d2-2"
       ]
     },
     {
@@ -1146,7 +1188,8 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-e1-1"
+        "g6-question-e1-1",
+        "g6-more6-polygon-angle-e1-1"
       ]
     },
     {
@@ -1176,7 +1219,8 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-e1-3"
+        "g6-question-e1-3",
+        "g6-more4-transform-point-e1-3"
       ]
     },
     {
@@ -1206,7 +1250,8 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-e2-1"
+        "g6-question-e2-1",
+        "g6-more-unit-convert-e2-1"
       ]
     },
     {
@@ -1221,7 +1266,9 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-e2-2"
+        "g6-question-e2-2",
+        "g6-more5-turn-angle-e2-2",
+        "g6-more6-angle-relation-e2-2"
       ]
     },
     {
@@ -1236,7 +1283,9 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-e2-3"
+        "g6-question-e2-3",
+        "g6-more-angle-relation-e2-3",
+        "g6-more4-polygon-angle-e2-3"
       ]
     },
     {
@@ -1251,7 +1300,8 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-e2-4"
+        "g6-question-e2-4",
+        "g6-more4-composite-area-e2-4"
       ]
     },
     {
@@ -1266,7 +1316,8 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-e2-5"
+        "g6-question-e2-5",
+        "g6-more4-solid-measure-e2-5"
       ]
     },
     {
@@ -1281,7 +1332,8 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-e2-6"
+        "g6-question-e2-6",
+        "g6-more4-solid-measure-e2-6"
       ]
     },
     {
@@ -1311,7 +1363,8 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-f1-2"
+        "g6-question-f1-2",
+        "g6-more5-savings-goal-f1-2"
       ]
     },
     {
@@ -1341,7 +1394,8 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-f1-4"
+        "g6-question-f1-4",
+        "g6-more3-simple-interest-f1-4"
       ]
     },
     {

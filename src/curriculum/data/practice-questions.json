@@ -1611,5 +1611,1538 @@
         5
       ]
     ]
+  },
+  {
+    "id": "grade5-more-decimal-story-b2-4",
+    "skillId": "b2-4",
+    "title": "Decimals in everyday problems",
+    "rule": "decimal-story",
+    "parameters": [
+      "first",
+      "second",
+      "places",
+      "style"
+    ],
+    "example": {
+      "first": 2475,
+      "second": 860,
+      "places": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1000,
+        "max": 9999,
+        "step": 1
+      },
+      {
+        "min": 100,
+        "max": 999,
+        "step": 1
+      },
+      [
+        2
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more-fraction-story-b2-5",
+    "skillId": "b2-5",
+    "title": "Add and subtract fractions in words",
+    "rule": "fraction-story-like",
+    "parameters": [
+      "firstNumerator",
+      "secondNumerator",
+      "denominator",
+      "style"
+    ],
+    "example": {
+      "firstNumerator": 5,
+      "secondNumerator": 2,
+      "denominator": 8,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 7,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 7,
+        "step": 1
+      },
+      {
+        "min": 8,
+        "max": 12,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more-fraction-of-set-b2-8",
+    "skillId": "b2-8",
+    "title": "Unit fractions of a whole number",
+    "rule": "fraction-of-quantity",
+    "parameters": [
+      "numerator",
+      "denominator",
+      "whole",
+      "style",
+      "exact"
+    ],
+    "example": {
+      "numerator": 1,
+      "denominator": 4,
+      "whole": 20,
+      "style": 0,
+      "exact": 1
+    },
+    "generation": [
+      [
+        1
+      ],
+      [
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10
+      ],
+      {
+        "min": 6,
+        "max": 60,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        1
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more-unit-rate-b2-9",
+    "skillId": "b2-9",
+    "title": "Unit rates and equivalent rates",
+    "rule": "unit-rate",
+    "parameters": [
+      "quantity",
+      "total",
+      "quantity2",
+      "style"
+    ],
+    "example": {
+      "quantity": 4,
+      "total": 10,
+      "quantity2": 6,
+      "style": 1
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 10,
+        "max": 200,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more-pattern-term-c1-3",
+    "skillId": "c1-3",
+    "title": "Pattern rules and terms",
+    "rule": "pattern-term",
+    "parameters": [
+      "firstTerm",
+      "difference",
+      "position",
+      "style"
+    ],
+    "example": {
+      "firstTerm": 3,
+      "difference": 4,
+      "position": 10,
+      "style": 1
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 30,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 20,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more-evaluate-words-c2-2",
+    "skillId": "c2-2",
+    "title": "Evaluate in different settings",
+    "rule": "linear-story",
+    "parameters": [
+      "multiplier",
+      "added",
+      "input",
+      "style"
+    ],
+    "example": {
+      "multiplier": 3,
+      "added": 4,
+      "input": 5,
+      "style": 2
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      [
+        2,
+        3,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more-solve-words-c2-3",
+    "skillId": "c2-3",
+    "title": "Solve equations from words",
+    "rule": "linear-story",
+    "parameters": [
+      "multiplier",
+      "added",
+      "input",
+      "style"
+    ],
+    "example": {
+      "multiplier": 3,
+      "added": 4,
+      "input": 5,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        4
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more-mode-d1-5",
+    "skillId": "d1-5",
+    "title": "Find the mode",
+    "rule": "data-measure",
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "fourth",
+      "fifth",
+      "measure"
+    ],
+    "example": {
+      "first": 2,
+      "second": 3,
+      "third": 3,
+      "fourth": 5,
+      "fifth": 9,
+      "measure": 3
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      [
+        3
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more-mean-missing-d1-5",
+    "skillId": "d1-5",
+    "title": "Find the missing value from the mean",
+    "rule": "mean-missing",
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "fourth",
+      "mean"
+    ],
+    "example": {
+      "first": 4,
+      "second": 6,
+      "third": 8,
+      "fourth": 10,
+      "mean": 9
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 20,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "grade5-more-probability-word-d2-1",
+    "skillId": "d2-1",
+    "title": "Probability in different settings",
+    "rule": "probability-word",
+    "parameters": [
+      "favourable",
+      "total",
+      "style"
+    ],
+    "example": {
+      "favourable": 3,
+      "total": 12,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 11,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more-unit-convert-e2-2",
+    "skillId": "e2-2",
+    "title": "Convert to smaller units",
+    "rule": "unit-convert",
+    "parameters": [
+      "amount",
+      "style"
+    ],
+    "example": {
+      "amount": 4,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 99,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more-area-formula-e2-5",
+    "skillId": "e2-5",
+    "title": "Area of triangles and parallelograms",
+    "rule": "area-formula",
+    "parameters": [
+      "base",
+      "height",
+      "style"
+    ],
+    "example": {
+      "base": 8,
+      "height": 5,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 20,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more-rectangle-measure-e2-6",
+    "skillId": "e2-6",
+    "title": "Area and perimeter of rectangles",
+    "rule": "rectangle-measure-variants",
+    "parameters": [
+      "length",
+      "width",
+      "style"
+    ],
+    "example": {
+      "length": 12,
+      "width": 7,
+      "style": 1
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 20,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more3-equivalent-missing-b1-3",
+    "skillId": "b1-3",
+    "title": "Equivalent fractions: find the missing number",
+    "rule": "equivalent-missing",
+    "parameters": [
+      "numerator",
+      "denominator",
+      "multiplier",
+      "style"
+    ],
+    "example": {
+      "numerator": 3,
+      "denominator": 4,
+      "multiplier": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 6,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more3-compare-fractions-b1-4",
+    "skillId": "b1-4",
+    "title": "Compare fractions in words",
+    "rule": "compare-fractions-story",
+    "parameters": [
+      "firstNumerator",
+      "firstDenominator",
+      "secondNumerator",
+      "secondDenominator",
+      "style"
+    ],
+    "example": {
+      "firstNumerator": 3,
+      "firstDenominator": 4,
+      "secondNumerator": 5,
+      "secondDenominator": 6,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 11,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 11,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more3-round-story-b1-6",
+    "skillId": "b1-6",
+    "title": "Round decimals in context",
+    "rule": "round-story",
+    "parameters": [
+      "number",
+      "decimalPlaces",
+      "roundingPlace",
+      "style"
+    ],
+    "example": {
+      "number": 3475,
+      "decimalPlaces": 2,
+      "roundingPlace": -1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 101,
+        "max": 9999,
+        "step": 1
+      },
+      [
+        2
+      ],
+      [
+        -1
+      ],
+      [
+        0,
+        2,
+        4
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more3-convert-forms-b1-7",
+    "skillId": "b1-7",
+    "title": "Fractions, decimals and percents",
+    "rule": "convert-forms",
+    "parameters": [
+      "numerator",
+      "denominator",
+      "style"
+    ],
+    "example": {
+      "numerator": 3,
+      "denominator": 4,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 99,
+        "step": 1
+      },
+      [
+        2,
+        4,
+        5,
+        10,
+        20,
+        25,
+        50,
+        100
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more3-order-of-operations-b2-1",
+    "skillId": "b2-1",
+    "title": "Order of operations",
+    "rule": "order-of-operations",
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "fourth",
+      "style"
+    ],
+    "example": {
+      "first": 2,
+      "second": 3,
+      "third": 4,
+      "fourth": 5,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more3-round-story-b2-3",
+    "skillId": "b2-3",
+    "title": "Estimate by rounding",
+    "rule": "round-story",
+    "parameters": [
+      "number",
+      "decimalPlaces",
+      "roundingPlace",
+      "style"
+    ],
+    "example": {
+      "number": 24750,
+      "decimalPlaces": 2,
+      "roundingPlace": 0,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 101,
+        "max": 99999,
+        "step": 1
+      },
+      [
+        2
+      ],
+      [
+        0
+      ],
+      [
+        0,
+        4
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more3-pattern-table-c1-2",
+    "skillId": "c1-2",
+    "title": "Patterns in tables",
+    "rule": "pattern-table-values",
+    "parameters": [
+      "rate",
+      "start",
+      "input",
+      "style"
+    ],
+    "example": {
+      "rate": 3,
+      "start": 2,
+      "input": 10,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": 6,
+        "max": 20,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more3-decimal-sequence-c1-4",
+    "skillId": "c1-4",
+    "title": "Patterns with decimals",
+    "rule": "decimal-sequence",
+    "parameters": [
+      "firstTerm",
+      "difference",
+      "position",
+      "style"
+    ],
+    "example": {
+      "firstTerm": 25,
+      "difference": 25,
+      "position": 10,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 10,
+        "max": 100,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 50,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 15,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more3-inequality-count-c2-4",
+    "skillId": "c2-4",
+    "title": "Solutions of inequalities",
+    "rule": "inequality-count",
+    "parameters": [
+      "added",
+      "limit",
+      "style"
+    ],
+    "example": {
+      "added": 5,
+      "limit": 20,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": 16,
+        "max": 50,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more3-money-change-f1-2",
+    "skillId": "f1-2",
+    "title": "Purchases and change",
+    "rule": "money-change",
+    "parameters": [
+      "firstPrice",
+      "secondPrice",
+      "paid",
+      "style"
+    ],
+    "example": {
+      "firstPrice": 12,
+      "secondPrice": 7,
+      "paid": 20,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 5,
+        "max": 60,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 60,
+        "step": 1
+      },
+      {
+        "min": 20,
+        "max": 200,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more3-budget-balance-f1-3",
+    "skillId": "f1-3",
+    "title": "Basic budgets",
+    "rule": "budget-balance",
+    "parameters": [
+      "income",
+      "rent",
+      "food",
+      "other",
+      "style"
+    ],
+    "example": {
+      "income": 3200,
+      "rent": 1200,
+      "food": 600,
+      "other": 500,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1000,
+        "max": 4000,
+        "step": 100
+      },
+      {
+        "min": 300,
+        "max": 1500,
+        "step": 50
+      },
+      {
+        "min": 100,
+        "max": 800,
+        "step": 50
+      },
+      {
+        "min": 50,
+        "max": 600,
+        "step": 50
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more3-unit-price-best-f1-5",
+    "skillId": "f1-5",
+    "title": "Best value",
+    "rule": "unit-price-best",
+    "parameters": [
+      "firstQuantity",
+      "firstPrice",
+      "secondQuantity",
+      "secondPrice",
+      "style"
+    ],
+    "example": {
+      "firstQuantity": 4,
+      "firstPrice": 10,
+      "secondQuantity": 5,
+      "secondPrice": 10,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 3,
+        "max": 60,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 3,
+        "max": 60,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more4-chart-read-d1-2",
+    "skillId": "d1-2",
+    "title": "Read a frequency table",
+    "rule": "chart-read",
+    "parameters": [
+      "soccer",
+      "hockey",
+      "swimming",
+      "dance",
+      "style",
+      "form"
+    ],
+    "example": {
+      "soccer": 12,
+      "hockey": 8,
+      "swimming": 6,
+      "dance": 10,
+      "style": 1,
+      "form": 1
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 40,
+        "step": 1
+      },
+      [
+        1,
+        2,
+        3,
+        5
+      ],
+      [
+        1
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more4-chart-read-d1-3",
+    "skillId": "d1-3",
+    "title": "Read a graph",
+    "rule": "chart-read",
+    "parameters": [
+      "soccer",
+      "hockey",
+      "swimming",
+      "dance",
+      "style",
+      "form"
+    ],
+    "example": {
+      "soccer": 12,
+      "hockey": 8,
+      "swimming": 6,
+      "dance": 10,
+      "style": 0,
+      "form": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 40,
+        "step": 1
+      },
+      [
+        0,
+        2,
+        4
+      ],
+      [
+        0
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more4-chart-read-d1-6",
+    "skillId": "d1-6",
+    "title": "Interpret a data display",
+    "rule": "chart-read",
+    "parameters": [
+      "soccer",
+      "hockey",
+      "swimming",
+      "dance",
+      "style",
+      "form"
+    ],
+    "example": {
+      "soccer": 12,
+      "hockey": 8,
+      "swimming": 6,
+      "dance": 10,
+      "style": 3,
+      "form": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 40,
+        "step": 1
+      },
+      [
+        1,
+        3,
+        4,
+        5
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more4-experimental-probability-d2-2",
+    "skillId": "d2-2",
+    "title": "Experimental probability",
+    "rule": "experimental-probability-story",
+    "parameters": [
+      "successes",
+      "trials",
+      "style"
+    ],
+    "example": {
+      "successes": 3,
+      "trials": 12,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 19,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 40,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more4-transform-point-e1-4",
+    "skillId": "e1-4",
+    "title": "Translations on a grid",
+    "rule": "transform-point",
+    "parameters": [
+      "x",
+      "y",
+      "shiftX",
+      "shiftY",
+      "style"
+    ],
+    "example": {
+      "x": 3,
+      "y": 4,
+      "shiftX": 5,
+      "shiftY": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 10,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more5-rational-pick-b1-5",
+    "skillId": "b1-5",
+    "title": "Order and compare numbers",
+    "rule": "rational-pick",
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "decimalPlaces",
+      "style"
+    ],
+    "example": {
+      "first": 35,
+      "second": 7,
+      "third": 520,
+      "decimalPlaces": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 999,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 999,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 999,
+        "step": 1
+      },
+      [
+        2
+      ],
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more5-debt-story-f1-4",
+    "skillId": "f1-4",
+    "title": "Credit and debt",
+    "rule": "debt-story",
+    "parameters": [
+      "owed",
+      "paid",
+      "feePercent",
+      "style"
+    ],
+    "example": {
+      "owed": 200,
+      "paid": 50,
+      "feePercent": 10,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 20,
+        "max": 500,
+        "step": 10
+      },
+      {
+        "min": 5,
+        "max": 100,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more6-unit-fraction-b2-8",
+    "skillId": "b2-8",
+    "title": "Unit fractions and whole numbers",
+    "rule": "unit-fraction-story",
+    "parameters": [
+      "numerator",
+      "denominator",
+      "style"
+    ],
+    "example": {
+      "numerator": 3,
+      "denominator": 4,
+      "style": 2
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      [
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more6-pattern-table-c1-3",
+    "skillId": "c1-3",
+    "title": "Patterns in tables",
+    "rule": "pattern-table-values",
+    "parameters": [
+      "rate",
+      "start",
+      "input",
+      "style"
+    ],
+    "example": {
+      "rate": 3,
+      "start": 2,
+      "input": 10,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 6,
+        "max": 20,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more6-order-of-operations-c2-2",
+    "skillId": "c2-2",
+    "title": "Order of operations",
+    "rule": "order-of-operations",
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "fourth",
+      "style"
+    ],
+    "example": {
+      "first": 2,
+      "second": 3,
+      "third": 4,
+      "fourth": 5,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more6-angle-relation-e1-1",
+    "skillId": "e1-1",
+    "title": "Angles in triangles",
+    "rule": "angle-relation",
+    "parameters": [
+      "first",
+      "second",
+      "style"
+    ],
+    "example": {
+      "first": 50,
+      "second": 60,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 20,
+        "max": 100,
+        "step": 1
+      },
+      {
+        "min": 20,
+        "max": 100,
+        "step": 1
+      },
+      [
+        0
+      ]
+    ]
+  },
+  {
+    "id": "grade5-more6-angle-relation-e2-4",
+    "skillId": "e2-4",
+    "title": "Angles on a line and at a point",
+    "rule": "angle-relation",
+    "parameters": [
+      "first",
+      "second",
+      "style"
+    ],
+    "example": {
+      "first": 50,
+      "second": 60,
+      "style": 1
+    },
+    "generation": [
+      {
+        "min": 10,
+        "max": 80,
+        "step": 1
+      },
+      {
+        "min": 10,
+        "max": 80,
+        "step": 1
+      },
+      [
+        1,
+        2,
+        3
+      ]
+    ]
   }
 ]

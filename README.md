@@ -12,13 +12,13 @@ The landing page is a slide show of worked examples. It plays on its own, and ca
 
 <img src="docs/images/landing.png" alt="Landing slide-show card solving 2x + 3 = 11 with aligned transformations and a highlighted answer" width="560">
 
-<img src="docs/images/landing-long-division.png" alt="Long division slide in dark mode, with the digit-aligned board and playback controls" width="560">
+<img src="docs/images/landing-long-division.png" alt="Long division slide with the digit-aligned board and playback controls" width="560">
 
 Browse curriculum skills and reveal worked explanations and answer checks.
 
-<img src="docs/images/curriculum.png" alt="Grade 8 curriculum in dark mode, showing scientific notation and its verification" width="700">
+<img src="docs/images/curriculum.png" alt="Grade 8 curriculum showing scientific notation and its verification" width="700">
 
-Dark mode also keeps diagrams, coordinates, and tables readable.
+Diagrams, coordinates, and tables are drawn alongside the worked steps.
 
 Math quest turns single-answer curriculum questions into a short battle. A correct answer sends a ketchup blob flying across to splat on the zombie.
 
@@ -28,7 +28,7 @@ Math quest turns single-answer curriculum questions into a short battle. A corre
 
 <img src="docs/images/game-hit.png" alt="Math quest mid-hit: a ketchup blob splats on the zombie" width="620">
 
-<img src="docs/images/dark-mode.png" alt="Cartesian rotation with contrasting shapes, labelled axes, and a before-and-after coordinate table" width="700">
+<img src="docs/images/coordinates.png" alt="Cartesian rotation with contrasting shapes, labelled axes, and a before-and-after coordinate table" width="700">
 
 ## GitHub Pages deployment
 
@@ -86,7 +86,7 @@ Grades **4, 6, and 7** are also available in the same selector: `curriculum.html
 
 ## Question variety
 
-A skill is practised in several ways so students are not just memorising one wording. `src/math/elementary/variants.js` adds exact-answer variants that take a `style` parameter: word problems with key-word hints for add, subtract, multiply and divide (six stems each, such as "sum", "decreased by", "how much more", "groups of", "shared equally"), missing-number boxes in six equation shapes (□ + a = b, a − □ = b, a × □ = b, and so on), compare-values questions (greater, less, how much greater) and place-value digit questions. They are attached to the whole-number skills in Grades 4–7 and are scored in Math quest and the exercise sheets. A coverage audit (templates and distinct wordings per skill) showed most skills still have one question type, so this is the first batch; see the review log in `CLAUDE.md` for what remains.
+A skill is practised in several ways so students are not just memorising one wording. `src/math/elementary/variants.js` adds exact-answer variants that take a `style` parameter: word problems with key-word hints for add, subtract, multiply and divide (six stems each, such as "sum", "decreased by", "how much more", "groups of", "shared equally"), missing-number boxes in six equation shapes (□ + a = b, a − □ = b, a × □ = b, and so on), compare-values questions (greater, less, how much greater) and place-value digit questions. They are attached to the whole-number skills in Grades 4–7 and are scored in Math quest and the exercise sheets. A second batch (`src/math/elementary/variants-more.js`) adds textbook-style stems with key-word hints for fractions of a quantity, adding and subtracting fractions in words, decimals in money and measurement, percent of a quantity (discount, tip, increase), unit rates, multiply-then-add and think-of-a-number equations, pattern terms (next, nth, term number, missing term), area and perimeter of rectangles, squares, triangles and parallelograms, metric and time conversions, integers in temperature and bank contexts, powers and square roots, angle relationships, probability in several settings, and the mode or a missing value from the mean. These are attached to the matching skills in Grades 4–8. Every rule is exact, shows a relationship-then-calculation worked solution, and has a test that each style produces the correct answer. Three more batches (`variants-number.js`, `variants-space.js`, `variants-extra.js`) add rounding in context, fraction/decimal/percent conversions, simplifying and comparing fractions, GCF and LCM word problems, divisibility and prime-factor questions, order of operations, decimal patterns and pattern tables, inequalities, like terms, money change, best value, currency exchange, simple and compound interest, budgets, elapsed time, bar graphs and frequency tables read for totals, differences, means and fractions, experimental probability and sample spaces, circles with π ≈ 3.14, volumes and surface areas of prisms and cylinders, composite areas, Pythagorean problems, point transformations, scale lengths, polygon and turn angles, ratio sharing, how a mean changes, scientific notation, square-root estimates, signed integers, sale prices and debts. The Social-Emotional Learning strand is deliberately not given numeric variants. A coverage audit (templates and distinct wordings per skill) is recorded in the review log in `CLAUDE.md`, together with what is still thin.
 
 ## Printable exercise sheets
 

@@ -25,7 +25,7 @@ test('only questions from the chosen topics are used, and an empty choice means 
  assert.deepEqual(only.topics,['Operations']);assert.deepEqual(all.topics,[]);
  const allowed=new Set(g.questions.filter(q=>q.skillId.startsWith('b2')).map(q=>q.skillId));
  assert.ok(only.questions.every(q=>allowed.has(q.skillId)),'topic restriction');
- assert.ok(new Set(all.questions.map(q=>q.skillId)).size>new Set(only.questions.map(q=>q.skillId)).size-1);
+ assert.equal(all.questions.length,10);
 });
 test('the workings flag is carried through and the first hidden "Read the question" step is never printed',()=>{
  const sheet=buildWorksheet(grade(4),{workings:true},rng);assert.equal(sheet.workings,true);

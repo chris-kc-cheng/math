@@ -8,7 +8,7 @@ import {catalog,curriculumForGrade} from './curriculum/catalog.js';
 import {createPractice} from './curriculum/practice.js';
 import {renderVisual} from './curriculum/visuals.js';
 import {mountPractice} from './curriculum/practice-view.js';
-import {playerKey,lastPlayed,makeRound,topicOptions,findNode,roundTopics,topicKey,score,answerRound,revealRound,advanceRound,battleState,progressTree,STAT_WINDOW} from './game/model.js';
+import {playerKey,lastPlayed,makeRound,topicOptions,findNode,roundTopics,topicKey,score,answerRound,revealRound,advanceRound,battleState,progressTree,overallProgress,STAT_WINDOW} from './game/model.js';
 import {listRounds,saveRound} from './game/storage.js';
 import {chooseProfile} from './game/profile.js';
 const el=(tag,text,cls)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e;};
@@ -56,11 +56,11 @@ function renderHistory(){
 const statLabel={good:'Strong',fair:'Getting there',weak:'Needs practice',none:'Not tried yet'};
 function topicStats(grade){
  let key;try{key=playerKey(nameInput.value);}catch{return new Map();}
- const map=new Map(),walk=n=>{map.set(n.id,n);n.children?.forEach(walk);};progressTree(grade,rounds,key).forEach(walk);return map;
+ const map=new Map(),walk=n=>{map.set(n.id,n);n.children?.forEach(walk);};progressTree(grade,rounds,key).forEach(walk);map.set('all',overallProgress(grade,rounds,key));return map;
 }
-function statBadge(node){
- const wrap=el('span',undefined,'topic-stat'),dot=el('span',undefined,'stat-dot '+(node?.status||'none'));dot.setAttribute('role','img');dot.setAttribute('aria-label',statLabel[node?.status||'none']);
- wrap.append(dot,el('small',node?.stat?`${Math.round(node.stat.rate*100)}% of last ${node.stat.attempts}`:'Not tried yet'));return wrap;
+function statParts(node){
+ const status=node?.status||'none',dot=el('span',undefined,'stat-dot '+status);dot.setAttribute('role','img');dot.setAttribute('aria-label',statLabel[status]);
+ return [dot,el('small',node?.stat?`${Math.round(node.stat.rate*100)}% of last ${node.stat.attempts}`:'Not tried yet','topic-stat')];
 }
 // Topics: pick any mix of whole strands and single topics. Nothing ticked means every topic.
 const topicList=$('#topic-list'),topicCache=new Map();let chosen=new Set();
@@ -72,15 +72,15 @@ function topicLabel(grade,ids){
 }
 function renderTopics(){
  const grade=curriculumForGrade(gradeSelect.value),options=topicCache.get(grade.grade),selected=chosenTopics();topicList.replaceChildren();
- const stats=topicStats(grade),box=(label,checked,onchange,cls,id)=>{const row=el('label',undefined,cls||'topic-row'),input=document.createElement('input');input.type='checkbox';input.checked=checked;input.onchange=()=>onchange(input.checked);row.append(input,el('span',label,'topic-name'));if(id)row.append(statBadge(stats.get(id)));return {row,input};};
- const all=box('All topics',!selected.length,on=>{if(on)chosen.clear();updateStart();},'topic-row topic-all');topicList.append(all.row);
+ const stats=topicStats(grade),box=(label,checked,onchange,cls,node)=>{const row=el('label',undefined,cls||'topic-row'),input=document.createElement('input');input.type='checkbox';input.checked=checked;input.onchange=()=>onchange(input.checked);const[dot,note]=statParts(node);row.append(dot,input,el('span',label,'topic-name'),note);return {row,input};};
+ const all=box('All topics',!selected.length,on=>{if(on)chosen.clear();updateStart();},'topic-row topic-all',stats.get('all'));topicList.append(all.row);
  let group;
  for(const option of options){
   if(option.level==='strand'){
    const mine=el('div',undefined,'topic-group'),kids=options.filter(o=>o.level==='topic'&&o.strand===option.title);group=mine;topicList.append(mine);
-   const full=kids.every(k=>selected.includes(k.id)),some=kids.some(k=>selected.includes(k.id)),head=box(option.title,Boolean(selected.length)&&full,on=>{if(!selected.length)chosen=new Set();for(const k of kids)on?chosen.add(k.id):chosen.delete(k.id);updateStart();},'topic-row topic-strand',option.id);
+   const full=kids.every(k=>selected.includes(k.id)),some=kids.some(k=>selected.includes(k.id)),head=box(option.title,Boolean(selected.length)&&full,on=>{if(!selected.length)chosen=new Set();for(const k of kids)on?chosen.add(k.id):chosen.delete(k.id);updateStart();},'topic-row topic-strand',stats.get(option.id));
    head.input.indeterminate=Boolean(selected.length)&&some&&!full;mine.append(head.row);}
-  else{const row=box(option.title,selected.includes(option.id),on=>{if(!selected.length&&on)chosen=new Set();on?chosen.add(option.id):chosen.delete(option.id);updateStart();},'topic-row topic-leaf',option.id);group.append(row.row);}
+  else{const row=box(option.title,selected.includes(option.id),on=>{if(!selected.length&&on)chosen=new Set();on?chosen.add(option.id):chosen.delete(option.id);updateStart();},'topic-row topic-leaf',stats.get(option.id));group.append(row.row);}
  }
  $('#topic-summary').textContent=topicLabel(grade,selected);
  const legend=$('#topic-legend');legend.replaceChildren(el('span',`Based on your last ${STAT_WINDOW} questions in each topic:`));for(const status of ['good','fair','weak','none']){const item=el('span',undefined,'stat-key');item.append(el('span',undefined,'stat-dot '+status),statLabel[status]);legend.append(item);}

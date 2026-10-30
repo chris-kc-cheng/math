@@ -4,8 +4,12 @@ import {dataRules} from './data.js';
 import {spatialRules} from './spatial.js';
 import {financialRules} from './financial.js';
 import {variantRules} from './variants.js';
+import {moreVariantRules} from './variants-more.js';
+import {numberVariantRules} from './variants-number.js';
+import {spaceVariantRules} from './variants-space.js';
+import {extraVariantRules} from './variants-extra.js';
 import {lesson,step,requireThat} from './common.js';
-export const elementaryRules={...numberRules,...algebraRules,...dataRules,...spatialRules,...financialRules,...variantRules};
+export const elementaryRules={...numberRules,...algebraRules,...dataRules,...spatialRules,...financialRules,...variantRules,...moreVariantRules,...numberVariantRules,...spaceVariantRules,...extraVariantRules};
 export function createElementary(rule,values,template){
  requireThat(values.every(n=>Number.isSafeInteger(n)&&Math.abs(n)<=1000000000),'Use bounded whole-number activity parameters.');
  if(rule==='guided-discussion'){

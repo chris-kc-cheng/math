@@ -2324,5 +2324,2192 @@
         5
       ]
     ]
+  },
+  {
+    "id": "g6-more-integer-story-b1-2",
+    "skillId": "g6-b1-2",
+    "title": "Integers in context",
+    "rule": "integer-story",
+    "parameters": [
+      "first",
+      "second",
+      "style"
+    ],
+    "example": {
+      "first": -3,
+      "second": 8,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -20,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": -15,
+        "max": 15,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "g6-more-percent-story-b2-3",
+    "skillId": "g6-b2-3",
+    "title": "Percent of a quantity",
+    "rule": "percent-story",
+    "parameters": [
+      "percent",
+      "amount",
+      "style"
+    ],
+    "example": {
+      "percent": 25,
+      "amount": 80,
+      "style": 0
+    },
+    "generation": [
+      [
+        1,
+        5,
+        10,
+        15,
+        25,
+        50
+      ],
+      {
+        "min": 20,
+        "max": 200,
+        "step": 20
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "g6-more-decimal-story-b2-4",
+    "skillId": "g6-b2-4",
+    "title": "Decimals in everyday problems",
+    "rule": "decimal-story",
+    "parameters": [
+      "first",
+      "second",
+      "places",
+      "style"
+    ],
+    "example": {
+      "first": 24735,
+      "second": 8602,
+      "places": 3,
+      "style": 2
+    },
+    "generation": [
+      {
+        "min": 1000,
+        "max": 49999,
+        "step": 1
+      },
+      {
+        "min": 100,
+        "max": 9999,
+        "step": 1
+      },
+      [
+        2,
+        3
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    ]
+  },
+  {
+    "id": "g6-more-fraction-story-b2-5",
+    "skillId": "g6-b2-5",
+    "title": "Add and subtract fractions in words",
+    "rule": "fraction-story",
+    "parameters": [
+      "firstNumerator",
+      "firstDenominator",
+      "secondNumerator",
+      "secondDenominator",
+      "style"
+    ],
+    "example": {
+      "firstNumerator": 1,
+      "firstDenominator": 4,
+      "secondNumerator": 2,
+      "secondDenominator": 6,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "g6-more-fraction-of-quantity-b2-9",
+    "skillId": "g6-b2-9",
+    "title": "A fraction of a whole number",
+    "rule": "fraction-of-quantity",
+    "parameters": [
+      "numerator",
+      "denominator",
+      "whole",
+      "style",
+      "exact"
+    ],
+    "example": {
+      "numerator": 2,
+      "denominator": 5,
+      "whole": 20,
+      "style": 0,
+      "exact": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 7,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 30,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        0
+      ]
+    ]
+  },
+  {
+    "id": "g6-more-unit-rate-b2-12",
+    "skillId": "g6-b2-12",
+    "title": "Rates and unit rates",
+    "rule": "unit-rate",
+    "parameters": [
+      "quantity",
+      "total",
+      "quantity2",
+      "style"
+    ],
+    "example": {
+      "quantity": 4,
+      "total": 10,
+      "quantity2": 6,
+      "style": 1
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 10,
+        "max": 300,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 15,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "g6-more-pattern-term-c1-3",
+    "skillId": "g6-c1-3",
+    "title": "Pattern rules and terms",
+    "rule": "pattern-term",
+    "parameters": [
+      "firstTerm",
+      "difference",
+      "position",
+      "style"
+    ],
+    "example": {
+      "firstTerm": 5,
+      "difference": 3,
+      "position": 20,
+      "style": 1
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 50,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 10,
+        "max": 50,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    ]
+  },
+  {
+    "id": "g6-more-evaluate-words-c2-2",
+    "skillId": "g6-c2-2",
+    "title": "Evaluate in different settings",
+    "rule": "linear-story",
+    "parameters": [
+      "multiplier",
+      "added",
+      "input",
+      "style"
+    ],
+    "example": {
+      "multiplier": 4,
+      "added": 6,
+      "input": 7,
+      "style": 2
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      [
+        2,
+        3,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "g6-more-solve-words-c2-3",
+    "skillId": "g6-c2-3",
+    "title": "Solve equations from words",
+    "rule": "linear-story",
+    "parameters": [
+      "multiplier",
+      "added",
+      "input",
+      "style"
+    ],
+    "example": {
+      "multiplier": 4,
+      "added": 6,
+      "input": 7,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        4
+      ]
+    ]
+  },
+  {
+    "id": "g6-more-mode-d1-5",
+    "skillId": "g6-d1-5",
+    "title": "Find the mode",
+    "rule": "data-measure",
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "fourth",
+      "fifth",
+      "measure"
+    ],
+    "example": {
+      "first": 12,
+      "second": 15,
+      "third": 15,
+      "fourth": 18,
+      "fifth": 20,
+      "measure": 3
+    },
+    "generation": [
+      {
+        "min": 5,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 40,
+        "step": 1
+      },
+      [
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g6-more-mean-missing-d1-5",
+    "skillId": "g6-d1-5",
+    "title": "Find the missing value from the mean",
+    "rule": "mean-missing",
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "fourth",
+      "mean"
+    ],
+    "example": {
+      "first": 40,
+      "second": 55,
+      "third": 62,
+      "fourth": 70,
+      "mean": 60
+    },
+    "generation": [
+      {
+        "min": 10,
+        "max": 100,
+        "step": 1
+      },
+      {
+        "min": 10,
+        "max": 100,
+        "step": 1
+      },
+      {
+        "min": 10,
+        "max": 100,
+        "step": 1
+      },
+      {
+        "min": 10,
+        "max": 100,
+        "step": 1
+      },
+      {
+        "min": 30,
+        "max": 90,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g6-more-probability-word-d2-1",
+    "skillId": "g6-d2-1",
+    "title": "Probability in different settings",
+    "rule": "probability-word",
+    "parameters": [
+      "favourable",
+      "total",
+      "style"
+    ],
+    "example": {
+      "favourable": 3,
+      "total": 12,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 19,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 20,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    ]
+  },
+  {
+    "id": "g6-more-unit-convert-e2-1",
+    "skillId": "g6-e2-1",
+    "title": "Convert metric units",
+    "rule": "unit-convert",
+    "parameters": [
+      "amount",
+      "style"
+    ],
+    "example": {
+      "amount": 250,
+      "style": 6
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 999,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    ]
+  },
+  {
+    "id": "g6-more-angle-relation-e2-3",
+    "skillId": "g6-e2-3",
+    "title": "Angle relationships",
+    "rule": "angle-relation",
+    "parameters": [
+      "first",
+      "second",
+      "style"
+    ],
+    "example": {
+      "first": 50,
+      "second": 60,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 10,
+        "max": 170,
+        "step": 1
+      },
+      {
+        "min": 10,
+        "max": 170,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "g6-more3-round-story-b1-5",
+    "skillId": "g6-b1-5",
+    "title": "Round decimals in context",
+    "rule": "round-story",
+    "parameters": [
+      "number",
+      "decimalPlaces",
+      "roundingPlace",
+      "style"
+    ],
+    "example": {
+      "number": 3475,
+      "decimalPlaces": 3,
+      "roundingPlace": -2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1001,
+        "max": 99999,
+        "step": 1
+      },
+      [
+        3
+      ],
+      [
+        -2,
+        -1,
+        0
+      ],
+      [
+        0,
+        2,
+        4
+      ]
+    ]
+  },
+  {
+    "id": "g6-more3-convert-forms-b1-6",
+    "skillId": "g6-b1-6",
+    "title": "Fractions, decimals and percents",
+    "rule": "convert-forms",
+    "parameters": [
+      "numerator",
+      "denominator",
+      "style"
+    ],
+    "example": {
+      "numerator": 3,
+      "denominator": 4,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 99,
+        "step": 1
+      },
+      [
+        2,
+        4,
+        5,
+        10,
+        20,
+        25,
+        50,
+        100
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    ]
+  },
+  {
+    "id": "g6-more3-order-of-operations-b2-1",
+    "skillId": "g6-b2-1",
+    "title": "Order of operations",
+    "rule": "order-of-operations",
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "fourth",
+      "style"
+    ],
+    "example": {
+      "first": 2,
+      "second": 3,
+      "third": 4,
+      "fourth": 5,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 15,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "g6-more3-divisibility-count-b2-2",
+    "skillId": "g6-b2-2",
+    "title": "Divisibility",
+    "rule": "divisibility-count",
+    "parameters": [
+      "number",
+      "style"
+    ],
+    "example": {
+      "number": 1260,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 20,
+        "max": 9999,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g6-more3-prime-factor-question-b2-6",
+    "skillId": "g6-b2-6",
+    "title": "Prime factors",
+    "rule": "prime-factor-question",
+    "parameters": [
+      "number",
+      "style"
+    ],
+    "example": {
+      "number": 60,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 12,
+        "max": 200,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g6-more3-decimal-operation-b2-7",
+    "skillId": "g6-b2-7",
+    "title": "Multiply by tenths",
+    "rule": "decimal-operation",
+    "parameters": [
+      "first",
+      "second",
+      "style"
+    ],
+    "example": {
+      "first": 236,
+      "second": 4,
+      "style": 2
+    },
+    "generation": [
+      {
+        "min": 100,
+        "max": 999,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      [
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g6-more3-decimal-operation-b2-8",
+    "skillId": "g6-b2-8",
+    "title": "Divide by tenths",
+    "rule": "decimal-operation",
+    "parameters": [
+      "first",
+      "second",
+      "style"
+    ],
+    "example": {
+      "first": 236,
+      "second": 4,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 100,
+        "max": 999,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      [
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g6-more3-decimal-operation-b2-11",
+    "skillId": "g6-b2-11",
+    "title": "Divide decimals by whole numbers",
+    "rule": "decimal-operation",
+    "parameters": [
+      "first",
+      "second",
+      "style"
+    ],
+    "example": {
+      "first": 750,
+      "second": 5,
+      "style": 1
+    },
+    "generation": [
+      {
+        "min": 100,
+        "max": 999,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      [
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g6-more3-pattern-table-c1-2",
+    "skillId": "g6-c1-2",
+    "title": "Patterns in tables",
+    "rule": "pattern-table-values",
+    "parameters": [
+      "rate",
+      "start",
+      "input",
+      "style"
+    ],
+    "example": {
+      "rate": 3,
+      "start": 2,
+      "input": 10,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 6,
+        "max": 30,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g6-more3-decimal-sequence-c1-4",
+    "skillId": "g6-c1-4",
+    "title": "Patterns with decimals",
+    "rule": "decimal-sequence",
+    "parameters": [
+      "firstTerm",
+      "difference",
+      "position",
+      "style"
+    ],
+    "example": {
+      "firstTerm": 25,
+      "difference": 25,
+      "position": 10,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 10,
+        "max": 200,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 75,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 20,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g6-more3-combine-terms-c2-1",
+    "skillId": "g6-c2-1",
+    "title": "Combine like terms",
+    "rule": "combine-terms",
+    "parameters": [
+      "first",
+      "second",
+      "constant",
+      "style"
+    ],
+    "example": {
+      "first": 3,
+      "second": 5,
+      "constant": 4,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g6-more3-inequality-count-c2-4",
+    "skillId": "g6-c2-4",
+    "title": "Solutions of inequalities",
+    "rule": "inequality-count",
+    "parameters": [
+      "added",
+      "limit",
+      "style"
+    ],
+    "example": {
+      "added": 5,
+      "limit": 25,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 21,
+        "max": 100,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g6-more3-simple-interest-f1-4",
+    "skillId": "g6-f1-4",
+    "title": "Interest rates",
+    "rule": "simple-interest-story",
+    "parameters": [
+      "principal",
+      "percent",
+      "years",
+      "style"
+    ],
+    "example": {
+      "principal": 1000,
+      "percent": 5,
+      "years": 3,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 100,
+        "max": 2000,
+        "step": 100
+      },
+      {
+        "min": 1,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g6-more4-chart-read-d1-4",
+    "skillId": "g6-d1-4",
+    "title": "Use a graph to tell a story",
+    "rule": "chart-read",
+    "parameters": [
+      "soccer",
+      "hockey",
+      "swimming",
+      "dance",
+      "style",
+      "form"
+    ],
+    "example": {
+      "soccer": 12,
+      "hockey": 8,
+      "swimming": 6,
+      "dance": 10,
+      "style": 0,
+      "form": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 60,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 60,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 60,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 60,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g6-more4-chart-read-d1-6",
+    "skillId": "g6-d1-6",
+    "title": "Interpret a data display",
+    "rule": "chart-read",
+    "parameters": [
+      "soccer",
+      "hockey",
+      "swimming",
+      "dance",
+      "style",
+      "form"
+    ],
+    "example": {
+      "soccer": 12,
+      "hockey": 8,
+      "swimming": 6,
+      "dance": 10,
+      "style": 2,
+      "form": 1
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 60,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 60,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 60,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 60,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g6-more4-experimental-probability-d2-2",
+    "skillId": "g6-d2-2",
+    "title": "Experimental probability",
+    "rule": "experimental-probability-story",
+    "parameters": [
+      "successes",
+      "trials",
+      "style"
+    ],
+    "example": {
+      "successes": 3,
+      "trials": 12,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 19,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 40,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g6-more4-sample-space-d2-2",
+    "skillId": "g6-d2-2",
+    "title": "Outcomes and probability",
+    "rule": "sample-space",
+    "parameters": [
+      "firstChoices",
+      "secondChoices",
+      "style"
+    ],
+    "example": {
+      "firstChoices": 3,
+      "secondChoices": 4,
+      "style": 1
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        1,
+        2,
+        3,
+        4
+      ]
+    ]
+  },
+  {
+    "id": "g6-more4-transform-point-e1-3",
+    "skillId": "g6-e1-3",
+    "title": "Points, reflections and rotations",
+    "rule": "transform-point",
+    "parameters": [
+      "x",
+      "y",
+      "shiftX",
+      "shiftY",
+      "style"
+    ],
+    "example": {
+      "x": 3,
+      "y": 4,
+      "shiftX": 5,
+      "shiftY": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -10,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": -10,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": -8,
+        "max": 8,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "g6-more4-composite-area-e2-4",
+    "skillId": "g6-e2-4",
+    "title": "Areas of polygons",
+    "rule": "composite-area",
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "fourth",
+      "style"
+    ],
+    "example": {
+      "first": 10,
+      "second": 8,
+      "third": 3,
+      "fourth": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 5,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 10,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "g6-more4-polygon-angle-e2-3",
+    "skillId": "g6-e2-3",
+    "title": "Polygon angles",
+    "rule": "polygon-angle",
+    "parameters": [
+      "sides",
+      "style"
+    ],
+    "example": {
+      "sides": 6,
+      "style": 0
+    },
+    "generation": [
+      [
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        12
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    ]
+  },
+  {
+    "id": "g6-more4-solid-measure-e2-5",
+    "skillId": "g6-e2-5",
+    "title": "Surface area and volume",
+    "rule": "solid-measure",
+    "parameters": [
+      "length",
+      "width",
+      "height",
+      "style"
+    ],
+    "example": {
+      "length": 4,
+      "width": 3,
+      "height": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g6-more4-solid-measure-e2-6",
+    "skillId": "g6-e2-6",
+    "title": "Surface area of prisms",
+    "rule": "solid-measure",
+    "parameters": [
+      "length",
+      "width",
+      "height",
+      "style"
+    ],
+    "example": {
+      "length": 4,
+      "width": 3,
+      "height": 2,
+      "style": 1
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        1,
+        3,
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "g6-more4-ratio-share-b2-12",
+    "skillId": "g6-b2-12",
+    "title": "Share in a ratio",
+    "rule": "ratio-share",
+    "parameters": [
+      "firstPart",
+      "secondPart",
+      "multiplier",
+      "style"
+    ],
+    "example": {
+      "firstPart": 3,
+      "secondPart": 2,
+      "multiplier": 4,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    ]
+  },
+  {
+    "id": "g6-more5-rational-pick-b1-3",
+    "skillId": "g6-b1-3",
+    "title": "Order and compare numbers",
+    "rule": "rational-pick",
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "decimalPlaces",
+      "style"
+    ],
+    "example": {
+      "first": 35,
+      "second": -7,
+      "third": 52,
+      "decimalPlaces": 1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": -99,
+        "max": 99,
+        "step": 1
+      },
+      {
+        "min": -99,
+        "max": 99,
+        "step": 1
+      },
+      {
+        "min": -99,
+        "max": 99,
+        "step": 1
+      },
+      [
+        1,
+        2
+      ],
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g6-more5-rational-pick-b1-4",
+    "skillId": "g6-b1-4",
+    "title": "Order and compare numbers",
+    "rule": "rational-pick",
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "decimalPlaces",
+      "style"
+    ],
+    "example": {
+      "first": 35,
+      "second": 7,
+      "third": 520,
+      "decimalPlaces": 3,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 999,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 999,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 999,
+        "step": 1
+      },
+      [
+        3
+      ],
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g6-more5-fraction-divide-b2-10",
+    "skillId": "g6-b2-10",
+    "title": "Divide by a proper fraction",
+    "rule": "fraction-divide-story",
+    "parameters": [
+      "whole",
+      "numerator",
+      "denominator",
+      "style"
+    ],
+    "example": {
+      "whole": 3,
+      "numerator": 1,
+      "denominator": 4,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 7,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g6-more5-interval-count-d1-2",
+    "skillId": "g6-d1-2",
+    "title": "Sort data into intervals",
+    "rule": "interval-count",
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "fourth",
+      "fifth",
+      "interval",
+      "style"
+    ],
+    "example": {
+      "first": 12,
+      "second": 18,
+      "third": 23,
+      "fourth": 29,
+      "fifth": 30,
+      "interval": 1,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 49,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 49,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 49,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 49,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 49,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 4,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g6-more5-savings-goal-f1-2",
+    "skillId": "g6-f1-2",
+    "title": "Financial goals",
+    "rule": "savings-goal",
+    "parameters": [
+      "weeklySaving",
+      "weeks",
+      "saved",
+      "style"
+    ],
+    "example": {
+      "weeklySaving": 10,
+      "weeks": 8,
+      "saved": 40,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 5,
+        "max": 50,
+        "step": 1
+      },
+      {
+        "min": 4,
+        "max": 30,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 200,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g6-more5-turn-angle-e2-2",
+    "skillId": "g6-e2-2",
+    "title": "Angles and turns",
+    "rule": "turn-angle",
+    "parameters": [
+      "numerator",
+      "denominator",
+      "style"
+    ],
+    "example": {
+      "numerator": 1,
+      "denominator": 4,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      [
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        12
+      ],
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g6-more6-convert-forms-b2-3",
+    "skillId": "g6-b2-3",
+    "title": "Percents, decimals and fractions",
+    "rule": "convert-forms",
+    "parameters": [
+      "numerator",
+      "denominator",
+      "style"
+    ],
+    "example": {
+      "numerator": 3,
+      "denominator": 4,
+      "style": 3
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 99,
+        "step": 1
+      },
+      [
+        2,
+        4,
+        5,
+        10,
+        20,
+        25,
+        50,
+        100
+      ],
+      [
+        2,
+        3,
+        4
+      ]
+    ]
+  },
+  {
+    "id": "g6-more6-story-add-b2-4",
+    "skillId": "g6-b2-4",
+    "title": "Add in word problems",
+    "rule": "story-add",
+    "parameters": [
+      "first",
+      "second",
+      "style"
+    ],
+    "example": {
+      "first": 24735,
+      "second": 18602,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1000,
+        "max": 500000,
+        "step": 1
+      },
+      {
+        "min": 1000,
+        "max": 400000,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "g6-more6-story-subtract-b2-4",
+    "skillId": "g6-b2-4",
+    "title": "Subtract in word problems",
+    "rule": "story-subtract",
+    "parameters": [
+      "first",
+      "second",
+      "style"
+    ],
+    "example": {
+      "first": 524735,
+      "second": 18602,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 50000,
+        "max": 900000,
+        "step": 1
+      },
+      {
+        "min": 1000,
+        "max": 400000,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "g6-more6-equivalent-missing-b2-5",
+    "skillId": "g6-b2-5",
+    "title": "Equivalent fractions and common denominators",
+    "rule": "equivalent-missing",
+    "parameters": [
+      "numerator",
+      "denominator",
+      "multiplier",
+      "style"
+    ],
+    "example": {
+      "numerator": 3,
+      "denominator": 4,
+      "multiplier": 2,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 6,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g6-more6-unit-rate-b2-11",
+    "skillId": "g6-b2-11",
+    "title": "Divide a total fairly",
+    "rule": "unit-rate",
+    "parameters": [
+      "quantity",
+      "total",
+      "quantity2",
+      "style"
+    ],
+    "example": {
+      "quantity": 4,
+      "total": 10,
+      "quantity2": 6,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 10,
+        "max": 300,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        0,
+        2,
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "g6-more6-pattern-table-c1-3",
+    "skillId": "g6-c1-3",
+    "title": "Patterns in tables",
+    "rule": "pattern-table-values",
+    "parameters": [
+      "rate",
+      "start",
+      "input",
+      "style"
+    ],
+    "example": {
+      "rate": 3,
+      "start": 2,
+      "input": 10,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 6,
+        "max": 30,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g6-more6-order-of-operations-c2-2",
+    "skillId": "g6-c2-2",
+    "title": "Order of operations",
+    "rule": "order-of-operations",
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "fourth",
+      "style"
+    ],
+    "example": {
+      "first": 2,
+      "second": 3,
+      "third": 4,
+      "fourth": 5,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 15,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "g6-more6-missing-number-c2-3",
+    "skillId": "g6-c2-3",
+    "title": "Find the missing number",
+    "rule": "missing-number",
+    "parameters": [
+      "known",
+      "result",
+      "form"
+    ],
+    "example": {
+      "known": 8,
+      "result": 25,
+      "form": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 10,
+        "max": 100,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g6-more6-chart-read-d1-3",
+    "skillId": "g6-d1-3",
+    "title": "Read a graph or table",
+    "rule": "chart-read",
+    "parameters": [
+      "soccer",
+      "hockey",
+      "swimming",
+      "dance",
+      "style",
+      "form"
+    ],
+    "example": {
+      "soccer": 12,
+      "hockey": 8,
+      "swimming": 6,
+      "dance": 10,
+      "style": 0,
+      "form": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 60,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 60,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 60,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 60,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g6-more6-polygon-angle-e1-1",
+    "skillId": "g6-e1-1",
+    "title": "Angles in quadrilaterals",
+    "rule": "polygon-angle",
+    "parameters": [
+      "sides",
+      "style"
+    ],
+    "example": {
+      "sides": 4,
+      "style": 0
+    },
+    "generation": [
+      [
+        4
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    ]
+  },
+  {
+    "id": "g6-more6-angle-relation-e2-2",
+    "skillId": "g6-e2-2",
+    "title": "Angles around a point and on a line",
+    "rule": "angle-relation",
+    "parameters": [
+      "first",
+      "second",
+      "style"
+    ],
+    "example": {
+      "first": 120,
+      "second": 100,
+      "style": 4
+    },
+    "generation": [
+      {
+        "min": 20,
+        "max": 150,
+        "step": 1
+      },
+      {
+        "min": 20,
+        "max": 150,
+        "step": 1
+      },
+      [
+        3,
+        4
+      ]
+    ]
   }
 ]

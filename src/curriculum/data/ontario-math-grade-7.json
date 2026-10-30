@@ -610,7 +610,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-b1-2"
+        "g7-question-b1-2",
+        "g7-more-square-roots-b1-2"
       ]
     },
     {
@@ -625,7 +626,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-b1-3"
+        "g7-question-b1-3",
+        "g7-more5-rational-pick-b1-3"
       ]
     },
     {
@@ -640,7 +642,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-b1-4"
+        "g7-question-b1-4",
+        "g7-more3-simplify-fraction-b1-4"
       ]
     },
     {
@@ -655,7 +658,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-b1-5"
+        "g7-question-b1-5",
+        "g7-more5-midpoint-decimal-b1-5"
       ]
     },
     {
@@ -670,7 +674,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-b1-6"
+        "g7-question-b1-6",
+        "g7-more5-round-story-b1-6"
       ]
     },
     {
@@ -685,7 +690,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-b1-7"
+        "g7-question-b1-7",
+        "g7-more3-convert-forms-b1-7"
       ]
     },
     {
@@ -700,7 +706,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-b2-1"
+        "g7-question-b2-1",
+        "g7-more3-order-of-operations-b2-1"
       ]
     },
     {
@@ -715,7 +722,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-b2-2"
+        "g7-question-b2-2",
+        "g7-more3-convert-forms-b2-2"
       ]
     },
     {
@@ -730,7 +738,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-b2-3"
+        "g7-question-b2-3",
+        "g7-more-percent-story-b2-3"
       ]
     },
     {
@@ -745,7 +754,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-b2-4"
+        "g7-question-b2-4",
+        "g7-more-integer-story-b2-4"
       ]
     },
     {
@@ -760,7 +770,9 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-b2-5"
+        "g7-question-b2-5",
+        "g7-more-fraction-story-b2-5",
+        "g7-more6-compare-fractions-b2-5"
       ]
     },
     {
@@ -775,7 +787,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-b2-6"
+        "g7-question-b2-6",
+        "g7-more3-gcf-lcm-b2-6"
       ]
     },
     {
@@ -790,7 +803,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-b2-7"
+        "g7-question-b2-7",
+        "g7-more-powers-b2-7"
       ]
     },
     {
@@ -805,7 +819,9 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-b2-8"
+        "g7-question-b2-8",
+        "g7-more-fraction-of-quantity-b2-8",
+        "g7-more6-fraction-divide-b2-8"
       ]
     },
     {
@@ -820,7 +836,9 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-b2-9"
+        "g7-question-b2-9",
+        "g7-more3-decimal-operation-b2-9",
+        "g7-more6-decimal-story-b2-9"
       ]
     },
     {
@@ -835,7 +853,10 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-b2-10"
+        "g7-question-b2-10",
+        "g7-more-unit-rate-b2-10",
+        "g7-more4-ratio-share-b2-10",
+        "g7-more6-scale-length-b2-10"
       ]
     },
     {
@@ -865,7 +886,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-c1-2"
+        "g7-question-c1-2",
+        "g7-more3-pattern-table-c1-2"
       ]
     },
     {
@@ -880,7 +902,9 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-c1-3"
+        "g7-question-c1-3",
+        "g7-more-pattern-term-c1-3",
+        "g7-more6-pattern-table-c1-3"
       ]
     },
     {
@@ -910,7 +934,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-c2-1"
+        "g7-question-c2-1",
+        "g7-more3-combine-terms-c2-1"
       ]
     },
     {
@@ -925,7 +950,9 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-c2-2"
+        "g7-question-c2-2",
+        "g7-more-evaluate-words-c2-2",
+        "g7-more6-order-of-operations-c2-2"
       ]
     },
     {
@@ -940,7 +967,9 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-c2-3"
+        "g7-question-c2-3",
+        "g7-more-solve-words-c2-3",
+        "g7-more6-missing-number-c2-3"
       ]
     },
     {
@@ -955,7 +984,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-c2-4"
+        "g7-question-c2-4",
+        "g7-more3-inequality-count-c2-4"
       ]
     },
     {
@@ -1015,7 +1045,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-d1-1"
+        "g7-question-d1-1",
+        "g7-more5-survey-percent-d1-1"
       ]
     },
     {
@@ -1030,7 +1061,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-d1-2"
+        "g7-question-d1-2",
+        "g7-more5-survey-percent-d1-2"
       ]
     },
     {
@@ -1045,7 +1077,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-d1-3"
+        "g7-question-d1-3",
+        "g7-more5-survey-percent-d1-3"
       ]
     },
     {
@@ -1076,7 +1109,9 @@
       ],
       "questionIds": [
         "g7-question-d1-5",
-        "g7-question-d1-5-score"
+        "g7-question-d1-5-score",
+        "g7-more-mean-missing-d1-5",
+        "g7-more4-mean-change-d1-5"
       ]
     },
     {
@@ -1106,7 +1141,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-d2-1"
+        "g7-question-d2-1",
+        "g7-more4-sample-space-d2-1"
       ]
     },
     {
@@ -1121,7 +1157,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-d2-2"
+        "g7-question-d2-2",
+        "g7-more4-experimental-probability-d2-2"
       ]
     },
     {
@@ -1151,7 +1188,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-e1-2"
+        "g7-question-e1-2",
+        "g7-more4-scale-length-e1-2"
       ]
     },
     {
@@ -1166,7 +1204,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-e1-3"
+        "g7-question-e1-3",
+        "g7-more4-transform-point-e1-3"
       ]
     },
     {
@@ -1181,7 +1220,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-e1-4"
+        "g7-question-e1-4",
+        "g7-more4-transform-point-e1-4"
       ]
     },
     {
@@ -1196,7 +1236,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-e2-1"
+        "g7-question-e2-1",
+        "g7-more4-solid-measure-e2-1"
       ]
     },
     {
@@ -1211,7 +1252,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-e2-2"
+        "g7-question-e2-2",
+        "g7-more-unit-convert-e2-2"
       ]
     },
     {
@@ -1226,7 +1268,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-e2-3"
+        "g7-question-e2-3",
+        "g7-more4-circle-story-e2-3"
       ]
     },
     {
@@ -1241,7 +1284,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-e2-4"
+        "g7-question-e2-4",
+        "g7-more4-circle-story-e2-4"
       ]
     },
     {
@@ -1256,7 +1300,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-e2-5"
+        "g7-question-e2-5",
+        "g7-more4-circle-story-e2-5"
       ]
     },
     {
@@ -1271,7 +1316,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-e2-6"
+        "g7-question-e2-6",
+        "g7-more5-solid-measure-e2-6"
       ]
     },
     {
@@ -1286,7 +1332,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-e2-7"
+        "g7-question-e2-7",
+        "g7-more4-solid-measure-e2-7"
       ]
     },
     {
@@ -1301,7 +1348,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-f1-1"
+        "g7-question-f1-1",
+        "g7-more3-currency-exchange-f1-1"
       ]
     },
     {
@@ -1331,7 +1379,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-f1-3"
+        "g7-question-f1-3",
+        "g7-more3-budget-balance-f1-3"
       ]
     },
     {
@@ -1361,7 +1410,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-f1-5"
+        "g7-question-f1-5",
+        "g7-more3-simple-interest-f1-5"
       ]
     },
     {
