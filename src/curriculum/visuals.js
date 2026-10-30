@@ -1,7 +1,7 @@
 import {renderPrimaryVisual} from './primary-visuals.js';
 import {renderSecondaryVisual} from './secondary-visuals.js';
 const colours=['#2459a6','#bd662b','#287858','#8b58a1'];
-import {setMathText} from '../math-text.js';
+import {setMathText} from '../ui/math-text.js';
 const element=(tag,text)=>{const node=document.createElement(tag);if(text!==undefined)node.textContent=String(text);return node;};
 const svgElement=(tag,attributes={},text)=>{const node=document.createElementNS('http://www.w3.org/2000/svg',tag);for(const [key,value] of Object.entries(attributes))node.setAttribute(key,String(value));if(text!==undefined)node.textContent=String(text);return node;};
 const add=(svg,tag,attrs,text)=>{const node=svgElement(tag,attrs,text);svg.append(node);return node;};

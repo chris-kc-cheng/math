@@ -1,13 +1,12 @@
 import {calculatorPlan,setCalculatorContext} from '../calculator/plans.js';
 import {mountCalculatorTutorial} from '../calculator/view.js';
-import katex from 'katex';
 import {createPractice,nextValues,exampleValues} from './practice.js';
-import {renderLongDivision} from '../long-division-view.js';
-import {renderLongMultiplication} from '../long-multiplication-view.js';
-import {renderEquation} from '../equation-view.js';
+import {renderLongDivision} from '../views/long-division-view.js';
+import {renderLongMultiplication} from '../views/long-multiplication-view.js';
+import {renderEquation} from '../views/equation-view.js';
 import {renderVisual} from './visuals.js';
 import {mountBuilder} from './builders.js';
-import {equalDecimal} from '../math/grade5/common.js';
+import {equalDecimal} from '../math/families/grade5/common.js';
 import {answerNumber} from '../math/verification.js';
 import {compare,rational,parseDecimal} from '../math/core/exact.js';
 // Accepts "3", "2.5", "-4" and "3/4"; compares exactly with the worked answer.
@@ -20,10 +19,10 @@ function sameNumber(input,answer){
 }
 import {playbackSteps} from '../math/verification.js';
 import {setPlaybackIcon} from './playback-controls.js';
-import {setMathText} from '../math-text.js';
+import {setMathText} from '../ui/math-text.js';
+import {el,reducedMotion,renderTex} from '../ui/dom.js';
 
-const el=(tag,text,className)=>{const node=document.createElement(tag);if(text)node.textContent=text;if(className)node.className=className;return node;};
-const render=(formula,node)=>katex.render(formula,node,{displayMode:true,throwOnError:true,trust:false});
+const render=(formula,node)=>renderTex(formula,node);
 
 export function mountPractice(container,template,initialValues=template.example){
  const card=el('section',null,'practice-card'),heading=el('h3',template.title),question=el('div',null,'practice-question math'),prompt=el('p',null,'practice-prompt'),questionVisual=el('div',null,'practice-question-visual'),tools=el('div'),toolbar=el('div',null,'practice-toolbar');
@@ -71,7 +70,7 @@ export function mountPractice(container,template,initialValues=template.example)
    else {const equals=el('div',null,'equals'),math=el('div',null,'math');render('=',equals);render(current.math,math);row.append(equals,math);}
    output.append(row);
    if(index===timeline.length&&lesson.kind!=='equation'||lesson.kind==='equation'&&/^x\s*=/.test(current.math))row.classList.add('answer');
-   if(animate&&!matchMedia('(prefers-reduced-motion: reduce)').matches)row.animate([{opacity:0,transform:'translateY(6px)'},{opacity:1,transform:'translateY(0)'}],{duration:250});
+   if(animate&&!reducedMotion())row.animate([{opacity:0,transform:'translateY(6px)'},{opacity:1,transform:'translateY(0)'}],{duration:250});
   }
   setMathText(caption,current.text||'');next.disabled=play.disabled=all.disabled=index>=timeline.length;
   if(next.disabled){stop();controls.hidden=true;if(!tutorialDispose)tutorialDispose=mountCalculatorTutorial(output,plan);}

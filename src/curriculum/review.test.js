@@ -48,7 +48,7 @@ test('primary diagrams reveal sharing progressively and avoid repeating the ques
 });
 
 test('early equal-group explanations state the answer without introducing division notation',async()=>{
- const {createPrimary}=await import('../math/primary/index.js');
+ const {createPrimary}=await import('../math/families/primary/index.js');
  const groups=createPrimary('primary-groups',[4,2,1,1,2,1]),share=createPrimary('primary-groups',[4,2,1,2,0,1]);
  assert.match(groups.steps.at(-1).text,/4 groups/);assert.match(share.steps.at(-1).text,/2 counters/);
  assert.equal(groups.steps.at(-1).math,undefined);assert.equal(share.steps.at(-1).math,undefined);

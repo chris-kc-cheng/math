@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import katex from 'katex';
 import {createPractice,generateQuestionValues,nextValues} from './practice.js';
-import {buildWorksheet} from '../worksheet-model.js';
+import {buildWorksheet} from './worksheet-model.js';
 import {makeRound,numericAnswer,eligibleQuestions} from '../game/model.js';
 const read=(g,kind)=>JSON.parse(readFileSync(new URL(`./data/${kind==='questions'?`grade-${g}-questions`:`ontario-math-grade-${g}`}.json`,import.meta.url),'utf8'));
 const leaves=node=>node.children?node.children.flatMap(leaves):[node];

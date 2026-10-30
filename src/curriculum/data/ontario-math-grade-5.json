@@ -588,25 +588,6 @@
   ],
   "activities": [
     {
-      "id": "mixed-fraction-conversion",
-      "skillIds": [
-        "b1-3"
-      ],
-      "title": "Mixed number and fraction conversion",
-      "href": "./fraction-conversion.html",
-      "coverage": "partial",
-      "modes": [
-        "practice"
-      ],
-      "directions": [
-        "mixed-to-fraction",
-        "fraction-to-mixed"
-      ],
-      "questionIds": [
-        "grade5-more3-equivalent-missing-b1-3"
-      ]
-    },
-    {
       "id": "practice-b1-3",
       "skillIds": [
         "b1-3"
@@ -620,7 +601,8 @@
       "questionIds": [
         "mixed-to-fraction",
         "fraction-to-mixed",
-        "grade5-equivalent-fraction"
+        "grade5-equivalent-fraction",
+        "grade5-more3-equivalent-missing-b1-3"
       ]
     },
     {

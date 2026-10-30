@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
 import {createPractice} from '../curriculum/practice.js';
-import {solve} from './arithmetic.js';
+import {solve} from './engines/arithmetic.js';
 const read=path=>JSON.parse(readFileSync(new URL(path,import.meta.url),'utf8'));
 const baseline=read('./fixtures/pre-refactor-behavior.json');
 const templates=read('../curriculum/data/practice-questions.json');

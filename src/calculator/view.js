@@ -2,8 +2,8 @@ import './calculator.css';
 import {createCalculator,press,entryText,display} from './engine.js';
 import {currentCalculatorContext,subscribeCalculator,keyLabel,keyCategory,setCalculatorContext} from './plans.js';
 import {setPlaybackIcon} from '../curriculum/playback-controls.js';
+import {el} from '../ui/dom.js';
 
-const el=(tag,text,cls)=>{const node=document.createElement(tag);if(text!==undefined)node.textContent=text;if(cls)node.className=cls;return node;};
 const icon='<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M8 6h8M8 10h2m4 0h2M8 14h2m4 0h2M8 18h2m4 0h2"/></svg>';
 let ui;
 const segmentPaths={a:'4,1 20,1 17,4 7,4',b:'21,2 21,20 18,18 18,6',c:'21,24 21,42 18,38 18,26',d:'4,43 20,43 17,40 7,40',e:'2,24 5,26 5,38 2,42',f:'2,2 5,6 5,18 2,20',g:'4,22 7,20 17,20 20,22 17,24 7,24'};

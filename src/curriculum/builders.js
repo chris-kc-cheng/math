@@ -1,14 +1,14 @@
 import {renderVisual} from './visuals.js';
-import {money} from '../math/grade5/common.js';
+import {money} from '../math/families/grade5/common.js';
 import {safeInteger,sum} from '../math/core/exact.js';
 import {balance,linearSequence,divisionFacts} from '../math/core/relationships.js';
-import {simulateCoin} from '../math/grade5/data.js';
-import {spatialRules} from '../math/grade5/spatial.js';
-import {analyzeReadings} from '../math/grade8/algebra.js';
-import {drawProbability,simulateDraws} from '../math/grade8/data.js';
+import {simulateCoin} from '../math/families/grade5/data.js';
+import {spatialRules} from '../math/families/grade5/spatial.js';
+import {analyzeReadings} from '../math/families/grade8/algebra.js';
+import {drawProbability,simulateDraws} from '../math/families/grade8/data.js';
 import {fitLine} from '../math/core/relationships.js';
 import {plain} from '../math/core/format.js';
-const el=(tag,text)=>{const node=document.createElement(tag);if(text!==undefined)node.textContent=text;return node;};
+import {el} from '../ui/dom.js';
 const field=(parent,label,value,min,max)=>{const wrap=el('label',label),input=el('input');input.type='number';input.value=value;input.min=min;input.max=max;input.step=1;wrap.append(input);parent.append(wrap);return input;};
 
 export function mountBuilder(host,builder){

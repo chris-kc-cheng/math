@@ -4,60 +4,46 @@ The app has three separate layers: curriculum content, mathematical rules, and t
 
 ```text
 src/
-  worksheet.js / worksheet.css   Printable exercise-sheet dialog and print layout (browser print → PDF)
-  worksheet-model.js             Pure worksheet builder (topics, count, answers, workings), tested
-  nav.js                         Shared grouped page switcher (current page highlighted)
-  main.js                        Landing page: auto-playing slide-show cards, own-formula box, handwriting modal
-  game.js / game.css             Practice page: battle scene, setup form, previous-player picker, history
-  game/
-    model.js                     Round creation, answer parsing, scoring, battleState and per-topic progress stats (pure, tested)
-    storage.js                   IndexedDB persistence of rounds by player
-    profile.js                   Active profile (last used or none), shared with the curriculum page
-    model.test.js                Scoring, parsing and battle-state tests
-  curriculum.js                  Curriculum page: hierarchy and learner/parent modes
-  curriculum.css                 Curriculum and activity presentation
+  pages/                         One entry script per HTML page (the HTML files at the repo root load these)
+    landing.js                   Landing page: auto-playing slide-show cards, own-formula box, handwriting modal
+    curriculum.js                Curriculum page: hierarchy, learner/parent modes, grade selector
+    game.js                      Practice page: blurred guest gate, settings, battle scene, history
+  styles/                        base.css (global), curriculum.css, game.css
+  ui/                            Shared page chrome and small helpers
+    dom.js                       el(), reducedMotion(), renderTex(): the only copies of these helpers
+    nav.js, profile-corner.js    Page switcher; player badge, statistics and the add-player menu
+    grade-picker.js, chrome.css  Grade display with its collapsible selector
+    math-text.js, debug.js       Plain a/b → LaTeX fractions; debug log
+  views/                         Calculation-board renderers (equation, long division, long multiplication)
+  write/                         Handwriting input: ink editing, sample ink, recognition worker
+  calculator/                    Key-entry engine, lesson-to-key plans, view, display
+  demo/examples.js               Landing examples backed by canonical curriculum templates
+  game/                          Practice model (rounds, scoring), IndexedDB storage, profiles, Mole meadow
   curriculum/
-    catalog.js                   Grades 1–10 datasets and reusable grade selection
-    data/
-      ontario-math-grade-5.json   Grade → strand → topic → expectation hierarchy
-      practice-questions.json    Question types, named parameters, default examples
-      ontario-math-grade-8.json   Researched Grade 8 expectation hierarchy and sources
-      grade-8-questions.json      Grade 8 named-parameter activities
-      grade-8-research.md         Source audit and coverage limits
-      README.md                  Content schema and IDs
-    data.js                      Shared content exports and activity lookup
-    practice.js                  Generate a question and dispatch to its math rule
+    catalog.js                   Grades 1–10 datasets and grade selection
+    data/                        Per-grade hierarchy and question-template JSON, research notes, schema README
+    practice.js                  Generate a question and dispatch to its family through math/families
     practice-view.js             Shared stepping, playback, refresh, and answer UI
-    visuals.js                   Shared tables, graphs, grids, shapes, and number lines
+    visuals.js, primary-visuals.js, secondary-visuals.js, tallies.js   Shared diagram renderers
     builders.js                  Bounded coding, graph, budget, and geometry tools
+    worksheet.js / .css, worksheet-model.js   Printable exercise sheets (pure model is tested)
     *.test.js                    Content and question integration tests
   math/
     lesson.js                    Shared tutorial data contract for all grades
-    core/
-      exact.js                   One BigInt rational arithmetic and rounding implementation
-      format.js                  Shared fraction, decimal, mixed-number, and money formatting
-      relationships.js           Shared division, carries, balance, sequences, and statistics
-      core.test.js               Independent arithmetic/relationship correctness tests
-    arithmetic.js                Bounded plain-text/LaTeX arithmetic parser
-    fractions.js                 Mixed-number/fraction conversions
-    equations.js                 Bounded one-variable equation parser
-    long-division.js             Digit-by-digit exact division
-    long-multiplication.js       Digit-by-digit exact multiplication
-    *.test.js                    Tests beside the algorithms
-    grade5/
-      index.js                   Domain-rule registry and argument validation
-      common.js                  Lesson contract, diagram descriptions, and format adapters
-      number.js                  Place value, comparisons, fractions, decimals, ratios
-      algebra.js                 Patterns, expressions, inequalities, coding, modelling
-      data.js                    Sampling, frequencies, graphs, statistics, probability
-      spatial.js                 Geometry, coordinates, transformations, measurement
-      financial.js               Money, tax exercises, budgets, debt, unit prices
-      reflection.js              Guided learning habits; no automatic grading
-      grade5.test.js             Reference results, invariants, ranges, rendering tests
-    grade8/                      Grouped number, algebra, data, spatial and financial methods
+    verification.js, check-policy.js   Independent answer checks and when to show them
+    core/                        exact.js (BigInt rationals), format.js, relationships.js, terms.js, tidy.js,
+                                 shared.js (helpers every family used to copy: fmt, frac, pickStyle, gcdN, ...)
+    engines/                     arithmetic, equations, fractions, long division, long multiplication
+    families/                    One folder per question-family group, all behind the same interface
+      index.js                   Registry: has(rule) / create(rule, values, template) / generate(rule, rng)
+      primary/                   Grades 1–3
+      elementary/                Shared Grades 4–8 rules, variants and guided discussions
+      grade5/, grade8/           Grade 5 and Grade 8 domain rules
+      secondary/                 Grades 9–10 (define() registry, graphs, trigonometry)
+      legacy/                    The first demo-era rules (arithmetic, long operations, simple equations)
 ```
 
-Other root files implement the existing handwriting surface, debugging, individual demo entry points, and calculation-board views. These are UI integrations, not separate activities in the curriculum library.
+The repository root holds only the HTML entry points and configuration; every script lives under `src/`.
 
 ## How the layers connect
 
@@ -76,7 +62,7 @@ Other root files implement the existing handwriting surface, debugging, individu
    ```
 
    Money is stored as integer cents; decimal questions use integer tenths or hundredths. Names make those units explicit. The parameter list defines the argument order used by the rule; callers may supply the named object instead.
-3. `curriculum/practice.js` converts named parameters to validated arguments and calls a rule in the grouped math modules. Refresh uses that rule's bounded `generate(rng)` function, then rejects an identical question. Rules contain no DOM code and never evaluate input as executable code.
+3. `curriculum/practice.js` converts named parameters to validated arguments and asks `math/families` for the family that owns the rule and calls it. Refresh uses that rule's bounded `generate(rng)` function, then rejects an identical question. Rules contain no DOM code and never evaluate input as executable code.
 4. A rule returns tutorial **data**, not HTML. A typical result contains `kind`, `prompt`, optional `formula`, `steps`, `answer`, and optional `response`, `builder`, or `visual` descriptions. Each step contains a caption (`text`), optional LaTeX (`math`), and optional structured diagram (`visual`). Captions use explicit templates and calculated values. The first step describes the original question; the view starts at step 1 so it is not repeated in the solution.
 5. The shared view renders the same result for every activity. Expression steps are equivalent expressions and receive a leading equals sign. Equation steps preserve their own equals sign. General worked steps may state different facts or show diagrams, so they do not receive an invented leading equals sign. Playback reveals steps in order; completed controls disappear; refresh starts a new question. Reduced-motion settings suppress entry animations.
 
@@ -113,7 +99,7 @@ The fixed `math/fixtures/pre-refactor-behavior.json` records hashes of 240 compl
 
 The catalog now includes Grades 1–8 (default remains Grade 5). Each additional grade has a separate `ontario-math-grade-{grade}.json` hierarchy and `grade-{grade}-questions.json` template list. The same renderer and learner/parent controls consume every grade.
 
-`math/elementary/` groups shared number, algebra, data, spatial, and financial rules used across Grades 4, 6, and 7. Existing Grade 5/8 rules are reused directly where appropriate. There is no rule module per expectation. Research, audited code counts, and coverage limits are recorded in `curriculum/data/grades-4-6-7-research.md`.
+`math/families/elementary/` groups shared number, algebra, data, spatial, and financial rules used across Grades 4, 6, and 7. Existing Grade 5/8 rules are reused directly where appropriate. There is no rule module per expectation. Research, audited code counts, and coverage limits are recorded in `curriculum/data/grades-4-6-7-research.md`.
 
 Question templates may declare `generation`, one domain per named parameter: either a list of allowed integers, or `{min,max,step}`. `generateQuestionValues(template,rng)` respects these grade-specific domains; `createPractice` checks the same bounds. `nextValues` generates a different valid question. Use the template-aware generator for curriculum activities; `generateValues(rule,rng)` remains available for the original rule defaults. `answerMinimum` can exclude negative subtraction answers in Grade 4. A solver can reject cross-parameter conditions, such as a cash payment below the purchase total.
 
@@ -121,19 +107,19 @@ Question templates may declare `generation`, one domain per named parameter: eit
 
 ## Primary teaching families
 
-`math/primary/` groups number, algebra, data, spatial, and financial rules behind a common adapter and registry. `curriculum/primary-visuals.js` renders their diagram descriptions through the shared dispatcher. Grades 1–3 reuse the content schema, named parameters, playback, refresh, parent view, worksheets, and game model. No activity has its own JavaScript file. `answerMaximum` optionally bounds generated scalar answers alongside `answerMinimum`.
+`math/families/primary/` groups number, algebra, data, spatial, and financial rules behind a common adapter and registry. `curriculum/primary-visuals.js` renders their diagram descriptions through the shared dispatcher. Grades 1–3 reuse the content schema, named parameters, playback, refresh, parent view, worksheets, and game model. No activity has its own JavaScript file. `answerMaximum` optionally bounds generated scalar answers alongside `answerMinimum`.
 
-`curriculum/primary-grades.test.js` audits official expectation codes, all declared styles, rich variety, sample/refresh domains, rendering contracts, and game/worksheet reuse. `math/primary/primary.test.js` independently checks exact answers and invalid domains. Research is in `curriculum/data/grades-1-2-3-research.md`; the lasting variety standard is in root `AGENTS.md`.
+`curriculum/primary-grades.test.js` audits official expectation codes, all declared styles, rich variety, sample/refresh domains, rendering contracts, and game/worksheet reuse. `math/families/primary/primary.test.js` independently checks exact answers and invalid domains. Research is in `curriculum/data/grades-1-2-3-research.md`; the lasting variety standard is in root `AGENTS.md`.
 
 ## Practice feedback and compact controls
 
-`game.js` provides the blurred guest gate (players are chosen in the corner badge menu), grade/topics/count settings, battle view, and immediate worked explanations. `game/model.js` accepts a bounded optional question count in `makeRound` (1–50, default 5), and `answerAndExplainRound` finalizes wrong answers as explored examples so a revealed answer cannot earn retry points. Correct answers remain scored normally. Saved rounds determine their own length; continuation also matches that length.
+`pages/game.js` provides the blurred guest gate (players are chosen in the corner badge menu), grade/topics/count settings, battle view, and immediate worked explanations. `game/model.js` accepts a bounded optional question count in `makeRound` (1–50, default 5), and `answerAndExplainRound` finalizes wrong answers as explored examples so a revealed answer cannot earn retry points. Correct answers remain scored normally. Saved rounds determine their own length; continuation also matches that length.
 
 `curriculum/tallies.js` draws actual crossing fifth strokes rather than a literal slash after four bars. The shared primary table renderer accepts these accessible SVG groups. Curriculum grades use a connected, labelled toggle group with `aria-pressed` selection. The landing card's `fraction-example` class adds row spacing only when that lesson contains stacked fractions; it is cleared for other examples. `nav.js` labels the game route Practice without changing saved URLs.
 
 ## Contextual calculator and visual landing examples
 
-`math-text.js` typesets plain `a/b` text as fractions. `math/core/tidy.js` is the last-line tidy of generated text (no `1x`, `+-`, `1 counters`, fractions over 1), `math/core/terms.js` builds clean algebraic terms, and `math/check-policy.js` decides which "Check the answer" steps are shown: only independent checks (inverse operations, substitution, remainders, boundaries), never ones that repeat the method or restate the question.
+`ui/math-text.js` typesets plain `a/b` text as fractions. `math/core/tidy.js` is the last-line tidy of generated text (no `1x`, `+-`, `1 counters`, fractions over 1), `math/core/terms.js` builds clean algebraic terms, and `math/check-policy.js` decides which "Check the answer" steps are shown: only independent checks (inverse operations, substitution, remainders, boundaries), never ones that repeat the method or restate the question.
 
 `calculator/` groups the pure key-entry engine, lesson-to-key plans, shared calculator view, seven-segment display, styling, and independent correctness tests. Its [README](calculator/README.md) describes the supported 36X Pro-style sequences, recommendation policy, bounds, and sources. `nav.js` mounts one shared icon; the curriculum, practice, and landing views publish their active calculation context. The calculator is independent of the narrower free-form lesson parser and never copies a result into an answer field.
 
@@ -143,7 +129,7 @@ Fraction entry on the landing demo compiles to n/d templates, not ordinary divis
 
 The demo and practice question panes stay in the same position when the calculator opens or closes. Desktop space reservation applies only to the curriculum page.
 
-`math/secondary/` holds the Grades 9–10 rules: `common.js` defines `define(name,params,domains,example,styles)` (each style is a thunk returning a question spec, so a style can reject parameters it cannot use), and the topic files register rules for number, algebra, data, spatial, financial, quadratic, analytic and trigonometry questions. `curriculum/secondary-visuals.js` draws function graphs, box plots and labelled triangles from the lesson's own numbers.
+`math/families/secondary/` holds the Grades 9–10 rules: `common.js` defines `define(name,params,domains,example,styles)` (each style is a thunk returning a question spec, so a style can reject parameters it cannot use), and the topic files register rules for number, algebra, data, spatial, financial, quadratic, analytic and trigonometry questions. `curriculum/secondary-visuals.js` draws function graphs, box plots and labelled triangles from the lesson's own numbers.
 
 
 `game/controls.js` manages the current action controls, including busy and readiness states. Start, resume, and answer actions restore existing controls before rendering the round; the removed name-step buttons are not referenced.
@@ -152,7 +138,7 @@ The demo and practice question panes stay in the same position when the calculat
 
 The curriculum sidebar presents `mountGradePicker` as a connected grade header: overview and menu arrow share a bordered surface, and the expanded segmented choices sit directly underneath.
 
-`game/profile.js` exports 24 emoji avatars; `profile-corner.js` adds the initial avatar, making a 5×5 picker with 25 choices.
+`game/profile.js` exports 24 emoji avatars; `ui/profile-corner.js` adds the initial avatar, making a 5×5 picker with 25 choices.
 
 The project and visible app brand are Whack-a-Math. Existing IndexedDB and local-storage keys are preserved so renaming does not reset learner progress.
 

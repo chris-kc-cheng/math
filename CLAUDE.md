@@ -99,3 +99,14 @@ Branding follow-up: renamed the project, page titles, manifest, worksheet title 
 Mascot follow-up: selected fifth waving mole for the landing logo, ICO favicon, Apple touch icon and regular/maskable PWA icons. Removed previous mascot artwork and source references; branding packaging trims transparent margins and keeps maskable safe padding. Refreshed landing/demo screenshots.
 
 Screenshot standard applied: all 11 README screenshots retaken in light theme using a verified 1920 × 1080 browser viewport, with paused worked examples and current branding. Checked PNG format, wide 16:9 output and README links; captures with browser scrollbars export at 1905 × 1072 without resizing. Removed outdated captures and references.
+
+### 2026-10-30 — Claude cleanup: standalone demo pages removed
+
+Deleted `long-division.html` and `fraction-conversion.html` with their demo scripts and CSS (the landing slide show and the curriculum Practice view cover both). The Grade 5 `mixed-fraction-conversion` activity was folded into `practice-b1-3`. The shared engines and views (`long-division-view.js`, `long-multiplication-view.js`) stay. Refactor plan (shared helpers, one rule registry, folders, lazy grade loading) is proposed but not started.
+
+### 2026-10-30 — Claude refactor: de-duplication and layout
+
+- Shared helpers: `math/core/shared.js` (fmt, frac, ordinal, gcdN/lcmN, terminating, moneyText, pickStyle, whole, spaceSigns, requireThat) replaced about 40 per-file copies; `ui/dom.js` (el, reducedMotion, renderTex) replaced nine `el` copies, seven reduced-motion checks and eight KaTeX call sites. Secondary `fr`/`frac` copies now use `secondary/common.frac`.
+- One registry: `math/families/index.js` (`has`/`create`/`generate`) replaces the six-way dispatch in `practice.js`; the demo-era rules moved to `families/legacy/`. A new test asserts every template rule has exactly one owner; it found the dead legacy `fraction-add` (shadowed by Grade 5), now removed.
+- Layout: `src/pages/` (entry scripts), `ui/`, `views/`, `write/`, `styles/`; `math/engines/` and `math/families/{primary,elementary,grade5,grade8,secondary,legacy}`. `src/README.md` has the map. HTML entry paths and test fixture paths updated; all 176 tests and the build pass.
+- Not done: lazy-loading grades. The shared chunk is ~766 kB (235 kB gzip), mostly question JSON plus rules; splitting it needs `createPractice` to become async or an explicit per-grade preload at every call site. Pythagorean `TRIPLES` lists differ per file because templates index into them, so they were left alone.

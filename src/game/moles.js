@@ -1,10 +1,10 @@
 import katex from 'katex';
-import {setMathText} from '../math-text.js';
+import {setMathText} from '../ui/math-text.js';
 import {renderVisual} from '../curriculum/visuals.js';
 import {moleChoices} from './mole-choices.js';
 import {numericAnswer} from './model.js';
 import './moles.css';
-const el=(tag,text,cls)=>{const e=document.createElement(tag);if(text)e.textContent=text;if(cls)e.className=cls;return e;};
+import {el} from '../ui/dom.js';
 export function mountMoles(host,{round,template,lesson,onAnswer,onNext,onQuit,explain}){
  const current=round.questions[round.index],finished=current.correct||current.assisted;
  const field=el('section',undefined,'mole-field');field.setAttribute('aria-label','Whack-a-Math quiz');

@@ -2,7 +2,7 @@
 // Run from the repository root: npm run build:secondary-data
 import fs from 'node:fs';
 import {GRADE9,GRADE10,KIND9,KIND10,SEL,SEQUENCE9,SEQUENCE10} from './secondary-spec.mjs';
-import {secondaryMeta,createSecondary} from '../src/math/secondary/index.js';
+import {secondaryMeta,createSecondary} from '../src/math/families/secondary/index.js';
 
 const out='src/curriculum/data';
 const g8=JSON.parse(fs.readFileSync(`${out}/grade-8-questions.json`,'utf8'));
