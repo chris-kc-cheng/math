@@ -587,7 +587,8 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-b1-1"
+        "g6-question-b1-1",
+        "g6-variant-digit-b1-1"
       ]
     },
     {
@@ -677,7 +678,8 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-b2-1"
+        "g6-question-b2-1",
+        "g6-variant-missing-b2-1"
       ]
     },
     {
@@ -1082,7 +1084,8 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-d1-5"
+        "g6-question-d1-5",
+        "g6-question-d1-5-score"
       ]
     },
     {
@@ -1112,7 +1115,8 @@
         "practice"
       ],
       "questionIds": [
-        "g6-question-d2-1"
+        "g6-question-d2-1",
+        "g6-question-d2-1-score"
       ]
     },
     {

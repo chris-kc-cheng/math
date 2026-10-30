@@ -8,14 +8,14 @@ import {catalog,curriculumForGrade} from './curriculum/catalog.js';
 import {createPractice} from './curriculum/practice.js';
 import {renderVisual} from './curriculum/visuals.js';
 import {mountPractice} from './curriculum/practice-view.js';
-import {playerKey,lastPlayed,makeRound,score,answerRound,revealRound,advanceRound,battleState,progressTree,STAT_WINDOW} from './game/model.js';
+import {playerKey,lastPlayed,makeRound,topicOptions,findNode,roundTopics,topicKey,score,answerRound,revealRound,advanceRound,battleState,progressTree,STAT_WINDOW} from './game/model.js';
 import {listRounds,saveRound} from './game/storage.js';
 import {chooseProfile} from './game/profile.js';
 const el=(tag,text,cls)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e;};
 const app=document.querySelector('#app');
-app.innerHTML='<main class="game-page">'+pageNav('game')+'<div class="game-head"><h1>Math quest</h1><div class="game-tools"><button id="game-quit" type="button" class="playback-icon" hidden aria-label="Quit game. You can resume later." title="Quit game (resume later)"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4H5v16h5"/><path d="M15 8l4 4-4 4"/><path d="M19 12H9"/></svg></button><span class="info-tip"><span class="info-icon" tabindex="0" role="img" aria-label="About saving">i</span><span id="save-status" role="status" class="info-bubble">Opening local progress…</span></span></div></div><p class="game-intro">Five questions. Take your time, try an answer, and explore the steps.</p><form id="game-setup"><div id="profile-picker" class="profile-picker" role="group" aria-label="Previous players" hidden><span class="profile-label">Previous players</span><div id="game-profiles" class="profile-badges"></div></div><label>Your name <input id="game-name" name="player" autocomplete="off" maxlength="40" required></label><label>Grade <select id="game-grade" aria-label="Game grade"></select></label><button type="submit" id="game-start" disabled>Play</button></form><section id="game-stats" class="game-stats" aria-label="Progress by topic" hidden></section><p id="game-error" role="alert"></p><div id="game-round"></div></main>';
+app.innerHTML='<main class="game-page">'+pageNav('game')+'<div class="game-head"><h1>Math quest</h1><div class="game-tools"><button id="game-quit" type="button" class="playback-icon" hidden aria-label="Quit game. You can resume later." title="Quit game (resume later)"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4H5v16h5"/><path d="M15 8l4 4-4 4"/><path d="M19 12H9"/></svg></button><span class="info-tip"><span class="info-icon" tabindex="0" role="img" aria-label="About saving">i</span><span id="save-status" role="status" class="info-bubble">Opening local progress…</span></span></div></div><p class="game-intro">Five questions. Take your time, try an answer, and explore the steps.</p><form id="player-form" class="player-form"><div id="profile-picker" class="profile-picker" role="group" aria-label="Previous players" hidden><span class="profile-label">Previous players</span><div id="game-profiles" class="profile-badges"></div></div><label>Your name <input id="game-name" name="player" autocomplete="off" maxlength="40" required></label><button type="submit" id="player-next" disabled>Next</button></form><form id="game-setup"><p class="game-player">Playing as <strong id="player-label"></strong> <button type="button" id="change-player" class="link-button">Change player</button></p><label>Grade <select id="game-grade" aria-label="Game grade"></select></label><section id="topic-panel" class="topic-panel" aria-label="Topics and progress"><div class="topic-head"><h2>Topics</h2><span id="topic-summary" class="topic-summary">All topics</span></div><p id="topic-legend" class="stat-legend"></p><div id="topic-list" class="topic-list"></div></section><button type="submit" id="game-start" disabled>Play</button></form><p id="game-error" role="alert"></p><div id="game-round"></div></main>';
 const $=s=>document.querySelector(s),gradeSelect=$('#game-grade'),nameInput=$('#game-name');
-let round,rounds=[],ready=false,memoryOnly=false,busy=false,dispose,feedback='',selectedPlayer='',pendingShot='';
+let round,rounds=[],step='player',ready=false,memoryOnly=false,busy=false,dispose,feedback='',selectedPlayer='',pendingShot='';
 const art=name=>`${import.meta.env.BASE_URL}game-art/${name}.svg`;
 const reduceMotion=()=>matchMedia('(prefers-reduced-motion: reduce)').matches;
 for(const g of catalog){const option=el('option',String(g.grade));option.value=g.grade;gradeSelect.append(option);}gradeSelect.value=curriculumForGrade(new URLSearchParams(location.search).get('grade')).grade;
@@ -37,7 +37,7 @@ function renderProfiles(){
  list.replaceChildren();picker.hidden=!seen.size;
  for(const [id,name] of seen){
   const badge=el('button',undefined,'profile-badge');badge.type='button';badge.dataset.profile=id;badge.append(el('span',name));
-  badge.onclick=()=>{nameInput.value=name;nameInput.dispatchEvent(new Event('input'));$('#game-setup').requestSubmit();};list.append(badge);
+  badge.onclick=()=>{nameInput.value=name;nameInput.dispatchEvent(new Event('input'));setStep('topics');};list.append(badge);
  }
  markProfile();
 }
@@ -52,52 +52,81 @@ function renderHistory(){
  for(const r of done){const state=battleState(r),row=el('div',undefined,'game-history-row');row.append(el('span',`${new Date(r.updatedAt).toLocaleDateString('en-CA')} · Grade ${r.grade}`),el('span',`${score(r)} / ${state.total*10} points · ${state.won?'Won':'Practised'}`));details.append(row);}
  $('.game-page').append(details);
 }
-// Colour-coded progress per topic (never colour alone: each row also states the percentage).
+// Each topic row carries its colour-coded progress (never colour alone: the row also states the percentage).
 const statLabel={good:'Strong',fair:'Getting there',weak:'Needs practice',none:'Not tried yet'};
-function statRow(node){
- const row=el('span',undefined,'stat-row'),dot=el('span',undefined,'stat-dot '+node.status);dot.setAttribute('role','img');dot.setAttribute('aria-label',statLabel[node.status]);
- row.append(dot,el('span',node.title,'stat-title'),el('small',node.stat?`${Math.round(node.stat.rate*100)}% of last ${node.stat.attempts}`:'Not tried yet','stat-note'));return row;
+function topicStats(grade){
+ let key;try{key=playerKey(nameInput.value);}catch{return new Map();}
+ const map=new Map(),walk=n=>{map.set(n.id,n);n.children?.forEach(walk);};progressTree(grade,rounds,key).forEach(walk);return map;
 }
-function statNode(node){
- if(!node.children){const item=el('li',undefined,'stat-leaf');item.append(statRow(node));return item;}
- const details=el('details',undefined,'stat-group');details.dataset.level=node.level;const summary=el('summary');summary.append(statRow(node));details.append(summary);
- const list=el('ul');for(const child of node.children)list.append(child.children?(()=>{const wrap=el('li');wrap.append(statNode(child));return wrap;})():statNode(child));details.append(list);return details;
+function statBadge(node){
+ const wrap=el('span',undefined,'topic-stat'),dot=el('span',undefined,'stat-dot '+(node?.status||'none'));dot.setAttribute('role','img');dot.setAttribute('aria-label',statLabel[node?.status||'none']);
+ wrap.append(dot,el('small',node?.stat?`${Math.round(node.stat.rate*100)}% of last ${node.stat.attempts}`:'Not tried yet'));return wrap;
 }
-function renderStats(){
- const host=$('#game-stats');host.replaceChildren();let key;try{key=playerKey(nameInput.value);}catch{host.hidden=true;return;}
- const tree=rounds.some(r=>r.profileId===key)?progressTree(curriculumForGrade(gradeSelect.value),rounds,key):[];host.hidden=!tree.length;if(!tree.length)return;
- const legend=el('p',undefined,'stat-legend');for(const status of ['good','fair','weak','none']){const item=el('span',undefined,'stat-key');item.append(el('span',undefined,'stat-dot '+status),statLabel[status]);legend.append(item);}
- const list=el('div',undefined,'stat-tree');for(const strand of tree)list.append(statNode(strand));
- host.append(el('h2',`How you're doing · Grade ${gradeSelect.value}`),el('p',`Based on your last ${STAT_WINDOW} questions in each topic. Strong is 80% or more, Getting there is 50–79%.`,'stat-help'),legend,list);
+// Topics: pick any mix of whole strands and single topics. Nothing ticked means every topic.
+const topicList=$('#topic-list'),topicCache=new Map();let chosen=new Set();
+const chosenTopics=()=>{const all=topicCache.get(Number(gradeSelect.value))||[],ids=all.filter(o=>o.level==='topic').map(o=>o.id);return ids.length&&ids.every(id=>chosen.has(id))?[]:ids.filter(id=>chosen.has(id));};
+function topicLabel(grade,ids){
+ if(!ids.length)return 'All topics';
+ const names=ids.map(id=>findNode(grade.curriculum,id)?.title.replace(/^[A-F]\d+ · /,'')).filter(Boolean);
+ return names.length<=2?names.join(', '):`${names.length} topics`;
 }
+function renderTopics(){
+ const grade=curriculumForGrade(gradeSelect.value),options=topicCache.get(grade.grade),selected=chosenTopics();topicList.replaceChildren();
+ const stats=topicStats(grade),box=(label,checked,onchange,cls,id)=>{const row=el('label',undefined,cls||'topic-row'),input=document.createElement('input');input.type='checkbox';input.checked=checked;input.onchange=()=>onchange(input.checked);row.append(input,el('span',label,'topic-name'));if(id)row.append(statBadge(stats.get(id)));return {row,input};};
+ const all=box('All topics',!selected.length,on=>{if(on)chosen.clear();updateStart();},'topic-row topic-all');topicList.append(all.row);
+ let group;
+ for(const option of options){
+  if(option.level==='strand'){
+   const mine=el('div',undefined,'topic-group'),kids=options.filter(o=>o.level==='topic'&&o.strand===option.title);group=mine;topicList.append(mine);
+   const full=kids.every(k=>selected.includes(k.id)),some=kids.some(k=>selected.includes(k.id)),head=box(option.title,Boolean(selected.length)&&full,on=>{if(!selected.length)chosen=new Set();for(const k of kids)on?chosen.add(k.id):chosen.delete(k.id);updateStart();},'topic-row topic-strand',option.id);
+   head.input.indeterminate=Boolean(selected.length)&&some&&!full;mine.append(head.row);}
+  else{const row=box(option.title,selected.includes(option.id),on=>{if(!selected.length&&on)chosen=new Set();on?chosen.add(option.id):chosen.delete(option.id);updateStart();},'topic-row topic-leaf',option.id);group.append(row.row);}
+ }
+ $('#topic-summary').textContent=topicLabel(grade,selected);
+ const legend=$('#topic-legend');legend.replaceChildren(el('span',`Based on your last ${STAT_WINDOW} questions in each topic:`));for(const status of ['good','fair','weak','none']){const item=el('span',undefined,'stat-key');item.append(el('span',undefined,'stat-dot '+status),statLabel[status]);legend.append(item);}
+}
+function fillTopics(wanted=[]){
+ const grade=curriculumForGrade(gradeSelect.value);if(!topicCache.has(grade.grade))topicCache.set(grade.grade,topicOptions(grade));
+ const known=new Set(topicCache.get(grade.grade).map(o=>o.id));chosen=new Set();
+ for(const id of wanted){if(known.has(id)){const opt=topicCache.get(grade.grade).find(o=>o.id===id);if(opt.level==='topic')chosen.add(id);else topicCache.get(grade.grade).filter(o=>o.strand===opt.title).forEach(o=>chosen.add(o.id));}}
+ renderTopics();
+}
+function setStep(next){
+ step=next;const page=document.querySelector('.game-page');page.classList.toggle('step-player',next==='player');page.classList.toggle('step-topics',next==='topics');
+ if(next==='topics'){let name='';try{name=nameInput.value.trim().replace(/\s+/g,' ');}catch{}$('#player-label').textContent=name;updateStart();}
+}
+const sameRound=(r,key)=>r.profileId===key&&r.grade===Number(gradeSelect.value)&&topicKey(roundTopics(r))===topicKey(chosenTopics())&&r.status==='active';
 function updateStart(){
- renderStats();
+ if(topicCache.has(Number(gradeSelect.value)))renderTopics();
  let key;try{key=playerKey(nameInput.value);}catch{return;}
- $('#game-start').textContent=rounds.some(r=>r.profileId===key&&r.grade===Number(gradeSelect.value)&&r.status==='active')?'Continue':'Play';
+ $('#game-start').textContent=rounds.some(r=>sameRound(r,key))?'Continue':'Play';
 }
 nameInput.oninput=()=>{
  let key;try{key=playerKey(nameInput.value);}catch{key='';}
- if(key!==selectedPlayer){round=undefined;feedback='';selectedPlayer=key;renderRound();renderHistory();const previous=lastPlayed(rounds,key);if(previous)gradeSelect.value=previous.grade;}
- updateStart();markProfile();
+ if(key!==selectedPlayer){round=undefined;feedback='';selectedPlayer=key;renderRound();renderHistory();const previous=lastPlayed(rounds,key);if(previous){gradeSelect.value=previous.grade;fillTopics(roundTopics(previous));}}
+ $('#player-next').disabled=!(ready&&key);updateStart();markProfile();
 };
-gradeSelect.onchange=updateStart;
+gradeSelect.onchange=()=>{fillTopics([]);updateStart();};
+$('#player-form').onsubmit=event=>{event.preventDefault();try{playerKey(nameInput.value);}catch(error){$('#game-error').textContent=error.message;return;}$('#game-error').textContent='';setStep('topics');};
+$('#change-player').onclick=()=>{round=undefined;feedback='';renderRound();setStep('player');nameInput.focus();};
+fillTopics([]);setStep('player');
 function savedLabel(){ $('#save-status').textContent=memoryOnly?'Playing without saving. Progress will be lost when this page closes.':'Progress saved on this device. No account needed.'; }
 async function persist(next){
  const saved=memoryOnly?{...next,updatedAt:Date.now()}:await saveRound(next);
  round=saved;rounds=[saved,...rounds.filter(r=>r.id!==saved.id)];savedLabel();updateStart();renderHistory();renderProfiles();
 }
-async function action(work){if(busy)return;busy=true;$('#game-error').textContent='';document.querySelectorAll('#game-setup button,#game-quit,#game-round button,#game-round input').forEach(b=>b.disabled=true);try{await work();}catch(error){$('#game-error').textContent=error.message;}finally{busy=false;$('#game-quit').disabled=false;$('#game-start').disabled=!ready;renderRound();}}
+async function action(work){if(busy)return;busy=true;$('#game-error').textContent='';document.querySelectorAll('#game-setup button,#game-quit,#game-round button,#game-round input').forEach(b=>b.disabled=true);try{await work();}catch(error){$('#game-error').textContent=error.message;}finally{busy=false;$('#game-quit').disabled=false;$('#game-start').disabled=!ready;$('#player-next').disabled=!ready;renderRound();}}
 function renderRound(){
  dispose?.();dispose=undefined;const host=$('#game-round'),shot=pendingShot;pendingShot='';host.replaceChildren();
  document.querySelector('.game-page').classList.toggle('in-game',Boolean(round));$('#game-quit').hidden=!round;if(!round)return;
  if(round.status==='complete'){
-  const state=battleState(round),again=el('button','Play again');again.type='button';again.onclick=()=>$('#game-setup').requestSubmit();host.append(renderStage(state,shot),el('h2',state.won?'You win!':'Nice effort!'),el('p',`${score(round)} / ${state.total*10} points`,'game-score'),el('p',`${state.hits} solved · ${round.questions.filter(q=>q.assisted).length} explored with explanations`),el('p','Pick a grade above, then play again for new questions.'),again);
+  const state=battleState(round),again=el('button','Play again');again.type='button';again.onclick=()=>$('#game-setup').requestSubmit();host.append(renderStage(state,shot),el('h2',state.won?'You win!':'Nice effort!'),el('p',`${score(round)} / ${state.total*10} points`,'game-score'),el('p',`${state.hits} solved · ${round.questions.filter(q=>q.assisted).length} explored with explanations`),el('p','Play again for new questions, or quit to change the grade or topics.'),again);
   return;
  }
- const grade=curriculumForGrade(round.grade),current=round.questions[round.index],template=grade.questions.find(q=>q.id===current.templateId);
+ const grade=curriculumForGrade(round.grade),picked=roundTopics(round),current=round.questions[round.index],template=grade.questions.find(q=>q.id===current.templateId);
  if(!template){host.append(el('p','This saved question is no longer available. Start a new round above.'));return;}
  let lesson;try{lesson=createPractice(template,current.values);}catch{host.append(el('p','This saved question cannot be opened with the current library. Start a new round above.'));return;}
- const top=el('div',undefined,'game-progress');top.append(el('span',`${round.playerName} · Grade ${round.grade} · Question ${round.index+1} of ${round.questions.length}`),el('span',`${score(round)} points`));const progress=el('progress');progress.max=round.questions.length;progress.value=round.index;progress.setAttribute('aria-label','Questions completed');host.append(top,progress,renderStage(battleState(round),shot),el('h2',template.title));
+ const top=el('div',undefined,'game-progress');top.append(el('span',`${round.playerName} · Grade ${round.grade}${picked.length?' · '+topicLabel(grade,picked):''} · Question ${round.index+1} of ${round.questions.length}`),el('span',`${score(round)} points`));const progress=el('progress');progress.max=round.questions.length;progress.value=round.index;progress.setAttribute('aria-label','Questions completed');host.append(top,progress,renderStage(battleState(round),shot),el('h2',template.title));
  if(lesson.prompt)host.append(el('p',lesson.prompt,'practice-prompt'));
  if(lesson.formula){const formula=el('div',undefined,'math');katex.render(lesson.formula,formula,{displayMode:true,throwOnError:true,trust:false});host.append(formula);}if(lesson.visual)renderVisual(host,lesson.visual);
  const finished=current.correct||current.assisted,status=el('p',feedback||(current.correct?'Correct!':current.assisted?'Explore the explanation, then continue.':current.attempts?'Keep trying, or explore the explanation.':''),'game-feedback');status.setAttribute('role','status');
@@ -115,16 +144,16 @@ function renderRound(){
  if(current.assisted)showExplanation();
  else if(current.correct)explain.onclick=()=>{showExplanation();};
 }
-$('#game-quit').onclick=()=>{if(busy)return;round=undefined;feedback='';renderRound();updateStart();markProfile();nameInput.focus();};
+$('#game-quit').onclick=()=>{if(busy)return;round=undefined;feedback='';renderRound();updateStart();markProfile();};
 $('#game-setup').onsubmit=event=>{event.preventDefault();action(async()=>{
  const key=playerKey(nameInput.value),name=nameInput.value.trim().replace(/\s+/g,' '),grade=curriculumForGrade(gradeSelect.value);
  if(!memoryOnly)rounds=await listRounds();
- const previous=rounds.find(r=>r.profileId===key&&r.grade===grade.grade&&r.status==='active');
- const next=previous||{...makeRound(grade,'all'),profileId:key,playerName:name};
+ const previous=rounds.find(r=>sameRound(r,key));
+ const next=previous||{...makeRound(grade,chosenTopics()),profileId:key,playerName:name};
  await persist({...next,playerName:name});chooseProfile({id:key,name});selectedPlayer=key;feedback='';
 });};
 try{
- rounds=await listRounds();ready=true;renderProfiles();renderStats();$('#save-status').textContent='Saved on this device. Use the same name to continue.';$('#game-start').disabled=false;
+ rounds=await listRounds();ready=true;$('#player-next').disabled=false;renderProfiles();$('#save-status').textContent='Saved on this device. Use the same name to continue.';$('#game-start').disabled=false;
 }catch(error){
  $('#save-status').textContent='Local saving is unavailable: '+error.message;$('.info-tip').classList.add('is-warning');
  const play=el('button','Play without saving');play.type='button';play.onclick=()=>{memoryOnly=true;ready=true;$('#game-start').disabled=false;play.remove();savedLabel();};$('.info-tip').after(play);

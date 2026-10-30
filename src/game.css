@@ -77,3 +77,35 @@ html[data-theme=dark] .stat-group ul{border-color:#52606d}
 @keyframes hero-hurt{0%,100%{translate:0}25%{translate:-8px}60%{translate:6px}}
 @media(max-width:560px){.game-hero{height:118px}}
 @media(prefers-reduced-motion:reduce){.is-crying .tear{animation:none}.shot-miss .game-hero img{animation:none}}
+
+/* Two-step setup: choose the player first, then grade and topics. */
+.game-page.step-player :is(#game-setup,#game-stats){display:none}
+.game-page.step-topics #player-form{display:none}
+.player-form{display:flex;gap:16px;align-items:end;flex-wrap:wrap;margin:24px 0}.player-form label{display:grid;gap:7px;font-size:14px}.player-form input{font:inherit;padding:9px;border:1px solid #84909b;border-radius:6px;background:white;color:#202b35;width:min(240px,65vw)}
+.game-player{flex-basis:100%;margin:0;font-size:14px}.link-button{border:0;background:transparent;padding:0 4px;color:#2459a6;text-decoration:underline;cursor:pointer;font-size:13px}
+.topic-picker{flex:1 1 260px;min-width:220px;border:1px solid #84909b;border-radius:6px;padding:0 10px;background:white;color:#202b35}.topic-picker>summary{cursor:pointer;padding:9px 0;display:flex;gap:10px;align-items:baseline;font-size:14px}.topic-label{font-size:12px;color:#596570}
+.topic-list{display:grid;gap:4px;padding:6px 0 10px;max-height:320px;overflow:auto}.topic-row{display:flex;align-items:center;gap:8px;font-size:14px;padding:3px 0}.topic-row input{width:16px;height:16px}
+.topic-group{display:grid;gap:2px;padding-top:4px}.topic-strand{font-weight:600}.topic-leaf{margin-left:24px}
+html[data-theme=dark] .topic-picker,html[data-theme=dark] .player-form input{background:#222d37;color:#e1e7ed;border-color:#52606d}html[data-theme=dark] .link-button{color:#99c5ff}html[data-theme=dark] .topic-label{color:#b5c1cc}
+#game-setup .topic-row{display:flex;flex-direction:row;align-items:center;gap:8px}
+#game-setup .topic-picker{align-self:end}
+#game-setup input[type=checkbox]{flex:none;width:16px;height:16px;padding:0;border:0;background:none}
+.topic-list{padding-right:6px}
+
+/* Topics and progress in one panel: a two-column checklist whose rows carry the progress dot, so nothing needs scrolling. */
+.topic-panel{flex-basis:100%;border:1px solid #cdd4db;border-radius:10px;padding:12px 16px}
+.topic-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:4px}.topic-head h2{margin:0;font-size:16px}.topic-summary{font-size:13px;color:#596570}
+.topic-panel .stat-legend{margin:0 0 10px;font-size:12px}
+.topic-panel .topic-list{display:block;columns:2 260px;column-gap:28px;max-height:none;overflow:visible;padding:0}
+.topic-panel .topic-all{break-after:avoid;margin-bottom:6px}.topic-panel .topic-group{break-inside:avoid;padding:0 0 8px}
+#game-setup .topic-row{padding:2px 0}.topic-name{flex:1;min-width:0}
+.topic-stat{display:inline-flex;align-items:center;gap:6px;flex:none}.topic-stat small{font-size:11px;color:#65717b;white-space:nowrap}
+.game-page.step-topics .game-intro{display:none}
+.topic-panel .stat-dot{width:12px;height:12px}
+html[data-theme=dark] .topic-panel{border-color:#52606d}html[data-theme=dark] :is(.topic-summary,.topic-stat small){color:#b5c1cc}
+@media(max-width:600px){.topic-panel .topic-list{columns:1}}
+.game-page.step-topics #game-setup{margin:8px 0 4px;row-gap:12px}
+.game-page.step-topics .game-history{margin-top:14px;padding-top:10px}
+.game-page.step-topics .game-head{margin-bottom:0}
+/* Grade and Play share one row above the topic panel, so the whole setup fits on one screen. */
+#game-setup .game-player{order:0}#game-setup>label{order:1}#game-setup #game-start{order:2;align-self:end}#game-setup .topic-panel{order:3}

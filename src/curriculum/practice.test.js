@@ -1,7 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {createPractice,generateValues,nextValues,exampleValues} from './practice.js';
+import {createPractice,generateQuestionValues,nextValues,exampleValues} from './practice.js';
 const questions=JSON.parse(readFileSync(new URL('./data/practice-questions.json',import.meta.url),'utf8'));
 const data=JSON.parse(readFileSync(new URL('./data/ontario-math-grade-5.json',import.meta.url),'utf8'));
 test('practice templates reference real expectations and all produce valid lessons',()=>{
@@ -19,7 +19,7 @@ test('practice templates reference real expectations and all produce valid lesso
 test('randomized practice stays in curriculum bounds and remains solvable',()=>{
  let seed=31;const rng=()=>((seed=(seed*1664525+1013904223)>>>0)/2**32);
  for(const template of questions)for(let i=0;i<100;i++){
-  const values=generateValues(template.rule,rng);const lesson=createPractice(template,values);
+  const values=generateQuestionValues(template,rng);const lesson=createPractice(template,values);
   assert.ok(lesson.steps.length>=2);
   const [a,b]=values;
   if(template.rule==='long-multiply')assert.ok(a>=10&&a<=99&&b>=10&&b<=99);

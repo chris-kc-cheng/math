@@ -1,7 +1,13 @@
 import {defineConfig} from 'vite';
 import {fileURLToPath} from 'node:url';
 
+// public/theme.css and theme.js are not hashed by Vite, so a browser could pair a new page bundle with a stale cached copy.
+// Stamping each build onto their URLs keeps the shared theme and the page code in step.
+const stamp=Date.now();
+const versionTheme=()=>({name:'version-theme',transformIndexHtml:html=>html.replace(/(theme.(?:css|js))"/g,`$1?v=${stamp}"`)});
+
 export default defineConfig({
+  plugins: [versionTheme()],
   // Use the CPU/WASM runtime consistently in both ink-on and our worker.
   resolve: {alias: [{find: /^onnxruntime-web$/, replacement: 'onnxruntime-web/wasm'}]},
   worker: {format:'es'},

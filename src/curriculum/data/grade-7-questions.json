@@ -1872,5 +1872,97 @@
       "difference": 5,
       "patternType": 2
     }
+  },
+  {
+    "id": "g7-question-d1-5-score",
+    "skillId": "g7-d1-5",
+    "title": "Find the mean, median, or range",
+    "rule": "data-measure",
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "fourth",
+      "fifth",
+      "measure"
+    ],
+    "example": {
+      "first": 2,
+      "second": 3,
+      "third": 4,
+      "fourth": 5,
+      "fifth": 6,
+      "measure": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g7-variant-digit-b1-1",
+    "skillId": "g7-b1-1",
+    "title": "Place value: digit questions",
+    "rule": "digit-value",
+    "parameters": [
+      "number",
+      "place",
+      "ask"
+    ],
+    "example": {
+      "number": 406000000,
+      "place": 6,
+      "ask": 0
+    },
+    "generation": [
+      {
+        "min": 100000,
+        "max": 999999999,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      [
+        0,
+        1
+      ]
+    ]
   }
 ]

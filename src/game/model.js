@@ -2,15 +2,24 @@ import {createPractice,generateQuestionValues} from '../curriculum/practice.js';
 import {answerNumber} from '../math/verification.js';
 import {rational,parseDecimal,compare} from '../math/core/exact.js';
 // Only single-answer tasks are scored. Multi-part and open-ended activities remain in practice.
-const scoredRules=new Set(['whole-add-subtract','decimal-addition','decimal-subtraction','fraction-add','fraction-subtract','round-tenth','evaluate-expression','equation-subtract','equation-divide','shape-area','metric-conversion','budget','sales-tax','round-number','decimal-calculate','percent-quantity','whole-power','rectangle-measure','decomposed-area','surface-area','prism-volume','dimensional-units','capacity-volume','cash-purchase','simple-interest','savings-plan','g8-integer-add-sub','g8-integer-multiply-divide','g8-fraction-add-sub','g8-fraction-multiply-divide','g8-evaluate','g8-equation','g8-powers-ten','g8-scientific','g8-pythagorean','g8-pythagorean-leg','g8-financial-goal']);
+const scoredRules=new Set(['whole-add-subtract','decimal-addition','decimal-subtraction','fraction-add','fraction-subtract','round-tenth','evaluate-expression','equation-subtract','equation-divide','shape-area','metric-conversion','budget','sales-tax','round-number','decimal-calculate','percent-quantity','whole-power','rectangle-measure','decomposed-area','surface-area','prism-volume','dimensional-units','capacity-volume','cash-purchase','simple-interest','savings-plan','g8-integer-add-sub','g8-integer-multiply-divide','g8-fraction-add-sub','g8-fraction-multiply-divide','g8-evaluate','g8-equation','g8-powers-ten','g8-scientific','g8-pythagorean','g8-pythagorean-leg','g8-financial-goal','data-measure','probability-single','story-add','story-subtract','story-multiply','story-divide','missing-number','compare-values','digit-value','g8-venn','g8-dependent-probability']);
 export function numericAnswer(template,values){
  if(!scoredRules.has(template.rule))throw Error('This activity needs a different answer format.');
  const result=createPractice(template,values);if(result.reflection)throw Error('Discussion is unscored.');
  return answerNumber(result.answer);
 }
-export function eligibleQuestions(grade,strand='all'){
- const ids=new Set();const collect=n=>{ids.add(n.id);n.children?.forEach(collect);};
- collect(strand==='all'?grade.curriculum:grade.curriculum.children.find(s=>s.id===strand)||{id:''});
+export function findNode(root,id){
+ if(root.id===id)return root;
+ for(const child of root.children||[]){const found=findNode(child,id);if(found)return found;}
+}
+// `topics` is 'all', one node id, or an array of node ids (strand, topic or skill) in the grade; an empty array also means all.
+export const topicList=topics=>topics==='all'||topics==null?[]:Array.isArray(topics)?topics:[topics];
+// Saved rounds predate multi-select: they only have `strand`.
+export const roundTopics=round=>round.topics??topicList(round.strand);
+export const topicKey=topics=>[...topicList(topics)].sort().join(',');
+export function eligibleQuestions(grade,topics='all'){
+ const ids=new Set(),list=topicList(topics);const collect=n=>{ids.add(n.id);n.children?.forEach(collect);};
+ if(!list.length)collect(grade.curriculum);else for(const id of list)collect(findNode(grade.curriculum,id)||{id:''});
  return grade.questions.filter(q=>{if(!ids.has(q.skillId))return false;try{numericAnswer(q,q.example);return true;}catch{return false;}});
 }
 export function parseAnswer(input){
@@ -20,8 +29,8 @@ export function parseAnswer(input){
  if(!/^[+-]?\d{1,30}(?:\.\d{1,30})?$/.test(text))throw Error('Enter a whole number, decimal, or fraction such as 3/4.');
  return parseDecimal(text);
 }
-export function makeRound(grade,strand='all',rng=Math.random,id=crypto.randomUUID()){
- const pool=eligibleQuestions(grade,strand);if(!pool.length)throw Error('No automatically checked questions are available here yet.');
+export function makeRound(grade,topics='all',rng=Math.random,id=crypto.randomUUID()){
+ const pool=eligibleQuestions(grade,topics);if(!pool.length)throw Error('No automatically checked questions are available here yet.');
  const shuffled=[...pool];for(let i=shuffled.length-1;i>0;i--){const j=Math.floor(rng()*(i+1));[shuffled[i],shuffled[j]]=[shuffled[j],shuffled[i]];}
  const questions=[];
  for(let i=0;i<5;i++){
@@ -30,7 +39,7 @@ export function makeRound(grade,strand='all',rng=Math.random,id=crypto.randomUUI
   if(!values)throw Error('Could not prepare a valid question. Try another topic.');
   questions.push({templateId:template.id,values,attempts:0,correct:false,assisted:false,entry:''});
  }
- return {id,version:1,revision:0,grade:grade.grade,strand,createdAt:Date.now(),updatedAt:Date.now(),index:0,status:'active',questions};
+ return {id,version:1,revision:0,grade:grade.grade,topics:topicList(topics),createdAt:Date.now(),updatedAt:Date.now(),index:0,status:'active',questions};
 }
 export const score=round=>round.questions.reduce((n,q)=>n+(q.correct&&!q.assisted?(q.attempts===1?10:5):0),0);
 export function answerRound(round,template,input){
@@ -85,4 +94,15 @@ export function progressTree(grade,rounds,profileId){
  };
  const decorate=node=>{const mine=new Set(node.skills),stat=recentRate(history.filter(a=>mine.has(a.skillId)));node.stat=stat;node.status=levelOf(stat);node.children?.forEach(decorate);return node;};
  return grade.curriculum.children.map(s=>build(s,0)).filter(Boolean).map(decorate);
+}
+// Strands and topics the learner can choose to practise: only those with at least one automatically checked question.
+export function topicOptions(grade){
+ const playable=new Set(eligibleQuestions(grade).map(q=>q.skillId)),options=[];
+ const leaves=n=>n.children?n.children.flatMap(leaves):[n.id];
+ for(const strand of grade.curriculum.children){
+  if(!leaves(strand).some(id=>playable.has(id)))continue;
+  options.push({id:strand.id,title:strand.title,level:'strand'});
+  for(const topic of strand.children||[])if(topic.children&&leaves(topic).some(id=>playable.has(id)))options.push({id:topic.id,title:topic.title.replace(/^[A-F]\d+ · /,''),level:'topic',strand:strand.title});
+ }
+ return options;
 }

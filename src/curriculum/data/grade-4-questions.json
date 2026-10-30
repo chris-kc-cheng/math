@@ -1828,5 +1828,377 @@
       ]
     ],
     "answerMinimum": 0
+  },
+  {
+    "id": "g4-question-d1-5-score",
+    "skillId": "g4-d1-5",
+    "title": "Find the mean, median, or range",
+    "rule": "data-measure",
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "fourth",
+      "fifth",
+      "measure"
+    ],
+    "example": {
+      "first": 2,
+      "second": 3,
+      "third": 4,
+      "fourth": 5,
+      "fifth": 6,
+      "measure": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g4-variant-digit-b1-1",
+    "skillId": "g4-b1-1",
+    "title": "Place value: digit questions",
+    "rule": "digit-value",
+    "parameters": [
+      "number",
+      "place",
+      "ask"
+    ],
+    "example": {
+      "number": 4836,
+      "place": 2,
+      "ask": 0
+    },
+    "generation": [
+      {
+        "min": 1000,
+        "max": 9999,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g4-variant-compare-b1-2",
+    "skillId": "g4-b1-2",
+    "title": "Compare in different ways",
+    "rule": "compare-values",
+    "parameters": [
+      "first",
+      "second",
+      "ask"
+    ],
+    "example": {
+      "first": 4590,
+      "second": 5409,
+      "ask": 0
+    },
+    "generation": [
+      {
+        "min": 100,
+        "max": 9999,
+        "step": 1
+      },
+      {
+        "min": 100,
+        "max": 9999,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g4-variant-missing-b2-1",
+    "skillId": "g4-b2-1",
+    "title": "Find the missing number",
+    "rule": "missing-number",
+    "parameters": [
+      "known",
+      "result",
+      "form"
+    ],
+    "example": {
+      "known": 8,
+      "result": 25,
+      "form": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 6,
+        "max": 100,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "g4-variant-facts-multiply-b2-2",
+    "skillId": "g4-b2-2",
+    "title": "Multiplication facts in words",
+    "rule": "story-multiply",
+    "parameters": [
+      "first",
+      "second",
+      "style"
+    ],
+    "example": {
+      "first": 7,
+      "second": 8,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "g4-variant-facts-divide-b2-2",
+    "skillId": "g4-b2-2",
+    "title": "Division facts in words",
+    "rule": "story-divide",
+    "parameters": [
+      "dividend",
+      "divisor",
+      "style"
+    ],
+    "example": {
+      "dividend": 56,
+      "divisor": 8,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 4,
+        "max": 100,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "g4-variant-add-b2-4",
+    "skillId": "g4-b2-4",
+    "title": "Add: word problems and vocabulary",
+    "rule": "story-add",
+    "parameters": [
+      "first",
+      "second",
+      "style"
+    ],
+    "example": {
+      "first": 2436,
+      "second": 1294,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 100,
+        "max": 4999,
+        "step": 1
+      },
+      {
+        "min": 100,
+        "max": 4999,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "g4-variant-subtract-b2-4",
+    "skillId": "g4-b2-4",
+    "title": "Subtract: word problems and vocabulary",
+    "rule": "story-subtract",
+    "parameters": [
+      "first",
+      "second",
+      "style"
+    ],
+    "example": {
+      "first": 5240,
+      "second": 1294,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 200,
+        "max": 9999,
+        "step": 1
+      },
+      {
+        "min": 100,
+        "max": 4999,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "g4-variant-multiply-b2-5",
+    "skillId": "g4-b2-5",
+    "title": "Multiply: word problems and vocabulary",
+    "rule": "story-multiply",
+    "parameters": [
+      "first",
+      "second",
+      "style"
+    ],
+    "example": {
+      "first": 24,
+      "second": 6,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 12,
+        "max": 99,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "g4-variant-divide-b2-6",
+    "skillId": "g4-b2-6",
+    "title": "Divide: word problems and vocabulary",
+    "rule": "story-divide",
+    "parameters": [
+      "dividend",
+      "divisor",
+      "style"
+    ],
+    "example": {
+      "dividend": 72,
+      "divisor": 6,
+      "style": 0
+    },
+    "generation": [
+      {
+        "min": 12,
+        "max": 99,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 9,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ]
   }
 ]

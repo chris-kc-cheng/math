@@ -6,7 +6,7 @@ Avoid LLMs for solving: use deterministic parsing, exact arithmetic, and explici
 
 Motion Canvas LaTeX (https://motion-canvas.io/docs/latex/) is a suggested renderer; an alternative is acceptable. This prototype uses KaTeX and browser animations to keep rendering lightweight. Respect reduced-motion preferences and provide manual stepping as well as playback.
 
-The landing page is an auto-playing card slide show (order of operations, fractions, long division, long multiplication, an equation) that can be paused to type or draw a formula. `game.html` (Math quest) is a five-question battle built on the curriculum questions, with local saving, a previous-player picker and colour-coded per-topic progress. The solver supports two-number addition, subtraction, multiplication and division, plus a three-term addition example with alternative grouping. Decimal inputs use exact rational arithmetic. Do not imply this limited parser supports all LaTeX or general algebra.
+The landing page is an auto-playing card slide show (order of operations, fractions, long division, long multiplication, an equation) that can be paused to type or draw a formula. `game.html` (Math quest) is a five-question battle built on the curriculum questions, with local saving, a previous-player picker and colour-coded per-topic progress. The curriculum page can also print an exercise sheet (topics, number of questions, answers on the last page, optional workings) through the browser print dialog. The solver supports two-number addition, subtraction, multiplication and division, plus a three-term addition example with alternative grouping. Decimal inputs use exact rational arithmetic. Do not imply this limited parser supports all LaTeX or general algebra.
 
 # Development
 

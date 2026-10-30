@@ -632,7 +632,8 @@
         "practice"
       ],
       "questionIds": [
-        "multiply-then-add"
+        "multiply-then-add",
+        "grade5-variant-missing-b2-1"
       ]
     },
     {
@@ -648,7 +649,9 @@
       ],
       "questionIds": [
         "multiplication-facts",
-        "division-facts"
+        "division-facts",
+        "grade5-variant-facts-multiply-b2-2",
+        "grade5-variant-facts-divide-b2-2"
       ]
     },
     {
@@ -665,7 +668,9 @@
       "questionIds": [
         "decimal-addition",
         "decimal-subtraction",
-        "grade5-whole-add-subtract"
+        "grade5-whole-add-subtract",
+        "grade5-variant-add-b2-4",
+        "grade5-variant-subtract-b2-4"
       ]
     },
     {
@@ -697,7 +702,8 @@
       ],
       "questionIds": [
         "long-multiplication",
-        "grade5-multiplication-area"
+        "grade5-multiplication-area",
+        "grade5-variant-multiply-b2-6"
       ]
     },
     {
@@ -713,7 +719,8 @@
       ],
       "questionIds": [
         "long-division",
-        "grade5-division-area"
+        "grade5-division-area",
+        "grade5-variant-divide-b2-7"
       ]
     },
     {
@@ -747,7 +754,8 @@
         "practice"
       ],
       "questionIds": [
-        "grade5-place-value"
+        "grade5-place-value",
+        "grade5-variant-digit-b1-1"
       ]
     },
     {
@@ -762,7 +770,8 @@
         "practice"
       ],
       "questionIds": [
-        "grade5-order-whole"
+        "grade5-order-whole",
+        "grade5-variant-compare-b1-2"
       ]
     },
     {
@@ -1097,7 +1106,8 @@
       ],
       "questionIds": [
         "grade5-statistics",
-        "grade5-statistics-even"
+        "grade5-statistics-even",
+        "grade5-score-statistics"
       ]
     },
     {
@@ -1127,7 +1137,8 @@
         "practice"
       ],
       "questionIds": [
-        "grade5-probability"
+        "grade5-probability",
+        "grade5-score-probability"
       ]
     },
     {

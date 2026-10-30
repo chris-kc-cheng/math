@@ -45,3 +45,4 @@ html[data-theme=dark] :is(.profile-legend,.curriculum-profile .profile-label,.pr
 .grade-change{display:grid;place-items:center;flex:none;width:34px;height:34px;padding:0;border-radius:6px;color:#596570}.grade-change svg{width:20px;height:20px}.grade-change:hover{background:#edf3fb;color:#2459a6}
 .grade-list{display:flex;gap:6px}.grade-option{width:38px;height:38px;padding:0;border-radius:50%;font-weight:600}.grade-option[aria-pressed=true]{border-color:#2459a6;background:#edf3fb;color:#2459a6}
 html[data-theme=dark] .popover{background:#222d37;color:#e1e7ed;border-color:#52606d}html[data-theme=dark] :is(.popover-title,.popover-legend,.popover-legend small){color:#b5c1cc}html[data-theme=dark] .popover-legend{border-color:#52606d}
+.sheet-button{display:grid;place-items:center;flex:none;width:36px;height:36px;padding:0;border-radius:8px;color:#596570}.sheet-button svg{width:20px;height:20px}.sheet-button:hover{background:#edf3fb;color:#2459a6}

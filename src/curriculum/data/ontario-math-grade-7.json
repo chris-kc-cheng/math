@@ -594,7 +594,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-b1-1"
+        "g7-question-b1-1",
+        "g7-variant-digit-b1-1"
       ]
     },
     {
@@ -1074,7 +1075,8 @@
         "practice"
       ],
       "questionIds": [
-        "g7-question-d1-5"
+        "g7-question-d1-5",
+        "g7-question-d1-5-score"
       ]
     },
     {

@@ -73,3 +73,26 @@ test('the hero loses a life per wrong answer (not per explanation), floors at ze
  assert.equal(battleState(round([q({assisted:true}),q(),q(),q(),q()])).lives,5);
  const out=battleState(round([q({attempts:9}),q(),q(),q(),q()]));assert.equal(out.lives,0);assert.equal(out.crying,true);
 });
+import {topicOptions,findNode,roundTopics,topicKey} from './model.js';
+test('learners can practise a strand, a topic within it, or all topics',()=>{
+ const g=grade(5),options=topicOptions(g),topic=options.find(o=>o.level==='topic'),strand=options.find(o=>o.level==='strand');
+ assert.ok(strand&&topic&&options.every(o=>eligibleQuestions(g,o.id).length>0));
+ assert.ok(!options.some(o=>o.title.startsWith('Social-emotional')));
+ const inTopic=new Set(eligibleQuestions(g,topic.id).map(q=>q.id)),inStrand=new Set(eligibleQuestions(g,strand.id).map(q=>q.id));
+ assert.ok(inTopic.size>0&&inTopic.size<=eligibleQuestions(g).length);assert.ok([...inTopic].every(id=>inStrand.size>=inTopic.size));
+ const round=makeRound(g,topic.id,rng,'topic-round');assert.deepEqual(roundTopics(round),[topic.id]);
+ const allowed=new Set(g.questions.filter(q=>inTopic.has(q.id)).map(q=>q.skillId));
+ for(const q of round.questions)assert.ok(allowed.has(g.questions.find(t=>t.id===q.templateId).skillId));
+ assert.equal(findNode(g.curriculum,topic.id).id,topic.id);
+});
+test('several topics can be combined, legacy rounds still read, and every grade offers Data',()=>{
+ for(const n of [4,5,6,7,8]){const g=grade(n),options=topicOptions(g);assert.ok(options.some(o=>o.level==='strand'&&/^Data/.test(o.title)),'Data in grade '+n);}
+ const g=grade(5),topics=topicOptions(g).filter(o=>o.level==='topic').slice(0,2).map(o=>o.id),pool=new Set(eligibleQuestions(g,topics).map(q=>q.id));
+ const each=topics.flatMap(id=>eligibleQuestions(g,id).map(q=>q.id));assert.deepEqual([...pool].sort(),[...new Set(each)].sort());
+ const round=makeRound(g,topics,rng,'multi');assert.deepEqual(roundTopics(round),topics);
+ assert.deepEqual(roundTopics({strand:'all'}),[]);assert.deepEqual(roundTopics({strand:'b'}),['b']);assert.equal(topicKey(['b','a']),topicKey(['a','b']));
+});
+test('single-answer data questions are scored and verified',()=>{
+ const g=grade(5);for(const rule of ['data-measure','probability-single']){const t=g.questions.find(q=>q.rule===rule);assert.ok(t,rule);assert.doesNotThrow(()=>numericAnswer(t,t.example));}
+ const mean=g.questions.find(q=>q.rule==='data-measure');assert.equal(numericAnswer(mean,mean.example).n,4n);
+});

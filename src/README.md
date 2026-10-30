@@ -4,6 +4,8 @@ The app has three separate layers: curriculum content, mathematical rules, and t
 
 ```text
 src/
+  worksheet.js / worksheet.css   Printable exercise-sheet dialog and print layout (browser print → PDF)
+  worksheet-model.js             Pure worksheet builder (topics, count, answers, workings), tested
   nav.js                         Shared grouped page switcher (current page highlighted)
   main.js                        Landing page: auto-playing slide-show cards, own-formula box, handwriting modal
   game.js / game.css             Math quest page: battle scene, setup form, previous-player picker, history

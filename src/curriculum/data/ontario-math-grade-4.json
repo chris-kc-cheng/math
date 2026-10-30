@@ -566,7 +566,8 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-b1-1"
+        "g4-question-b1-1",
+        "g4-variant-digit-b1-1"
       ]
     },
     {
@@ -581,7 +582,8 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-b1-2"
+        "g4-question-b1-2",
+        "g4-variant-compare-b1-2"
       ]
     },
     {
@@ -701,7 +703,8 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-b2-1"
+        "g4-question-b2-1",
+        "g4-variant-missing-b2-1"
       ]
     },
     {
@@ -716,7 +719,9 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-b2-2"
+        "g4-question-b2-2",
+        "g4-variant-facts-multiply-b2-2",
+        "g4-variant-facts-divide-b2-2"
       ]
     },
     {
@@ -746,7 +751,9 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-b2-4"
+        "g4-question-b2-4",
+        "g4-variant-add-b2-4",
+        "g4-variant-subtract-b2-4"
       ]
     },
     {
@@ -761,7 +768,8 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-b2-5"
+        "g4-question-b2-5",
+        "g4-variant-multiply-b2-5"
       ]
     },
     {
@@ -776,7 +784,8 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-b2-6"
+        "g4-question-b2-6",
+        "g4-variant-divide-b2-6"
       ]
     },
     {
@@ -1031,7 +1040,8 @@
         "practice"
       ],
       "questionIds": [
-        "g4-question-d1-5"
+        "g4-question-d1-5",
+        "g4-question-d1-5-score"
       ]
     },
     {

@@ -2173,5 +2173,156 @@
       "cutWidth": 4,
       "cutHeight": 3
     }
+  },
+  {
+    "id": "g6-question-d1-5-score",
+    "skillId": "g6-d1-5",
+    "title": "Find the mean, median, or range",
+    "rule": "data-measure",
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "fourth",
+      "fifth",
+      "measure"
+    ],
+    "example": {
+      "first": 2,
+      "second": 3,
+      "third": 4,
+      "fourth": 5,
+      "fifth": 6,
+      "measure": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g6-question-d2-1-score",
+    "skillId": "g6-d2-1",
+    "title": "Find a probability",
+    "rule": "probability-single",
+    "parameters": [
+      "favourable",
+      "total"
+    ],
+    "example": {
+      "favourable": 3,
+      "total": 12
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 11,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g6-variant-digit-b1-1",
+    "skillId": "g6-b1-1",
+    "title": "Place value: digit questions",
+    "rule": "digit-value",
+    "parameters": [
+      "number",
+      "place",
+      "ask"
+    ],
+    "example": {
+      "number": 648302,
+      "place": 4,
+      "ask": 0
+    },
+    "generation": [
+      {
+        "min": 100000,
+        "max": 999999,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g6-variant-missing-b2-1",
+    "skillId": "g6-b2-1",
+    "title": "Find the missing number",
+    "rule": "missing-number",
+    "parameters": [
+      "known",
+      "result",
+      "form"
+    ],
+    "example": {
+      "known": 15,
+      "result": 90,
+      "form": 4
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 99,
+        "step": 1
+      },
+      {
+        "min": 10,
+        "max": 500,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ]
   }
 ]

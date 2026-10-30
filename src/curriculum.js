@@ -18,7 +18,7 @@ function index(node,parents=[]){nodes.set(node.id,{node,parents});for(const chil
 index(curriculum);
 const count=node=>node.children?node.children.reduce((n,c)=>n+count(c),0):1;
 const app=document.querySelector('#app');
-app.innerHTML='<main class="curriculum-page">'+pageNav('curriculum')+'<header class="curriculum-header"><div><p class="curriculum-eyebrow">ONTARIO · GRADE 5</p><h1>Math curriculum</h1></div></header><div class="curriculum-layout"><aside class="curriculum-sidebar"><div class="sidebar-bar"><div id="mode-toggle" class="curriculum-modes" role="group" aria-label="View"></div><div id="profile-menu-wrap" class="menu-wrap" hidden><button id="profile-menu-button" type="button" class="profile-chip" aria-haspopup="true" aria-expanded="false"></button><div id="profile-menu" class="popover" role="menu" aria-label="Progress profile" hidden></div></div></div><details id="curriculum-browser" open><summary>Browse curriculum</summary><label for="skill-search" class="sr-only">Find a skill</label><input id="skill-search" type="search" placeholder="Find a skill…" autocomplete="off"><nav id="curriculum-tree" aria-label="Grade 5 curriculum hierarchy"></nav><p id="search-status" role="status"></p></details></aside><article id="curriculum-detail" aria-live="polite" aria-atomic="true"></article></div></main>';
+app.innerHTML='<main class="curriculum-page">'+pageNav('curriculum')+'<header class="curriculum-header"><div><p class="curriculum-eyebrow">ONTARIO · GRADE 5</p><h1>Math curriculum</h1></div></header><div class="curriculum-layout"><aside class="curriculum-sidebar"><div class="sidebar-bar"><div id="mode-toggle" class="curriculum-modes" role="group" aria-label="View"></div><button id="worksheet-button" type="button" class="sheet-button" aria-haspopup="dialog" aria-label="Create exercise sheet (PDF)" title="Create exercise sheet (PDF)"></button><div id="profile-menu-wrap" class="menu-wrap" hidden><button id="profile-menu-button" type="button" class="profile-chip" aria-haspopup="true" aria-expanded="false"></button><div id="profile-menu" class="popover" role="menu" aria-label="Progress profile" hidden></div></div></div><details id="curriculum-browser" open><summary>Browse curriculum</summary><label for="skill-search" class="sr-only">Find a skill</label><input id="skill-search" type="search" placeholder="Find a skill…" autocomplete="off"><nav id="curriculum-tree" aria-label="Grade 5 curriculum hierarchy"></nav><p id="search-status" role="status"></p></details></aside><article id="curriculum-detail" aria-live="polite" aria-atomic="true"></article></div></main>';
 const tree=document.querySelector('#curriculum-tree'),detail=document.querySelector('#curriculum-detail');
 let selected=curriculum.id,mode='learner',disposePractice=[];
 const icons={
@@ -26,7 +26,8 @@ const icons={
  parent:['M8 10a3 3 0 100-6 3 3 0 000 6z','M2.5 20v-2a4.5 4.5 0 014.5-4.5h2a4.5 4.5 0 014.5 4.5v2','M15 5h7v8h-7z','M17 8h3','M17 10.5h2'],
  swap:['M8 9l4-4 4 4','M8 15l4 4 4-4'],
  menu:['M5 7h14','M5 12h14','M5 17h14'],
- person:['M12 12a4 4 0 100-8 4 4 0 000 8z','M4 20c1-4 4-6 8-6s7 2 8 6']
+ person:['M12 12a4 4 0 100-8 4 4 0 000 8z','M4 20c1-4 4-6 8-6s7 2 8 6'],
+ print:['M7 8V3h10v5','M7 17H5a2 2 0 01-2-2v-4a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2h-2','M7 14h10v7H7z']
 };
 function icon(name){
  const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox','0 0 24 24');svg.setAttribute('aria-hidden','true');svg.setAttribute('fill','none');svg.setAttribute('stroke','currentColor');svg.setAttribute('stroke-width','1.7');svg.setAttribute('stroke-linecap','round');svg.setAttribute('stroke-linejoin','round');
@@ -49,6 +50,9 @@ function togglePopover(button,panel){
 document.addEventListener('click',event=>{if(openPopover&&!openPopover.panel.contains(event.target)&&!openPopover.button.contains(event.target))closePopover();});
 document.addEventListener('keydown',event=>{if(event.key==='Escape'&&openPopover){const {button}=openPopover;closePopover();button.focus();}});
 addEventListener('resize',closePopover);addEventListener('scroll',closePopover,true);
+const sheetButton=document.querySelector('#worksheet-button');sheetButton.append(icon('print'));
+// The exercise-sheet dialog and print layout load only when asked for.
+sheetButton.onclick=async()=>{closePopover();const {openWorksheetDialog}=await import('./worksheet.js');openWorksheetDialog(active);};
 const modeToggle=document.querySelector('#mode-toggle');
 for(const value of ['learner','parent']){
  const button=document.createElement('button');button.type='button';button.className='mode-button';button.append(icon(value));
