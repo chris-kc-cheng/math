@@ -1,0 +1,1297 @@
+{
+  "schemaVersion": 1,
+  "id": "ontario-math-grade-8",
+  "jurisdiction": "Ontario",
+  "grade": 8,
+  "language": "en",
+  "researchedAt": "2026-10-29",
+  "sources": {
+    "number": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/c2dea171-e219-4ec0-b097-24c959fcc924/Number_AODA.pdf",
+    "algebra": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/08f5a14f-576a-4282-af82-096dc302ed10/Algebra_AODA.pdf",
+    "data": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/60e2b2c7-5a7a-4038-bc06-fb88ffd6c861/Data_AODA.pdf",
+    "spatial": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/01b0b598-d5dc-455b-83de-9b7436bcefeb/Spatial_AODA.pdf",
+    "financial": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/8a374255-069f-4539-b020-5737aaf672f9/Financial_AODA.pdf",
+    "learning": "https://www.dcp.edu.gov.on.ca/en/curriculum/elementary-mathematics/grades/g2-math/strands",
+    "board": "https://www2.yrdsb.ca/about-us/director-education/directors-annual-report/board-improvement-plan-math",
+    "boardCurriculum": "https://www2.yrdsb.ca/schools-programs/school-programs-nav/school-programs/mathematics"
+  },
+  "curriculum": {
+    "id": "grade-8",
+    "title": "Grade 8",
+    "description": "Ontario Grade 8 mathematics for YRDSB learners. Worked and guided activities illustrate each expectation; availability does not certify mastery.",
+    "children": [
+      {
+        "id": "g8-number",
+        "code": "B",
+        "title": "Number",
+        "source": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/c2dea171-e219-4ec0-b097-24c959fcc924/Number_AODA.pdf",
+        "children": [
+          {
+            "id": "g8-number-sense",
+            "title": "B1 · Real numbers",
+            "children": [
+              {
+                "id": "g8-b1-1",
+                "code": "B1.1",
+                "title": "Scientific notation",
+                "description": "Represent and compare extreme magnitudes.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-b1-2",
+                "code": "B1.2",
+                "title": "Rational and irrational numbers",
+                "description": "Classify and order real numbers.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-b1-3",
+                "code": "B1.3",
+                "title": "Square roots",
+                "description": "Find exact roots and justified bounds.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-b1-4",
+                "code": "B1.4",
+                "title": "Flexible fractions, decimals and percentages",
+                "description": "Connect equivalent forms, including extreme percentages.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              }
+            ]
+          },
+          {
+            "id": "g8-operations",
+            "title": "B2 · Operations",
+            "children": [
+              {
+                "id": "g8-b2-1",
+                "code": "B2.1",
+                "title": "Multi-step rational calculations",
+                "description": "Use operation properties and correct order.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-b2-2",
+                "code": "B2.2",
+                "title": "Square facts",
+                "description": "Recall squares through 144 and their roots.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-b2-3",
+                "code": "B2.3",
+                "title": "Powers of ten",
+                "description": "Scale whole numbers and decimals mentally.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-b2-4",
+                "code": "B2.4",
+                "title": "Integer addition and subtraction",
+                "description": "Calculate signed sums and differences.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-b2-5",
+                "code": "B2.5",
+                "title": "Fraction addition and subtraction",
+                "description": "Combine rational amounts with suitable denominators.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-b2-6",
+                "code": "B2.6",
+                "title": "Fraction multiplication and division",
+                "description": "Include whole and mixed-number amounts.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-b2-7",
+                "code": "B2.7",
+                "title": "Integer multiplication and division",
+                "description": "Use magnitude, sign and inverse relationships.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-b2-8",
+                "code": "B2.8",
+                "title": "Proportional reasoning",
+                "description": "Compare rates, scale quantities and find unknowns.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g8-algebra",
+        "code": "C",
+        "title": "Algebra",
+        "source": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/08f5a14f-576a-4282-af82-096dc302ed10/Algebra_AODA.pdf",
+        "children": [
+          {
+            "id": "g8-patterns",
+            "title": "C1 · Patterns",
+            "children": [
+              {
+                "id": "g8-c1-1",
+                "code": "C1.1",
+                "title": "Compare patterns",
+                "description": "Compare linear rates and starting values.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-c1-2",
+                "code": "C1.2",
+                "title": "Represent rational patterns",
+                "description": "Connect tables, graphs and algebraic rules.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-c1-3",
+                "code": "C1.3",
+                "title": "Predict and solve pattern rules",
+                "description": "Extend patterns and solve unknown positions.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-c1-4",
+                "code": "C1.4",
+                "title": "Relationships among rational numbers",
+                "description": "Create patterns showing rational-number relationships.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              }
+            ]
+          },
+          {
+            "id": "g8-equations",
+            "title": "C2 · Expressions, equations and inequalities",
+            "children": [
+              {
+                "id": "g8-c2-1",
+                "code": "C2.1",
+                "title": "Combine like terms",
+                "description": "Add/subtract linear monomials; add integer binomials.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-c2-2",
+                "code": "C2.2",
+                "title": "Evaluate rational expressions",
+                "description": "Substitute exact rational values.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-c2-3",
+                "code": "C2.3",
+                "title": "Solve and verify equations",
+                "description": "Solve multi-term equations with signed decimals.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-c2-4",
+                "code": "C2.4",
+                "title": "Integer inequalities",
+                "description": "Solve, verify and graph solution sets.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              }
+            ]
+          },
+          {
+            "id": "g8-coding",
+            "title": "C3 · Data-analysis coding",
+            "children": [
+              {
+                "id": "g8-c3-1",
+                "code": "C3.1",
+                "title": "Write data-analysis code",
+                "description": "Use code to inform and communicate decisions.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-c3-2",
+                "code": "C3.2",
+                "title": "Modify code and assess efficiency",
+                "description": "Trace changes and avoid unnecessary computation.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              }
+            ]
+          },
+          {
+            "id": "g8-modelling",
+            "title": "C4 · Mathematical modelling",
+            "children": [
+              {
+                "id": "g8-c4",
+                "code": "C4",
+                "title": "Model real situations",
+                "description": "Make assumptions, predict, test and revise.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g8-data",
+        "code": "D",
+        "title": "Data",
+        "source": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/60e2b2c7-5a7a-4038-bc06-fb88ffd6c861/Data_AODA.pdf",
+        "children": [
+          {
+            "id": "g8-data-literacy",
+            "title": "D1 · Data literacy",
+            "children": [
+              {
+                "id": "g8-d1-1",
+                "code": "D1.1",
+                "title": "One-variable and two-variable data",
+                "description": "Choose variables that answer the question.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-d1-2",
+                "code": "D1.2",
+                "title": "Collect paired continuous data",
+                "description": "Organize measurements in a table of values.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-d1-3",
+                "code": "D1.3",
+                "title": "Choose and construct graphs",
+                "description": "Use justified graphs, including labelled scatter plots.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-d1-4",
+                "code": "D1.4",
+                "title": "Data infographics",
+                "description": "Tell evidence-based stories with paired data.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-d1-5",
+                "code": "D1.5",
+                "title": "Association and outliers",
+                "description": "Describe strength and direction; examine outliers.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-d1-6",
+                "code": "D1.6",
+                "title": "Critically interpret data",
+                "description": "Question graphs, assumptions and unsupported conclusions.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              }
+            ]
+          },
+          {
+            "id": "g8-probability",
+            "title": "D2 · Probability",
+            "children": [
+              {
+                "id": "g8-d2-1",
+                "code": "D2.1",
+                "title": "Venn and tree probability",
+                "description": "Organize outcomes and solve probability problems.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-d2-2",
+                "code": "D2.2",
+                "title": "Independent and dependent events",
+                "description": "Compare theory and experimental compound probabilities.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g8-spatial",
+        "code": "E",
+        "title": "Spatial sense",
+        "source": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/01b0b598-d5dc-455b-83de-9b7436bcefeb/Spatial_AODA.pdf",
+        "children": [
+          {
+            "id": "g8-geometry",
+            "title": "E1 · Geometry and transformations",
+            "children": [
+              {
+                "id": "g8-e1-1",
+                "code": "E1.1",
+                "title": "Tessellations",
+                "description": "Explain tiling properties and transformations.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-e1-2",
+                "code": "E1.2",
+                "title": "Scaled three-dimensional models",
+                "description": "Construct consistent models from multiple views.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-e1-3",
+                "code": "E1.3",
+                "title": "Scale drawings",
+                "description": "Scale lengths and areas; reproduce new ratios.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-e1-4",
+                "code": "E1.4",
+                "title": "Cartesian transformations",
+                "description": "Translate, reflect, rotate and dilate across quadrants.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              }
+            ]
+          },
+          {
+            "id": "g8-measurement",
+            "title": "E2 · Measurement",
+            "children": [
+              {
+                "id": "g8-e2-1",
+                "code": "E2.1",
+                "title": "Extreme metric prefixes",
+                "description": "Use exponential notation for very large/small units.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-e2-2",
+                "code": "E2.2",
+                "title": "Line and polygon angles",
+                "description": "Use intersecting/parallel-line and polygon properties.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-e2-3",
+                "code": "E2.3",
+                "title": "Composite measurement",
+                "description": "Calculate perimeter, circumference, area, volume and surface area.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-e2-4",
+                "code": "E2.4",
+                "title": "Pythagorean relationship",
+                "description": "Explain geometric models and find unknown triangle sides.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g8-financial",
+        "code": "F",
+        "title": "Financial literacy",
+        "source": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/8a374255-069f-4539-b020-5737aaf672f9/Financial_AODA.pdf",
+        "children": [
+          {
+            "id": "g8-finances",
+            "title": "F1 · Financial decisions",
+            "children": [
+              {
+                "id": "g8-f1-1",
+                "code": "F1.1",
+                "title": "Payments and currency exchange",
+                "description": "Compare payment methods across currencies.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-f1-2",
+                "code": "F1.2",
+                "title": "Long-term financial plans",
+                "description": "Include income, expenses and stated tax assumptions.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-f1-3",
+                "code": "F1.3",
+                "title": "Track balanced budgets",
+                "description": "Maintain and adjust income and spending records.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-f1-4",
+                "code": "F1.4",
+                "title": "Simple and compound interest",
+                "description": "Compare growth over time at supplied rates.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-f1-5",
+                "code": "F1.5",
+                "title": "Sales, loyalty and incentives",
+                "description": "Assess value using realistic conditions.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              },
+              {
+                "id": "g8-f1-6",
+                "code": "F1.6",
+                "title": "Credit and consumer contracts",
+                "description": "Compare interest, fees, rewards and terms.",
+                "example": "Try the supplied worked activity, explain your reasoning, then refresh for another example."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g8-learning",
+        "code": "A",
+        "title": "Learning skills and mathematical processes",
+        "source": "https://www.dcp.edu.gov.on.ca/en/curriculum/elementary-mathematics/grades/g8-math/strand-a/a1",
+        "description": "These skills are integrated across the other strands, rather than taught only as a separate calculation unit.",
+        "children": [
+          {
+            "id": "g8-learning-skills",
+            "title": "A1 · Learning throughout mathematics",
+            "children": [
+              {
+                "id": "g8-a1-1",
+                "code": "A1.1",
+                "title": "Manage emotions",
+                "description": "Identify and manage emotions while engaging in mathematics.",
+                "example": "Explain how you feel when a problem is unfamiliar."
+              },
+              {
+                "id": "g8-a1-2",
+                "code": "A1.2",
+                "title": "Cope with challenges",
+                "description": "Recognize stress and use strategies for coping with mathematical challenges.",
+                "example": "Pause, try a drawing, or ask a useful question when stuck."
+              },
+              {
+                "id": "g8-a1-3",
+                "code": "A1.3",
+                "title": "Persist and stay motivated",
+                "description": "Maintain motivation and perseverance when working through problems.",
+                "example": "Try another strategy after a first attempt does not work."
+              },
+              {
+                "id": "g8-a1-4",
+                "code": "A1.4",
+                "title": "Collaborate and communicate",
+                "description": "Build relationships, listen to different mathematical ideas, and communicate respectfully.",
+                "example": "Compare two solution methods with a partner."
+              },
+              {
+                "id": "g8-a1-5",
+                "code": "A1.5",
+                "title": "Confidence and self-awareness",
+                "description": "Develop awareness of yourself as a capable mathematics learner.",
+                "example": "Describe a strategy you have improved at using."
+              },
+              {
+                "id": "g8-a1-6",
+                "code": "A1.6",
+                "title": "Critical and creative thinking",
+                "description": "Think critically and creatively to support mathematical decisions and problem solving.",
+                "example": "Explain whether an answer is reasonable and find another approach."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "suggestedSequence": [
+    [
+      "Real numbers and exact arithmetic",
+      "Signed fractions, roots, scientific notation and proportional reasoning."
+    ],
+    [
+      "Algebra and representations",
+      "Patterns, rational expressions, equations, inequalities and Cartesian transformations."
+    ],
+    [
+      "Data, modelling and coding",
+      "Paired measurements, scatter plots, probability and evidence-based predictions."
+    ],
+    [
+      "Measurement and financial applications",
+      "Scale, composite measures, Pythagoras, budgets and interest."
+    ]
+  ],
+  "activities": [
+    {
+      "id": "practice-g8-b1-1",
+      "skillIds": [
+        "g8-b1-1"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-b1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-b1-1"
+      ]
+    },
+    {
+      "id": "practice-g8-b1-2",
+      "skillIds": [
+        "g8-b1-2"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-b1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-b1-2"
+      ]
+    },
+    {
+      "id": "practice-g8-b1-3",
+      "skillIds": [
+        "g8-b1-3"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-b1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-b1-3"
+      ]
+    },
+    {
+      "id": "practice-g8-b1-4",
+      "skillIds": [
+        "g8-b1-4"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-b1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-b1-4"
+      ]
+    },
+    {
+      "id": "practice-g8-b2-1",
+      "skillIds": [
+        "g8-b2-1"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-b2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-b2-1"
+      ]
+    },
+    {
+      "id": "practice-g8-b2-2",
+      "skillIds": [
+        "g8-b2-2"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-b2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-b2-2"
+      ]
+    },
+    {
+      "id": "practice-g8-b2-3",
+      "skillIds": [
+        "g8-b2-3"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-b2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-b2-3"
+      ]
+    },
+    {
+      "id": "practice-g8-b2-4",
+      "skillIds": [
+        "g8-b2-4"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-b2-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-b2-4"
+      ]
+    },
+    {
+      "id": "practice-g8-b2-5",
+      "skillIds": [
+        "g8-b2-5"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-b2-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-b2-5"
+      ]
+    },
+    {
+      "id": "practice-g8-b2-6",
+      "skillIds": [
+        "g8-b2-6"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-b2-6",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-b2-6",
+        "g8-extra-mixed"
+      ]
+    },
+    {
+      "id": "practice-g8-b2-7",
+      "skillIds": [
+        "g8-b2-7"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-b2-7",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-b2-7"
+      ]
+    },
+    {
+      "id": "practice-g8-b2-8",
+      "skillIds": [
+        "g8-b2-8"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-b2-8",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-b2-8"
+      ]
+    },
+    {
+      "id": "practice-g8-c1-1",
+      "skillIds": [
+        "g8-c1-1"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-c1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-c1-1",
+        "g8-extra-repeating"
+      ]
+    },
+    {
+      "id": "practice-g8-c1-2",
+      "skillIds": [
+        "g8-c1-2"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-c1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-c1-2"
+      ]
+    },
+    {
+      "id": "practice-g8-c1-3",
+      "skillIds": [
+        "g8-c1-3"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-c1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-c1-3"
+      ]
+    },
+    {
+      "id": "practice-g8-c1-4",
+      "skillIds": [
+        "g8-c1-4"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-c1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-c1-4"
+      ]
+    },
+    {
+      "id": "practice-g8-c2-1",
+      "skillIds": [
+        "g8-c2-1"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-c2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-c2-1",
+        "g8-extra-monomials"
+      ]
+    },
+    {
+      "id": "practice-g8-c2-2",
+      "skillIds": [
+        "g8-c2-2"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-c2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-c2-2"
+      ]
+    },
+    {
+      "id": "practice-g8-c2-3",
+      "skillIds": [
+        "g8-c2-3"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-c2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-c2-3"
+      ]
+    },
+    {
+      "id": "practice-g8-c2-4",
+      "skillIds": [
+        "g8-c2-4"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-c2-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-c2-4",
+        "g8-extra-inclusive"
+      ]
+    },
+    {
+      "id": "practice-g8-c3-1",
+      "skillIds": [
+        "g8-c3-1"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-c3-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-c3-1"
+      ]
+    },
+    {
+      "id": "practice-g8-c3-2",
+      "skillIds": [
+        "g8-c3-2"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-c3-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-c3-2"
+      ]
+    },
+    {
+      "id": "practice-g8-c4",
+      "skillIds": [
+        "g8-c4"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-c4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-c4"
+      ]
+    },
+    {
+      "id": "practice-g8-d1-1",
+      "skillIds": [
+        "g8-d1-1"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-d1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-d1-1"
+      ]
+    },
+    {
+      "id": "practice-g8-d1-2",
+      "skillIds": [
+        "g8-d1-2"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-d1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-d1-2"
+      ]
+    },
+    {
+      "id": "practice-g8-d1-3",
+      "skillIds": [
+        "g8-d1-3"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-d1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-d1-3"
+      ]
+    },
+    {
+      "id": "practice-g8-d1-4",
+      "skillIds": [
+        "g8-d1-4"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-d1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-d1-4"
+      ]
+    },
+    {
+      "id": "practice-g8-d1-5",
+      "skillIds": [
+        "g8-d1-5"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-d1-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-d1-5"
+      ]
+    },
+    {
+      "id": "practice-g8-d1-6",
+      "skillIds": [
+        "g8-d1-6"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-d1-6",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-d1-6",
+        "g8-extra-misleading"
+      ]
+    },
+    {
+      "id": "practice-g8-d2-1",
+      "skillIds": [
+        "g8-d2-1"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-d2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-d2-1"
+      ]
+    },
+    {
+      "id": "practice-g8-d2-2",
+      "skillIds": [
+        "g8-d2-2"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-d2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-d2-2",
+        "g8-extra-independent"
+      ]
+    },
+    {
+      "id": "practice-g8-e1-1",
+      "skillIds": [
+        "g8-e1-1"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-e1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-e1-1"
+      ]
+    },
+    {
+      "id": "practice-g8-e1-2",
+      "skillIds": [
+        "g8-e1-2"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-e1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-e1-2"
+      ]
+    },
+    {
+      "id": "practice-g8-e1-3",
+      "skillIds": [
+        "g8-e1-3"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-e1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-e1-3"
+      ]
+    },
+    {
+      "id": "practice-g8-e1-4",
+      "skillIds": [
+        "g8-e1-4"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-e1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-e1-4"
+      ]
+    },
+    {
+      "id": "practice-g8-e2-1",
+      "skillIds": [
+        "g8-e2-1"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-e2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-e2-1"
+      ]
+    },
+    {
+      "id": "practice-g8-e2-2",
+      "skillIds": [
+        "g8-e2-2"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-e2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-e2-2"
+      ]
+    },
+    {
+      "id": "practice-g8-e2-3",
+      "skillIds": [
+        "g8-e2-3"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-e2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-e2-3",
+        "g8-extra-solid",
+        "g8-extra-circle"
+      ]
+    },
+    {
+      "id": "practice-g8-e2-4",
+      "skillIds": [
+        "g8-e2-4"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-e2-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-e2-4",
+        "g8-extra-missing-leg"
+      ]
+    },
+    {
+      "id": "practice-g8-f1-1",
+      "skillIds": [
+        "g8-f1-1"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-f1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-f1-1"
+      ]
+    },
+    {
+      "id": "practice-g8-f1-2",
+      "skillIds": [
+        "g8-f1-2"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-f1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-f1-2"
+      ]
+    },
+    {
+      "id": "practice-g8-f1-3",
+      "skillIds": [
+        "g8-f1-3"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-f1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-f1-3"
+      ]
+    },
+    {
+      "id": "practice-g8-f1-4",
+      "skillIds": [
+        "g8-f1-4"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-f1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-f1-4"
+      ]
+    },
+    {
+      "id": "practice-g8-f1-5",
+      "skillIds": [
+        "g8-f1-5"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-f1-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-f1-5"
+      ]
+    },
+    {
+      "id": "practice-g8-f1-6",
+      "skillIds": [
+        "g8-f1-6"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-f1-6",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-f1-6"
+      ]
+    },
+    {
+      "id": "practice-g8-a1-1",
+      "skillIds": [
+        "g8-a1-1"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-a1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-g8-a1-1"
+      ]
+    },
+    {
+      "id": "practice-g8-a1-2",
+      "skillIds": [
+        "g8-a1-2"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-a1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-g8-a1-2"
+      ]
+    },
+    {
+      "id": "practice-g8-a1-3",
+      "skillIds": [
+        "g8-a1-3"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-a1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-g8-a1-3"
+      ]
+    },
+    {
+      "id": "practice-g8-a1-4",
+      "skillIds": [
+        "g8-a1-4"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-a1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-g8-a1-4"
+      ]
+    },
+    {
+      "id": "practice-g8-a1-5",
+      "skillIds": [
+        "g8-a1-5"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-a1-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-g8-a1-5"
+      ]
+    },
+    {
+      "id": "practice-g8-a1-6",
+      "skillIds": [
+        "g8-a1-6"
+      ],
+      "title": "Grade 8 activities",
+      "href": "./curriculum.html?grade=8#g8-a1-6",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g8-question-g8-a1-6"
+      ]
+    }
+  ]
+}

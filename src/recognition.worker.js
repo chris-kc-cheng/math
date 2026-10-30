@@ -8,13 +8,15 @@ ort.env.wasm.numThreads = 1;
 ort.env.wasm.wasmPaths = {mjs:wasmModuleUrl,wasm:wasmBinaryUrl};
 let engine;
 let vocab;
+const modelUrl=name=>`${import.meta.env.BASE_URL}models/comer/${name}`;
 const debug=(event,details={})=>self.postMessage({type:'debug',event,details});
 self.onmessage = async ({data}) => {
  try {
   if(data.type === 'init') {
-   const start=performance.now();debug('model.loading',{runtime:'ONNX WASM',threads:1,encoder:'/models/comer/encoder_int8.onnx',decoder:'/models/comer/decoder_int8.onnx'});
-   vocab = await fetch('/models/comer/vocab.json').then(r=>{if(!r.ok)throw Error('Vocabulary unavailable');return r.json();});
-   engine = new InferenceEngine({encoderUrl:'/models/comer/encoder_int8.onnx',decoderUrl:'/models/comer/decoder_int8.onnx',beamWidth:3,maxDecodeSteps:40,executionProvider:'wasm'});
+   const encoderUrl=modelUrl('encoder_int8.onnx'),decoderUrl=modelUrl('decoder_int8.onnx');
+   const start=performance.now();debug('model.loading',{runtime:'ONNX WASM',threads:1,encoder:encoderUrl,decoder:decoderUrl});
+   vocab = await fetch(modelUrl('vocab.json')).then(r=>{if(!r.ok)throw Error('Vocabulary unavailable');return r.json();});
+   engine = new InferenceEngine({encoderUrl,decoderUrl,beamWidth:3,maxDecodeSteps:40,executionProvider:'wasm'});
    await engine.init();
    debug('model.ready',{durationMs:Math.round(performance.now()-start),vocabulary:vocab.vocab_size});
    self.postMessage({type:'ready'});

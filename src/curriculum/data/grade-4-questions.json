@@ -1,0 +1,1832 @@
+[
+  {
+    "id": "g4-question-b1-1",
+    "skillId": "g4-b1-1",
+    "title": "Whole numbers to 10,000",
+    "rule": "expanded-number",
+    "parameters": [
+      "number",
+      "usePowers"
+    ],
+    "example": {
+      "number": 4836,
+      "usePowers": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 10000,
+        "step": 1
+      },
+      [
+        0
+      ]
+    ]
+  },
+  {
+    "id": "g4-question-b1-2",
+    "skillId": "g4-b1-2",
+    "title": "Order whole numbers",
+    "rule": "order-whole",
+    "parameters": [
+      "first",
+      "second",
+      "third"
+    ],
+    "example": {
+      "first": 5409,
+      "second": 5490,
+      "third": 4590
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 10000,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 10000,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 10000,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g4-question-b1-3",
+    "skillId": "g4-b1-3",
+    "title": "Round whole numbers",
+    "rule": "round-number",
+    "parameters": [
+      "unscaled",
+      "decimalPlaces",
+      "roundingPower"
+    ],
+    "example": {
+      "unscaled": 4836,
+      "decimalPlaces": 0,
+      "roundingPower": 2
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 10000,
+        "step": 1
+      },
+      [
+        0
+      ],
+      [
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g4-question-b1-4",
+    "skillId": "g4-b1-4",
+    "title": "Represent fractions",
+    "rule": "fraction-model",
+    "parameters": [
+      "numerator",
+      "denominator"
+    ],
+    "example": {
+      "numerator": 3,
+      "denominator": 4
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      [
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10
+      ]
+    ]
+  },
+  {
+    "id": "g4-question-b1-5",
+    "skillId": "g4-b1-5",
+    "title": "Compare fair shares",
+    "rule": "compare-fractions",
+    "parameters": [
+      "leftNumerator",
+      "leftDenominator",
+      "rightNumerator",
+      "rightDenominator"
+    ],
+    "example": {
+      "leftNumerator": 3,
+      "leftDenominator": 4,
+      "rightNumerator": 5,
+      "rightDenominator": 6
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 8,
+        "step": 1
+      },
+      [
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10
+      ],
+      {
+        "min": 1,
+        "max": 8,
+        "step": 1
+      },
+      [
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10
+      ]
+    ]
+  },
+  {
+    "id": "g4-question-b1-6",
+    "skillId": "g4-b1-6",
+    "title": "Count by fractions",
+    "rule": "fraction-count",
+    "parameters": [
+      "steps",
+      "denominator"
+    ],
+    "example": {
+      "steps": 9,
+      "denominator": 4
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 20,
+        "step": 1
+      },
+      [
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10
+      ]
+    ]
+  },
+  {
+    "id": "g4-question-b1-7",
+    "skillId": "g4-b1-7",
+    "title": "Decimal tenths",
+    "rule": "rational-order",
+    "parameters": [
+      "firstNumerator",
+      "firstDenominator",
+      "secondNumerator",
+      "secondDenominator",
+      "thirdNumerator",
+      "thirdDenominator"
+    ],
+    "example": {
+      "firstNumerator": 7,
+      "firstDenominator": 10,
+      "secondNumerator": 3,
+      "secondDenominator": 10,
+      "thirdNumerator": 12,
+      "thirdDenominator": 10
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 100,
+        "step": 1
+      },
+      [
+        10
+      ],
+      {
+        "min": 0,
+        "max": 100,
+        "step": 1
+      },
+      [
+        10
+      ],
+      {
+        "min": 0,
+        "max": 100,
+        "step": 1
+      },
+      [
+        10
+      ]
+    ]
+  },
+  {
+    "id": "g4-question-b1-8",
+    "skillId": "g4-b1-8",
+    "title": "Round decimal tenths",
+    "rule": "round-number",
+    "parameters": [
+      "unscaled",
+      "decimalPlaces",
+      "roundingPower"
+    ],
+    "example": {
+      "unscaled": 37,
+      "decimalPlaces": 1,
+      "roundingPower": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 1000,
+        "step": 1
+      },
+      [
+        1
+      ],
+      [
+        0
+      ]
+    ]
+  },
+  {
+    "id": "g4-question-b1-9",
+    "skillId": "g4-b1-9",
+    "title": "Fractions and tenths",
+    "rule": "decimal-equivalence",
+    "parameters": [
+      "unscaled",
+      "decimalPlaces"
+    ],
+    "example": {
+      "unscaled": 7,
+      "decimalPlaces": 1
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 99,
+        "step": 1
+      },
+      [
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g4-question-b2-1",
+    "skillId": "g4-b2-1",
+    "title": "Operation relationships",
+    "rule": "order",
+    "parameters": [
+      "addend",
+      "factorA",
+      "factorB"
+    ],
+    "example": {
+      "addend": 2,
+      "factorA": 3,
+      "factorB": 4
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 10,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g4-question-b2-2",
+    "skillId": "g4-b2-2",
+    "title": "Multiplication and division facts",
+    "rule": "times",
+    "parameters": [
+      "left",
+      "right"
+    ],
+    "example": {
+      "left": 8,
+      "right": 7
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 10,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g4-question-b2-3",
+    "skillId": "g4-b2-3",
+    "title": "Mental calculation",
+    "rule": "decimal-calculate",
+    "parameters": [
+      "leftUnscaled",
+      "rightUnscaled",
+      "leftPlaces",
+      "rightPlaces",
+      "operation"
+    ],
+    "example": {
+      "leftUnscaled": 36,
+      "rightUnscaled": 100,
+      "leftPlaces": 0,
+      "rightPlaces": 0,
+      "operation": 2
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 99,
+        "step": 1
+      },
+      [
+        10,
+        100,
+        1000
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        2
+      ]
+    ],
+    "answerMinimum": 0
+  },
+  {
+    "id": "g4-question-b2-4",
+    "skillId": "g4-b2-4",
+    "title": "Whole-number and tenths calculations",
+    "rule": "decimal-calculate",
+    "parameters": [
+      "leftUnscaled",
+      "rightUnscaled",
+      "leftPlaces",
+      "rightPlaces",
+      "operation"
+    ],
+    "example": {
+      "leftUnscaled": 2436,
+      "rightUnscaled": 1294,
+      "leftPlaces": 0,
+      "rightPlaces": 0,
+      "operation": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 4999,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 4999,
+        "step": 1
+      },
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "answerMinimum": 0
+  },
+  {
+    "id": "g4-question-b2-5",
+    "skillId": "g4-b2-5",
+    "title": "Multiply by one digit",
+    "rule": "decimal-calculate",
+    "parameters": [
+      "leftUnscaled",
+      "rightUnscaled",
+      "leftPlaces",
+      "rightPlaces",
+      "operation"
+    ],
+    "example": {
+      "leftUnscaled": 236,
+      "rightUnscaled": 4,
+      "leftPlaces": 0,
+      "rightPlaces": 0,
+      "operation": 2
+    },
+    "generation": [
+      {
+        "min": 10,
+        "max": 999,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        2
+      ]
+    ],
+    "answerMinimum": 0
+  },
+  {
+    "id": "g4-question-b2-6",
+    "skillId": "g4-b2-6",
+    "title": "Divide by one digit",
+    "rule": "decimal-calculate",
+    "parameters": [
+      "leftUnscaled",
+      "rightUnscaled",
+      "leftPlaces",
+      "rightPlaces",
+      "operation"
+    ],
+    "example": {
+      "leftUnscaled": 156,
+      "rightUnscaled": 7,
+      "leftPlaces": 0,
+      "rightPlaces": 0,
+      "operation": 3
+    },
+    "generation": [
+      {
+        "min": 10,
+        "max": 999,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        3
+      ]
+    ],
+    "answerMinimum": 0
+  },
+  {
+    "id": "g4-question-b2-7",
+    "skillId": "g4-b2-7",
+    "title": "Repeated unit fractions",
+    "rule": "unit-fraction",
+    "parameters": [
+      "whole",
+      "denominator",
+      "divide"
+    ],
+    "example": {
+      "whole": 3,
+      "denominator": 4,
+      "divide": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      [
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10
+      ],
+      [
+        0
+      ]
+    ]
+  },
+  {
+    "id": "g4-question-b2-8",
+    "skillId": "g4-b2-8",
+    "title": "Whole-number rates",
+    "rule": "equivalent-ratio",
+    "parameters": [
+      "firstQuantity",
+      "secondQuantity",
+      "scaleFactor"
+    ],
+    "example": {
+      "firstQuantity": 2,
+      "secondQuantity": 3,
+      "scaleFactor": 2
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g4-question-c1-1",
+    "skillId": "g4-c1-1",
+    "title": "Repeating and growing patterns",
+    "rule": "pattern-type",
+    "parameters": [
+      "start",
+      "difference",
+      "patternType"
+    ],
+    "example": {
+      "start": 2,
+      "difference": 3,
+      "patternType": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g4-question-c1-2",
+    "skillId": "g4-c1-2",
+    "title": "Tables and graphs",
+    "rule": "pattern-table",
+    "parameters": [
+      "start",
+      "difference",
+      "shrinking"
+    ],
+    "example": {
+      "start": 2,
+      "difference": 3,
+      "shrinking": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      [
+        0
+      ]
+    ]
+  },
+  {
+    "id": "g4-question-c1-3",
+    "skillId": "g4-c1-3",
+    "title": "Rules and missing terms",
+    "rule": "pattern-missing",
+    "parameters": [
+      "start",
+      "difference",
+      "shrinking"
+    ],
+    "example": {
+      "start": 4,
+      "difference": 4,
+      "shrinking": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      [
+        0
+      ]
+    ]
+  },
+  {
+    "id": "g4-question-c1-4",
+    "skillId": "g4-c1-4",
+    "title": "Patterns with tenths",
+    "rule": "decimal-pattern",
+    "parameters": [
+      "startHundredths",
+      "stepHundredths"
+    ],
+    "example": {
+      "startHundredths": 70,
+      "stepHundredths": 10
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 1000,
+        "step": 10
+      },
+      {
+        "min": 10,
+        "max": 100,
+        "step": 10
+      }
+    ]
+  },
+  {
+    "id": "g4-question-c2-1",
+    "skillId": "g4-c2-1",
+    "title": "Symbols as variables",
+    "rule": "words-expression",
+    "parameters": [
+      "coefficient",
+      "constant"
+    ],
+    "example": {
+      "coefficient": 3,
+      "constant": 2
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 10,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g4-question-c2-2",
+    "skillId": "g4-c2-2",
+    "title": "Solve and verify equations",
+    "rule": "equation-add",
+    "parameters": [
+      "amountAdded",
+      "rightSide"
+    ],
+    "example": {
+      "amountAdded": 8,
+      "rightSide": 25
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 19,
+        "step": 1
+      },
+      {
+        "min": 20,
+        "max": 50,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g4-question-c2-3",
+    "skillId": "g4-c2-3",
+    "title": "Whole-number inequalities",
+    "rule": "whole-inequality",
+    "parameters": [
+      "amountAdded",
+      "rightSide",
+      "greaterThan",
+      "maximum"
+    ],
+    "example": {
+      "amountAdded": 5,
+      "rightSide": 12,
+      "greaterThan": 0,
+      "maximum": 20
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 9
+      },
+      {
+        "min": 10,
+        "max": 20
+      },
+      [
+        0,
+        1
+      ],
+      [
+        20
+      ]
+    ]
+  },
+  {
+    "id": "g4-question-c3-1",
+    "skillId": "g4-c3-1",
+    "title": "Write code with nested events",
+    "rule": "nested-code",
+    "parameters": [
+      "polygonSides",
+      "outerRepeats"
+    ],
+    "example": {
+      "polygonSides": 4,
+      "outerRepeats": 3
+    },
+    "generation": [
+      [
+        3,
+        4,
+        5,
+        6,
+        8
+      ],
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g4-question-c3-2",
+    "skillId": "g4-c3-2",
+    "title": "Read and alter code",
+    "rule": "nested-code",
+    "parameters": [
+      "polygonSides",
+      "outerRepeats"
+    ],
+    "example": {
+      "polygonSides": 4,
+      "outerRepeats": 3
+    },
+    "generation": [
+      [
+        3,
+        4,
+        5,
+        6,
+        8
+      ],
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g4-question-c4",
+    "skillId": "g4-c4",
+    "title": "Mathematical modelling",
+    "rule": "seating-model",
+    "parameters": [
+      "learners",
+      "seatsPerTable",
+      "extraLearners"
+    ],
+    "example": {
+      "learners": 27,
+      "seatsPerTable": 6,
+      "extraLearners": 4
+    }
+  },
+  {
+    "id": "g4-question-d1-1",
+    "skillId": "g4-d1-1",
+    "title": "Qualitative and quantitative data",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Compare favourite colour with number of pets. Which is qualitative?",
+        "steps": [
+          "Favourite colour is a category: qualitative data. Number of pets is a count: quantitative data.",
+          "Choose a question before collecting observations."
+        ]
+      },
+      {
+        "prompt": "Compare interviewing classmates with reading a published library survey.",
+        "steps": [
+          "Your own interviews provide primary data; a published survey is secondary data.",
+          "Check the population, date, wording, and source before comparing sets."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "g4-question-d1-2",
+    "skillId": "g4-d1-2",
+    "title": "Collect and organize data",
+    "rule": "data-stem-leaf",
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "fourth",
+      "fifth"
+    ],
+    "example": {
+      "first": 12,
+      "second": 23,
+      "third": 21,
+      "fourth": 12,
+      "fifth": 35
+    },
+    "generation": [
+      {
+        "min": 10,
+        "max": 99,
+        "step": 1
+      },
+      {
+        "min": 10,
+        "max": 99,
+        "step": 1
+      },
+      {
+        "min": 10,
+        "max": 99,
+        "step": 1
+      },
+      {
+        "min": 10,
+        "max": 99,
+        "step": 1
+      },
+      {
+        "min": 10,
+        "max": 99,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g4-question-d1-3",
+    "skillId": "g4-d1-3",
+    "title": "Multiple-bar graphs",
+    "rule": "data-multiple-bars",
+    "parameters": [
+      "classAMonth1",
+      "classAMonth2",
+      "classBMonth1",
+      "classBMonth2"
+    ],
+    "example": {
+      "classAMonth1": 8,
+      "classAMonth2": 6,
+      "classBMonth1": 5,
+      "classBMonth2": 9
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g4-question-d1-4",
+    "skillId": "g4-d1-4",
+    "title": "Data infographics",
+    "rule": "infographic",
+    "parameters": [
+      "walking",
+      "bus",
+      "cycling"
+    ],
+    "example": {
+      "walking": 6,
+      "bus": 10,
+      "cycling": 4
+    }
+  },
+  {
+    "id": "g4-question-d1-5",
+    "skillId": "g4-d1-5",
+    "title": "Mean, median, and mode",
+    "rule": "statistics",
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "fourth",
+      "fifth",
+      "useTenths"
+    ],
+    "example": {
+      "first": 2,
+      "second": 3,
+      "third": 3,
+      "fourth": 4,
+      "fifth": 8,
+      "useTenths": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      },
+      [
+        0
+      ]
+    ]
+  },
+  {
+    "id": "g4-question-d1-6",
+    "skillId": "g4-d1-6",
+    "title": "Interpret data sets",
+    "rule": "data-multiple-bars",
+    "parameters": [
+      "classAMonth1",
+      "classAMonth2",
+      "classBMonth1",
+      "classBMonth2"
+    ],
+    "example": {
+      "classAMonth1": 8,
+      "classAMonth2": 6,
+      "classBMonth1": 5,
+      "classBMonth2": 9
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g4-question-d2-1",
+    "skillId": "g4-d2-1",
+    "title": "Probability language",
+    "rule": "probability-language",
+    "parameters": [
+      "favourable",
+      "total"
+    ],
+    "example": {
+      "favourable": 3,
+      "total": 8
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 8,
+        "step": 1
+      },
+      [
+        8
+      ]
+    ]
+  },
+  {
+    "id": "g4-question-d2-2",
+    "skillId": "g4-d2-2",
+    "title": "Compare population measures",
+    "rule": "data-populations",
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "groupShift"
+    ],
+    "example": {
+      "first": 2,
+      "second": 3,
+      "third": 3,
+      "groupShift": 5
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 10,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g4-question-e1-1",
+    "skillId": "g4-e1-1",
+    "title": "Properties of rectangles",
+    "rule": "quadrilateral-properties",
+    "parameters": [
+      "shape"
+    ],
+    "example": {
+      "shape": 0
+    },
+    "generation": [
+      [
+        0
+      ]
+    ]
+  },
+  {
+    "id": "g4-question-e1-2",
+    "skillId": "g4-e1-2",
+    "title": "First-quadrant coordinates",
+    "rule": "coordinates",
+    "parameters": [
+      "x",
+      "y",
+      "right",
+      "up"
+    ],
+    "example": {
+      "x": 2,
+      "y": 4,
+      "right": 3,
+      "up": 0
+    }
+  },
+  {
+    "id": "g4-question-e1-3",
+    "skillId": "g4-e1-3",
+    "title": "Translations and reflections",
+    "rule": "transformation",
+    "parameters": [
+      "x",
+      "y",
+      "transformationType"
+    ],
+    "example": {
+      "x": 2,
+      "y": 3,
+      "transformationType": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 4,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        4
+      ]
+    ]
+  },
+  {
+    "id": "g4-question-e2-1",
+    "skillId": "g4-e2-1",
+    "title": "Mass and capacity units",
+    "rule": "metric-conversion",
+    "parameters": [
+      "tenths",
+      "unitPair"
+    ],
+    "example": {
+      "tenths": 25,
+      "unitPair": 1
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 999,
+        "step": 1
+      },
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g4-question-e2-2",
+    "skillId": "g4-e2-2",
+    "title": "Metric prefixes and tools",
+    "rule": "metric-units",
+    "parameters": [
+      "attribute",
+      "estimateSeed"
+    ],
+    "example": {
+      "attribute": 0,
+      "estimateSeed": 7
+    }
+  },
+  {
+    "id": "g4-question-e2-3",
+    "skillId": "g4-e2-3",
+    "title": "Elapsed time",
+    "rule": "elapsed-time",
+    "parameters": [
+      "startMinutes",
+      "durationMinutes"
+    ],
+    "example": {
+      "startMinutes": 570,
+      "durationMinutes": 95
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 1439,
+        "step": 1
+      },
+      {
+        "min": 15,
+        "max": 300,
+        "step": 5
+      }
+    ]
+  },
+  {
+    "id": "g4-question-e2-4",
+    "skillId": "g4-e2-4",
+    "title": "Classify angles",
+    "rule": "angle-relationship",
+    "parameters": [
+      "degrees",
+      "relationship"
+    ],
+    "example": {
+      "degrees": 125,
+      "relationship": 0
+    },
+    "generation": [
+      [
+        30,
+        45,
+        60,
+        90,
+        120,
+        125,
+        150,
+        180
+      ],
+      [
+        0
+      ]
+    ]
+  },
+  {
+    "id": "g4-question-e2-5",
+    "skillId": "g4-e2-5",
+    "title": "Rectangle area",
+    "rule": "rectangle-measure",
+    "parameters": [
+      "length",
+      "width",
+      "unknownLength"
+    ],
+    "example": {
+      "length": 8,
+      "width": 5,
+      "unknownLength": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g4-question-e2-6",
+    "skillId": "g4-e2-6",
+    "title": "Missing rectangle dimensions",
+    "rule": "rectangle-measure",
+    "parameters": [
+      "length",
+      "width",
+      "unknownLength"
+    ],
+    "example": {
+      "length": 8,
+      "width": 5,
+      "unknownLength": 1
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g4-question-f1-1",
+    "skillId": "g4-f1-1",
+    "title": "Payment methods",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Compare cash, debit, and credit for buying a book.",
+        "steps": [
+          "Cash uses money held; debit usually draws from an account; credit creates an amount to repay.",
+          "Compare acceptance, security, fees, access, and repayment terms. The choice depends on the situation."
+        ]
+      },
+      {
+        "prompt": "Why might two people choose different payment methods?",
+        "steps": [
+          "Cash may be needed where cards are not accepted; an account record may help another buyer track expenses.",
+          "Consider limits, privacy, fees, and safe handling. A credit limit is not extra income."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "g4-question-f1-2",
+    "skillId": "g4-f1-2",
+    "title": "Purchases and change",
+    "rule": "cash-purchase",
+    "parameters": [
+      "priceDollars",
+      "itemCount",
+      "cashDollars"
+    ],
+    "example": {
+      "priceDollars": 4,
+      "itemCount": 3,
+      "cashDollars": 50
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      [
+        50
+      ]
+    ]
+  },
+  {
+    "id": "g4-question-f1-3",
+    "skillId": "g4-f1-3",
+    "title": "Money decisions",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Explain earning, spending, saving, investing, and donating using a $20 gift.",
+        "steps": [
+          "Saving keeps money for later; spending purchases something now; donating gives without expecting repayment.",
+          "Earning receives money for work or an agreed source. Investing seeks a future return and can involve loss. A gift is not wages."
+        ]
+      },
+      {
+        "prompt": "Why might two learners save different parts of the same $20?",
+        "steps": [
+          "Needs, goals, timelines, and family circumstances can differ.",
+          "There is no single correct personal split. Explain choices respectfully without assuming equal resources."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "g4-question-f1-4",
+    "skillId": "g4-f1-4",
+    "title": "Saving and spending",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Explain earning, spending, saving, investing, and donating using a $20 gift.",
+        "steps": [
+          "Saving keeps money for later; spending purchases something now; donating gives without expecting repayment.",
+          "Earning receives money for work or an agreed source. Investing seeks a future return and can involve loss. A gift is not wages."
+        ]
+      },
+      {
+        "prompt": "Why might two learners save different parts of the same $20?",
+        "steps": [
+          "Needs, goals, timelines, and family circumstances can differ.",
+          "There is no single correct personal split. Explain choices respectfully without assuming equal resources."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "g4-question-f1-5",
+    "skillId": "g4-f1-5",
+    "title": "Reasonable prices",
+    "rule": "unit-price",
+    "parameters": [
+      "countA",
+      "countB",
+      "unitPriceACents",
+      "unitPriceBCents"
+    ],
+    "example": {
+      "countA": 5,
+      "countB": 3,
+      "unitPriceACents": 20,
+      "unitPriceBCents": 25
+    }
+  },
+  {
+    "id": "g4-question-a1-1",
+    "skillId": "g4-a1-1",
+    "title": "Manage emotions",
+    "rule": "manage-emotions",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 0
+    }
+  },
+  {
+    "id": "g4-question-a1-2",
+    "skillId": "g4-a1-2",
+    "title": "Cope with challenges",
+    "rule": "cope-challenge",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 1
+    }
+  },
+  {
+    "id": "g4-question-a1-3",
+    "skillId": "g4-a1-3",
+    "title": "Persist and stay motivated",
+    "rule": "persist",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 2
+    }
+  },
+  {
+    "id": "g4-question-a1-4",
+    "skillId": "g4-a1-4",
+    "title": "Collaborate and communicate",
+    "rule": "communicate",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 0
+    }
+  },
+  {
+    "id": "g4-question-a1-5",
+    "skillId": "g4-a1-5",
+    "title": "Confidence and self-awareness",
+    "rule": "confidence",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 3
+    }
+  },
+  {
+    "id": "g4-question-a1-6",
+    "skillId": "g4-a1-6",
+    "title": "Critical and creative thinking",
+    "rule": "critical-thinking",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 1
+    }
+  },
+  {
+    "id": "g4-question-b2-3-extra-0",
+    "skillId": "g4-b2-3",
+    "title": "Add and subtract decimal tenths",
+    "rule": "decimal-calculate",
+    "parameters": [
+      "leftUnscaled",
+      "rightUnscaled",
+      "leftPlaces",
+      "rightPlaces",
+      "operation"
+    ],
+    "example": {
+      "leftUnscaled": 37,
+      "rightUnscaled": 18,
+      "leftPlaces": 1,
+      "rightPlaces": 1,
+      "operation": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 999,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 999,
+        "step": 1
+      },
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "answerMinimum": 0
+  },
+  {
+    "id": "g4-question-b2-3-extra-1",
+    "skillId": "g4-b2-3",
+    "title": "Divide by ten mentally",
+    "rule": "decimal-calculate",
+    "parameters": [
+      "leftUnscaled",
+      "rightUnscaled",
+      "leftPlaces",
+      "rightPlaces",
+      "operation"
+    ],
+    "example": {
+      "leftUnscaled": 36,
+      "rightUnscaled": 10,
+      "leftPlaces": 0,
+      "rightPlaces": 0,
+      "operation": 3
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 99,
+        "step": 1
+      },
+      [
+        10
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        3
+      ]
+    ],
+    "answerMinimum": 0
+  },
+  {
+    "id": "g4-question-b2-4-extra-0",
+    "skillId": "g4-b2-4",
+    "title": "Add and subtract decimal tenths",
+    "rule": "decimal-calculate",
+    "parameters": [
+      "leftUnscaled",
+      "rightUnscaled",
+      "leftPlaces",
+      "rightPlaces",
+      "operation"
+    ],
+    "example": {
+      "leftUnscaled": 37,
+      "rightUnscaled": 18,
+      "leftPlaces": 1,
+      "rightPlaces": 1,
+      "operation": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 999,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 999,
+        "step": 1
+      },
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "answerMinimum": 0
+  },
+  {
+    "id": "g4-question-d1-2-extra-0",
+    "skillId": "g4-d1-2",
+    "title": "Data types and collection sources",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Compare favourite colour with number of pets. Which is qualitative?",
+        "steps": [
+          "Favourite colour is a category: qualitative data. Number of pets is a count: quantitative data.",
+          "Choose a question before collecting observations."
+        ]
+      },
+      {
+        "prompt": "Compare interviewing classmates with reading a published library survey.",
+        "steps": [
+          "Your own interviews provide primary data; a published survey is secondary data.",
+          "Check the population, date, wording, and source before comparing sets."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "g4-question-e2-1-extra-0",
+    "skillId": "g4-e2-1",
+    "title": "Metric benchmarks and measurement tools",
+    "rule": "metric-units",
+    "parameters": [
+      "attribute",
+      "estimateSeed"
+    ],
+    "example": {
+      "attribute": 0,
+      "estimateSeed": 7
+    }
+  },
+  {
+    "id": "g4-related-division-facts",
+    "skillId": "g4-b2-2",
+    "title": "Related division facts",
+    "rule": "decimal-calculate",
+    "parameters": [
+      "leftUnscaled",
+      "rightUnscaled",
+      "leftPlaces",
+      "rightPlaces",
+      "operation"
+    ],
+    "example": {
+      "leftUnscaled": 56,
+      "rightUnscaled": 8,
+      "leftPlaces": 0,
+      "rightPlaces": 0,
+      "operation": 3
+    },
+    "generation": [
+      [
+        40,
+        48,
+        56,
+        64,
+        72,
+        80
+      ],
+      [
+        8
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        3
+      ]
+    ],
+    "answerMinimum": 0
+  }
+]

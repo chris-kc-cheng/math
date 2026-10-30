@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="190" height="42" viewBox="0 0 190 42" role="img" aria-label="Try Little Math Lab live">
+  <rect x="1" y="1" width="188" height="40" rx="8" fill="#2459a6" stroke="#17457f"/>
+  <path d="M17 13l12 8-12 8z" fill="white"/>
+  <text x="40" y="26" fill="white" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Try it live</text>
+  <path d="M158 15h10v10m0-10l-12 12" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

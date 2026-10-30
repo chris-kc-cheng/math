@@ -1,5 +1,5 @@
 import './style.css';
-import {longDivision} from './long-division.js';
+import {longDivision} from './math/long-division.js';
 import {renderLongDivision} from './long-division-view.js';
 const app=document.querySelector('#app');
 app.innerHTML='<main class="long-division-demo"><nav><a href="./">← Demo</a></nav><h1>Long division</h1><div class="formula-choices"><button data-division="156,12" aria-pressed="true">156 ÷ 12</button><button data-division="784,7" aria-pressed="false">784 ÷ 7</button><button data-division="125,4" aria-pressed="false">125 ÷ 4</button></div><div id="division-board" aria-label="Long division working"></div><p class="division-caption" aria-live="polite"></p><p class="division-answer" aria-live="polite"></p></main>';

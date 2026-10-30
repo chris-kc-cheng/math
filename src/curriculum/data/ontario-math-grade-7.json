@@ -1,0 +1,1531 @@
+{
+  "schemaVersion": 1,
+  "id": "ontario-math-grade-7",
+  "jurisdiction": "Ontario",
+  "grade": 7,
+  "language": "en",
+  "researchedAt": "2026-10-29",
+  "sources": {
+    "number": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/c2dea171-e219-4ec0-b097-24c959fcc924/Number_AODA.pdf",
+    "algebra": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/08f5a14f-576a-4282-af82-096dc302ed10/Algebra_AODA.pdf",
+    "data": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/60e2b2c7-5a7a-4038-bc06-fb88ffd6c861/Data_AODA.pdf",
+    "spatial": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/01b0b598-d5dc-455b-83de-9b7436bcefeb/Spatial_AODA.pdf",
+    "financial": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/8a374255-069f-4539-b020-5737aaf672f9/Financial_AODA.pdf",
+    "learning": "https://www.dcp.edu.gov.on.ca/en/curriculum/elementary-mathematics/grades/g7-math/strands",
+    "board": "https://www2.yrdsb.ca/about-us/director-education/directors-annual-report/board-improvement-plan-math",
+    "boardCurriculum": "https://www2.yrdsb.ca/schools-programs/school-programs-nav/school-programs/mathematics"
+  },
+  "curriculum": {
+    "id": "grade-7",
+    "title": "Grade 7",
+    "description": "Ontario Grade 7 mathematics for YRDSB learners. Representative worked and guided activities support practice; they do not certify mastery.",
+    "children": [
+      {
+        "id": "g7-number",
+        "code": "B",
+        "title": "Number",
+        "source": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/c2dea171-e219-4ec0-b097-24c959fcc924/Number_AODA.pdf",
+        "children": [
+          {
+            "id": "g7-b1-topic",
+            "title": "B1 · Number sense",
+            "children": [
+              {
+                "id": "g7-b1-1",
+                "code": "B1.1",
+                "title": "Whole numbers to one billion",
+                "description": "Represent/compare numbers through one billion using powers of ten.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-b1-2",
+                "code": "B1.2",
+                "title": "Perfect squares and roots",
+                "description": "Identify squares and their exact square roots.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-b1-3",
+                "code": "B1.3",
+                "title": "Order rational numbers",
+                "description": "Compare signed fractions and decimals to thousandths.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-b1-4",
+                "code": "B1.4",
+                "title": "Simplify fractions",
+                "description": "Reduce fractions through equivalent forms.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-b1-5",
+                "code": "B1.5",
+                "title": "Numbers between quantities",
+                "description": "Generate fractions/decimals between two values.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-b1-6",
+                "code": "B1.6",
+                "title": "Round decimals",
+                "description": "Round to tenths, hundredths, or whole numbers.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-b1-7",
+                "code": "B1.7",
+                "title": "Fractions, decimals, percents",
+                "description": "Convert among equivalent rational-number representations.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          },
+          {
+            "id": "g7-b2-topic",
+            "title": "B2 · Operations",
+            "children": [
+              {
+                "id": "g7-b2-1",
+                "code": "B2.1",
+                "title": "Order of operations",
+                "description": "Solve multi-step problems involving numbers, fractions, ratios, rates, and percents.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-b2-2",
+                "code": "B2.2",
+                "title": "Common equivalents",
+                "description": "Recall common fraction/decimal/percent equivalents.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-b2-3",
+                "code": "B2.3",
+                "title": "Percentage changes",
+                "description": "Increase/decrease quantities by common percentages mentally.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-b2-4",
+                "code": "B2.4",
+                "title": "Integer addition and subtraction",
+                "description": "Use models/equations for signed addition/subtraction.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-b2-5",
+                "code": "B2.5",
+                "title": "Fraction addition and subtraction",
+                "description": "Create equivalent fractions to add/subtract.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-b2-6",
+                "code": "B2.6",
+                "title": "GCF and LCM",
+                "description": "Find GCF through 144 and LCM of two or three numbers.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-b2-7",
+                "code": "B2.7",
+                "title": "Exponential notation",
+                "description": "Represent/evaluate repeated multiplication using powers.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-b2-8",
+                "code": "B2.8",
+                "title": "Fraction multiplication and division",
+                "description": "Multiply/divide fractions using tools and reasoning.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-b2-9",
+                "code": "B2.9",
+                "title": "Decimal multiplication and division",
+                "description": "Multiply/divide decimals by decimals.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-b2-10",
+                "code": "B2.10",
+                "title": "Proportional situations",
+                "description": "Distinguish proportional/non-proportional relationships and solve.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g7-algebra",
+        "code": "C",
+        "title": "Algebra",
+        "source": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/08f5a14f-576a-4282-af82-096dc302ed10/Algebra_AODA.pdf",
+        "children": [
+          {
+            "id": "g7-c1-topic",
+            "title": "C1 · Patterns and relationships",
+            "children": [
+              {
+                "id": "g7-c1-1",
+                "code": "C1.1",
+                "title": "Compare pattern rates",
+                "description": "Compare initial values and rates of linear growth with other patterns.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-c1-2",
+                "code": "C1.2",
+                "title": "Represent whole/decimal patterns",
+                "description": "Use tables, graphs, expressions, and equations.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-c1-3",
+                "code": "C1.3",
+                "title": "Extend and solve pattern rules",
+                "description": "Predict missing values and solve unknowns in linear growth.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-c1-4",
+                "code": "C1.4",
+                "title": "Integer relationships",
+                "description": "Create/explain patterns involving integers.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          },
+          {
+            "id": "g7-c2-topic",
+            "title": "C2 · Expressions, equations, and inequalities",
+            "children": [
+              {
+                "id": "g7-c2-1",
+                "code": "C2.1",
+                "title": "Add and subtract monomials",
+                "description": "Combine degree-one monomials with whole-number coefficients.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-c2-2",
+                "code": "C2.2",
+                "title": "Evaluate expressions",
+                "description": "Evaluate whole-number and decimal expressions.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-c2-3",
+                "code": "C2.3",
+                "title": "Solve and verify equations",
+                "description": "Solve multi-term whole/decimal equations and verify.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-c2-4",
+                "code": "C2.4",
+                "title": "Multi-term inequalities",
+                "description": "Solve, graph, and verify inequalities with whole-number terms.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          },
+          {
+            "id": "g7-c3-topic",
+            "title": "C3 · Coding",
+            "children": [
+              {
+                "id": "g7-c3-1",
+                "code": "C3.1",
+                "title": "Code with counts and subprograms",
+                "description": "Write efficient code using counts, subprograms, and control structures.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-c3-2",
+                "code": "C3.2",
+                "title": "Alter and assess subprograms",
+                "description": "Trace effects on code outcomes and efficiency.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          },
+          {
+            "id": "g7-c4-topic",
+            "title": "C4 · Mathematical modelling",
+            "children": [
+              {
+                "id": "g7-c4",
+                "code": "C4",
+                "title": "Mathematical modelling",
+                "description": "Create, test, and revise models for real situations.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g7-data",
+        "code": "D",
+        "title": "Data",
+        "source": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/60e2b2c7-5a7a-4038-bc06-fb88ffd6c861/Data_AODA.pdf",
+        "children": [
+          {
+            "id": "g7-d1-topic",
+            "title": "D1 · Data literacy",
+            "children": [
+              {
+                "id": "g7-d1-1",
+                "code": "D1.1",
+                "title": "Percentage distributions",
+                "description": "Explain how percentages help compare large data sets.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-d1-2",
+                "code": "D1.2",
+                "title": "Organize data as percentages",
+                "description": "Collect and organize data, including percentage distributions.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-d1-3",
+                "code": "D1.3",
+                "title": "Circle graphs",
+                "description": "Choose, construct, and label appropriate displays.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-d1-4",
+                "code": "D1.4",
+                "title": "Data infographics",
+                "description": "Use tables and circle graphs to tell a supported story.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-d1-5",
+                "code": "D1.5",
+                "title": "Adding or removing data",
+                "description": "Describe effects on central measures and distribution.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-d1-6",
+                "code": "D1.6",
+                "title": "Critique data displays",
+                "description": "Interpret displays and challenge misleading presentations.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          },
+          {
+            "id": "g7-d2-topic",
+            "title": "D2 · Probability",
+            "children": [
+              {
+                "id": "g7-d2-1",
+                "code": "D2.1",
+                "title": "Independent and dependent events",
+                "description": "Explain how dependence changes probabilities.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-d2-2",
+                "code": "D2.2",
+                "title": "Compound-event experiments",
+                "description": "Compare theoretical/experimental independent and dependent probabilities.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g7-spatial",
+        "code": "E",
+        "title": "Spatial sense",
+        "source": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/01b0b598-d5dc-455b-83de-9b7436bcefeb/Spatial_AODA.pdf",
+        "children": [
+          {
+            "id": "g7-e1-topic",
+            "title": "E1 · Geometric and spatial reasoning",
+            "children": [
+              {
+                "id": "g7-e1-1",
+                "code": "E1.1",
+                "title": "Classify three-dimensional objects",
+                "description": "Classify prisms, pyramids, and cylinders, including symmetry.",
+                "example": "Compare a rectangular prism, square pyramid, and cylinder."
+              },
+              {
+                "id": "g7-e1-2",
+                "code": "E1.2",
+                "title": "Scaled views",
+                "description": "Draw top, front, side, and perspective views at appropriate scales.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-e1-3",
+                "code": "E1.3",
+                "title": "Dilations and similarity",
+                "description": "Describe similarity and corresponding sides after dilation.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-e1-4",
+                "code": "E1.4",
+                "title": "Cartesian transformations",
+                "description": "Predict translations, reflections, and rotations.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          },
+          {
+            "id": "g7-e2-topic",
+            "title": "E2 · Measurement",
+            "children": [
+              {
+                "id": "g7-e2-1",
+                "code": "E2.1",
+                "title": "Volume and capacity",
+                "description": "Relate cubic centimetres and millilitres.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-e2-2",
+                "code": "E2.2",
+                "title": "Metric measurement problems",
+                "description": "Convert units in perimeter, area, and volume problems.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-e2-3",
+                "code": "E2.3",
+                "title": "Circle circumference",
+                "description": "Connect radius, diameter, and circumference.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-e2-4",
+                "code": "E2.4",
+                "title": "Construct circles",
+                "description": "Use radius, diameter, or circumference to define circles.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-e2-5",
+                "code": "E2.5",
+                "title": "Circle area",
+                "description": "Develop and apply A = πr².",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-e2-6",
+                "code": "E2.6",
+                "title": "Cylinder nets and surface area",
+                "description": "Add the two circular ends and unrolled wall.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-e2-7",
+                "code": "E2.7",
+                "title": "Prism and cylinder volume",
+                "description": "Use base area × height to solve unknown measurements.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g7-financial",
+        "code": "F",
+        "title": "Financial literacy",
+        "source": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/8a374255-069f-4539-b020-5737aaf672f9/Financial_AODA.pdf",
+        "children": [
+          {
+            "id": "g7-f1-topic",
+            "title": "F1 · Money and financial decisions",
+            "children": [
+              {
+                "id": "g7-f1-1",
+                "code": "F1.1",
+                "title": "Currency exchange",
+                "description": "Compare stated exchange rates and convert in both directions.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-f1-2",
+                "code": "F1.2",
+                "title": "Reliable financial information",
+                "description": "Choose credible sources for financial planning.",
+                "example": "Where could you check the cost of a hypothetical savings account?"
+              },
+              {
+                "id": "g7-f1-3",
+                "code": "F1.3",
+                "title": "Longer-term budgets",
+                "description": "Create, track, and revise budgets for goals.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-f1-4",
+                "code": "F1.4",
+                "title": "Financial influences",
+                "description": "Describe societal/personal influences on decisions.",
+                "example": "What could help or delay saving for a bicycle?"
+              },
+              {
+                "id": "g7-f1-5",
+                "code": "F1.5",
+                "title": "Interest over time",
+                "description": "Explain how rates affect saving, investing, and borrowing.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-f1-6",
+                "code": "F1.6",
+                "title": "Compare financial offers",
+                "description": "Compare rates/fees over matching scenarios.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g7-learning",
+        "code": "A",
+        "title": "Learning skills and mathematical processes",
+        "source": "https://www.dcp.edu.gov.on.ca/en/curriculum/elementary-mathematics/grades/g7-math/strands",
+        "children": [
+          {
+            "id": "g7-a1-topic",
+            "title": "A1 · Learning skills and mathematical processes",
+            "children": [
+              {
+                "id": "g7-a1-1",
+                "code": "A1.1",
+                "title": "Manage emotions",
+                "description": "Recognize emotions and choose helpful actions.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-a1-2",
+                "code": "A1.2",
+                "title": "Cope with challenges",
+                "description": "Choose tools and support when stuck.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-a1-3",
+                "code": "A1.3",
+                "title": "Persist and stay motivated",
+                "description": "Try new representations and reflect on progress.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-a1-4",
+                "code": "A1.4",
+                "title": "Collaborate and communicate",
+                "description": "Explain reasoning and listen respectfully.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-a1-5",
+                "code": "A1.5",
+                "title": "Confidence and self-awareness",
+                "description": "Notice strengths and set next goals.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g7-a1-6",
+                "code": "A1.6",
+                "title": "Critical and creative thinking",
+                "description": "Estimate, reason, check, and consider alternatives.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "suggestedSequence": [
+    [
+      "Number foundations",
+      "Build place value, representation, and operation reasoning."
+    ],
+    [
+      "Patterns and relationships",
+      "Connect number work to patterns, expressions, and equations."
+    ],
+    [
+      "Measurement and spatial reasoning",
+      "Apply number skills to units, shapes, and transformations."
+    ],
+    [
+      "Data and probability",
+      "Collect, represent, interpret, and question evidence."
+    ],
+    [
+      "Financial applications",
+      "Use number and data skills in stated classroom financial scenarios."
+    ],
+    [
+      "Across all strands",
+      "Revisit coding, modelling, communication, and reflection throughout."
+    ]
+  ],
+  "activities": [
+    {
+      "id": "activity-g7-question-b1-1",
+      "title": "Whole numbers to one billion",
+      "skillIds": [
+        "g7-b1-1"
+      ],
+      "href": "./curriculum.html?grade=7#g7-b1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-b1-1"
+      ]
+    },
+    {
+      "id": "activity-g7-question-b1-2",
+      "title": "Perfect squares and roots",
+      "skillIds": [
+        "g7-b1-2"
+      ],
+      "href": "./curriculum.html?grade=7#g7-b1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-b1-2"
+      ]
+    },
+    {
+      "id": "activity-g7-question-b1-3",
+      "title": "Order rational numbers",
+      "skillIds": [
+        "g7-b1-3"
+      ],
+      "href": "./curriculum.html?grade=7#g7-b1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-b1-3"
+      ]
+    },
+    {
+      "id": "activity-g7-question-b1-4",
+      "title": "Simplify fractions",
+      "skillIds": [
+        "g7-b1-4"
+      ],
+      "href": "./curriculum.html?grade=7#g7-b1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-b1-4"
+      ]
+    },
+    {
+      "id": "activity-g7-question-b1-5",
+      "title": "Numbers between quantities",
+      "skillIds": [
+        "g7-b1-5"
+      ],
+      "href": "./curriculum.html?grade=7#g7-b1-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-b1-5"
+      ]
+    },
+    {
+      "id": "activity-g7-question-b1-6",
+      "title": "Round decimals",
+      "skillIds": [
+        "g7-b1-6"
+      ],
+      "href": "./curriculum.html?grade=7#g7-b1-6",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-b1-6"
+      ]
+    },
+    {
+      "id": "activity-g7-question-b1-7",
+      "title": "Fractions, decimals, percents",
+      "skillIds": [
+        "g7-b1-7"
+      ],
+      "href": "./curriculum.html?grade=7#g7-b1-7",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-b1-7"
+      ]
+    },
+    {
+      "id": "activity-g7-question-b2-1",
+      "title": "Order of operations",
+      "skillIds": [
+        "g7-b2-1"
+      ],
+      "href": "./curriculum.html?grade=7#g7-b2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-b2-1"
+      ]
+    },
+    {
+      "id": "activity-g7-question-b2-2",
+      "title": "Common equivalents",
+      "skillIds": [
+        "g7-b2-2"
+      ],
+      "href": "./curriculum.html?grade=7#g7-b2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-b2-2"
+      ]
+    },
+    {
+      "id": "activity-g7-question-b2-3",
+      "title": "Percentage changes",
+      "skillIds": [
+        "g7-b2-3"
+      ],
+      "href": "./curriculum.html?grade=7#g7-b2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-b2-3"
+      ]
+    },
+    {
+      "id": "activity-g7-question-b2-4",
+      "title": "Integer addition and subtraction",
+      "skillIds": [
+        "g7-b2-4"
+      ],
+      "href": "./curriculum.html?grade=7#g7-b2-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-b2-4"
+      ]
+    },
+    {
+      "id": "activity-g7-question-b2-5",
+      "title": "Fraction addition and subtraction",
+      "skillIds": [
+        "g7-b2-5"
+      ],
+      "href": "./curriculum.html?grade=7#g7-b2-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-b2-5"
+      ]
+    },
+    {
+      "id": "activity-g7-question-b2-6",
+      "title": "GCF and LCM",
+      "skillIds": [
+        "g7-b2-6"
+      ],
+      "href": "./curriculum.html?grade=7#g7-b2-6",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-b2-6"
+      ]
+    },
+    {
+      "id": "activity-g7-question-b2-7",
+      "title": "Exponential notation",
+      "skillIds": [
+        "g7-b2-7"
+      ],
+      "href": "./curriculum.html?grade=7#g7-b2-7",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-b2-7"
+      ]
+    },
+    {
+      "id": "activity-g7-question-b2-8",
+      "title": "Fraction multiplication and division",
+      "skillIds": [
+        "g7-b2-8"
+      ],
+      "href": "./curriculum.html?grade=7#g7-b2-8",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-b2-8"
+      ]
+    },
+    {
+      "id": "activity-g7-question-b2-9",
+      "title": "Decimal multiplication and division",
+      "skillIds": [
+        "g7-b2-9"
+      ],
+      "href": "./curriculum.html?grade=7#g7-b2-9",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-b2-9"
+      ]
+    },
+    {
+      "id": "activity-g7-question-b2-10",
+      "title": "Proportional situations",
+      "skillIds": [
+        "g7-b2-10"
+      ],
+      "href": "./curriculum.html?grade=7#g7-b2-10",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-b2-10"
+      ]
+    },
+    {
+      "id": "activity-g7-question-c1-1",
+      "title": "Compare pattern rates",
+      "skillIds": [
+        "g7-c1-1"
+      ],
+      "href": "./curriculum.html?grade=7#g7-c1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-c1-1"
+      ]
+    },
+    {
+      "id": "activity-g7-question-c1-2",
+      "title": "Represent whole/decimal patterns",
+      "skillIds": [
+        "g7-c1-2"
+      ],
+      "href": "./curriculum.html?grade=7#g7-c1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-c1-2"
+      ]
+    },
+    {
+      "id": "activity-g7-question-c1-3",
+      "title": "Extend and solve pattern rules",
+      "skillIds": [
+        "g7-c1-3"
+      ],
+      "href": "./curriculum.html?grade=7#g7-c1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-c1-3"
+      ]
+    },
+    {
+      "id": "activity-g7-question-c1-4",
+      "title": "Integer relationships",
+      "skillIds": [
+        "g7-c1-4"
+      ],
+      "href": "./curriculum.html?grade=7#g7-c1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-c1-4"
+      ]
+    },
+    {
+      "id": "activity-g7-question-c2-1",
+      "title": "Add and subtract monomials",
+      "skillIds": [
+        "g7-c2-1"
+      ],
+      "href": "./curriculum.html?grade=7#g7-c2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-c2-1"
+      ]
+    },
+    {
+      "id": "activity-g7-question-c2-2",
+      "title": "Evaluate expressions",
+      "skillIds": [
+        "g7-c2-2"
+      ],
+      "href": "./curriculum.html?grade=7#g7-c2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-c2-2"
+      ]
+    },
+    {
+      "id": "activity-g7-question-c2-3",
+      "title": "Solve and verify equations",
+      "skillIds": [
+        "g7-c2-3"
+      ],
+      "href": "./curriculum.html?grade=7#g7-c2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-c2-3"
+      ]
+    },
+    {
+      "id": "activity-g7-question-c2-4",
+      "title": "Multi-term inequalities",
+      "skillIds": [
+        "g7-c2-4"
+      ],
+      "href": "./curriculum.html?grade=7#g7-c2-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-c2-4"
+      ]
+    },
+    {
+      "id": "activity-g7-question-c3-1",
+      "title": "Code with counts and subprograms",
+      "skillIds": [
+        "g7-c3-1"
+      ],
+      "href": "./curriculum.html?grade=7#g7-c3-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-c3-1"
+      ]
+    },
+    {
+      "id": "activity-g7-question-c3-2",
+      "title": "Alter and assess subprograms",
+      "skillIds": [
+        "g7-c3-2"
+      ],
+      "href": "./curriculum.html?grade=7#g7-c3-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-c3-2"
+      ]
+    },
+    {
+      "id": "activity-g7-question-c4",
+      "title": "Mathematical modelling",
+      "skillIds": [
+        "g7-c4"
+      ],
+      "href": "./curriculum.html?grade=7#g7-c4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-c4"
+      ]
+    },
+    {
+      "id": "activity-g7-question-d1-1",
+      "title": "Percentage distributions",
+      "skillIds": [
+        "g7-d1-1"
+      ],
+      "href": "./curriculum.html?grade=7#g7-d1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-d1-1"
+      ]
+    },
+    {
+      "id": "activity-g7-question-d1-2",
+      "title": "Organize data as percentages",
+      "skillIds": [
+        "g7-d1-2"
+      ],
+      "href": "./curriculum.html?grade=7#g7-d1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-d1-2"
+      ]
+    },
+    {
+      "id": "activity-g7-question-d1-3",
+      "title": "Circle graphs",
+      "skillIds": [
+        "g7-d1-3"
+      ],
+      "href": "./curriculum.html?grade=7#g7-d1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-d1-3"
+      ]
+    },
+    {
+      "id": "activity-g7-question-d1-4",
+      "title": "Data infographics",
+      "skillIds": [
+        "g7-d1-4"
+      ],
+      "href": "./curriculum.html?grade=7#g7-d1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-d1-4"
+      ]
+    },
+    {
+      "id": "activity-g7-question-d1-5",
+      "title": "Adding or removing data",
+      "skillIds": [
+        "g7-d1-5"
+      ],
+      "href": "./curriculum.html?grade=7#g7-d1-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-d1-5"
+      ]
+    },
+    {
+      "id": "activity-g7-question-d1-6",
+      "title": "Critique data displays",
+      "skillIds": [
+        "g7-d1-6"
+      ],
+      "href": "./curriculum.html?grade=7#g7-d1-6",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-d1-6"
+      ]
+    },
+    {
+      "id": "activity-g7-question-d2-1",
+      "title": "Independent and dependent events",
+      "skillIds": [
+        "g7-d2-1"
+      ],
+      "href": "./curriculum.html?grade=7#g7-d2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-d2-1"
+      ]
+    },
+    {
+      "id": "activity-g7-question-d2-2",
+      "title": "Compound-event experiments",
+      "skillIds": [
+        "g7-d2-2"
+      ],
+      "href": "./curriculum.html?grade=7#g7-d2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-d2-2"
+      ]
+    },
+    {
+      "id": "activity-g7-question-e1-1",
+      "title": "Classify three-dimensional objects",
+      "skillIds": [
+        "g7-e1-1"
+      ],
+      "href": "./curriculum.html?grade=7#g7-e1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-e1-1"
+      ]
+    },
+    {
+      "id": "activity-g7-question-e1-2",
+      "title": "Scaled views",
+      "skillIds": [
+        "g7-e1-2"
+      ],
+      "href": "./curriculum.html?grade=7#g7-e1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-e1-2"
+      ]
+    },
+    {
+      "id": "activity-g7-question-e1-3",
+      "title": "Dilations and similarity",
+      "skillIds": [
+        "g7-e1-3"
+      ],
+      "href": "./curriculum.html?grade=7#g7-e1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-e1-3"
+      ]
+    },
+    {
+      "id": "activity-g7-question-e1-4",
+      "title": "Cartesian transformations",
+      "skillIds": [
+        "g7-e1-4"
+      ],
+      "href": "./curriculum.html?grade=7#g7-e1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-e1-4"
+      ]
+    },
+    {
+      "id": "activity-g7-question-e2-1",
+      "title": "Volume and capacity",
+      "skillIds": [
+        "g7-e2-1"
+      ],
+      "href": "./curriculum.html?grade=7#g7-e2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-e2-1"
+      ]
+    },
+    {
+      "id": "activity-g7-question-e2-2",
+      "title": "Metric measurement problems",
+      "skillIds": [
+        "g7-e2-2"
+      ],
+      "href": "./curriculum.html?grade=7#g7-e2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-e2-2"
+      ]
+    },
+    {
+      "id": "activity-g7-question-e2-3",
+      "title": "Circle circumference",
+      "skillIds": [
+        "g7-e2-3"
+      ],
+      "href": "./curriculum.html?grade=7#g7-e2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-e2-3"
+      ]
+    },
+    {
+      "id": "activity-g7-question-e2-4",
+      "title": "Construct circles",
+      "skillIds": [
+        "g7-e2-4"
+      ],
+      "href": "./curriculum.html?grade=7#g7-e2-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-e2-4"
+      ]
+    },
+    {
+      "id": "activity-g7-question-e2-5",
+      "title": "Circle area",
+      "skillIds": [
+        "g7-e2-5"
+      ],
+      "href": "./curriculum.html?grade=7#g7-e2-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-e2-5"
+      ]
+    },
+    {
+      "id": "activity-g7-question-e2-6",
+      "title": "Cylinder nets and surface area",
+      "skillIds": [
+        "g7-e2-6"
+      ],
+      "href": "./curriculum.html?grade=7#g7-e2-6",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-e2-6"
+      ]
+    },
+    {
+      "id": "activity-g7-question-e2-7",
+      "title": "Prism and cylinder volume",
+      "skillIds": [
+        "g7-e2-7"
+      ],
+      "href": "./curriculum.html?grade=7#g7-e2-7",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-e2-7"
+      ]
+    },
+    {
+      "id": "activity-g7-question-f1-1",
+      "title": "Currency exchange",
+      "skillIds": [
+        "g7-f1-1"
+      ],
+      "href": "./curriculum.html?grade=7#g7-f1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-f1-1"
+      ]
+    },
+    {
+      "id": "activity-g7-question-f1-2",
+      "title": "Reliable financial information",
+      "skillIds": [
+        "g7-f1-2"
+      ],
+      "href": "./curriculum.html?grade=7#g7-f1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-f1-2"
+      ]
+    },
+    {
+      "id": "activity-g7-question-f1-3",
+      "title": "Longer-term budgets",
+      "skillIds": [
+        "g7-f1-3"
+      ],
+      "href": "./curriculum.html?grade=7#g7-f1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-f1-3"
+      ]
+    },
+    {
+      "id": "activity-g7-question-f1-4",
+      "title": "Financial influences",
+      "skillIds": [
+        "g7-f1-4"
+      ],
+      "href": "./curriculum.html?grade=7#g7-f1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-f1-4"
+      ]
+    },
+    {
+      "id": "activity-g7-question-f1-5",
+      "title": "Interest over time",
+      "skillIds": [
+        "g7-f1-5"
+      ],
+      "href": "./curriculum.html?grade=7#g7-f1-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-f1-5"
+      ]
+    },
+    {
+      "id": "activity-g7-question-f1-6",
+      "title": "Compare financial offers",
+      "skillIds": [
+        "g7-f1-6"
+      ],
+      "href": "./curriculum.html?grade=7#g7-f1-6",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-f1-6"
+      ]
+    },
+    {
+      "id": "activity-g7-question-a1-1",
+      "title": "Manage emotions",
+      "skillIds": [
+        "g7-a1-1"
+      ],
+      "href": "./curriculum.html?grade=7#g7-a1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-a1-1"
+      ]
+    },
+    {
+      "id": "activity-g7-question-a1-2",
+      "title": "Cope with challenges",
+      "skillIds": [
+        "g7-a1-2"
+      ],
+      "href": "./curriculum.html?grade=7#g7-a1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-a1-2"
+      ]
+    },
+    {
+      "id": "activity-g7-question-a1-3",
+      "title": "Persist and stay motivated",
+      "skillIds": [
+        "g7-a1-3"
+      ],
+      "href": "./curriculum.html?grade=7#g7-a1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-a1-3"
+      ]
+    },
+    {
+      "id": "activity-g7-question-a1-4",
+      "title": "Collaborate and communicate",
+      "skillIds": [
+        "g7-a1-4"
+      ],
+      "href": "./curriculum.html?grade=7#g7-a1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-a1-4"
+      ]
+    },
+    {
+      "id": "activity-g7-question-a1-5",
+      "title": "Confidence and self-awareness",
+      "skillIds": [
+        "g7-a1-5"
+      ],
+      "href": "./curriculum.html?grade=7#g7-a1-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-a1-5"
+      ]
+    },
+    {
+      "id": "activity-g7-question-a1-6",
+      "title": "Critical and creative thinking",
+      "skillIds": [
+        "g7-a1-6"
+      ],
+      "href": "./curriculum.html?grade=7#g7-a1-6",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-a1-6"
+      ]
+    },
+    {
+      "id": "activity-g7-question-e2-7-extra-0",
+      "title": "Cylinder volume and base area",
+      "skillIds": [
+        "g7-e2-7"
+      ],
+      "href": "./curriculum.html?grade=7#g7-e2-7",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-e2-7-extra-0"
+      ]
+    },
+    {
+      "id": "activity-g7-question-d1-4-extra-0",
+      "title": "Build an infographic",
+      "skillIds": [
+        "g7-d1-4"
+      ],
+      "href": "./curriculum.html?grade=7#g7-d1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-d1-4-extra-0"
+      ]
+    },
+    {
+      "id": "activity-g7-question-f1-3-extra-0",
+      "title": "Track a sample budget",
+      "skillIds": [
+        "g7-f1-3"
+      ],
+      "href": "./curriculum.html?grade=7#g7-f1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-f1-3-extra-0"
+      ]
+    },
+    {
+      "id": "activity-g7-question-c1-1-extra-0",
+      "title": "Repeating, growing, and shrinking patterns",
+      "skillIds": [
+        "g7-c1-1"
+      ],
+      "href": "./curriculum.html?grade=7#g7-c1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g7-question-c1-1-extra-0"
+      ]
+    }
+  ]
+}

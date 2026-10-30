@@ -1,0 +1,2120 @@
+{
+  "description": "Captured before shared-operation refactor: complete lesson output, including captions, diagrams and board snapshots.",
+  "practice": [
+    {
+      "id": "mixed-to-fraction",
+      "values": [
+        2,
+        1,
+        3
+      ],
+      "sha256": "efe9cfbaa6e776bd8150fb4651a7a51b64aa99351e44d10886e9fad1e6b205fe"
+    },
+    {
+      "id": "mixed-to-fraction",
+      "values": [
+        4,
+        1,
+        8
+      ],
+      "sha256": "1a4362b59a6cac18f8859e830d50c17ac78bc10b6b42745152f5dbdd58c87ded"
+    },
+    {
+      "id": "mixed-to-fraction",
+      "values": [
+        5,
+        7,
+        9
+      ],
+      "sha256": "811c04dd0e2317adf768d4c753e70a12a8eef81945e462d923e84f373a21f481"
+    },
+    {
+      "id": "fraction-to-mixed",
+      "values": [
+        7,
+        3
+      ],
+      "sha256": "1b3abf883244c31ba7daf6a0c1faa4a7797dea66c7ebb5498abcfcdfff1bdb99"
+    },
+    {
+      "id": "fraction-to-mixed",
+      "values": [
+        22,
+        7
+      ],
+      "sha256": "150a4b129de7bc88c8353e75363d2ae635c982eb5ae6dfa5e654982b2ece9633"
+    },
+    {
+      "id": "fraction-to-mixed",
+      "values": [
+        25,
+        6
+      ],
+      "sha256": "aded264a88533dc64883c11f99744802017c628df38e66b71d285785b614e418"
+    },
+    {
+      "id": "multiply-then-add",
+      "values": [
+        2,
+        3,
+        4
+      ],
+      "sha256": "34636d1629218c228d7f1bd746db96324488d4ff9f5729b1414e5b478b8d2225"
+    },
+    {
+      "id": "multiply-then-add",
+      "values": [
+        18,
+        7,
+        5
+      ],
+      "sha256": "351a64ac0e73c3be425bace73d48282f0ef91557b3445e73e1248f260e725e7d"
+    },
+    {
+      "id": "multiply-then-add",
+      "values": [
+        16,
+        5,
+        3
+      ],
+      "sha256": "0be9498175a210794565df6951a6c69950d0e51a12e2c69b2989589b48033701"
+    },
+    {
+      "id": "multiplication-facts",
+      "values": [
+        8,
+        7
+      ],
+      "sha256": "69a6e88e115e6278eb4344c5bd6301b8017fe9b8e251cd1bbafb1c77133478b2"
+    },
+    {
+      "id": "multiplication-facts",
+      "values": [
+        7,
+        9
+      ],
+      "sha256": "f9d482e818d04a46a3e65822a5adeb4d7e45e02957771e2834c473f3e1da89b1"
+    },
+    {
+      "id": "multiplication-facts",
+      "values": [
+        8,
+        8
+      ],
+      "sha256": "95f0571ff226f9f138d6c840a5812d3b372b374c865468821c97b2cd572562ae"
+    },
+    {
+      "id": "division-facts",
+      "values": [
+        56,
+        8
+      ],
+      "sha256": "43d6a7295305524dfbd1e7ec33f7322dbc94cbeec5b077e9c1f52f5ce83f56a5"
+    },
+    {
+      "id": "division-facts",
+      "values": [
+        56,
+        8
+      ],
+      "sha256": "43d6a7295305524dfbd1e7ec33f7322dbc94cbeec5b077e9c1f52f5ce83f56a5"
+    },
+    {
+      "id": "division-facts",
+      "values": [
+        44,
+        4
+      ],
+      "sha256": "addc874e9f41b3f77ab0a6309ebf6dd7e4f14e59b131c6680cb331b01967d220"
+    },
+    {
+      "id": "decimal-addition",
+      "values": [
+        2475,
+        860
+      ],
+      "sha256": "8b3b168c4d63bf17aab9607098f43dfd0f3549093100fb77ce36e2432cb15e84"
+    },
+    {
+      "id": "decimal-addition",
+      "values": [
+        1383,
+        345
+      ],
+      "sha256": "84af6fad5e6f214c5760cda9db0dcad08c562c34f298d95ee573aaf8482aa724"
+    },
+    {
+      "id": "decimal-addition",
+      "values": [
+        4714,
+        281
+      ],
+      "sha256": "44690cd632502759af47863e51a4d57315d5808b8e3f73574008218f71b3a8cf"
+    },
+    {
+      "id": "decimal-subtraction",
+      "values": [
+        2475,
+        860
+      ],
+      "sha256": "5d5993f8594b923c08ae5163b2d297430c4211714bd50de1a99427a11869a6b5"
+    },
+    {
+      "id": "decimal-subtraction",
+      "values": [
+        1134,
+        924
+      ],
+      "sha256": "29ed26f5bfcdcb57166d4adc3fd8b7ea5ff686567805ad923b882b77929f5540"
+    },
+    {
+      "id": "decimal-subtraction",
+      "values": [
+        4523,
+        340
+      ],
+      "sha256": "3e9905d88392bb3145789ed78be7fff4c6968f78bf1aef70a774317c573d9e08"
+    },
+    {
+      "id": "like-fraction-addition",
+      "values": [
+        2,
+        1,
+        5
+      ],
+      "sha256": "4e1c8f24910a3d5a85dd472ea50d7528ae844d7ba644e318f39c41bdd4f0276d"
+    },
+    {
+      "id": "like-fraction-addition",
+      "values": [
+        3,
+        2,
+        4
+      ],
+      "sha256": "b5cd99be5f5d51c5c99d652992ce60241ddfe04036643dcabdaa823c5b4d87e1"
+    },
+    {
+      "id": "like-fraction-addition",
+      "values": [
+        3,
+        2,
+        7
+      ],
+      "sha256": "8bdd9a604323f43e545ad8d1069034a9779eda768c3ab77b74b3614102518d0f"
+    },
+    {
+      "id": "long-multiplication",
+      "values": [
+        24,
+        13
+      ],
+      "sha256": "687add2a6f2cb82aafad0e32e2fe460a5b94a8385745cd490b572172b0df0251"
+    },
+    {
+      "id": "long-multiplication",
+      "values": [
+        36,
+        77
+      ],
+      "sha256": "5fb1ba0748847e3e0b76f55f24b5e0d44cc1122c2aa1ce0b75e1e2ee13f82af3"
+    },
+    {
+      "id": "long-multiplication",
+      "values": [
+        20,
+        59
+      ],
+      "sha256": "dc04b9abbd06618f7f8a19e03f4972760690650fd0bb06342eb1ad59022e0fc0"
+    },
+    {
+      "id": "long-division",
+      "values": [
+        156,
+        12
+      ],
+      "sha256": "39a63b9af926da29c8386581464d6b31c25fdd7fc0fc1b6f3c94d34f449b4005"
+    },
+    {
+      "id": "long-division",
+      "values": [
+        302,
+        20
+      ],
+      "sha256": "37c993972c6d79c1b51270714becd2fef38ee558ac59f024ad9896986a5c474d"
+    },
+    {
+      "id": "long-division",
+      "values": [
+        558,
+        30
+      ],
+      "sha256": "6367bb4491263e498367afe3a7d244899287afdabeda5db4d62c833861c300ce"
+    },
+    {
+      "id": "equation-addition",
+      "values": [
+        68,
+        95
+      ],
+      "sha256": "9db3b5ef077139b814153da9c70ee5bfc1c214a414045066cb5830ab1e9bc3a8"
+    },
+    {
+      "id": "equation-addition",
+      "values": [
+        5,
+        7
+      ],
+      "sha256": "cb9aba77910d6389b1cfa24a85db4df3314e8ec76831bf244f87d191914f2199"
+    },
+    {
+      "id": "equation-addition",
+      "values": [
+        4,
+        34
+      ],
+      "sha256": "c2d410ada722e0e07fbebdffd9e7c31532a3a29a530832ae31addca1de2fc881"
+    },
+    {
+      "id": "equation-multiplication",
+      "values": [
+        3,
+        18
+      ],
+      "sha256": "9def463d2d5af8379a097d54fedb9df63fc8d44f072ff2f699bb4d1c6ac79258"
+    },
+    {
+      "id": "equation-multiplication",
+      "values": [
+        5,
+        30
+      ],
+      "sha256": "2304b29b0495bf9b1cb8939390da07e24b32e02c6851ab5871dbc37108a835e1"
+    },
+    {
+      "id": "equation-multiplication",
+      "values": [
+        8,
+        24
+      ],
+      "sha256": "e22583f879e02c183cc8d3150c4e7527d77f4b4906d51ee094d506009007b409"
+    },
+    {
+      "id": "equation-two-steps",
+      "values": [
+        2,
+        3,
+        11
+      ],
+      "sha256": "6c60ea07701906cdd892639d8139b61ee791db7c811cfe676e74560294538c4d"
+    },
+    {
+      "id": "equation-two-steps",
+      "values": [
+        2,
+        1,
+        11
+      ],
+      "sha256": "9ee3b0692f0c72d287ac17de19cdbdefd4dd92bdce908aea121c83f773bb5113"
+    },
+    {
+      "id": "equation-two-steps",
+      "values": [
+        3,
+        7,
+        13
+      ],
+      "sha256": "f43971a89efdf522b418463060fa4c1e8124f05fcbd0c5aa0a64002ddc14b898"
+    },
+    {
+      "id": "grade5-place-value",
+      "values": [
+        48306
+      ],
+      "sha256": "2f6552b677f757cf08bcc55bbde0fb24be6ccb376b2c6513c55ad48c0f2a4ca6"
+    },
+    {
+      "id": "grade5-place-value",
+      "values": [
+        36665
+      ],
+      "sha256": "883f6fd2abc2343d380aaa3ff217f530bc6f8e77a0a88c0d1febdd06c1ef8631"
+    },
+    {
+      "id": "grade5-place-value",
+      "values": [
+        36706
+      ],
+      "sha256": "d0e5f82e42cfe8ae0c4421fac9d42edf1cb307bc10bd0e0ccca32de2b63513a0"
+    },
+    {
+      "id": "grade5-order-whole",
+      "values": [
+        54090,
+        54900,
+        45900
+      ],
+      "sha256": "b878d7bd603e345e8fea6e08b2f345d16e223eba18445e04d228fc822b886922"
+    },
+    {
+      "id": "grade5-order-whole",
+      "values": [
+        25931,
+        94502,
+        86813
+      ],
+      "sha256": "9d4556ad910586dc204a1767bf2dbfdb2d586eaae6731fc2effe2fbcb43fef89"
+    },
+    {
+      "id": "grade5-order-whole",
+      "values": [
+        2799,
+        62978,
+        90722
+      ],
+      "sha256": "53d3902473485bb0ff1d7aeef02c7ad79d9c3d907763805663b627b28b4b04cb"
+    },
+    {
+      "id": "grade5-equivalent-fraction",
+      "values": [
+        3,
+        4,
+        2
+      ],
+      "sha256": "89ad7357ece9b6754da841474f5c796daf258868ac94e6e3f0824bf8206a60d1"
+    },
+    {
+      "id": "grade5-equivalent-fraction",
+      "values": [
+        2,
+        2,
+        2
+      ],
+      "sha256": "0d143b8e5ffeeef42bf37ddb89b7d811c2f1afd1eb3c4862ee4bc2ee888d9e9c"
+    },
+    {
+      "id": "grade5-equivalent-fraction",
+      "values": [
+        7,
+        5,
+        2
+      ],
+      "sha256": "cf18159bc291ad23e5d8eb746305cb0f900fedca93d5820cc05ffa053ae5c17e"
+    },
+    {
+      "id": "grade5-compare-fractions",
+      "values": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "sha256": "9fe0f4d4323ff044fa62d450376f0b85f1d669d0bd5e29a5168815e9901bec56"
+    },
+    {
+      "id": "grade5-compare-fractions",
+      "values": [
+        3,
+        6,
+        1,
+        6
+      ],
+      "sha256": "5b38b6a3e9ce97dd4ef322f70b0d165b5ddc44b4c53274cf5661247c0a6153ba"
+    },
+    {
+      "id": "grade5-compare-fractions",
+      "values": [
+        12,
+        10,
+        13,
+        10
+      ],
+      "sha256": "bf17e6b82b81789da0368dc4300975e187f2b34d5b945fb0a0797f98c61a3cd9"
+    },
+    {
+      "id": "grade5-order-decimals",
+      "values": [
+        70,
+        7,
+        77
+      ],
+      "sha256": "70277d6c6184e0a42a1c08c21972204c21bf292eb55693e9905f931ee4086eee"
+    },
+    {
+      "id": "grade5-order-decimals",
+      "values": [
+        4376,
+        3702,
+        1576
+      ],
+      "sha256": "b5ac95e288bbe9eeb0ae56f3ad41b6a535259c6c4e72cf690452d3cf8f403a8b"
+    },
+    {
+      "id": "grade5-order-decimals",
+      "values": [
+        6334,
+        600,
+        5294
+      ],
+      "sha256": "7c58b02accb404a2167f06ba8d1e65fdddcac6e8fe85d78cfafa317dc96f94da"
+    },
+    {
+      "id": "grade5-round-tenth",
+      "values": [
+        347
+      ],
+      "sha256": "33d9a0f7e7ebc129692dd3b452154676f9d405b17822c6aaa3896d5182de9a89"
+    },
+    {
+      "id": "grade5-round-tenth",
+      "values": [
+        1656
+      ],
+      "sha256": "959a6ca5a1bf2014db4f2f23886cdbe1cb1c572adf0ea797ccdce3cc7c46a8df"
+    },
+    {
+      "id": "grade5-round-tenth",
+      "values": [
+        6444
+      ],
+      "sha256": "5bebb1cb92cb4cf3e252b4bee1422f98f1adb9b00397f53b79eac823191ef992"
+    },
+    {
+      "id": "grade5-fraction-percent",
+      "values": [
+        1,
+        2
+      ],
+      "sha256": "282eee425efd9df3bb9e42d4a8dbc5df27aaefa8e8a69db614a474619b01c0c9"
+    },
+    {
+      "id": "grade5-fraction-percent",
+      "values": [
+        2,
+        20
+      ],
+      "sha256": "75181751d3beb41fabab61974e4ce5210b6c3fad7a2a87ddf62686eda3a03035"
+    },
+    {
+      "id": "grade5-fraction-percent",
+      "values": [
+        8,
+        10
+      ],
+      "sha256": "989f80a822a351b74aaf93ddec3ef066d2102a6acf4b1151bc7bb7c6cc43a4ea"
+    },
+    {
+      "id": "grade5-mental-scale",
+      "values": [
+        460,
+        2
+      ],
+      "sha256": "086b7195c9c4a3d93c52166eb333ca2c4c52adb2d29dec3675227e99c8881987"
+    },
+    {
+      "id": "grade5-mental-scale",
+      "values": [
+        5682,
+        2
+      ],
+      "sha256": "b9c6f12942dfa8edd71e7887fe06b9c2655d6089544951bf549f097727eec955"
+    },
+    {
+      "id": "grade5-mental-scale",
+      "values": [
+        7782,
+        2
+      ],
+      "sha256": "c5bb6cfc71eba47a54569ebfbe87b5cafc61699258c47edf8f323453d540258c"
+    },
+    {
+      "id": "grade5-estimate-decimals",
+      "values": [
+        2475,
+        860,
+        0
+      ],
+      "sha256": "b5159feff540e676714fbf445a582335d85b20a6f37e9a73e21b7b5b1b7eea33"
+    },
+    {
+      "id": "grade5-estimate-decimals",
+      "values": [
+        3035,
+        3932,
+        0
+      ],
+      "sha256": "a8641f453b41c836bc6e9b5576eb77febd8ce12e35a4b86e9b104193818d698d"
+    },
+    {
+      "id": "grade5-estimate-decimals",
+      "values": [
+        2509,
+        1916,
+        0
+      ],
+      "sha256": "d6bcdfad47a3096330a5684d06eba4a60f35c3afa9fb0cbcf9d89b388cbed6a8"
+    },
+    {
+      "id": "grade5-whole-add-subtract",
+      "values": [
+        24365,
+        12947,
+        0
+      ],
+      "sha256": "4dcf4999bdddb663d21b99e83ae6dd656d1cb4a430375b73da9d73fc75b6f13f"
+    },
+    {
+      "id": "grade5-whole-add-subtract",
+      "values": [
+        12164,
+        19997,
+        1
+      ],
+      "sha256": "e63360990e99bdce7a6a01baf372f175fdf614a418b9a1940cc937c9e814c4df"
+    },
+    {
+      "id": "grade5-whole-add-subtract",
+      "values": [
+        11433,
+        47853,
+        1
+      ],
+      "sha256": "40717f2bd844f19ba471b72089d981692334d70b40c94149762e629527cf72ee"
+    },
+    {
+      "id": "grade5-fraction-subtract",
+      "values": [
+        4,
+        1,
+        5
+      ],
+      "sha256": "71171883d722c62e97ce06a75a6a02569adbcd47784bd25c6035720996255ffa"
+    },
+    {
+      "id": "grade5-fraction-subtract",
+      "values": [
+        11,
+        1,
+        12
+      ],
+      "sha256": "6893a67fb7c4a79f9f83aa83a136f50b955f1a18bd89087b236672c4c94feb66"
+    },
+    {
+      "id": "grade5-fraction-subtract",
+      "values": [
+        3,
+        0,
+        2
+      ],
+      "sha256": "5c7f487c65ea0c31b07c3831d46dc372b7e6a22769924eedb1709a34dbe0028b"
+    },
+    {
+      "id": "grade5-multiplication-area",
+      "values": [
+        24,
+        13
+      ],
+      "sha256": "60a4f4ac59a2a9d772a7329493983400a954d360a971acc2f10927d7fae2cf87"
+    },
+    {
+      "id": "grade5-multiplication-area",
+      "values": [
+        19,
+        76
+      ],
+      "sha256": "d972d7ebe0e11d23911945e1dee549814b7b56b17382bd773e561b3e7881acc4"
+    },
+    {
+      "id": "grade5-multiplication-area",
+      "values": [
+        59,
+        82
+      ],
+      "sha256": "b6ca08fd47057b47c9f94118061d14d52a100754089f5b2d6e821e630785693d"
+    },
+    {
+      "id": "grade5-division-area",
+      "values": [
+        156,
+        12
+      ],
+      "sha256": "f50315c2d724af7c4d4f99774a3c943b67f26e40d6ead0801134a881b83a346d"
+    },
+    {
+      "id": "grade5-division-area",
+      "values": [
+        705,
+        23
+      ],
+      "sha256": "bca146fe9ce9f0c0d5008c119fcc0f318cbfa0ef4c026629503eb3e0266fde2e"
+    },
+    {
+      "id": "grade5-division-area",
+      "values": [
+        965,
+        17
+      ],
+      "sha256": "5620fe8c5952e3a7429c8749a899bb30a5ba9558a0ff07643782661f7c72d72f"
+    },
+    {
+      "id": "grade5-unit-fraction",
+      "values": [
+        3,
+        2,
+        1
+      ],
+      "sha256": "f536fbc52ba8506d68cb5061360104f4b04af6ddbcd931a5ce43f6c8debfbd42"
+    },
+    {
+      "id": "grade5-unit-fraction",
+      "values": [
+        1,
+        4,
+        0
+      ],
+      "sha256": "b5f3f89389526496f3d0d13b00beef2e7bb8fcb123311a94a60d986ea69ce65d"
+    },
+    {
+      "id": "grade5-unit-fraction",
+      "values": [
+        1,
+        11,
+        1
+      ],
+      "sha256": "e71df76398950d1f1a81518b7295343d0d2ae865408b7a4be7d025c64d74a27a"
+    },
+    {
+      "id": "grade5-equivalent-ratio",
+      "values": [
+        2,
+        3,
+        2
+      ],
+      "sha256": "862b5599b76dc04459ee3afd9f7354b3e5eeaa1def917526b1b65de23fbf4292"
+    },
+    {
+      "id": "grade5-equivalent-ratio",
+      "values": [
+        1,
+        8,
+        4
+      ],
+      "sha256": "a72b102315f126ce9c11f903cff8802dabca54005ecb0126598f87fdeeb715fe"
+    },
+    {
+      "id": "grade5-equivalent-ratio",
+      "values": [
+        2,
+        9,
+        4
+      ],
+      "sha256": "7882c3f591cca14f37f6f85d5ce379b85a54cd2d837a7b9642d09677a7b0548d"
+    },
+    {
+      "id": "grade5-pattern-type",
+      "values": [
+        5,
+        5,
+        2
+      ],
+      "sha256": "9d43ab0a4f841af28f29a9854c26fd694b1dbb23758050a739d9ecdffe17c090"
+    },
+    {
+      "id": "grade5-pattern-type",
+      "values": [
+        1,
+        3,
+        1
+      ],
+      "sha256": "f3c6156f0be009411f0b395210455f82521a5575ff139042d533dc5b106d5b66"
+    },
+    {
+      "id": "grade5-pattern-type",
+      "values": [
+        7,
+        2,
+        0
+      ],
+      "sha256": "10d562a5fa0f7d62ee13180e84fe9fdfb3b693119f75d9b05912ce65ef7f2903"
+    },
+    {
+      "id": "grade5-pattern-table",
+      "values": [
+        2,
+        3,
+        0
+      ],
+      "sha256": "85d8a69631158126e44ecfe49a30a9df7eb2515cef13cac7a7d3e5ddd40b0478"
+    },
+    {
+      "id": "grade5-pattern-table",
+      "values": [
+        4,
+        3,
+        0
+      ],
+      "sha256": "95a234188a5057c004455cd071217f68a7c3dc537b2d8af2233edfd91ed04b79"
+    },
+    {
+      "id": "grade5-pattern-table",
+      "values": [
+        2,
+        4,
+        0
+      ],
+      "sha256": "d69c1b694801eb4a46e8b0fc118a13e8717e4597aaf904e1d01aadc59991822d"
+    },
+    {
+      "id": "grade5-pattern-missing",
+      "values": [
+        4,
+        4,
+        0
+      ],
+      "sha256": "e6caf56c909705702208effe975a0301356c170e8fb3f83fa971705b1c3b9772"
+    },
+    {
+      "id": "grade5-pattern-missing",
+      "values": [
+        6,
+        3,
+        1
+      ],
+      "sha256": "c3c794617774fdd21a3c5752e5ee1387c1e1952554f782a3cacf89d5ca7d2f35"
+    },
+    {
+      "id": "grade5-pattern-missing",
+      "values": [
+        5,
+        9,
+        1
+      ],
+      "sha256": "c306f9be932fa4b54aeff591109126e1cb7bdc4da19aadfbbbc6d47f1bb413d1"
+    },
+    {
+      "id": "grade5-decimal-pattern",
+      "values": [
+        70,
+        10
+      ],
+      "sha256": "ac2cf67620c6c66a3fe8a73f5c00f9d0217b86af775481f06ec3776c956feec1"
+    },
+    {
+      "id": "grade5-decimal-pattern",
+      "values": [
+        34,
+        8
+      ],
+      "sha256": "0066f87175c5b8c7a49d54b9fed0e283f79cb435d2ffc144f00ad1a31ef2d632"
+    },
+    {
+      "id": "grade5-decimal-pattern",
+      "values": [
+        54,
+        4
+      ],
+      "sha256": "5d35e0613db6dcac2207294c2829cc46351a501eda3767f5a7e0e91168e95008"
+    },
+    {
+      "id": "grade5-words-expression",
+      "values": [
+        3,
+        2
+      ],
+      "sha256": "2885794c229a75b032b8fdff1ccfdb365a998584b759c4cbf0646a465540d300"
+    },
+    {
+      "id": "grade5-words-expression",
+      "values": [
+        2,
+        3
+      ],
+      "sha256": "cb33769a7e228afe9d72446731bf23b09e08146ad702c0e70a10ad14ed166b8e"
+    },
+    {
+      "id": "grade5-words-expression",
+      "values": [
+        3,
+        5
+      ],
+      "sha256": "2a29232b71346965f14c0aa203d658cefedbacec7c6ba78116bb7aed6369313a"
+    },
+    {
+      "id": "grade5-evaluate-expression",
+      "values": [
+        3,
+        2,
+        4
+      ],
+      "sha256": "36a25697823b4e53d11e470839277dd4e15f03fb8d5a68c3dc976978d87ef9a1"
+    },
+    {
+      "id": "grade5-evaluate-expression",
+      "values": [
+        5,
+        10,
+        10
+      ],
+      "sha256": "3e863523c1151c1070275f6b82e8ec15477b5fbfc4fe0c4f0955f82671cf94c0"
+    },
+    {
+      "id": "grade5-evaluate-expression",
+      "values": [
+        4,
+        4,
+        5
+      ],
+      "sha256": "f4941c2e8bd9ab6a75ad0f5ce588b9f230ce25b4dde5266fb6903c08f06f84e3"
+    },
+    {
+      "id": "grade5-inequality",
+      "values": [
+        5,
+        12,
+        0
+      ],
+      "sha256": "54d627872e7c6b192eecd1c50ef386a1cc8a0d75f8bed527eef5628d3a730af7"
+    },
+    {
+      "id": "grade5-inequality",
+      "values": [
+        15,
+        26,
+        1
+      ],
+      "sha256": "289adf24cf09a5c4aba7ec11472dc997706dfc9260f7d219fa36f557324371e1"
+    },
+    {
+      "id": "grade5-inequality",
+      "values": [
+        1,
+        17,
+        0
+      ],
+      "sha256": "83bdd29e92b8691ca1a64b1e56bd747bd13d59b3fb9169d76eecc6bf10fb3a65"
+    },
+    {
+      "id": "grade5-coding-condition",
+      "values": [
+        24,
+        2
+      ],
+      "sha256": "19678eb1a475ce55414a72488ee92c769dd2bb423394d2fa3b7d1f7c51d74bd2"
+    },
+    {
+      "id": "grade5-coding-condition",
+      "values": [
+        25,
+        3
+      ],
+      "sha256": "fdc09b59f3c1734c6af7a59525523515ba2e473d05a79b7087042644e1724973"
+    },
+    {
+      "id": "grade5-coding-condition",
+      "values": [
+        81,
+        4
+      ],
+      "sha256": "1b64ff074378ea13601d5116fb5cfccd561cad1c70bed3e3b2d82287ad6db3ff"
+    },
+    {
+      "id": "grade5-coding-loop",
+      "values": [
+        2,
+        3,
+        4
+      ],
+      "sha256": "f20f48bbe10300e26654a4a44ba631ecd3482c0143fd87628a5c2a9cceaf879c"
+    },
+    {
+      "id": "grade5-coding-loop",
+      "values": [
+        4,
+        4,
+        3
+      ],
+      "sha256": "3b45aa2cbd04f39d7f81d24ae87a8cef3462d5d18e41a6fe15fc9464fbeca420"
+    },
+    {
+      "id": "grade5-coding-loop",
+      "values": [
+        5,
+        4,
+        3
+      ],
+      "sha256": "d6560ac2a5821c553bc4fa1559cfacfe688873d5e96698278b65f0c707d60906"
+    },
+    {
+      "id": "grade5-seating-model",
+      "values": [
+        27,
+        6,
+        4
+      ],
+      "sha256": "a8644e083d21da14a21746db2a63b11edbe35e63d4ebd3791b0b4be4d693fa27"
+    },
+    {
+      "id": "grade5-seating-model",
+      "values": [
+        34,
+        8,
+        4
+      ],
+      "sha256": "39bb5cd9b2e5b22766e09a87966186728935ebf7c3bb49e565122dfa2389c8f2"
+    },
+    {
+      "id": "grade5-seating-model",
+      "values": [
+        33,
+        4,
+        4
+      ],
+      "sha256": "eababdf62b2a14a722262fe20b4b078bf14e3d8ef20b52d0b7a00f28b66122d3"
+    },
+    {
+      "id": "grade5-sampling",
+      "values": [
+        0,
+        6
+      ],
+      "sha256": "0bf7ca29eef44cc34ec499b8dcca17627e183af797ad7a8f5f45a214707b7640"
+    },
+    {
+      "id": "grade5-sampling",
+      "values": [
+        0,
+        6
+      ],
+      "sha256": "0bf7ca29eef44cc34ec499b8dcca17627e183af797ad7a8f5f45a214707b7640"
+    },
+    {
+      "id": "grade5-sampling",
+      "values": [
+        2,
+        4
+      ],
+      "sha256": "dc0ff700d59b05aa9d12e0630ea204d2a2ea6934139abab1f8bcd22776a31566"
+    },
+    {
+      "id": "grade5-frequency-table",
+      "values": [
+        6,
+        8,
+        4
+      ],
+      "sha256": "5a030c1444f9101e254de3e30e894e075413b5a77b2b37af798f50288e747586"
+    },
+    {
+      "id": "grade5-frequency-table",
+      "values": [
+        12,
+        5,
+        2
+      ],
+      "sha256": "81e9fbeb56d8ce79ecd807f5aad2c5efb537b5e2a30f39426e867ea6441e8ee0"
+    },
+    {
+      "id": "grade5-frequency-table",
+      "values": [
+        12,
+        3,
+        10
+      ],
+      "sha256": "627178938fb2f3fc738da6d45034935481119e43b655ae6c4d446d7cb6ef36a9"
+    },
+    {
+      "id": "grade5-stacked-graph",
+      "values": [
+        8,
+        6,
+        5,
+        9
+      ],
+      "sha256": "a19de9c1737b4ff46a337bb723eeabf8d2c1f8c632aeecd03cbc9cd636bfb0b7"
+    },
+    {
+      "id": "grade5-stacked-graph",
+      "values": [
+        9,
+        3,
+        4,
+        10
+      ],
+      "sha256": "9173a8e5fca070b7c12246067f25d19942de9ac64dab9dc936ade61b40ee5b77"
+    },
+    {
+      "id": "grade5-stacked-graph",
+      "values": [
+        12,
+        5,
+        11,
+        10
+      ],
+      "sha256": "7696359991cbf035bb86644e19fb622e201abc9a59f6597d55ae4e38f011ec51"
+    },
+    {
+      "id": "grade5-infographic",
+      "values": [
+        6,
+        10,
+        4
+      ],
+      "sha256": "733c674ce7a8798de99de3a79b2110b179a287fcc81b6456938e43c0dbfc2c6f"
+    },
+    {
+      "id": "grade5-infographic",
+      "values": [
+        7,
+        8,
+        11
+      ],
+      "sha256": "e31c541de58d658f5162b75f542f6e5623aaeed503a38090feb3092fa0541058"
+    },
+    {
+      "id": "grade5-infographic",
+      "values": [
+        5,
+        11,
+        11
+      ],
+      "sha256": "8c0dc27d7d338a9d658d37424be9fb588ff4899352ed96cee6d50e996bf98a77"
+    },
+    {
+      "id": "grade5-statistics",
+      "values": [
+        2,
+        3,
+        3,
+        4,
+        8,
+        0
+      ],
+      "sha256": "ec20a996869766c3f7896654618078ca07c4db107e80886b8089ce192f278f2c"
+    },
+    {
+      "id": "grade5-statistics",
+      "values": [
+        72,
+        12,
+        12,
+        16,
+        72,
+        1
+      ],
+      "sha256": "5ee2014298e8248b30427a97e8eb2338c59e3cf970f945b0cfb9a470180e5556"
+    },
+    {
+      "id": "grade5-statistics",
+      "values": [
+        7,
+        11,
+        11,
+        39,
+        77,
+        1
+      ],
+      "sha256": "4ab8cdff7785c2f1151c2742b836ec699ad5c9e7b6fa1df11a3e94757af101b3"
+    },
+    {
+      "id": "grade5-misleading-graph",
+      "values": [
+        50,
+        54,
+        48
+      ],
+      "sha256": "21bd5dbd2704dae4dac419733fd2b3368f65dccf61ca517fd5ebf600dfc44dfa"
+    },
+    {
+      "id": "grade5-misleading-graph",
+      "values": [
+        73,
+        79,
+        71
+      ],
+      "sha256": "b1faaf6006635ac547f876d80578760404075082bc636321b938da7a268cc3d1"
+    },
+    {
+      "id": "grade5-misleading-graph",
+      "values": [
+        75,
+        80,
+        73
+      ],
+      "sha256": "e9c6bcb0d8c362db8d3fdb8e3bffc694ec59f380cd43265ae41055be3df22c49"
+    },
+    {
+      "id": "grade5-probability",
+      "values": [
+        3,
+        6,
+        5
+      ],
+      "sha256": "f1d07a96acb1c2423365a9babf35c198e5a1a5eb2c3078b230b281f01ca89959"
+    },
+    {
+      "id": "grade5-probability",
+      "values": [
+        3,
+        10,
+        6
+      ],
+      "sha256": "69166291bcf1b50fc09d63788468fe54ab43efbf5efd4a253ad45b8a9f1ac3ed"
+    },
+    {
+      "id": "grade5-probability",
+      "values": [
+        3,
+        4,
+        8
+      ],
+      "sha256": "53f8d0f5a07da8b5b6c05febf4effbb08d1bd1c4573d3b301e030311b483d4d8"
+    },
+    {
+      "id": "grade5-experimental-probability",
+      "values": [
+        17,
+        30
+      ],
+      "sha256": "88ccbe4e7f80ea93d56966d0f36de8429cac7cff433392ab6c15db06bafefe20"
+    },
+    {
+      "id": "grade5-experimental-probability",
+      "values": [
+        43,
+        48
+      ],
+      "sha256": "c7bee5e41fc915326ca525eb560c3c3a9a9d819d98cb1d2df4f27fb9dd30e42d"
+    },
+    {
+      "id": "grade5-experimental-probability",
+      "values": [
+        20,
+        24
+      ],
+      "sha256": "5703b7b9b5bc635b2c4814cd99113ea3fb9e9ed8e1dd8546768af3f2d31e883a"
+    },
+    {
+      "id": "grade5-triangle-sides",
+      "values": [
+        5,
+        6,
+        7
+      ],
+      "sha256": "fee841a8375a9a430f31aa610826cf6606ffca6d86fda45a229d8b1d620c09a0"
+    },
+    {
+      "id": "grade5-triangle-sides",
+      "values": [
+        6,
+        8,
+        13
+      ],
+      "sha256": "bc4fe280e93aaa4d2f166a73852952813fcd18807b1da1f9730087bb7ea01c01"
+    },
+    {
+      "id": "grade5-triangle-sides",
+      "values": [
+        6,
+        6,
+        9
+      ],
+      "sha256": "64b3f17a8c3f2437a34d5fdf47a07790424e0407d7ffd4fd2f5dbcc8ccad59e3"
+    },
+    {
+      "id": "grade5-congruent-shapes",
+      "values": [
+        4,
+        3,
+        1
+      ],
+      "sha256": "566da041850dc03f944adc2e5e0ceb16688196b891bb763b24178cdcabe71bfa"
+    },
+    {
+      "id": "grade5-congruent-shapes",
+      "values": [
+        5,
+        3,
+        0
+      ],
+      "sha256": "bcf69f3530967fb9c60bf12db3148aa670126bc9633ba46b8f13275f0eddf2e9"
+    },
+    {
+      "id": "grade5-congruent-shapes",
+      "values": [
+        4,
+        2,
+        0
+      ],
+      "sha256": "b6a4659b4d173e726162bc9c5257ccb3dbec325673602070a5f0c7b85f844ecb"
+    },
+    {
+      "id": "grade5-cube-views",
+      "values": [
+        1,
+        3,
+        2,
+        1
+      ],
+      "sha256": "72187a9ec23e92623dd10ced7cdfffaf268dda3cf8ef0ed24ae490042fafe8e9"
+    },
+    {
+      "id": "grade5-cube-views",
+      "values": [
+        1,
+        2,
+        1,
+        1
+      ],
+      "sha256": "7dbae8a2402f5b9cfc78288284d4624b8a654b6955a40e30130ada667745e791"
+    },
+    {
+      "id": "grade5-cube-views",
+      "values": [
+        3,
+        1,
+        2,
+        3
+      ],
+      "sha256": "dbb9ebd0b5c6a2cf6c8a5f86f597192494eddf486adf08c2c82202e00021cf38"
+    },
+    {
+      "id": "grade5-coordinates",
+      "values": [
+        2,
+        4,
+        3,
+        0
+      ],
+      "sha256": "29e3580fc8d9ff79c50154e9c901296d919c7706850cc90cb47dc661843c8279"
+    },
+    {
+      "id": "grade5-coordinates",
+      "values": [
+        2,
+        1,
+        1,
+        0
+      ],
+      "sha256": "fcb2b69260caf681a528fd1dbf688b4700d0a0e686a5736370be8763e3a1a9ac"
+    },
+    {
+      "id": "grade5-coordinates",
+      "values": [
+        5,
+        2,
+        4,
+        3
+      ],
+      "sha256": "6d1fb2123793b2b55ea8387fba134b5110a8bdbfb3b0746494551e5e9f97747d"
+    },
+    {
+      "id": "grade5-transformation",
+      "values": [
+        2,
+        3,
+        2
+      ],
+      "sha256": "d4c4ae5473eade10741eb9c4acc640821095b9524ffe4f312cf8c7c0ab2d6431"
+    },
+    {
+      "id": "grade5-transformation",
+      "values": [
+        1,
+        2,
+        4
+      ],
+      "sha256": "9fbca3e245aeca5abb51087347ac49155ce1580b625956c4ad0ba89925956334"
+    },
+    {
+      "id": "grade5-transformation",
+      "values": [
+        3,
+        2,
+        4
+      ],
+      "sha256": "de3590f823994761f30d6b2bfae31a255f78662c0c3d707a08004cf3d68f9d7e"
+    },
+    {
+      "id": "grade5-metric-units",
+      "values": [
+        0,
+        7
+      ],
+      "sha256": "1a8125b7a437f2bc9f6dfe62f18770fceb7ed6668cd980567d8768e947c161e5"
+    },
+    {
+      "id": "grade5-metric-units",
+      "values": [
+        3,
+        6
+      ],
+      "sha256": "236a6649f37a115c815baf7c5375abdc430d282c77e030ce5055ebd750ed5697"
+    },
+    {
+      "id": "grade5-metric-units",
+      "values": [
+        0,
+        8
+      ],
+      "sha256": "508baeaf61beba58d74f9c21f418e59b50d9c7d926eeb2397e1590b8544a9931"
+    },
+    {
+      "id": "grade5-metric-conversion",
+      "values": [
+        25,
+        0
+      ],
+      "sha256": "e33d591d3ff68e135e64698b881680dbc0f3b7fcf5602f1a4ed5116d0c0addc8"
+    },
+    {
+      "id": "grade5-metric-conversion",
+      "values": [
+        7,
+        2
+      ],
+      "sha256": "b3fabae6ef7caf5c9c1f12e151f61513be99e63250bb42086753653bdd726c02"
+    },
+    {
+      "id": "grade5-metric-conversion",
+      "values": [
+        814,
+        0
+      ],
+      "sha256": "888017963b12f6fa49bb7f488441a14633f29ebf25521b2d4bbca9243283a7fc"
+    },
+    {
+      "id": "grade5-compare-angles",
+      "values": [
+        3,
+        5,
+        15
+      ],
+      "sha256": "37131e5a77ff5142c6ae122abfd7f68908aa4d2a6fc821a886c7df81325a0133"
+    },
+    {
+      "id": "grade5-compare-angles",
+      "values": [
+        2,
+        6,
+        15
+      ],
+      "sha256": "2feccc15f15f37edb36d6cc8141b6320c01b6b1beb0dded78fdf4c532b2b5259"
+    },
+    {
+      "id": "grade5-compare-angles",
+      "values": [
+        3,
+        4,
+        15
+      ],
+      "sha256": "2b5c6be0ab093c32a003008c68ab21e42ad83537d554f8f0f3984d38a65f6258"
+    },
+    {
+      "id": "grade5-construct-angle",
+      "values": [
+        65
+      ],
+      "sha256": "69728af9bfdcf4b9492d8383be382ace439f1d20f127d7173892c581a9c47dc6"
+    },
+    {
+      "id": "grade5-construct-angle",
+      "values": [
+        25
+      ],
+      "sha256": "3f2b4222cc06e6cfcf51f10766f0fa5a2a8b038a3566eae4624b964445cf2d8f"
+    },
+    {
+      "id": "grade5-construct-angle",
+      "values": [
+        90
+      ],
+      "sha256": "3fa5787f0e4193969d3b2b4e152bdba4ba722a62b5cfc0e21902bd39f4467011"
+    },
+    {
+      "id": "grade5-shape-area",
+      "values": [
+        8,
+        5,
+        1
+      ],
+      "sha256": "cd3e236ceae4883ea8750f62f1daea0970bea92f0fd70dcdab71af7a002af714"
+    },
+    {
+      "id": "grade5-shape-area",
+      "values": [
+        10,
+        6,
+        0
+      ],
+      "sha256": "55f1a9661c0bdcb076253723bd2bce4dc358b2e8569591ce2df388cc020d2794"
+    },
+    {
+      "id": "grade5-shape-area",
+      "values": [
+        8,
+        5,
+        1
+      ],
+      "sha256": "cd3e236ceae4883ea8750f62f1daea0970bea92f0fd70dcdab71af7a002af714"
+    },
+    {
+      "id": "grade5-area-perimeter",
+      "values": [
+        3,
+        2
+      ],
+      "sha256": "f6cd55597d07627f36a1f23c29aff86147d03596e647786684adb6a3ac429b51"
+    },
+    {
+      "id": "grade5-area-perimeter",
+      "values": [
+        3,
+        6
+      ],
+      "sha256": "8d3e6fa3dd09947324a1fb12c60a31e261f3ec48e29b85fa8312135b8ccec84b"
+    },
+    {
+      "id": "grade5-area-perimeter",
+      "values": [
+        6,
+        5
+      ],
+      "sha256": "bdd085b5bafd9f4c3385d947b2f42c678796337ce37d655b81a13274fd632d1f"
+    },
+    {
+      "id": "grade5-money-transfer",
+      "values": [
+        1500,
+        2
+      ],
+      "sha256": "f78dadbf1a6fecf68a62077a5d2537794f9ab12bad506a6b7690fdd7a3ac6de4"
+    },
+    {
+      "id": "grade5-money-transfer",
+      "values": [
+        800,
+        2
+      ],
+      "sha256": "49af07975c3e057c87d1ca5e69cd89d83f78624f9ca0e79321bc36559b2a45f0"
+    },
+    {
+      "id": "grade5-money-transfer",
+      "values": [
+        500,
+        0
+      ],
+      "sha256": "28b7edd9b0b263015bcd3b17b09ef407771de54c0b5ef44d930b403a1371cbcb"
+    },
+    {
+      "id": "grade5-sales-tax",
+      "values": [
+        1250,
+        750,
+        13
+      ],
+      "sha256": "7869d20d16f7920210f130fdecb035a101cbb86b62b2f2c80d75c6e80bbba5a0"
+    },
+    {
+      "id": "grade5-sales-tax",
+      "values": [
+        1857,
+        401,
+        10
+      ],
+      "sha256": "2880a852cb6ba0cedaed108684ba6f9300e9c19aaa6e804525a99b553c68b9d2"
+    },
+    {
+      "id": "grade5-sales-tax",
+      "values": [
+        775,
+        2468,
+        11
+      ],
+      "sha256": "02c8cb556670ba6e36704f270d814dc1468f6fd10b70d74d3a4e4bfdc97893ef"
+    },
+    {
+      "id": "grade5-budget",
+      "values": [
+        4000,
+        1200,
+        800
+      ],
+      "sha256": "a4c817e122339827f82582e9173fe7ca0235f6785113420b196128614b0e043c"
+    },
+    {
+      "id": "grade5-budget",
+      "values": [
+        7700,
+        800,
+        100
+      ],
+      "sha256": "989c78db67b0bd607ff0d69dcec780e26d07cedf986083cca82ba7d3975e13af"
+    },
+    {
+      "id": "grade5-budget",
+      "values": [
+        2000,
+        500,
+        200
+      ],
+      "sha256": "40ce286eddd903cf26254d23961fd604bdb71aaa6d815a8964f2dfce3940e32f"
+    },
+    {
+      "id": "grade5-credit-debt",
+      "values": [
+        2000,
+        200,
+        500
+      ],
+      "sha256": "0bb3480c84166ca526afa9f618b459426316a6b96a181c3166329b15b000fb89"
+    },
+    {
+      "id": "grade5-credit-debt",
+      "values": [
+        3900,
+        100,
+        500
+      ],
+      "sha256": "cb951e18e62737bafdbc1c07acb0e6c678ad6996b1f613742f8ebc9a909e5784"
+    },
+    {
+      "id": "grade5-credit-debt",
+      "values": [
+        1300,
+        400,
+        700
+      ],
+      "sha256": "d21973d203bf5cc04f055e5e87b1c9103edfa0081e393d37994b0887404a266b"
+    },
+    {
+      "id": "grade5-unit-price",
+      "values": [
+        5,
+        3,
+        20,
+        25
+      ],
+      "sha256": "2382f0f60eb76f8b36adbe08c5ea99db4ab56dbce7f2f2ada67a8a58ece740fc"
+    },
+    {
+      "id": "grade5-unit-price",
+      "values": [
+        8,
+        3,
+        74,
+        80
+      ],
+      "sha256": "ab1d88b9e996677968b2c2110a6147030a5488185a55b406c1dbf4133a52f8e3"
+    },
+    {
+      "id": "grade5-unit-price",
+      "values": [
+        7,
+        5,
+        79,
+        36
+      ],
+      "sha256": "1a924a35071d819a0f0821f2452207bd61540b195dccd07fe8423eac2d57785f"
+    },
+    {
+      "id": "grade5-tax-services",
+      "values": [
+        0
+      ],
+      "sha256": "cc468ebf047de000d3c55a70cf81ffc48d6f06710a66ebd6ab0e6df038e7dc1b"
+    },
+    {
+      "id": "grade5-tax-services",
+      "values": [
+        0
+      ],
+      "sha256": "cc468ebf047de000d3c55a70cf81ffc48d6f06710a66ebd6ab0e6df038e7dc1b"
+    },
+    {
+      "id": "grade5-tax-services",
+      "values": [
+        0
+      ],
+      "sha256": "cc468ebf047de000d3c55a70cf81ffc48d6f06710a66ebd6ab0e6df038e7dc1b"
+    },
+    {
+      "id": "grade5-manage-emotions",
+      "values": [
+        0
+      ],
+      "sha256": "4782ba8517256ae48afa2529fd5c2015b2caf821989533a983eeb7f6ece8614b"
+    },
+    {
+      "id": "grade5-manage-emotions",
+      "values": [
+        0
+      ],
+      "sha256": "4782ba8517256ae48afa2529fd5c2015b2caf821989533a983eeb7f6ece8614b"
+    },
+    {
+      "id": "grade5-manage-emotions",
+      "values": [
+        3
+      ],
+      "sha256": "f2d1b2ecc32028e0e961bea8a02d6c01a73daaa1e926ab860bce14ec7a6f20d2"
+    },
+    {
+      "id": "grade5-cope-challenge",
+      "values": [
+        1
+      ],
+      "sha256": "9bef0cff8be5e0193930616e778330581ef15044bfefea299447b2274900a94e"
+    },
+    {
+      "id": "grade5-cope-challenge",
+      "values": [
+        0
+      ],
+      "sha256": "e73da89318ec83a3d6ace59510c5b3941975e86780ac135ca22392e2373cc5dd"
+    },
+    {
+      "id": "grade5-cope-challenge",
+      "values": [
+        1
+      ],
+      "sha256": "9bef0cff8be5e0193930616e778330581ef15044bfefea299447b2274900a94e"
+    },
+    {
+      "id": "grade5-persist",
+      "values": [
+        2
+      ],
+      "sha256": "1045f68923b208acfcfc8977eae39f7af209130f001e9b4ff77c2b2b354eb7b1"
+    },
+    {
+      "id": "grade5-persist",
+      "values": [
+        1
+      ],
+      "sha256": "45548978b95502140aaf46f45a4bcb788780be067bde1656e2c91f4342f94781"
+    },
+    {
+      "id": "grade5-persist",
+      "values": [
+        2
+      ],
+      "sha256": "1045f68923b208acfcfc8977eae39f7af209130f001e9b4ff77c2b2b354eb7b1"
+    },
+    {
+      "id": "grade5-communicate",
+      "values": [
+        0
+      ],
+      "sha256": "9fb52bc5644f96655753617c2be016fc298ba23ebea2218d1cabef835177f31d"
+    },
+    {
+      "id": "grade5-communicate",
+      "values": [
+        1
+      ],
+      "sha256": "e1b60b731853d0ac67450b43b9a905b76a6e21a8c84b3ab11b0ac53b5b295145"
+    },
+    {
+      "id": "grade5-communicate",
+      "values": [
+        1
+      ],
+      "sha256": "e1b60b731853d0ac67450b43b9a905b76a6e21a8c84b3ab11b0ac53b5b295145"
+    },
+    {
+      "id": "grade5-confidence",
+      "values": [
+        3
+      ],
+      "sha256": "c89b87d0d28e550c40b37241b80d4a75e5b4bf7477c86a1d232017198c112e51"
+    },
+    {
+      "id": "grade5-confidence",
+      "values": [
+        3
+      ],
+      "sha256": "c89b87d0d28e550c40b37241b80d4a75e5b4bf7477c86a1d232017198c112e51"
+    },
+    {
+      "id": "grade5-confidence",
+      "values": [
+        0
+      ],
+      "sha256": "cf7dd73a2a5079ca6d2d0cb86948d45137abf93448b239364d5bbe44ecce2e84"
+    },
+    {
+      "id": "grade5-critical-thinking",
+      "values": [
+        1
+      ],
+      "sha256": "68ed8bdd5d5257120adbb4660b349be01835e1aacd08ef28d21d1aabd5f6d501"
+    },
+    {
+      "id": "grade5-critical-thinking",
+      "values": [
+        2
+      ],
+      "sha256": "216c3ecf65d24a8e4b8f6d9b37a92f1611e5224a168554e141d83de9f14e0d2c"
+    },
+    {
+      "id": "grade5-critical-thinking",
+      "values": [
+        3
+      ],
+      "sha256": "c9b1d462438a87d31043c578a9729faa5c67d41c4f496d1cc3a1f1a344a9f693"
+    },
+    {
+      "id": "grade5-order-fractions",
+      "values": [
+        3,
+        4,
+        5,
+        6,
+        3,
+        2
+      ],
+      "sha256": "68fbbe00d81d5c558cad5c0a7ba8c410110aecffbc275ba7fef66bee4eb983a1"
+    },
+    {
+      "id": "grade5-order-fractions",
+      "values": [
+        4,
+        2,
+        7,
+        5,
+        12,
+        9
+      ],
+      "sha256": "752ac9ea8cb544528137f7f4dc26276aabe19224baa7050fe135fa2063623e7d"
+    },
+    {
+      "id": "grade5-order-fractions",
+      "values": [
+        10,
+        10,
+        18,
+        9,
+        7,
+        7
+      ],
+      "sha256": "ba1ba127ed023e66619b8294ea8c69cb85a8034028ae9deb82009efea0f445ed"
+    },
+    {
+      "id": "grade5-percent-fraction",
+      "values": [
+        25
+      ],
+      "sha256": "9e0ae68e381e110ba7db6bcdb097723e045ac9e055b1fb0c9042893f63ae182e"
+    },
+    {
+      "id": "grade5-percent-fraction",
+      "values": [
+        56
+      ],
+      "sha256": "3f58a7395cc968f6668fb19273364c56e40767b693605e8390befd0a24904079"
+    },
+    {
+      "id": "grade5-percent-fraction",
+      "values": [
+        63
+      ],
+      "sha256": "5a170c9da45566b9557c41c02960739aafc8b3583095c37c68cdc6cb4e1f915d"
+    },
+    {
+      "id": "grade5-equation-subtract",
+      "values": [
+        34,
+        56
+      ],
+      "sha256": "fb51e04b54afbf9ee80043f2cb4c6ad8e6775b2dc55294e7dd987cde26ea148d"
+    },
+    {
+      "id": "grade5-equation-subtract",
+      "values": [
+        24,
+        11
+      ],
+      "sha256": "4df09a36a055ad6b7bfd1f69d0d909b227a1e0ea0eeba0c37850364949811156"
+    },
+    {
+      "id": "grade5-equation-subtract",
+      "values": [
+        23,
+        29
+      ],
+      "sha256": "9e755cb134c22021c43b8439ab977094aaca3b8c19c0743f4876a1bf0dc418ab"
+    },
+    {
+      "id": "grade5-equation-divide",
+      "values": [
+        4,
+        8
+      ],
+      "sha256": "a06e79330ea99cf0805fd0f077d51a44aed1195ab53c6e6665d44dec8e24dce1"
+    },
+    {
+      "id": "grade5-equation-divide",
+      "values": [
+        9,
+        7
+      ],
+      "sha256": "5d499be37e43f8315d36cc0c2115baae966a6a39c4ca9b00fe811a0ca7542fc0"
+    },
+    {
+      "id": "grade5-equation-divide",
+      "values": [
+        5,
+        2
+      ],
+      "sha256": "8b8f9a7ecb843bf8bfdf1090fab2b94e042718ffb97e95abbdf76504f3071bbe"
+    },
+    {
+      "id": "grade5-inequality-operation",
+      "values": [
+        3,
+        8,
+        1,
+        0
+      ],
+      "sha256": "b460c2b1592de26435b9e817967d288e1540ae2bacad8055926570fce54c9ec9"
+    },
+    {
+      "id": "grade5-inequality-operation",
+      "values": [
+        4,
+        8,
+        1,
+        0
+      ],
+      "sha256": "050cd1c951cc7d4a4f3a58876c987913425f1af2abb90e68cac90caca3ae3358"
+    },
+    {
+      "id": "grade5-inequality-operation",
+      "values": [
+        4,
+        7,
+        2,
+        0
+      ],
+      "sha256": "a2a0139e7b7fce7c204570baae390ce63f39b177a0919dafa13745b4e80d4591"
+    },
+    {
+      "id": "grade5-statistics-even",
+      "values": [
+        12,
+        15,
+        15,
+        22,
+        1
+      ],
+      "sha256": "538ec8bf9707d3f4ded592efe433c6332f2b0c4ce9b47934b48962cbafd87242"
+    },
+    {
+      "id": "grade5-statistics-even",
+      "values": [
+        1,
+        13,
+        80,
+        10,
+        1
+      ],
+      "sha256": "c1e08a9a531ff4e42378026286c2603fb72c5d1cadac2f50bf0f6add40425c47"
+    },
+    {
+      "id": "grade5-statistics-even",
+      "values": [
+        22,
+        24,
+        71,
+        54,
+        0
+      ],
+      "sha256": "34b3b20e75dff2bec56f34f8312cb8ffa00dd9a902e4ca402cea614451d8207f"
+    },
+    {
+      "id": "grade5-congruent-triangles",
+      "values": [
+        5,
+        6,
+        7,
+        1
+      ],
+      "sha256": "77e69884d9f074ec00c6dd4f835427a1ed38516184962350a0ea35bce311b5de"
+    },
+    {
+      "id": "grade5-congruent-triangles",
+      "values": [
+        3,
+        3,
+        4,
+        1
+      ],
+      "sha256": "96d284e72e1a423e0b8e86f49831b3e950615aca1616d09198c0bdd3e103127d"
+    },
+    {
+      "id": "grade5-congruent-triangles",
+      "values": [
+        3,
+        5,
+        4,
+        0
+      ],
+      "sha256": "971bd956cd32cb0a6c11794d790781477288fc4a78a972529d440dfad6d30d16"
+    },
+    {
+      "id": "grade5-congruent-parallelograms",
+      "values": [
+        6,
+        3,
+        1
+      ],
+      "sha256": "c1a44a713795f29f5b802f0ab25543c7116b508a99ace7a2265609a2d2af7914"
+    },
+    {
+      "id": "grade5-congruent-parallelograms",
+      "values": [
+        4,
+        3,
+        1
+      ],
+      "sha256": "334641ebf4e1750811ca2605dad6bc27f0a223658d106ae2c628ae8626f4f2f7"
+    },
+    {
+      "id": "grade5-congruent-parallelograms",
+      "values": [
+        8,
+        4,
+        1
+      ],
+      "sha256": "5722d570338230486588b4357f79492dd1531338ce98deafda80d7a4626254e0"
+    },
+    {
+      "id": "grade5-measure-angle",
+      "values": [
+        65
+      ],
+      "sha256": "e095a42fbd0710eaf81e20b912b76d7c6c58ee6d944e4314983cfbb59b09c235"
+    },
+    {
+      "id": "grade5-measure-angle",
+      "values": [
+        15
+      ],
+      "sha256": "28fef13d20832aebdc0a654eb2fca81ae6edb2a601b460baea92848ac11e7d79"
+    },
+    {
+      "id": "grade5-measure-angle",
+      "values": [
+        45
+      ],
+      "sha256": "1caf89e0f8b1900dd4801b4d4f58a2cadd1dd2675711e3b24ae879499be3688c"
+    },
+    {
+      "id": "grade5-triangle-angles",
+      "values": [
+        6,
+        70,
+        70
+      ],
+      "sha256": "1aaf9cd9d6849bb87f42322995959a255d1353c15b4ff765dc101fafe0065e5e"
+    },
+    {
+      "id": "grade5-triangle-angles",
+      "values": [
+        8,
+        30,
+        80
+      ],
+      "sha256": "71944be35a3504e55bd5550fa02cb3d000aca40e4cb7e9a254e5d22b4ceccd2a"
+    },
+    {
+      "id": "grade5-triangle-angles",
+      "values": [
+        6,
+        50,
+        30
+      ],
+      "sha256": "f8555b1d9cbe7bed5d652bae7219884a7f2b6d9a9d53cf40e539d40651f5c918"
+    },
+    {
+      "id": "grade5-coordinate-scale",
+      "values": [
+        3,
+        4,
+        5
+      ],
+      "sha256": "9a8834916b63e25cb2c666693521767ad207a750e45e373face05f500a987efe"
+    },
+    {
+      "id": "grade5-coordinate-scale",
+      "values": [
+        3,
+        0,
+        5
+      ],
+      "sha256": "96ad8b31e9dafcfd721894a9d3c63ce9e427cc8f10529fc991826694794781ff"
+    },
+    {
+      "id": "grade5-coordinate-scale",
+      "values": [
+        2,
+        2,
+        5
+      ],
+      "sha256": "085c6b8e5ae31aea15ab077066956374c62b22ad6b3f35f9ec7830c9614f5d09"
+    }
+  ],
+  "arithmetic": [
+    {
+      "input": "2 + 3 × 4",
+      "sha256": "8ece613b8027c8ce8267921f276fb67dbb1742264a5ce711978f13328145f904"
+    },
+    {
+      "input": "1/2 + 2/3",
+      "sha256": "06db7adb2cc4e2474e2da61e75fcd4a3b6f24af9b1ba5341eb1a3d7d8cff7fa8"
+    },
+    {
+      "input": "0.1 + 0.2",
+      "sha256": "1463846a2e93c6799223d5e09fecd20dc3603bbf55621b5822201f9f5e7a122b"
+    },
+    {
+      "input": "-3 * 0.25",
+      "sha256": "fb2bce46d281294b8cddd04d41e8723bddd14e42392a8c615606e762017bd247"
+    },
+    {
+      "input": "23 - 8",
+      "sha256": "a28ab51dd4b2a72ca9751a0ce5e3cc09986a5d45623b1d53e30db4be3611331d"
+    },
+    {
+      "input": "8 + 2 + 5",
+      "sha256": "339c98c5a73b4f4f757f4851bd1c2fe94a34376e448ad1312807002fb0652e9c"
+    },
+    {
+      "input": "6 / 8",
+      "sha256": "226688416d96693a71d61f869c9d66583f03f8b6244280b52ebef784f5a6ae3a"
+    },
+    {
+      "input": "x + 5 = 12",
+      "sha256": "6d0c58ac11fc6acb9cd447bef237c95fdca445d7a6477689af08bf3bcdb9243b"
+    },
+    {
+      "input": "3x = 18",
+      "sha256": "183f0bdfc0ce65aeb6f14cabe945f280c700f7efdc99c355009e7ddfb9d64841"
+    },
+    {
+      "input": "2x + 3 = 11",
+      "sha256": "32c9fa41acaf6f293a48c47e31fff55992bdaaa01803b880b4bdfce1c1095159"
+    },
+    {
+      "input": "0x + 3 = 3",
+      "sha256": "61c1bfefe95f42adf2d0918203b5be7e9cdf977cdddaf9a8958d9711fc2ba570"
+    },
+    {
+      "input": "0x + 3 = 5",
+      "sha256": "8f650fa25e84e7168882427c7232cec1bb24adcce63e841b8dccd3d3191ef29a"
+    },
+    {
+      "input": "-3x + 2 = 9",
+      "sha256": "5af719f6ad88a1105048c7742762fba8c8a07f89bd8d0a5f85e55de8a7a88fc0"
+    }
+  ]
+}

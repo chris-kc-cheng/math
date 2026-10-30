@@ -1,0 +1,1216 @@
+[
+  {
+    "id": "mixed-to-fraction",
+    "skillId": "b1-3",
+    "title": "Write as a fraction",
+    "rule": "mixed",
+    "example": {
+      "whole": 2,
+      "numerator": 1,
+      "denominator": 3
+    },
+    "parameters": [
+      "whole",
+      "numerator",
+      "denominator"
+    ]
+  },
+  {
+    "id": "fraction-to-mixed",
+    "skillId": "b1-3",
+    "title": "Write as a mixed number",
+    "rule": "fraction",
+    "example": {
+      "numerator": 7,
+      "denominator": 3
+    },
+    "parameters": [
+      "numerator",
+      "denominator"
+    ]
+  },
+  {
+    "id": "multiply-then-add",
+    "skillId": "b2-1",
+    "title": "Which operation comes first?",
+    "rule": "order",
+    "example": {
+      "addend": 2,
+      "factorA": 3,
+      "factorB": 4
+    },
+    "parameters": [
+      "addend",
+      "factorA",
+      "factorB"
+    ]
+  },
+  {
+    "id": "multiplication-facts",
+    "skillId": "b2-2",
+    "title": "Multiply",
+    "rule": "times",
+    "example": {
+      "left": 8,
+      "right": 7
+    },
+    "parameters": [
+      "left",
+      "right"
+    ]
+  },
+  {
+    "id": "division-facts",
+    "skillId": "b2-2",
+    "title": "Divide into equal groups",
+    "rule": "divide",
+    "example": {
+      "dividend": 56,
+      "divisor": 8
+    },
+    "parameters": [
+      "dividend",
+      "divisor"
+    ]
+  },
+  {
+    "id": "decimal-addition",
+    "skillId": "b2-4",
+    "title": "Add decimals",
+    "rule": "decimal-addition",
+    "example": {
+      "leftHundredths": 2475,
+      "rightHundredths": 860
+    },
+    "parameters": [
+      "leftHundredths",
+      "rightHundredths"
+    ]
+  },
+  {
+    "id": "decimal-subtraction",
+    "skillId": "b2-4",
+    "title": "Subtract decimals",
+    "rule": "decimal-subtraction",
+    "example": {
+      "leftHundredths": 2475,
+      "rightHundredths": 860
+    },
+    "parameters": [
+      "leftHundredths",
+      "rightHundredths"
+    ]
+  },
+  {
+    "id": "like-fraction-addition",
+    "skillId": "b2-5",
+    "title": "Add equal-sized parts",
+    "rule": "fraction-add",
+    "example": {
+      "leftNumerator": 2,
+      "rightNumerator": 1,
+      "denominator": 5
+    },
+    "parameters": [
+      "leftNumerator",
+      "rightNumerator",
+      "denominator"
+    ]
+  },
+  {
+    "id": "long-multiplication",
+    "skillId": "b2-6",
+    "title": "Multiply two-digit numbers",
+    "rule": "long-multiply",
+    "example": {
+      "left": 24,
+      "right": 13
+    },
+    "parameters": [
+      "left",
+      "right"
+    ]
+  },
+  {
+    "id": "long-division",
+    "skillId": "b2-7",
+    "title": "Divide three-digit numbers",
+    "rule": "long-divide",
+    "example": {
+      "dividend": 156,
+      "divisor": 12
+    },
+    "parameters": [
+      "dividend",
+      "divisor"
+    ]
+  },
+  {
+    "id": "equation-addition",
+    "skillId": "c2-3",
+    "title": "Find the missing number",
+    "rule": "equation-add",
+    "example": {
+      "amountAdded": 68,
+      "rightSide": 95
+    },
+    "parameters": [
+      "amountAdded",
+      "rightSide"
+    ]
+  },
+  {
+    "id": "equation-multiplication",
+    "skillId": "c2-3",
+    "title": "Find the missing factor",
+    "rule": "equation-times",
+    "example": {
+      "coefficient": 3,
+      "rightSide": 18
+    },
+    "parameters": [
+      "coefficient",
+      "rightSide"
+    ]
+  },
+  {
+    "id": "equation-two-steps",
+    "skillId": "c2-3",
+    "title": "Solve in two steps",
+    "rule": "equation-two",
+    "example": {
+      "coefficient": 2,
+      "constant": 3,
+      "rightSide": 11
+    },
+    "parameters": [
+      "coefficient",
+      "constant",
+      "rightSide"
+    ]
+  },
+  {
+    "id": "grade5-place-value",
+    "skillId": "b1-1",
+    "title": "Compose and decompose numbers",
+    "rule": "place-value",
+    "example": {
+      "number": 48306
+    },
+    "parameters": [
+      "number"
+    ]
+  },
+  {
+    "id": "grade5-order-whole",
+    "skillId": "b1-2",
+    "title": "Order whole numbers",
+    "rule": "order-whole",
+    "example": {
+      "first": 54090,
+      "second": 54900,
+      "third": 45900
+    },
+    "parameters": [
+      "first",
+      "second",
+      "third"
+    ]
+  },
+  {
+    "id": "grade5-equivalent-fraction",
+    "skillId": "b1-3",
+    "title": "Make equivalent fractions",
+    "rule": "equivalent-fraction",
+    "example": {
+      "numerator": 3,
+      "denominator": 4,
+      "scaleFactor": 2
+    },
+    "parameters": [
+      "numerator",
+      "denominator",
+      "scaleFactor"
+    ]
+  },
+  {
+    "id": "grade5-compare-fractions",
+    "skillId": "b1-4",
+    "title": "Compare fractions on a number line",
+    "rule": "compare-fractions",
+    "example": {
+      "leftNumerator": 3,
+      "leftDenominator": 4,
+      "rightNumerator": 5,
+      "rightDenominator": 6
+    },
+    "parameters": [
+      "leftNumerator",
+      "leftDenominator",
+      "rightNumerator",
+      "rightDenominator"
+    ]
+  },
+  {
+    "id": "grade5-order-decimals",
+    "skillId": "b1-5",
+    "title": "Order decimals",
+    "rule": "order-decimals",
+    "example": {
+      "firstHundredths": 70,
+      "secondHundredths": 7,
+      "thirdHundredths": 77
+    },
+    "parameters": [
+      "firstHundredths",
+      "secondHundredths",
+      "thirdHundredths"
+    ]
+  },
+  {
+    "id": "grade5-round-tenth",
+    "skillId": "b1-6",
+    "title": "Round to the nearest tenth",
+    "rule": "round-tenth",
+    "example": {
+      "hundredths": 347
+    },
+    "parameters": [
+      "hundredths"
+    ]
+  },
+  {
+    "id": "grade5-fraction-percent",
+    "skillId": "b1-7",
+    "title": "Connect fractions, decimals, and percentages",
+    "rule": "fraction-percent",
+    "example": {
+      "numerator": 1,
+      "denominator": 2
+    },
+    "parameters": [
+      "numerator",
+      "denominator"
+    ]
+  },
+  {
+    "id": "grade5-mental-scale",
+    "skillId": "b2-3",
+    "title": "Multiply by a tenth or hundredth",
+    "rule": "mental-scale",
+    "example": {
+      "wholeNumber": 460,
+      "decimalPlaces": 2
+    },
+    "parameters": [
+      "wholeNumber",
+      "decimalPlaces"
+    ]
+  },
+  {
+    "id": "grade5-estimate-decimals",
+    "skillId": "b2-3",
+    "title": "Estimate decimal calculations",
+    "rule": "estimate-decimals",
+    "example": {
+      "leftHundredths": 2475,
+      "rightHundredths": 860,
+      "subtract": 0
+    },
+    "parameters": [
+      "leftHundredths",
+      "rightHundredths",
+      "subtract"
+    ]
+  },
+  {
+    "id": "grade5-whole-add-subtract",
+    "skillId": "b2-4",
+    "title": "Calculate and check whole numbers",
+    "rule": "whole-add-subtract",
+    "example": {
+      "left": 24365,
+      "right": 12947,
+      "subtract": 0
+    },
+    "parameters": [
+      "left",
+      "right",
+      "subtract"
+    ]
+  },
+  {
+    "id": "grade5-fraction-subtract",
+    "skillId": "b2-5",
+    "title": "Subtract equal-sized parts",
+    "rule": "fraction-subtract",
+    "example": {
+      "leftNumerator": 4,
+      "rightNumerator": 1,
+      "denominator": 5
+    },
+    "parameters": [
+      "leftNumerator",
+      "rightNumerator",
+      "denominator"
+    ]
+  },
+  {
+    "id": "grade5-multiplication-area",
+    "skillId": "b2-6",
+    "title": "Multiply with an area model",
+    "rule": "multiplication-area",
+    "example": {
+      "left": 24,
+      "right": 13
+    },
+    "parameters": [
+      "left",
+      "right"
+    ]
+  },
+  {
+    "id": "grade5-division-area",
+    "skillId": "b2-7",
+    "title": "Divide with partial quotients",
+    "rule": "division-area",
+    "example": {
+      "dividend": 156,
+      "divisor": 12
+    },
+    "parameters": [
+      "dividend",
+      "divisor"
+    ]
+  },
+  {
+    "id": "grade5-unit-fraction",
+    "skillId": "b2-8",
+    "title": "Count unit fractions",
+    "rule": "unit-fraction",
+    "example": {
+      "whole": 3,
+      "denominator": 2,
+      "divide": 1
+    },
+    "parameters": [
+      "whole",
+      "denominator",
+      "divide"
+    ]
+  },
+  {
+    "id": "grade5-equivalent-ratio",
+    "skillId": "b2-9",
+    "title": "Scale a ratio",
+    "rule": "equivalent-ratio",
+    "example": {
+      "firstQuantity": 2,
+      "secondQuantity": 3,
+      "scaleFactor": 2
+    },
+    "parameters": [
+      "firstQuantity",
+      "secondQuantity",
+      "scaleFactor"
+    ]
+  },
+  {
+    "id": "grade5-pattern-type",
+    "skillId": "c1-1",
+    "title": "Recognize pattern types",
+    "rule": "pattern-type",
+    "example": {
+      "start": 5,
+      "difference": 5,
+      "patternType": 2
+    },
+    "parameters": [
+      "start",
+      "difference",
+      "patternType"
+    ]
+  },
+  {
+    "id": "grade5-pattern-table",
+    "skillId": "c1-2",
+    "title": "Show a pattern in a table and graph",
+    "rule": "pattern-table",
+    "example": {
+      "start": 2,
+      "difference": 3,
+      "shrinking": 0
+    },
+    "parameters": [
+      "start",
+      "difference",
+      "shrinking"
+    ]
+  },
+  {
+    "id": "grade5-pattern-missing",
+    "skillId": "c1-3",
+    "title": "Find a missing term",
+    "rule": "pattern-missing",
+    "example": {
+      "start": 4,
+      "difference": 4,
+      "shrinking": 0
+    },
+    "parameters": [
+      "start",
+      "difference",
+      "shrinking"
+    ]
+  },
+  {
+    "id": "grade5-decimal-pattern",
+    "skillId": "c1-4",
+    "title": "Patterns in hundredths",
+    "rule": "decimal-pattern",
+    "example": {
+      "startHundredths": 70,
+      "stepHundredths": 10
+    },
+    "parameters": [
+      "startHundredths",
+      "stepHundredths"
+    ]
+  },
+  {
+    "id": "grade5-words-expression",
+    "skillId": "c2-1",
+    "title": "Translate words into an expression",
+    "rule": "words-expression",
+    "example": {
+      "coefficient": 3,
+      "constant": 2
+    },
+    "parameters": [
+      "coefficient",
+      "constant"
+    ]
+  },
+  {
+    "id": "grade5-evaluate-expression",
+    "skillId": "c2-2",
+    "title": "Substitute a value",
+    "rule": "evaluate-expression",
+    "example": {
+      "coefficient": 3,
+      "constant": 2,
+      "variableValue": 4
+    },
+    "parameters": [
+      "coefficient",
+      "constant",
+      "variableValue"
+    ]
+  },
+  {
+    "id": "grade5-inequality",
+    "skillId": "c2-4",
+    "title": "Solve and graph an inequality",
+    "rule": "inequality",
+    "example": {
+      "amountAdded": 5,
+      "rightSide": 12,
+      "greaterThan": 0
+    },
+    "parameters": [
+      "amountAdded",
+      "rightSide",
+      "greaterThan"
+    ]
+  },
+  {
+    "id": "grade5-coding-condition",
+    "skillId": "c3-1",
+    "title": "Build and run a conditional rule",
+    "rule": "coding-condition",
+    "example": {
+      "number": 24,
+      "divisor": 2
+    },
+    "parameters": [
+      "number",
+      "divisor"
+    ]
+  },
+  {
+    "id": "grade5-coding-loop",
+    "skillId": "c3-2",
+    "title": "Trace and modify a loop",
+    "rule": "coding-loop",
+    "example": {
+      "start": 2,
+      "increment": 3,
+      "repetitions": 4
+    },
+    "parameters": [
+      "start",
+      "increment",
+      "repetitions"
+    ]
+  },
+  {
+    "id": "grade5-seating-model",
+    "skillId": "c4",
+    "title": "Test and revise a seating plan",
+    "rule": "seating-model",
+    "example": {
+      "learners": 27,
+      "seatsPerTable": 6,
+      "extraLearners": 4
+    },
+    "parameters": [
+      "learners",
+      "seatsPerTable",
+      "extraLearners"
+    ]
+  },
+  {
+    "id": "grade5-sampling",
+    "skillId": "d1-1",
+    "title": "Choose a representative sample",
+    "rule": "sampling",
+    "example": {
+      "topic": 0,
+      "classCount": 6
+    },
+    "parameters": [
+      "topic",
+      "classCount"
+    ]
+  },
+  {
+    "id": "grade5-frequency-table",
+    "skillId": "d1-2",
+    "title": "Organize survey responses",
+    "rule": "frequency-table",
+    "example": {
+      "walking": 6,
+      "bus": 8,
+      "cycling": 4
+    },
+    "parameters": [
+      "walking",
+      "bus",
+      "cycling"
+    ]
+  },
+  {
+    "id": "grade5-stacked-graph",
+    "skillId": "d1-3",
+    "title": "Build a stacked-bar graph",
+    "rule": "stacked-graph",
+    "example": {
+      "classAWalk": 8,
+      "classABus": 6,
+      "classBWalk": 5,
+      "classBBus": 9
+    },
+    "parameters": [
+      "classAWalk",
+      "classABus",
+      "classBWalk",
+      "classBBus"
+    ]
+  },
+  {
+    "id": "grade5-infographic",
+    "skillId": "d1-4",
+    "title": "Create a data story",
+    "rule": "infographic",
+    "example": {
+      "walking": 6,
+      "bus": 10,
+      "cycling": 4
+    },
+    "parameters": [
+      "walking",
+      "bus",
+      "cycling"
+    ]
+  },
+  {
+    "id": "grade5-statistics",
+    "skillId": "d1-5",
+    "title": "Mean, median, and mode",
+    "rule": "statistics",
+    "example": {
+      "first": 2,
+      "second": 3,
+      "third": 3,
+      "fourth": 4,
+      "fifth": 8,
+      "useTenths": 0
+    },
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "fourth",
+      "fifth",
+      "useTenths"
+    ]
+  },
+  {
+    "id": "grade5-misleading-graph",
+    "skillId": "d1-6",
+    "title": "Spot a misleading scale",
+    "rule": "misleading-graph",
+    "example": {
+      "groupA": 50,
+      "groupB": 54,
+      "baseline": 48
+    },
+    "parameters": [
+      "groupA",
+      "groupB",
+      "baseline"
+    ]
+  },
+  {
+    "id": "grade5-probability",
+    "skillId": "d2-1",
+    "title": "Find a probability and make a prediction",
+    "rule": "probability",
+    "example": {
+      "favourable": 3,
+      "total": 6,
+      "trialMultiplier": 5
+    },
+    "parameters": [
+      "favourable",
+      "total",
+      "trialMultiplier"
+    ]
+  },
+  {
+    "id": "grade5-experimental-probability",
+    "skillId": "d2-2",
+    "title": "Compare a model with an experiment",
+    "rule": "experimental-probability",
+    "example": {
+      "heads": 17,
+      "tosses": 30
+    },
+    "parameters": [
+      "heads",
+      "tosses"
+    ]
+  },
+  {
+    "id": "grade5-triangle-sides",
+    "skillId": "e1-1",
+    "title": "Construct and classify triangles",
+    "rule": "triangle-sides",
+    "example": {
+      "sideA": 5,
+      "sideB": 6,
+      "sideC": 7
+    },
+    "parameters": [
+      "sideA",
+      "sideB",
+      "sideC"
+    ]
+  },
+  {
+    "id": "grade5-congruent-shapes",
+    "skillId": "e1-2",
+    "title": "Compare shapes and sizes",
+    "rule": "congruent-shapes",
+    "example": {
+      "width": 4,
+      "height": 3,
+      "sameSize": 1
+    },
+    "parameters": [
+      "width",
+      "height",
+      "sameSize"
+    ]
+  },
+  {
+    "id": "grade5-cube-views",
+    "skillId": "e1-3",
+    "title": "Draw top, front, and side views",
+    "rule": "cube-views",
+    "example": {
+      "frontLeft": 1,
+      "frontRight": 3,
+      "backLeft": 2,
+      "backRight": 1
+    },
+    "parameters": [
+      "frontLeft",
+      "frontRight",
+      "backLeft",
+      "backRight"
+    ]
+  },
+  {
+    "id": "grade5-coordinates",
+    "skillId": "e1-4",
+    "title": "Plot and translate coordinates",
+    "rule": "coordinates",
+    "example": {
+      "x": 2,
+      "y": 4,
+      "right": 3,
+      "up": 0
+    },
+    "parameters": [
+      "x",
+      "y",
+      "right",
+      "up"
+    ]
+  },
+  {
+    "id": "grade5-transformation",
+    "skillId": "e1-5",
+    "title": "Translate, reflect, or rotate",
+    "rule": "transformation",
+    "example": {
+      "x": 2,
+      "y": 3,
+      "transformationType": 2
+    },
+    "parameters": [
+      "x",
+      "y",
+      "transformationType"
+    ]
+  },
+  {
+    "id": "grade5-metric-units",
+    "skillId": "e2-1",
+    "title": "Estimate and choose a metric unit",
+    "rule": "metric-units",
+    "example": {
+      "attribute": 0,
+      "estimateSeed": 7
+    },
+    "parameters": [
+      "attribute",
+      "estimateSeed"
+    ]
+  },
+  {
+    "id": "grade5-metric-conversion",
+    "skillId": "e2-2",
+    "title": "Convert to smaller metric units",
+    "rule": "metric-conversion",
+    "example": {
+      "tenths": 25,
+      "unitPair": 0
+    },
+    "parameters": [
+      "tenths",
+      "unitPair"
+    ]
+  },
+  {
+    "id": "grade5-compare-angles",
+    "skillId": "e2-3",
+    "title": "Compare angles with a common wedge",
+    "rule": "compare-angles",
+    "example": {
+      "wedgesA": 3,
+      "wedgesB": 5,
+      "wedgeDegrees": 15
+    },
+    "parameters": [
+      "wedgesA",
+      "wedgesB",
+      "wedgeDegrees"
+    ]
+  },
+  {
+    "id": "grade5-construct-angle",
+    "skillId": "e2-4",
+    "title": "Measure and construct an angle",
+    "rule": "construct-angle",
+    "example": {
+      "degrees": 65
+    },
+    "parameters": [
+      "degrees"
+    ]
+  },
+  {
+    "id": "grade5-shape-area",
+    "skillId": "e2-5",
+    "title": "Find triangle and parallelogram areas",
+    "rule": "shape-area",
+    "example": {
+      "base": 8,
+      "height": 5,
+      "triangle": 1
+    },
+    "parameters": [
+      "base",
+      "height",
+      "triangle"
+    ]
+  },
+  {
+    "id": "grade5-area-perimeter",
+    "skillId": "e2-6",
+    "title": "Compare area and perimeter",
+    "rule": "area-perimeter",
+    "example": {
+      "firstFactor": 3,
+      "secondFactor": 2
+    },
+    "parameters": [
+      "firstFactor",
+      "secondFactor"
+    ]
+  },
+  {
+    "id": "grade5-money-transfer",
+    "skillId": "f1-1",
+    "title": "Explain how a payment moves",
+    "rule": "money-transfer",
+    "example": {
+      "amountCents": 1500,
+      "method": 2
+    },
+    "parameters": [
+      "amountCents",
+      "method"
+    ]
+  },
+  {
+    "id": "grade5-sales-tax",
+    "skillId": "f1-2",
+    "title": "Calculate a transaction total",
+    "rule": "sales-tax",
+    "example": {
+      "firstPriceCents": 1250,
+      "secondPriceCents": 750,
+      "taxPercent": 13
+    },
+    "parameters": [
+      "firstPriceCents",
+      "secondPriceCents",
+      "taxPercent"
+    ]
+  },
+  {
+    "id": "grade5-budget",
+    "skillId": "f1-3",
+    "title": "Build a balanced budget",
+    "rule": "budget",
+    "example": {
+      "incomeCents": 4000,
+      "needsCents": 1200,
+      "wantsCents": 800
+    },
+    "parameters": [
+      "incomeCents",
+      "needsCents",
+      "wantsCents"
+    ]
+  },
+  {
+    "id": "grade5-credit-debt",
+    "skillId": "f1-4",
+    "title": "Calculate what is still owed",
+    "rule": "credit-debt",
+    "example": {
+      "borrowedCents": 2000,
+      "feeCents": 200,
+      "paymentCents": 500
+    },
+    "parameters": [
+      "borrowedCents",
+      "feeCents",
+      "paymentCents"
+    ]
+  },
+  {
+    "id": "grade5-unit-price",
+    "skillId": "f1-5",
+    "title": "Compare the cost per item",
+    "rule": "unit-price",
+    "example": {
+      "countA": 5,
+      "countB": 3,
+      "unitPriceACents": 20,
+      "unitPriceBCents": 25
+    },
+    "parameters": [
+      "countA",
+      "countB",
+      "unitPriceACents",
+      "unitPriceBCents"
+    ]
+  },
+  {
+    "id": "grade5-tax-services",
+    "skillId": "f1-6",
+    "title": "Connect taxes to services",
+    "rule": "tax-services",
+    "example": {
+      "governmentLevel": 0
+    },
+    "parameters": [
+      "governmentLevel"
+    ]
+  },
+  {
+    "id": "grade5-manage-emotions",
+    "skillId": "a1-1",
+    "title": "Notice your feelings",
+    "rule": "manage-emotions",
+    "example": {
+      "situation": 0
+    },
+    "parameters": [
+      "situation"
+    ]
+  },
+  {
+    "id": "grade5-cope-challenge",
+    "skillId": "a1-2",
+    "title": "Choose a helpful strategy",
+    "rule": "cope-challenge",
+    "example": {
+      "situation": 1
+    },
+    "parameters": [
+      "situation"
+    ]
+  },
+  {
+    "id": "grade5-persist",
+    "skillId": "a1-3",
+    "title": "Keep trying thoughtfully",
+    "rule": "persist",
+    "example": {
+      "situation": 2
+    },
+    "parameters": [
+      "situation"
+    ]
+  },
+  {
+    "id": "grade5-communicate",
+    "skillId": "a1-4",
+    "title": "Explain and listen",
+    "rule": "communicate",
+    "example": {
+      "situation": 0
+    },
+    "parameters": [
+      "situation"
+    ]
+  },
+  {
+    "id": "grade5-confidence",
+    "skillId": "a1-5",
+    "title": "Notice your progress",
+    "rule": "confidence",
+    "example": {
+      "situation": 3
+    },
+    "parameters": [
+      "situation"
+    ]
+  },
+  {
+    "id": "grade5-critical-thinking",
+    "skillId": "a1-6",
+    "title": "Check and justify",
+    "rule": "critical-thinking",
+    "example": {
+      "situation": 1
+    },
+    "parameters": [
+      "situation"
+    ]
+  },
+  {
+    "id": "grade5-order-fractions",
+    "skillId": "b1-4",
+    "title": "Order three fractions",
+    "rule": "order-fractions",
+    "example": {
+      "firstNumerator": 3,
+      "firstDenominator": 4,
+      "secondNumerator": 5,
+      "secondDenominator": 6,
+      "thirdNumerator": 3,
+      "thirdDenominator": 2
+    },
+    "parameters": [
+      "firstNumerator",
+      "firstDenominator",
+      "secondNumerator",
+      "secondDenominator",
+      "thirdNumerator",
+      "thirdDenominator"
+    ]
+  },
+  {
+    "id": "grade5-percent-fraction",
+    "skillId": "b1-7",
+    "title": "Convert a percentage to other forms",
+    "rule": "percent-fraction",
+    "example": {
+      "percent": 25
+    },
+    "parameters": [
+      "percent"
+    ]
+  },
+  {
+    "id": "grade5-equation-subtract",
+    "skillId": "c2-3",
+    "title": "Undo subtraction and verify",
+    "rule": "equation-subtract",
+    "example": {
+      "amountSubtracted": 34,
+      "rightSide": 56
+    },
+    "parameters": [
+      "amountSubtracted",
+      "rightSide"
+    ]
+  },
+  {
+    "id": "grade5-equation-divide",
+    "skillId": "c2-3",
+    "title": "Undo division and verify",
+    "rule": "equation-divide",
+    "example": {
+      "divisor": 4,
+      "rightSide": 8
+    },
+    "parameters": [
+      "divisor",
+      "rightSide"
+    ]
+  },
+  {
+    "id": "grade5-inequality-operation",
+    "skillId": "c2-4",
+    "title": "Inequalities with other operations",
+    "rule": "inequality-operation",
+    "example": {
+      "operand": 3,
+      "boundary": 8,
+      "operation": 1,
+      "greaterThan": 0
+    },
+    "parameters": [
+      "operand",
+      "boundary",
+      "operation",
+      "greaterThan"
+    ]
+  },
+  {
+    "id": "grade5-statistics-even",
+    "skillId": "d1-5",
+    "title": "Statistics with an even-sized data set",
+    "rule": "statistics-even",
+    "example": {
+      "first": 12,
+      "second": 15,
+      "third": 15,
+      "fourth": 22,
+      "useTenths": 1
+    },
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "fourth",
+      "useTenths"
+    ]
+  },
+  {
+    "id": "grade5-congruent-triangles",
+    "skillId": "e1-2",
+    "title": "Compare and copy triangles",
+    "rule": "congruent-triangles",
+    "example": {
+      "sideA": 5,
+      "sideB": 6,
+      "sideC": 7,
+      "sameSize": 1
+    },
+    "parameters": [
+      "sideA",
+      "sideB",
+      "sideC",
+      "sameSize"
+    ]
+  },
+  {
+    "id": "grade5-congruent-parallelograms",
+    "skillId": "e1-2",
+    "title": "Compare and copy parallelograms",
+    "rule": "congruent-parallelograms",
+    "example": {
+      "base": 6,
+      "height": 3,
+      "sameSize": 1
+    },
+    "parameters": [
+      "base",
+      "height",
+      "sameSize"
+    ]
+  },
+  {
+    "id": "grade5-measure-angle",
+    "skillId": "e2-4",
+    "title": "Read a protractor",
+    "rule": "measure-angle",
+    "example": {
+      "degrees": 65
+    },
+    "parameters": [
+      "degrees"
+    ]
+  },
+  {
+    "id": "grade5-triangle-angles",
+    "skillId": "e1-1",
+    "title": "Construct and classify using angles",
+    "rule": "triangle-angles",
+    "parameters": [
+      "base",
+      "leftAngle",
+      "rightAngle"
+    ],
+    "example": {
+      "base": 6,
+      "leftAngle": 70,
+      "rightAngle": 70
+    }
+  },
+  {
+    "id": "grade5-coordinate-scale",
+    "skillId": "e1-4",
+    "title": "Read coordinates with different scales",
+    "rule": "coordinate-scale",
+    "parameters": [
+      "horizontalIntervals",
+      "verticalIntervals",
+      "unitsPerInterval"
+    ],
+    "example": {
+      "horizontalIntervals": 3,
+      "verticalIntervals": 4,
+      "unitsPerInterval": 5
+    }
+  }
+]

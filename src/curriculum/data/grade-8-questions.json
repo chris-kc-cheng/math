@@ -1,0 +1,964 @@
+[
+  {
+    "id": "g8-question-b1-1",
+    "skillId": "g8-b1-1",
+    "title": "Scientific notation",
+    "rule": "g8-scientific",
+    "parameters": [
+      "mantissaHundredths",
+      "exponent"
+    ],
+    "example": {
+      "mantissaHundredths": 546,
+      "exponent": 6
+    }
+  },
+  {
+    "id": "g8-question-b1-2",
+    "skillId": "g8-b1-2",
+    "title": "Rational and irrational numbers",
+    "rule": "g8-real-order",
+    "parameters": [
+      "radicand",
+      "numerator",
+      "denominator"
+    ],
+    "example": {
+      "radicand": 2,
+      "numerator": 3,
+      "denominator": 2
+    }
+  },
+  {
+    "id": "g8-question-b1-3",
+    "skillId": "g8-b1-3",
+    "title": "Square roots",
+    "rule": "g8-roots",
+    "parameters": [
+      "radicand"
+    ],
+    "example": {
+      "radicand": 50
+    }
+  },
+  {
+    "id": "g8-question-b1-4",
+    "skillId": "g8-b1-4",
+    "title": "Flexible fractions, decimals and percentages",
+    "rule": "g8-percent",
+    "parameters": [
+      "percentHundredths"
+    ],
+    "example": {
+      "percentHundredths": 25
+    }
+  },
+  {
+    "id": "g8-question-b2-1",
+    "skillId": "g8-b2-1",
+    "title": "Multi-step rational calculations",
+    "rule": "g8-order-operations",
+    "parameters": [
+      "first",
+      "second",
+      "base",
+      "exponent"
+    ],
+    "example": {
+      "first": 2,
+      "second": 3,
+      "base": 4,
+      "exponent": 2
+    }
+  },
+  {
+    "id": "g8-question-b2-2",
+    "skillId": "g8-b2-2",
+    "title": "Square facts",
+    "rule": "g8-squares",
+    "parameters": [
+      "number"
+    ],
+    "example": {
+      "number": 12
+    }
+  },
+  {
+    "id": "g8-question-b2-3",
+    "skillId": "g8-b2-3",
+    "title": "Powers of ten",
+    "rule": "g8-powers-ten",
+    "parameters": [
+      "thousandths",
+      "power"
+    ],
+    "example": {
+      "thousandths": 2345,
+      "power": -2
+    }
+  },
+  {
+    "id": "g8-question-b2-4",
+    "skillId": "g8-b2-4",
+    "title": "Integer addition and subtraction",
+    "rule": "g8-integer-add-sub",
+    "parameters": [
+      "left",
+      "right",
+      "operation"
+    ],
+    "example": {
+      "left": -7,
+      "right": -4,
+      "operation": 1
+    }
+  },
+  {
+    "id": "g8-question-b2-5",
+    "skillId": "g8-b2-5",
+    "title": "Fraction addition and subtraction",
+    "rule": "g8-fraction-add-sub",
+    "parameters": [
+      "leftNumerator",
+      "leftDenominator",
+      "rightNumerator",
+      "rightDenominator",
+      "operation"
+    ],
+    "example": {
+      "leftNumerator": 3,
+      "leftDenominator": 4,
+      "rightNumerator": 2,
+      "rightDenominator": 3,
+      "operation": 1
+    }
+  },
+  {
+    "id": "g8-question-b2-6",
+    "skillId": "g8-b2-6",
+    "title": "Fraction multiplication and division",
+    "rule": "g8-fraction-multiply-divide",
+    "parameters": [
+      "leftNumerator",
+      "leftDenominator",
+      "rightNumerator",
+      "rightDenominator",
+      "operation"
+    ],
+    "example": {
+      "leftNumerator": 7,
+      "leftDenominator": 3,
+      "rightNumerator": 2,
+      "rightDenominator": 5,
+      "operation": 3
+    }
+  },
+  {
+    "id": "g8-question-b2-7",
+    "skillId": "g8-b2-7",
+    "title": "Integer multiplication and division",
+    "rule": "g8-integer-multiply-divide",
+    "parameters": [
+      "left",
+      "right",
+      "operation"
+    ],
+    "example": {
+      "left": -24,
+      "right": 6,
+      "operation": 3
+    }
+  },
+  {
+    "id": "g8-question-b2-8",
+    "skillId": "g8-b2-8",
+    "title": "Proportional reasoning",
+    "rule": "g8-proportion",
+    "parameters": [
+      "itemCount",
+      "cost",
+      "newCount",
+      "increasePercent"
+    ],
+    "example": {
+      "itemCount": 3,
+      "cost": 12,
+      "newCount": 5,
+      "increasePercent": 20
+    }
+  },
+  {
+    "id": "g8-question-c1-1",
+    "skillId": "g8-c1-1",
+    "title": "Compare patterns",
+    "rule": "g8-pattern-compare",
+    "parameters": [
+      "firstStart",
+      "firstRate",
+      "secondStart",
+      "secondRate"
+    ],
+    "example": {
+      "firstStart": 2,
+      "firstRate": 3,
+      "secondStart": 10,
+      "secondRate": -2
+    }
+  },
+  {
+    "id": "g8-question-c1-2",
+    "skillId": "g8-c1-2",
+    "title": "Represent rational patterns",
+    "rule": "g8-rational-pattern",
+    "parameters": [
+      "startNumerator",
+      "changeNumerator",
+      "denominator",
+      "index"
+    ],
+    "example": {
+      "startNumerator": 1,
+      "changeNumerator": 2,
+      "denominator": 3,
+      "index": 8
+    }
+  },
+  {
+    "id": "g8-question-c1-3",
+    "skillId": "g8-c1-3",
+    "title": "Predict and solve pattern rules",
+    "rule": "g8-rational-pattern",
+    "parameters": [
+      "startNumerator",
+      "changeNumerator",
+      "denominator",
+      "index"
+    ],
+    "example": {
+      "startNumerator": 6,
+      "changeNumerator": -1,
+      "denominator": 2,
+      "index": 9
+    }
+  },
+  {
+    "id": "g8-question-c1-4",
+    "skillId": "g8-c1-4",
+    "title": "Relationships among rational numbers",
+    "rule": "g8-rational-pattern",
+    "parameters": [
+      "startNumerator",
+      "changeNumerator",
+      "denominator",
+      "index"
+    ],
+    "example": {
+      "startNumerator": -3,
+      "changeNumerator": 1,
+      "denominator": 4,
+      "index": 12
+    }
+  },
+  {
+    "id": "g8-question-c2-1",
+    "skillId": "g8-c2-1",
+    "title": "Combine like terms",
+    "rule": "g8-like-terms",
+    "parameters": [
+      "leftCoefficient",
+      "leftConstant",
+      "rightCoefficient",
+      "rightConstant"
+    ],
+    "example": {
+      "leftCoefficient": 3,
+      "leftConstant": 2,
+      "rightCoefficient": -5,
+      "rightConstant": 7
+    }
+  },
+  {
+    "id": "g8-question-c2-2",
+    "skillId": "g8-c2-2",
+    "title": "Evaluate rational expressions",
+    "rule": "g8-evaluate",
+    "parameters": [
+      "coefficientNumerator",
+      "coefficientDenominator",
+      "constant",
+      "variableNumerator",
+      "variableDenominator"
+    ],
+    "example": {
+      "coefficientNumerator": 3,
+      "coefficientDenominator": 4,
+      "constant": -2,
+      "variableNumerator": 5,
+      "variableDenominator": 3
+    }
+  },
+  {
+    "id": "g8-question-c2-3",
+    "skillId": "g8-c2-3",
+    "title": "Solve and verify equations",
+    "rule": "g8-equation",
+    "parameters": [
+      "leftCoefficientTenths",
+      "leftConstantTenths",
+      "rightCoefficientTenths",
+      "rightConstantTenths"
+    ],
+    "example": {
+      "leftCoefficientTenths": 25,
+      "leftConstantTenths": 30,
+      "rightCoefficientTenths": 5,
+      "rightConstantTenths": 110
+    }
+  },
+  {
+    "id": "g8-question-c2-4",
+    "skillId": "g8-c2-4",
+    "title": "Integer inequalities",
+    "rule": "g8-inequality",
+    "parameters": [
+      "coefficient",
+      "constant",
+      "rightSide",
+      "greaterThan"
+    ],
+    "example": {
+      "coefficient": -2,
+      "constant": 3,
+      "rightSide": 11,
+      "greaterThan": 0
+    }
+  },
+  {
+    "id": "g8-question-c3-1",
+    "skillId": "g8-c3-1",
+    "title": "Write data-analysis code",
+    "rule": "g8-code-data",
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "fourth",
+      "threshold"
+    ],
+    "example": {
+      "first": 12,
+      "second": 18,
+      "third": 25,
+      "fourth": 16,
+      "threshold": 17
+    }
+  },
+  {
+    "id": "g8-question-c3-2",
+    "skillId": "g8-c3-2",
+    "title": "Modify code and assess efficiency",
+    "rule": "g8-code-data",
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "fourth",
+      "threshold"
+    ],
+    "example": {
+      "first": 20,
+      "second": 26,
+      "third": 19,
+      "fourth": 31,
+      "threshold": 24
+    }
+  },
+  {
+    "id": "g8-question-c4",
+    "skillId": "g8-c4",
+    "title": "Model real situations",
+    "rule": "g8-modelling",
+    "parameters": [
+      "setupCost",
+      "perItemCost",
+      "items"
+    ],
+    "example": {
+      "setupCost": 40,
+      "perItemCost": 3,
+      "items": 25
+    }
+  },
+  {
+    "id": "g8-question-d1-1",
+    "skillId": "g8-d1-1",
+    "title": "One-variable and two-variable data",
+    "rule": "g8-data-variables",
+    "parameters": [
+      "twoVariables"
+    ],
+    "example": {
+      "twoVariables": 1
+    }
+  },
+  {
+    "id": "g8-question-d1-2",
+    "skillId": "g8-d1-2",
+    "title": "Collect paired continuous data",
+    "rule": "g8-paired-data",
+    "parameters": [
+      "startTenths",
+      "rateTenths",
+      "outlierTenths"
+    ],
+    "example": {
+      "startTenths": 30,
+      "rateTenths": 5,
+      "outlierTenths": 0
+    }
+  },
+  {
+    "id": "g8-question-d1-3",
+    "skillId": "g8-d1-3",
+    "title": "Choose and construct graphs",
+    "rule": "g8-paired-data",
+    "parameters": [
+      "startTenths",
+      "rateTenths",
+      "outlierTenths"
+    ],
+    "example": {
+      "startTenths": 50,
+      "rateTenths": -4,
+      "outlierTenths": 10
+    }
+  },
+  {
+    "id": "g8-question-d1-4",
+    "skillId": "g8-d1-4",
+    "title": "Data infographics",
+    "rule": "g8-data-story",
+    "parameters": [
+      "startTenths",
+      "rateTenths",
+      "outlierTenths"
+    ],
+    "example": {
+      "startTenths": 30,
+      "rateTenths": 6,
+      "outlierTenths": 0
+    }
+  },
+  {
+    "id": "g8-question-d1-5",
+    "skillId": "g8-d1-5",
+    "title": "Association and outliers",
+    "rule": "g8-correlation",
+    "parameters": [
+      "startTenths",
+      "rateTenths",
+      "outlierTenths"
+    ],
+    "example": {
+      "startTenths": 40,
+      "rateTenths": 4,
+      "outlierTenths": 30
+    }
+  },
+  {
+    "id": "g8-question-d1-6",
+    "skillId": "g8-d1-6",
+    "title": "Critically interpret data",
+    "rule": "g8-correlation",
+    "parameters": [
+      "startTenths",
+      "rateTenths",
+      "outlierTenths"
+    ],
+    "example": {
+      "startTenths": 50,
+      "rateTenths": -3,
+      "outlierTenths": 30
+    }
+  },
+  {
+    "id": "g8-question-d2-1",
+    "skillId": "g8-d2-1",
+    "title": "Venn and tree probability",
+    "rule": "g8-venn",
+    "parameters": [
+      "onlyA",
+      "onlyB",
+      "both",
+      "neither"
+    ],
+    "example": {
+      "onlyA": 5,
+      "onlyB": 4,
+      "both": 3,
+      "neither": 2
+    }
+  },
+  {
+    "id": "g8-question-d2-2",
+    "skillId": "g8-d2-2",
+    "title": "Independent and dependent events",
+    "rule": "g8-dependent-probability",
+    "parameters": [
+      "red",
+      "blue",
+      "replacement"
+    ],
+    "example": {
+      "red": 3,
+      "blue": 2,
+      "replacement": 0
+    }
+  },
+  {
+    "id": "g8-question-e1-1",
+    "skillId": "g8-e1-1",
+    "title": "Tessellations",
+    "rule": "g8-tessellation",
+    "parameters": [
+      "sides"
+    ],
+    "example": {
+      "sides": 6
+    }
+  },
+  {
+    "id": "g8-question-e1-2",
+    "skillId": "g8-e1-2",
+    "title": "Scaled three-dimensional models",
+    "rule": "g8-scale-model",
+    "parameters": [
+      "modelLength",
+      "modelWidth",
+      "modelHeight",
+      "scaleDenominator"
+    ],
+    "example": {
+      "modelLength": 6,
+      "modelWidth": 4,
+      "modelHeight": 3,
+      "scaleDenominator": 5
+    }
+  },
+  {
+    "id": "g8-question-e1-3",
+    "skillId": "g8-e1-3",
+    "title": "Scale drawings",
+    "rule": "g8-scale-drawing",
+    "parameters": [
+      "drawingLength",
+      "drawingWidth",
+      "scaleDenominator",
+      "enlargement"
+    ],
+    "example": {
+      "drawingLength": 6,
+      "drawingWidth": 4,
+      "scaleDenominator": 100,
+      "enlargement": 2
+    }
+  },
+  {
+    "id": "g8-question-e1-4",
+    "skillId": "g8-e1-4",
+    "title": "Cartesian transformations",
+    "rule": "g8-cartesian",
+    "parameters": [
+      "x",
+      "y",
+      "transformation",
+      "scale"
+    ],
+    "example": {
+      "x": -3,
+      "y": 2,
+      "transformation": 3,
+      "scale": 2
+    }
+  },
+  {
+    "id": "g8-question-e2-1",
+    "skillId": "g8-e2-1",
+    "title": "Extreme metric prefixes",
+    "rule": "g8-metric-prefix",
+    "parameters": [
+      "amount",
+      "prefix"
+    ],
+    "example": {
+      "amount": 3,
+      "prefix": 3
+    }
+  },
+  {
+    "id": "g8-question-e2-2",
+    "skillId": "g8-e2-2",
+    "title": "Line and polygon angles",
+    "rule": "g8-angle-properties",
+    "parameters": [
+      "givenAngle",
+      "sides",
+      "relationship"
+    ],
+    "example": {
+      "givenAngle": 65,
+      "sides": 6,
+      "relationship": 2
+    }
+  },
+  {
+    "id": "g8-question-e2-3",
+    "skillId": "g8-e2-3",
+    "title": "Composite measurement",
+    "rule": "g8-composite-area",
+    "parameters": [
+      "width",
+      "height",
+      "cutWidth",
+      "cutHeight"
+    ],
+    "example": {
+      "width": 12,
+      "height": 10,
+      "cutWidth": 4,
+      "cutHeight": 3
+    }
+  },
+  {
+    "id": "g8-question-e2-4",
+    "skillId": "g8-e2-4",
+    "title": "Pythagorean relationship",
+    "rule": "g8-pythagorean",
+    "parameters": [
+      "legA",
+      "legB"
+    ],
+    "example": {
+      "legA": 3,
+      "legB": 4
+    }
+  },
+  {
+    "id": "g8-question-f1-1",
+    "skillId": "g8-f1-1",
+    "title": "Payments and currency exchange",
+    "rule": "g8-exchange",
+    "parameters": [
+      "foreignPriceCents",
+      "rateHundredths",
+      "percentageFee",
+      "fixedFeeCents"
+    ],
+    "example": {
+      "foreignPriceCents": 10000,
+      "rateHundredths": 135,
+      "percentageFee": 2,
+      "fixedFeeCents": 300
+    }
+  },
+  {
+    "id": "g8-question-f1-2",
+    "skillId": "g8-f1-2",
+    "title": "Long-term financial plans",
+    "rule": "g8-financial-goal",
+    "parameters": [
+      "incomeCents",
+      "expenseCents",
+      "taxPercent",
+      "goalCents"
+    ],
+    "example": {
+      "incomeCents": 4000,
+      "expenseCents": 1500,
+      "taxPercent": 10,
+      "goalCents": 20000
+    }
+  },
+  {
+    "id": "g8-question-f1-3",
+    "skillId": "g8-f1-3",
+    "title": "Track balanced budgets",
+    "rule": "budget",
+    "parameters": [
+      "incomeCents",
+      "needsCents",
+      "wantsCents"
+    ],
+    "example": {
+      "incomeCents": 8000,
+      "needsCents": 3500,
+      "wantsCents": 1500
+    }
+  },
+  {
+    "id": "g8-question-f1-4",
+    "skillId": "g8-f1-4",
+    "title": "Simple and compound interest",
+    "rule": "g8-interest",
+    "parameters": [
+      "principalCents",
+      "annualPercent",
+      "years"
+    ],
+    "example": {
+      "principalCents": 100000,
+      "annualPercent": 5,
+      "years": 3
+    }
+  },
+  {
+    "id": "g8-question-f1-5",
+    "skillId": "g8-f1-5",
+    "title": "Sales, loyalty and incentives",
+    "rule": "g8-sale-value",
+    "parameters": [
+      "priceCents",
+      "discountPercent",
+      "rewardPercent"
+    ],
+    "example": {
+      "priceCents": 5000,
+      "discountPercent": 20,
+      "rewardPercent": 5
+    }
+  },
+  {
+    "id": "g8-question-f1-6",
+    "skillId": "g8-f1-6",
+    "title": "Credit and consumer contracts",
+    "rule": "g8-credit-offers",
+    "parameters": [
+      "balanceCents",
+      "rateA",
+      "rateB",
+      "feeACents",
+      "feeBCents"
+    ],
+    "example": {
+      "balanceCents": 50000,
+      "rateA": 12,
+      "rateB": 10,
+      "feeACents": 0,
+      "feeBCents": 1500
+    }
+  },
+  {
+    "id": "g8-question-g8-a1-1",
+    "skillId": "g8-a1-1",
+    "title": "Manage emotions",
+    "rule": "manage-emotions",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 0
+    }
+  },
+  {
+    "id": "g8-question-g8-a1-2",
+    "skillId": "g8-a1-2",
+    "title": "Cope with challenges",
+    "rule": "cope-challenge",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 1
+    }
+  },
+  {
+    "id": "g8-question-g8-a1-3",
+    "skillId": "g8-a1-3",
+    "title": "Persist and stay motivated",
+    "rule": "persist",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 2
+    }
+  },
+  {
+    "id": "g8-question-g8-a1-4",
+    "skillId": "g8-a1-4",
+    "title": "Collaborate and communicate",
+    "rule": "communicate",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 3
+    }
+  },
+  {
+    "id": "g8-question-g8-a1-5",
+    "skillId": "g8-a1-5",
+    "title": "Confidence and self-awareness",
+    "rule": "confidence",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 0
+    }
+  },
+  {
+    "id": "g8-question-g8-a1-6",
+    "skillId": "g8-a1-6",
+    "title": "Critical and creative thinking",
+    "rule": "critical-thinking",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 1
+    }
+  },
+  {
+    "id": "g8-extra-solid",
+    "skillId": "g8-e2-3",
+    "title": "External surface area and volume",
+    "rule": "g8-composite-solid",
+    "parameters": [
+      "side"
+    ],
+    "example": {
+      "side": 4
+    }
+  },
+  {
+    "id": "g8-extra-circle",
+    "skillId": "g8-e2-3",
+    "title": "Composite circles and circumference",
+    "rule": "g8-circle-composite",
+    "parameters": [
+      "rectangleLength",
+      "radius"
+    ],
+    "example": {
+      "rectangleLength": 8,
+      "radius": 3
+    }
+  },
+  {
+    "id": "g8-extra-misleading",
+    "skillId": "g8-d1-6",
+    "title": "Examine a misleading scale",
+    "rule": "misleading-graph",
+    "parameters": [
+      "groupA",
+      "groupB",
+      "baseline"
+    ],
+    "example": {
+      "groupA": 50,
+      "groupB": 54,
+      "baseline": 48
+    }
+  },
+  {
+    "id": "g8-extra-repeating",
+    "skillId": "g8-c1-1",
+    "title": "Recognize repeating structures",
+    "rule": "pattern-type",
+    "parameters": [
+      "start",
+      "difference",
+      "patternType"
+    ],
+    "example": {
+      "start": 2,
+      "difference": 3,
+      "patternType": 0
+    }
+  },
+  {
+    "id": "g8-extra-independent",
+    "skillId": "g8-d2-2",
+    "title": "Compare with replacement",
+    "rule": "g8-dependent-probability",
+    "parameters": [
+      "red",
+      "blue",
+      "replacement"
+    ],
+    "example": {
+      "red": 3,
+      "blue": 2,
+      "replacement": 1
+    }
+  },
+  {
+    "id": "g8-extra-monomials",
+    "skillId": "g8-c2-1",
+    "title": "Add and subtract monomials",
+    "rule": "g8-monomials",
+    "parameters": [
+      "leftCoefficient",
+      "rightCoefficient",
+      "subtract"
+    ],
+    "example": {
+      "leftCoefficient": 3,
+      "rightCoefficient": -5,
+      "subtract": 1
+    }
+  },
+  {
+    "id": "g8-extra-mixed",
+    "skillId": "g8-b2-6",
+    "title": "Whole and mixed-number multiplication",
+    "rule": "g8-fraction-multiply-divide",
+    "parameters": [
+      "leftNumerator",
+      "leftDenominator",
+      "rightNumerator",
+      "rightDenominator",
+      "operation"
+    ],
+    "example": {
+      "leftNumerator": 7,
+      "leftDenominator": 3,
+      "rightNumerator": 2,
+      "rightDenominator": 1,
+      "operation": 2
+    }
+  },
+  {
+    "id": "g8-extra-inclusive",
+    "skillId": "g8-c2-4",
+    "title": "Inclusive inequality boundaries",
+    "rule": "g8-inequality",
+    "parameters": [
+      "coefficient",
+      "constant",
+      "rightSide",
+      "comparison"
+    ],
+    "example": {
+      "coefficient": -2,
+      "constant": 3,
+      "rightSide": 11,
+      "comparison": 2
+    }
+  },
+  {
+    "id": "g8-extra-missing-leg",
+    "skillId": "g8-e2-4",
+    "title": "Find a missing triangle leg",
+    "rule": "g8-pythagorean-leg",
+    "parameters": [
+      "hypotenuse",
+      "knownLeg"
+    ],
+    "example": {
+      "hypotenuse": 13,
+      "knownLeg": 5
+    }
+  }
+]

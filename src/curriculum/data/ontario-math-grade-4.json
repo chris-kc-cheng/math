@@ -1,0 +1,1473 @@
+{
+  "schemaVersion": 1,
+  "id": "ontario-math-grade-4",
+  "jurisdiction": "Ontario",
+  "grade": 4,
+  "language": "en",
+  "researchedAt": "2026-10-29",
+  "sources": {
+    "number": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/c2dea171-e219-4ec0-b097-24c959fcc924/Number_AODA.pdf",
+    "algebra": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/08f5a14f-576a-4282-af82-096dc302ed10/Algebra_AODA.pdf",
+    "data": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/60e2b2c7-5a7a-4038-bc06-fb88ffd6c861/Data_AODA.pdf",
+    "spatial": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/01b0b598-d5dc-455b-83de-9b7436bcefeb/Spatial_AODA.pdf",
+    "financial": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/8a374255-069f-4539-b020-5737aaf672f9/Financial_AODA.pdf",
+    "learning": "https://www.dcp.edu.gov.on.ca/en/curriculum/elementary-mathematics/grades/g4-math/strands",
+    "board": "https://www2.yrdsb.ca/about-us/director-education/directors-annual-report/board-improvement-plan-math",
+    "boardCurriculum": "https://www2.yrdsb.ca/schools-programs/school-programs-nav/school-programs/mathematics"
+  },
+  "curriculum": {
+    "id": "grade-4",
+    "title": "Grade 4",
+    "description": "Ontario Grade 4 mathematics for YRDSB learners. Representative worked and guided activities support practice; they do not certify mastery.",
+    "children": [
+      {
+        "id": "g4-number",
+        "code": "B",
+        "title": "Number",
+        "source": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/c2dea171-e219-4ec0-b097-24c959fcc924/Number_AODA.pdf",
+        "children": [
+          {
+            "id": "g4-b1-topic",
+            "title": "B1 · Number sense",
+            "children": [
+              {
+                "id": "g4-b1-1",
+                "code": "B1.1",
+                "title": "Whole numbers to 10,000",
+                "description": "Represent and decompose numbers through 10,000.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-b1-2",
+                "code": "B1.2",
+                "title": "Order whole numbers",
+                "description": "Compare numbers through 10,000.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-b1-3",
+                "code": "B1.3",
+                "title": "Round whole numbers",
+                "description": "Round to tens, hundreds, or thousands.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-b1-4",
+                "code": "B1.4",
+                "title": "Represent fractions",
+                "description": "Model halves to tenths; explain numerator and denominator.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-b1-5",
+                "code": "B1.5",
+                "title": "Compare fair shares",
+                "description": "Compare portions shared among 2, 3, 4, 5, 6, 8, or 10 sharers.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-b1-6",
+                "code": "B1.6",
+                "title": "Count by fractions",
+                "description": "Count to ten by common unit fractions.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-b1-7",
+                "code": "B1.7",
+                "title": "Decimal tenths",
+                "description": "Represent, compare, and order tenths.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-b1-8",
+                "code": "B1.8",
+                "title": "Round decimal tenths",
+                "description": "Round to the nearest whole number.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-b1-9",
+                "code": "B1.9",
+                "title": "Fractions and tenths",
+                "description": "Connect fractions and decimal tenths.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          },
+          {
+            "id": "g4-b2-topic",
+            "title": "B2 · Operations",
+            "children": [
+              {
+                "id": "g4-b2-1",
+                "code": "B2.1",
+                "title": "Operation relationships",
+                "description": "Use inverse operations and multi-operation whole-number reasoning.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-b2-2",
+                "code": "B2.2",
+                "title": "Multiplication and division facts",
+                "description": "Recall 1 × 1 through 10 × 10 and related division facts.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-b2-3",
+                "code": "B2.3",
+                "title": "Mental calculation",
+                "description": "Scale by 10, 100, or 1000; divide by 10; calculate with tenths.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-b2-4",
+                "code": "B2.4",
+                "title": "Whole-number and tenths calculations",
+                "description": "Add/subtract whole numbers through 10,000 and decimal tenths.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-b2-5",
+                "code": "B2.5",
+                "title": "Multiply by one digit",
+                "description": "Multiply two/three-digit numbers by one digit or powers of ten.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-b2-6",
+                "code": "B2.6",
+                "title": "Divide by one digit",
+                "description": "Divide two/three-digit numbers; use fractional remainders where appropriate.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-b2-7",
+                "code": "B2.7",
+                "title": "Repeated unit fractions",
+                "description": "Connect repeated addition of unit fractions with multiplication.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-b2-8",
+                "code": "B2.8",
+                "title": "Whole-number rates",
+                "description": "Represent multiplicative whole-number rates.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g4-algebra",
+        "code": "C",
+        "title": "Algebra",
+        "source": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/08f5a14f-576a-4282-af82-096dc302ed10/Algebra_AODA.pdf",
+        "children": [
+          {
+            "id": "g4-c1-topic",
+            "title": "C1 · Patterns and relationships",
+            "children": [
+              {
+                "id": "g4-c1-1",
+                "code": "C1.1",
+                "title": "Repeating and growing patterns",
+                "description": "Recognize recurring units and growth.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-c1-2",
+                "code": "C1.2",
+                "title": "Tables and graphs",
+                "description": "Translate patterns into tables and graphs.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-c1-3",
+                "code": "C1.3",
+                "title": "Rules and missing terms",
+                "description": "Extend patterns and justify predictions.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-c1-4",
+                "code": "C1.4",
+                "title": "Patterns with tenths",
+                "description": "Connect whole numbers and decimal tenths.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          },
+          {
+            "id": "g4-c2-topic",
+            "title": "C2 · Expressions, equations, and inequalities",
+            "children": [
+              {
+                "id": "g4-c2-1",
+                "code": "C2.1",
+                "title": "Symbols as variables",
+                "description": "Use symbols for unknown quantities in expressions/equations.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-c2-2",
+                "code": "C2.2",
+                "title": "Solve and verify equations",
+                "description": "Solve whole-number equations through 50 and verify.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-c2-3",
+                "code": "C2.3",
+                "title": "Whole-number inequalities",
+                "description": "Solve, verify, and graph addition/subtraction inequalities through 20.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          },
+          {
+            "id": "g4-c3-topic",
+            "title": "C3 · Coding",
+            "children": [
+              {
+                "id": "g4-c3-1",
+                "code": "C3.1",
+                "title": "Write code with nested events",
+                "description": "Use sequential, concurrent, repeating, and nested events.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-c3-2",
+                "code": "C3.2",
+                "title": "Read and alter code",
+                "description": "Explain effects of changing code with nested events.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          },
+          {
+            "id": "g4-c4-topic",
+            "title": "C4 · Mathematical modelling",
+            "children": [
+              {
+                "id": "g4-c4",
+                "code": "C4",
+                "title": "Mathematical modelling",
+                "description": "Create, test, and revise models in real situations.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g4-data",
+        "code": "D",
+        "title": "Data",
+        "source": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/60e2b2c7-5a7a-4038-bc06-fb88ffd6c861/Data_AODA.pdf",
+        "children": [
+          {
+            "id": "g4-d1-topic",
+            "title": "D1 · Data literacy",
+            "children": [
+              {
+                "id": "g4-d1-1",
+                "code": "D1.1",
+                "title": "Qualitative and quantitative data",
+                "description": "Choose data types for questions.",
+                "example": "Compare favourite colour with number of pets. Which is qualitative?"
+              },
+              {
+                "id": "g4-d1-2",
+                "code": "D1.2",
+                "title": "Collect and organize data",
+                "description": "Use primary/secondary sources, frequency tables, and stem-and-leaf plots.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-d1-3",
+                "code": "D1.3",
+                "title": "Multiple-bar graphs",
+                "description": "Choose and label graphs comparing multiple data sets.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-d1-4",
+                "code": "D1.4",
+                "title": "Data infographics",
+                "description": "Tell a supported story using appropriate representations.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-d1-5",
+                "code": "D1.5",
+                "title": "Mean, median, and mode",
+                "description": "Calculate central measures for whole-number data.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-d1-6",
+                "code": "D1.6",
+                "title": "Interpret data sets",
+                "description": "Use evidence from plots and graphs to support decisions.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          },
+          {
+            "id": "g4-d2-topic",
+            "title": "D2 · Probability",
+            "children": [
+              {
+                "id": "g4-d2-1",
+                "code": "D2.1",
+                "title": "Probability language",
+                "description": "Use impossible through certain on a probability line.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-d2-2",
+                "code": "D2.2",
+                "title": "Compare population measures",
+                "description": "Predict and test whether populations share central measures.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g4-spatial",
+        "code": "E",
+        "title": "Spatial sense",
+        "source": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/01b0b598-d5dc-455b-83de-9b7436bcefeb/Spatial_AODA.pdf",
+        "children": [
+          {
+            "id": "g4-e1-topic",
+            "title": "E1 · Geometric and spatial reasoning",
+            "children": [
+              {
+                "id": "g4-e1-1",
+                "code": "E1.1",
+                "title": "Properties of rectangles",
+                "description": "Identify right angles, parallel/perpendicular sides, and symmetry.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-e1-2",
+                "code": "E1.2",
+                "title": "First-quadrant coordinates",
+                "description": "Plot/read points and describe translations.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-e1-3",
+                "code": "E1.3",
+                "title": "Translations and reflections",
+                "description": "Predict and perform transformations on a grid.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          },
+          {
+            "id": "g4-e2-topic",
+            "title": "E2 · Measurement",
+            "children": [
+              {
+                "id": "g4-e2-1",
+                "code": "E2.1",
+                "title": "Mass and capacity units",
+                "description": "Connect grams/kilograms and litres/millilitres using benchmarks.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-e2-2",
+                "code": "E2.2",
+                "title": "Metric prefixes and tools",
+                "description": "Choose appropriate length, mass, and capacity units/tools.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-e2-3",
+                "code": "E2.3",
+                "title": "Elapsed time",
+                "description": "Apply relationships among time units.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-e2-4",
+                "code": "E2.4",
+                "title": "Classify angles",
+                "description": "Recognize acute, right, obtuse, and straight angles.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-e2-5",
+                "code": "E2.5",
+                "title": "Rectangle area",
+                "description": "Use rows and columns to develop area = length × width.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-e2-6",
+                "code": "E2.6",
+                "title": "Missing rectangle dimensions",
+                "description": "Find an unknown measurement from two given quantities.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g4-financial",
+        "code": "F",
+        "title": "Financial literacy",
+        "source": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/8a374255-069f-4539-b020-5737aaf672f9/Financial_AODA.pdf",
+        "children": [
+          {
+            "id": "g4-f1-topic",
+            "title": "F1 · Money and financial decisions",
+            "children": [
+              {
+                "id": "g4-f1-1",
+                "code": "F1.1",
+                "title": "Payment methods",
+                "description": "Identify payment options for goods/services.",
+                "example": "Compare cash, debit, and credit for buying a book."
+              },
+              {
+                "id": "g4-f1-2",
+                "code": "F1.2",
+                "title": "Purchases and change",
+                "description": "Estimate/calculate whole-dollar transactions without tax.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-f1-3",
+                "code": "F1.3",
+                "title": "Money decisions",
+                "description": "Explain earning, spending, saving, investing, and donating.",
+                "example": "Explain earning, spending, saving, investing, and donating using a $20 gift."
+              },
+              {
+                "id": "g4-f1-4",
+                "code": "F1.4",
+                "title": "Saving and spending",
+                "description": "Explain how choices vary with circumstances.",
+                "example": "Explain earning, spending, saving, investing, and donating using a $20 gift."
+              },
+              {
+                "id": "g4-f1-5",
+                "code": "F1.5",
+                "title": "Reasonable prices",
+                "description": "Use comparisons to judge value for money.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g4-learning",
+        "code": "A",
+        "title": "Learning skills and mathematical processes",
+        "source": "https://www.dcp.edu.gov.on.ca/en/curriculum/elementary-mathematics/grades/g4-math/strands",
+        "children": [
+          {
+            "id": "g4-a1-topic",
+            "title": "A1 · Learning skills and mathematical processes",
+            "children": [
+              {
+                "id": "g4-a1-1",
+                "code": "A1.1",
+                "title": "Manage emotions",
+                "description": "Recognize emotions and choose helpful actions.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-a1-2",
+                "code": "A1.2",
+                "title": "Cope with challenges",
+                "description": "Choose tools and support when stuck.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-a1-3",
+                "code": "A1.3",
+                "title": "Persist and stay motivated",
+                "description": "Try new representations and reflect on progress.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-a1-4",
+                "code": "A1.4",
+                "title": "Collaborate and communicate",
+                "description": "Explain reasoning and listen respectfully.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-a1-5",
+                "code": "A1.5",
+                "title": "Confidence and self-awareness",
+                "description": "Notice strengths and set next goals.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g4-a1-6",
+                "code": "A1.6",
+                "title": "Critical and creative thinking",
+                "description": "Estimate, reason, check, and consider alternatives.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "suggestedSequence": [
+    [
+      "Number foundations",
+      "Build place value, representation, and operation reasoning."
+    ],
+    [
+      "Patterns and relationships",
+      "Connect number work to patterns, expressions, and equations."
+    ],
+    [
+      "Measurement and spatial reasoning",
+      "Apply number skills to units, shapes, and transformations."
+    ],
+    [
+      "Data and probability",
+      "Collect, represent, interpret, and question evidence."
+    ],
+    [
+      "Financial applications",
+      "Use number and data skills in stated classroom financial scenarios."
+    ],
+    [
+      "Across all strands",
+      "Revisit coding, modelling, communication, and reflection throughout."
+    ]
+  ],
+  "activities": [
+    {
+      "id": "activity-g4-question-b1-1",
+      "title": "Whole numbers to 10,000",
+      "skillIds": [
+        "g4-b1-1"
+      ],
+      "href": "./curriculum.html?grade=4#g4-b1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-b1-1"
+      ]
+    },
+    {
+      "id": "activity-g4-question-b1-2",
+      "title": "Order whole numbers",
+      "skillIds": [
+        "g4-b1-2"
+      ],
+      "href": "./curriculum.html?grade=4#g4-b1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-b1-2"
+      ]
+    },
+    {
+      "id": "activity-g4-question-b1-3",
+      "title": "Round whole numbers",
+      "skillIds": [
+        "g4-b1-3"
+      ],
+      "href": "./curriculum.html?grade=4#g4-b1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-b1-3"
+      ]
+    },
+    {
+      "id": "activity-g4-question-b1-4",
+      "title": "Represent fractions",
+      "skillIds": [
+        "g4-b1-4"
+      ],
+      "href": "./curriculum.html?grade=4#g4-b1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-b1-4"
+      ]
+    },
+    {
+      "id": "activity-g4-question-b1-5",
+      "title": "Compare fair shares",
+      "skillIds": [
+        "g4-b1-5"
+      ],
+      "href": "./curriculum.html?grade=4#g4-b1-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-b1-5"
+      ]
+    },
+    {
+      "id": "activity-g4-question-b1-6",
+      "title": "Count by fractions",
+      "skillIds": [
+        "g4-b1-6"
+      ],
+      "href": "./curriculum.html?grade=4#g4-b1-6",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-b1-6"
+      ]
+    },
+    {
+      "id": "activity-g4-question-b1-7",
+      "title": "Decimal tenths",
+      "skillIds": [
+        "g4-b1-7"
+      ],
+      "href": "./curriculum.html?grade=4#g4-b1-7",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-b1-7"
+      ]
+    },
+    {
+      "id": "activity-g4-question-b1-8",
+      "title": "Round decimal tenths",
+      "skillIds": [
+        "g4-b1-8"
+      ],
+      "href": "./curriculum.html?grade=4#g4-b1-8",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-b1-8"
+      ]
+    },
+    {
+      "id": "activity-g4-question-b1-9",
+      "title": "Fractions and tenths",
+      "skillIds": [
+        "g4-b1-9"
+      ],
+      "href": "./curriculum.html?grade=4#g4-b1-9",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-b1-9"
+      ]
+    },
+    {
+      "id": "activity-g4-question-b2-1",
+      "title": "Operation relationships",
+      "skillIds": [
+        "g4-b2-1"
+      ],
+      "href": "./curriculum.html?grade=4#g4-b2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-b2-1"
+      ]
+    },
+    {
+      "id": "activity-g4-question-b2-2",
+      "title": "Multiplication and division facts",
+      "skillIds": [
+        "g4-b2-2"
+      ],
+      "href": "./curriculum.html?grade=4#g4-b2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-b2-2"
+      ]
+    },
+    {
+      "id": "activity-g4-question-b2-3",
+      "title": "Mental calculation",
+      "skillIds": [
+        "g4-b2-3"
+      ],
+      "href": "./curriculum.html?grade=4#g4-b2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-b2-3"
+      ]
+    },
+    {
+      "id": "activity-g4-question-b2-4",
+      "title": "Whole-number and tenths calculations",
+      "skillIds": [
+        "g4-b2-4"
+      ],
+      "href": "./curriculum.html?grade=4#g4-b2-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-b2-4"
+      ]
+    },
+    {
+      "id": "activity-g4-question-b2-5",
+      "title": "Multiply by one digit",
+      "skillIds": [
+        "g4-b2-5"
+      ],
+      "href": "./curriculum.html?grade=4#g4-b2-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-b2-5"
+      ]
+    },
+    {
+      "id": "activity-g4-question-b2-6",
+      "title": "Divide by one digit",
+      "skillIds": [
+        "g4-b2-6"
+      ],
+      "href": "./curriculum.html?grade=4#g4-b2-6",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-b2-6"
+      ]
+    },
+    {
+      "id": "activity-g4-question-b2-7",
+      "title": "Repeated unit fractions",
+      "skillIds": [
+        "g4-b2-7"
+      ],
+      "href": "./curriculum.html?grade=4#g4-b2-7",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-b2-7"
+      ]
+    },
+    {
+      "id": "activity-g4-question-b2-8",
+      "title": "Whole-number rates",
+      "skillIds": [
+        "g4-b2-8"
+      ],
+      "href": "./curriculum.html?grade=4#g4-b2-8",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-b2-8"
+      ]
+    },
+    {
+      "id": "activity-g4-question-c1-1",
+      "title": "Repeating and growing patterns",
+      "skillIds": [
+        "g4-c1-1"
+      ],
+      "href": "./curriculum.html?grade=4#g4-c1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-c1-1"
+      ]
+    },
+    {
+      "id": "activity-g4-question-c1-2",
+      "title": "Tables and graphs",
+      "skillIds": [
+        "g4-c1-2"
+      ],
+      "href": "./curriculum.html?grade=4#g4-c1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-c1-2"
+      ]
+    },
+    {
+      "id": "activity-g4-question-c1-3",
+      "title": "Rules and missing terms",
+      "skillIds": [
+        "g4-c1-3"
+      ],
+      "href": "./curriculum.html?grade=4#g4-c1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-c1-3"
+      ]
+    },
+    {
+      "id": "activity-g4-question-c1-4",
+      "title": "Patterns with tenths",
+      "skillIds": [
+        "g4-c1-4"
+      ],
+      "href": "./curriculum.html?grade=4#g4-c1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-c1-4"
+      ]
+    },
+    {
+      "id": "activity-g4-question-c2-1",
+      "title": "Symbols as variables",
+      "skillIds": [
+        "g4-c2-1"
+      ],
+      "href": "./curriculum.html?grade=4#g4-c2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-c2-1"
+      ]
+    },
+    {
+      "id": "activity-g4-question-c2-2",
+      "title": "Solve and verify equations",
+      "skillIds": [
+        "g4-c2-2"
+      ],
+      "href": "./curriculum.html?grade=4#g4-c2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-c2-2"
+      ]
+    },
+    {
+      "id": "activity-g4-question-c2-3",
+      "title": "Whole-number inequalities",
+      "skillIds": [
+        "g4-c2-3"
+      ],
+      "href": "./curriculum.html?grade=4#g4-c2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-c2-3"
+      ]
+    },
+    {
+      "id": "activity-g4-question-c3-1",
+      "title": "Write code with nested events",
+      "skillIds": [
+        "g4-c3-1"
+      ],
+      "href": "./curriculum.html?grade=4#g4-c3-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-c3-1"
+      ]
+    },
+    {
+      "id": "activity-g4-question-c3-2",
+      "title": "Read and alter code",
+      "skillIds": [
+        "g4-c3-2"
+      ],
+      "href": "./curriculum.html?grade=4#g4-c3-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-c3-2"
+      ]
+    },
+    {
+      "id": "activity-g4-question-c4",
+      "title": "Mathematical modelling",
+      "skillIds": [
+        "g4-c4"
+      ],
+      "href": "./curriculum.html?grade=4#g4-c4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-c4"
+      ]
+    },
+    {
+      "id": "activity-g4-question-d1-1",
+      "title": "Qualitative and quantitative data",
+      "skillIds": [
+        "g4-d1-1"
+      ],
+      "href": "./curriculum.html?grade=4#g4-d1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-d1-1"
+      ]
+    },
+    {
+      "id": "activity-g4-question-d1-2",
+      "title": "Collect and organize data",
+      "skillIds": [
+        "g4-d1-2"
+      ],
+      "href": "./curriculum.html?grade=4#g4-d1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-d1-2"
+      ]
+    },
+    {
+      "id": "activity-g4-question-d1-3",
+      "title": "Multiple-bar graphs",
+      "skillIds": [
+        "g4-d1-3"
+      ],
+      "href": "./curriculum.html?grade=4#g4-d1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-d1-3"
+      ]
+    },
+    {
+      "id": "activity-g4-question-d1-4",
+      "title": "Data infographics",
+      "skillIds": [
+        "g4-d1-4"
+      ],
+      "href": "./curriculum.html?grade=4#g4-d1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-d1-4"
+      ]
+    },
+    {
+      "id": "activity-g4-question-d1-5",
+      "title": "Mean, median, and mode",
+      "skillIds": [
+        "g4-d1-5"
+      ],
+      "href": "./curriculum.html?grade=4#g4-d1-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-d1-5"
+      ]
+    },
+    {
+      "id": "activity-g4-question-d1-6",
+      "title": "Interpret data sets",
+      "skillIds": [
+        "g4-d1-6"
+      ],
+      "href": "./curriculum.html?grade=4#g4-d1-6",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-d1-6"
+      ]
+    },
+    {
+      "id": "activity-g4-question-d2-1",
+      "title": "Probability language",
+      "skillIds": [
+        "g4-d2-1"
+      ],
+      "href": "./curriculum.html?grade=4#g4-d2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-d2-1"
+      ]
+    },
+    {
+      "id": "activity-g4-question-d2-2",
+      "title": "Compare population measures",
+      "skillIds": [
+        "g4-d2-2"
+      ],
+      "href": "./curriculum.html?grade=4#g4-d2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-d2-2"
+      ]
+    },
+    {
+      "id": "activity-g4-question-e1-1",
+      "title": "Properties of rectangles",
+      "skillIds": [
+        "g4-e1-1"
+      ],
+      "href": "./curriculum.html?grade=4#g4-e1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-e1-1"
+      ]
+    },
+    {
+      "id": "activity-g4-question-e1-2",
+      "title": "First-quadrant coordinates",
+      "skillIds": [
+        "g4-e1-2"
+      ],
+      "href": "./curriculum.html?grade=4#g4-e1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-e1-2"
+      ]
+    },
+    {
+      "id": "activity-g4-question-e1-3",
+      "title": "Translations and reflections",
+      "skillIds": [
+        "g4-e1-3"
+      ],
+      "href": "./curriculum.html?grade=4#g4-e1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-e1-3"
+      ]
+    },
+    {
+      "id": "activity-g4-question-e2-1",
+      "title": "Mass and capacity units",
+      "skillIds": [
+        "g4-e2-1"
+      ],
+      "href": "./curriculum.html?grade=4#g4-e2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-e2-1"
+      ]
+    },
+    {
+      "id": "activity-g4-question-e2-2",
+      "title": "Metric prefixes and tools",
+      "skillIds": [
+        "g4-e2-2"
+      ],
+      "href": "./curriculum.html?grade=4#g4-e2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-e2-2"
+      ]
+    },
+    {
+      "id": "activity-g4-question-e2-3",
+      "title": "Elapsed time",
+      "skillIds": [
+        "g4-e2-3"
+      ],
+      "href": "./curriculum.html?grade=4#g4-e2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-e2-3"
+      ]
+    },
+    {
+      "id": "activity-g4-question-e2-4",
+      "title": "Classify angles",
+      "skillIds": [
+        "g4-e2-4"
+      ],
+      "href": "./curriculum.html?grade=4#g4-e2-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-e2-4"
+      ]
+    },
+    {
+      "id": "activity-g4-question-e2-5",
+      "title": "Rectangle area",
+      "skillIds": [
+        "g4-e2-5"
+      ],
+      "href": "./curriculum.html?grade=4#g4-e2-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-e2-5"
+      ]
+    },
+    {
+      "id": "activity-g4-question-e2-6",
+      "title": "Missing rectangle dimensions",
+      "skillIds": [
+        "g4-e2-6"
+      ],
+      "href": "./curriculum.html?grade=4#g4-e2-6",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-e2-6"
+      ]
+    },
+    {
+      "id": "activity-g4-question-f1-1",
+      "title": "Payment methods",
+      "skillIds": [
+        "g4-f1-1"
+      ],
+      "href": "./curriculum.html?grade=4#g4-f1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-f1-1"
+      ]
+    },
+    {
+      "id": "activity-g4-question-f1-2",
+      "title": "Purchases and change",
+      "skillIds": [
+        "g4-f1-2"
+      ],
+      "href": "./curriculum.html?grade=4#g4-f1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-f1-2"
+      ]
+    },
+    {
+      "id": "activity-g4-question-f1-3",
+      "title": "Money decisions",
+      "skillIds": [
+        "g4-f1-3"
+      ],
+      "href": "./curriculum.html?grade=4#g4-f1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-f1-3"
+      ]
+    },
+    {
+      "id": "activity-g4-question-f1-4",
+      "title": "Saving and spending",
+      "skillIds": [
+        "g4-f1-4"
+      ],
+      "href": "./curriculum.html?grade=4#g4-f1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-f1-4"
+      ]
+    },
+    {
+      "id": "activity-g4-question-f1-5",
+      "title": "Reasonable prices",
+      "skillIds": [
+        "g4-f1-5"
+      ],
+      "href": "./curriculum.html?grade=4#g4-f1-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-f1-5"
+      ]
+    },
+    {
+      "id": "activity-g4-question-a1-1",
+      "title": "Manage emotions",
+      "skillIds": [
+        "g4-a1-1"
+      ],
+      "href": "./curriculum.html?grade=4#g4-a1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-a1-1"
+      ]
+    },
+    {
+      "id": "activity-g4-question-a1-2",
+      "title": "Cope with challenges",
+      "skillIds": [
+        "g4-a1-2"
+      ],
+      "href": "./curriculum.html?grade=4#g4-a1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-a1-2"
+      ]
+    },
+    {
+      "id": "activity-g4-question-a1-3",
+      "title": "Persist and stay motivated",
+      "skillIds": [
+        "g4-a1-3"
+      ],
+      "href": "./curriculum.html?grade=4#g4-a1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-a1-3"
+      ]
+    },
+    {
+      "id": "activity-g4-question-a1-4",
+      "title": "Collaborate and communicate",
+      "skillIds": [
+        "g4-a1-4"
+      ],
+      "href": "./curriculum.html?grade=4#g4-a1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-a1-4"
+      ]
+    },
+    {
+      "id": "activity-g4-question-a1-5",
+      "title": "Confidence and self-awareness",
+      "skillIds": [
+        "g4-a1-5"
+      ],
+      "href": "./curriculum.html?grade=4#g4-a1-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-a1-5"
+      ]
+    },
+    {
+      "id": "activity-g4-question-a1-6",
+      "title": "Critical and creative thinking",
+      "skillIds": [
+        "g4-a1-6"
+      ],
+      "href": "./curriculum.html?grade=4#g4-a1-6",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-a1-6"
+      ]
+    },
+    {
+      "id": "activity-g4-question-b2-3-extra-0",
+      "title": "Add and subtract decimal tenths",
+      "skillIds": [
+        "g4-b2-3"
+      ],
+      "href": "./curriculum.html?grade=4#g4-b2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-b2-3-extra-0"
+      ]
+    },
+    {
+      "id": "activity-g4-question-b2-3-extra-1",
+      "title": "Divide by ten mentally",
+      "skillIds": [
+        "g4-b2-3"
+      ],
+      "href": "./curriculum.html?grade=4#g4-b2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-b2-3-extra-1"
+      ]
+    },
+    {
+      "id": "activity-g4-question-b2-4-extra-0",
+      "title": "Add and subtract decimal tenths",
+      "skillIds": [
+        "g4-b2-4"
+      ],
+      "href": "./curriculum.html?grade=4#g4-b2-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-b2-4-extra-0"
+      ]
+    },
+    {
+      "id": "activity-g4-question-d1-2-extra-0",
+      "title": "Data types and collection sources",
+      "skillIds": [
+        "g4-d1-2"
+      ],
+      "href": "./curriculum.html?grade=4#g4-d1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-d1-2-extra-0"
+      ]
+    },
+    {
+      "id": "activity-g4-question-e2-1-extra-0",
+      "title": "Metric benchmarks and measurement tools",
+      "skillIds": [
+        "g4-e2-1"
+      ],
+      "href": "./curriculum.html?grade=4#g4-e2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-question-e2-1-extra-0"
+      ]
+    },
+    {
+      "id": "activity-g4-related-division-facts",
+      "title": "Related division facts",
+      "skillIds": [
+        "g4-b2-2"
+      ],
+      "href": "./curriculum.html?grade=4#g4-b2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g4-related-division-facts"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2177 @@
+[
+  {
+    "id": "g6-question-b1-1",
+    "skillId": "g6-b1-1",
+    "title": "Whole numbers to one million",
+    "rule": "expanded-number",
+    "parameters": [
+      "number",
+      "usePowers"
+    ],
+    "example": {
+      "number": 648302,
+      "usePowers": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 1000000,
+        "step": 1
+      },
+      [
+        0
+      ]
+    ]
+  },
+  {
+    "id": "g6-question-b1-2",
+    "skillId": "g6-b1-2",
+    "title": "Represent integers",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Represent temperatures −4°C and 3°C. Which is warmer?",
+        "steps": [
+          "Zero separates negative and positive values. Mark −4 left of zero and 3 right of zero.",
+          "On a vertical thermometer, 3 is above −4. A temperature of 3°C is warmer."
+        ]
+      },
+      {
+        "prompt": "A lift travels from floor −2 to floor 1. Describe the movement.",
+        "steps": [
+          "Mark −2, −1, 0, 1 in order on a vertical number line.",
+          "The lift moves up three floors, crossing zero."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "g6-question-b1-3",
+    "skillId": "g6-b1-3",
+    "title": "Order numbers",
+    "rule": "rational-order",
+    "parameters": [
+      "firstNumerator",
+      "firstDenominator",
+      "secondNumerator",
+      "secondDenominator",
+      "thirdNumerator",
+      "thirdDenominator"
+    ],
+    "example": {
+      "firstNumerator": -2,
+      "firstDenominator": 1,
+      "secondNumerator": 3,
+      "secondDenominator": 4,
+      "thirdNumerator": 125,
+      "thirdDenominator": 1000
+    },
+    "generation": [
+      {
+        "min": -10,
+        "max": 10,
+        "step": 1
+      },
+      [
+        1
+      ],
+      {
+        "min": 0,
+        "max": 12,
+        "step": 1
+      },
+      [
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10
+      ],
+      {
+        "min": 0,
+        "max": 3000,
+        "step": 1
+      },
+      [
+        1000
+      ]
+    ]
+  },
+  {
+    "id": "g6-question-b1-4",
+    "skillId": "g6-b1-4",
+    "title": "Decimal thousandths",
+    "rule": "rational-order",
+    "parameters": [
+      "firstNumerator",
+      "firstDenominator",
+      "secondNumerator",
+      "secondDenominator",
+      "thirdNumerator",
+      "thirdDenominator"
+    ],
+    "example": {
+      "firstNumerator": 707,
+      "firstDenominator": 1000,
+      "secondNumerator": 77,
+      "secondDenominator": 1000,
+      "thirdNumerator": 770,
+      "thirdDenominator": 1000
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 10000,
+        "step": 1
+      },
+      [
+        1000
+      ],
+      {
+        "min": 0,
+        "max": 10000,
+        "step": 1
+      },
+      [
+        1000
+      ],
+      {
+        "min": 0,
+        "max": 10000,
+        "step": 1
+      },
+      [
+        1000
+      ]
+    ]
+  },
+  {
+    "id": "g6-question-b1-5",
+    "skillId": "g6-b1-5",
+    "title": "Round decimals",
+    "rule": "round-number",
+    "parameters": [
+      "unscaled",
+      "decimalPlaces",
+      "roundingPower"
+    ],
+    "example": {
+      "unscaled": 3475,
+      "decimalPlaces": 3,
+      "roundingPower": -2
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 99999,
+        "step": 1
+      },
+      [
+        3
+      ],
+      [
+        -2,
+        -1,
+        0
+      ]
+    ]
+  },
+  {
+    "id": "g6-question-b1-6",
+    "skillId": "g6-b1-6",
+    "title": "Fraction-decimal equivalence",
+    "rule": "decimal-equivalence",
+    "parameters": [
+      "unscaled",
+      "decimalPlaces"
+    ],
+    "example": {
+      "unscaled": 375,
+      "decimalPlaces": 3
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 9999,
+        "step": 1
+      },
+      [
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g6-question-b2-1",
+    "skillId": "g6-b2-1",
+    "title": "Multi-step number problems",
+    "rule": "g8-proportion",
+    "parameters": [
+      "itemCount",
+      "cost",
+      "newCount",
+      "increasePercent"
+    ],
+    "example": {
+      "itemCount": 3,
+      "cost": 12,
+      "newCount": 5,
+      "increasePercent": 20
+    }
+  },
+  {
+    "id": "g6-question-b2-2",
+    "skillId": "g6-b2-2",
+    "title": "Divisibility rules",
+    "rule": "divisibility",
+    "parameters": [
+      "number",
+      "divisor"
+    ],
+    "example": {
+      "number": 234,
+      "divisor": 6
+    },
+    "generation": [
+      {
+        "min": 10,
+        "max": 9999,
+        "step": 1
+      },
+      [
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10
+      ]
+    ]
+  },
+  {
+    "id": "g6-question-b2-3",
+    "skillId": "g6-b2-3",
+    "title": "Mental percentages",
+    "rule": "percent-quantity",
+    "parameters": [
+      "whole",
+      "percent",
+      "changeMode"
+    ],
+    "example": {
+      "whole": 80,
+      "percent": 15,
+      "changeMode": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 1000,
+        "step": 1
+      },
+      [
+        1,
+        5,
+        10,
+        15,
+        25,
+        50
+      ],
+      [
+        0
+      ]
+    ]
+  },
+  {
+    "id": "g6-question-b2-4",
+    "skillId": "g6-b2-4",
+    "title": "Whole-number and decimal sums",
+    "rule": "decimal-calculate",
+    "parameters": [
+      "leftUnscaled",
+      "rightUnscaled",
+      "leftPlaces",
+      "rightPlaces",
+      "operation"
+    ],
+    "example": {
+      "leftUnscaled": 24735,
+      "rightUnscaled": 8602,
+      "leftPlaces": 3,
+      "rightPlaces": 3,
+      "operation": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 999999,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 99999,
+        "step": 1
+      },
+      [
+        3
+      ],
+      [
+        3
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "answerMinimum": 0
+  },
+  {
+    "id": "g6-question-b2-5",
+    "skillId": "g6-b2-5",
+    "title": "Unlike-denominator fractions",
+    "rule": "g8-fraction-add-sub",
+    "parameters": [
+      "leftNumerator",
+      "leftDenominator",
+      "rightNumerator",
+      "rightDenominator",
+      "operation"
+    ],
+    "example": {
+      "leftNumerator": 3,
+      "leftDenominator": 4,
+      "rightNumerator": 2,
+      "rightDenominator": 3,
+      "operation": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ]
+    ],
+    "answerMinimum": 0
+  },
+  {
+    "id": "g6-question-b2-6",
+    "skillId": "g6-b2-6",
+    "title": "Prime factorization",
+    "rule": "prime-factors",
+    "parameters": [
+      "number"
+    ],
+    "example": {
+      "number": 84
+    },
+    "generation": [
+      [
+        12,
+        18,
+        24,
+        30,
+        36,
+        42,
+        48,
+        60,
+        72,
+        84,
+        90,
+        96,
+        100,
+        120,
+        144
+      ]
+    ]
+  },
+  {
+    "id": "g6-question-b2-7",
+    "skillId": "g6-b2-7",
+    "title": "Multiply by decimal tenths",
+    "rule": "decimal-calculate",
+    "parameters": [
+      "leftUnscaled",
+      "rightUnscaled",
+      "leftPlaces",
+      "rightPlaces",
+      "operation"
+    ],
+    "example": {
+      "leftUnscaled": 236,
+      "rightUnscaled": 4,
+      "leftPlaces": 0,
+      "rightPlaces": 1,
+      "operation": 2
+    },
+    "generation": [
+      {
+        "min": 100,
+        "max": 999,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 99,
+        "step": 1
+      },
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ]
+    ],
+    "answerMinimum": 0
+  },
+  {
+    "id": "g6-question-b2-8",
+    "skillId": "g6-b2-8",
+    "title": "Divide by decimal tenths",
+    "rule": "decimal-calculate",
+    "parameters": [
+      "leftUnscaled",
+      "rightUnscaled",
+      "leftPlaces",
+      "rightPlaces",
+      "operation"
+    ],
+    "example": {
+      "leftUnscaled": 236,
+      "rightUnscaled": 4,
+      "leftPlaces": 0,
+      "rightPlaces": 1,
+      "operation": 3
+    },
+    "generation": [
+      {
+        "min": 100,
+        "max": 999,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 99,
+        "step": 1
+      },
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        3
+      ]
+    ],
+    "answerMinimum": 0
+  },
+  {
+    "id": "g6-question-b2-9",
+    "skillId": "g6-b2-9",
+    "title": "Multiply by proper fractions",
+    "rule": "g8-fraction-multiply-divide",
+    "parameters": [
+      "leftNumerator",
+      "leftDenominator",
+      "rightNumerator",
+      "rightDenominator",
+      "operation"
+    ],
+    "example": {
+      "leftNumerator": 3,
+      "leftDenominator": 1,
+      "rightNumerator": 2,
+      "rightDenominator": 5,
+      "operation": 2
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      [
+        1
+      ],
+      {
+        "min": 1,
+        "max": 8,
+        "step": 1
+      },
+      [
+        5,
+        9,
+        10,
+        12
+      ],
+      [
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g6-question-b2-10",
+    "skillId": "g6-b2-10",
+    "title": "Divide by proper fractions",
+    "rule": "g8-fraction-multiply-divide",
+    "parameters": [
+      "leftNumerator",
+      "leftDenominator",
+      "rightNumerator",
+      "rightDenominator",
+      "operation"
+    ],
+    "example": {
+      "leftNumerator": 3,
+      "leftDenominator": 1,
+      "rightNumerator": 2,
+      "rightDenominator": 5,
+      "operation": 3
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      [
+        1
+      ],
+      {
+        "min": 1,
+        "max": 8,
+        "step": 1
+      },
+      [
+        5,
+        9,
+        10,
+        12
+      ],
+      [
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g6-question-b2-11",
+    "skillId": "g6-b2-11",
+    "title": "Divide decimal thousandths",
+    "rule": "decimal-calculate",
+    "parameters": [
+      "leftUnscaled",
+      "rightUnscaled",
+      "leftPlaces",
+      "rightPlaces",
+      "operation"
+    ],
+    "example": {
+      "leftUnscaled": 2375,
+      "rightUnscaled": 5,
+      "leftPlaces": 3,
+      "rightPlaces": 0,
+      "operation": 3
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 99999,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 10,
+        "step": 1
+      },
+      [
+        3
+      ],
+      [
+        0
+      ],
+      [
+        3
+      ]
+    ],
+    "answerMinimum": 0
+  },
+  {
+    "id": "g6-question-b2-12",
+    "skillId": "g6-b2-12",
+    "title": "Ratios, percents, and rates",
+    "rule": "g8-proportion",
+    "parameters": [
+      "itemCount",
+      "cost",
+      "newCount",
+      "increasePercent"
+    ],
+    "example": {
+      "itemCount": 3,
+      "cost": 12,
+      "newCount": 5,
+      "increasePercent": 20
+    }
+  },
+  {
+    "id": "g6-question-c1-1",
+    "skillId": "g6-c1-1",
+    "title": "Recognize linear growth",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Compare adding 3 each step with doubling each step.",
+        "steps": [
+          "The pattern 2, 5, 8, 11 has a constant difference and is linear growing.",
+          "Doubling gives 2, 4, 8, 16. Its differences change, so the growth is not linear."
+        ]
+      },
+      {
+        "prompt": "Describe repeating and shrinking patterns.",
+        "steps": [
+          "A repeating pattern has a recurring unit, such as red, blue, red, blue.",
+          "A shrinking linear pattern subtracts a fixed amount. Compare several differences before choosing a rule."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "g6-question-c1-2",
+    "skillId": "g6-c1-2",
+    "title": "Represent patterns",
+    "rule": "g8-rational-pattern",
+    "parameters": [
+      "startNumerator",
+      "changeNumerator",
+      "denominator",
+      "index"
+    ],
+    "example": {
+      "startNumerator": 2,
+      "changeNumerator": 3,
+      "denominator": 1,
+      "index": 8
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      [
+        1
+      ],
+      {
+        "min": 5,
+        "max": 12,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g6-question-c1-3",
+    "skillId": "g6-c1-3",
+    "title": "Predict and solve pattern rules",
+    "rule": "g8-rational-pattern",
+    "parameters": [
+      "startNumerator",
+      "changeNumerator",
+      "denominator",
+      "index"
+    ],
+    "example": {
+      "startNumerator": 2,
+      "changeNumerator": 3,
+      "denominator": 1,
+      "index": 8
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      [
+        1
+      ],
+      {
+        "min": 5,
+        "max": 12,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g6-question-c1-4",
+    "skillId": "g6-c1-4",
+    "title": "Whole and decimal patterns",
+    "rule": "decimal-pattern",
+    "parameters": [
+      "startHundredths",
+      "stepHundredths"
+    ],
+    "example": {
+      "startHundredths": 70,
+      "stepHundredths": 10
+    }
+  },
+  {
+    "id": "g6-question-c2-1",
+    "skillId": "g6-c2-1",
+    "title": "Add linear monomials",
+    "rule": "g8-monomials",
+    "parameters": [
+      "leftCoefficient",
+      "rightCoefficient",
+      "subtract"
+    ],
+    "example": {
+      "leftCoefficient": 3,
+      "rightCoefficient": 5,
+      "subtract": 0
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 12,
+        "step": 1
+      },
+      [
+        0
+      ]
+    ]
+  },
+  {
+    "id": "g6-question-c2-2",
+    "skillId": "g6-c2-2",
+    "title": "Evaluate expressions",
+    "rule": "g8-evaluate",
+    "parameters": [
+      "coefficientNumerator",
+      "coefficientDenominator",
+      "constant",
+      "variableNumerator",
+      "variableDenominator"
+    ],
+    "example": {
+      "coefficientNumerator": 3,
+      "coefficientDenominator": 1,
+      "constant": 2,
+      "variableNumerator": 25,
+      "variableDenominator": 10
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      [
+        1
+      ],
+      {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 100,
+        "step": 1
+      },
+      [
+        10
+      ]
+    ]
+  },
+  {
+    "id": "g6-question-c2-3",
+    "skillId": "g6-c2-3",
+    "title": "Multi-term equations",
+    "rule": "g8-equation",
+    "parameters": [
+      "leftCoefficientTenths",
+      "leftConstantTenths",
+      "rightCoefficientTenths",
+      "rightConstantTenths"
+    ],
+    "example": {
+      "leftCoefficientTenths": 20,
+      "leftConstantTenths": 30,
+      "rightCoefficientTenths": 10,
+      "rightConstantTenths": 110
+    },
+    "generation": [
+      {
+        "min": 10,
+        "max": 50,
+        "step": 10
+      },
+      {
+        "min": 0,
+        "max": 100,
+        "step": 10
+      },
+      [
+        0,
+        10
+      ],
+      {
+        "min": 110,
+        "max": 200,
+        "step": 10
+      }
+    ]
+  },
+  {
+    "id": "g6-question-c2-4",
+    "skillId": "g6-c2-4",
+    "title": "Two-operation inequalities",
+    "rule": "g8-inequality",
+    "parameters": [
+      "coefficient",
+      "constant",
+      "rightSide",
+      "greaterThan"
+    ],
+    "example": {
+      "coefficient": 2,
+      "constant": 3,
+      "rightSide": 19,
+      "greaterThan": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 11,
+        "max": 100,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g6-question-c3-1",
+    "skillId": "g6-c3-1",
+    "title": "Write efficient conditional code",
+    "rule": "conditional-code",
+    "parameters": [
+      "start",
+      "increment",
+      "iterations",
+      "threshold"
+    ],
+    "example": {
+      "start": 2,
+      "increment": 3,
+      "iterations": 5,
+      "threshold": 10
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 25,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g6-question-c3-2",
+    "skillId": "g6-c3-2",
+    "title": "Alter and assess code",
+    "rule": "conditional-code",
+    "parameters": [
+      "start",
+      "increment",
+      "iterations",
+      "threshold"
+    ],
+    "example": {
+      "start": 2,
+      "increment": 3,
+      "iterations": 5,
+      "threshold": 10
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 25,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g6-question-c4",
+    "skillId": "g6-c4",
+    "title": "Mathematical modelling",
+    "rule": "seating-model",
+    "parameters": [
+      "learners",
+      "seatsPerTable",
+      "extraLearners"
+    ],
+    "example": {
+      "learners": 27,
+      "seatsPerTable": 6,
+      "extraLearners": 4
+    }
+  },
+  {
+    "id": "g6-question-d1-1",
+    "skillId": "g6-d1-1",
+    "title": "Discrete and continuous data",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Compare the number of books with measured height.",
+        "steps": [
+          "Books are counted in whole items: discrete data. Height is measured on a continuous scale.",
+          "Rounding a measurement does not make the underlying quantity discrete."
+        ]
+      },
+      {
+        "prompt": "Compare time to run a lap with number of completed laps.",
+        "steps": [
+          "Lap time is continuous; completed laps are a discrete count.",
+          "Choose units and intervals that suit the question and collection method."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "g6-question-d1-2",
+    "skillId": "g6-d1-2",
+    "title": "Organize interval data",
+    "rule": "data-intervals",
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "fourth",
+      "fifth",
+      "intervalWidth"
+    ],
+    "example": {
+      "first": 12,
+      "second": 18,
+      "third": 23,
+      "fourth": 29,
+      "fifth": 30,
+      "intervalWidth": 10
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 40,
+        "step": 1
+      },
+      [
+        5,
+        10
+      ]
+    ]
+  },
+  {
+    "id": "g6-question-d1-3",
+    "skillId": "g6-d1-3",
+    "title": "Histograms and broken-line graphs",
+    "rule": "data-intervals",
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "fourth",
+      "fifth",
+      "intervalWidth"
+    ],
+    "example": {
+      "first": 12,
+      "second": 18,
+      "third": 23,
+      "fourth": 29,
+      "fifth": 30,
+      "intervalWidth": 10
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 40,
+        "step": 1
+      },
+      [
+        5,
+        10
+      ]
+    ]
+  },
+  {
+    "id": "g6-question-d1-4",
+    "skillId": "g6-d1-4",
+    "title": "Data infographics",
+    "rule": "infographic",
+    "parameters": [
+      "walking",
+      "bus",
+      "cycling"
+    ],
+    "example": {
+      "walking": 6,
+      "bus": 10,
+      "cycling": 4
+    }
+  },
+  {
+    "id": "g6-question-d1-5",
+    "skillId": "g6-d1-5",
+    "title": "Spread and central measures",
+    "rule": "data-summary-change",
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "fourth",
+      "addedValue"
+    ],
+    "example": {
+      "first": 2,
+      "second": 3,
+      "third": 3,
+      "fourth": 4,
+      "addedValue": 20
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 50,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g6-question-d1-6",
+    "skillId": "g6-d1-6",
+    "title": "Interpret and challenge graphs",
+    "rule": "misleading-graph",
+    "parameters": [
+      "groupA",
+      "groupB",
+      "baseline"
+    ],
+    "example": {
+      "groupA": 50,
+      "groupB": 54,
+      "baseline": 48
+    }
+  },
+  {
+    "id": "g6-question-d2-1",
+    "skillId": "g6-d2-1",
+    "title": "Probability in different forms",
+    "rule": "probability",
+    "parameters": [
+      "favourable",
+      "total",
+      "trialMultiplier"
+    ],
+    "example": {
+      "favourable": 3,
+      "total": 6,
+      "trialMultiplier": 5
+    }
+  },
+  {
+    "id": "g6-question-d2-2",
+    "skillId": "g6-d2-2",
+    "title": "Independent-event experiments",
+    "rule": "probability-trials",
+    "parameters": [
+      "red",
+      "blue",
+      "replace",
+      "trialCount",
+      "observedTwoRed"
+    ],
+    "example": {
+      "red": 3,
+      "blue": 2,
+      "replace": 1,
+      "trialCount": 30,
+      "observedTwoRed": 11
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      [
+        1
+      ],
+      [
+        20,
+        30,
+        40
+      ],
+      {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g6-question-e1-1",
+    "skillId": "g6-e1-1",
+    "title": "Quadrilateral properties",
+    "rule": "quadrilateral-properties",
+    "parameters": [
+      "shape"
+    ],
+    "example": {
+      "shape": 1
+    },
+    "generation": [
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g6-question-e1-2",
+    "skillId": "g6-e1-2",
+    "title": "Build from orthographic views",
+    "rule": "cube-views",
+    "parameters": [
+      "frontLeft",
+      "frontRight",
+      "backLeft",
+      "backRight"
+    ],
+    "example": {
+      "frontLeft": 1,
+      "frontRight": 3,
+      "backLeft": 2,
+      "backRight": 1
+    }
+  },
+  {
+    "id": "g6-question-e1-3",
+    "skillId": "g6-e1-3",
+    "title": "Four-quadrant coordinates",
+    "rule": "g8-cartesian",
+    "parameters": [
+      "x",
+      "y",
+      "transformation",
+      "scale"
+    ],
+    "example": {
+      "x": -3,
+      "y": 2,
+      "transformation": 0,
+      "scale": 1
+    },
+    "generation": [
+      {
+        "min": -5,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": -5,
+        "max": 5,
+        "step": 1
+      },
+      [
+        0
+      ],
+      [
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g6-question-e1-4",
+    "skillId": "g6-e1-4",
+    "title": "Combined transformations",
+    "rule": "combined-transform",
+    "parameters": [
+      "x",
+      "y",
+      "right",
+      "up",
+      "quarterTurns"
+    ],
+    "example": {
+      "x": -3,
+      "y": 2,
+      "right": 4,
+      "up": -1,
+      "quarterTurns": 1
+    },
+    "generation": [
+      {
+        "min": -5,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": -5,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": -4,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "min": -3,
+        "max": 3,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 4,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g6-question-e2-1",
+    "skillId": "g6-e2-1",
+    "title": "Metric conversions",
+    "rule": "dimensional-units",
+    "parameters": [
+      "amount",
+      "lengthPower",
+      "dimensions"
+    ],
+    "example": {
+      "amount": 25000,
+      "lengthPower": -2,
+      "dimensions": 2
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 100000,
+        "step": 1
+      },
+      [
+        -3,
+        -2,
+        -1,
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g6-question-e2-2",
+    "skillId": "g6-e2-2",
+    "title": "Angles through a full turn",
+    "rule": "angle-relationship",
+    "parameters": [
+      "degrees",
+      "relationship"
+    ],
+    "example": {
+      "degrees": 235,
+      "relationship": 3
+    },
+    "generation": [
+      {
+        "min": 5,
+        "max": 355,
+        "step": 5
+      },
+      [
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g6-question-e2-3",
+    "skillId": "g6-e2-3",
+    "title": "Angle relationships",
+    "rule": "angle-relationship",
+    "parameters": [
+      "degrees",
+      "relationship"
+    ],
+    "example": {
+      "degrees": 35,
+      "relationship": 1
+    },
+    "generation": [
+      {
+        "min": 5,
+        "max": 85,
+        "step": 5
+      },
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g6-question-e2-4",
+    "skillId": "g6-e2-4",
+    "title": "Decompose polygon areas",
+    "rule": "decomposed-area",
+    "parameters": [
+      "firstBaseOrDiagonal",
+      "secondBaseOrDiagonal",
+      "height",
+      "shape"
+    ],
+    "example": {
+      "firstBaseOrDiagonal": 8,
+      "secondBaseOrDiagonal": 4,
+      "height": 5,
+      "shape": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g6-question-e2-5",
+    "skillId": "g6-e2-5",
+    "title": "Prism and pyramid nets",
+    "rule": "surface-area",
+    "parameters": [
+      "baseLength",
+      "baseWidth",
+      "heightOrSlantHeight",
+      "solid"
+    ],
+    "example": {
+      "baseLength": 6,
+      "baseWidth": 4,
+      "heightOrSlantHeight": 3,
+      "solid": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g6-question-e2-6",
+    "skillId": "g6-e2-6",
+    "title": "Prism and pyramid surface area",
+    "rule": "surface-area",
+    "parameters": [
+      "baseLength",
+      "baseWidth",
+      "heightOrSlantHeight",
+      "solid"
+    ],
+    "example": {
+      "baseLength": 6,
+      "baseWidth": 4,
+      "heightOrSlantHeight": 3,
+      "solid": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g6-question-f1-1",
+    "skillId": "g6-f1-1",
+    "title": "Compare payment methods",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Compare cash, debit, and credit for buying a book.",
+        "steps": [
+          "Cash uses money held; debit usually draws from an account; credit creates an amount to repay.",
+          "Compare acceptance, security, fees, access, and repayment terms. The choice depends on the situation."
+        ]
+      },
+      {
+        "prompt": "Why might two people choose different payment methods?",
+        "steps": [
+          "Cash may be needed where cards are not accepted; an account record may help another buyer track expenses.",
+          "Consider limits, privacy, fees, and safe handling. A credit limit is not extra income."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "g6-question-f1-2",
+    "skillId": "g6-f1-2",
+    "title": "Financial goals",
+    "rule": "savings-plan",
+    "parameters": [
+      "monthlyIncome",
+      "monthlySpending",
+      "targetDollars"
+    ],
+    "example": {
+      "monthlyIncome": 40,
+      "monthlySpending": 15,
+      "targetDollars": 200
+    },
+    "generation": [
+      {
+        "min": 30,
+        "max": 60,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 25,
+        "step": 1
+      },
+      {
+        "min": 50,
+        "max": 400,
+        "step": 10
+      }
+    ]
+  },
+  {
+    "id": "g6-question-f1-3",
+    "skillId": "g6-f1-3",
+    "title": "Factors affecting goals",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "What could help or delay saving for a bicycle?",
+        "steps": [
+          "Record income, essential expenses, target price, and time. Unexpected costs or reduced income can delay a goal.",
+          "Track actual amounts and revise the plan. Some factors are outside the saver’s control."
+        ]
+      },
+      {
+        "prompt": "Which societal and personal factors can affect a purchase?",
+        "steps": [
+          "Availability, advertising, prices, income, transport, accessibility, and family responsibilities can affect choices.",
+          "Explain the assumptions in a budget without judging someone else’s circumstances."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "g6-question-f1-4",
+    "skillId": "g6-f1-4",
+    "title": "Interest rates and fees",
+    "rule": "simple-interest",
+    "parameters": [
+      "principalDollars",
+      "annualPercent",
+      "years",
+      "feeDollars"
+    ],
+    "example": {
+      "principalDollars": 100,
+      "annualPercent": 5,
+      "years": 1,
+      "feeDollars": 2
+    },
+    "generation": [
+      {
+        "min": 50,
+        "max": 500,
+        "step": 50
+      },
+      {
+        "min": 1,
+        "max": 10,
+        "step": 1
+      },
+      [
+        1
+      ],
+      {
+        "min": 0,
+        "max": 10,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g6-question-f1-5",
+    "skillId": "g6-f1-5",
+    "title": "Distribute resources",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Compare trading, lending, borrowing, and donating a book.",
+        "steps": [
+          "Trading exchanges resources. Lending expects return; borrowing accepts that responsibility. Donating does not expect return.",
+          "Agree on consent, timing, condition, fairness, and whether repayment is expected."
+        ]
+      },
+      {
+        "prompt": "A group lends equipment instead of selling it. What should be agreed?",
+        "steps": [
+          "Record who owns it, who can use it, when it returns, and how damage is handled.",
+          "An agreement distinguishes a loan from a gift. Financial borrowing may also involve interest and fees."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "g6-question-a1-1",
+    "skillId": "g6-a1-1",
+    "title": "Manage emotions",
+    "rule": "manage-emotions",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 0
+    }
+  },
+  {
+    "id": "g6-question-a1-2",
+    "skillId": "g6-a1-2",
+    "title": "Cope with challenges",
+    "rule": "cope-challenge",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 1
+    }
+  },
+  {
+    "id": "g6-question-a1-3",
+    "skillId": "g6-a1-3",
+    "title": "Persist and stay motivated",
+    "rule": "persist",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 2
+    }
+  },
+  {
+    "id": "g6-question-a1-4",
+    "skillId": "g6-a1-4",
+    "title": "Collaborate and communicate",
+    "rule": "communicate",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 0
+    }
+  },
+  {
+    "id": "g6-question-a1-5",
+    "skillId": "g6-a1-5",
+    "title": "Confidence and self-awareness",
+    "rule": "confidence",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 3
+    }
+  },
+  {
+    "id": "g6-question-a1-6",
+    "skillId": "g6-a1-6",
+    "title": "Critical and creative thinking",
+    "rule": "critical-thinking",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 1
+    }
+  },
+  {
+    "id": "g6-question-b1-5-extra-0",
+    "skillId": "g6-b1-5",
+    "title": "Round repeating decimals",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Round 0.333… to the nearest hundredth.",
+        "steps": [
+          "The hundredths digit is 3 and the next digit is 3: the rounded result is 0.33.",
+          "The dots mean the 3s continue forever. 0.33 is an approximation, not an equal value."
+        ]
+      },
+      {
+        "prompt": "Round 0.666… to the nearest tenth.",
+        "steps": [
+          "The following digit is 6, so increase the tenths digit to get 0.7.",
+          "State the rounding place and write 0.666… ≈ 0.7."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "g6-question-c1-1-extra-0",
+    "skillId": "g6-c1-1",
+    "title": "Repeating, growing, and shrinking patterns",
+    "rule": "pattern-type",
+    "parameters": [
+      "start",
+      "difference",
+      "patternType"
+    ],
+    "example": {
+      "start": 5,
+      "difference": 5,
+      "patternType": 2
+    }
+  },
+  {
+    "id": "g6-question-d1-3-extra-0",
+    "skillId": "g6-d1-3",
+    "title": "Broken-line graph",
+    "rule": "data-line-graph",
+    "parameters": [
+      "day1",
+      "day2",
+      "day3",
+      "day4"
+    ],
+    "example": {
+      "day1": 12,
+      "day2": 15,
+      "day3": 14,
+      "day4": 18
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 25,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 25,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 25,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 25,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g6-question-d1-5-extra-0",
+    "skillId": "g6-d1-5",
+    "title": "Compare population measures",
+    "rule": "data-populations",
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "groupShift"
+    ],
+    "example": {
+      "first": 2,
+      "second": 3,
+      "third": 3,
+      "groupShift": 5
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 10,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g6-question-e1-4-extra-0",
+    "skillId": "g6-e1-4",
+    "title": "Reflections and rotations",
+    "rule": "g8-cartesian",
+    "parameters": [
+      "x",
+      "y",
+      "transformation",
+      "scale"
+    ],
+    "example": {
+      "x": -3,
+      "y": 2,
+      "transformation": 3,
+      "scale": 1
+    },
+    "generation": [
+      {
+        "min": -5,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": -5,
+        "max": 5,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g6-question-e2-1-extra-0",
+    "skillId": "g6-e2-1",
+    "title": "Length, mass, and capacity conversions",
+    "rule": "metric-conversion",
+    "parameters": [
+      "tenths",
+      "unitPair"
+    ],
+    "example": {
+      "tenths": 25,
+      "unitPair": 0
+    }
+  },
+  {
+    "id": "g6-question-e2-4-extra-0",
+    "skillId": "g6-e2-4",
+    "title": "Rectangle area as a building block",
+    "rule": "rectangle-measure",
+    "parameters": [
+      "length",
+      "width",
+      "unknownLength"
+    ],
+    "example": {
+      "length": 8,
+      "width": 5,
+      "unknownLength": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g6-question-f1-4-extra-0",
+    "skillId": "g6-f1-4",
+    "title": "Compare payment methods",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Compare cash, debit, and credit for buying a book.",
+        "steps": [
+          "Cash uses money held; debit usually draws from an account; credit creates an amount to repay.",
+          "Compare acceptance, security, fees, access, and repayment terms. The choice depends on the situation."
+        ]
+      },
+      {
+        "prompt": "Why might two people choose different payment methods?",
+        "steps": [
+          "Cash may be needed where cards are not accepted; an account record may help another buyer track expenses.",
+          "Consider limits, privacy, fees, and safe handling. A credit limit is not extra income."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "g6-question-e2-3-more-66",
+    "skillId": "g6-e2-3",
+    "title": "Opposite and polygon angles",
+    "rule": "g8-angle-properties",
+    "parameters": [
+      "givenAngle",
+      "sides",
+      "relationship"
+    ],
+    "example": {
+      "givenAngle": 65,
+      "sides": 6,
+      "relationship": 1
+    },
+    "generation": [
+      {
+        "min": 10,
+        "max": 170,
+        "step": 1
+      },
+      {
+        "min": 3,
+        "max": 8,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g6-question-e2-4-more-67",
+    "skillId": "g6-e2-4",
+    "title": "Composite polygon area",
+    "rule": "g8-composite-area",
+    "parameters": [
+      "width",
+      "height",
+      "cutWidth",
+      "cutHeight"
+    ],
+    "example": {
+      "width": 12,
+      "height": 10,
+      "cutWidth": 4,
+      "cutHeight": 3
+    }
+  }
+]

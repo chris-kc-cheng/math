@@ -1,0 +1,42 @@
+/* Shared palette: soft charcoal, off-white text, and bright semantic accents. */
+:root { color-scheme: light; }
+:root[data-theme=dark] { color-scheme: dark; background:#182027!important; color:#e1e7ed!important; --theme-muted:#b5c1cc; --theme-border:#52606d; }
+.theme-toggle { position:fixed;right:48px;top:10px;z-index:22;width:32px;height:32px;padding:0;display:grid;place-items:center;font:23px/1 system-ui,sans-serif;border:1px solid #a5b0bc;border-radius:8px;background:#fff;color:#263440;cursor:pointer; }
+:root[data-theme=dark] :is(button,input,select,textarea,dialog,#debug-panel,.curriculum-sidebar,.drawing-box,.curriculum-reference,.sample-infographic,.unknown-groups span,.practice-visual pre,.practice-visual th) { background:#222d37!important;color:#e1e7ed!important;border-color:var(--theme-border)!important; }
+:root[data-theme=dark] :is(p,small,figcaption,.caption,.muted,.curriculum-code,.curriculum-eyebrow,.curriculum-breadcrumb,.curriculum-note,.practice-toolbar h3,.verification-stage h4,.reference li,.reference details,label,summary,#latex-panel,.read-row,.division-caption) { color:var(--theme-muted)!important; }
+:root[data-theme=dark] :is(.practice-prompt,.ld-grid,.lm-grid,.app-brand) { color:#e1e7ed!important; }
+:root[data-theme=dark] :is(a,.ld-active,.ld-quotient,.lm-active,.sample-infographic strong) { color:#99c5ff!important; }
+:root[data-theme=dark] :is(button:hover,.curriculum-node:hover,.curriculum-card:hover,.curriculum-example,.expectation-tag,button[aria-pressed=true],.curriculum-node.selected) { background:#2c4054!important;color:#b6d6ff!important;border-color:#7697b8!important; }
+:root[data-theme=dark] :is(section,td,th,.curriculum-topic,.curriculum-provenance,.verification-stage,.curriculum-modes,.curriculum-sequence) { border-color:var(--theme-border)!important; }
+:root[data-theme=dark] :is(.answer .math,.equation-line.answer,.division-answer,.lm-answer,.ld-grid.is-complete .ld-quotient,.ld-grid.is-complete .ld-active) { color:#8ed8ad!important; }
+:root[data-theme=dark] :is(#error,#lesson-error,.verification-failed .math,.lm-carry) { color:#ffb39f!important; }
+:root[data-theme=dark] :is(.ld-dividend,.ld-bracket,.lm-bottom-rule,.lm-top-rule,.ld-rule) { border-color:#b5c1cc!important; }
+:root[data-theme=dark] :is(button,input,select,textarea,summary,a):focus-visible { outline:3px solid #b6d6ff!important;outline-offset:3px; }
+/* The writing canvas keeps dark ink on its original light surface for recognition. */
+:root[data-theme=dark] #formula-pad { background:#edf0f2!important; }
+/* Diagram labels and geometry are recoloured without filtering or changing hue semantics. */
+:root[data-theme=dark] .practice-visual svg text { fill:#e1e7ed!important; }
+:root[data-theme=dark] .practice-visual svg [fill='#fff'],:root[data-theme=dark] .practice-visual svg [fill='white'] { fill:#222d37; }
+:root[data-theme=dark] .practice-visual svg [stroke='#65717b'] { stroke:#b5c1cc; }
+:root[data-theme=dark] .practice-visual svg [stroke='#2459a6'] { stroke:#99c5ff; }
+:root[data-theme=dark] .practice-visual svg [fill='#2459a6'] { fill:#99c5ff; }
+:root[data-theme=dark] .practice-visual svg [fill='#d5e5f7'],:root[data-theme=dark] .practice-visual svg [fill='#b9d3f1'] { fill:#354e69; }
+/* All diagrams use bright outlines and dark tinted fills, including SVG defaults. */
+:root[data-theme=dark] .practice-visual svg { fill:#e1e7ed; }
+:root[data-theme=dark] .practice-visual svg [stroke] { stroke:#b5c1cc; }
+:root[data-theme=dark] .practice-visual svg [stroke='none'] { stroke:none; }
+:root[data-theme=dark] .practice-visual svg [stroke='#2459a6'] { stroke:#99c5ff; }
+:root[data-theme=dark] .practice-visual svg [stroke='#bd662b'] { stroke:#ffc392; }
+:root[data-theme=dark] .practice-visual svg [stroke='#287858'] { stroke:#8ed8ad; }
+:root[data-theme=dark] .practice-visual svg [stroke='#8b58a1'] { stroke:#d6b3f1; }
+:root[data-theme=dark] .practice-visual svg [fill='#bd662b'] { fill:#ffc392; }
+:root[data-theme=dark] .practice-visual svg [fill='#287858'] { fill:#8ed8ad; }
+:root[data-theme=dark] .practice-visual svg [fill='#8b58a1'] { fill:#d6b3f1; }
+:root[data-theme=dark] .practice-visual svg [fill='#f7e0ca'] { fill:#654631; }
+:root[data-theme=dark] .practice-visual svg [fill='#d5e5f780'] { fill:#354e6980; }
+:root[data-theme=dark] .practice-visual svg [fill='#f7e0ca80'] { fill:#65463180; }
+:root[data-theme=dark] .katex [style*='color:'] { color:#b6d6ff!important; }
+:root[data-theme=dark] .katex :is([style*='#a34b13'],[style*='163, 75, 19']) { color:#ffc392!important; }
+:root[data-theme=dark] .katex :is([style*='#23734a'],[style*='35, 115, 74']) { color:#8ed8ad!important; }
+:root[data-theme=dark] mark { background:#594b26;color:#fff0ba; }
+:root[data-theme=dark] ::selection { background:#40658a;color:#fff; }

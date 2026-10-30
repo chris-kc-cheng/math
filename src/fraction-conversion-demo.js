@@ -2,7 +2,7 @@ import katex from 'katex';
 import 'katex/dist/katex.min.css';
 import './style.css';
 import './fraction-conversion.css';
-import {convertMixed,convertFraction} from './fraction-conversion.js';
+import {convertMixed,convertFraction} from './math/fractions.js';
 
 document.querySelector('#app').innerHTML=`<main class="fraction-demo">
 <nav><a href="./">← Demo</a> · <a href="./curriculum.html#b1-3">Grade 5 · B1.3</a></nav>

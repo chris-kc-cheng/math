@@ -1,0 +1,1599 @@
+{
+  "schemaVersion": 1,
+  "id": "ontario-math-grade-6",
+  "jurisdiction": "Ontario",
+  "grade": 6,
+  "language": "en",
+  "researchedAt": "2026-10-29",
+  "sources": {
+    "number": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/c2dea171-e219-4ec0-b097-24c959fcc924/Number_AODA.pdf",
+    "algebra": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/08f5a14f-576a-4282-af82-096dc302ed10/Algebra_AODA.pdf",
+    "data": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/60e2b2c7-5a7a-4038-bc06-fb88ffd6c861/Data_AODA.pdf",
+    "spatial": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/01b0b598-d5dc-455b-83de-9b7436bcefeb/Spatial_AODA.pdf",
+    "financial": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/8a374255-069f-4539-b020-5737aaf672f9/Financial_AODA.pdf",
+    "learning": "https://www.dcp.edu.gov.on.ca/en/curriculum/elementary-mathematics/grades/g6-math/strands",
+    "board": "https://www2.yrdsb.ca/about-us/director-education/directors-annual-report/board-improvement-plan-math",
+    "boardCurriculum": "https://www2.yrdsb.ca/schools-programs/school-programs-nav/school-programs/mathematics"
+  },
+  "curriculum": {
+    "id": "grade-6",
+    "title": "Grade 6",
+    "description": "Ontario Grade 6 mathematics for YRDSB learners. Representative worked and guided activities support practice; they do not certify mastery.",
+    "children": [
+      {
+        "id": "g6-number",
+        "code": "B",
+        "title": "Number",
+        "source": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/c2dea171-e219-4ec0-b097-24c959fcc924/Number_AODA.pdf",
+        "children": [
+          {
+            "id": "g6-b1-topic",
+            "title": "B1 · Number sense",
+            "children": [
+              {
+                "id": "g6-b1-1",
+                "code": "B1.1",
+                "title": "Whole numbers to one million",
+                "description": "Represent whole numbers through 1,000,000.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-b1-2",
+                "code": "B1.2",
+                "title": "Represent integers",
+                "description": "Use horizontal/vertical number lines for signed integers.",
+                "example": "Represent temperatures −4°C and 3°C. Which is warmer?"
+              },
+              {
+                "id": "g6-b1-3",
+                "code": "B1.3",
+                "title": "Order numbers",
+                "description": "Compare integers, fractions, and decimals in combination.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-b1-4",
+                "code": "B1.4",
+                "title": "Decimal thousandths",
+                "description": "Represent, compare, and order decimals to thousandths.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-b1-5",
+                "code": "B1.5",
+                "title": "Round decimals",
+                "description": "Round terminating/repeating decimals to a specified place.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-b1-6",
+                "code": "B1.6",
+                "title": "Fraction-decimal equivalence",
+                "description": "Connect fractions and decimals through thousandths.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          },
+          {
+            "id": "g6-b2-topic",
+            "title": "B2 · Operations",
+            "children": [
+              {
+                "id": "g6-b2-1",
+                "code": "B2.1",
+                "title": "Multi-step number problems",
+                "description": "Use operations with numbers, fractions, ratios, rates, and whole-number percents.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-b2-2",
+                "code": "B2.2",
+                "title": "Divisibility rules",
+                "description": "Test divisibility by 2, 3, 4, 5, 6, 8, 9, 10.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-b2-3",
+                "code": "B2.3",
+                "title": "Mental percentages",
+                "description": "Calculate 1%, 5%, 10%, 15%, 25%, and 50% mentally.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-b2-4",
+                "code": "B2.4",
+                "title": "Whole-number and decimal sums",
+                "description": "Use estimation and algorithms for addition/subtraction.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-b2-5",
+                "code": "B2.5",
+                "title": "Unlike-denominator fractions",
+                "description": "Add/subtract using equivalent parts.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-b2-6",
+                "code": "B2.6",
+                "title": "Prime factorization",
+                "description": "Represent composites as products of prime factors using trees.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-b2-7",
+                "code": "B2.7",
+                "title": "Multiply by decimal tenths",
+                "description": "Multiply three-digit whole numbers by tenths.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-b2-8",
+                "code": "B2.8",
+                "title": "Divide by decimal tenths",
+                "description": "Divide three-digit whole numbers by tenths.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-b2-9",
+                "code": "B2.9",
+                "title": "Multiply by proper fractions",
+                "description": "Multiply whole numbers by proper fractions.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-b2-10",
+                "code": "B2.10",
+                "title": "Divide by proper fractions",
+                "description": "Divide whole numbers by proper fractions.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-b2-11",
+                "code": "B2.11",
+                "title": "Divide decimal thousandths",
+                "description": "Divide decimals through thousandths by whole numbers up to ten.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-b2-12",
+                "code": "B2.12",
+                "title": "Ratios, percents, and rates",
+                "description": "Solve ratio problems in varied contexts.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g6-algebra",
+        "code": "C",
+        "title": "Algebra",
+        "source": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/08f5a14f-576a-4282-af82-096dc302ed10/Algebra_AODA.pdf",
+        "children": [
+          {
+            "id": "g6-c1-topic",
+            "title": "C1 · Patterns and relationships",
+            "children": [
+              {
+                "id": "g6-c1-1",
+                "code": "C1.1",
+                "title": "Recognize linear growth",
+                "description": "Distinguish repeating, growing, shrinking, and linear growth.",
+                "example": "Compare adding 3 each step with doubling each step."
+              },
+              {
+                "id": "g6-c1-2",
+                "code": "C1.2",
+                "title": "Represent patterns",
+                "description": "Use tables, graphs, and algebraic representations for linear growth.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-c1-3",
+                "code": "C1.3",
+                "title": "Predict and solve pattern rules",
+                "description": "Extend patterns and solve unknown values in linear growing rules.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-c1-4",
+                "code": "C1.4",
+                "title": "Whole and decimal patterns",
+                "description": "Describe whole-number and decimal relationships.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          },
+          {
+            "id": "g6-c2-topic",
+            "title": "C2 · Expressions, equations, and inequalities",
+            "children": [
+              {
+                "id": "g6-c2-1",
+                "code": "C2.1",
+                "title": "Add linear monomials",
+                "description": "Add degree-one monomials with whole-number coefficients.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-c2-2",
+                "code": "C2.2",
+                "title": "Evaluate expressions",
+                "description": "Evaluate whole-number and decimal-tenths expressions.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-c2-3",
+                "code": "C2.3",
+                "title": "Multi-term equations",
+                "description": "Solve whole-number equations and verify.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-c2-4",
+                "code": "C2.4",
+                "title": "Two-operation inequalities",
+                "description": "Solve, verify, and graph inequalities through 100.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          },
+          {
+            "id": "g6-c3-topic",
+            "title": "C3 · Coding",
+            "children": [
+              {
+                "id": "g6-c3-1",
+                "code": "C3.1",
+                "title": "Write efficient conditional code",
+                "description": "Use conditions and control structures to model mathematics.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-c3-2",
+                "code": "C3.2",
+                "title": "Alter and assess code",
+                "description": "Explain effects on outcomes and efficiency.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          },
+          {
+            "id": "g6-c4-topic",
+            "title": "C4 · Mathematical modelling",
+            "children": [
+              {
+                "id": "g6-c4",
+                "code": "C4",
+                "title": "Mathematical modelling",
+                "description": "Create, test, and revise models for real situations.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g6-data",
+        "code": "D",
+        "title": "Data",
+        "source": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/60e2b2c7-5a7a-4038-bc06-fb88ffd6c861/Data_AODA.pdf",
+        "children": [
+          {
+            "id": "g6-d1-topic",
+            "title": "D1 · Data literacy",
+            "children": [
+              {
+                "id": "g6-d1-1",
+                "code": "D1.1",
+                "title": "Discrete and continuous data",
+                "description": "Distinguish counted quantities from measured quantities.",
+                "example": "Compare the number of books with measured height."
+              },
+              {
+                "id": "g6-d1-2",
+                "code": "D1.2",
+                "title": "Organize interval data",
+                "description": "Collect and organize qualitative and quantitative data, including intervals.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-d1-3",
+                "code": "D1.3",
+                "title": "Histograms and broken-line graphs",
+                "description": "Choose, construct, and label appropriate displays.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-d1-4",
+                "code": "D1.4",
+                "title": "Data infographics",
+                "description": "Communicate a supported story with tables and appropriate graphs.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-d1-5",
+                "code": "D1.5",
+                "title": "Spread and central measures",
+                "description": "Calculate range and central measures to compare data sets.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-d1-6",
+                "code": "D1.6",
+                "title": "Interpret and challenge graphs",
+                "description": "Analyze graphs and misleading displays using evidence.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          },
+          {
+            "id": "g6-d2-topic",
+            "title": "D2 · Probability",
+            "children": [
+              {
+                "id": "g6-d2-1",
+                "code": "D2.1",
+                "title": "Probability in different forms",
+                "description": "Use fraction, decimal, and percentage probabilities on a number line.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-d2-2",
+                "code": "D2.2",
+                "title": "Independent-event experiments",
+                "description": "Compare theoretical/experimental probabilities of two independent events.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g6-spatial",
+        "code": "E",
+        "title": "Spatial sense",
+        "source": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/01b0b598-d5dc-455b-83de-9b7436bcefeb/Spatial_AODA.pdf",
+        "children": [
+          {
+            "id": "g6-e1-topic",
+            "title": "E1 · Geometric and spatial reasoning",
+            "children": [
+              {
+                "id": "g6-e1-1",
+                "code": "E1.1",
+                "title": "Quadrilateral properties",
+                "description": "Describe diagonals and line/rotational symmetry.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-e1-2",
+                "code": "E1.2",
+                "title": "Build from orthographic views",
+                "description": "Construct 3D objects using top, front, and side views.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-e1-3",
+                "code": "E1.3",
+                "title": "Four-quadrant coordinates",
+                "description": "Plot/read signed points and describe translations.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-e1-4",
+                "code": "E1.4",
+                "title": "Combined transformations",
+                "description": "Combine translations, reflections, and rotations through 360°.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          },
+          {
+            "id": "g6-e2-topic",
+            "title": "E2 · Measurement",
+            "children": [
+              {
+                "id": "g6-e2-1",
+                "code": "E2.1",
+                "title": "Metric conversions",
+                "description": "Convert length, area, mass, and capacity units.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-e2-2",
+                "code": "E2.2",
+                "title": "Angles through a full turn",
+                "description": "Measure/construct angles to 360°; connect clockwise/anticlockwise measures.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-e2-3",
+                "code": "E2.3",
+                "title": "Angle relationships",
+                "description": "Use complementary, supplementary, opposite, and polygon angles.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-e2-4",
+                "code": "E2.4",
+                "title": "Decompose polygon areas",
+                "description": "Find trapezoid, rhombus, kite, and composite polygon areas.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-e2-5",
+                "code": "E2.5",
+                "title": "Prism and pyramid nets",
+                "description": "Connect faces in nets with surface area.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-e2-6",
+                "code": "E2.6",
+                "title": "Prism and pyramid surface area",
+                "description": "Sum all two-dimensional face areas.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g6-financial",
+        "code": "F",
+        "title": "Financial literacy",
+        "source": "https://assets-us-01.kc-usercontent.com/fbd574c4-da36-0066-a0c5-849ffb2de96e/8a374255-069f-4539-b020-5737aaf672f9/Financial_AODA.pdf",
+        "children": [
+          {
+            "id": "g6-f1-topic",
+            "title": "F1 · Money and financial decisions",
+            "children": [
+              {
+                "id": "g6-f1-1",
+                "code": "F1.1",
+                "title": "Compare payment methods",
+                "description": "Weigh advantages and disadvantages of payment options.",
+                "example": "Compare cash, debit, and credit for buying a book."
+              },
+              {
+                "id": "g6-f1-2",
+                "code": "F1.2",
+                "title": "Financial goals",
+                "description": "Plan steps toward earning and saving goals.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-f1-3",
+                "code": "F1.3",
+                "title": "Factors affecting goals",
+                "description": "Identify helpful factors and obstacles.",
+                "example": "What could help or delay saving for a bicycle?"
+              },
+              {
+                "id": "g6-f1-4",
+                "code": "F1.4",
+                "title": "Interest rates and fees",
+                "description": "Explain rates and fees using stated account/loan examples.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-f1-5",
+                "code": "F1.5",
+                "title": "Distribute resources",
+                "description": "Compare trading, lending, borrowing, and donating.",
+                "example": "Compare trading, lending, borrowing, and donating a book."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "g6-learning",
+        "code": "A",
+        "title": "Learning skills and mathematical processes",
+        "source": "https://www.dcp.edu.gov.on.ca/en/curriculum/elementary-mathematics/grades/g6-math/strands",
+        "children": [
+          {
+            "id": "g6-a1-topic",
+            "title": "A1 · Learning skills and mathematical processes",
+            "children": [
+              {
+                "id": "g6-a1-1",
+                "code": "A1.1",
+                "title": "Manage emotions",
+                "description": "Recognize emotions and choose helpful actions.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-a1-2",
+                "code": "A1.2",
+                "title": "Cope with challenges",
+                "description": "Choose tools and support when stuck.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-a1-3",
+                "code": "A1.3",
+                "title": "Persist and stay motivated",
+                "description": "Try new representations and reflect on progress.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-a1-4",
+                "code": "A1.4",
+                "title": "Collaborate and communicate",
+                "description": "Explain reasoning and listen respectfully.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-a1-5",
+                "code": "A1.5",
+                "title": "Confidence and self-awareness",
+                "description": "Notice strengths and set next goals.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              },
+              {
+                "id": "g6-a1-6",
+                "code": "A1.6",
+                "title": "Critical and creative thinking",
+                "description": "Estimate, reason, check, and consider alternatives.",
+                "example": "Try the worked example, explain the method, then refresh for another question."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "suggestedSequence": [
+    [
+      "Number foundations",
+      "Build place value, representation, and operation reasoning."
+    ],
+    [
+      "Patterns and relationships",
+      "Connect number work to patterns, expressions, and equations."
+    ],
+    [
+      "Measurement and spatial reasoning",
+      "Apply number skills to units, shapes, and transformations."
+    ],
+    [
+      "Data and probability",
+      "Collect, represent, interpret, and question evidence."
+    ],
+    [
+      "Financial applications",
+      "Use number and data skills in stated classroom financial scenarios."
+    ],
+    [
+      "Across all strands",
+      "Revisit coding, modelling, communication, and reflection throughout."
+    ]
+  ],
+  "activities": [
+    {
+      "id": "activity-g6-question-b1-1",
+      "title": "Whole numbers to one million",
+      "skillIds": [
+        "g6-b1-1"
+      ],
+      "href": "./curriculum.html?grade=6#g6-b1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-b1-1"
+      ]
+    },
+    {
+      "id": "activity-g6-question-b1-2",
+      "title": "Represent integers",
+      "skillIds": [
+        "g6-b1-2"
+      ],
+      "href": "./curriculum.html?grade=6#g6-b1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-b1-2"
+      ]
+    },
+    {
+      "id": "activity-g6-question-b1-3",
+      "title": "Order numbers",
+      "skillIds": [
+        "g6-b1-3"
+      ],
+      "href": "./curriculum.html?grade=6#g6-b1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-b1-3"
+      ]
+    },
+    {
+      "id": "activity-g6-question-b1-4",
+      "title": "Decimal thousandths",
+      "skillIds": [
+        "g6-b1-4"
+      ],
+      "href": "./curriculum.html?grade=6#g6-b1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-b1-4"
+      ]
+    },
+    {
+      "id": "activity-g6-question-b1-5",
+      "title": "Round decimals",
+      "skillIds": [
+        "g6-b1-5"
+      ],
+      "href": "./curriculum.html?grade=6#g6-b1-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-b1-5"
+      ]
+    },
+    {
+      "id": "activity-g6-question-b1-6",
+      "title": "Fraction-decimal equivalence",
+      "skillIds": [
+        "g6-b1-6"
+      ],
+      "href": "./curriculum.html?grade=6#g6-b1-6",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-b1-6"
+      ]
+    },
+    {
+      "id": "activity-g6-question-b2-1",
+      "title": "Multi-step number problems",
+      "skillIds": [
+        "g6-b2-1"
+      ],
+      "href": "./curriculum.html?grade=6#g6-b2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-b2-1"
+      ]
+    },
+    {
+      "id": "activity-g6-question-b2-2",
+      "title": "Divisibility rules",
+      "skillIds": [
+        "g6-b2-2"
+      ],
+      "href": "./curriculum.html?grade=6#g6-b2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-b2-2"
+      ]
+    },
+    {
+      "id": "activity-g6-question-b2-3",
+      "title": "Mental percentages",
+      "skillIds": [
+        "g6-b2-3"
+      ],
+      "href": "./curriculum.html?grade=6#g6-b2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-b2-3"
+      ]
+    },
+    {
+      "id": "activity-g6-question-b2-4",
+      "title": "Whole-number and decimal sums",
+      "skillIds": [
+        "g6-b2-4"
+      ],
+      "href": "./curriculum.html?grade=6#g6-b2-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-b2-4"
+      ]
+    },
+    {
+      "id": "activity-g6-question-b2-5",
+      "title": "Unlike-denominator fractions",
+      "skillIds": [
+        "g6-b2-5"
+      ],
+      "href": "./curriculum.html?grade=6#g6-b2-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-b2-5"
+      ]
+    },
+    {
+      "id": "activity-g6-question-b2-6",
+      "title": "Prime factorization",
+      "skillIds": [
+        "g6-b2-6"
+      ],
+      "href": "./curriculum.html?grade=6#g6-b2-6",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-b2-6"
+      ]
+    },
+    {
+      "id": "activity-g6-question-b2-7",
+      "title": "Multiply by decimal tenths",
+      "skillIds": [
+        "g6-b2-7"
+      ],
+      "href": "./curriculum.html?grade=6#g6-b2-7",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-b2-7"
+      ]
+    },
+    {
+      "id": "activity-g6-question-b2-8",
+      "title": "Divide by decimal tenths",
+      "skillIds": [
+        "g6-b2-8"
+      ],
+      "href": "./curriculum.html?grade=6#g6-b2-8",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-b2-8"
+      ]
+    },
+    {
+      "id": "activity-g6-question-b2-9",
+      "title": "Multiply by proper fractions",
+      "skillIds": [
+        "g6-b2-9"
+      ],
+      "href": "./curriculum.html?grade=6#g6-b2-9",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-b2-9"
+      ]
+    },
+    {
+      "id": "activity-g6-question-b2-10",
+      "title": "Divide by proper fractions",
+      "skillIds": [
+        "g6-b2-10"
+      ],
+      "href": "./curriculum.html?grade=6#g6-b2-10",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-b2-10"
+      ]
+    },
+    {
+      "id": "activity-g6-question-b2-11",
+      "title": "Divide decimal thousandths",
+      "skillIds": [
+        "g6-b2-11"
+      ],
+      "href": "./curriculum.html?grade=6#g6-b2-11",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-b2-11"
+      ]
+    },
+    {
+      "id": "activity-g6-question-b2-12",
+      "title": "Ratios, percents, and rates",
+      "skillIds": [
+        "g6-b2-12"
+      ],
+      "href": "./curriculum.html?grade=6#g6-b2-12",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-b2-12"
+      ]
+    },
+    {
+      "id": "activity-g6-question-c1-1",
+      "title": "Recognize linear growth",
+      "skillIds": [
+        "g6-c1-1"
+      ],
+      "href": "./curriculum.html?grade=6#g6-c1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-c1-1"
+      ]
+    },
+    {
+      "id": "activity-g6-question-c1-2",
+      "title": "Represent patterns",
+      "skillIds": [
+        "g6-c1-2"
+      ],
+      "href": "./curriculum.html?grade=6#g6-c1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-c1-2"
+      ]
+    },
+    {
+      "id": "activity-g6-question-c1-3",
+      "title": "Predict and solve pattern rules",
+      "skillIds": [
+        "g6-c1-3"
+      ],
+      "href": "./curriculum.html?grade=6#g6-c1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-c1-3"
+      ]
+    },
+    {
+      "id": "activity-g6-question-c1-4",
+      "title": "Whole and decimal patterns",
+      "skillIds": [
+        "g6-c1-4"
+      ],
+      "href": "./curriculum.html?grade=6#g6-c1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-c1-4"
+      ]
+    },
+    {
+      "id": "activity-g6-question-c2-1",
+      "title": "Add linear monomials",
+      "skillIds": [
+        "g6-c2-1"
+      ],
+      "href": "./curriculum.html?grade=6#g6-c2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-c2-1"
+      ]
+    },
+    {
+      "id": "activity-g6-question-c2-2",
+      "title": "Evaluate expressions",
+      "skillIds": [
+        "g6-c2-2"
+      ],
+      "href": "./curriculum.html?grade=6#g6-c2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-c2-2"
+      ]
+    },
+    {
+      "id": "activity-g6-question-c2-3",
+      "title": "Multi-term equations",
+      "skillIds": [
+        "g6-c2-3"
+      ],
+      "href": "./curriculum.html?grade=6#g6-c2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-c2-3"
+      ]
+    },
+    {
+      "id": "activity-g6-question-c2-4",
+      "title": "Two-operation inequalities",
+      "skillIds": [
+        "g6-c2-4"
+      ],
+      "href": "./curriculum.html?grade=6#g6-c2-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-c2-4"
+      ]
+    },
+    {
+      "id": "activity-g6-question-c3-1",
+      "title": "Write efficient conditional code",
+      "skillIds": [
+        "g6-c3-1"
+      ],
+      "href": "./curriculum.html?grade=6#g6-c3-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-c3-1"
+      ]
+    },
+    {
+      "id": "activity-g6-question-c3-2",
+      "title": "Alter and assess code",
+      "skillIds": [
+        "g6-c3-2"
+      ],
+      "href": "./curriculum.html?grade=6#g6-c3-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-c3-2"
+      ]
+    },
+    {
+      "id": "activity-g6-question-c4",
+      "title": "Mathematical modelling",
+      "skillIds": [
+        "g6-c4"
+      ],
+      "href": "./curriculum.html?grade=6#g6-c4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-c4"
+      ]
+    },
+    {
+      "id": "activity-g6-question-d1-1",
+      "title": "Discrete and continuous data",
+      "skillIds": [
+        "g6-d1-1"
+      ],
+      "href": "./curriculum.html?grade=6#g6-d1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-d1-1"
+      ]
+    },
+    {
+      "id": "activity-g6-question-d1-2",
+      "title": "Organize interval data",
+      "skillIds": [
+        "g6-d1-2"
+      ],
+      "href": "./curriculum.html?grade=6#g6-d1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-d1-2"
+      ]
+    },
+    {
+      "id": "activity-g6-question-d1-3",
+      "title": "Histograms and broken-line graphs",
+      "skillIds": [
+        "g6-d1-3"
+      ],
+      "href": "./curriculum.html?grade=6#g6-d1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-d1-3"
+      ]
+    },
+    {
+      "id": "activity-g6-question-d1-4",
+      "title": "Data infographics",
+      "skillIds": [
+        "g6-d1-4"
+      ],
+      "href": "./curriculum.html?grade=6#g6-d1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-d1-4"
+      ]
+    },
+    {
+      "id": "activity-g6-question-d1-5",
+      "title": "Spread and central measures",
+      "skillIds": [
+        "g6-d1-5"
+      ],
+      "href": "./curriculum.html?grade=6#g6-d1-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-d1-5"
+      ]
+    },
+    {
+      "id": "activity-g6-question-d1-6",
+      "title": "Interpret and challenge graphs",
+      "skillIds": [
+        "g6-d1-6"
+      ],
+      "href": "./curriculum.html?grade=6#g6-d1-6",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-d1-6"
+      ]
+    },
+    {
+      "id": "activity-g6-question-d2-1",
+      "title": "Probability in different forms",
+      "skillIds": [
+        "g6-d2-1"
+      ],
+      "href": "./curriculum.html?grade=6#g6-d2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-d2-1"
+      ]
+    },
+    {
+      "id": "activity-g6-question-d2-2",
+      "title": "Independent-event experiments",
+      "skillIds": [
+        "g6-d2-2"
+      ],
+      "href": "./curriculum.html?grade=6#g6-d2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-d2-2"
+      ]
+    },
+    {
+      "id": "activity-g6-question-e1-1",
+      "title": "Quadrilateral properties",
+      "skillIds": [
+        "g6-e1-1"
+      ],
+      "href": "./curriculum.html?grade=6#g6-e1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-e1-1"
+      ]
+    },
+    {
+      "id": "activity-g6-question-e1-2",
+      "title": "Build from orthographic views",
+      "skillIds": [
+        "g6-e1-2"
+      ],
+      "href": "./curriculum.html?grade=6#g6-e1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-e1-2"
+      ]
+    },
+    {
+      "id": "activity-g6-question-e1-3",
+      "title": "Four-quadrant coordinates",
+      "skillIds": [
+        "g6-e1-3"
+      ],
+      "href": "./curriculum.html?grade=6#g6-e1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-e1-3"
+      ]
+    },
+    {
+      "id": "activity-g6-question-e1-4",
+      "title": "Combined transformations",
+      "skillIds": [
+        "g6-e1-4"
+      ],
+      "href": "./curriculum.html?grade=6#g6-e1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-e1-4"
+      ]
+    },
+    {
+      "id": "activity-g6-question-e2-1",
+      "title": "Metric conversions",
+      "skillIds": [
+        "g6-e2-1"
+      ],
+      "href": "./curriculum.html?grade=6#g6-e2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-e2-1"
+      ]
+    },
+    {
+      "id": "activity-g6-question-e2-2",
+      "title": "Angles through a full turn",
+      "skillIds": [
+        "g6-e2-2"
+      ],
+      "href": "./curriculum.html?grade=6#g6-e2-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-e2-2"
+      ]
+    },
+    {
+      "id": "activity-g6-question-e2-3",
+      "title": "Angle relationships",
+      "skillIds": [
+        "g6-e2-3"
+      ],
+      "href": "./curriculum.html?grade=6#g6-e2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-e2-3"
+      ]
+    },
+    {
+      "id": "activity-g6-question-e2-4",
+      "title": "Decompose polygon areas",
+      "skillIds": [
+        "g6-e2-4"
+      ],
+      "href": "./curriculum.html?grade=6#g6-e2-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-e2-4"
+      ]
+    },
+    {
+      "id": "activity-g6-question-e2-5",
+      "title": "Prism and pyramid nets",
+      "skillIds": [
+        "g6-e2-5"
+      ],
+      "href": "./curriculum.html?grade=6#g6-e2-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-e2-5"
+      ]
+    },
+    {
+      "id": "activity-g6-question-e2-6",
+      "title": "Prism and pyramid surface area",
+      "skillIds": [
+        "g6-e2-6"
+      ],
+      "href": "./curriculum.html?grade=6#g6-e2-6",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-e2-6"
+      ]
+    },
+    {
+      "id": "activity-g6-question-f1-1",
+      "title": "Compare payment methods",
+      "skillIds": [
+        "g6-f1-1"
+      ],
+      "href": "./curriculum.html?grade=6#g6-f1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-f1-1"
+      ]
+    },
+    {
+      "id": "activity-g6-question-f1-2",
+      "title": "Financial goals",
+      "skillIds": [
+        "g6-f1-2"
+      ],
+      "href": "./curriculum.html?grade=6#g6-f1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-f1-2"
+      ]
+    },
+    {
+      "id": "activity-g6-question-f1-3",
+      "title": "Factors affecting goals",
+      "skillIds": [
+        "g6-f1-3"
+      ],
+      "href": "./curriculum.html?grade=6#g6-f1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-f1-3"
+      ]
+    },
+    {
+      "id": "activity-g6-question-f1-4",
+      "title": "Interest rates and fees",
+      "skillIds": [
+        "g6-f1-4"
+      ],
+      "href": "./curriculum.html?grade=6#g6-f1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-f1-4"
+      ]
+    },
+    {
+      "id": "activity-g6-question-f1-5",
+      "title": "Distribute resources",
+      "skillIds": [
+        "g6-f1-5"
+      ],
+      "href": "./curriculum.html?grade=6#g6-f1-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-f1-5"
+      ]
+    },
+    {
+      "id": "activity-g6-question-a1-1",
+      "title": "Manage emotions",
+      "skillIds": [
+        "g6-a1-1"
+      ],
+      "href": "./curriculum.html?grade=6#g6-a1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-a1-1"
+      ]
+    },
+    {
+      "id": "activity-g6-question-a1-2",
+      "title": "Cope with challenges",
+      "skillIds": [
+        "g6-a1-2"
+      ],
+      "href": "./curriculum.html?grade=6#g6-a1-2",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-a1-2"
+      ]
+    },
+    {
+      "id": "activity-g6-question-a1-3",
+      "title": "Persist and stay motivated",
+      "skillIds": [
+        "g6-a1-3"
+      ],
+      "href": "./curriculum.html?grade=6#g6-a1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-a1-3"
+      ]
+    },
+    {
+      "id": "activity-g6-question-a1-4",
+      "title": "Collaborate and communicate",
+      "skillIds": [
+        "g6-a1-4"
+      ],
+      "href": "./curriculum.html?grade=6#g6-a1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-a1-4"
+      ]
+    },
+    {
+      "id": "activity-g6-question-a1-5",
+      "title": "Confidence and self-awareness",
+      "skillIds": [
+        "g6-a1-5"
+      ],
+      "href": "./curriculum.html?grade=6#g6-a1-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-a1-5"
+      ]
+    },
+    {
+      "id": "activity-g6-question-a1-6",
+      "title": "Critical and creative thinking",
+      "skillIds": [
+        "g6-a1-6"
+      ],
+      "href": "./curriculum.html?grade=6#g6-a1-6",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-a1-6"
+      ]
+    },
+    {
+      "id": "activity-g6-question-b1-5-extra-0",
+      "title": "Round repeating decimals",
+      "skillIds": [
+        "g6-b1-5"
+      ],
+      "href": "./curriculum.html?grade=6#g6-b1-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-b1-5-extra-0"
+      ]
+    },
+    {
+      "id": "activity-g6-question-c1-1-extra-0",
+      "title": "Repeating, growing, and shrinking patterns",
+      "skillIds": [
+        "g6-c1-1"
+      ],
+      "href": "./curriculum.html?grade=6#g6-c1-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-c1-1-extra-0"
+      ]
+    },
+    {
+      "id": "activity-g6-question-d1-3-extra-0",
+      "title": "Broken-line graph",
+      "skillIds": [
+        "g6-d1-3"
+      ],
+      "href": "./curriculum.html?grade=6#g6-d1-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-d1-3-extra-0"
+      ]
+    },
+    {
+      "id": "activity-g6-question-d1-5-extra-0",
+      "title": "Compare population measures",
+      "skillIds": [
+        "g6-d1-5"
+      ],
+      "href": "./curriculum.html?grade=6#g6-d1-5",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-d1-5-extra-0"
+      ]
+    },
+    {
+      "id": "activity-g6-question-e1-4-extra-0",
+      "title": "Reflections and rotations",
+      "skillIds": [
+        "g6-e1-4"
+      ],
+      "href": "./curriculum.html?grade=6#g6-e1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-e1-4-extra-0"
+      ]
+    },
+    {
+      "id": "activity-g6-question-e2-1-extra-0",
+      "title": "Length, mass, and capacity conversions",
+      "skillIds": [
+        "g6-e2-1"
+      ],
+      "href": "./curriculum.html?grade=6#g6-e2-1",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-e2-1-extra-0"
+      ]
+    },
+    {
+      "id": "activity-g6-question-e2-4-extra-0",
+      "title": "Rectangle area as a building block",
+      "skillIds": [
+        "g6-e2-4"
+      ],
+      "href": "./curriculum.html?grade=6#g6-e2-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-e2-4-extra-0"
+      ]
+    },
+    {
+      "id": "activity-g6-question-f1-4-extra-0",
+      "title": "Compare payment methods",
+      "skillIds": [
+        "g6-f1-4"
+      ],
+      "href": "./curriculum.html?grade=6#g6-f1-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-f1-4-extra-0"
+      ]
+    },
+    {
+      "id": "activity-g6-question-e2-3-more-66",
+      "title": "Opposite and polygon angles",
+      "skillIds": [
+        "g6-e2-3"
+      ],
+      "href": "./curriculum.html?grade=6#g6-e2-3",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-e2-3-more-66"
+      ]
+    },
+    {
+      "id": "activity-g6-question-e2-4-more-67",
+      "title": "Composite polygon area",
+      "skillIds": [
+        "g6-e2-4"
+      ],
+      "href": "./curriculum.html?grade=6#g6-e2-4",
+      "coverage": "partial",
+      "modes": [
+        "practice"
+      ],
+      "questionIds": [
+        "g6-question-e2-4-more-67"
+      ]
+    }
+  ]
+}

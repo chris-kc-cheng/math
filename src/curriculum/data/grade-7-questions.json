@@ -1,0 +1,1876 @@
+[
+  {
+    "id": "g7-question-b1-1",
+    "skillId": "g7-b1-1",
+    "title": "Whole numbers to one billion",
+    "rule": "expanded-number",
+    "parameters": [
+      "number",
+      "usePowers"
+    ],
+    "example": {
+      "number": 408030200,
+      "usePowers": 1
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 1000000000,
+        "step": 1
+      },
+      [
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g7-question-b1-2",
+    "skillId": "g7-b1-2",
+    "title": "Perfect squares and roots",
+    "rule": "g8-squares",
+    "parameters": [
+      "number"
+    ],
+    "example": {
+      "number": 12
+    }
+  },
+  {
+    "id": "g7-question-b1-3",
+    "skillId": "g7-b1-3",
+    "title": "Order rational numbers",
+    "rule": "rational-order",
+    "parameters": [
+      "firstNumerator",
+      "firstDenominator",
+      "secondNumerator",
+      "secondDenominator",
+      "thirdNumerator",
+      "thirdDenominator"
+    ],
+    "example": {
+      "firstNumerator": -3,
+      "firstDenominator": 4,
+      "secondNumerator": -707,
+      "secondDenominator": 1000,
+      "thirdNumerator": 1,
+      "thirdDenominator": 2
+    },
+    "generation": [
+      {
+        "min": -12,
+        "max": 12,
+        "step": 1
+      },
+      [
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10
+      ],
+      {
+        "min": -3000,
+        "max": 3000,
+        "step": 1
+      },
+      [
+        1000
+      ],
+      {
+        "min": -12,
+        "max": 12,
+        "step": 1
+      },
+      [
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10
+      ]
+    ]
+  },
+  {
+    "id": "g7-question-b1-4",
+    "skillId": "g7-b1-4",
+    "title": "Simplify fractions",
+    "rule": "fraction",
+    "parameters": [
+      "numerator",
+      "denominator"
+    ],
+    "example": {
+      "numerator": 18,
+      "denominator": 24
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 24,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 30,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g7-question-b1-5",
+    "skillId": "g7-b1-5",
+    "title": "Numbers between quantities",
+    "rule": "between-values",
+    "parameters": [
+      "leftNumerator",
+      "leftDenominator",
+      "rightNumerator",
+      "rightDenominator"
+    ],
+    "example": {
+      "leftNumerator": -3,
+      "leftDenominator": 4,
+      "rightNumerator": 1,
+      "rightDenominator": 2
+    },
+    "generation": [
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": -9,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g7-question-b1-6",
+    "skillId": "g7-b1-6",
+    "title": "Round decimals",
+    "rule": "round-number",
+    "parameters": [
+      "unscaled",
+      "decimalPlaces",
+      "roundingPower"
+    ],
+    "example": {
+      "unscaled": 3475,
+      "decimalPlaces": 3,
+      "roundingPower": -2
+    },
+    "generation": [
+      {
+        "min": -99999,
+        "max": 99999,
+        "step": 1
+      },
+      [
+        3
+      ],
+      [
+        -2,
+        -1,
+        0
+      ]
+    ]
+  },
+  {
+    "id": "g7-question-b1-7",
+    "skillId": "g7-b1-7",
+    "title": "Fractions, decimals, percents",
+    "rule": "percent-fraction",
+    "parameters": [
+      "percent"
+    ],
+    "example": {
+      "percent": 25
+    }
+  },
+  {
+    "id": "g7-question-b2-1",
+    "skillId": "g7-b2-1",
+    "title": "Order of operations",
+    "rule": "g8-order-operations",
+    "parameters": [
+      "first",
+      "second",
+      "base",
+      "exponent"
+    ],
+    "example": {
+      "first": 2,
+      "second": 3,
+      "base": 4,
+      "exponent": 2
+    }
+  },
+  {
+    "id": "g7-question-b2-2",
+    "skillId": "g7-b2-2",
+    "title": "Common equivalents",
+    "rule": "percent-fraction",
+    "parameters": [
+      "percent"
+    ],
+    "example": {
+      "percent": 25
+    }
+  },
+  {
+    "id": "g7-question-b2-3",
+    "skillId": "g7-b2-3",
+    "title": "Percentage changes",
+    "rule": "percent-quantity",
+    "parameters": [
+      "whole",
+      "percent",
+      "changeMode"
+    ],
+    "example": {
+      "whole": 80,
+      "percent": 25,
+      "changeMode": 1
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 1000,
+        "step": 1
+      },
+      [
+        1,
+        5,
+        10,
+        25,
+        50,
+        100
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g7-question-b2-4",
+    "skillId": "g7-b2-4",
+    "title": "Integer addition and subtraction",
+    "rule": "g8-integer-add-sub",
+    "parameters": [
+      "left",
+      "right",
+      "operation"
+    ],
+    "example": {
+      "left": -7,
+      "right": -4,
+      "operation": 1
+    }
+  },
+  {
+    "id": "g7-question-b2-5",
+    "skillId": "g7-b2-5",
+    "title": "Fraction addition and subtraction",
+    "rule": "g8-fraction-add-sub",
+    "parameters": [
+      "leftNumerator",
+      "leftDenominator",
+      "rightNumerator",
+      "rightDenominator",
+      "operation"
+    ],
+    "example": {
+      "leftNumerator": 3,
+      "leftDenominator": 4,
+      "rightNumerator": 2,
+      "rightDenominator": 3,
+      "operation": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g7-question-b2-6",
+    "skillId": "g7-b2-6",
+    "title": "GCF and LCM",
+    "rule": "common-factors",
+    "parameters": [
+      "first",
+      "second",
+      "thirdOrZero"
+    ],
+    "example": {
+      "first": 24,
+      "second": 36,
+      "thirdOrZero": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 144,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 144,
+        "step": 1
+      },
+      [
+        0,
+        6,
+        12,
+        18,
+        24
+      ]
+    ]
+  },
+  {
+    "id": "g7-question-b2-7",
+    "skillId": "g7-b2-7",
+    "title": "Exponential notation",
+    "rule": "whole-power",
+    "parameters": [
+      "base",
+      "exponent"
+    ],
+    "example": {
+      "base": 3,
+      "exponent": 4
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g7-question-b2-8",
+    "skillId": "g7-b2-8",
+    "title": "Fraction multiplication and division",
+    "rule": "g8-fraction-multiply-divide",
+    "parameters": [
+      "leftNumerator",
+      "leftDenominator",
+      "rightNumerator",
+      "rightDenominator",
+      "operation"
+    ],
+    "example": {
+      "leftNumerator": 3,
+      "leftDenominator": 4,
+      "rightNumerator": 2,
+      "rightDenominator": 5,
+      "operation": 3
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g7-question-b2-9",
+    "skillId": "g7-b2-9",
+    "title": "Decimal multiplication and division",
+    "rule": "decimal-calculate",
+    "parameters": [
+      "leftUnscaled",
+      "rightUnscaled",
+      "leftPlaces",
+      "rightPlaces",
+      "operation"
+    ],
+    "example": {
+      "leftUnscaled": 2375,
+      "rightUnscaled": 25,
+      "leftPlaces": 3,
+      "rightPlaces": 2,
+      "operation": 3
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 99999,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 999,
+        "step": 1
+      },
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g7-question-b2-10",
+    "skillId": "g7-b2-10",
+    "title": "Proportional situations",
+    "rule": "proportional-table",
+    "parameters": [
+      "rate",
+      "startingCharge",
+      "itemCount"
+    ],
+    "example": {
+      "rate": 3,
+      "startingCharge": 5,
+      "itemCount": 8
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      [
+        0,
+        5,
+        10,
+        15
+      ],
+      {
+        "min": 3,
+        "max": 12,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g7-question-c1-1",
+    "skillId": "g7-c1-1",
+    "title": "Compare pattern rates",
+    "rule": "g8-pattern-compare",
+    "parameters": [
+      "firstStart",
+      "firstRate",
+      "secondStart",
+      "secondRate"
+    ],
+    "example": {
+      "firstStart": 2,
+      "firstRate": 3,
+      "secondStart": 10,
+      "secondRate": 2
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g7-question-c1-2",
+    "skillId": "g7-c1-2",
+    "title": "Represent whole/decimal patterns",
+    "rule": "g8-rational-pattern",
+    "parameters": [
+      "startNumerator",
+      "changeNumerator",
+      "denominator",
+      "index"
+    ],
+    "example": {
+      "startNumerator": 20,
+      "changeNumerator": -5,
+      "denominator": 10,
+      "index": 8
+    },
+    "generation": [
+      {
+        "min": -30,
+        "max": 30,
+        "step": 1
+      },
+      [
+        -5,
+        -2,
+        -1,
+        1,
+        2,
+        5
+      ],
+      [
+        10
+      ],
+      {
+        "min": 5,
+        "max": 12,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g7-question-c1-3",
+    "skillId": "g7-c1-3",
+    "title": "Extend and solve pattern rules",
+    "rule": "g8-rational-pattern",
+    "parameters": [
+      "startNumerator",
+      "changeNumerator",
+      "denominator",
+      "index"
+    ],
+    "example": {
+      "startNumerator": 20,
+      "changeNumerator": -5,
+      "denominator": 10,
+      "index": 8
+    },
+    "generation": [
+      {
+        "min": -30,
+        "max": 30,
+        "step": 1
+      },
+      [
+        -5,
+        -2,
+        -1,
+        1,
+        2,
+        5
+      ],
+      [
+        10
+      ],
+      {
+        "min": 5,
+        "max": 12,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g7-question-c1-4",
+    "skillId": "g7-c1-4",
+    "title": "Integer relationships",
+    "rule": "g8-rational-pattern",
+    "parameters": [
+      "startNumerator",
+      "changeNumerator",
+      "denominator",
+      "index"
+    ],
+    "example": {
+      "startNumerator": 20,
+      "changeNumerator": -5,
+      "denominator": 10,
+      "index": 8
+    },
+    "generation": [
+      {
+        "min": -30,
+        "max": 30,
+        "step": 1
+      },
+      [
+        -5,
+        -2,
+        -1,
+        1,
+        2,
+        5
+      ],
+      [
+        10
+      ],
+      {
+        "min": 5,
+        "max": 12,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g7-question-c2-1",
+    "skillId": "g7-c2-1",
+    "title": "Add and subtract monomials",
+    "rule": "g8-monomials",
+    "parameters": [
+      "leftCoefficient",
+      "rightCoefficient",
+      "subtract"
+    ],
+    "example": {
+      "leftCoefficient": 7,
+      "rightCoefficient": 3,
+      "subtract": 1
+    },
+    "generation": [
+      {
+        "min": 0,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 12,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g7-question-c2-2",
+    "skillId": "g7-c2-2",
+    "title": "Evaluate expressions",
+    "rule": "g8-evaluate",
+    "parameters": [
+      "coefficientNumerator",
+      "coefficientDenominator",
+      "constant",
+      "variableNumerator",
+      "variableDenominator"
+    ],
+    "example": {
+      "coefficientNumerator": 3,
+      "coefficientDenominator": 1,
+      "constant": 2,
+      "variableNumerator": 275,
+      "variableDenominator": 100
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      [
+        1
+      ],
+      {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 1000,
+        "step": 1
+      },
+      [
+        100
+      ]
+    ]
+  },
+  {
+    "id": "g7-question-c2-3",
+    "skillId": "g7-c2-3",
+    "title": "Solve and verify equations",
+    "rule": "g8-equation",
+    "parameters": [
+      "leftCoefficientTenths",
+      "leftConstantTenths",
+      "rightCoefficientTenths",
+      "rightConstantTenths"
+    ],
+    "example": {
+      "leftCoefficientTenths": 25,
+      "leftConstantTenths": 30,
+      "rightCoefficientTenths": 5,
+      "rightConstantTenths": 110
+    }
+  },
+  {
+    "id": "g7-question-c2-4",
+    "skillId": "g7-c2-4",
+    "title": "Multi-term inequalities",
+    "rule": "g8-inequality",
+    "parameters": [
+      "coefficient",
+      "constant",
+      "rightSide",
+      "greaterThan"
+    ],
+    "example": {
+      "coefficient": 2,
+      "constant": 3,
+      "rightSide": 29,
+      "greaterThan": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 9,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 21,
+        "max": 100,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g7-question-c3-1",
+    "skillId": "g7-c3-1",
+    "title": "Code with counts and subprograms",
+    "rule": "nested-code",
+    "parameters": [
+      "polygonSides",
+      "outerRepeats"
+    ],
+    "example": {
+      "polygonSides": 4,
+      "outerRepeats": 3
+    },
+    "generation": [
+      [
+        3,
+        4,
+        5,
+        6,
+        8
+      ],
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g7-question-c3-2",
+    "skillId": "g7-c3-2",
+    "title": "Alter and assess subprograms",
+    "rule": "nested-code",
+    "parameters": [
+      "polygonSides",
+      "outerRepeats"
+    ],
+    "example": {
+      "polygonSides": 4,
+      "outerRepeats": 3
+    },
+    "generation": [
+      [
+        3,
+        4,
+        5,
+        6,
+        8
+      ],
+      {
+        "min": 2,
+        "max": 8,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g7-question-c4",
+    "skillId": "g7-c4",
+    "title": "Mathematical modelling",
+    "rule": "seating-model",
+    "parameters": [
+      "learners",
+      "seatsPerTable",
+      "extraLearners"
+    ],
+    "example": {
+      "learners": 27,
+      "seatsPerTable": 6,
+      "extraLearners": 4
+    }
+  },
+  {
+    "id": "g7-question-d1-1",
+    "skillId": "g7-d1-1",
+    "title": "Percentage distributions",
+    "rule": "data-circle",
+    "parameters": [
+      "categoryA",
+      "categoryB",
+      "categoryC"
+    ],
+    "example": {
+      "categoryA": 10,
+      "categoryB": 6,
+      "categoryC": 4
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g7-question-d1-2",
+    "skillId": "g7-d1-2",
+    "title": "Organize data as percentages",
+    "rule": "data-circle",
+    "parameters": [
+      "categoryA",
+      "categoryB",
+      "categoryC"
+    ],
+    "example": {
+      "categoryA": 10,
+      "categoryB": 6,
+      "categoryC": 4
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g7-question-d1-3",
+    "skillId": "g7-d1-3",
+    "title": "Circle graphs",
+    "rule": "data-circle",
+    "parameters": [
+      "categoryA",
+      "categoryB",
+      "categoryC"
+    ],
+    "example": {
+      "categoryA": 10,
+      "categoryB": 6,
+      "categoryC": 4
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g7-question-d1-4",
+    "skillId": "g7-d1-4",
+    "title": "Data infographics",
+    "rule": "data-circle",
+    "parameters": [
+      "categoryA",
+      "categoryB",
+      "categoryC"
+    ],
+    "example": {
+      "categoryA": 10,
+      "categoryB": 6,
+      "categoryC": 4
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g7-question-d1-5",
+    "skillId": "g7-d1-5",
+    "title": "Adding or removing data",
+    "rule": "data-summary-change",
+    "parameters": [
+      "first",
+      "second",
+      "third",
+      "fourth",
+      "addedValue"
+    ],
+    "example": {
+      "first": 2,
+      "second": 3,
+      "third": 3,
+      "fourth": 4,
+      "addedValue": 20
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 50,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g7-question-d1-6",
+    "skillId": "g7-d1-6",
+    "title": "Critique data displays",
+    "rule": "misleading-graph",
+    "parameters": [
+      "groupA",
+      "groupB",
+      "baseline"
+    ],
+    "example": {
+      "groupA": 50,
+      "groupB": 54,
+      "baseline": 48
+    }
+  },
+  {
+    "id": "g7-question-d2-1",
+    "skillId": "g7-d2-1",
+    "title": "Independent and dependent events",
+    "rule": "probability-trials",
+    "parameters": [
+      "red",
+      "blue",
+      "replace",
+      "trialCount",
+      "observedTwoRed"
+    ],
+    "example": {
+      "red": 3,
+      "blue": 2,
+      "replace": 0,
+      "trialCount": 30,
+      "observedTwoRed": 11
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ],
+      [
+        20,
+        30,
+        40
+      ],
+      {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g7-question-d2-2",
+    "skillId": "g7-d2-2",
+    "title": "Compound-event experiments",
+    "rule": "probability-trials",
+    "parameters": [
+      "red",
+      "blue",
+      "replace",
+      "trialCount",
+      "observedTwoRed"
+    ],
+    "example": {
+      "red": 3,
+      "blue": 2,
+      "replace": 0,
+      "trialCount": 30,
+      "observedTwoRed": 11
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 6,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ],
+      [
+        20,
+        30,
+        40
+      ],
+      {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g7-question-e1-1",
+    "skillId": "g7-e1-1",
+    "title": "Classify three-dimensional objects",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Compare a rectangular prism, square pyramid, and cylinder.",
+        "steps": [
+          "A rectangular prism has six rectangular faces, twelve edges, and eight vertices. A square pyramid has five faces, eight edges, and five vertices.",
+          "A cylinder has two circular plane bases and one curved surface. Distinguish curved surfaces from plane faces."
+        ]
+      },
+      {
+        "prompt": "Describe the symmetry of a right circular cylinder and regular square pyramid.",
+        "steps": [
+          "A right circular cylinder has rotational symmetry at every angle about its axis. Any plane through the axis and its mid-height plane are symmetry planes.",
+          "A regular square pyramid has four vertical symmetry planes and rotational symmetry at multiples of 90° about its axis. No horizontal plane bisects it into mirror images."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "g7-question-e1-2",
+    "skillId": "g7-e1-2",
+    "title": "Scaled views",
+    "rule": "g8-scale-model",
+    "parameters": [
+      "modelLength",
+      "modelWidth",
+      "modelHeight",
+      "scaleDenominator"
+    ],
+    "example": {
+      "modelLength": 6,
+      "modelWidth": 4,
+      "modelHeight": 3,
+      "scaleDenominator": 5
+    }
+  },
+  {
+    "id": "g7-question-e1-3",
+    "skillId": "g7-e1-3",
+    "title": "Dilations and similarity",
+    "rule": "g8-cartesian",
+    "parameters": [
+      "x",
+      "y",
+      "transformation",
+      "scale"
+    ],
+    "example": {
+      "x": -3,
+      "y": 2,
+      "transformation": 5,
+      "scale": 2
+    },
+    "generation": [
+      {
+        "min": -5,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": -5,
+        "max": 5,
+        "step": 1
+      },
+      [
+        5
+      ],
+      {
+        "min": 2,
+        "max": 4,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g7-question-e1-4",
+    "skillId": "g7-e1-4",
+    "title": "Cartesian transformations",
+    "rule": "g8-cartesian",
+    "parameters": [
+      "x",
+      "y",
+      "transformation",
+      "scale"
+    ],
+    "example": {
+      "x": -3,
+      "y": 2,
+      "transformation": 3,
+      "scale": 1
+    },
+    "generation": [
+      {
+        "min": -5,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": -5,
+        "max": 5,
+        "step": 1
+      },
+      [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g7-question-e2-1",
+    "skillId": "g7-e2-1",
+    "title": "Volume and capacity",
+    "rule": "capacity-volume",
+    "parameters": [
+      "amount",
+      "litresToCubicCentimetres"
+    ],
+    "example": {
+      "amount": 2500,
+      "litresToCubicCentimetres": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 9999,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g7-question-e2-2",
+    "skillId": "g7-e2-2",
+    "title": "Metric measurement problems",
+    "rule": "dimensional-units",
+    "parameters": [
+      "amount",
+      "lengthPower",
+      "dimensions"
+    ],
+    "example": {
+      "amount": 25000,
+      "lengthPower": -2,
+      "dimensions": 2
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 100000,
+        "step": 1
+      },
+      [
+        -3,
+        -2,
+        -1,
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g7-question-e2-3",
+    "skillId": "g7-e2-3",
+    "title": "Circle circumference",
+    "rule": "circle-measure",
+    "parameters": [
+      "radius",
+      "height",
+      "task"
+    ],
+    "example": {
+      "radius": 3,
+      "height": 5,
+      "task": 0
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        0
+      ]
+    ]
+  },
+  {
+    "id": "g7-question-e2-4",
+    "skillId": "g7-e2-4",
+    "title": "Construct circles",
+    "rule": "circle-measure",
+    "parameters": [
+      "radius",
+      "height",
+      "task"
+    ],
+    "example": {
+      "radius": 3,
+      "height": 5,
+      "task": 2
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        2
+      ]
+    ]
+  },
+  {
+    "id": "g7-question-e2-5",
+    "skillId": "g7-e2-5",
+    "title": "Circle area",
+    "rule": "circle-measure",
+    "parameters": [
+      "radius",
+      "height",
+      "task"
+    ],
+    "example": {
+      "radius": 3,
+      "height": 5,
+      "task": 1
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g7-question-e2-6",
+    "skillId": "g7-e2-6",
+    "title": "Cylinder nets and surface area",
+    "rule": "circle-measure",
+    "parameters": [
+      "radius",
+      "height",
+      "task"
+    ],
+    "example": {
+      "radius": 3,
+      "height": 5,
+      "task": 3
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        3
+      ]
+    ]
+  },
+  {
+    "id": "g7-question-e2-7",
+    "skillId": "g7-e2-7",
+    "title": "Prism and cylinder volume",
+    "rule": "prism-volume",
+    "parameters": [
+      "length",
+      "width",
+      "height",
+      "unknownHeight"
+    ],
+    "example": {
+      "length": 6,
+      "width": 4,
+      "height": 3,
+      "unknownHeight": 0
+    },
+    "generation": [
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 10,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g7-question-f1-1",
+    "skillId": "g7-f1-1",
+    "title": "Currency exchange",
+    "rule": "currency-convert",
+    "parameters": [
+      "amountCents",
+      "rateHundredths",
+      "fromCAD"
+    ],
+    "example": {
+      "amountCents": 10000,
+      "rateHundredths": 135,
+      "fromCAD": 0
+    },
+    "generation": [
+      {
+        "min": 100,
+        "max": 20000,
+        "step": 100
+      },
+      {
+        "min": 75,
+        "max": 175,
+        "step": 1
+      },
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "g7-question-f1-2",
+    "skillId": "g7-f1-2",
+    "title": "Reliable financial information",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "Where could you check the cost of a hypothetical savings account?",
+        "steps": [
+          "Use the institution’s official rate sheet and full fee schedule, checking dates and conditions.",
+          "Compare the same balance and period. Advertising may omit terms; ask a trusted adult about unclear conditions."
+        ]
+      },
+      {
+        "prompt": "How could you verify a price before setting a savings goal?",
+        "steps": [
+          "Compare several credible sellers and check included costs and conditions.",
+          "Record the source and date. Leave room for price changes; a sponsored claim alone is not sufficient evidence."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "g7-question-f1-3",
+    "skillId": "g7-f1-3",
+    "title": "Longer-term budgets",
+    "rule": "savings-plan",
+    "parameters": [
+      "monthlyIncome",
+      "monthlySpending",
+      "targetDollars"
+    ],
+    "example": {
+      "monthlyIncome": 40,
+      "monthlySpending": 15,
+      "targetDollars": 200
+    },
+    "generation": [
+      {
+        "min": 30,
+        "max": 60,
+        "step": 1
+      },
+      {
+        "min": 5,
+        "max": 25,
+        "step": 1
+      },
+      {
+        "min": 50,
+        "max": 400,
+        "step": 10
+      }
+    ]
+  },
+  {
+    "id": "g7-question-f1-4",
+    "skillId": "g7-f1-4",
+    "title": "Financial influences",
+    "rule": "guided-discussion",
+    "parameters": [
+      "variant"
+    ],
+    "example": {
+      "variant": 0
+    },
+    "generation": [
+      [
+        0,
+        1
+      ]
+    ],
+    "discussion": [
+      {
+        "prompt": "What could help or delay saving for a bicycle?",
+        "steps": [
+          "Record income, essential expenses, target price, and time. Unexpected costs or reduced income can delay a goal.",
+          "Track actual amounts and revise the plan. Some factors are outside the saver’s control."
+        ]
+      },
+      {
+        "prompt": "Which societal and personal factors can affect a purchase?",
+        "steps": [
+          "Availability, advertising, prices, income, transport, accessibility, and family responsibilities can affect choices.",
+          "Explain the assumptions in a budget without judging someone else’s circumstances."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "g7-question-f1-5",
+    "skillId": "g7-f1-5",
+    "title": "Interest over time",
+    "rule": "simple-interest",
+    "parameters": [
+      "principalDollars",
+      "annualPercent",
+      "years",
+      "feeDollars"
+    ],
+    "example": {
+      "principalDollars": 500,
+      "annualPercent": 5,
+      "years": 3,
+      "feeDollars": 10
+    },
+    "generation": [
+      {
+        "min": 50,
+        "max": 1000,
+        "step": 50
+      },
+      {
+        "min": 1,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "min": 1,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      }
+    ]
+  },
+  {
+    "id": "g7-question-f1-6",
+    "skillId": "g7-f1-6",
+    "title": "Compare financial offers",
+    "rule": "g8-credit-offers",
+    "parameters": [
+      "balanceCents",
+      "rateA",
+      "rateB",
+      "feeACents",
+      "feeBCents"
+    ],
+    "example": {
+      "balanceCents": 50000,
+      "rateA": 12,
+      "rateB": 10,
+      "feeACents": 0,
+      "feeBCents": 1500
+    }
+  },
+  {
+    "id": "g7-question-a1-1",
+    "skillId": "g7-a1-1",
+    "title": "Manage emotions",
+    "rule": "manage-emotions",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 0
+    }
+  },
+  {
+    "id": "g7-question-a1-2",
+    "skillId": "g7-a1-2",
+    "title": "Cope with challenges",
+    "rule": "cope-challenge",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 1
+    }
+  },
+  {
+    "id": "g7-question-a1-3",
+    "skillId": "g7-a1-3",
+    "title": "Persist and stay motivated",
+    "rule": "persist",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 2
+    }
+  },
+  {
+    "id": "g7-question-a1-4",
+    "skillId": "g7-a1-4",
+    "title": "Collaborate and communicate",
+    "rule": "communicate",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 0
+    }
+  },
+  {
+    "id": "g7-question-a1-5",
+    "skillId": "g7-a1-5",
+    "title": "Confidence and self-awareness",
+    "rule": "confidence",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 3
+    }
+  },
+  {
+    "id": "g7-question-a1-6",
+    "skillId": "g7-a1-6",
+    "title": "Critical and creative thinking",
+    "rule": "critical-thinking",
+    "parameters": [
+      "situation"
+    ],
+    "example": {
+      "situation": 1
+    }
+  },
+  {
+    "id": "g7-question-e2-7-extra-0",
+    "skillId": "g7-e2-7",
+    "title": "Cylinder volume and base area",
+    "rule": "circle-measure",
+    "parameters": [
+      "radius",
+      "height",
+      "task"
+    ],
+    "example": {
+      "radius": 3,
+      "height": 5,
+      "task": 4
+    },
+    "generation": [
+      {
+        "min": 1,
+        "max": 12,
+        "step": 1
+      },
+      {
+        "min": 2,
+        "max": 12,
+        "step": 1
+      },
+      [
+        4,
+        5
+      ]
+    ]
+  },
+  {
+    "id": "g7-question-d1-4-extra-0",
+    "skillId": "g7-d1-4",
+    "title": "Build an infographic",
+    "rule": "infographic",
+    "parameters": [
+      "walking",
+      "bus",
+      "cycling"
+    ],
+    "example": {
+      "walking": 6,
+      "bus": 10,
+      "cycling": 4
+    }
+  },
+  {
+    "id": "g7-question-f1-3-extra-0",
+    "skillId": "g7-f1-3",
+    "title": "Track a sample budget",
+    "rule": "budget",
+    "parameters": [
+      "incomeCents",
+      "needsCents",
+      "wantsCents"
+    ],
+    "example": {
+      "incomeCents": 4000,
+      "needsCents": 1200,
+      "wantsCents": 800
+    }
+  },
+  {
+    "id": "g7-question-c1-1-extra-0",
+    "skillId": "g7-c1-1",
+    "title": "Repeating, growing, and shrinking patterns",
+    "rule": "pattern-type",
+    "parameters": [
+      "start",
+      "difference",
+      "patternType"
+    ],
+    "example": {
+      "start": 5,
+      "difference": 5,
+      "patternType": 2
+    }
+  }
+]
