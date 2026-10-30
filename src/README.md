@@ -145,3 +145,5 @@ The project and visible app brand are Whack-a-Math. Existing IndexedDB and local
 Brand assets use `public/mole-logo.png`, `public/icons/mole-*.png`, and `public/favicon.ico`, packaged from the fifth mole by `scripts/generate-branding.ps1`. The maskable icon keeps the character inside the safe zone.
 
 The branding packager draws the meadow and hole behind the fifth mole for favicon, touch and PWA icons; it leaves the transparent landing logo unchanged.
+
+All three main HTML entry pages declare the manifest and Apple touch icon so installation from any route has consistent iPhone branding. `pwa.test.js` checks these entry-page declarations and icon format.

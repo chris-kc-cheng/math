@@ -134,3 +134,5 @@ The demo and practice question panes stay in the same position when the calculat
 The waving fifth mole is the Whack-a-Math mascot, landing logo, favicon and PWA icon. Run `pwsh scripts/generate-branding.ps1` to regenerate icon sizes from `public/game-art/moles/mole-5.png`.
 
 The favicon and PWA icons show the waving mole emerging from a sandy-rimmed hole on a green meadow. The landing logo keeps its transparent background.
+
+For iPhone Home Screen installation, Demo, Curriculum and Practice each declare the Apple touch icon and web manifest. If an existing shortcut has no icon, open the updated site in Safari and add it to the Home Screen again; the preview should show the meadow mole.
