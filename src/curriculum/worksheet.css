@@ -32,3 +32,5 @@ html[data-theme=dark] .ws-primary{background:#2c4054!important;border-color:#769
  .ws-step p{margin:2pt 0;font-size:11pt}.ws-step-math .katex-display{margin:2pt 0 4pt;text-align:left}
  .ws-final{margin:4pt 0 0;font-weight:700}
 }
+.ws-level{margin:2px 0 0;font-size:10px;letter-spacing:.04em;text-transform:uppercase;color:#596570}
+.ws-difficulty{margin:10px 0}

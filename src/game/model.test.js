@@ -112,3 +112,15 @@ test('practice rounds honour the selected length and complete at its last questi
  for(const count of [1,5,10,20,37,50]){let round=makeRound(g,'all',rng,'length-'+count,count);assert.equal(round.questions.length,count);for(let i=0;i<count;i++)round=advanceRound(revealRound(round));assert.equal(round.status,'complete');assert.equal(round.index,count-1);}
  for(const count of [0,51,2.5,NaN])assert.throws(()=>makeRound(g,'all',rng,'invalid',count),/1 and 50/);
 });
+test('rounds follow the chosen difficulty; auto starts simple and ends hard',()=>{
+ const g=grade(5);
+ const levels=(difficulty,count=9)=>makeRound(g,'all',rng,'d-'+difficulty,count,difficulty).questions.map(q=>q.level);
+ const auto=levels('auto');
+ assert.equal(auto[0],1);assert.equal(auto.at(-1),3);
+ assert.deepEqual([...auto].sort(),auto,'levels never go down');
+ assert.equal(makeRound(g,'all',rng,'x',9).difficulty,'auto');
+ const simple=levels('simple'),hard=levels('hard'),mean=list=>list.reduce((a,b)=>a+b,0)/list.length;
+ assert.ok(mean(simple)<1.5&&mean(hard)>2.2,`${mean(simple)} ${mean(hard)}`);
+ for(const round of [makeRound(g,'all',rng,'y',6,'medium')])assert.equal(round.difficulty,'medium');
+ assert.equal(makeRound(g,'all',rng,'z',3,'nonsense').difficulty,'auto');
+});

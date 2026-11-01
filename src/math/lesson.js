@@ -1,9 +1,11 @@
 import {rational} from './core/exact.js';
 import {tex} from './core/format.js';
+import {active,sampleValue} from '../curriculum/difficulty.js';
 export {scaledDecimal as decimal,money} from './core/format.js';
 export {equalDecimals as equalDecimal} from './core/exact.js';
 export function fraction(n,d=1){if(!Number.isSafeInteger(n)||!Number.isSafeInteger(d)||d<=0)throw Error('Use an exact fraction with a positive denominator.');return tex(rational(n,d));}
-export const pick=(rng,min,max)=>min+Math.floor(rng()*(max-min+1));
+// While a difficulty level is active (curriculum/difficulty.js) the numbers drawn here favour that level.
+export const pick=(rng,min,max)=>active.rank&&max>=min?sampleValue({min,max,step:1},active.rank,rng):min+Math.floor(rng()*(max-min+1));
 export const step=(text,math,visual)=>({text,...(math!==undefined?{math}:{}),...(visual?{visual}:{})});
 export const table=(columns,rows,caption)=>({type:'table',columns,rows,caption});
 export const bars=(labels,series,caption,unit='responses')=>({type:'bars',labels,series,caption,unit});

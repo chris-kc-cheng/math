@@ -1,6 +1,7 @@
 import {createPractice,generateQuestionValues} from '../curriculum/practice.js';
 import {answerNumber} from '../math/verification.js';
 import {playerKey} from './profile.js';
+import {AUTO,normalizeChoice,levelFor,difficultyOf,isRated} from '../curriculum/difficulty.js';
 import {rational,parseDecimal,compare} from '../math/core/exact.js';
 import {primaryScorableRules} from '../math/families/primary/index.js';
 import {secondaryRules} from '../math/families/secondary/index.js';
@@ -36,18 +37,19 @@ export function parseAnswer(input){
  if(!/^[+-]?\d{1,30}(?:\.\d{1,30})?$/.test(text))throw Error('Enter a whole number, decimal, or fraction such as 3/4.');
  return parseDecimal(text);
 }
-export function makeRound(grade,topics='all',rng=Math.random,id=crypto.randomUUID(),count=5){
+// `difficulty` is 'simple', 'medium', 'hard' or 'auto' (progressive: the first third of the round is simple, then medium, then hard).
+export function makeRound(grade,topics='all',rng=Math.random,id=crypto.randomUUID(),count=5,difficulty=AUTO){
  if(!Number.isSafeInteger(count)||count<1||count>50)throw Error('Choose between 1 and 50 questions.');
  const pool=eligibleQuestions(grade,topics);if(!pool.length)throw Error('No automatically checked questions are available here yet.');
  const shuffled=[...pool];for(let i=shuffled.length-1;i>0;i--){const j=Math.floor(rng()*(i+1));[shuffled[i],shuffled[j]]=[shuffled[j],shuffled[i]];}
- const questions=[];
+ const questions=[],choice=normalizeChoice(difficulty);
  for(let i=0;i<count;i++){
   const template=shuffled[i%shuffled.length];let values;
-  for(let attempt=0;attempt<100;attempt++){try{const candidate=generateQuestionValues(template,rng);numericAnswer(template,candidate);values=candidate;break;}catch{}}
+  for(let attempt=0;attempt<100;attempt++){try{const candidate=generateQuestionValues(template,rng,levelFor(choice,i,count));numericAnswer(template,candidate);values=candidate;break;}catch{}}
   if(!values)throw Error('Could not prepare a valid question. Try another topic.');
-  questions.push({templateId:template.id,values,attempts:0,correct:false,assisted:false,entry:''});
+  questions.push({templateId:template.id,values,attempts:0,correct:false,assisted:false,entry:'',...(isRated(template,values)?{level:difficultyOf(template,values)}:{})});
  }
- return {id,version:1,revision:0,grade:grade.grade,topics:topicList(topics),createdAt:Date.now(),updatedAt:Date.now(),index:0,status:'active',questions};
+ return {id,version:1,revision:0,grade:grade.grade,topics:topicList(topics),difficulty:choice,createdAt:Date.now(),updatedAt:Date.now(),index:0,status:'active',questions};
 }
 export const score=round=>round.questions.reduce((n,q)=>n+(q.correct&&!q.assisted?(q.attempts===1?10:5):0),0);
 export function answerRound(round,template,input){

@@ -31,3 +31,11 @@ test('the workings flag is carried through and the first hidden "Read the questi
  const sheet=buildWorksheet(grade(4),{workings:true},rng);assert.equal(sheet.workings,true);
  for(const q of sheet.questions)assert.ok(q.steps.every(s=>s.text!=='Read the question.'));
 });
+test('a worksheet records its difficulty and labels each question; auto is progressive',()=>{
+ const g=grade(5),sheet=buildWorksheet(g,{count:9},rng);
+ assert.equal(sheet.difficulty,'auto');
+ const levels=sheet.questions.map(q=>q.level).filter(Boolean);
+ assert.ok(levels.length>=7&&levels[0]===1&&levels.at(-1)===3,levels.join());
+ const hard=buildWorksheet(g,{count:6,difficulty:'hard'},rng);assert.equal(hard.difficulty,'hard');
+ assert.equal(buildWorksheet(g,{count:3,difficulty:'bogus'},rng).difficulty,'auto');
+});

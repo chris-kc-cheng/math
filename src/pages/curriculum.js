@@ -5,6 +5,7 @@ import '../styles/base.css';
 import '../styles/curriculum.css';
 import {catalog,curriculumForGrade} from '../curriculum/catalog.js';
 import {mountPractice} from '../curriculum/practice-view.js';
+import {difficultySelect} from '../ui/difficulty.js';
 import {setPlaybackIcon} from '../curriculum/playback-controls.js';
 import {listRounds} from '../game/storage.js';
 import {progressTree,attemptHistory,recentRate,levelOf} from '../game/model.js';
@@ -21,7 +22,8 @@ function index(node,parents=[]){nodes.set(node.id,{node,parents});for(const chil
 index(curriculum);
 const count=node=>node.children?node.children.reduce((n,c)=>n+count(c),0):1;
 const app=document.querySelector('#app');
-app.innerHTML='<main class="curriculum-page">'+pageNav('curriculum')+'<header class="curriculum-header"><div><p class="curriculum-eyebrow">ONTARIO</p><h1>Math curriculum</h1></div></header><div class="curriculum-layout"><aside class="curriculum-sidebar"><div class="sidebar-bar"><div id="mode-toggle" class="curriculum-modes" role="group" aria-label="View"></div><button id="worksheet-button" type="button" class="sheet-button" aria-haspopup="dialog" aria-label="Create exercise sheet (PDF)" title="Create exercise sheet (PDF)"></button></div><details id="curriculum-browser" open><summary>Browse curriculum</summary><label for="skill-search" class="sr-only">Find a skill</label><input id="skill-search" type="search" placeholder="Find a skill…" autocomplete="off"><nav id="curriculum-tree" aria-label="Grade 5 curriculum hierarchy"></nav><p id="search-status" role="status"></p></details></aside><article id="curriculum-detail" aria-live="polite" aria-atomic="true"></article></div></main>';
+app.innerHTML='<main class="curriculum-page">'+pageNav('curriculum')+'<header class="curriculum-header"><div><p class="curriculum-eyebrow">ONTARIO</p><h1>Math curriculum</h1></div><div id="difficulty-host" class="curriculum-difficulty"></div></header><div class="curriculum-layout"><aside class="curriculum-sidebar"><div class="sidebar-bar"><div id="mode-toggle" class="curriculum-modes" role="group" aria-label="View"></div><button id="worksheet-button" type="button" class="sheet-button" aria-haspopup="dialog" aria-label="Create exercise sheet (PDF)" title="Create exercise sheet (PDF)"></button></div><details id="curriculum-browser" open><summary>Browse curriculum</summary><label for="skill-search" class="sr-only">Find a skill</label><input id="skill-search" type="search" placeholder="Find a skill…" autocomplete="off"><nav id="curriculum-tree" aria-label="Grade 5 curriculum hierarchy"></nav><p id="search-status" role="status"></p></details></aside><article id="curriculum-detail" aria-live="polite" aria-atomic="true"></article></div></main>';
+document.querySelector('#difficulty-host').append(difficultySelect());
 const tree=document.querySelector('#curriculum-tree'),detail=document.querySelector('#curriculum-detail');
 let selected=curriculum.id,mode='learner',disposePractice=[];
 const icons={
@@ -131,7 +133,7 @@ function renderLearner(node){
   const samples=questions.filter(question=>question.skillId===skill.id);
   const group=el('div',undefined,'learner-skill');
   if(node.children)group.append(el('h3',skill.title));
-  if(samples.length)for(const sample of samples)disposePractice.push(mountPractice(group,sample));
+  if(samples.length)for(const sample of samples)disposePractice.push(mountPractice(group,sample,sample.example,{followDifficulty:true}));
   else {group.append(el('p',skill.example,'learner-example'),el('p','Practice coming soon','curriculum-note'));}
   detail.append(group);
  }

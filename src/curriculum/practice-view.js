@@ -21,23 +21,27 @@ import {playbackSteps} from '../math/verification.js';
 import {setPlaybackIcon} from './playback-controls.js';
 import {setMathText} from '../ui/math-text.js';
 import {el,reducedMotion,renderTex} from '../ui/dom.js';
+import {setBadge,getChoice} from '../ui/difficulty.js';
+import {difficultyOf,isRated,cycleLevel,levelById} from './difficulty.js';
 
 const render=(formula,node)=>renderTex(formula,node);
 
-export function mountPractice(container,template,initialValues=template.example){
+// `followDifficulty`: the page has one difficulty selector, and a change there makes this card ask for a new question.
+export function mountPractice(container,template,initialValues=template.example,{followDifficulty=false}={}){
  const card=el('section',null,'practice-card'),heading=el('h3',template.title),question=el('div',null,'practice-question math'),prompt=el('p',null,'practice-prompt'),questionVisual=el('div',null,'practice-question-visual'),tools=el('div'),toolbar=el('div',null,'practice-toolbar');
  card.dataset.questionId=template.id;
  const refresh=el('button','↻','practice-refresh');refresh.type='button';refresh.setAttribute('aria-label',`New question: ${template.title}`);refresh.title='New question';
  refresh.hidden=Boolean(template.generation?.every(domain=>Array.isArray(domain)&&domain.length===1));
- toolbar.append(heading,refresh);
+ const level=el('span',null,'practice-level');
+ toolbar.append(heading,level,refresh);
  const output=el('div',null,'practice-work'),caption=el('p',null,'practice-caption'),controls=el('div',null,'controls');
  output.setAttribute('role','log');output.setAttribute('aria-label',`Steps: ${template.title}`);caption.setAttribute('aria-live','polite');
  const next=el('button'),play=el('button'),all=el('button');next.type=play.type=all.type='button';controls.append(next,play,all);controls.setAttribute('role','group');controls.setAttribute('aria-label','Solution playback');setPlaybackIcon(next,'next','Next step');setPlaybackIcon(play,'play','Play');setPlaybackIcon(all,'all','Show all steps');card.append(toolbar,prompt,question,questionVisual,tools,output,caption,controls);container.append(card);
- let values=exampleValues(template,initialValues),lesson,timeline,index=1,timer,plan,tutorialDispose;
+ let values=exampleValues(template,initialValues),lesson,timeline,index=1,timer,plan,tutorialDispose,asked=0;
  const activateCalculator=()=>setCalculatorContext(plan);card.addEventListener('pointerdown',activateCalculator);card.addEventListener('focusin',activateCalculator);
  function stop(){clearInterval(timer);timer=undefined;setPlaybackIcon(play,'play','Play');}
  function reset(){
-  stop();tutorialDispose?.();tutorialDispose=undefined;lesson=createPractice(template,values);
+  stop();tutorialDispose?.();tutorialDispose=undefined;lesson=createPractice(template,values);setBadge(level,isRated(template,values)?difficultyOf(template,values):0);
   plan=calculatorPlan({template,lesson,force:template.calculatorDemo});setCalculatorContext(plan,{onlyIfEmpty:true});timeline=playbackSteps(lesson);index=1;output.replaceChildren();question.replaceChildren();questionVisual.replaceChildren();tools.replaceChildren();
   setMathText(prompt,lesson.prompt||'');prompt.hidden=!lesson.prompt;question.hidden=!lesson.formula;if(lesson.formula)render(lesson.formula,question);if(template.demoVisual||lesson.visual)renderVisual(questionVisual,template.demoVisual||lesson.visual);
   if(lesson.reflection){
@@ -79,6 +83,9 @@ export function mountPractice(container,template,initialValues=template.example)
  play.onclick=()=>{if(timer){stop();return;}step();if(index<timeline.length){setPlaybackIcon(play,'pause','Pause');timer=setInterval(step,2000);}};
  const showAll=()=>{stop();while(index<timeline.length)step(false);};
  all.onclick=showAll;
- refresh.onclick=()=>{try{values=nextValues(template,values);reset();activateCalculator();}catch(error){caption.textContent=error.message;}};
- reset();const dispose=()=>{stop();tutorialDispose?.();};dispose.showAll=showAll;dispose.next=()=>{stop();step();};dispose.playCalculatorKeys=(auto=true)=>{if(!tutorialDispose?.play||tutorialDispose.complete?.())return false;tutorialDispose.play(auto);return true;};dispose.pauseCalculatorKeys=()=>tutorialDispose?.pause?.();Object.defineProperty(dispose,'remaining',{get:()=>Math.max(0,timeline.length-index)});return dispose;
+ // New questions follow the chosen difficulty; with Auto each new question toggles to the next level: simple, medium, hard, simple, ...
+ refresh.onclick=()=>{try{const choice=getChoice();values=nextValues(template,values,Math.random,levelById(choice)?choice:cycleLevel(asked++));reset();activateCalculator();}catch(error){caption.textContent=error.message;}};
+ const onChoice=()=>{asked=0;if(!refresh.hidden)refresh.click();};
+ if(followDifficulty)document.addEventListener('math-difficulty-change',onChoice);
+ reset();const dispose=()=>{stop();tutorialDispose?.();document.removeEventListener('math-difficulty-change',onChoice);};dispose.showAll=showAll;dispose.next=()=>{stop();step();};dispose.playCalculatorKeys=(auto=true)=>{if(!tutorialDispose?.play||tutorialDispose.complete?.())return false;tutorialDispose.play(auto);return true;};dispose.pauseCalculatorKeys=()=>tutorialDispose?.pause?.();Object.defineProperty(dispose,'remaining',{get:()=>Math.max(0,timeline.length-index)});return dispose;
 }

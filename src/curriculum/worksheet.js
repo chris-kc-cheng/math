@@ -6,6 +6,8 @@ import {renderVisual} from './visuals.js';
 
 import {setMathText} from '../ui/math-text.js';
 import {el} from '../ui/dom.js';
+import {difficultySelect,getChoice} from '../ui/difficulty.js';
+import {levelById,labelOfRank} from './difficulty.js';
 const math=(host,tex,display=true)=>{try{katex.render(tex,host,{displayMode:display,throwOnError:false,trust:false});}catch{host.textContent=tex;}return host;};
 const looksLikeTex=text=>/[\\^_{}]/.test(text);
 
@@ -13,13 +15,14 @@ const looksLikeTex=text=>/[\\^_{}]/.test(text);
 export function renderSheet(sheet){
  const root=el('section',undefined,'print-sheet');root.setAttribute('aria-hidden','true');
  const head=el('header',undefined,'ws-head');
- head.append(el('h1',`Whack-a-Math · Grade ${sheet.grade} exercises`),el('p',sheet.topics.length?`Topics: ${sheet.topics.join(', ')}`:'Topics: all topics','ws-topics'),el('p','Name: ______________________    Date: ______________','ws-name'));
+ head.append(el('h1',`Whack-a-Math · Grade ${sheet.grade} exercises`),el('p',sheet.topics.length?`Topics: ${sheet.topics.join(', ')}`:'Topics: all topics','ws-topics'),el('p',sheet.difficulty&&sheet.difficulty!=='auto'?`Difficulty: ${levelById(sheet.difficulty).label}`:'Difficulty: starts simple and gets harder','ws-topics'),el('p','Name: ______________________    Date: ______________','ws-name'));
  const list=el('ol',undefined,'ws-questions');
  for(const q of sheet.questions){
   const item=el('li',undefined,'ws-question');item.value=q.number;
   if(q.prompt)item.append(setMathText(el('p',undefined,'ws-prompt'),q.prompt));
   if(q.formula)item.append(math(el('div',undefined,'ws-formula'),q.formula));
   if(q.visual){const figure=el('div',undefined,'ws-visual');renderVisual(figure,q.visual);item.append(figure);}
+  if(q.level)item.append(el('p',labelOfRank(q.level),`ws-level ws-level-${q.level}`));
   item.append(el('p','Answer: ______________________','ws-answer-line'));list.append(item);
  }
  const answers=el('section',undefined,'ws-answers');answers.append(el('h1','Answers'));
@@ -78,12 +81,13 @@ export function openWorksheetDialog(grade){
  const error=el('p',undefined,'ws-error');error.setAttribute('role','alert');
  const cancel=el('button','Cancel');cancel.type='button';const make=el('button','Create PDF');make.type='submit';make.className='ws-primary';
  const actions=el('div',undefined,'ws-actions');actions.append(cancel,make);
- form.append(title,intro,el('h3','Topics'),list,summary,countLabel,workLabel,error,actions);dialog.append(form);document.body.append(dialog);
+ const levelHost=el('div',undefined,'ws-difficulty');levelHost.append(difficultySelect());
+ form.append(title,intro,el('h3','Topics'),list,summary,countLabel,levelHost,workLabel,error,actions);dialog.append(form);document.body.append(dialog);
  const close=()=>{dialog.close();dialog.remove();};
  cancel.onclick=close;dialog.addEventListener('cancel',()=>dialog.remove());
  form.onsubmit=event=>{
   event.preventDefault();error.textContent='';
-  try{const sheet=buildWorksheet(grade,{topics:selected(),count:count.value,workings:work.checked});dialog.close();dialog.remove();printSheet(sheet);}
+  try{const sheet=buildWorksheet(grade,{topics:selected(),count:count.value,workings:work.checked,difficulty:getChoice()});dialog.close();dialog.remove();printSheet(sheet);}
   catch(failure){error.textContent=failure.message;}
  };
  dialog.showModal();return dialog;

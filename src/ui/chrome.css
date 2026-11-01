@@ -86,3 +86,37 @@ html[data-theme=dark] .launcher-tile{color:#e1e7ed}html[data-theme=dark] .launch
 html[data-theme=dark] .launcher-letter{background:#2f4157;color:#99c5ff}
 .launcher-menu.launcher-status{display:block;width:200px;padding:14px;font-size:13px;line-height:1.4;color:#596570}
 html[data-theme=dark] .launcher-menu.launcher-status{color:#b5c1cc}
+
+/* Difficulty: a three-bar badge and a compact selector (ui/difficulty.js). */
+.difficulty-badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;line-height:1;white-space:nowrap}
+.difficulty-bars{display:inline-flex;align-items:flex-end;gap:2px;height:12px}
+.difficulty-bars i{display:block;width:4px;border-radius:1px;background:#cdd4db}
+.difficulty-bars i:nth-child(1){height:5px}.difficulty-bars i:nth-child(2){height:8px}.difficulty-bars i:nth-child(3){height:12px}
+.difficulty-badge.level-1{color:#1f7a45}.difficulty-badge.level-1 .on{background:#1f7a45}
+.difficulty-badge.level-2{color:#9a6200}.difficulty-badge.level-2 .on{background:#d98a00}
+.difficulty-badge.level-3{color:#b3261e}.difficulty-badge.level-3 .on{background:#c9372c}
+html[data-theme=dark] .difficulty-bars i{background:#52606d}
+html[data-theme=dark] .difficulty-badge.level-1{color:#7bd49c}html[data-theme=dark] .difficulty-badge.level-1 .on{background:#7bd49c}
+html[data-theme=dark] .difficulty-badge.level-2{color:#f0b84d}html[data-theme=dark] .difficulty-badge.level-2 .on{background:#f0b84d}
+html[data-theme=dark] .difficulty-badge.level-3{color:#ff9d93}html[data-theme=dark] .difficulty-badge.level-3 .on{background:#ff9d93}
+.difficulty-pick{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:#596570}
+.difficulty-pick select{font:inherit;padding:4px 8px;border:1px solid #a5b0bc;border-radius:8px;background:#fff;color:#263440}
+.difficulty-pick.compact .difficulty-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+html[data-theme=dark] .difficulty-pick{color:#b5c1cc}html[data-theme=dark] .difficulty-pick select{background:#222d37;color:#e1e7ed;border-color:#7b8794}
+.practice-toolbar{flex-wrap:wrap;justify-content:flex-start}.practice-toolbar h3{margin-right:0!important}.practice-toolbar .practice-level{margin-left:auto}
+.game-level{margin-left:auto;margin-right:12px}
+.practice-level{display:inline-flex}
+.slide-head{align-items:center}.slide-level{margin-left:auto;margin-right:12px;display:inline-flex}
+
+/* Practice setup: Difficulty, Grade, Game and Questions are one row of fields, each with its label on top and the same control height. */
+#game-setup{align-items:flex-end}
+#game-setup>label,#game-setup .game-field{display:grid;gap:7px;font-size:14px;color:inherit;align-content:end}
+#game-setup .difficulty-pick{display:grid;gap:7px;font-size:14px;color:inherit}
+#game-setup .difficulty-pick .difficulty-label{position:static;width:auto;height:auto;clip:auto;overflow:visible;font-size:14px;color:inherit}
+#game-setup .game-field-label{font-size:14px}
+#game-setup select,#game-setup #game-count,#game-setup .grade-trigger{box-sizing:border-box;height:42px;margin:0;font:inherit;font-size:14px;line-height:1.2;padding:0 12px;border:1px solid #84909b;border-radius:6px}
+#game-setup .grade-trigger{display:inline-flex;align-items:center;gap:8px;min-width:112px}
+#game-setup #game-grade-host,#game-setup #game-grade-host .grade-picker{display:block}
+html[data-theme=dark] #game-setup .difficulty-pick select,html[data-theme=dark] #game-setup select{background:#222d37;color:#e1e7ed;border-color:#7b8794}
+#game-setup #game-difficulty-host{order:1}
+.curriculum-difficulty{margin-left:auto}

@@ -11,6 +11,7 @@ import {catalog,curriculumForGrade} from '../curriculum/catalog.js';
 import {createPractice} from '../curriculum/practice.js';
 import {renderVisual} from '../curriculum/visuals.js';
 import {mountPractice} from '../curriculum/practice-view.js';
+import {difficultySelect,setBadge,getChoice} from '../ui/difficulty.js';
 import {playerKey,lastPlayed,makeRound,topicOptions,findNode,roundTopics,topicKey,score,answerAndExplainRound,revealRound,advanceRound,battleState,progressTree,overallProgress,STAT_WINDOW} from '../game/model.js';
 import {setMathText} from '../ui/math-text.js';
 import {mountGradePicker} from '../ui/grade-picker.js';
@@ -18,8 +19,9 @@ import {listRounds,saveRound} from '../game/storage.js';
 import {chooseProfile,activeProfile} from '../game/profile.js';
 import {el,reducedMotion,renderTex} from '../ui/dom.js';
 const app=document.querySelector('#app');
-app.innerHTML='<main class="game-page">'+pageNav('game')+'<div class="game-head"><h1>Practice</h1><div class="game-tools"><button id="game-quit" type="button" class="playback-icon" hidden aria-label="Quit game. You can resume later." title="Quit game (resume later)"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4H5v16h5"/><path d="M15 8l4 4-4 4"/><path d="M19 12H9"/></svg></button><span class="info-tip"><span class="info-icon" tabindex="0" role="img" aria-label="About saving">i</span><span id="save-status" role="status" class="info-bubble">Opening local progress…</span></span></div></div><div class="setup-gate"><form id="game-setup"><p class="game-player">Playing as <strong id="player-label"></strong></p><div id="game-grade-host" class="game-grade"></div><select id="game-grade" aria-label="Game grade" hidden></select><label>Game <select id="game-mode"><option value="moles">Whack-a-Math</option><option value="classic">Captain Patty</option></select></label><label>Questions <input id="game-count" name="count" type="number" min="1" max="50" step="1" value="5" required aria-label="Number of questions" title="1–50 questions"></label><section id="topic-panel" class="topic-panel" aria-label="Topics and progress"><div class="topic-head"><h2>Topics</h2><span id="topic-summary" class="topic-summary">All topics</span></div><p id="topic-legend" class="stat-legend"></p><div id="topic-list" class="topic-list"></div></section><button type="submit" id="game-start" disabled>Play</button></form><div id="player-prompt" class="player-prompt" role="status"><strong>Choose or create a player to begin</strong><span>Use the player button at the top right.</span><button type="button" id="choose-player">Choose a player</button></div></div><p id="game-error" role="alert"></p><div id="game-round"></div></main>';
+app.innerHTML='<main class="game-page">'+pageNav('game')+'<div class="game-head"><h1>Practice</h1><div class="game-tools"><button id="game-quit" type="button" class="playback-icon" hidden aria-label="Quit game. You can resume later." title="Quit game (resume later)"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4H5v16h5"/><path d="M15 8l4 4-4 4"/><path d="M19 12H9"/></svg></button><span class="info-tip"><span class="info-icon" tabindex="0" role="img" aria-label="About saving">i</span><span id="save-status" role="status" class="info-bubble">Opening local progress…</span></span></div></div><div class="setup-gate"><form id="game-setup"><p class="game-player">Playing as <strong id="player-label"></strong></p><div class="game-grade game-field"><span class="game-field-label">Grade</span><div id="game-grade-host"></div></div><select id="game-grade" aria-label="Game grade" hidden></select><label>Game <select id="game-mode"><option value="moles">Whack-a-Math</option><option value="classic">Captain Patty</option></select></label><span id="game-difficulty-host"></span><label>Questions <input id="game-count" name="count" type="number" min="1" max="50" step="1" value="5" required aria-label="Number of questions" title="1–50 questions"></label><section id="topic-panel" class="topic-panel" aria-label="Topics and progress"><div class="topic-head"><h2>Topics</h2><span id="topic-summary" class="topic-summary">All topics</span></div><p id="topic-legend" class="stat-legend"></p><div id="topic-list" class="topic-list"></div></section><button type="submit" id="game-start" disabled>Play</button></form><div id="player-prompt" class="player-prompt" role="status"><strong>Choose or create a player to begin</strong><span>Use the player button at the top right.</span><button type="button" id="choose-player">Choose a player</button></div></div><p id="game-error" role="alert"></p><div id="game-round"></div></main>';
 const $=s=>document.querySelector(s),gradeSelect=$('#game-grade'),countInput=$('#game-count');
+$('#game-difficulty-host').append(difficultySelect({onChange:()=>updateStart()}));
 let playerName='',round,rounds=[],step='player',ready=false,memoryOnly=false,busy=false,dispose,feedback='',selectedPlayer='',pendingShot='';
 const art=name=>`${import.meta.env.BASE_URL}game-art/${name}.svg`;
 const reduceMotion=()=>reducedMotion();
@@ -88,7 +90,7 @@ function setStep(next){
  step=next;const page=document.querySelector('.game-page');page.classList.toggle('step-player',next==='player');page.classList.toggle('step-topics',next==='topics');$('#game-setup').inert=next==='player';
  if(next==='topics'){$('#player-label').textContent=playerName.trim().replace(/\s+/g,' ');updateStart();}
 }
-const sameRound=(r,key)=>r.profileId===key&&r.grade===Number(gradeSelect.value)&&topicKey(roundTopics(r))===topicKey(chosenTopics())&&r.questions.length===Number(countInput.value)&&r.status==='active';
+const sameRound=(r,key)=>r.profileId===key&&r.grade===Number(gradeSelect.value)&&topicKey(roundTopics(r))===topicKey(chosenTopics())&&r.questions.length===Number(countInput.value)&&(r.difficulty??'auto')===getChoice()&&r.status==='active';
 function updateStart(){
  if(topicCache.has(Number(gradeSelect.value)))renderTopics();
  let key;try{key=playerKey(playerName);}catch{return;}
@@ -140,7 +142,7 @@ function renderRound(){
   });dispose=()=>{disposeLesson?.();disposeField();};return;
  }
  setCalculatorContext(calculatorPlan({template,lesson}));
- const top=el('div',undefined,'game-progress');top.append(el('span',`${round.playerName} · Grade ${round.grade}${picked.length?' · '+topicLabel(grade,picked):''} · Question ${round.index+1} of ${round.questions.length}`),el('span',`${score(round)} points`));const progress=el('progress');progress.max=round.questions.length;progress.value=round.index;progress.setAttribute('aria-label','Questions completed');host.append(top,progress,renderStage(battleState(round),shot),el('h2',template.title));
+ const top=el('div',undefined,'game-progress');top.append(el('span',`${round.playerName} · Grade ${round.grade}${picked.length?' · '+topicLabel(grade,picked):''} · Question ${round.index+1} of ${round.questions.length}`),el('span',`${score(round)} points`));if(current.level){const tag=el('span',undefined,'game-level');setBadge(tag,current.level);top.insertBefore(tag,top.lastChild);}const progress=el('progress');progress.max=round.questions.length;progress.value=round.index;progress.setAttribute('aria-label','Questions completed');host.append(top,progress,renderStage(battleState(round),shot),el('h2',template.title));
  if(lesson.prompt)host.append(setMathText(el('p',undefined,'practice-prompt'),lesson.prompt));
  if(lesson.formula){const formula=el('div',undefined,'math');renderTex(lesson.formula,formula);host.append(formula);}if(lesson.visual)renderVisual(host,lesson.visual);
  const finished=current.correct||current.assisted,status=el('p',feedback||(current.correct?'Correct!':current.assisted?(current.attempts?'Not quite. Let’s work through the solution together.':'Explore the explanation, then continue.'):current.attempts?'Keep trying, or explore the explanation.':''),'game-feedback');status.setAttribute('role','status');
@@ -163,7 +165,7 @@ $('#game-setup').onsubmit=event=>{event.preventDefault();action(async()=>{
  const key=playerKey(playerName),name=playerName.trim().replace(/\s+/g,' '),grade=curriculumForGrade(gradeSelect.value);
  if(!memoryOnly)rounds=await listRounds();
  const previous=rounds.find(r=>sameRound(r,key));
- const next=previous||{...makeRound(grade,chosenTopics(),Math.random,crypto.randomUUID(),Number(countInput.value)),profileId:key,playerName:name};
+ const next=previous||{...makeRound(grade,chosenTopics(),Math.random,crypto.randomUUID(),Number(countInput.value),getChoice()),profileId:key,playerName:name};
  await persist({...next,playerName:name});chooseProfile({id:key,name});selectedPlayer=key;feedback='';
 });};
 try{
