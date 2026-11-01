@@ -2,6 +2,7 @@ import './chrome.css';
 import {listRounds} from '../game/storage.js';
 import {activeProfile,playerKey,addProfile,chooseProfile,profilesIn,profileStats,avatarFor,chooseAvatar,AVATARS,WIN_ACCURACY} from '../game/profile.js';
 import {el} from './dom.js';
+import {createAppLauncher} from './app-launcher.js';
 
 // The player badge and lifetime statistics in the top-right corner of every page.
 const HUES=[212,28,150,280,350,48,190,320];
@@ -16,7 +17,7 @@ export function avatarNode(profile,size=''){
 const percent=value=>value===null?'–':`${Math.round(value*100)}%`;
 const medals=[['trophy','🏆','Perfect games','perfect'],['medal','🥈','Games won','won'],['pear','🍐','Correct answers','correct']];
 
-let corner,rounds=[],profile=null,busy=false;
+let corner,rounds=[],profile=null,busy=false;const launcher=createAppLauncher();
 function emit(next){profile=next;chooseProfile(next);document.dispatchEvent(new CustomEvent('math-profile-change',{detail:next}));render();}
 
 function statsView(){
@@ -72,7 +73,7 @@ function render(){
  let menu;const outside=event=>{if(!wrap.contains(event.target))close();},escape=event=>{if(event.key==='Escape'){close();button.focus();}};
  const show=()=>{menu=menuView(close);wrap.append(menu);button.setAttribute('aria-expanded','true');document.addEventListener('pointerdown',outside,true);document.addEventListener('keydown',escape,true);menu.querySelector('[aria-checked=true],.menu-item')?.focus();};
  button.onclick=()=>button.getAttribute('aria-expanded')==='true'?close():show();
- wrap.append(button);corner.append(wrap);
+ wrap.append(button);corner.append(wrap,launcher);
  if(wasOpen)show();
 }
 

@@ -67,3 +67,22 @@ html[data-theme=dark] .menu-new input{background:#222d37;color:#e1e7ed;border-co
 
 /* Exactly 25 avatars, arranged as five easy-to-scan rows. */
 .avatar-row{display:grid;grid-template-columns:repeat(5,32px);justify-content:space-between;gap:8px 4px}
+
+/* App launcher (9-dot button): last item at the far right of the top bar. */
+.launcher{position:relative;display:inline-flex}
+.launcher-button{display:inline-grid;place-items:center;width:34px;height:34px;padding:0;border:0;border-radius:50%;background:transparent;color:#596570;cursor:pointer}
+.launcher-button:hover,.launcher-button[aria-expanded=true]{background:#eaf1fb;color:#2459a6}
+.launcher-button:focus-visible,.launcher-tile:focus-visible{outline:3px solid #2459a6;outline-offset:2px}
+.launcher-menu{position:absolute;right:0;top:calc(100% + 10px);z-index:30;display:grid;grid-template-columns:repeat(3,84px);gap:6px;padding:10px;background:#fff;border:1px solid #cdd4db;border-radius:16px;box-shadow:0 8px 24px #30304d2e}
+.launcher-tile{display:grid;justify-items:center;gap:6px;padding:10px 4px;border-radius:12px;color:#263440;font-size:13px;line-height:1.2;text-align:center;text-decoration:none}
+.launcher-tile img{border-radius:12px}
+.launcher-tile:hover,.launcher-tile:focus-visible{background:#2459a61f}
+.launcher .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+html[data-theme=dark] .launcher-button{color:#b5c1cc}
+html[data-theme=dark] .launcher-button:hover,html[data-theme=dark] .launcher-button[aria-expanded=true]{background:#2f4157;color:#99c5ff}
+html[data-theme=dark] .launcher-menu{background:#222d37;border-color:#52606d;box-shadow:0 8px 24px #0008}
+html[data-theme=dark] .launcher-tile{color:#e1e7ed}html[data-theme=dark] .launcher-tile:hover{background:#2f4157}
+.launcher-letter{display:grid;place-items:center;width:48px;height:48px;border-radius:12px;background:#d9def7;color:#2459a6;font:700 22px/1 system-ui,sans-serif}
+html[data-theme=dark] .launcher-letter{background:#2f4157;color:#99c5ff}
+.launcher-menu.launcher-status{display:block;width:200px;padding:14px;font-size:13px;line-height:1.4;color:#596570}
+html[data-theme=dark] .launcher-menu.launcher-status{color:#b5c1cc}

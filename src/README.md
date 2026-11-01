@@ -12,6 +12,7 @@ src/
   ui/                            Shared page chrome and small helpers
     dom.js                       el(), reducedMotion(), renderTex(): the only copies of these helpers
     nav.js, profile-corner.js    Page switcher; player badge, statistics and the add-player menu
+    app-launcher.js              9-dot app launcher, last item in the top-right corner; live list from hedgies.cloud/app.json
     grade-picker.js, chrome.css  Grade display with its collapsible selector
     math-text.js, debug.js       Plain a/b → LaTeX fractions; debug log
   views/                         Calculation-board renderers (equation, long division, long multiplication)
