@@ -4,7 +4,7 @@ import {playerKey} from '../game/profile.js';
 
 // The optional account: a small status button in the top-right corner, and a dialog for logging in, choosing what to save,
 // managing saved players, and backing up this device. Playing never depends on any of it.
-const ICONS={off:'',checking:'',syncing:'⟳',saved:'☁',offline:'☁',ask:'☁',error:'☁','signed-out':'☁'};
+const ICONS={off:'',checking:'',syncing:'⟳',saved:'●',offline:'●',ask:'●',error:'●','signed-out':'●'};
 const SHORT={checking:'…',syncing:'Saving…',saved:'Saved',offline:'Offline','signed-out':'Log in',ask:'Choose',error:'Retrying'};
 let dialog,body,learners=null,notice='',noticeKind='',busy=false,mode='main',lastFocus,typedId='',lastStatus='';
 
@@ -127,7 +127,7 @@ export function openAccount(){
 const apply=node=>{
  const snap=getSync(),full=MESSAGES[snap.status]||'';
  node.dataset.status=snap.status;
- if(node.classList.contains('badge-status')){node.title=full;node.textContent=ICONS[snap.status]??'☁';node.hidden=snap.status==='off'||snap.status==='checking';}
+ if(node.classList.contains('badge-status')){node.title=full;node.textContent=ICONS[snap.status]??'●';node.hidden=snap.status==='off'||snap.status==='checking';}
  else node.textContent=full;
 };
 let live;
@@ -147,7 +147,7 @@ export function statusDot(){const dot=el('span',undefined,'badge-status');dot.se
 export function accountMenuItems(close){
  if(!syncEnabled())return [];
  const snap=getSync(),items=[el('div',undefined,'menu-rule')];
- const item=(label,onclick)=>{const b=el('button',undefined,'menu-item');b.type='button';b.setAttribute('role','menuitem');b.append(el('span','☁','avatar avatar-add'),el('span',label));b.onclick=()=>{close();onclick();};return b;};
+ const item=(label,onclick)=>{const b=el('button',undefined,'menu-item');b.type='button';b.setAttribute('role','menuitem');b.append(el('span',label));b.onclick=()=>{close();onclick();};return b;};
  if(snap.account){
   const status=el('p',undefined,'menu-status');status.setAttribute('role','presentation');apply(status);
   items.push(status,item('Account…',openAccount),item('Log out',()=>guarded(async()=>{await logout();learners=null;})));
