@@ -3,7 +3,7 @@ import {listRounds} from '../game/storage.js';
 import {activeProfile,playerKey,addProfile,chooseProfile,profilesIn,profileStats,avatarFor,chooseAvatar,AVATARS,WIN_ACCURACY} from '../game/profile.js';
 import {el} from './dom.js';
 import {createAppLauncher} from './app-launcher.js';
-import {createAccountButton} from './account.js';
+import {startAccount,statusDot,accountMenuItems} from './account.js';
 
 // The player badge and lifetime statistics in the top-right corner of every page.
 const HUES=[212,28,150,280,350,48,190,320];
@@ -18,7 +18,7 @@ export function avatarNode(profile,size=''){
 const percent=value=>value===null?'–':`${Math.round(value*100)}%`;
 const medals=[['trophy','🏆','Perfect games','perfect'],['medal','🥈','Games won','won'],['pear','🍐','Correct answers','correct']];
 
-let corner,rounds=[],profile=null,busy=false;const launcher=createAppLauncher();let account;
+let corner,rounds=[],profile=null,busy=false;const launcher=createAppLauncher();
 function emit(next){profile=next;chooseProfile(next);document.dispatchEvent(new CustomEvent('math-profile-change',{detail:next}));render();}
 
 function statsView(){
@@ -50,7 +50,7 @@ function menuView(close){
  add.onclick=()=>{form.hidden=!form.hidden;add.setAttribute('aria-expanded',String(!form.hidden));if(!form.hidden)field.focus();};
  form.onsubmit=event=>{event.preventDefault();let id;try{id=playerKey(field.value);}catch(problem){error.textContent=problem.message;field.focus();return;}
   const person={id,name:field.value.trim().replace(/s+/g,' ')};addProfile(person);close();emit(person);};
- menu.append(add,form);
+ menu.append(add,form,...accountMenuItems(close));
  if(profile){
   const picker=el('div',undefined,'avatar-picker');picker.setAttribute('role','group');picker.setAttribute('aria-label','Choose an avatar');
   picker.append(el('p','Avatar','menu-title'));
@@ -68,13 +68,13 @@ function render(){
  for(const old of corner.querySelectorAll('.stat-cluster,.profile-wrap'))old.remove();
  if(profile)corner.append(statsView());
  const wrap=el('div',undefined,'profile-wrap'),button=el('button',undefined,'profile-button');button.type='button';button.setAttribute('aria-haspopup','menu');button.setAttribute('aria-expanded','false');
- button.append(avatarNode(profile),el('span',profile?profile.name:'Guest','profile-name'),el('span','▾','profile-caret'));
+ button.append(avatarNode(profile),el('span',profile?profile.name:'Guest','profile-name'),statusDot(),el('span','▾','profile-caret'));
  button.setAttribute('aria-label',profile?`Player: ${profile.name}. Change player`:'Guest. Choose a player');
  const close=()=>{menu.remove();button.setAttribute('aria-expanded','false');document.removeEventListener('pointerdown',outside,true);document.removeEventListener('keydown',escape,true);};
  let menu;const outside=event=>{if(!wrap.contains(event.target))close();},escape=event=>{if(event.key==='Escape'){close();button.focus();}};
  const show=()=>{menu=menuView(close);wrap.append(menu);button.setAttribute('aria-expanded','true');document.addEventListener('pointerdown',outside,true);document.addEventListener('keydown',escape,true);menu.querySelector('[aria-checked=true],.menu-item')?.focus();};
  button.onclick=()=>button.getAttribute('aria-expanded')==='true'?close():show();
- wrap.append(button);corner.append(wrap,account,launcher);
+ wrap.append(button);corner.append(wrap,launcher);
  if(wasOpen)show();
 }
 
@@ -93,7 +93,7 @@ function adoptThemeToggle(){
 export function mountProfileCorner(){
  if(corner||typeof document==='undefined')return;
  corner=el('div',undefined,'profile-corner');corner.setAttribute('aria-label','Player and statistics');document.body.append(corner);
- account=createAccountButton();
+ startAccount();
  adoptThemeToggle();render();refresh();
  document.addEventListener('math-rounds-changed',refresh);
  window.addEventListener('storage',event=>{if(event.key==='math-active-profile'){profile=activeProfile(rounds);render();}});

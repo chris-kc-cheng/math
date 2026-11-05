@@ -5,6 +5,7 @@ import {HttpError,isOffline} from './http.js';
 import {createEngine} from './engine.js';
 import {createState,rememberAccount,lastAccount} from './state.js';
 import {browserLocal} from './local.js';
+import {chooseProfile,playerKey} from '../game/profile.js';
 
 // The optional account: signing in saves this device's players and results to the person's account and loads them on any device.
 // Nothing here is required to play. A failed or slow call only changes the status text; the app keeps working from this device.
@@ -48,6 +49,7 @@ async function runSync(){
  try{
   const before=(await browserLocal.profiles()).length;
   const result=await engine.run();
+  await adoptAccountPlayer();
   const after=(await browserLocal.profiles()).length;
   if(result.status==='ask')set({status:'ask',pending:result.pending});
   else set({status:'saved',pending:null});
@@ -68,6 +70,21 @@ async function runSync(){
   running=false;
   if(again){again=false;requestSync(500);}
  }
+}
+
+// The first time an account is used on this device the login user becomes the active player: a new account gets a player with the
+// account's name; an account that already has players makes one of them active. Later sign-ins leave the choice alone.
+export const ownName=account=>String(account.name||account.email.split('@')[0]||'Me').normalize('NFKC').replace(/[\u0000-\u001f\u007f]/g,'').trim().replace(/\s+/g,' ').slice(0,40)||'Me';
+async function adoptAccountPlayer(){
+ const account=snapshot.account;if(!account)return;
+ const store=createState(account.id),state=store.load();if(state.adopted)return;
+ const locals=await browserLocal.profiles(),linked=Object.keys(state.links);
+ let target=null;
+ if(!linked.length){
+  const name=ownName(account);try{const id=playerKey(name);if(!locals.some(p=>p.id===id))await browserLocal.upsertProfile({id,name,avatar:null,updatedAt:Date.now()});target={id,name};}catch{}
+ }else{const first=locals.find(p=>linked.includes(p.id));if(first)target={id:first.id,name:first.name};}
+ state.adopted=1;store.save(state);
+ if(target)chooseProfile(target);
 }
 
 export async function startSync(){

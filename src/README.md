@@ -14,7 +14,7 @@ src/
     nav.js, profile-corner.js    Page switcher; player badge, statistics and the add-player menu
     difficulty.js                Difficulty badge and selector (saved choice: Auto, Simple, Medium, Hard)
     app-launcher.js              9-dot app launcher, last item in the top-right corner; live list from apps.hedgies.cloud/app.json (this app is id `math`)
-    account.js                   Optional account: status button, login/attach/delete/export dialog
+    account.js                   Optional account inside the player badge: status dot, menu section, login/attach/delete/export dialog
     grade-picker.js, chrome.css  Grade display with its collapsible selector
     math-text.js, debug.js       Plain a/b → LaTeX fractions; debug log
   views/                         Calculation-board renderers (equation, long division, long multiplication)

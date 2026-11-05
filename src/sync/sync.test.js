@@ -95,3 +95,12 @@ test('account features appear only on the shared domain',()=>{
  assert.equal(syncAvailable('math.hedgies.cloud'),true);
  for(const host of ['localhost','127.0.0.1','chris-kc-cheng.github.io','evilhedgies.cloud','hedgies.cloud.evil.test'])assert.equal(syncAvailable(host),false,host);
 });
+
+test('the login user becomes the player: name from the account, trimmed and bounded',async()=>{
+ globalThis.localStorage??={getItem:()=>null,setItem(){},removeItem(){}};
+ const {ownName}=await import('./index.js');
+ assert.equal(ownName({name:'  Pat   Parent ',email:'pat@example.test'}),'Pat Parent');
+ assert.equal(ownName({name:'',email:'chloe-mum@example.test'}),'chloe-mum');
+ assert.equal(ownName({name:'x'.repeat(80),email:'a@b.c'}).length,40);
+ assert.equal(ownName({name:'',email:''}),'Me');
+});
