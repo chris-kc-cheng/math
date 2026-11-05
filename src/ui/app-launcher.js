@@ -2,6 +2,7 @@ import {el} from './dom.js';
 
 // The 9-dot app launcher, last item in the top-right corner. The list is read live from the shared platform's app registry (CORS is open to *.hedgies.cloud, and the dev relay covers localhost);
 // nothing about the apps is hard coded here. Each entry needs `id` and `url`; `name` and `icon` are used when given.
+export const PLATFORM_APPS_URL='/api/v1/platform-apps';
 export const APP_LIST_URL='https://apps.hedgies.cloud/app.json';
 const NS='http://www.w3.org/2000/svg';
 const dots=()=>{const svg=document.createElementNS(NS,'svg');svg.setAttribute('width','20');svg.setAttribute('height','20');svg.setAttribute('viewBox','0 0 24 24');svg.setAttribute('fill','currentColor');svg.setAttribute('aria-hidden','true');
@@ -54,6 +55,12 @@ export const listRequest=(credentials=true)=>[remote(APP_LIST_URL),{headers:{acc
 // A browser refuses a credentialed request unless the registry answers with Access-Control-Allow-Credentials; when it does not (or the
 // network call fails for any other reason) ask again without the cookie, which gets the public list.
 export async function fetchAppList(fetchImpl=fetch){
+ // This app's own API reads the registry and every app's manifest on the server (browsers cannot read other apps' pages), so names and
+ // icons arrive ready. It also forwards the visitor's login cookie to the registry, which may add an administrator-only entry.
+ try{
+  const r=await fetchImpl(PLATFORM_APPS_URL,{headers:{accept:'application/json'},cache:'no-store'});
+  if(r.ok){const apps=parseApps(await r.json());if(apps.length)return apps.map(app=>({...app,resolved:true}));}
+ }catch{}
  const get=async credentials=>{const r=await fetchImpl(...listRequest(credentials));if(!r.ok)throw new Error(String(r.status));return r.json();};
  let data;try{data=await get(true);}catch{data=await get(false);}
  return parseApps(data);
@@ -73,7 +80,7 @@ export function createAppLauncher(){
   if(app.icon){art=el('img');art.src=app.icon;art.alt='';art.width=48;art.height=48;art.onerror=()=>art.replaceWith(letter(app));}else art=letter(app);
   const name=el('span',app.name);name.append(el('span',' (opens in a new tab)','sr-only'));link.append(art,name);
   // Names and icons the list does not give come from the app's own manifest, filled in when it arrives.
-  if(!app.icon||!app.explicit?.name)loadInfo(app).then(found=>{
+  if(!app.resolved&&(!app.icon||!app.explicit?.name))loadInfo(app).then(found=>{
    if(!app.explicit?.name&&found.name)name.firstChild.textContent=found.name;
    if(!app.icon&&found.icon){const img=el('img');img.src=found.icon;img.alt='';img.width=48;img.height=48;img.onload=()=>link.firstChild.replaceWith(img);}
   });
