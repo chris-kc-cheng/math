@@ -9,7 +9,7 @@ from typing import Annotated
 from pydantic import BaseModel, ConfigDict, Field, StringConstraints, field_validator, model_validator
 
 MIN_TIME_MS = 1_577_836_800_000  # 2020-01-01; nothing earlier can be a real round
-MAX_ROUND_MS = 24 * 3600 * 1000
+MAX_ROUND_MS = 24 * 3600 * 1000  # time_spent_ms cap; a round may be resumed days later, so the span itself is not capped
 ID_PATTERN = re.compile(r"^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$")
 DIFFICULTIES = {"simple", "medium", "hard", "auto"}
 CONTROL = re.compile(r"[\u0000-\u001f\u007f-\u009f  ]")
@@ -103,8 +103,6 @@ class ResultIn(BaseModel):
             raise ValueError("correct must match the items")
         if self.started_at < MIN_TIME_MS or self.finished_at < self.started_at:
             raise ValueError("timestamps are not plausible")
-        if self.finished_at - self.started_at > MAX_ROUND_MS:
-            raise ValueError("a round cannot last more than a day")
         return self
 
 
