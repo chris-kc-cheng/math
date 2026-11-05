@@ -1,8 +1,8 @@
 import {el} from './dom.js';
 
-// The 9-dot app launcher, last item in the top-right corner. The list is read live from the shared Hedgies app list;
+// The 9-dot app launcher, last item in the top-right corner. The list is read live from the shared platform's app registry (CORS is open to *.hedgies.cloud, and the dev relay covers localhost);
 // nothing about the apps is hard coded here. Each entry needs `id` and `url`; `name` and `icon` are used when given.
-export const APP_LIST_URL='https://www.hedgies.cloud/app.json';
+export const APP_LIST_URL='https://apps.hedgies.cloud/app.json';
 const NS='http://www.w3.org/2000/svg';
 const dots=()=>{const svg=document.createElementNS(NS,'svg');svg.setAttribute('width','20');svg.setAttribute('height','20');svg.setAttribute('viewBox','0 0 24 24');svg.setAttribute('fill','currentColor');svg.setAttribute('aria-hidden','true');
  for(const y of [5,12,19])for(const x of [5,12,19]){const c=document.createElementNS(NS,'circle');c.setAttribute('cx',x);c.setAttribute('cy',y);c.setAttribute('r','1.9');svg.append(c);}return svg;};
@@ -19,7 +19,7 @@ export function parseApps(data){
  });
 }
 export const nameFromId=id=>id.split(/[-_\s]+/).filter(Boolean).map(w=>w[0].toUpperCase()+w.slice(1)).join(' ');
-// The current app is identified by its id alone: this app's id is the package name, injected at build time.
+// The current app is identified by its id alone: this app's id in the registry is `math` (APP_ID in vite.config.js), injected at build time.
 const selfId=typeof __APP_ID__==='string'?__APP_ID__:undefined;
 export const isCurrentApp=(app,id=selfId)=>Boolean(id)&&app.id===id;
 

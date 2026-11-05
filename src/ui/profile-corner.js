@@ -3,6 +3,7 @@ import {listRounds} from '../game/storage.js';
 import {activeProfile,playerKey,addProfile,chooseProfile,profilesIn,profileStats,avatarFor,chooseAvatar,AVATARS,WIN_ACCURACY} from '../game/profile.js';
 import {el} from './dom.js';
 import {createAppLauncher} from './app-launcher.js';
+import {createAccountButton,openAccount,mountMovedNotice} from './account.js';
 
 // The player badge and lifetime statistics in the top-right corner of every page.
 const HUES=[212,28,150,280,350,48,190,320];
@@ -17,7 +18,7 @@ export function avatarNode(profile,size=''){
 const percent=value=>value===null?'–':`${Math.round(value*100)}%`;
 const medals=[['trophy','🏆','Perfect games','perfect'],['medal','🥈','Games won','won'],['pear','🍐','Correct answers','correct']];
 
-let corner,rounds=[],profile=null,busy=false;const launcher=createAppLauncher();
+let corner,rounds=[],profile=null,busy=false;const launcher=createAppLauncher();let account;
 function emit(next){profile=next;chooseProfile(next);document.dispatchEvent(new CustomEvent('math-profile-change',{detail:next}));render();}
 
 function statsView(){
@@ -50,6 +51,8 @@ function menuView(close){
  form.onsubmit=event=>{event.preventDefault();let id;try{id=playerKey(field.value);}catch(problem){error.textContent=problem.message;field.focus();return;}
   const person={id,name:field.value.trim().replace(/s+/g,' ')};addProfile(person);close();emit(person);};
  menu.append(add,form);
+ const backup=el('button',undefined,'menu-item menu-backup');backup.type='button';backup.setAttribute('role','menuitem');backup.append(el('span','💾','avatar avatar-add'),el('span','Back up or move data'));
+ backup.onclick=()=>{close();openAccount();};menu.append(backup);
  if(profile){
   const picker=el('div',undefined,'avatar-picker');picker.setAttribute('role','group');picker.setAttribute('aria-label','Choose an avatar');
   picker.append(el('p','Avatar','menu-title'));
@@ -73,7 +76,7 @@ function render(){
  let menu;const outside=event=>{if(!wrap.contains(event.target))close();},escape=event=>{if(event.key==='Escape'){close();button.focus();}};
  const show=()=>{menu=menuView(close);wrap.append(menu);button.setAttribute('aria-expanded','true');document.addEventListener('pointerdown',outside,true);document.addEventListener('keydown',escape,true);menu.querySelector('[aria-checked=true],.menu-item')?.focus();};
  button.onclick=()=>button.getAttribute('aria-expanded')==='true'?close():show();
- wrap.append(button);corner.append(wrap,launcher);
+ wrap.append(button);corner.append(wrap,account,launcher);
  if(wasOpen)show();
 }
 
@@ -92,6 +95,7 @@ function adoptThemeToggle(){
 export function mountProfileCorner(){
  if(corner||typeof document==='undefined')return;
  corner=el('div',undefined,'profile-corner');corner.setAttribute('aria-label','Player and statistics');document.body.append(corner);
+ account=createAccountButton();mountMovedNotice();
  adoptThemeToggle();render();refresh();
  document.addEventListener('math-rounds-changed',refresh);
  window.addEventListener('storage',event=>{if(event.key==='math-active-profile'){profile=activeProfile(rounds);render();}});

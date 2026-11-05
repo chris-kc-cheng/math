@@ -1,9 +1,8 @@
 import {defineConfig} from 'vite';
 import {fileURLToPath} from 'node:url';
-import {readFileSync} from 'node:fs';
 
-// The package name is this app's id in the shared app list; the launcher uses it to hide the current app, also on localhost.
-const appId=JSON.parse(readFileSync(new URL('./package.json',import.meta.url),'utf8')).name;
+// This app's id in the shared app registry (apps.hedgies.cloud/app.json); the launcher uses it to hide the current app, also on localhost.
+const appId='math';
 
 // public/theme.css and theme.js are not hashed by Vite, so a browser could pair a new page bundle with a stale cached copy.
 // Stamping each build onto their URLs keeps the shared theme and the page code in step.
@@ -24,6 +23,8 @@ const devFetch=()=>({name:'dev-fetch',apply:'serve',configureServer(server){serv
 
 export default defineConfig({
   plugins: [versionTheme(), devFetch()],
+  // Only for developing against a local API (see api/README.md); the app works without it.
+  server: {proxy: {'/api': 'http://127.0.0.1:8000'}},
   // Use the CPU/WASM runtime consistently in both ink-on and our worker.
   resolve: {alias: [{find: /^onnxruntime-web$/, replacement: 'onnxruntime-web/wasm'}]},
   define: {__APP_ID__: JSON.stringify(appId)},

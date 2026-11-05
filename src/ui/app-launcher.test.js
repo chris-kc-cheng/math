@@ -10,8 +10,8 @@ test('parseApps keeps well-formed https entries and derives a name from the id',
 });
 test('nameFromId title-cases hyphenated ids',()=>assert.equal(nameFromId('hedgies-finance'),'Hedgies Finance'));
 test('the current app is hidden by id alone, wherever it is served',()=>{
- assert.equal(isCurrentApp({id:'whack-a-math',url:'https://chris-kc-cheng.github.io/math/'},'whack-a-math'),true);
- assert.equal(isCurrentApp({id:'rabbit',url:'https://learn.hedgies.cloud/'},'whack-a-math'),false);
+ assert.equal(isCurrentApp({id:'math',url:'https://math.hedgies.cloud'},'math'),true);
+ assert.equal(isCurrentApp({id:'rabbit',url:'https://learn.hedgies.cloud/'},'math'),false);
  assert.equal(isCurrentApp({id:'rabbit',url:'https://learn.hedgies.cloud/'},undefined),false);
 });
 test('pickIcon takes the smallest PWA icon of at least 128px, resolved against the manifest, and skips monochrome ones',()=>{
