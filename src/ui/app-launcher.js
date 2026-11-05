@@ -23,7 +23,6 @@ export const nameFromId=id=>id.split(/[-_\s]+/).filter(Boolean).map(w=>w[0].toUp
 const selfId=typeof __APP_ID__==='string'?__APP_ID__:undefined;
 export const isCurrentApp=(app,id=selfId)=>Boolean(id)&&app.id===id;
 
-let listing;
 // An app's own PWA manifest gives its name and icon: the app URL is enough to find it (the page's <link rel=manifest>, else manifest.webmanifest).
 const info=new Map();
 export function pickIcon(icons,base){
@@ -49,7 +48,10 @@ export const loadInfo=app=>{
 
 // In local development the Vite relay (vite.config.js) fetches remote URLs for the browser, because most hosts send no CORS header.
 const remote=url=>import.meta.env?.DEV?`/__fetch?url=${encodeURIComponent(url)}`:url;
-const loadApps=()=>listing??=fetch(remote(APP_LIST_URL),{headers:{accept:'application/json'}}).then(r=>{if(!r.ok)throw new Error(String(r.status));return r.json();}).then(parseApps).catch(error=>{listing=undefined;throw error;});
+// The registry answers per visitor (an administrator's cookie adds an admin-only entry), so the list is fetched with credentials on every
+// open and never cached; without a cookie, or if the registry does not allow credentials, the public list or the "couldn't load" note shows.
+export const listRequest=()=>[remote(APP_LIST_URL),{headers:{accept:'application/json'},credentials:'include',cache:'no-store'}];
+const loadApps=()=>fetch(...listRequest()).then(r=>{if(!r.ok)throw new Error(String(r.status));return r.json();}).then(parseApps);
 
 export function createAppLauncher(){
  const box=el('span',undefined,'launcher'),button=el('button',undefined,'launcher-button');
