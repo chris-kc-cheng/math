@@ -17,6 +17,7 @@ import {setMathText} from '../ui/math-text.js';
 import {mountGradePicker} from '../ui/grade-picker.js';
 import {listRounds,saveRound} from '../game/storage.js';
 import {chooseProfile,activeProfile} from '../game/profile.js';
+import {syncAvailable} from '../sync/config.js';
 import {el,reducedMotion,renderTex} from '../ui/dom.js';
 const app=document.querySelector('#app');
 app.innerHTML='<main class="game-page">'+pageNav('game')+'<div class="game-head"><h1>Practice</h1><div class="game-tools"><button id="game-quit" type="button" class="playback-icon" hidden aria-label="Quit game. You can resume later." title="Quit game (resume later)"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4H5v16h5"/><path d="M15 8l4 4-4 4"/><path d="M19 12H9"/></svg></button><span class="info-tip"><span class="info-icon" tabindex="0" role="img" aria-label="About saving">i</span><span id="save-status" role="status" class="info-bubble">Opening local progress…</span></span></div></div><div class="setup-gate"><form id="game-setup"><p class="game-player">Playing as <strong id="player-label"></strong></p><div class="game-grade game-field"><span class="game-field-label">Grade</span><div id="game-grade-host"></div></div><select id="game-grade" aria-label="Game grade" hidden></select><label>Game <select id="game-mode"><option value="moles">Whack-a-Math</option><option value="classic">Captain Patty</option></select></label><span id="game-difficulty-host"></span><label>Questions <input id="game-count" name="count" type="number" min="1" max="50" step="1" value="5" required aria-label="Number of questions" title="1–50 questions"></label><section id="topic-panel" class="topic-panel" aria-label="Topics and progress"><div class="topic-head"><h2>Topics</h2><span id="topic-summary" class="topic-summary">All topics</span></div><p id="topic-legend" class="stat-legend"></p><div id="topic-list" class="topic-list"></div></section><button type="submit" id="game-start" disabled>Play</button></form><div id="player-prompt" class="player-prompt" role="status"><strong>Choose or create a player to begin</strong><span>Use the player button at the top right.</span><button type="button" id="choose-player">Choose a player</button></div></div><p id="game-error" role="alert"></p><div id="game-round"></div></main>';
@@ -105,10 +106,12 @@ function setPlayer(name){
 gradeSelect.onchange=()=>{fillTopics([]);updateStart();};
 countInput.oninput=updateStart;
 // The player badge in the corner switches players without leaving the page, unless a round is in progress.
-document.addEventListener('math-profile-change',event=>{if(round?.status==='active')return;if(event.detail){setPlayer(event.detail.name);setStep('topics');}else{setPlayer('');round=undefined;feedback='';renderRound();setStep('player');}});
+document.addEventListener('math-profile-change',event=>{if(round?.status==='active'&&!syncAvailable())return;memoryOnly=false;if(round?.status==='active'){round=undefined;feedback='';renderRound();}if(event.detail){setPlayer(event.detail.name);setStep('topics');savedLabel();}else{setPlayer('');round=undefined;feedback='';renderRound();setStep('player');}});
 $('#choose-player').onclick=()=>document.querySelector('.profile-button')?.click();
+// Where accounts exist a guest cannot create players, so offer a round that is simply not saved.
+if(syncAvailable()){const guest=el('button','Play as Guest (not saved)');guest.type='button';guest.className=$('#choose-player').className;guest.onclick=()=>{memoryOnly=true;ready=true;setPlayer('Guest');setStep('topics');$('#game-start').disabled=false;savedLabel();};$('#choose-player').after(guest);}
 fillTopics([]);setStep('player');
-function savedLabel(){ $('#save-status').textContent=memoryOnly?'Playing without saving. Progress will be lost when this page closes.':'Progress saved on this device. No account needed.'; }
+function savedLabel(){ $('#save-status').textContent=memoryOnly?'Playing without saving. Progress will be lost when this page closes.':syncAvailable()?'Progress is saved to your account.':'Progress saved on this device. No account needed.'; }
 async function persist(next){
  const saved=memoryOnly?{...next,updatedAt:Date.now()}:await saveRound(next);
  if(!memoryOnly)document.dispatchEvent(new CustomEvent('math-rounds-changed'));
@@ -166,7 +169,7 @@ $('#game-setup').onsubmit=event=>{event.preventDefault();action(async()=>{
  if(!memoryOnly)rounds=await listRounds();
  const previous=rounds.find(r=>sameRound(r,key));
  const next=previous||{...makeRound(grade,chosenTopics(),Math.random,crypto.randomUUID(),Number(countInput.value),getChoice()),profileId:key,playerName:name};
- await persist({...next,playerName:name});chooseProfile({id:key,name});selectedPlayer=key;feedback='';
+ await persist({...next,playerName:name});if(!memoryOnly)chooseProfile({id:key,name});selectedPlayer=key;feedback='';
 });};
 try{
  rounds=await listRounds();ready=true;$('#save-status').textContent='Saved on this device.';$('#game-start').disabled=false;

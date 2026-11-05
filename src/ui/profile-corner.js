@@ -3,7 +3,8 @@ import {listRounds} from '../game/storage.js';
 import {activeProfile,playerKey,addProfile,chooseProfile,profilesIn,profileStats,avatarFor,chooseAvatar,AVATARS,WIN_ACCURACY} from '../game/profile.js';
 import {el} from './dom.js';
 import {createAppLauncher} from './app-launcher.js';
-import {createAccountButton} from './account.js';
+import {startAccount,statusDot,accountMenuItems} from './account.js';
+import {syncAvailable} from '../sync/config.js';
 
 // The player badge and lifetime statistics in the top-right corner of every page.
 const HUES=[212,28,150,280,350,48,190,320];
@@ -18,7 +19,7 @@ export function avatarNode(profile,size=''){
 const percent=value=>value===null?'–':`${Math.round(value*100)}%`;
 const medals=[['trophy','🏆','Perfect games','perfect'],['medal','🥈','Games won','won'],['pear','🍐','Correct answers','correct']];
 
-let corner,rounds=[],profile=null,busy=false;const launcher=createAppLauncher();let account;
+let corner,rounds=[],profile=null,busy=false;const launcher=createAppLauncher();
 function emit(next){profile=next;chooseProfile(next);document.dispatchEvent(new CustomEvent('math-profile-change',{detail:next}));render();}
 
 function statsView(){
@@ -36,13 +37,15 @@ function statsView(){
 
 function menuView(close){
  const menu=el('div',undefined,'profile-menu');menu.setAttribute('role','menu');menu.setAttribute('aria-label','Player');
- menu.append(el('p','Who is playing?','menu-title'));
+ const accountsOn=syncAvailable();   // with accounts, login decides who plays: the login user, or Guest with no progress
+ menu.append(el('p',accountsOn?(profile?'Signed in':'Guest'):'Who is playing?','menu-title'));
+ if(accountsOn){const who=el('div',undefined,'menu-item menu-static');who.append(avatarNode(profile),el('span',profile?profile.name:'Guest (no progress)'));menu.append(who);}
  const people=profilesIn(rounds),entry=(person,label)=>{
   const item=el('button',undefined,'menu-item');item.type='button';item.setAttribute('role','menuitemradio');item.setAttribute('aria-checked',String(person?profile?.id===person.id:!profile));
   item.append(avatarNode(person),el('span',label));item.onclick=()=>{close();emit(person);};return item;
  };
- for(const person of people)menu.append(entry(person,person.name));
- menu.append(entry(null,'Guest (no progress)'));
+ if(!accountsOn){for(const person of people)menu.append(entry(person,person.name));
+ menu.append(entry(null,'Guest (no progress)'));}
  const add=el('button',undefined,'menu-item menu-add');add.type='button';add.setAttribute('role','menuitem');add.setAttribute('aria-expanded','false');add.append(el('span','+','avatar avatar-add'),el('span','Add a player'));
  // New players are created here, in the menu: no page change and no game starts.
  const form=el('form',undefined,'menu-new'),field=el('input');field.type='text';field.maxLength=40;field.autocomplete='off';field.placeholder='Name';field.setAttribute('aria-label','New player name');
@@ -50,7 +53,8 @@ function menuView(close){
  add.onclick=()=>{form.hidden=!form.hidden;add.setAttribute('aria-expanded',String(!form.hidden));if(!form.hidden)field.focus();};
  form.onsubmit=event=>{event.preventDefault();let id;try{id=playerKey(field.value);}catch(problem){error.textContent=problem.message;field.focus();return;}
   const person={id,name:field.value.trim().replace(/s+/g,' ')};addProfile(person);close();emit(person);};
- menu.append(add,form);
+ if(!accountsOn)menu.append(add,form);
+ menu.append(...accountMenuItems(close));
  if(profile){
   const picker=el('div',undefined,'avatar-picker');picker.setAttribute('role','group');picker.setAttribute('aria-label','Choose an avatar');
   picker.append(el('p','Avatar','menu-title'));
@@ -68,13 +72,13 @@ function render(){
  for(const old of corner.querySelectorAll('.stat-cluster,.profile-wrap'))old.remove();
  if(profile)corner.append(statsView());
  const wrap=el('div',undefined,'profile-wrap'),button=el('button',undefined,'profile-button');button.type='button';button.setAttribute('aria-haspopup','menu');button.setAttribute('aria-expanded','false');
- button.append(avatarNode(profile),el('span',profile?profile.name:'Guest','profile-name'),el('span','▾','profile-caret'));
- button.setAttribute('aria-label',profile?`Player: ${profile.name}. Change player`:'Guest. Choose a player');
+ button.append(avatarNode(profile),el('span',profile?profile.name:'Guest','profile-name'),statusDot(),el('span','▾','profile-caret'));
+ button.setAttribute('aria-label',syncAvailable()?(profile?`Signed in as ${profile.name}. Account menu`:'Guest, progress not saved. Account menu'):profile?`Player: ${profile.name}. Change player`:'Guest. Choose a player');
  const close=()=>{menu.remove();button.setAttribute('aria-expanded','false');document.removeEventListener('pointerdown',outside,true);document.removeEventListener('keydown',escape,true);};
  let menu;const outside=event=>{if(!wrap.contains(event.target))close();},escape=event=>{if(event.key==='Escape'){close();button.focus();}};
  const show=()=>{menu=menuView(close);wrap.append(menu);button.setAttribute('aria-expanded','true');document.addEventListener('pointerdown',outside,true);document.addEventListener('keydown',escape,true);menu.querySelector('[aria-checked=true],.menu-item')?.focus();};
  button.onclick=()=>button.getAttribute('aria-expanded')==='true'?close():show();
- wrap.append(button);corner.append(wrap,account,launcher);
+ wrap.append(button);corner.append(wrap,launcher);
  if(wasOpen)show();
 }
 
@@ -93,8 +97,9 @@ function adoptThemeToggle(){
 export function mountProfileCorner(){
  if(corner||typeof document==='undefined')return;
  corner=el('div',undefined,'profile-corner');corner.setAttribute('aria-label','Player and statistics');document.body.append(corner);
- account=createAccountButton();
+ startAccount();
  adoptThemeToggle();render();refresh();
  document.addEventListener('math-rounds-changed',refresh);
+ document.addEventListener('math-profile-change',()=>{if(busy)return;profile=activeProfile(rounds);render();});
  window.addEventListener('storage',event=>{if(event.key==='math-active-profile'){profile=activeProfile(rounds);render();}});
 }

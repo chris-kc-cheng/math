@@ -120,16 +120,14 @@ html[data-theme=dark] .difficulty-pick{color:#b5c1cc}html[data-theme=dark] .diff
 html[data-theme=dark] #game-setup .difficulty-pick select,html[data-theme=dark] #game-setup select{background:#222d37;color:#e1e7ed;border-color:#7b8794}
 #game-setup #game-difficulty-host{order:1}
 .curriculum-difficulty{margin-left:auto}
-/* Optional account: status button, dialog*/
-.account-wrap .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.account-button{display:flex;align-items:center;gap:6px;min-height:32px;padding:2px 10px;border:1px solid #cdd4db;border-radius:999px;background:#fff;color:#202b35;font:inherit;font-size:12px;font-weight:600;cursor:pointer}
-.account-button:hover{border-color:#2459a6}.account-button:focus-visible{outline:3px solid #2459a6;outline-offset:2px}
-.account-icon{font-size:16px;line-height:1}.account-button[data-status=saved] .account-icon{color:#1a7f4b}.account-button[data-status=offline] .account-icon,.account-button[data-status=error] .account-icon{color:#a35b00}
-.account-button[data-status=syncing] .account-icon{display:inline-block;animation:account-spin 1.2s linear infinite}
-@keyframes account-spin{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){.account-button[data-status=syncing] .account-icon{animation:none}}
-@media(max-width:900px){.account-text{display:none}.account-button{padding:2px 8px}}
-html[data-theme=dark] .account-button{background:#222d37;color:#e1e7ed;border-color:#52606d}
+/* Optional account: badge status dot, menu section, dialog */
+.badge-status{font-size:12px;line-height:1;color:#65717b}.badge-status[hidden]{display:none}.badge-status[data-status=saved]{color:#1a7f4b}.badge-status[data-status=offline],.badge-status[data-status=error]{color:#a35b00}.badge-status[data-status=ask]{color:#2459a6}
+.badge-status[data-status=syncing]{display:inline-block;animation:account-spin 1.2s linear infinite}@keyframes account-spin{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){.badge-status[data-status=syncing]{animation:none}}
+.menu-rule{height:1px;margin:6px 0;background:#e1e6eb}.menu-status{margin:2px 8px 4px;font-size:12px;font-weight:600;color:#4a5864}.menu-status[data-status=saved]{color:#1a7f4b}.menu-status[data-status=offline],.menu-status[data-status=error]{color:#a35b00}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+html[data-theme=dark] .menu-rule{background:#52606d}html[data-theme=dark] .menu-status{color:#b5c1cc}
 .auth-dialog{width:min(480px,calc(100vw - 24px));max-height:calc(100dvh - 24px);padding:0;border:1px solid #cdd4db;border-radius:14px;background:#fff;color:#202b35;box-shadow:0 12px 40px #0004}
+.auth-dialog:focus,.auth-dialog:focus-visible{outline:none}
 .auth-dialog::backdrop{background:#0006}
 .auth-head{display:flex;align-items:center;justify-content:space-between;padding:14px 18px 6px}.auth-head h2{margin:0;font-size:20px}
 .auth-close{border:0;background:transparent;font-size:26px;line-height:1;cursor:pointer;color:inherit;padding:2px 8px;border-radius:8px}
@@ -153,3 +151,4 @@ html[data-theme=dark] .auth-dialog{background:#222d37;color:#e1e7ed;border-color
 html[data-theme=dark] .auth-button{background:#2c3a47;color:#e1e7ed;border-color:#52606d}html[data-theme=dark] :is(.auth-primary){background:#4d82d6;border-color:#4d82d6;color:#0c1621}
 html[data-theme=dark] .auth-link{color:#99c5ff}html[data-theme=dark] .auth-field input{background:#182027;color:#e1e7ed;border-color:#52606d}
 html[data-theme-lock] #theme-toggle{display:none!important}
+.menu-static{cursor:default}.menu-static:hover{background:transparent}

@@ -14,7 +14,7 @@ src/
     nav.js, profile-corner.js    Page switcher; player badge, statistics and the add-player menu
     difficulty.js                Difficulty badge and selector (saved choice: Auto, Simple, Medium, Hard)
     app-launcher.js              9-dot app launcher, last item in the top-right corner; live list from apps.hedgies.cloud/app.json (this app is id `math`)
-    account.js                   Optional account: status button, login/attach/delete/export dialog
+    account.js                   Optional account inside the player badge: status dot, menu section, login/attach/delete/export dialog
     grade-picker.js, chrome.css  Grade display with its collapsible selector
     math-text.js, debug.js       Plain a/b → LaTeX fractions; debug log
   views/                         Calculation-board renderers (equation, long division, long multiplication)
@@ -156,4 +156,6 @@ All three main HTML entry pages declare the manifest and Apple touch icon so ins
 
 ## Account sync
 
-`sync/engine.js` is browser-independent (`api`, `local` and `store` are injected; `engine.test.js` runs it against an in-memory server). A pass: list the account's profiles, adopt a same-named local profile instead of duplicating it, copy new ones locally; if this device has never-attached data stop at status `ask` until the person chooses (`attachAll` / `keepLocalOnly`); push profiles (last write wins by `updatedAt`) and finished rounds in batches of 25 (round id = result id, so repeats are `duplicate`); pull each profile's results after the saved cursor and store them as `remote` rounds (never pushed back). Rounds are only ever added to IndexedDB by `addRounds`; `game/profile.js` keeps a per-profile change time (`math-profile-times`). Per-account state lives in `localStorage` under `math-sync:<account id>`. `api/` holds the FastAPI service (see `api/README.md`).
+`sync/engine.js` is browser-independent (`api`, `local` and `store` are injected; `engine.test.js` runs it against an in-memory server). A pass: list the account's profiles, adopt a same-named local profile instead of duplicating it, copy new ones locally; (the attach question is no longer used by the app: `index.js` scopes the engine to the login user's single player and marks attach done;) push profiles (last write wins by `updatedAt`) and finished rounds in batches of 25 (round id = result id, so repeats are `duplicate`); pull each profile's results after the saved cursor and store them as `remote` rounds (never pushed back). Rounds are only ever added to IndexedDB by `addRounds`; `game/profile.js` keeps a per-profile change time (`math-profile-times`). Per-account state lives in `localStorage` under `math-sync:<account id>`. `api/` holds the FastAPI service (see `api/README.md`).
+
+With accounts available (`*.hedgies.cloud`) `sync/index.js#applyIdentity` makes login the only source of identity: signed in = the account player (`accountPlayer`, id = normalised account name, written to `math-active-profile`), signed out = Guest (`none`). The player menu then has no player list, Add or Guest entry; `game.js` offers *Play as Guest (not saved)*. Elsewhere the older local players still work.
