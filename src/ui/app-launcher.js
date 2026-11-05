@@ -50,8 +50,15 @@ export const loadInfo=app=>{
 const remote=url=>import.meta.env?.DEV?`/__fetch?url=${encodeURIComponent(url)}`:url;
 // The registry answers per visitor (an administrator's cookie adds an admin-only entry), so the list is fetched with credentials on every
 // open and never cached; without a cookie, or if the registry does not allow credentials, the public list or the "couldn't load" note shows.
-export const listRequest=()=>[remote(APP_LIST_URL),{headers:{accept:'application/json'},credentials:'include',cache:'no-store'}];
-const loadApps=()=>fetch(...listRequest()).then(r=>{if(!r.ok)throw new Error(String(r.status));return r.json();}).then(parseApps);
+export const listRequest=(credentials=true)=>[remote(APP_LIST_URL),{headers:{accept:'application/json'},...(credentials?{credentials:'include'}:{}),cache:'no-store'}];
+// A browser refuses a credentialed request unless the registry answers with Access-Control-Allow-Credentials; when it does not (or the
+// network call fails for any other reason) ask again without the cookie, which gets the public list.
+export async function fetchAppList(fetchImpl=fetch){
+ const get=async credentials=>{const r=await fetchImpl(...listRequest(credentials));if(!r.ok)throw new Error(String(r.status));return r.json();};
+ let data;try{data=await get(true);}catch{data=await get(false);}
+ return parseApps(data);
+}
+const loadApps=()=>fetchAppList();
 
 export function createAppLauncher(){
  const box=el('span',undefined,'launcher'),button=el('button',undefined,'launcher-button');
