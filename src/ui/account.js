@@ -1,5 +1,4 @@
 import {el} from './dom.js';
-import {MOVED_TO} from '../sync/config.js';
 import {syncEnabled,getSync,onSync,startSync,login,logout,chooseAttach,accountLearners,deleteProfileEverywhere,accountExport,eraseAccountData,deviceBackup,restoreBackup,authClient,MESSAGES} from '../sync/index.js';
 import {playerKey} from '../game/profile.js';
 
@@ -164,13 +163,4 @@ export function createAccountButton(){
   startSync().then(()=>{const r=getSync().returned;if(r.error||r.resetToken)openAccount();});
  }
  return wrap;
-}
-
-// On the retired GitHub Pages copy (built with VITE_MOVED_TO) a notice points people to the new address.
-export function mountMovedNotice(){
- if(!MOVED_TO||document.querySelector('.moved-notice'))return;
- const bar=el('div',undefined,'moved-notice'),link=el('a','the new address');link.href=MOVED_TO;
- bar.setAttribute('role','region');bar.setAttribute('aria-label','Whack-a-Math has moved');
- bar.append(el('span','Whack-a-Math has moved. Open '),link,el('span',' to keep playing and to save results to an account. To bring your players along, save a backup file here (Player menu → Back up or move) and restore it there.'));
- document.body.prepend(bar);
 }

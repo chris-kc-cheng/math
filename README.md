@@ -34,11 +34,11 @@ Playing needs no account and works offline. On `math.hedgies.cloud` a small clou
 
 <img src="docs/images/account-dialog.png" alt="Account dialog after logging in, asking whether to save this device's players and results to the account" width="700">
 
-The server part lives in [`api/`](api/README.md); production setup and cutover are in [`docs/shared-infra.md`](docs/shared-infra.md). Account features are hidden on other addresses (GitHub Pages, localhost) because the shared cookie only reaches `*.hedgies.cloud`.
+The server part lives in [`api/`](api/README.md); production setup and cutover are in [`docs/shared-infra.md`](docs/shared-infra.md). Account features are hidden on other addresses (localhost, previews) because the shared cookie only reaches `*.hedgies.cloud`.
 
 ## Deployment
 
-Production is the shared platform: [`deploy-production.yml`](.github/workflows/deploy-production.yml) tests, builds the Vite site, publishes it to `/srv/www/math/releases/<sha>` (served by the shared Caddy at math.hedgies.cloud) and starts the API container from [`compose.infra.yaml`](compose.infra.yaml). The old GitHub Pages site is no longer deployed on push; [`deploy-pages-moved.yml`](.github/workflows/deploy-pages-moved.yml) is a manual job that publishes a "we have moved" notice there. Details: [`docs/shared-infra.md`](docs/shared-infra.md).
+Production is the shared platform: [`deploy-production.yml`](.github/workflows/deploy-production.yml) tests, builds the Vite site, publishes it to `/srv/www/math/releases/<sha>` (served by the shared Caddy at math.hedgies.cloud) and starts the API container from [`compose.infra.yaml`](compose.infra.yaml). GitHub Pages is no longer used. Details: [`docs/shared-infra.md`](docs/shared-infra.md).
 
 ## Local development
 

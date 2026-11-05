@@ -12,8 +12,7 @@ test('production deploy publishes a release, keeps three, flips a relative symli
  assert.match(flow,/test -f \.env\.infra && docker compose -f compose\.infra\.yaml --env-file \.env\.infra config --quiet && docker compose .* up -d --build --remove-orphans api/);
  for(const name of ['HOSTINGER_SSH_KEY','HOSTINGER_KNOWN_HOSTS','HOSTINGER_HOST','HOSTINGER_SSH_PORT','HOSTINGER_USER'])assert.ok(flow.includes(`secrets.${name}`),name);
  assert.ok(!/rsync[^\n]*\bsrc\b/.test(flow),'front-end sources are not uploaded');
- assert.ok(!existsSync(new URL('../.github/workflows/deploy-pages.yml',import.meta.url)),'the Pages deploy on push is gone');
- assert.match(read('.github/workflows/deploy-pages-moved.yml'),/on:\s+workflow_dispatch:\s+permissions/);
+ for(const name of ['deploy-pages.yml','deploy-pages-moved.yml'])assert.ok(!existsSync(new URL('../.github/workflows/'+name,import.meta.url)),name+' is gone');
 });
 
 test('the compose file runs only the API, on the shared networks, with neutral names',()=>{

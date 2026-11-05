@@ -3,7 +3,7 @@ import {listRounds} from '../game/storage.js';
 import {activeProfile,playerKey,addProfile,chooseProfile,profilesIn,profileStats,avatarFor,chooseAvatar,AVATARS,WIN_ACCURACY} from '../game/profile.js';
 import {el} from './dom.js';
 import {createAppLauncher} from './app-launcher.js';
-import {createAccountButton,openAccount,mountMovedNotice} from './account.js';
+import {createAccountButton,openAccount} from './account.js';
 
 // The player badge and lifetime statistics in the top-right corner of every page.
 const HUES=[212,28,150,280,350,48,190,320];
@@ -95,7 +95,7 @@ function adoptThemeToggle(){
 export function mountProfileCorner(){
  if(corner||typeof document==='undefined')return;
  corner=el('div',undefined,'profile-corner');corner.setAttribute('aria-label','Player and statistics');document.body.append(corner);
- account=createAccountButton();mountMovedNotice();
+ account=createAccountButton();
  adoptThemeToggle();render();refresh();
  document.addEventListener('math-rounds-changed',refresh);
  window.addEventListener('storage',event=>{if(event.key==='math-active-profile'){profile=activeProfile(rounds);render();}});

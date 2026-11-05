@@ -12,8 +12,6 @@ const env=import.meta.env??{};
 export const SSO_DOMAIN=env.VITE_SSO_DOMAIN||'hedgies.cloud';
 export const AUTH_BASE=(env.VITE_AUTH_BASE||`https://auth.${SSO_DOMAIN}`).replace(/\/$/,'');
 export const API_BASE=(env.VITE_API_BASE||'').replace(/\/$/,'')+'/api/v1';
-// Set at build time on the retired GitHub Pages copy to point people at the new address.
-export const MOVED_TO=env.VITE_MOVED_TO||'';
 
 export function syncAvailable(hostname=globalThis.location?.hostname||''){
  if(env.VITE_FORCE_SYNC==='1')return true;

@@ -27,18 +27,14 @@ Per **account** (the token's `sub`, plus first/last seen): learner profiles (ran
    - copy [`deploy/math.caddy`](../deploy/math.caddy) to `sites/math.caddy`;
    - add `{"id": "math", "url": "https://math.hedgies.cloud"}` to `switcher/app.json` (the 9-dot launcher hides Math itself by the id `math`);
    - `docker compose exec proxy caddy reload --config /etc/caddy/Caddyfile`.
-   - Check the login service allows `https://math.hedgies.cloud` as a `return_to` address and as a CORS origin (needed for Google/Microsoft login and for the password form).
+   - Checked in the infrastructure repo: the login service accepts any https `*.hedgies.cloud` as `return_to` and as a credentialed CORS origin, so nothing to change. Google/Microsoft redirect URIs are for `auth.hedgies.cloud`, unchanged.
 6. **Smoke test:** `https://math.hedgies.cloud/api/v1/health` returns `{"status":"ok"}`; open the site, play a round anonymously, log in, choose what to save, play another round and confirm it shows *Saved to your account*; open the site on a second device and see the players.
-7. **The old GitHub Pages site:** `deploy-pages.yml` is gone, so the last published Pages build stays online unchanged (it keeps working offline-only). The old build has no backup button, so run the manual workflow *Deploy moved notice to GitHub Pages* once: it builds this branch's code with a banner linking to `math.hedgies.cloud`, and that copy has *Back up or move data* (the only way to carry local players across; see below). After a transition period you may switch Pages off in the repository settings.
+7. **The old GitHub Pages site** (`chris-kc-cheng.github.io/math`): `deploy-pages.yml` is removed, so nothing new is published there. In the repository settings switch Pages off (Settings → Pages) when you are ready; local data on the old address is not carried over (browser storage is per address).
 8. **Rollback:** the front end: `ln -sfn releases/<older> /srv/www/math/current` on the server. The API: redeploy an earlier commit with the workflow (migrations only add tables, so an older API can run against the same database), or `docker compose -f compose.infra.yaml --env-file .env.infra stop api`: the app keeps working offline without it. To remove Math from the platform, delete `sites/math.caddy` and the registry entry and reload Caddy.
 
-## Moving from the old address
+## Installed copies
 
-Browser storage belongs to one web address, so players and rounds saved on `chris-kc-cheng.github.io/math` are not visible on `math.hedgies.cloud`. Bring them over with a backup file:
-
-- **Backup file (the only way, since storage is per address):** on the old address open the player menu → *Back up or move data* → *Save a backup file*. On the new address do the same dialog → *Restore from a backup file…*. Then log in: the first-login question *Save this device's players and results?* uploads the restored data to the account (or *Keep them on this device only*).
-
-People who installed the app to the home screen (PWA, or iPhone *Add to Home Screen*) from the old address must remove it and add the new address again: the installed app is bound to its origin and manifest id.
+People who installed the app to the home screen (PWA, or iPhone *Add to Home Screen*) from the old address must remove it and add `math.hedgies.cloud` again: the installed app is bound to its origin. Players saved only in a browser on the old address stay there. The player menu's *Back up or move data* (backup file) can move them if that old copy is still open.
 
 ## Sync rules in short
 

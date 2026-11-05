@@ -120,7 +120,7 @@ html[data-theme=dark] .difficulty-pick{color:#b5c1cc}html[data-theme=dark] .diff
 html[data-theme=dark] #game-setup .difficulty-pick select,html[data-theme=dark] #game-setup select{background:#222d37;color:#e1e7ed;border-color:#7b8794}
 #game-setup #game-difficulty-host{order:1}
 .curriculum-difficulty{margin-left:auto}
-/* Optional account: status button, dialog, moved notice */
+/* Optional account: status button, dialog*/
 .account-wrap .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .account-button{display:flex;align-items:center;gap:6px;min-height:32px;padding:2px 10px;border:1px solid #cdd4db;border-radius:999px;background:#fff;color:#202b35;font:inherit;font-size:12px;font-weight:600;cursor:pointer}
 .account-button:hover{border-color:#2459a6}.account-button:focus-visible{outline:3px solid #2459a6;outline-offset:2px}
@@ -152,4 +152,3 @@ html[data-theme=dark] .account-button{background:#222d37;color:#e1e7ed;border-co
 html[data-theme=dark] .auth-dialog{background:#222d37;color:#e1e7ed;border-color:#52606d}html[data-theme=dark] :is(.auth-note,.auth-muted,.auth-or){color:#b5c1cc}
 html[data-theme=dark] .auth-button{background:#2c3a47;color:#e1e7ed;border-color:#52606d}html[data-theme=dark] :is(.auth-primary){background:#4d82d6;border-color:#4d82d6;color:#0c1621}
 html[data-theme=dark] .auth-link{color:#99c5ff}html[data-theme=dark] .auth-field input{background:#182027;color:#e1e7ed;border-color:#52606d}
-.moved-notice{position:sticky;top:0;z-index:30;padding:10px 16px;background:#fff3cd;color:#4a3b00;font-size:14px;line-height:1.5;text-align:center;border-bottom:1px solid #e6c866}.moved-notice a{color:#1b4b94;font-weight:700}
