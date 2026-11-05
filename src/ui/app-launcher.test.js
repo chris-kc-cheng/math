@@ -20,7 +20,7 @@ test('pickIcon takes the smallest PWA icon of at least 128px, resolved against t
  assert.equal(pickIcon([{src:'/s.png',sizes:'64x64'},{src:'/t.png',sizes:'32x32'}],base),'https://a.test/s.png');
  assert.equal(pickIcon([],base),null);assert.equal(pickIcon([{src:'http://a.test/x.png',sizes:'192x192'}],base),null);
 });
-test('the app list is requested with the visitor's cookie and never cached; Math itself is still excluded',()=>{
+test('the app list is requested with the visitor cookie and never cached; Math itself is still excluded',()=>{
  const [url,init]=listRequest();
  assert.equal(url,APP_LIST_URL);assert.equal(init.credentials,'include');assert.equal(init.cache,'no-store');
  const apps=parseApps([{id:'math',url:'https://math.hedgies.cloud'},{id:'admin',url:'https://admin.hedgies.cloud'},{id:'rabbit',url:'https://learn.hedgies.cloud'}]);
