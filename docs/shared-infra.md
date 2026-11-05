@@ -50,6 +50,7 @@ People who installed the app to the home screen (PWA, or iPhone *Add to Home Scr
 | Method and path | Purpose |
 | --- | --- |
 | `GET /health` | liveness (no login) |
+| `GET /platform-apps` | the app launcher's list with names and icons, read server-side from the registry and each app's manifest; the visitor's `sso_access` cookie (only that) goes to the registry; public |
 | `GET /me/learners` | the account's profiles with result counts, plus ids of deleted profiles |
 | `PUT /learners/{uuid}` | create or update a profile (409 if the name exists, 410 if deleted) |
 | `DELETE /learners/{uuid}` | hard-delete a profile and all its results |

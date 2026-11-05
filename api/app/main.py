@@ -19,6 +19,7 @@ from sqlalchemy.orm import Session
 
 from .config import Settings
 from .db import make_engine, make_sessions
+from . import platform_apps
 from .models import Account, DeletedLearner, Learner, Result, ResultItem
 from .schemas import LearnerIn, ResultBatch, ResultIn, name_key, valid_id
 from .sso_auth import SsoAuth
@@ -134,6 +135,12 @@ def create_app(settings: Settings | None = None, auth: SsoAuth | None = None) ->
     @app.get("/api/v1/health")
     def health():
         return {"status": "ok"}
+
+    @app.get("/api/v1/platform-apps")
+    def platform_app_list(request: Request):
+        """The 9-dot launcher's list: the registry plus each app's name and icon, read here because browsers cannot read other apps' pages.
+        Public. The visitor's sso_access cookie (only that) is passed to the registry so it can add an administrator-only entry; nothing is shared across visitors."""
+        return platform_apps.get_apps(settings.apps_url, request.headers.get("cookie"))
 
     @app.get("/api/v1/me/learners")
     def list_learners(sub: str = Depends(account), session: Session = Depends(db)):

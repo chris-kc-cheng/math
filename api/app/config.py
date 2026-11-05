@@ -19,6 +19,7 @@ class Settings:
     max_learners: int = 20
     max_results: int = 20_000
     future_skew_ms: int = 5 * 60 * 1000
+    apps_url: str = ""  # the platform's app registry; empty disables /platform-apps
 
     @property
     def issuer(self) -> str:
@@ -40,4 +41,5 @@ class Settings:
             jwks_url=os.environ.get("SSO_JWKS_URL") or None,
             allowed_origins=tuple(o.strip().rstrip("/") for o in raw.split(",") if o.strip()),
             production=production,
+            apps_url=os.environ.get("MATH_APPS_URL", f"https://apps.{domain}/app.json"),
         )

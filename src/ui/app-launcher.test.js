@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {parseApps,nameFromId,isCurrentApp,pickIcon,listRequest,APP_LIST_URL,fetchAppList} from './app-launcher.js';
+import {parseApps,nameFromId,isCurrentApp,pickIcon,listRequest,APP_LIST_URL,PLATFORM_APPS_URL,fetchAppList} from './app-launcher.js';
 
 test('parseApps keeps well-formed https entries and derives a name from the id',()=>{
  const apps=parseApps([{id:'parking-simulator',url:'https://example.com/p/'},{id:'x',url:'http://insecure.test/'},{id:'y'},null,{id:'named',url:'https://a.test/',name:'Pretty Name',icon:'logo.png'}]);
@@ -29,8 +29,14 @@ test('the app list is requested with the visitor cookie and never cached; Math i
 
 test('the app list falls back to the public list when the credentialed request is refused',async()=>{
  const seen=[];
- const fetchImpl=async(url,init)=>{seen.push(init.credentials);if(init.credentials==='include')throw new TypeError('CORS');return {ok:true,json:async()=>[{id:'rabbit',url:'https://learn.hedgies.cloud'}]};};
+ const fetchImpl=async(url,init)=>{if(url===PLATFORM_APPS_URL)throw new TypeError('no api');seen.push(init.credentials);if(init.credentials==='include')throw new TypeError('CORS');return {ok:true,json:async()=>[{id:'rabbit',url:'https://learn.hedgies.cloud'}]};};
  const apps=await fetchAppList(fetchImpl);
  assert.deepEqual(seen,['include',undefined]);assert.deepEqual(apps.map(a=>a.id),['rabbit']);
  await assert.rejects(fetchAppList(async()=>({ok:false,status:500,json:async()=>[]})),/500/);
+});
+
+test('the launcher prefers the list from its own API, with names and icons already resolved',async()=>{
+ const urls=[];
+ const apps=await fetchAppList(async url=>{urls.push(url);return {ok:true,json:async()=>[{id:'rabbit',url:'https://learn.hedgies.cloud',name:'Rabbit',icon:'https://learn.hedgies.cloud/i/192.png'}]};});
+ assert.deepEqual(urls,[PLATFORM_APPS_URL]);assert.equal(apps[0].resolved,true);assert.equal(apps[0].icon,'https://learn.hedgies.cloud/i/192.png');assert.equal(apps[0].name,'Rabbit');
 });
