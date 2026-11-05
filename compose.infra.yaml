@@ -1,0 +1,42 @@
+# Math's API on the shared platform (proxy, Postgres, login): see docs/shared-infra.md.
+# There is no web container: the front end is built in CI, published to /srv/www/math/releases/<sha> and served by the shared
+# Caddy, which also proxies /api/* to this container (alias math-api:8000 on platform-edge).
+#
+#   docker compose -f compose.infra.yaml --env-file .env.infra up -d --build api
+#
+# .env.infra is gitignored and holds DOMAIN and MATH_DATABASE_URL (printed once by the infrastructure repo's
+# scripts/new-app.sh math). See .env.infra.example for the names.
+name: math
+services:
+  # No `db`: Math uses its own database and role on the shared Postgres.
+  api:
+    container_name: math-api
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file: .env.infra
+    environment:
+      MATH_ENV: production
+      SSO_DOMAIN: ${DOMAIN:?Set DOMAIN in .env.infra}
+      # Only this origin may send cookie-authenticated writes; the page and the API share it, so CORS is not even needed in production.
+      MATH_ALLOWED_ORIGINS: ${MATH_ALLOWED_ORIGINS:-https://math.${DOMAIN}}
+      # Empty on a real server (keys come from https://auth.<domain>). Set it only where *.localhost does not resolve in containers.
+      SSO_JWKS_URL: ${SSO_JWKS_URL:-}
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/v1/health')"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    networks:
+      edge:
+        aliases: [math-api]   # the route file in the infrastructure repo proxies /api/* to math-api:8000
+      data: {}                # shared Postgres
+networks:
+  edge:
+    external: true
+    name: platform-edge
+  data:
+    external: true
+    name: platform-data

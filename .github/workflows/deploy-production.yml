@@ -1,0 +1,87 @@
+name: Test and deploy production
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: math-production
+  cancel-in-progress: false
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env: { POSTGRES_DB: math_test, POSTGRES_USER: math, POSTGRES_PASSWORD: math-test }
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U math -d math_test"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "22", cache: npm }
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.13", cache: pip, cache-dependency-path: api/requirements-dev.txt }
+      - run: pip install -r api/requirements-dev.txt
+      - name: Verify PostgreSQL migrations
+        working-directory: api
+        env:
+          MATH_DATABASE_URL: postgresql+psycopg://math:math-test@localhost:5432/math_test
+        run: alembic upgrade head
+      - name: API tests
+        working-directory: api
+        run: python -m pytest tests -q
+  deploy:
+    # Production is the shared infrastructure only. The front end is built here and published as static files that the shared
+    # Caddy serves from /srv/www/math/current; the server builds only the API image from ~/math.
+    # ~/math/.env.infra holds the server's settings and must exist before the first run. Nothing is public until the route
+    # file sites/math.caddy exists in the infrastructure repository (docs/shared-infra.md).
+    needs: test
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "22", cache: npm }
+      - name: Build the front end (served from the root of math.<domain>)
+        run: npm ci && npm run build
+      - name: Configure SSH
+        env: { SSH_KEY: "${{ secrets.HOSTINGER_SSH_KEY }}", KNOWN_HOSTS: "${{ secrets.HOSTINGER_KNOWN_HOSTS }}" }
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/hostinger && chmod 600 ~/.ssh/hostinger
+          printf '%s\n' "$KNOWN_HOSTS" > ~/.ssh/known_hosts && chmod 600 ~/.ssh/known_hosts
+      - name: Publish the front end release
+        env:
+          HOST: "${{ secrets.HOSTINGER_HOST }}"
+          PORT: "${{ secrets.HOSTINGER_SSH_PORT }}"
+          USER: "${{ secrets.HOSTINGER_USER }}"
+        run: |
+          test -n "$HOST" && test -n "$PORT" && test -n "$USER"
+          ssh -i ~/.ssh/hostinger -p "$PORT" "$USER@$HOST" "mkdir -p /srv/www/math/releases/$GITHUB_SHA"
+          rsync -az --delete -e "ssh -i ~/.ssh/hostinger -p $PORT" dist/ "$USER@$HOST:/srv/www/math/releases/$GITHUB_SHA/"
+          # Flip the relative symlink atomically, then keep the newest three releases (the first is the one just published).
+          ssh -i ~/.ssh/hostinger -p "$PORT" "$USER@$HOST" "cd /srv/www/math && ln -sfn releases/$GITHUB_SHA current.tmp && mv -Tf current.tmp current && ls -1dt releases/* | tail -n +4 | xargs -r rm -rf"
+      - name: Upload the API build context and start the API
+        env:
+          HOST: "${{ secrets.HOSTINGER_HOST }}"
+          PORT: "${{ secrets.HOSTINGER_SSH_PORT }}"
+          USER: "${{ secrets.HOSTINGER_USER }}"
+        run: |
+          test -n "$HOST" && test -n "$PORT" && test -n "$USER"
+          ssh -i ~/.ssh/hostinger -p "$PORT" "$USER@$HOST" 'mkdir -p ~/math'
+          # Only what api/Dockerfile COPYs plus the compose file. Never .env* (the server's .env.infra stays put) and never the
+          # front-end sources: the server does not build the front end.
+          rsync -az --delete --relative \
+            --exclude '.env*' --exclude '__pycache__/' --exclude '.pytest_cache/' --exclude 'tests/' --exclude '*.db' \
+            -e "ssh -i ~/.ssh/hostinger -p $PORT" \
+            api compose.infra.yaml "$USER@$HOST:~/math/"
+          ssh -i ~/.ssh/hostinger -p "$PORT" "$USER@$HOST" 'cd ~/math && test -f .env.infra && docker compose -f compose.infra.yaml --env-file .env.infra config --quiet && docker compose -f compose.infra.yaml --env-file .env.infra up -d --build --remove-orphans api'
