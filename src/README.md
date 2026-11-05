@@ -13,13 +13,17 @@ src/
     dom.js                       el(), reducedMotion(), renderTex(): the only copies of these helpers
     nav.js, profile-corner.js    Page switcher; player badge, statistics and the add-player menu
     difficulty.js                Difficulty badge and selector (saved choice: Auto, Simple, Medium, Hard)
-    app-launcher.js              9-dot app launcher, last item in the top-right corner; live list from hedgies.cloud/app.json
+    app-launcher.js              9-dot app launcher, last item in the top-right corner; live list from apps.hedgies.cloud/app.json (this app is id `math`)
+    account.js                   Optional account: status button, login/attach/delete/export dialog
     grade-picker.js, chrome.css  Grade display with its collapsible selector
     math-text.js, debug.js       Plain a/b → LaTeX fractions; debug log
   views/                         Calculation-board renderers (equation, long division, long multiplication)
   write/                         Handwriting input: ink editing, sample ink, recognition worker
   calculator/                    Key-entry engine, lesson-to-key plans, view, display
   demo/examples.js               Landing examples backed by canonical curriculum templates
+  sync/                          Optional account sync (never required): config (shown only on *.hedgies.cloud), http (timeouts, CSRF header), auth (shared login client),
+                                 api, result (round <-> minimal result), state (per-account links/cursors), engine (offline-first push/pull, pure and tested),
+                                 local (IndexedDB/localStorage adapter), index (status, triggers)
   game/                          Practice model (rounds, scoring), IndexedDB storage, profiles, Mole meadow
   curriculum/
     catalog.js                   Grades 1–10 datasets and grade selection
@@ -149,3 +153,7 @@ Brand assets use `public/mole-logo.png`, `public/icons/mole-*.png`, and `public/
 The branding packager draws the meadow and hole behind the fifth mole for favicon, touch and PWA icons; it leaves the transparent landing logo unchanged.
 
 All three main HTML entry pages declare the manifest and Apple touch icon so installation from any route has consistent iPhone branding. `pwa.test.js` checks these entry-page declarations and icon format.
+
+## Account sync
+
+`sync/engine.js` is browser-independent (`api`, `local` and `store` are injected; `engine.test.js` runs it against an in-memory server). A pass: list the account's profiles, adopt a same-named local profile instead of duplicating it, copy new ones locally; if this device has never-attached data stop at status `ask` until the person chooses (`attachAll` / `keepLocalOnly`); push profiles (last write wins by `updatedAt`) and finished rounds in batches of 25 (round id = result id, so repeats are `duplicate`); pull each profile's results after the saved cursor and store them as `remote` rounds (never pushed back). Rounds are only ever added to IndexedDB by `addRounds`; `game/profile.js` keeps a per-profile change time (`math-profile-times`). Per-account state lives in `localStorage` under `math-sync:<account id>`. `api/` holds the FastAPI service (see `api/README.md`).

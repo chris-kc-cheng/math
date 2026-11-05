@@ -1,10 +1,10 @@
 # Whack-a-Math
 
-Learn maths through curriculum activities, animated worked solutions, and a five-choice whack-a-mole game. Whack-a-Math covers Ontario Grades 1–10, with local player profiles and saved progress. No LLM, API key, or backend is used. Recognition and solving are separate: a trained model transcribes ink; exact arithmetic rules solve supported formulas.
+Learn maths through curriculum activities, animated worked solutions, and a five-choice whack-a-mole game. Whack-a-Math covers Ontario Grades 1–10, with local player profiles and saved progress. No LLM or API key is used. Recognition and solving are separate: a trained model transcribes ink; exact arithmetic rules solve supported formulas.
 
-[![Try Whack-a-Math live](docs/images/try-live.svg)](https://chris-kc-cheng.github.io/math/)
+[![Try Whack-a-Math live](docs/images/try-live.svg)](https://math.hedgies.cloud)
 
-Live site: [chris-kc-cheng.github.io/math](https://chris-kc-cheng.github.io/math/)
+Live site: [math.hedgies.cloud](https://math.hedgies.cloud)
 
 ## Screenshots
 
@@ -28,11 +28,17 @@ Animated worked examples, including extra room for stacked fractions:
 
 <img src="docs/images/landing-long-division.png" alt="Long division demo with the digit-aligned board and Practice navigation" width="560">
 
-## GitHub Pages deployment
+## Optional account (save results online)
 
-In the repository's **Settings → Pages**, choose **GitHub Actions** as the source. The [deployment workflow](.github/workflows/deploy-pages.yml) installs dependencies, runs tests, builds the site, and deploys `dist` after pushes to `main`. It can also be run manually from the **Actions** tab on `main`.
+Playing needs no account and works offline. On `math.hedgies.cloud` a small cloud button next to the player badge opens a login panel (email or username and password, or Google/Microsoft through the shared login at auth.hedgies.cloud). Signed in, each account can own several learner profiles (for example siblings on one iPad); their profiles and every finished practice round are saved to the account and appear on any device after login. The device keeps writing locally first and syncs when online; the status reads *Saved to your account*, *Will save when you are online* or *Log in to save results to your account*. On first login you choose whether this device's existing players and results are attached to the account. Only ids, counts, timestamps and right/wrong per question are stored (no typed answers, no device data); a learner can be deleted with all results and the account's data exported as JSON from the same panel.
 
-The workflow reads the Pages base path from GitHub, so assets and handwriting models work under `/math/` as well as a root or custom-domain deployment. No deployment secret or backend is required.
+<img src="docs/images/account-dialog.png" alt="Account dialog after logging in, asking whether to save this device's players and results to the account" width="700">
+
+The server part lives in [`api/`](api/README.md); production setup and cutover are in [`docs/shared-infra.md`](docs/shared-infra.md). Account features are hidden on other addresses (localhost, previews) because the shared cookie only reaches `*.hedgies.cloud`.
+
+## Deployment
+
+Production is the shared platform: [`deploy-production.yml`](.github/workflows/deploy-production.yml) tests, builds the Vite site, publishes it to `/srv/www/math/releases/<sha>` (served by the shared Caddy at math.hedgies.cloud) and starts the API container from [`compose.infra.yaml`](compose.infra.yaml). GitHub Pages is no longer used. Details: [`docs/shared-infra.md`](docs/shared-infra.md).
 
 ## Local development
 

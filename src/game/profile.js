@@ -16,6 +16,20 @@ const readList=()=>{try{const list=JSON.parse(localStorage.getItem(LIST_KEY)||'[
 export function addProfile(profile){
  const list=readList().filter(p=>p.id!==profile.id);list.push({id:profile.id,name:profile.name});
  try{localStorage.setItem(LIST_KEY,JSON.stringify(list));}catch{}
+ if(!profileTime(profile.id))touchProfile(profile.id);
+}
+// When a profile's name or avatar last changed on this device (ms); the account keeps the newer copy.
+const TIME_KEY='math-profile-times';
+const readTimes=()=>{try{return JSON.parse(localStorage.getItem(TIME_KEY)||'{}')||{};}catch{return {};}};
+export const profileTime=id=>Number(readTimes()[id])||0;
+export function touchProfile(id,at=Date.now()){const all=readTimes();all[id]=at;try{localStorage.setItem(TIME_KEY,JSON.stringify(all));}catch{}}
+// Forget a player on this device (their rounds are deleted separately, see storage.js#deleteRoundsOf).
+export function removeProfile(id){
+ try{
+  localStorage.setItem(LIST_KEY,JSON.stringify(readList().filter(p=>p.id!==id)));
+  for(const key of [AVATAR_KEY,TIME_KEY]){const all=JSON.parse(localStorage.getItem(key)||'{}')||{};delete all[id];localStorage.setItem(key,JSON.stringify(all));}
+  const active=JSON.parse(localStorage.getItem(KEY)||'null');if(active&&active.id===id)localStorage.removeItem(KEY);
+ }catch{}
 }
 // Explicit "no profile" wins; otherwise the saved choice, else the most recently played profile (rounds are newest first).
 export function activeProfile(rounds){
@@ -55,4 +69,4 @@ export const AVATARS=['🐶','🐱','🐭','🐹','🐰','🦊','🐻','🐼','�
 const AVATAR_KEY='math-avatars';
 const readAvatars=()=>{try{return JSON.parse(localStorage.getItem(AVATAR_KEY)||'{}')||{};}catch{return {};}};
 export const avatarFor=id=>readAvatars()[id]||null;
-export function chooseAvatar(id,avatar){const all=readAvatars();if(avatar)all[id]=avatar;else delete all[id];try{localStorage.setItem(AVATAR_KEY,JSON.stringify(all));}catch{}}
+export function chooseAvatar(id,avatar,at=Date.now()){const all=readAvatars();if(avatar)all[id]=avatar;else delete all[id];try{localStorage.setItem(AVATAR_KEY,JSON.stringify(all));}catch{}touchProfile(id,at);}

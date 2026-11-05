@@ -4,3 +4,10 @@ dist/
 
 tmp/
 /*-preview.png
+
+# shared-platform API and server env
+__pycache__/
+.pytest_cache/
+*.db
+.env*
+!.env.infra.example

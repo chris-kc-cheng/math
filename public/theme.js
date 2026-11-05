@@ -4,7 +4,9 @@
   let preference;
   try { preference = localStorage.getItem('math-theme'); } catch {}
   const apply = () => {
-    const dark = preference ? preference === 'dark' : system.matches;
+    // A page can pin the look (the Practice game is always light): <html data-theme-lock="light">.
+    const lock = root.dataset.themeLock;
+    const dark = lock ? lock === 'dark' : preference ? preference === 'dark' : system.matches;
     root.dataset.theme = dark ? 'dark' : 'light';
     const button = document.querySelector('.theme-toggle');
     if (button) {

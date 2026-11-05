@@ -27,3 +27,19 @@ export async function saveRound(round){
   tx.oncomplete=()=>resolve(saved);tx.onerror=()=>reject(error||tx.error);tx.onabort=()=>reject(error||tx.error||Error('Could not save progress.'));
  });
 }
+// Rounds that arrive from the account: added only when the id is new, stored exactly as given.
+export async function addRounds(rounds){
+ if(!rounds.length)return 0;
+ const db=await openGameDatabase();return new Promise((resolve,reject)=>{
+  const tx=db.transaction('rounds','readwrite'),store=tx.objectStore('rounds');let added=0;
+  for(const round of rounds){const request=store.add(round);request.onsuccess=()=>{added++;};request.onerror=event=>{event.preventDefault();};}  // an existing id is simply kept
+  tx.oncomplete=()=>resolve(added);tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error||Error('Could not save the rounds.'));
+ });
+}
+export async function deleteRoundsOf(profileId){
+ const db=await openGameDatabase();return new Promise((resolve,reject)=>{
+  const tx=db.transaction('rounds','readwrite'),store=tx.objectStore('rounds'),request=store.getAll();
+  request.onsuccess=()=>{for(const round of request.result)if(round.profileId===profileId)store.delete(round.id);};
+  tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error||Error('Could not delete the rounds.'));
+ });
+}

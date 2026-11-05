@@ -1,0 +1,38 @@
+# Route for the infrastructure repository: copy to sites/math.caddy (format: infrastructure/docs/static-apps.md).
+# Static files come from /srv/www/math/current (a symlink the deploy workflow flips atomically); /api/* goes to the API container.
+# The app is a set of real HTML files (index, game, curriculum, write) with #hash and ?query state only, so there is no SPA fallback.
+math.{$DOMAIN} {
+	encode zstd gzip
+	header {
+		X-Content-Type-Options nosniff
+		Referrer-Policy strict-origin-when-cross-origin
+		Permissions-Policy "camera=(), microphone=(), geolocation=()"
+		# 'wasm-unsafe-eval' lets the handwriting model (ONNX Runtime, WebAssembly) compile; KaTeX and the UI set inline styles.
+		# connect-src/img-src cover the shared login service and the app launcher, which reads apps.<domain> and each app's manifest and icon.
+		Content-Security-Policy "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://*.{$DOMAIN}; font-src 'self' data:; worker-src 'self' blob:; connect-src 'self' https://auth.{$DOMAIN} https://*.{$DOMAIN}; manifest-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'"
+	}
+	handle /healthz {
+		respond "ok" 200
+	}
+	handle /api/* {
+		request_body {
+			max_size 512KB
+		}
+		reverse_proxy math-api:8000
+	}
+	handle {
+		root * /srv/www/math/current
+		@hashed path /assets/*
+		header @hashed Cache-Control "public, max-age=31536000, immutable"
+		@media path /models/* /game-art/* /icons/*
+		header @media Cache-Control "public, max-age=86400"
+		@fresh not path /assets/* /models/* /game-art/* /icons/*
+		header @fresh Cache-Control "no-cache"
+		# Content types the app needs (WebAssembly must be application/wasm to compile in streaming mode).
+		@wasm path *.wasm
+		header @wasm Content-Type "application/wasm"
+		@manifest path *.webmanifest
+		header @manifest Content-Type "application/manifest+json"
+		file_server
+	}
+}
