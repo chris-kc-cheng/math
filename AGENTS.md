@@ -48,7 +48,7 @@ The shared calculator is a bounded 36X Pro key-entry subset with a custom seven-
 
 Fraction calculator tutorials must use the calculator's n/d fields and cursor sequence. Scientific-notation lessons retain the existing ×10ⁿ teaching and add EE entry plus a SCI display alternative; do not substitute decimal-to-fraction conversion for moving a decimal point. The current landing sequence has ten examples.
 
-Practice defaults to Mole meadow: a full-window grassy five-choice quiz with five mole variants, click confirmation, hit/dizzy or escape feedback, and explanations after every answer. Captain Patty remains selectable.
+Practice defaults to Mole meadow: a full-window grassy five-choice quiz with five mole variants, click confirmation, hit/dizzy or escape feedback, and explanations after every answer. Captain Patty remains selectable. The Practice page (`game.html`) always renders in the light look regardless of the dark-mode setting (`data-theme-lock="light"` on `<html>`, handled in `public/theme.js`; the toggle is hidden there); do not add dark-mode styling for it.
 
 The curriculum grade overview and selector form one connected header, with grade choices expanding directly below.
 

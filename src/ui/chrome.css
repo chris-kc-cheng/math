@@ -152,3 +152,4 @@ html[data-theme=dark] .account-button{background:#222d37;color:#e1e7ed;border-co
 html[data-theme=dark] .auth-dialog{background:#222d37;color:#e1e7ed;border-color:#52606d}html[data-theme=dark] :is(.auth-note,.auth-muted,.auth-or){color:#b5c1cc}
 html[data-theme=dark] .auth-button{background:#2c3a47;color:#e1e7ed;border-color:#52606d}html[data-theme=dark] :is(.auth-primary){background:#4d82d6;border-color:#4d82d6;color:#0c1621}
 html[data-theme=dark] .auth-link{color:#99c5ff}html[data-theme=dark] .auth-field input{background:#182027;color:#e1e7ed;border-color:#52606d}
+html[data-theme-lock] #theme-toggle{display:none!important}

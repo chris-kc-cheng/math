@@ -44,3 +44,9 @@ test('names stay neutral: the platform domain is the only place the word appears
 test('the app id in the shared registry is math',()=>{
  assert.match(read('vite.config.js'),/const appId='math'/);
 });
+
+test('the Practice page is pinned to the light look and the theme script honours the lock',()=>{
+ assert.match(read('game.html'),/<html[^>]+data-theme-lock="light"/);
+ assert.match(read('public/theme.js'),/root\.dataset\.themeLock/);
+ assert.ok(!/data-theme-lock/.test(read('index.html'))&&!/data-theme-lock/.test(read('curriculum.html')));
+});

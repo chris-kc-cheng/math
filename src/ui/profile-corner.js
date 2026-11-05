@@ -3,7 +3,7 @@ import {listRounds} from '../game/storage.js';
 import {activeProfile,playerKey,addProfile,chooseProfile,profilesIn,profileStats,avatarFor,chooseAvatar,AVATARS,WIN_ACCURACY} from '../game/profile.js';
 import {el} from './dom.js';
 import {createAppLauncher} from './app-launcher.js';
-import {createAccountButton,openAccount} from './account.js';
+import {createAccountButton} from './account.js';
 
 // The player badge and lifetime statistics in the top-right corner of every page.
 const HUES=[212,28,150,280,350,48,190,320];
@@ -51,8 +51,6 @@ function menuView(close){
  form.onsubmit=event=>{event.preventDefault();let id;try{id=playerKey(field.value);}catch(problem){error.textContent=problem.message;field.focus();return;}
   const person={id,name:field.value.trim().replace(/s+/g,' ')};addProfile(person);close();emit(person);};
  menu.append(add,form);
- const backup=el('button',undefined,'menu-item menu-backup');backup.type='button';backup.setAttribute('role','menuitem');backup.append(el('span','💾','avatar avatar-add'),el('span','Back up or move data'));
- backup.onclick=()=>{close();openAccount();};menu.append(backup);
  if(profile){
   const picker=el('div',undefined,'avatar-picker');picker.setAttribute('role','group');picker.setAttribute('aria-label','Choose an avatar');
   picker.append(el('p','Avatar','menu-title'));

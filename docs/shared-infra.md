@@ -34,7 +34,7 @@ Per **account** (the token's `sub`, plus first/last seen): learner profiles (ran
 
 ## Installed copies
 
-People who installed the app to the home screen (PWA, or iPhone *Add to Home Screen*) from the old address must remove it and add `math.hedgies.cloud` again: the installed app is bound to its origin. Players saved only in a browser on the old address stay there. The player menu's *Back up or move data* (backup file) can move them if that old copy is still open.
+People who installed the app to the home screen (PWA, or iPhone *Add to Home Screen*) from the old address must remove it and add `math.hedgies.cloud` again: the installed app is bound to its origin. Players saved only in a browser on the old address stay there; the new address starts empty (log in to get an account's players).
 
 ## Sync rules in short
 

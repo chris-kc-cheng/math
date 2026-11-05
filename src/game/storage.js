@@ -27,7 +27,7 @@ export async function saveRound(round){
   tx.oncomplete=()=>resolve(saved);tx.onerror=()=>reject(error||tx.error);tx.onabort=()=>reject(error||tx.error||Error('Could not save progress.'));
  });
 }
-// Rounds that arrive from the account or from an imported backup: added only when the id is new, stored exactly as given.
+// Rounds that arrive from the account: added only when the id is new, stored exactly as given.
 export async function addRounds(rounds){
  if(!rounds.length)return 0;
  const db=await openGameDatabase();return new Promise((resolve,reject)=>{

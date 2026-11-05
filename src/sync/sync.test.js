@@ -4,7 +4,6 @@ import {toResult,toRound,isFinished} from './result.js';
 import {createHttp,HttpError,isOffline} from './http.js';
 import {createAuth,summary,takeReturnParams} from './auth.js';
 import {createState,rememberAccount,lastAccount} from './state.js';
-import {buildBackup,parseBackup,importBackup,BACKUP_FORMAT} from './backup.js';
 import {syncAvailable} from './config.js';
 import {curriculumForGrade} from '../curriculum/catalog.js';
 
@@ -95,22 +94,4 @@ test('sync state is stored per account and the last account is remembered',()=>{
 test('account features appear only on the shared domain',()=>{
  assert.equal(syncAvailable('math.hedgies.cloud'),true);
  for(const host of ['localhost','127.0.0.1','chris-kc-cheng.github.io','evilhedgies.cloud','hedgies.cloud.evil.test'])assert.equal(syncAvailable(host),false,host);
-});
-
-test('backup round trip: export, parse, import without duplicating',async()=>{
- const rounds=new Map([[round.id,round]]),profiles=new Map(),calls=[];
- const local={async profiles(){return [...profiles.values()];},async rounds(){return [...rounds.values()];},async upsertProfile(p){profiles.set(p.id,p);},async addRounds(list){let n=0;for(const r of list)if(!rounds.has(r.id)){rounds.set(r.id,r);n++;}return n;}};
- const file=JSON.stringify(buildBackup({profiles:[{id:'chloe',name:'Chloe',avatar:'🦊'}],rounds:[round,{...round,id:'remote-1',remote:true}]}));
- assert.equal(JSON.parse(file).format,BACKUP_FORMAT);assert.equal(JSON.parse(file).rounds.length,1);        // rounds copied from the account are not exported
- rounds.clear();
- const out=await importBackup(file,{local});
- assert.equal(out.rounds,1);assert.equal(rounds.size,1);assert.equal(profiles.get('chloe').avatar,'🦊');
- assert.equal((await importBackup(file,{local})).rounds,0);
-});
-test('backup parsing rejects other files and drops malformed entries',()=>{
- assert.throws(()=>parseBackup('not json'),/not a Whack-a-Math backup/);
- assert.throws(()=>parseBackup('{"format":"other"}'),/not a Whack-a-Math backup/);
- assert.throws(()=>parseBackup('x'.repeat(21*1024*1024)),/too large/);
- const out=parseBackup(JSON.stringify({format:BACKUP_FORMAT,profiles:[{id:'a',name:'A'},{id:'',name:'bad'},{name:'no id'}],rounds:[{id:'r1',profileId:'a',playerName:'A',grade:4,questions:[{templateId:'t'}]},{id:'bad id',profileId:'a'},{id:'r2',profileId:'zz'}]}));
- assert.equal(out.profiles.length,1);assert.equal(out.rounds.length,1);assert.equal(out.skipped,2);
 });

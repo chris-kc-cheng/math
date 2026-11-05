@@ -5,7 +5,6 @@ import {HttpError,isOffline} from './http.js';
 import {createEngine} from './engine.js';
 import {createState,rememberAccount,lastAccount} from './state.js';
 import {browserLocal} from './local.js';
-import {buildBackup,importBackup} from './backup.js';
 
 // The optional account: signing in saves this device's players and results to the person's account and loads them on any device.
 // Nothing here is required to play. A failed or slow call only changes the status text; the app keeps working from this device.
@@ -132,15 +131,6 @@ export async function eraseAccountData(){
  try{await api.deleteAccountData();}catch(error){throw friendly(error);}
  const state=createState(snapshot.account.id);state.forget();
  useAccount(snapshot.account);set({status:'ask'});requestSync(0);
-}
-
-export async function deviceBackup(){
- return JSON.stringify(buildBackup({profiles:await browserLocal.profiles(),rounds:await browserLocal.rounds()}));
-}
-export async function restoreBackup(text){
- const result=await importBackup(text,{local:browserLocal});
- document.dispatchEvent(new CustomEvent('math-rounds-changed'));
- return result;
 }
 
 function friendly(error,fallback='Something went wrong. Please try again.'){

@@ -1,5 +1,5 @@
 import {el} from './dom.js';
-import {syncEnabled,getSync,onSync,startSync,login,logout,chooseAttach,accountLearners,deleteProfileEverywhere,accountExport,eraseAccountData,deviceBackup,restoreBackup,authClient,MESSAGES} from '../sync/index.js';
+import {syncEnabled,getSync,onSync,startSync,login,logout,chooseAttach,accountLearners,deleteProfileEverywhere,accountExport,eraseAccountData,authClient,MESSAGES} from '../sync/index.js';
 import {playerKey} from '../game/profile.js';
 
 // The optional account: a small status button in the top-right corner, and a dialog for logging in, choosing what to save,
@@ -101,20 +101,6 @@ function accountView(snapshot){
  return view;
 }
 
-function deviceView(){
- const section=el('section',undefined,'auth-device');
- section.append(el('h3','On this device'),
-  el('p','Players and results are stored in this browser for this web address. Save a backup file to keep them or to move them to another browser or address, then restore it there.','auth-note'));
- const file=el('input');file.type='file';file.accept='application/json,.json';file.hidden=true;
- file.onchange=()=>{const chosen=file.files[0];file.value='';if(!chosen)return;guarded(async()=>{
-  const out=await restoreBackup(await chosen.text());
-  say(`Restored ${plural(out.rounds,'round','rounds')}${out.skipped?` (${plural(out.skipped,'entry','entries')} could not be read)`:''}.`,'ok');
- });};
- const row=el('div',undefined,'auth-row');
- row.append(button('Save a backup file',()=>guarded(async()=>download('whack-a-math-backup.json',await deviceBackup()),'Backup saved.')),button('Restore from a backup file…',()=>file.click()),file);
- section.append(row);return section;
-}
-
 function paint(){
  if(!body)return;
  const snapshot=getSync();body.textContent='';
@@ -127,7 +113,6 @@ function paint(){
   else if(returned.resetToken)body.append(resetView(returned.resetToken));
   else body.append(mode==='forgot'?forgotView():loginView(snapshot));
  }
- body.append(deviceView());
  if(snapshot.account&&!learners&&!busy)accountLearners().then(list=>{learners=list;paint();}).catch(()=>{learners=[];paint();});
 }
 
@@ -135,7 +120,7 @@ export function openAccount(){
  if(!dialog){
   dialog=el('dialog',undefined,'auth-dialog');dialog.setAttribute('aria-labelledby','auth-title');
   const head=el('div',undefined,'auth-head'),close=button('×',()=>dialog.close(),'auth-close');close.setAttribute('aria-label','Close');
-  const title=el('h2',syncEnabled()?'Your account':'This device','');title.id='auth-title';head.append(title,close);
+  const title=el('h2','Your account','');title.id='auth-title';head.append(title,close);
   body=el('div',undefined,'auth-body');dialog.append(head,body);document.body.append(dialog);
   dialog.addEventListener('close',()=>{lastFocus?.focus?.();});
   dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});

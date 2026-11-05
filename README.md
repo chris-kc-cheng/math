@@ -16,7 +16,7 @@ Practice offers **Whack-a-Math**, a full-window five-choice quiz with green gras
 
 <img src="docs/images/curriculum-grade-header.png" alt="Curriculum grade display joined to its dropdown arrow, with grade choices expanded below" width="700">
 
-The player menu also has *Back up or move data* (save or restore a backup file of this device's players and results). The player avatar menu offers 25 choices: the name initial and 24 emojis, including animals, two dinosaurs, and an alien.
+The player avatar menu offers 25 choices: the name initial and 24 emojis, including animals, two dinosaurs, and an alien.
 
 <img src="docs/images/avatar-picker.png" alt="Whack-a-Math player menu with 25 avatars including initials, animals, dinosaurs and an alien" width="700">
 

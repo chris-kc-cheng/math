@@ -14,7 +14,7 @@ src/
     nav.js, profile-corner.js    Page switcher; player badge, statistics and the add-player menu
     difficulty.js                Difficulty badge and selector (saved choice: Auto, Simple, Medium, Hard)
     app-launcher.js              9-dot app launcher, last item in the top-right corner; live list from apps.hedgies.cloud/app.json (this app is id `math`)
-    account.js                   Optional account: status button, login/attach/delete/export dialog, device backup
+    account.js                   Optional account: status button, login/attach/delete/export dialog
     grade-picker.js, chrome.css  Grade display with its collapsible selector
     math-text.js, debug.js       Plain a/b → LaTeX fractions; debug log
   views/                         Calculation-board renderers (equation, long division, long multiplication)
@@ -23,7 +23,7 @@ src/
   demo/examples.js               Landing examples backed by canonical curriculum templates
   sync/                          Optional account sync (never required): config (shown only on *.hedgies.cloud), http (timeouts, CSRF header), auth (shared login client),
                                  api, result (round <-> minimal result), state (per-account links/cursors), engine (offline-first push/pull, pure and tested),
-                                 local (IndexedDB/localStorage adapter), backup (device backup file), index (status, triggers)
+                                 local (IndexedDB/localStorage adapter), index (status, triggers)
   game/                          Practice model (rounds, scoring), IndexedDB storage, profiles, Mole meadow
   curriculum/
     catalog.js                   Grades 1–10 datasets and grade selection
