@@ -5,7 +5,7 @@ import {HttpError,isOffline} from './http.js';
 import {createEngine} from './engine.js';
 import {createState,rememberAccount,lastAccount} from './state.js';
 import {browserLocal} from './local.js';
-import {chooseProfile,playerKey} from '../game/profile.js';
+import {chooseProfile,playerKey,addProfile} from '../game/profile.js';
 
 // The optional account: signing in saves this device's players and results to the person's account and loads them on any device.
 // Nothing here is required to play. A failed or slow call only changes the status text; the app keeps working from this device.
@@ -33,8 +33,26 @@ function set(patch){snapshot={...snapshot,...patch};snapshot.message=patch.messa
 
 function useAccount(account){
  rememberAccount(account);
- engine=account?createEngine({api,local:browserLocal,store:createState(account.id)}):null;
+ engine=null;
+ const owner=accountPlayer(account);
+ if(owner){
+  // This account syncs exactly one player: the login user. Nothing else on the device or the account is touched.
+  const store=createState(account.id),state=store.load();if(state.attach!=='done'){state.attach='done';store.save(state);}
+  const mine=p=>p.id===owner.id;
+  const scoped={
+   profiles:async()=>(await browserLocal.profiles()).filter(mine),
+   rounds:async()=>(await browserLocal.rounds()).filter(r=>r.profileId===owner.id),
+   upsertProfile:browserLocal.upsertProfile,addRounds:browserLocal.addRounds,
+  };
+  const scopedApi={...api,listLearners:async()=>{
+   const all=await api.listLearners();
+   return {...all,learners:all.learners.filter(l=>{try{return playerKey(l.name)===owner.id;}catch{return false;}})};
+  }};
+  addProfile(owner);
+  engine=createEngine({api:scopedApi,local:scoped,store});
+ }
  set({account,pending:null});
+ applyIdentity();
 }
 
 export function requestSync(delay=1500){
@@ -49,7 +67,6 @@ async function runSync(){
  try{
   const before=(await browserLocal.profiles()).length;
   const result=await engine.run();
-  await adoptAccountPlayer();
   const after=(await browserLocal.profiles()).length;
   if(result.status==='ask')set({status:'ask',pending:result.pending});
   else set({status:'saved',pending:null});
@@ -72,25 +89,23 @@ async function runSync(){
  }
 }
 
-// The first time an account is used on this device the login user becomes the active player: a new account gets a player with the
-// account's name; an account that already has players makes one of them active. Later sign-ins leave the choice alone.
+// Login decides who is playing. Signed in: the only player is the login user, named after the account (and always saved to it).
+// Signed out: Guest, with no progress. Where accounts do not exist (other addresses) the older local players still work.
 export const ownName=account=>String(account.name||account.email.split('@')[0]||'Me').normalize('NFKC').replace(/[\u0000-\u001f\u007f]/g,'').trim().replace(/\s+/g,' ').slice(0,40)||'Me';
-async function adoptAccountPlayer(){
- const account=snapshot.account;if(!account)return;
- const store=createState(account.id),state=store.load();if(state.adopted)return;
- const locals=await browserLocal.profiles(),linked=Object.keys(state.links);
- let target=null;
- if(!linked.length){
-  const name=ownName(account);try{const id=playerKey(name);if(!locals.some(p=>p.id===id))await browserLocal.upsertProfile({id,name,avatar:null,updatedAt:Date.now()});target={id,name};}catch{}
- }else{const first=locals.find(p=>linked.includes(p.id));if(first)target={id:first.id,name:first.name};}
- state.adopted=1;store.save(state);
- if(target)chooseProfile(target);
+export const accountPlayer=account=>{if(!account)return null;const name=ownName(account);try{return {id:playerKey(name),name};}catch{return null;}};
+function applyIdentity(){
+ if(!syncAvailable())return;
+ const player=accountPlayer(snapshot.account);
+ if(player)addProfile(player);
+ chooseProfile(player);
+ document.dispatchEvent(new CustomEvent('math-profile-change',{detail:player}));
 }
 
 export async function startSync(){
  if(started||typeof document==='undefined'||!syncAvailable())return;
  started=true;
- const returned=takeReturnParams();set({status:'checking',returned});
+ const returned=takeReturnParams();
+ const remembered=lastAccount();set({status:'checking',returned,account:remembered});applyIdentity();   // no flash of Guest while the login is checked
  try{
   const me=await auth.me();
   if(me){useAccount(me);requestSync(0);}else set({status:'signed-out'});
@@ -117,25 +132,16 @@ export async function logout(){
  useAccount(null);set({status:'signed-out'});
 }
 
-export async function chooseAttach(save){
- if(!engine)return;
- running=true;set({status:'syncing'});
- try{
-  const result=save?await engine.attachAll():await engine.keepLocalOnly();
-  set({status:result.status==='ask'?'ask':'saved',pending:null});
-  document.dispatchEvent(new CustomEvent('math-rounds-changed'));
- }catch(error){set({status:isOffline(error)?'offline':'error'});throw friendly(error);}
- finally{running=false;}
-}
-
 /** What the account holds (profiles and counts), for the account panel. */
-export async function accountLearners(){return api.listLearners().then(r=>r.learners);}
+export async function accountLearners(){const owner=accountPlayer(snapshot.account);return api.listLearners().then(r=>r.learners.filter(l=>{try{return owner&&playerKey(l.name)===owner.id;}catch{return false;}}));}
 
 /** Delete a profile and all its results from the account and from this device. */
 export async function deleteProfileEverywhere(profileId){
  if(engine)try{await engine.deleteProfile(profileId);}catch(error){throw friendly(error,'Could not delete from your account. Check your connection and try again.');}
  await browserLocal.deleteProfile(profileId);
+ applyIdentity();
  document.dispatchEvent(new CustomEvent('math-rounds-changed'));
+ requestSync(500);
 }
 
 /** The account's data as a JSON file download. */

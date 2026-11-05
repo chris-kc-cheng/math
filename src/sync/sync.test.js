@@ -104,3 +104,10 @@ test('the login user becomes the player: name from the account, trimmed and boun
  assert.equal(ownName({name:'x'.repeat(80),email:'a@b.c'}).length,40);
  assert.equal(ownName({name:'',email:''}),'Me');
 });
+
+test('login decides the player: the account is the only player, signed out is Guest',async()=>{
+ globalThis.localStorage??={getItem:()=>null,setItem(){},removeItem(){}};
+ const {accountPlayer}=await import('./index.js');
+ assert.deepEqual(accountPlayer({id:'u1',name:'Chloe M',email:'c@x.test'}),{id:'chloe m',name:'Chloe M'});
+ assert.equal(accountPlayer(null),null);
+});
